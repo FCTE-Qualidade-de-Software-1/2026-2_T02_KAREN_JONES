@@ -1,26 +1,28 @@
 ---
 sidebar_position: 1
 title: Visão Geral da Fase 01
-description: Estabelecer os requisitos de avaliação de qualidade do Excalidraw
+description: O que estamos definindo nesta primeira fase da avaliação de qualidade do Excalidraw
 ---
 
-# Fase 01 — Estabelecer Requisitos de Avaliação
+# Fase 01 — Requisitos de Avaliação
 
-Nesta primeira fase do projeto, o objetivo é estabelecer os requisitos necessários para conduzir a avaliação da qualidade do software **Excalidraw**, conforme o processo da ISO/IEC 25040.
+Antes de sair medindo qualquer coisa, a norma ISO/IEC 25040 pede que a gente pare e responda algumas perguntas básicas: *por que estamos fazendo essa avaliação? O que exatamente vamos avaliar? Quem se interessa pelos resultados? E quais aspectos de qualidade fazem sentido investigar?*
 
----
-
-## Atividades da Fase 01
-
-A fase compreende a definição de quatro pontos centrais:
-
-1. **Propósito da avaliação:** esclarecer os motivos e os objetivos que guiam a escolha e a análise do Excalidraw.
-2. **Tipo de produto (caracterização do escopo):** descrever o software, sua finalidade, sua arquitetura geral e delimitar quais partes serão avaliadas (frontend web, pacotes npm, etc.).
-3. **Partes interessadas:** mapear quem são os interessados nos resultados da avaliação (mantenedores do projeto, usuários finais, desenvolvedores que usam a biblioteca e a equipe de avaliação).
-4. **Modelo de qualidade:** definir as características e subcaracterísticas da norma ISO/IEC 25010 que serão objeto da análise (Manutenabilidade, Confiabilidade e Portabilidade).
+Essa primeira fase existe exatamente para isso. Não vamos coletar métricas ainda, nem executar ferramentas de análise — o foco agora é montar a base sobre a qual o restante do projeto vai se apoiar.
 
 ---
 
-## Documentos
+## O que vamos definir aqui
 
-Os documentos detalhados de cada um desses quatro itens serão adicionados nesta pasta conforme forem elaborados pelo grupo.
+A Fase 01 está organizada em quatro entregas:
+
+1. **Propósito da avaliação** — por que escolhemos o Excalidraw e o que pretendemos entender com esta avaliação.
+2. **Escopo do produto** — uma descrição do software, da sua arquitetura e de quais partes do repositório entram de fato na análise.
+3. **Partes interessadas** — quem são as pessoas afetadas pelos resultados: usuários, desenvolvedores, mantenedores, contribuidores externos, quem integra a biblioteca e a própria equipe avaliadora.
+4. **Modelo de qualidade** — quais características e subcaracterísticas da ISO/IEC 25010 vamos usar como guia: Manutenabilidade, Confiabilidade e Portabilidade.
+
+---
+
+## Documentos desta fase
+
+Os documentos de cada item acima estão nesta seção e serão atualizados conforme o grupo os finaliza.

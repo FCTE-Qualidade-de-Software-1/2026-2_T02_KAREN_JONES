@@ -1,214 +1,161 @@
 
 # Interessados no projeto Excalidraw
 
+Identificar as partes interessadas é uma etapa obrigatória do processo de avaliação definido pela ISO/IEC 25040. Mais do que preencher um campo do documento, o mapeamento dos interessados é o que nos ajuda a escolher *o que* avaliar e a entender *por que* determinadas características importam mais do que outras.
+
+O Excalidraw tem um perfil de usuários bastante diversificado. Não estamos falando de um sistema interno com um público bem definido — é uma ferramenta web open source usada por desenvolvedores, designers, professores, estudantes e equipes de engenharia em contextos completamente diferentes. Isso torna o mapeamento de interessados especialmente relevante.
+
 ## 1. Usuários finais
 
-Utilizam o Excalidraw para criar e editar desenhos, diagramas e esboços, individualmente ou em colaboração. Podem acessar a aplicação por computadores ou dispositivos móveis, com mouse, teclado, toque ou caneta.
+São as pessoas que abrem o Excalidraw no navegador para criar diagramas, esboços e apresentações. Podem estar sozinhos ou colaborando em tempo real com outras pessoas. Usam mouse, teclado, toque na tela ou caneta dependendo do dispositivo.
 
-**Principais interesses:**
+Para esse grupo, o que importa é simples: a ferramenta precisa funcionar. Os desenhos precisam ser salvos. Se a conexão cair, o trabalho não pode ser perdido. Se outra pessoa está editando ao mesmo tempo, os conflitos precisam ser resolvidos de alguma forma sem surpresas desagradáveis.
 
-- Estabilidade e comportamento consistente do editor.
-- Preservação dos desenhos e recuperação do trabalho após interrupções.
-- Continuidade da edição diante de falhas de rede ou colaboração.
-- Funcionamento offline e uso em diferentes navegadores.
-- Uso adequado em dispositivos móveis, inclusive com toque e caneta.
-- Exportação dos desenhos para outras ferramentas.
+Os aspectos da avaliação mais relevantes para os usuários finais são:
 
-**Aspectos da avaliação associados:**
+- **Disponibilidade** — a aplicação precisa funcionar mesmo sem conexão após o primeiro carregamento. Quanto o editor depende de serviços externos para funcionar normalmente?
+- **Tolerância a falhas** — o que acontece quando a sessão colaborativa cai? Como o sistema se comporta ao tentar abrir um arquivo corrompido ou quando o armazenamento do navegador está cheio?
+- **Recuperabilidade** — os desenhos são salvos automaticamente? É possível retomar o estado anterior depois de fechar a aba por acidente? O desfazer/refazer funciona de forma confiável?
+- **Adaptabilidade** — o editor funciona bem em diferentes navegadores, tamanhos de tela e dispositivos de entrada?
+- **Substituibilidade** — se o usuário quiser migrar para outra ferramenta, consegue exportar os dados num formato que preserve o conteúdo?
 
-- **Disponibilidade:** funcionamento das funções essenciais sem conexão, após o primeiro carregamento; possibilidade de usar o editor local sem sessão colaborativa; dependência de recursos e serviços externos.
-- **Tolerância a falhas:** isolamento entre edição local e colaboração, tratamento de exceções, arquivos inválidos ou corrompidos, limites de armazenamento do navegador e mensagens que orientem o usuário.
-- **Recuperabilidade:** armazenamento e salvamento local, persistência e reabertura dos desenhos, restauração automática do último estado, arquivos de versões anteriores, desfazer/refazer e reconciliação após reconexão.
-- **Adaptabilidade:** navegadores e versões suportados, diferentes sistemas operacionais via navegador, tamanhos de tela, toque, caneta e alternativas para APIs web indisponíveis, como canvas, área de transferência e acesso a arquivos.
-- **Substituibilidade:** acesso aos dados fora do editor, documentação de formatos, exportação em `.excalidraw`, PNG e SVG, reimportação sem perda relevante e migração entre ferramentas, quando disponível.
-
-Na matriz de prioridades, a **confiabilidade é principal**, a **portabilidade é secundária** e a **manutenibilidade é indireta ou não aplicável**. Na rastreabilidade, usuários finais são interessados principais em disponibilidade, tolerância a falhas, recuperabilidade, adaptabilidade e substituibilidade. Os artefatos relacionados são configurações de PWA/offline, código de colaboração e erros, persistência, importação/exportação, compatibilidade e dependências.
+Para os usuários finais, **confiabilidade é a prioridade principal** e portabilidade aparece como aspecto secundário.
 
 ## 2. Desenvolvedores do projeto
 
-Compreendem, modificam e ampliam o código do Excalidraw. Trabalham com TypeScript e React em um monorepo que separa aplicação, biblioteca e pacotes especializados.
+São as pessoas que trabalham diretamente no código do Excalidraw — seja na aplicação web principal, seja na biblioteca separada (`@excalidraw/excalidraw`). O código é TypeScript com React, organizado em monorepo, o que já coloca algumas exigências de organização que não aparecem em projetos menores.
 
-**Principais interesses:**
+Para esse grupo, a dificuldade está em escalar o projeto sem perder o controle. Módulos que acumulam responsabilidades demais, dependências cruzadas entre pacotes e falta de cobertura de testes são os tipos de problema que tornam o trabalho de desenvolvimento mais custoso com o tempo.
 
-- Organização e compreensão claras do código.
-- Baixo acoplamento e separação de responsabilidades entre módulos.
-- Facilidade para adicionar funcionalidades e corrigir defeitos.
-- Capacidade de testar mudanças sem provocar efeitos indesejados.
-- Documentação da arquitetura e das convenções de código.
-- Análise estática, tipagem, lint e formatação padronizada.
+Os aspectos mais relevantes para quem desenvolve:
 
-**Aspectos da avaliação associados:**
+- **Modularidade** — os limites entre `excalidraw-app/` e `packages/excalidraw/` estão bem definidos? As dependências seguem uma direção razoável ou há ciclos?
+- **Analisabilidade** — a estrutura de diretórios é clara? Os nomes das funções e componentes comunicam o que fazem? Há documentação de arquitetura e convenções?
+- **Modificabilidade** — quando alguém muda um componente, quantas outras partes são afetadas? O histórico de pull requests mostra mudanças com alcance previsível ou cheias de surpresas?
+- **Testabilidade** — os testes existem, são isolados e cobrem os cenários mais críticos?
 
-- **Modularidade:** limites entre `excalidraw-app/` e `packages/excalidraw/`, coesão dos pacotes, direção das dependências, ausência de ciclos e isolamento das funcionalidades.
-- **Analisabilidade:** estrutura de diretórios, clareza das responsabilidades, nomes e comentários, documentação, guias de arquitetura/contribuição, TypeScript, análise estática, mensagens de erro e logs.
-- **Modificabilidade:** impacto entre componentes, concentração excessiva de responsabilidades, acoplamento do estado global à interface, atualização de dependências e alcance das alterações no histórico de commits e *pull requests*.
-- **Testabilidade:** testes isolados e automatizados, organização dos cenários e integração ao desenvolvimento.
-
-Na matriz, a **manutenibilidade é principal**, a **confiabilidade é secundária** e a **portabilidade é indireta ou não aplicável**. A rastreabilidade os vincula principalmente a modularidade, analisabilidade e modificabilidade. As evidências previstas incluem pacotes, aplicação, dependências, diretórios, configurações de TypeScript/lint, documentação e histórico de alterações.
+Para os desenvolvedores do projeto, **manutenabilidade é a prioridade principal**.
 
 ## 3. Mantenedores
 
-Respondem pela continuidade e evolução do projeto. Seu foco abrange a estabilidade das versões, o controle de mudanças, a qualidade das contribuições e a manutenção da base técnica.
+Os mantenedores são responsáveis pelo projeto a longo prazo: controlam o que entra no código, gerenciam as versões publicadas, revisam contribuições e garantem que o processo de desenvolvimento não acumule dívida técnica.
 
-**Principais interesses:**
+Eles têm interesses que se sobrepõem aos dos desenvolvedores, mas com uma perspectiva mais abrangente: não é só sobre o código que vai entrar amanhã, mas sobre se o projeto vai continuar saudável daqui a seis meses.
 
-- Prevenir regressões e controlar a complexidade do software.
-- Facilitar a manutenção e preservar a qualidade ao longo do tempo.
-- Manter a estabilidade do desenvolvimento e a compatibilidade entre versões.
-- Revisar e integrar contribuições com verificações automáticas.
-- Gerenciar dependências externas e suas atualizações.
-- Organizar versões e publicação do pacote.
+Os aspectos mais relevantes para os mantenedores:
 
-**Aspectos da avaliação associados:**
+- **Modularidade e modificabilidade** — mudanças bem contidas são mais fáceis de revisar e têm menos risco de regressão.
+- **Testabilidade** — sem testes automatizados e integração contínua bem configurada, revisar contribuições externas vira um trabalho manual enorme.
+- **Maturidade** — com que frequência bugs sérios aparecem? O processo de revisão está detectando problemas antes de chegar à produção? As versões publicadas são estáveis?
 
-- **Modularidade e modificabilidade:** estrutura do código, dependências e efeitos das alterações.
-- **Testabilidade:** testes automatizados, configurações de teste e fluxos de integração contínua.
-- **Maturidade:** revisão de código, controle de alterações, verificação automática de tipos/lint/testes, identificação, registro, classificação e resolução de defeitos, prevenção de regressões e estabilidade/regularidade das versões publicadas.
-
-Na matriz, **manutenibilidade e confiabilidade são principais** e **portabilidade é secundária**. Na rastreabilidade, os mantenedores são principais em modularidade, modificabilidade, testabilidade e maturidade. As fontes de evidência incluem código e dependências, commits, *pull requests*, testes, `.github/workflows/` e histórico de *issues*.
+Para os mantenedores, **manutenabilidade e confiabilidade têm prioridade equivalente**, com portabilidade em papel secundário.
 
 ## 4. Contribuidores open source
 
-São participantes externos que podem colaborar com o desenvolvimento do Excalidraw. Precisam compreender o projeto e validar suas alterações antes de submetê-las.
+São desenvolvedores externos que ocasionalmente contribuem com o projeto — corrigindo um bug, adicionando uma funcionalidade pequena ou melhorando a documentação. Eles não conhecem o repositório de cor e precisam conseguir se orientar a partir dos artefatos disponíveis.
 
-**Principais interesses:**
+A primeira experiência importa muito aqui. Se levar horas para entender onde está o código relevante, configurar o ambiente ou descobrir como rodar os testes, muita gente desiste antes de enviar o pull request.
 
-- Entender a estrutura do repositório e localizar os componentes a alterar.
-- Configurar o ambiente de desenvolvimento.
-- Executar testes e verificar se as mudanças causam problemas.
-- Encontrar orientações claras para contribuir e enviar alterações.
-- Receber retorno rápido das verificações automáticas.
+Os aspectos mais relevantes para contribuidores externos:
 
-**Aspectos da avaliação associados:**
+- **Analisabilidade** — a estrutura do repositório é intuitiva? Existe um guia de contribuição útil? O lint e o TypeScript ajudam a detectar erros antes de submeter?
+- **Instalabilidade** — quais são os pré-requisitos para rodar o projeto localmente? As instruções de instalação funcionam na prática?
+- **Testabilidade e modificabilidade** — é fácil reproduzir o cenário que se quer corrigir e verificar que a mudança proposta não quebrou nada?
 
-- **Analisabilidade:** diretórios, documentação, convenções, guias de contribuição, tipagem, lint e formatação.
-- **Instalabilidade:** pré-requisitos, versões das ferramentas, dependências, arquivo de lock, instruções e etapas manuais para executar o projeto.
-- **Testabilidade e modificabilidade:** reprodução de cenários, testes automatizados e impacto das mudanças propostas.
-
-Na matriz, a **manutenibilidade é principal**; **confiabilidade e portabilidade são secundárias**. A rastreabilidade os identifica como principais em analisabilidade e instalabilidade. Os artefatos associados são diretórios, TypeScript/lint, documentação, `package.json`, `Dockerfile` e instruções de instalação.
+Para contribuidores open source, **manutenabilidade é a prioridade principal**.
 
 ## 5. Desenvolvedores que integram a biblioteca
 
-Incorporam o pacote `@excalidraw/excalidraw` a outras aplicações React. Dependem de uma interface pública estável e de integração viável em ambientes distintos.
+Esse grupo usa o pacote `@excalidraw/excalidraw` em suas próprias aplicações React. Eles não contribuem com o código do Excalidraw em si — eles dependem dele como uma dependência externa e precisam que essa dependência seja estável, bem documentada e fácil de atualizar.
 
-**Principais interesses:**
+É um perfil bem diferente dos grupos anteriores: o que interessa é a interface pública da biblioteca, a política de versionamento e a compatibilidade com o ambiente de cada projeto.
 
-- Instalação simples e documentação adequada.
-- Estabilidade e tipagem clara da interface pública.
-- Compatibilidade com diferentes versões de React.
-- Facilidade de integração e atualização da biblioteca.
-- Política de versionamento e registro de mudanças incompatíveis.
-- Funcionamento com diferentes empacotadores e ambientes de renderização.
+Os aspectos mais relevantes para integradores:
 
-**Aspectos da avaliação associados:**
+- **Reusabilidade** — a biblioteca realmente funciona de forma desacoplada da aplicação oficial? A API pública é clara e estável?
+- **Adaptabilidade** — quais versões de React são suportadas? Funciona com diferentes empacotadores? Há problemas com renderização no servidor (SSR)?
+- **Instalabilidade** — é simples instalar, configurar e atualizar a biblioteca?
+- **Substituibilidade** — se um projeto precisar trocar de ferramenta, consegue exportar os dados de um formato interoperável?
 
-- **Reusabilidade:** separação da biblioteca e aplicação oficial, componentes reutilizáveis, API pública, propriedades e callbacks, documentação, exemplos e possível reutilização de pacotes menores.
-- **Adaptabilidade:** versões de React, dependências, APIs web exigidas, empacotadores e aplicações com renderização no servidor (SSR).
-- **Instalabilidade:** gerenciadores de pacotes, pré-requisitos, dependências obrigatórias e facilidade de atualizar/remover a biblioteca.
-- **Substituibilidade:** formatos de dados, importação/exportação e integração com outras ferramentas.
-
-Na matriz, a **portabilidade é principal**; **manutenibilidade e confiabilidade são secundárias**. A rastreabilidade os identifica como principais em reusabilidade, adaptabilidade, instalabilidade e substituibilidade. As evidências incluem `packages/excalidraw/`, `examples/`, API pública, configurações de compatibilidade, dependências, `package.json` e recursos de importação/exportação.
+Para os integradores da biblioteca, **portabilidade é a prioridade principal**.
 
 ## 6. Equipes de implantação e operação
 
-São responsáveis por construir, configurar, implantar ou hospedar a aplicação em ambientes próprios, inclusive com Docker.
+São as equipes que constroem, configuram e hospedam o Excalidraw em ambientes próprios — seja usando Docker, seja fazendo o build manual. Podem ser equipes de engenharia de plataforma que querem uma instância interna da ferramenta.
 
-**Principais interesses:**
+Para esse grupo, o que importa é a previsibilidade: o build precisa funcionar de forma reproduzível em diferentes ambientes, e a configuração não pode ser um mistério.
 
-- Construção e implantação simples e previsíveis.
-- Compatibilidade com diferentes ambientes.
-- Possibilidade de uso de Docker.
-- Facilidade de configurar a aplicação.
-- Documentação dos pré-requisitos e etapas de build e execução.
-- Reprodutibilidade do build em ambientes distintos.
+Os aspectos mais relevantes para equipes de operação:
 
-**Aspectos da avaliação associados:**
+- **Instalabilidade** — o processo de build está documentado de forma clara? O Dockerfile funciona? Há configurações de ambiente que precisam ser ajustadas?
+- **Disponibilidade** — a aplicação funciona offline? Quais recursos externos ela acessa e o que acontece quando eles não estão disponíveis?
 
-- **Instalabilidade:** ferramentas e versões exigidas, dependências, configurações, etapas de construção, Docker, instruções de execução e reprodução do build.
-- **Disponibilidade:** funcionamento da aplicação em diferentes condições, suporte offline e dependência de recursos externos.
-
-Na matriz, a **portabilidade é principal**, a **confiabilidade é secundária** e a **manutenibilidade é indireta ou não aplicável**. A rastreabilidade as vincula principalmente à disponibilidade e instalabilidade. Os artefatos associados incluem configuração de PWA/offline em `excalidraw-app/`, `package.json`, `Dockerfile` e documentação de instalação.
+Para equipes de implantação, **portabilidade é a prioridade principal** com confiabilidade em papel secundário.
 
 ## 7. Equipes de qualidade
 
-Atuam na validação contínua do comportamento do software. Precisam detectar regressões, reproduzir defeitos e confirmar as consequências das mudanças.
+As equipes de qualidade — que no contexto deste trabalho é a própria equipe avaliadora — precisam que o software seja avaliável. Isso soa óbvio, mas não é: projetos sem testes, sem histórico de issues ou com código difícil de instrumentar criam barreiras reais para a avaliação.
 
-**Principais interesses:**
+Os aspectos mais relevantes para equipes de qualidade:
 
-- Existência e organização de testes.
-- Detecção de regressões e reprodução de defeitos.
-- Organização do código e validação das alterações.
-- Rastreabilidade entre defeitos relatados, correções e testes.
-- Integração dos testes à integração contínua.
+- **Testabilidade** — os testes cobrem os cenários críticos? Estão integrados à CI? Como se simula interação com o editor em canvas nos testes automatizados?
+- **Maturidade** — como o projeto trata a qualidade ao longo do tempo? Há rastreabilidade entre defeitos relatados, correções e testes adicionados?
 
-**Aspectos da avaliação associados:**
-
-- **Testabilidade:** testes automatizados e isolados, níveis unitário, integração e, quando existente, ponta a ponta; simulação de mouse, teclado e toque no editor baseado em canvas; reprodução de cenários e execução automática na integração contínua. A cobertura será tratada como evidência na Fase 02.
-- **Maturidade:** revisão de código, verificação de tipos, lint, testes, gestão de defeitos, controle de alterações e prevenção de regressões.
-
-Na matriz, **manutenibilidade e confiabilidade são principais** e **portabilidade é secundária**. A rastreabilidade as relaciona principalmente a testabilidade e maturidade. Os artefatos previstos são testes, configurações, `.github/workflows/`, integração contínua e histórico de *issues*.
+Para equipes de qualidade, **manutenabilidade e confiabilidade têm prioridade equivalente**.
 
 ## 8. Equipe avaliadora e docentes
 
-A equipe avaliadora conduz a análise acadêmica; os docentes acompanham seus resultados. O trabalho avalia a **qualidade do produto**, de forma independente, com artefatos públicos, tempo e recursos limitados e sem acesso à infraestrutura de produção.
+A equipe avaliadora conduz este trabalho como parte de uma atividade acadêmica; os docentes acompanham e orientam o processo. Diferente dos grupos anteriores, nosso interesse não é no produto em si, mas na qualidade e na rastreabilidade da avaliação que estamos produzindo.
 
-**Principais interesses:**
+O que importa para nós:
 
-- Requisitos claros, específicos e rastreáveis.
-- Alinhamento à família de normas SQuaRE.
-- Escopo realista e explicitamente delimitado.
-- Evidências e procedimentos verificáveis e reproduzíveis.
-- Registro do commit ou tag e da data da versão analisada.
-- Ligação de cada requisito a uma característica, subcaracterística e pelo menos um interessado.
+- Os requisitos precisam ser específicos e rastreáveis a características e interessados concretos.
+- O escopo precisa ser realista — não podemos avaliar o que não temos acesso.
+- Os procedimentos precisam ser reproduzíveis e verificáveis.
+- A versão do código avaliada precisa ser registrada (commit ou tag).
 
-**Referências e limites associados:**
-
-- A ISO/IEC 25010 orienta o modelo de qualidade; a ISO/IEC 25040, o processo; a ISO/IEC 25030, os requisitos; e as ISO/IEC 25020 e 25023, as medidas futuras da Fase 02.
-- O documento adota subcaracterísticas da ISO/IEC 25010:2011 e aponta a necessidade de confirmar com o professor a edição a utilizar, diante de renomeações em 2023.
-- A Fase 01 identifica requisitos: não define métricas, fórmulas, critérios, pesos ou ferramentas, nem executa testes ou apresenta resultados e julgamentos. Esses itens pertencem às fases posteriores.
-
-**Não há classificação formal de prioridades** para equipe avaliadora e docentes na matriz da seção 4.10, nem associação específica na tabela de rastreabilidade da seção 10.5.
+Os docentes esperam que o trabalho siga as normas da família SQuaRE e que cada decisão seja justificada. A edição da ISO/IEC 25010 a ser usada nas próximas fases será confirmada com o professor antes de definirmos as métricas.
 
 ## 9. Comunidade e organizações que adotam o produto
 
-Adotam o Excalidraw em atividades de **documentação, ensino e reuniões**. Seu interesse está na continuidade do uso e no acesso aos conteúdos produzidos.
+Esse grupo inclui equipes, escolas e organizações que usam o Excalidraw regularmente em reuniões, aulas e documentação técnica. Eles não desenvolvem nem implantam — simplesmente usam.
 
-**Principais interesses:**
+O que importa para esse grupo é a continuidade: o projeto vai continuar sendo mantido? Os formatos de arquivo vão continuar compatíveis entre versões? Se um dia precisarem migrar para outra ferramenta, vão conseguir levar o conteúdo?
 
-- Continuidade do projeto.
-- Estabilidade entre versões.
-- Possibilidade de transferir dados para outras ferramentas, quando necessário.
+Esse grupo não aparece na matriz de prioridades com valores formais, mas suas preocupações se relacionam com confiabilidade (estabilidade entre versões) e portabilidade (exportação dos dados).
 
-Essas necessidades se relacionam à confiabilidade, à compatibilidade entre versões e à portabilidade de dados. O documento menciona exportação em `.excalidraw`, PNG e SVG. **Essa associação é descritiva:** a matriz da seção 4.10 e a tabela da seção 10.5 não atribuem prioridades ou subcaracterísticas específicas a esse grupo.
+---
 
-## Matriz de prioridades dos interessados
+## Matriz de prioridades
 
-A seção 4.10 apresenta as prioridades dos sete grupos abaixo. **Principal**, **secundário** e **indireto/não aplicável** reproduzem, respectivamente, os símbolos ●, ○ e – do documento.
+A tabela abaixo resume as prioridades de cada grupo em relação às três características avaliadas. **Principal** significa que aquela característica atende diretamente os interesses do grupo; **Secundário** indica relevância indireta; **–** indica que a característica não é aplicável ou é muito periférica para o grupo.
 
-| Interessado | Manutenibilidade | Confiabilidade | Portabilidade |
+| Interessado | Manutenabilidade | Confiabilidade | Portabilidade |
 |---|---|---|---|
-| Usuários finais | Indireto/não aplicável | Principal | Secundário |
-| Desenvolvedores do projeto | Principal | Secundário | Indireto/não aplicável |
+| Usuários finais | – | Principal | Secundário |
+| Desenvolvedores do projeto | Principal | Secundário | – |
 | Mantenedores | Principal | Principal | Secundário |
 | Contribuidores open source | Principal | Secundário | Secundário |
 | Desenvolvedores que integram a biblioteca | Secundário | Secundário | Principal |
-| Equipes de implantação e operação | Indireto/não aplicável | Secundário | Principal |
+| Equipes de implantação e operação | – | Secundário | Principal |
 | Equipes de qualidade | Principal | Principal | Secundário |
 
-A equipe avaliadora/docentes e a comunidade/organizações adotantes também são interessadas, mas **não constam da matriz**.
+A equipe avaliadora/docentes e a comunidade adotante têm interesses transversais e não entram nessa classificação formal.
+
+---
 
 ## Rastreabilidade entre interessados e subcaracterísticas
 
-A tabela da seção 10.5 identifica **interessados principais por subcaracterística** e os artefatos previstos como evidência. Essas relações não alteram a matriz de prioridades acima.
+A tabela a seguir mostra, para cada subcaracterística que vamos avaliar, quais grupos são os principais interessados e quais artefatos do repositório servirão como evidência na Fase 02.
 
 | Subcaracterística | Interessados principais | Artefatos relacionados |
 |---|---|---|
 | Modularidade | Desenvolvedores; mantenedores | `packages/`, `excalidraw-app/`, arquivos de dependências |
 | Reusabilidade | Integradores da biblioteca | `packages/excalidraw/`, `examples/`, interface pública |
 | Analisabilidade | Contribuidores; desenvolvedores | Diretórios, configurações de TypeScript e lint, documentação |
-| Modificabilidade | Desenvolvedores; mantenedores | Código dos pacotes, commits, *pull requests* |
+| Modificabilidade | Desenvolvedores; mantenedores | Código dos pacotes, commits, pull requests |
 | Testabilidade | Equipes de qualidade; mantenedores | Arquivos/configurações de teste, `.github/workflows/` |
-| Maturidade | Mantenedores; equipes de qualidade | Integração contínua, testes, histórico de *issues* |
+| Maturidade | Mantenedores; equipes de qualidade | Integração contínua, testes, histórico de issues |
 | Disponibilidade | Usuários finais; operação | Configuração de PWA e offline em `excalidraw-app/` |
 | Tolerância a falhas | Usuários finais | Código de colaboração e tratamento de erros |
 | Recuperabilidade | Usuários finais | Persistência local, importação/exportação `.excalidraw` |
@@ -216,10 +163,11 @@ A tabela da seção 10.5 identifica **interessados principais por subcaracterís
 | Instalabilidade | Integradores; operação; contribuidores | `package.json`, `Dockerfile`, documentação de instalação |
 | Substituibilidade | Usuários finais; integradores | Funcionalidades de importação/exportação |
 
+---
+
 ## Histórico de Versões
+
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | ------ | ---- | --------- | --------- | ----------- |
-| 0.1 | 04/10/2026 | Documento dos possíveis interessados nesse projeto | [Davi Pierre](https://gitlab.com/DaviPierre) | |
-
-
-
+| 0.1 | 04/10/2026 | Documento dos possíveis interessados nesse projeto | [Davi Pierre](https://gitlab.com/DaviPierre) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 0.2 | 15/10/2026 | Revisão geral e adição de contexto | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
