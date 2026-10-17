@@ -48,6 +48,7 @@ Ao criar a issue, preencha:
 - **Uma ou duas labels de tipo** (tabela abaixo) e a **label do subgrupo** (`subgrupo-F1F3` ou `subgrupo-F2F4`);
 - **Prazo** e **Depende de** (issues que precisam terminar antes, ex.: `#9 (Propósito da avaliação)`, ou "Nenhuma");
 - **Estimativa (h)**, **Critério de pronto** e, quando houver, **Critérios da rubrica atendidos** (códigos em [`.github/criterios-avaliacao.md`](.github/criterios-avaliacao.md));
+- **Referências**: documentos de aula ou de avaliação que justificam a tarefa, sempre com nome do arquivo e página (ex.: `AULA 08 QSW1 GQM.pdf, p. 24`). Os PDFs ficam no Moodle e não são versionados no repositório;
 - **Responsável** (assignee) e **Revisor**.
 
 | Label | Uso |
@@ -121,6 +122,11 @@ git switch -c docs/f1-minha-tarefa
 - `ci: adicionar verificação de build nos PRs`
 - `data: adicionar resultado da cobertura de testes`
 
+### Autoria
+
+- **Cada integrante faz os próprios commits e abre os próprios PRs.** Não suba trabalho de outra pessoa no seu nome: a contribuição individual é medida pelo histórico do Git.
+- Cada integrante deve ter, ao longo do projeto, pelo menos uma issue com código (ex.: script de métricas PSM/CID, coleta automatizada de métricas, ação de melhoria).
+
 ### Boas práticas
 
 - Verbo no infinitivo: `adicionar`, `corrigir`, `atualizar`.
@@ -179,7 +185,7 @@ Cada entrega tem uma release com tag no `main`:
 - `v1.0-E1` — Entrega 1 (Fases 1 e 2)
 - `v2.0-E2` — Entrega 2 (Fases 3 e 4)
 
-A release identifica a versão submetida no Moodle e é citada no artigo.
+A release identifica a versão submetida no Moodle e é citada no artigo. O PDF do artigo é anexado à release e **não é versionado** no repositório: o fonte fica em `artigo/` e o PDF é gerado a partir dele.
 
 ## 11. Definição de Pronto
 
