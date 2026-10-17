@@ -35,6 +35,24 @@ body:
       required: true
 
   - type: input
+    id: prazo
+    attributes:
+      label: Prazo
+      description: Data limite da tarefa (deve ser igual ou anterior ao prazo da milestone).
+      placeholder: "DD/MM"
+    validations:
+      required: true
+
+  - type: input
+    id: depende-de
+    attributes:
+      label: Depende de
+      description: Issues que precisam estar concluídas antes desta, com um nome curto. Escreva "Nenhuma" se não houver.
+      placeholder: "Ex.: #9 (Propósito da avaliação), #14 (Estudo do GQM)"
+    validations:
+      required: true
+
+  - type: input
     id: estimativa
     attributes:
       label: Estimativa (h)
