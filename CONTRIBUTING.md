@@ -42,6 +42,16 @@ Não há branch `dev`: o produto do repositório é documentação, e a revisão
 
 Toda tarefa precisa de uma issue **antes** de começar o trabalho. As issues são criadas pelo formulário **Tarefa**.
 
+**Título da issue:** `[<ÁREA>] <descrição objetiva>`, com a área em maiúsculas: `F1`, `F2`, `F3`, `F4`, `ARTIGO`, `GESTAO` ou `SITE` (as mesmas áreas das branches, seção 4). Os critérios da rubrica ficam no corpo da issue, junto com o documento e a página de origem, e não no título.
+
+**Exemplos:**
+
+- `[F1] Propósito da avaliação, uso pretendido e requisitante`
+- `[ARTIGO] Metodologia e seção da Fase 2`
+- `[GESTAO] Relatório PSM/CID da Fase 1`
+
+Para encontrar as issues de um critério, busque o código no GitHub (ex.: `is:issue "F1-C5"`); a busca também considera o corpo das issues.
+
 Ao criar a issue, preencha:
 
 - **Milestone** da fase (`Fase 1` a `Fase 4`);
@@ -145,7 +155,7 @@ git switch -c docs/f1-minha-tarefa
 
 **Título do PR:** `[<ÁREA>-<NÚMERO DA ISSUE>] <tipo>: <descrição objetiva>`
 
-O número é o da issue no GitHub (numeração única do repositório). A área indica a qual parte do projeto a issue pertence.
+O número é o da issue no GitHub (numeração única do repositório). A área é a mesma do título da issue (ex.: a issue `[F1] ...` de número 9 gera o PR `[F1-9] ...`).
 
 **Exemplos:**
 
@@ -219,4 +229,4 @@ Uma issue só está **pronta** quando:
 - **Branch:** `<tipo>/<área>-<descrição>`, com tipo `docs`, `feat`, `fix` ou `chore` e área `f1`–`f4`, `artigo`, `gestao` ou `site`.
 - **Commit:** `tipo: descrição`.
 - **PR:** `[ÁREA-NÚMERO] tipo: descrição`, com `Closes #N` e declaração de uso de IA.
-- **Issue:** milestone, labels, estimativa ao abrir e horas reais ao fechar.
+- **Issue:** título `[ÁREA] descrição`, milestone, labels, estimativa ao abrir e horas reais ao fechar.
