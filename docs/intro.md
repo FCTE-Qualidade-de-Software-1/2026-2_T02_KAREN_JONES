@@ -1,55 +1,59 @@
 ---
 sidebar_position: 1
 title: Introdução
-description: Visão geral do projeto de avaliação de qualidade de software do Excalidraw
+description: Contexto do projeto de avaliação de qualidade do Excalidraw — Grupo Karen Jones, FCTE/UnB
 ---
 
 # Introdução
 
-Este projeto faz parte da disciplina de **Qualidade de Software 1** da **FCTE - Universidade de Brasília (UnB)**, desenvolvido pelo **Grupo Karen Jones**.
+Este projeto é desenvolvido no âmbito da disciplina de **Qualidade de Software 1** da **FCTE — Universidade de Brasília (UnB)**, pelo **Grupo Karen Jones** no segundo semestre de 2026.
 
-O objetivo do trabalho é realizar a avaliação da qualidade do software open-source [Excalidraw](https://excalidraw.com/), utilizando como base as normas da família **ISO/IEC 25000 (SQuaRE)**.
+O objetivo é conduzir uma avaliação de qualidade do software open source [Excalidraw](https://excalidraw.com/), usando como referência as normas da família **ISO/IEC 25000 (SQuaRE)**. Não se trata de um uso superficial da norma: a ideia é percorrer o processo de avaliação da ISO/IEC 25040 de verdade, desde a definição dos requisitos até a execução e interpretação dos resultados.
 
 ---
 
-## Objeto de Avaliação
+## O que é o Excalidraw
 
-O software escolhido para a avaliação é o **Excalidraw**, uma ferramenta web colaborativa de quadro branco virtual voltada para diagramação e criação de desenhos em estilo feito à mão.
+O Excalidraw é uma ferramenta de quadro branco virtual voltada para diagramação rápida e colaboração. Ele roda no navegador, tem suporte a edição em tempo real entre múltiplos usuários e gera desenhos num estilo de esboço à mão — o que o diferencia de ferramentas como draw.io ou Miro.
+
+O repositório é público, a licença é MIT e o projeto é mantido por uma comunidade ativa no GitHub. Isso nos deu acesso a tudo o que precisamos para fazer uma avaliação baseada no código e nos artefatos reais do projeto.
 
 - **Repositório:** [github.com/excalidraw/excalidraw](https://github.com/excalidraw/excalidraw)
-- **Licença:** MIT
 - **Tecnologias principais:** TypeScript e React
+- **Estrutura:** monorepo com aplicação web (`excalidraw-app/`) e biblioteca separada (`packages/excalidraw/`)
 
 ---
 
-## Características de Qualidade Escolhidas
+## Por que escolhemos o Excalidraw
 
-Com base na norma **ISO/IEC 25010**, foram selecionadas as seguintes características para a avaliação do produto:
+Três razões principais guiaram a escolha:
 
-| Característica | Aspectos Observados |
+- **Código acessível e bem documentado:** o repositório público, com histórico de commits, issues e pull requests, nos permite ir além da superfície e olhar para o que realmente está acontecendo no desenvolvimento.
+- **Diversidade de contextos de uso:** o Excalidraw é ao mesmo tempo uma aplicação web para usuários finais e uma biblioteca npm para desenvolvedores que querem embedar o editor em outras aplicações. Isso cria perspectivas de avaliação bastante diferentes.
+- **Conexão com a disciplina:** as características que escolhemos avaliar — Manutenabilidade, Confiabilidade e Portabilidade — aparecem de forma natural no projeto e nos permitem exercitar os conceitos da norma com situações reais.
+
+---
+
+## Características avaliadas
+
+Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos grupos de interessados que mapeamos, escolhemos três características da **ISO/IEC 25010**:
+
+| Característica | O que estamos investigando |
 | :--- | :--- |
-| **Manutenabilidade** | Modularidade, reusabilidade, analisabilidade, modificabilidade e testabilidade do código-fonte. |
-| **Confiabilidade** | Maturidade da aplicação, disponibilidade, tolerância a falhas e capacidade de recuperação. |
-| **Portabilidade** | Adaptabilidade entre navegadores e ambientes, facilidade de instalação e de substituição. |
+| **Manutenabilidade** | A organização do código, a clareza dos módulos, a facilidade de fazer mudanças sem introduzir problemas e a cobertura de testes. |
+| **Confiabilidade** | O comportamento da aplicação em situações de falha ou perda de conexão, o salvamento automático e a maturidade do processo de desenvolvimento. |
+| **Portabilidade** | O funcionamento em diferentes navegadores e dispositivos, a facilidade de instalar a biblioteca e as opções de exportação dos dados. |
 
 ---
 
-## Motivações
+## Como o projeto está estruturado
 
-- **Contribuição para projeto open-source:** identificar possíveis oportunidades de melhoria no código e na estrutura do Excalidraw.
-- **Possibilidade de avaliação interna do código:** analisar diretamente a base de código (arquitetura, modularidade, cobertura de testes e manutenabilidade).
-- **Aplicação prática da disciplina:** exercitar os conceitos de medição e avaliação de qualidade de software aprendidos durante o semestre.
+O trabalho segue as quatro fases do processo de avaliação definido pela ISO/IEC 25040:
 
----
-
-## Fases do Projeto
-
-O trabalho está estruturado em 4 fases:
-
-- **Fase 01 — Estabelecer requisitos de avaliação:** definir o propósito da avaliação, o tipo de produto e escopo, as partes interessadas e o modelo de qualidade adotado.
-- **Fase 02 — Especificar a avaliação:** definir as métricas (baseadas na ISO/IEC 25023 / SQuaRE) e os critérios de julgamento.
-- **Fase 03 — Projetar a avaliação:** definir o método de avaliação, instruções para o avaliador, ferramentas, recursos e cronograma.
-- **Fase 04 — Executar a avaliação:** obter as medidas, comparar com os critérios de julgamento, interpretar os resultados e propor melhorias técnicas.
+- **Fase 01 — Estabelecer requisitos de avaliação:** definir o propósito, delimitar o escopo, mapear os interessados e escolher o modelo de qualidade. É o que estamos fazendo agora.
+- **Fase 02 — Especificar a avaliação:** definir as métricas com base na ISO/IEC 25023 e os critérios que vamos usar para julgar os resultados.
+- **Fase 03 — Projetar a avaliação:** decidir o método de coleta, as ferramentas, as responsabilidades e o cronograma de execução.
+- **Fase 04 — Executar a avaliação:** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias.
 
 ---
 
