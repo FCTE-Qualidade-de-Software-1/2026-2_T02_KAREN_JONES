@@ -1,9 +1,11 @@
 name: Tarefa
 description: Tarefa do projeto de avaliação de qualidade do Excalidraw.
+title: "[ÁREA] "
 body:
   - type: markdown
     attributes:
       value: |
+        No título, troque `ÁREA` por `F1`, `F2`, `F3`, `F4`, `ARTIGO`, `GESTAO` ou `SITE`.
         Antes de criar a issue, atribua a **milestone** da fase, uma ou duas **labels de tipo** e a **label do subgrupo**.
         As horas informadas aqui alimentam as métricas PSM/CID (Recursos e Custos) e a tabela de contribuição.
 
