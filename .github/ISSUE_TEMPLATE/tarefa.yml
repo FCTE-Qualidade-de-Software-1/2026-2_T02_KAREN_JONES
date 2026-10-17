@@ -19,8 +19,17 @@ body:
     id: criterios
     attributes:
       label: Critérios da rubrica atendidos
-      description: "Códigos dos critérios cobertos por esta tarefa. Lista completa em [.github/criterios-avaliacao.md](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/.github/criterios-avaliacao.md). Fase 1: F1-C1 a F1-C11 (convenção da equipe); demais fases: códigos da especificação."
+      description: "Códigos dos critérios cobertos por esta tarefa, com o documento e a página de origem. Lista completa em [.github/criterios-avaliacao.md](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/.github/criterios-avaliacao.md). Fase 1: F1-C1 a F1-C11 (convenção da equipe); demais fases: códigos da especificação."
       placeholder: "Ex.: F1-C3, F2-C10"
+    validations:
+      required: false
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: Referências
+      description: Documentos de aula ou de avaliação que justificam a tarefa, sempre com o nome do arquivo e a página.
+      placeholder: "Ex.: Template do objetivo GQM: AULA 08 QSW1 GQM.pdf, p. 24"
     validations:
       required: false
 
