@@ -1,0 +1,80 @@
+name: Tarefa
+description: Tarefa do projeto de avaliação de qualidade do Excalidraw.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de criar a issue, atribua a **milestone** da fase, uma ou duas **labels de tipo** e a **label do subgrupo**.
+        As horas informadas aqui alimentam as métricas PSM/CID (Recursos e Custos) e a tabela de contribuição.
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição
+      description: O que deve ser feito e por quê.
+    validations:
+      required: true
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios da rubrica atendidos
+      description: "Códigos dos critérios cobertos por esta tarefa. Lista completa em [.github/criterios-avaliacao.md](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/.github/criterios-avaliacao.md). Fase 1: F1-C1 a F1-C11 (convenção da equipe); demais fases: códigos da especificação."
+      placeholder: "Ex.: F1-C3, F2-C10"
+    validations:
+      required: false
+
+  - type: textarea
+    id: pronto
+    attributes:
+      label: Critério de pronto
+      description: Lista de verificação que define quando a tarefa está concluída.
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: input
+    id: prazo
+    attributes:
+      label: Prazo
+      description: Data limite da tarefa (deve ser igual ou anterior ao prazo da milestone).
+      placeholder: "DD/MM"
+    validations:
+      required: true
+
+  - type: input
+    id: depende-de
+    attributes:
+      label: Depende de
+      description: Issues que precisam estar concluídas antes desta, com um nome curto. Escreva "Nenhuma" se não houver.
+      placeholder: "Ex.: #9 (Propósito da avaliação), #14 (Estudo do GQM)"
+    validations:
+      required: true
+
+  - type: input
+    id: estimativa
+    attributes:
+      label: Estimativa (h)
+      description: Esforço estimado em horas, somando todos os responsáveis.
+      placeholder: "Ex.: 4"
+    validations:
+      required: true
+
+  - type: input
+    id: horas-reais
+    attributes:
+      label: Horas reais (h)
+      description: Preencher ao fechar a issue, editando o corpo. Se houver mais de um responsável, informe por pessoa.
+      placeholder: "Ex.: 5 (@usuario1: 3, @usuario2: 2)"
+    validations:
+      required: false
+
+  - type: input
+    id: revisor
+    attributes:
+      label: Revisor
+      description: Integrante que revisará a entrega antes de fechar a issue.
+      placeholder: "@usuario"
+    validations:
+      required: false
