@@ -21,3 +21,7 @@ yarn-error.log*
 
 # Material de aula (somente local, não versionar)
 /material-aula/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class

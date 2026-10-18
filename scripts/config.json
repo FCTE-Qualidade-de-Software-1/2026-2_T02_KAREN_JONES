@@ -1,0 +1,16 @@
+{
+  "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
+  "ano_referencia": 2026,
+  "valor_hora": 45.00,
+  "moeda": "BRL",
+  "fonte_valor_hora": "Remuneracao media nacional para Analista de Sistemas / Engenheiro de Software Junior sob regime CLT (CBO 2124-05, Fonte: Novo CAGED / MTE, base 160h mensais)",
+  "diretorio_saida": "dados/gestao",
+  "integrantes": {
+    "wChrstphr": "Christopher",
+    "DaviPierre": "Davi Pierre",
+    "GabrielSMonteiro": "Gabriel Monteiro",
+    "LeticiaSantosss": "Leticia de Carvalho",
+    "luizh-gsoares": "Luiz Henrique Soares",
+    "eduarda-ogomes": "Maria Eduarda"
+  }
+}
