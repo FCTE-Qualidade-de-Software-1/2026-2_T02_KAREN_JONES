@@ -1,0 +1,8 @@
+{
+  "label": "Atas de Reunião",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Registro das reuniões da equipe: participantes, pauta, decisões e encaminhamentos."
+  }
+}

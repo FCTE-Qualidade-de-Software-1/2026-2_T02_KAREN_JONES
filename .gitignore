@@ -19,6 +19,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Material de aula (somente local, não versionar)
+/material-aula/
 # Python
 __pycache__/
 *.py[cod]
