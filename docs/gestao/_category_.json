@@ -1,0 +1,8 @@
+{
+  "label": "Gestão do Projeto",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "Acompanhamento do projeto com métricas PSM/CID e registro das reuniões da equipe."
+  }
+}
