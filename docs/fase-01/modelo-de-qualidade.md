@@ -71,6 +71,29 @@ Na edição de 2023, **Flexibilidade** substitui o que a edição anterior chama
 | **Substituibilidade** | O produto pode substituir outro software de propósito equivalente no mesmo ambiente. | Formatos de exportação disponíveis (`.excalidraw`, PNG, SVG), fidelidade da reimportação e acessibilidade dos dados fora do editor para fins de migração. |
 
 ---
+## Representação gráfica do modelo
+
+![Modelo de qualidade adotado: três características da ISO/IEC 25010:2023, suas treze subcaracterísticas e os interessados principais de cada uma](../images/modelo-qualidade.svg)
+
+*Figura 1 – Modelo de qualidade adotado para o Excalidraw (ISO/IEC 25010:2023).*
+
+Cada característica selecionada se desdobra em suas subcaracterísticas, e abaixo do nome de cada subcaracterística aparecem os interessados principais mapeados na Fase 01. As seis características da norma que ficaram fora do escopo aparecem em cinza, para tornar a seleção visível.
+
+---
+
+## Adaptações ao contexto
+
+A ISO/IEC 25010:2023 define um modelo genérico, aplicável a qualquer produto de software. Usá-lo "de prateleira" significaria avaliar as nove características e todas as suas subcaracterísticas sem considerar quem usa o Excalidraw nem o que conseguimos observar dele. Por isso, o modelo foi adaptado em cinco pontos.
+
+| # | Adaptação | Justificativa pelo contexto do produto | Interessados que a motivam |
+|---|---|---|---|
+| 1 | **Seleção de 3 das 9 características** (Manutenabilidade, Confiabilidade e Flexibilidade) | O Excalidraw é, ao mesmo tempo, aplicação web colaborativa e biblioteca npm, mantida em monorepo open source. Essa combinação coloca em primeiro plano a facilidade de evoluir o código, a confiança no trabalho salvo e a capacidade de ser instalado, integrado e migrado. Na matriz de prioridades, cada um dos sete grupos tem ao menos uma dessas três características como prioridade principal: Manutenabilidade para quatro grupos, Confiabilidade para três e Flexibilidade para dois. | Todos os grupos da matriz de prioridades |
+| 2 | **Manutenção das 13 subcaracterísticas, cada uma ligada a interessados e a artefatos** | Nenhuma subcaracterística foi descartada, porque cada uma responde a ao menos um interessado principal e tem um artefato do repositório que serve de evidência (ver tabela de rastreabilidade). Isso evita avaliar algo sem destinatário e evita deixar de fora algo que alguém precisa. | Conforme indicado sob cada subcaracterística na Figura 1 |
+| 3 | **Interpretação das subcaracterísticas para o Excalidraw** | As definições da norma foram traduzidas para o produto. Modularidade é lida como o limite entre `excalidraw-app/` e `packages/excalidraw/`; Testabilidade considera as particularidades de um editor baseado em canvas; Disponibilidade é tratada como funcionamento offline via PWA; Substituibilidade é lida como exportação em `.excalidraw`, PNG e SVG; Escalabilidade considera desenhos com muitos elementos e extensão pela API pública. | Desenvolvedores, integradores da biblioteca, usuários finais e equipes de operação |
+| 4 | **Disponibilidade, Tolerância a falhas e Recuperabilidade investigadas por análise estática** | Essas subcaracterísticas são, por natureza, medidas em tempo de execução. Sem acesso à infraestrutura de produção do `excalidraw.com`, a avaliação examina a configuração de PWA, o tratamento de exceções e os mecanismos de persistência no código. A limitação é assumida e será documentada na Fase 02. | Usuários finais e equipes de operação |
+| 5 | **Exclusão de 6 características** (Adequação Funcional, Eficiência de Desempenho, Compatibilidade, Capacidade de Interação, Segurança e Segurança de Proteção) | A orientação da disciplina permite selecionar de 3 a 5 características, e a equipe adotou o limite inferior. Como o esforço total do trabalho ainda não era conhecido, a opção foi entregar poucas características com profundidade e rastreabilidade, em vez de uma cobertura ampla e superficial. As três selecionadas cobrem a prioridade principal dos sete grupos da matriz. Os temas das demais só são tocados quando fazem parte de uma subcaracterística selecionada (por exemplo, desempenho com muitos elementos, dentro de Escalabilidade). A exclusão registra o que a avaliação não afirma sobre o produto. | Equipe avaliadora e docentes |
+
+---
 
 ## Escopo de avaliação
 
@@ -113,3 +136,4 @@ A tabela a seguir apresenta, para cada subcaracterística, os grupos de interess
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | ------ | ---- | --------- | --------- | ----------- |
 | 0.1 | 15/10/2026 | Criação do documento | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 0.2 | 18/10/2026 | Elaboração do diagrama modelo de qualidade e tópico adaptações ao contexto | [Letícia Santos](https://github.com/LeticiaSantosss) | 
