@@ -186,6 +186,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 6. Q3.4 — Substituibilidade
+
+**Questão:** Os desenhos feitos no Excalidraw podem ser levados para outras ferramentas, em formatos abertos e sem perda de conteúdo?
+
+**Requisitos:** RQ-FLEX-11 (exportação em formatos utilizáveis fora da aplicação) e RQ-FLEX-12 (formatos abertos, documentados e reimportáveis sem perda).
+
+**Hipótese:** o desenho pode ser exportado em `.excalidraw`, PNG e SVG, e PNG e SVG podem guardar os dados do desenho para reimportação. O formato `.excalidraw` é legível (texto em JSON), mas não tem uma especificação formal publicada.
+
+### M3.4.1 — Formatos de exportação abertos disponíveis
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Número de formatos de arquivo abertos em que a aplicação permite exportar um desenho. Um formato é aberto se tem especificação pública que permite a outras ferramentas lê-lo. |
+| Procedimento de cálculo | Contar os formatos oferecidos pela interface de exportação e de salvamento da aplicação web, separando os abertos (como PNG, SVG e JSON) dos que dependem de um serviço específico. Unidade: formatos. Escala: absoluta. |
+| Fonte dos dados | Interface da aplicação web no ambiente de teste; funções de exportação da biblioteca (`packages/excalidraw/scene/export.ts`). |
+| Procedimento de coleta | Inspeção dos menus de exportação e salvamento, registrando cada formato com captura de tela, e conferência com as funções exportadas pela biblioteca. |
+| Critério de interpretação | Confirma a hipótese se pelo menos `.excalidraw`, PNG e SVG estiverem disponíveis. Quanto mais formatos abertos, mais fácil trocar de ferramenta sem refazer o desenho. |
+| Questão respondida | Q3.4 |
+| Características desejáveis | Simples e fácil de coletar. Objetiva, porque cada formato é registrado com evidência. Válida para RQ-FLEX-11. |
+
+### M3.4.2 — Proporção de elementos preservados na exportação e reimportação
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual dos elementos da cena de referência que voltam iguais depois de exportar e reimportar a cena, para cada formato que permite reimportação. |
+| Procedimento de cálculo | Exportar a cena de referência em `.excalidraw`, em PNG com os dados do desenho incorporados e em SVG com os dados do desenho incorporados. Reimportar cada arquivo na aplicação e comparar os elementos com os originais. Um elemento é preservado se tipo, posição, tamanho, estilo e texto forem iguais. Calcular (elementos preservados ÷ elementos da cena) × 100 para cada formato. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web no ambiente de teste; cena de referência. |
+| Procedimento de coleta | Exportação e reimportação pela interface; comparação dos elementos por script, exportando a cena reimportada em `.excalidraw`. É o mesmo script de comparação usado no objetivo de Confiabilidade. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100% nos três formatos. Elementos perdidos mostram o que o usuário não recupera ao reabrir uma imagem exportada. |
+| Questão respondida | Q3.4 |
+| Características desejáveis | Objetiva, porque a comparação é feita por script. Robusta, porque a mesma cena serve para outras versões. Válida para RQ-FLEX-12. |
+
+### M3.4.3 — Proporção dos campos do formato `.excalidraw` documentados
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual dos campos que aparecem em um arquivo `.excalidraw` salvo que estão descritos na documentação oficial do formato. |
+| Procedimento de cálculo | Salvar a cena de referência em `.excalidraw` e listar todos os campos distintos do arquivo: os do nível principal e os de cada tipo de elemento. Procurar cada campo na documentação do formato. Calcular (campos documentados ÷ campos encontrados) × 100. Também é registrado se existe um esquema formal legível por máquina (por exemplo, um arquivo JSON Schema). Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Arquivo salvo da cena de referência; documentação do formato em `dev-docs/docs/codebase/json-schema.mdx`. |
+| Procedimento de coleta | Listagem dos campos por script e busca de cada nome na documentação. |
+| Critério de interpretação | Confirma a hipótese se o formato for legível mas a documentação cobrir só parte dos campos e não houver esquema formal. Quanto menor a cobertura, mais outra ferramenta precisa adivinhar o significado dos dados. |
+| Questão respondida | Q3.4 |
+| Características desejáveis | Simples (uma razão). Objetiva, porque a lista de campos vem de um arquivo real. Fácil de coletar por script. Válida para RQ-FLEX-12. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
