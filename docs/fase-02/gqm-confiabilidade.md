@@ -162,6 +162,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 6. Q2.4 — Recuperabilidade
+
+**Questão:** O usuário recupera seu trabalho depois de fechar a aplicação, de reabrir arquivos antigos ou de cometer um erro de edição?
+
+**Requisitos:** RQ-CONF-08 (restauração automática do último estado), RQ-CONF-09 (salvar e reabrir arquivos), RQ-CONF-10 (arquivos de versões anteriores) e RQ-CONF-11 (desfazer e refazer).
+
+**Hipótese:** ao reabrir a aplicação, o último desenho é restaurado, inclusive depois de um fechamento inesperado. Arquivos salvos na versão atual e em versões anteriores são reabertos sem perda. Desfazer e refazer cobrem as ações de edição do próprio usuário.
+
+### M2.4.1 — Proporção de cenários de fechamento com restauração do desenho
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de cenários de fechamento em que a cena de referência é restaurada por completo ao reabrir a aplicação. |
+| Procedimento de cálculo | Cenários: (1) recarregar a página; (2) fechar a aba e abrir de novo; (3) fechar o navegador normalmente; (4) encerrar o processo do navegador pelo sistema operacional, um segundo depois da última edição. Um cenário passa se todos os elementos da cena de referência voltarem com as mesmas propriedades. Calcular (cenários que passam ÷ 4) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web no ambiente de teste; armazenamento do navegador; código de salvamento local em `excalidraw-app/data/LocalData.ts`. |
+| Procedimento de coleta | Montar a cena de referência, executar cada cenário e comparar a cena reaberta com a original exportando ambas em `.excalidraw` e comparando os elementos com um script. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada cenário que falha é uma situação em que o usuário perde trabalho sem ter salvo um arquivo. |
+| Questão respondida | Q2.4 |
+| Características desejáveis | Objetiva, porque a comparação entre as cenas é feita por script. Válida para RQ-CONF-08. Robusta, porque os cenários podem ser repetidos em outros navegadores. |
+
+### M2.4.2 — Proporção de arquivos reabertos sem perda
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de arquivos de um conjunto de teste que a versão avaliada abre sem perder elementos ou propriedades. |
+| Procedimento de cálculo | Conjunto de teste: a cena de referência salva em `.excalidraw` pela versão avaliada e pelas versões publicadas v0.15.0, v0.16.4, v0.17.6 e v0.18.0, mais as imagens com desenho incorporado que o próprio repositório usa como exemplo (`test_embedded_v1.png` e `smiley_embedded_v2.png`). Um arquivo é reaberto sem perda se todos os elementos aparecem com tipo, posição, tamanho e texto iguais aos do original. Calcular (arquivos reabertos sem perda ÷ arquivos do conjunto) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web das versões citadas, construída a partir das marcações (*tags*) do repositório; arquivos de exemplo em `packages/excalidraw/tests/fixtures/`. |
+| Procedimento de coleta | Gerar os arquivos em cada versão anterior, abri-los na versão avaliada e comparar os elementos com um script. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada arquivo com perda indica um desenho antigo que o usuário não consegue recuperar como foi salvo. |
+| Questão respondida | Q2.4 |
+| Características desejáveis | Objetiva, porque a comparação é feita por script sobre um conjunto fixo. Robusta, porque o conjunto pode crescer com novas versões. Válida para RQ-CONF-09 e RQ-CONF-10. |
+
+### M2.4.3 — Cobertura de desfazer e refazer
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de uma lista fixa de tipos de ação que podem ser desfeitos e refeitos, voltando exatamente ao estado anterior e ao posterior. |
+| Procedimento de cálculo | Tipos de ação: (1) criar elemento; (2) apagar elemento; (3) mover; (4) redimensionar; (5) girar; (6) mudar cor ou estilo; (7) editar texto; (8) agrupar e desagrupar; (9) mudar a ordem de sobreposição; (10) ligar uma seta a uma forma. Uma ação passa se, depois de desfazer, a cena volta ao estado anterior e, depois de refazer, volta ao estado posterior. Calcular (ações que passam ÷ 10) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web no ambiente de teste; código do histórico de edição em `packages/excalidraw/history.ts`. |
+| Procedimento de coleta | Teste manual roteirizado, exportando a cena antes da ação, depois da ação, depois de desfazer e depois de refazer, e comparando as exportações com um script. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada tipo de ação que não pode ser desfeito é um erro do usuário que não tem volta. |
+| Questão respondida | Q2.4 |
+| Características desejáveis | Simples. Objetiva, porque a comparação é feita por script. Válida para RQ-CONF-11. Robusta, porque a lista pode ser repetida em outras versões. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
