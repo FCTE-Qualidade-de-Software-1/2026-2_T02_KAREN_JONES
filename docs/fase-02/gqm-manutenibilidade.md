@@ -290,9 +290,29 @@ Todos os 13 requisitos de Manutenibilidade da Fase 01 são atendidos por pelo me
 
 ---
 
+## 9. Verificação das métricas
+
+A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo (AULA 08, p. 42). A equipe fez essa verificação no código da versão avaliada, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+
+| Métrica | O que foi verificado |
+| :--- | :--- |
+| M1.1.1 e M1.1.3 | O Madge 8.0.0 monta o grafo de dependências do código usando o `tsconfig.json` do repositório, que mapeia os nomes `@excalidraw/*` para as pastas dos pacotes. |
+| M1.1.2 | A regra de direção existe em `packages/eslintrc.base.json` e o projeto exige importações de tipo separadas (regra `consistent-type-imports` em `.eslintrc.json`), o que permite distinguir importações de tipo das de valor. |
+| M1.2.1 | Os pacotes de base têm código-fonte próprio em `packages/*/src`, onde a busca pode ser feita. |
+| M1.2.2 | O tipo `ExcalidrawProps` está em `packages/excalidraw/types.ts`, e a documentação das propriedades está em `dev-docs/docs/@excalidraw/excalidraw/api/props/`. |
+| M1.3.1 | O ESLint 8.57.0 com `@typescript-eslint/parser` analisou com sucesso um arquivo `.tsx` do editor e informou a complexidade de cada função. A ferramenta lizard foi descartada porque não reconheceu a maior parte das funções em arquivos `.tsx`. |
+| M1.3.2 | `README.md`, `CONTRIBUTING.md` (que remete à documentação publicada) e a pasta `dev-docs/docs/` estão na versão avaliada. |
+| M1.3.3 e M1.5.3 | O fluxo `lint.yml` é disparado por `pull_request` e executa os scripts de formatação, lint e tipos. O fluxo `test-coverage-pr.yml` é disparado por `pull_request` e executa os testes. A API do GitHub retorna as verificações registradas em cada commit. |
+| M1.4.1 e M1.4.3 | A API do GitHub retorna as contribuições integradas e a lista de arquivos alterados por cada uma. |
+| M1.4.2 | O cloc 1.86 contou as linhas de código de arquivos `.ts` da versão avaliada, separando linhas em branco e comentários. |
+| M1.5.1 | O script `test:coverage` e a configuração de cobertura existem na versão avaliada. A execução depende da instalação das dependências do projeto, que será feita no ambiente definido no plano de avaliação. |
+| M1.5.2 | Os testes estão em arquivos `*.test.ts(x)` e pastas `tests/` dos pacotes, e os utilitários de teste do editor expõem a função `render`. |
+
+---
+
 ## Referências
 
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 41.
+- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38, 41 e 42.
 - Especificação do trabalho final da disciplina de Qualidade de Software 1 (2026-2 Trabalho final completo v1). Página 1, premissa 2.
 - MARTIN, R. C. *Agile Software Development: Principles, Patterns, and Practices*. Prentice Hall, 2002.
 - McCABE, T. J. A Complexity Measure. *IEEE Transactions on Software Engineering*, v. SE-2, n. 4, p. 308–320, 1976.
