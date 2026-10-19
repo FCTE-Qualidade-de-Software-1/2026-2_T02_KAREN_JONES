@@ -232,6 +232,27 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 7. Rastreabilidade com a Fase 01
+
+| Requisito | Subcaracterística | Questão | Métricas |
+| :--- | :--- | :--- | :--- |
+| RQ-FLEX-01 | Adaptabilidade | Q3.1 | M3.1.1 |
+| RQ-FLEX-02 | Adaptabilidade | Q3.1 | M3.1.2 |
+| RQ-FLEX-03 | Adaptabilidade | Q3.1 | M3.1.1, M3.1.2 |
+| RQ-FLEX-04 | Adaptabilidade | Q3.1 | M3.1.3 |
+| RQ-FLEX-05 | Escalabilidade | Q3.2 | M3.2.2 |
+| RQ-FLEX-06 | Escalabilidade | Q3.2 | M3.2.1, M3.2.3 |
+| RQ-FLEX-07 | Instalabilidade | Q3.3 | M3.3.1 |
+| RQ-FLEX-08 | Instalabilidade | Q3.3 | M3.3.2 |
+| RQ-FLEX-09 | Instalabilidade | Q3.3 | M3.3.3 |
+| RQ-FLEX-10 | Instalabilidade | Q3.3 | M3.3.2 |
+| RQ-FLEX-11 | Substituibilidade | Q3.4 | M3.4.1 |
+| RQ-FLEX-12 | Substituibilidade | Q3.4 | M3.4.2, M3.4.3 |
+
+Todos os 12 requisitos de Flexibilidade da Fase 01 são atendidos por pelo menos uma métrica.
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
