@@ -108,10 +108,10 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 | Campo | Descrição |
 | :--- | :--- |
-| Definição | Número de arquivos de produção de cada pacote de base que importam `react` ou `react-dom`, ou que usam diretamente os objetos globais do navegador `window` e `document`. |
-| Procedimento de cálculo | Contagem por pacote. Unidade: arquivos. Escala: absoluta. Também é registrada a proporção em relação ao total de arquivos de produção do pacote. |
-| Fonte dos dados | Código de produção dos pacotes de base. |
-| Procedimento de coleta | Busca no código por importações de `react` e `react-dom` e por usos de `window.` e `document.` (ferramenta `grep`), excluindo comentários. |
+| Definição | Número de arquivos de produção de cada pacote de base que dependem de React ou do navegador, diretamente ou por meio de outros arquivos. A dependência é direta quando o arquivo importa `react` ou `react-dom`, ou usa os objetos globais do navegador `window` e `document`. É transitiva quando o arquivo importa um valor (inclusive por reexportação) de outro arquivo que depende de React ou do navegador, em qualquer pacote. |
+| Procedimento de cálculo | Contagem por pacote, separando os arquivos com dependência direta dos que só têm dependência transitiva. Unidade: arquivos. Escala: absoluta. Também é registrada a proporção em relação ao total de arquivos de produção do pacote. |
+| Fonte dos dados | Código de produção de todos os pacotes. |
+| Procedimento de coleta | Busca no código de produção de todos os pacotes por importações de `react` e `react-dom` e por usos de `window.` e `document.` (ferramenta `grep`), excluindo comentários. Os arquivos encontrados são marcados no grafo de importações de valor de M1.1.1, e um script conta os arquivos dos pacotes de base que alcançam algum arquivo marcado. |
 | Critério de interpretação | Confirma a hipótese se o valor for 0 em `math` e `utils`. Nos demais pacotes de base, valores maiores indicam que o pacote só funciona dentro de um navegador ou junto com React. |
 | Questão respondida | Q1.2 |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque depende só do texto do código. Válida como indicador de reutilização fora do editor, já que essas dependências impedem o uso em outros ambientes, como servidores. |
@@ -298,7 +298,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | :--- | :--- |
 | M1.1.1 e M1.1.3 | O Madge 8.0.0 monta o grafo de dependências do código usando o `tsconfig.json` do repositório, que mapeia os nomes `@excalidraw/*` para as pastas dos pacotes. |
 | M1.1.2 | A regra de direção existe em `packages/eslintrc.base.json`, mas só `common` e `element` têm configuração que a estende; por isso a coleta usa o grafo de M1.1.1, e não o lint. O projeto exige importações de tipo separadas (regra `consistent-type-imports` em `.eslintrc.json`), o que permite distinguir importações de tipo das de valor. |
-| M1.2.1 | Os pacotes de base têm código-fonte próprio em `packages/*/src`, onde a busca pode ser feita. |
+| M1.2.1 | Os pacotes de base têm código-fonte próprio em `packages/*/src`, onde a busca pode ser feita. A dependência transitiva é necessária: `packages/utils/src/index.ts` reexporta valores de `@excalidraw/excalidraw/scene/export`, que usa `document`, e uma busca restrita a `utils` não encontraria esse uso. |
 | M1.2.2 | O tipo `ExcalidrawProps` está em `packages/excalidraw/types.ts`, e a documentação das propriedades está em `dev-docs/docs/@excalidraw/excalidraw/api/props/`. |
 | M1.3.1 | O ESLint 8.57.0 com `@typescript-eslint/parser` analisou com sucesso um arquivo `.tsx` do editor e informou a complexidade de cada função. A ferramenta lizard foi descartada porque não reconheceu a maior parte das funções em arquivos `.tsx`. |
 | M1.3.2 | `README.md`, `CONTRIBUTING.md` (que remete à documentação publicada) e a pasta `dev-docs/docs/` estão na versão avaliada. |
