@@ -201,3 +201,11 @@ Conforme determina a **Premissa 5**, todos os números apresentados neste relat�
 * **Ferramenta utilizada:** Antigravity / Gemini 3.8.
 * **Finalidade no relatório:** Apoio na estruturação lógica dos Measurement Constructs, organização dos indicadores segundo o modelo PSM/CID e redação inicial das análises de performance e estimativa.
 * **Conferência crítica:** O texto foi integralmente revisado pela equipe, confrontando cada número com os CSVs extraídos da API do GitHub, verificando a exatidão das referências normativas e validando o conteúdo contra a especificação e as premissas da disciplina. Nenhuma imagem com texto sobreposto ou emoji foi utilizada.
+
+---
+
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| 0.1 | 18/10/2026 | Criação do Relatório PSM/CID da Fase 1 com measurement constructs, medições e decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |

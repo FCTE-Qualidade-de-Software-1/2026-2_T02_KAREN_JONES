@@ -13,13 +13,14 @@ O objetivo é garantir organização, revisão entre pares, rastreabilidade entr
 5. [Padrão de Commits](#5-padrão-de-commits)
 6. [Pull Requests](#6-pull-requests)
 7. [Uso de IA](#7-uso-de-ia)
-8. [Dados, Evidências e Atas](#8-dados-evidências-e-atas)
-9. [Deploy do GitPage](#9-deploy-do-gitpage)
-10. [Releases](#10-releases)
-11. [Definição de Pronto](#11-definição-de-pronto)
-12. [Boas Práticas Gerais](#12-boas-práticas-gerais)
-13. [Para quem está aprendendo Git](#13-para-quem-está-aprendendo-git)
-14. [Resumo](#14-resumo)
+8. [Padrão de Documentação: Histórico de Versões](#8-padrão-de-documentação-histórico-de-versões)
+9. [Dados, Evidências e Atas](#9-dados-evidências-e-atas)
+10. [Deploy do GitPage](#10-deploy-do-gitpage)
+11. [Releases](#11-releases)
+12. [Definição de Pronto](#12-definição-de-pronto)
+13. [Boas Práticas Gerais](#13-boas-práticas-gerais)
+14. [Para quem está aprendendo Git](#14-para-quem-está-aprendendo-git)
+15. [Resumo](#15-resumo)
 
 ## 1. Visão Geral
 
@@ -176,19 +177,37 @@ Os critérios F1-C10, F2-C9 e AG-C3 avaliam a declaração e a revisão do uso d
 
 As declarações dos PRs serão consolidadas na declaração de uso de IA do artigo.
 
-## 8. Dados, Evidências e Atas
+## 8. Padrão de Documentação: Histórico de Versões
+
+Todo documento de conteúdo publicado no GitPage (`docs/**/*.md`) e nos apêndices do artigo (`artigo/**/*.md`) deve conter obrigatoriamente, ao final da página, uma tabela de histórico de versões seguindo este padrão:
+
+```markdown
+---
+
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| 0.1 | DD/MM/AAAA | Criação do documento ou descrição sucinta da alteração | [Nome](link-github) | [Nome](link-github) |
+```
+
+- **Versão inicial:** Começa em `0.1` na criação do documento e é incrementada (`0.2`, `0.3`...) a cada revisão ou nova submissão.
+- **Autor(es):** Nome e link do perfil no GitHub de quem elaborou o artefato.
+- **Revisor(es):** Nome e link do perfil no GitHub do integrante responsável por revisar e aprovar o Pull Request.
+
+## 9. Dados, Evidências e Atas
 
 - **Atas de reunião** ficam em `docs/gestao/atas/`, a partir do modelo `_modelo-ata.md`, com o nome `AAAA-MM-DD-assunto.md`.
 - **Dados brutos e consolidados** da avaliação ficam no repositório, junto com os procedimentos de tratamento e cálculo, de modo que qualquer resultado do artigo possa ser verificado.
 - **Entrevistas** só são gravadas com consentimento dos participantes. Dados de participantes devem ser anonimizados antes de serem versionados.
 
-## 9. Deploy do GitPage
+## 10. Deploy do GitPage
 
 - O GitPage é publicado pela GitHub Action `.github/workflows/deploy.yml` a cada merge na `main` que altere o site.
 - Não editar a branch `gh-pages` manualmente.
 - Após o merge, confira se a página publicada está correta.
 
-## 10. Releases
+## 11. Releases
 
 Cada entrega tem uma release com tag no `main`:
 
@@ -197,7 +216,7 @@ Cada entrega tem uma release com tag no `main`:
 
 A release identifica a versão submetida no Moodle e é citada no artigo. O PDF do artigo é anexado à release e **não é versionado** no repositório: o fonte fica em `artigo/` e o PDF é gerado a partir dele.
 
-## 11. Definição de Pronto
+## 12. Definição de Pronto
 
 Uma issue só está **pronta** quando:
 
@@ -206,23 +225,24 @@ Uma issue só está **pronta** quando:
 3. O **build local** (`npm run build`) passou, quando o PR altera o site.
 4. Os itens do **Critério de pronto** da issue foram conferidos.
 5. Os **critérios da rubrica** indicados na issue foram conferidos com [`.github/criterios-avaliacao.md`](.github/criterios-avaliacao.md).
-6. As **Horas reais (h)** foram preenchidas na issue.
-7. A **issue foi fechada** após o merge (via `Closes #N` ou manualmente, com referência ao PR).
+6. A **tabela de Histórico de Versões** foi preenchida no final do documento com autor e revisor.
+7. As **Horas reais (h)** foram preenchidas na issue.
+8. A **issue foi fechada** após o merge (via `Closes #N` ou manualmente, com referência ao PR).
 
-## 12. Boas Práticas Gerais
+## 13. Boas Práticas Gerais
 
 - Branches curtas e PRs pequenos, fáceis de revisar.
 - Atualizar a branch com a `main` com frequência para reduzir conflitos.
 - Não alterar o trabalho de outra pessoa sem conversar com ela.
 - Revisar com respeito: o comentário explica o problema e, quando possível, sugere uma solução.
 
-## 13. Para quem está aprendendo Git
+## 14. Para quem está aprendendo Git
 
 **Não tenha medo de perguntar.** Se aparecer um erro ou você não souber qual comando usar, peça ajuda antes de executar comandos que possam apagar ou sobrescrever o trabalho de outras pessoas.
 
 `git reset --hard`, `git push --force` e exclusão de branches não devem ser usados sem orientação de alguém do grupo.
 
-## 14. Resumo
+## 15. Resumo
 
 - **main** = versão publicada no GitPage; **gh-pages** = deploy automático, não editar.
 - **Fluxo:** issue → branch da main → PR (mín. 1 aprovação) → merge → deploy.
