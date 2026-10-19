@@ -128,6 +128,40 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 5. Q2.3 — Tolerância a falhas
+
+**Questão:** O editor continua funcionando quando recebe dados inválidos ou quando a conexão com a colaboração falha?
+
+**Requisitos:** RQ-CONF-05 (funcionalidades essenciais diante de problemas de conectividade), RQ-CONF-06 (editor local após falha da colaboração) e RQ-CONF-07 (arquivos inválidos ou corrompidos).
+
+**Hipótese:** arquivos inválidos ou corrompidos são recusados com uma mensagem, sem travar o editor. Se a sessão de colaboração cair, o desenho local continua editável e o usuário é avisado.
+
+### M2.3.1 — Proporção de arquivos inválidos tratados com mensagem
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de casos de uma lista fixa de arquivos inválidos ou corrompidos em que o editor exibe uma mensagem de erro e continua utilizável. |
+| Procedimento de cálculo | Lista de casos: (1) arquivo vazio com extensão `.excalidraw`; (2) JSON com erro de sintaxe; (3) JSON válido sem o campo `type`; (4) campo `type` com valor desconhecido; (5) lista de elementos com campos obrigatórios ausentes; (6) elemento com coordenadas não numéricas; (7) arquivo binário qualquer renomeado para `.excalidraw`; (8) imagem PNG sem desenho incorporado; (9) arquivo `.excalidraw` truncado no meio. Um caso é tratado se o editor mostra uma mensagem e, em seguida, ainda permite criar formas sem recarregar a página. Calcular (casos tratados ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web no ambiente de teste; arquivos de teste preparados pela equipe e guardados no repositório da avaliação. |
+| Procedimento de coleta | Abrir cada arquivo pelo menu de abertura e, em outra rodada, arrastando o arquivo para o editor. Registrar a mensagem exibida (ou a ausência dela) e se o editor continua utilizável, com captura de tela. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada caso não tratado é uma forma de o usuário travar o editor ou perder o trabalho em andamento. |
+| Questão respondida | Q2.3 |
+| Características desejáveis | Objetiva e consistente, porque os arquivos são fixos e o critério de tratamento é definido antes do teste. Robusta, porque os mesmos arquivos servem para outras versões. Válida para RQ-CONF-07. |
+
+### M2.3.2 — Continuidade do editor após falha da colaboração
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de uma lista fixa de verificações que passam quando a conexão de uma sessão de colaboração é interrompida. |
+| Procedimento de cálculo | Com uma sessão de colaboração ativa entre duas janelas, interromper a rede de uma delas e verificar: (1) o desenho continua na tela; (2) é possível criar e editar elementos; (3) o usuário recebe aviso de que está sem conexão; (4) é possível salvar o desenho em arquivo; (5) ao restabelecer a rede, as alterações feitas sem conexão aparecem na outra janela. Calcular (verificações que passam ÷ 5) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web no ambiente de teste, conectada ao servidor de colaboração configurado na versão avaliada; código de colaboração em `excalidraw-app/collab/`. |
+| Procedimento de coleta | Teste manual roteirizado, repetido três vezes, com o modo *offline* das ferramentas do navegador para interromper a rede. Cada verificação passa se passar nas três repetições. |
+| Critério de interpretação | Confirma a hipótese se as verificações 1 a 4 passarem. A verificação 5 mostra se o trabalho feito durante a falha é preservado na sessão compartilhada. |
+| Questão respondida | Q2.3 |
+| Características desejáveis | Objetiva, porque cada verificação tem resultado binário definido antes do teste. Robusta, por exigir três repetições. Válida para RQ-CONF-05 e RQ-CONF-06. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
