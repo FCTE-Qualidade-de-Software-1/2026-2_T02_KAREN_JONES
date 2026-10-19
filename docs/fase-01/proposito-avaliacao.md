@@ -113,8 +113,10 @@ Os resultados não serão utilizados para ranqueamento contra outros softwares, 
 | ISO/IEC 25023:2016 | Catálogo de métricas de qualidade interna e externa (aplicado a partir da Fase 02). |
 | Aula A07 (FCTE/UnB) | Processo de avaliação de produto de software: tipos de requisitante, objetivos e roteiro da avaliação. |
 
+---
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação, atendendo aos critérios F1-C1 e F1-C2 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 1.0 | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação, atendendo aos critérios F1-C1 e F1-C2 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |

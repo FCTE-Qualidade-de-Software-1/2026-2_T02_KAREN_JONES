@@ -93,8 +93,11 @@ A tabela abaixo resume como cada ODS se conecta às três características de qu
 | 9 (Inovação) | Modularidade e testabilidade determinam a viabilidade de contribuição e inovação pela comunidade | Maturidade do processo de desenvolvimento sustenta a confiança da comunidade no projeto | Instalabilidade e adaptabilidade permitem que organizações hospedem e customizem suas instâncias |
 | 10 (Desigualdades) | Analisabilidade e documentação baixam a barreira de entrada para novos contribuidores, inclusive de países em desenvolvimento | Disponibilidade offline é relevante para contextos com conectividade limitada | Exportação em formatos abertos e suporte a dispositivos variados garantem acesso sem restrições |
 
+---
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 18/10/2026 | Criação do documento de ODS relacionados à avaliação do Excalidraw | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 1.0 | 18/10/2026 | Criação do documento de ODS relacionados à avaliação do Excalidraw | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+
