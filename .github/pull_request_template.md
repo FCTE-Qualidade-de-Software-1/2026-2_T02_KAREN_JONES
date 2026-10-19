@@ -23,5 +23,6 @@ Closes #
 - [ ] Título no formato `[ÁREA-NÚMERO] tipo: descrição`
 - [ ] `npm run build` passou localmente (quando altera o site)
 - [ ] Critério de pronto da issue conferido
+- [ ] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)
 - [ ] Sem emojis, figurinhas ou ícones no conteúdo
 - [ ] Horas reais preenchidas na issue
