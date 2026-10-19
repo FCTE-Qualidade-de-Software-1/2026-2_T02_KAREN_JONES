@@ -42,7 +42,7 @@ As definições abaixo valem para todas as métricas de G1 e evitam que pessoas 
 - **Pacote:** cada pasta em `packages/` (`common`, `element`, `excalidraw`, `fractional-indexing`, `laser-pointer`, `math` e `utils`) e a aplicação web em `excalidraw-app/`.
 - **Pacotes de base:** todos os pacotes, exceto a biblioteca `excalidraw` e a aplicação web.
 - **Código de produção:** arquivos `.ts` e `.tsx` dos pacotes. Ficam de fora as pastas `tests/` e `__snapshots__/`, os arquivos `*.test.ts(x)` e `*.d.ts`, a documentação (`dev-docs/`), os exemplos (`examples/`) e as dependências instaladas (`node_modules/`).
-- **Código de teste:** arquivos `*.test.ts(x)` e o conteúdo das pastas `tests/` dos pacotes.
+- **Código de teste:** arquivos de suíte `*.test.ts(x)`, os que o Vitest reconhece como testes pelo seu padrão de nomes (o projeto não define outro em `vitest.config.mts`). Os demais arquivos das pastas `tests/` (utilitários, dados de exemplo e *snapshots*) dão apoio às suítes e não são contados como arquivos de teste nem como código de produção.
 - **Janela histórica:** contribuições integradas ao ramo principal entre 18/04/2026 e 18/10/2026, os seis meses que antecedem a versão avaliada. A janela delimita os dados de histórico do projeto (objeto O6 do escopo).
 - **Contribuição integrada:** *pull request* aceito (*merged*) no ramo principal do repositório.
 
@@ -306,7 +306,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | M1.4.1 e M1.4.3 | A API do GitHub retorna as contribuições integradas e a lista de arquivos alterados por cada uma. |
 | M1.4.2 | O cloc 1.86 contou as linhas de código de arquivos `.ts` da versão avaliada, separando linhas em branco e comentários. |
 | M1.5.1 | O script `test:coverage` e a configuração de cobertura existem na versão avaliada. A execução depende da instalação das dependências do projeto, que será feita no ambiente definido no plano de avaliação. |
-| M1.5.2 | Os testes estão em arquivos `*.test.ts(x)` e pastas `tests/` dos pacotes, e os utilitários de teste do editor expõem a função `render`. |
+| M1.5.2 | As suítes estão em arquivos `*.test.ts(x)` dos pacotes, e os utilitários de teste do editor (`packages/excalidraw/tests/test-utils.ts`) expõem a função `render`. As pastas `tests/` também têm arquivos de apoio, como `test-utils.ts` e `helpers/`, que a convenção da seção 2 deixa fora da contagem. |
 
 ---
 
