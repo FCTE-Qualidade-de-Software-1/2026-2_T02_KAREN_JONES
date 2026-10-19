@@ -94,6 +94,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 4. Q3.2 — Escalabilidade
+
+**Questão:** O editor continua utilizável quando o desenho cresce?
+
+**Requisitos:** RQ-FLEX-05 (desempenho com mais elementos) e RQ-FLEX-06 (abrir, salvar e exportar desenhos grandes).
+
+**Hipótese:** o editor continua utilizável com algumas centenas de elementos, e o desempenho cai de forma perceptível com milhares. Exportar um desenho grande é mais lento do que abri-lo.
+
+### M3.2.1 — Tempo de abertura por tamanho de cena
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Tempo entre a abertura de um arquivo e a exibição completa da cena, para cada uma das cenas de escala. |
+| Procedimento de cálculo | Mediana de 5 aberturas de cada cena, em segundos. O resultado é uma curva de tempo por número de elementos. Unidade: segundos. Escala: absoluta. |
+| Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
+| Procedimento de coleta | Gravação no painel de desempenho (*Performance*) das ferramentas do navegador, do momento em que o arquivo é solto no editor até o último quadro desenhado. A página é recarregada e o armazenamento local é limpo entre as repetições. |
+| Critério de interpretação | Confirma a hipótese se o tempo for baixo até 1.000 elementos e crescer de forma perceptível a partir daí. A forma da curva mostra se o tempo cresce na mesma proporção do desenho ou mais rápido que ele. |
+| Questão respondida | Q3.2 |
+| Características desejáveis | Objetiva, porque a medição é feita pela ferramenta do navegador. Robusta, por usar a mediana de repetições. Válida para RQ-FLEX-06. Depende do hardware, que é fixado e registrado. |
+
+### M3.2.2 — Taxa de quadros durante a edição por tamanho de cena
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Quadros por segundo exibidos enquanto o usuário arrasta um grupo de elementos e desloca a tela, para cada uma das cenas de escala. |
+| Procedimento de cálculo | Mediana dos quadros por segundo em 5 gravações de 10 segundos para cada cena: arrastar uma seleção de 50 elementos e deslocar a tela. Unidade: quadros por segundo. Escala: absoluta. |
+| Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
+| Procedimento de coleta | Painel de desempenho das ferramentas do navegador, com roteiro de movimento fixo. |
+| Critério de interpretação | Confirma a hipótese se a taxa for fluida até algumas centenas de elementos e cair de forma perceptível com milhares. Taxas baixas significam movimento travado para o usuário. |
+| Questão respondida | Q3.2 |
+| Características desejáveis | Objetiva e robusta, pelos mesmos motivos de M3.2.1. Válida para RQ-FLEX-05, porque mede o que o usuário percebe ao editar. |
+
+### M3.2.3 — Tamanho máximo de cena salva e exportada
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Maior cena de escala que pode ser salva em `.excalidraw` e exportada em PNG e em SVG sem que o navegador trave. |
+| Procedimento de cálculo | Para cada cena, em ordem crescente, executar salvar, exportar em PNG e exportar em SVG, registrando o tempo de cada operação. A operação falha se não termina em 30 segundos ou se o navegador avisa que a página não está respondendo. O resultado é o número de elementos da maior cena em que as três operações terminam. Unidade: elementos. Escala: ordinal (100, 1.000, 5.000 ou 10.000). |
+| Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
+| Procedimento de coleta | Teste manual roteirizado com cronômetro do painel de desempenho, comparando o tempo de exportar com o tempo de abrir (M3.2.1) na mesma cena. |
+| Critério de interpretação | Confirma a hipótese se as cenas maiores forem abertas mas tiverem exportação mais lenta que a abertura. O valor mostra até onde o usuário pode levar um desenho sem perder a capacidade de salvar e compartilhar. |
+| Questão respondida | Q3.2 |
+| Características desejáveis | Simples. Objetiva, porque o limite de tempo é fixo. Válida para RQ-FLEX-06. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
