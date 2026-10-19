@@ -176,4 +176,4 @@ Depois das fichas, serão definidos os níveis de pontuação e os critérios de
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 19/10/2026 | Criação do documento com o método GQM, os objetivos de medição e a estrutura das questões | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.0 | 19/10/2026 | Criação do documento com o método GQM, os objetivos de medição e a estrutura das questões | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
