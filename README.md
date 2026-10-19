@@ -10,7 +10,7 @@ Repositório da disciplina de **Qualidade de Software 1** da **FCTE / Universida
 
 Este projeto tem como objetivo realizar a avaliação de qualidade de software do produto open-source [Excalidraw](https://excalidraw.com/), com base nas normas da família **ISO/IEC 25000 (SQuaRE)**, com foco nas seguintes características:
 
-1. **Manutenabilidade**
+1. **Manutenibilidade**
 2. **Confiabilidade**
 3. **Portabilidade**
 

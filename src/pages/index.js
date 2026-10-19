@@ -33,7 +33,7 @@ const docSections = [
 
 const qualityFocus = [
   {
-    title: 'Manutenabilidade',
+    title: 'Manutenibilidade',
     description: 'Avaliação da modularidade, facilidade de alteração do código, reusabilidade e cobertura de testes.',
   },
   {

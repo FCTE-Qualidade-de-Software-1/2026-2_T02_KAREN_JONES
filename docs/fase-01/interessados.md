@@ -130,7 +130,7 @@ Esse grupo não aparece na matriz de prioridades com valores formais, mas suas p
 
 A tabela abaixo resume as prioridades de cada grupo em relação às três características avaliadas. **Principal** significa que aquela característica atende diretamente os interesses do grupo; **Secundário** indica relevância indireta; **–** indica que a característica não é aplicável ou é muito periférica para o grupo.
 
-| Interessado | Manutenabilidade | Confiabilidade | Portabilidade |
+| Interessado | Manutenibilidade | Confiabilidade | Portabilidade |
 |---|---|---|---|
 | Usuários finais | – | Principal | Secundário |
 | Desenvolvedores do projeto | Principal | Secundário | – |
