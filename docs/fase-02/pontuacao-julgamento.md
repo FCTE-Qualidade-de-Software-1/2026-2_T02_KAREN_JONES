@@ -173,6 +173,35 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 ---
 
+## 6. Agregação: da métrica à característica
+
+As pontuações são combinadas em duas etapas, com pesos iguais, como no modelo de Heitlager, Kuipers e Visser (2007, p. 8):
+
+1. **Questão:** a pontuação de cada questão é a média aritmética dos pontos das suas métricas. Como cada questão corresponde a uma subcaracterística, essa é também a pontuação da subcaracterística.
+2. **Característica:** a pontuação de cada característica (G1, G2 e G3) é a média aritmética das médias das suas questões, sem arredondá-las antes.
+
+A média é convertida em nível pelo arredondamento para o inteiro mais próximo. Uma média terminada exatamente em 0,5 é arredondada para baixo, para que o resultado não seja favorecido em caso de empate. O relatório mostra a média com uma casa decimal e o nível correspondente. Essa regra de arredondamento é da equipe, porque o modelo não a define.
+
+Não é calculada uma pontuação única para o Excalidraw. Os autores do modelo também não veem valor em um número único: as pontuações por subcaracterística dizem mais e podem ser rastreadas até as métricas que as originaram (Heitlager; Kuipers; Visser, 2007, p. 8).
+
+### 6.1 Métricas não coletadas
+
+Uma métrica que não puder ser coletada na Fase 04 fica fora da média da sua questão, e o motivo é registrado no relatório. Uma questão sem nenhuma métrica coletada fica sem pontuação e é marcada como não avaliada. Se mais da metade das métricas de uma característica não for coletada, a característica não é julgada, porque o resultado não representaria o objetivo.
+
+### 6.2 Exemplo de cálculo
+
+Valores fictícios, apenas para mostrar o cálculo:
+
+| Questão | Pontos das métricas | Média | Nível da questão |
+| :--- | :--- | :---: | :---: |
+| Questão A | `++` (5), `o` (3), `+` (4) | 4,0 | `+` |
+| Questão B | `-` (2), `o` (3) | 2,5 | `-` |
+| Questão C | `--` (1), `-` (2), `o` (3) | 2,0 | `-` |
+
+Média da característica: (4,0 + 2,5 + 2,0) ÷ 3 = 2,8, que é arredondada para 3, nível `o`. A questão B tem média 2,5 e fica no nível `-`, pela regra de arredondamento para baixo.
+
+---
+
 ## Referências
 
 - AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 4, 16 e 17.
