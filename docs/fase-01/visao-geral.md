@@ -21,7 +21,7 @@ A Fase 01 está organizada nas seguintes entregas e documentos de referência:
 3. **[Descrição e arquitetura do produto](./descricao-produto.md)** — caracterização técnica detalhada, organização em monorepo, diagrama de contexto/arquitetura, interfaces externas e implicações para a avaliação.
 4. **[Partes interessadas](./interessados.md)** — quem são as pessoas afetadas pelos resultados: usuários, desenvolvedores, mantenedores, contribuidores externos, integradores da biblioteca e equipe avaliadora, com matriz de prioridades e critérios de sucesso.
 5. **[Priorização das características](./priorizacao-caracteristicas.md)** — método em duas etapas (ênfase e matriz impacto × risco) para a seleção formal das características da ISO/IEC 25010:2023.
-6. **[Modelo de qualidade](./modelo-de-qualidade.md)** — características e subcaracterísticas da ISO/IEC 25010:2023 selecionadas: Manutenabilidade, Confiabilidade e Flexibilidade, com justificativas, adaptações e limites de validade.
+6. **[Modelo de qualidade](./modelo-de-qualidade.md)** — características e subcaracterísticas da ISO/IEC 25010:2023 selecionadas: Manutenibilidade, Confiabilidade e Flexibilidade, com justificativas, adaptações e limites de validade.
 7. **[Escopo e objetos de avaliação](./escopo-avaliacao.md)** — delimitação dos objetos concretos (O1 a O6), profundidade e fronteiras operacionais da avaliação.
 8. **[Requisitos de avaliação](./requisitos-avaliacao.md)** — catálogo de requisitos técnicos e perguntas a responder formuladas por característica e subcaracterística.
 9. **[ODS e a Avaliação](./ods.md)** — relação do software com os Objetivos de Desenvolvimento Sustentável da Agenda 2030 (ODS 4, 9 e 10).
@@ -34,9 +34,17 @@ Os documentos de cada item acima estão nesta seção e estruturam o relatório 
 
 ---
 
+## Referências Cruzadas
+
+* Os objetivos e o público mapeados em [Propósito da avaliação](./proposito-avaliacao.md) e [Partes interessadas](./interessados.md) orientam a [Priorização das Características](./priorizacao-caracteristicas.md) e o [Modelo de qualidade](./modelo-de-qualidade.md).
+* A estrutura técnica apresentada em [Tipo de produto e arquitetura](./tipo-produto.md) e [Descrição e arquitetura do produto](./descricao-produto.md) define a delimitação em [Escopo e objetos de avaliação](./escopo-avaliacao.md) e os critérios em [Requisitos de avaliação](./requisitos-avaliacao.md).
+* As implicações sociais do projeto são abordadas em [ODS e a Avaliação](./ods.md).
+
+---
+
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Estruturação da visão geral da Fase 1 e links de navegação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-
+1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
