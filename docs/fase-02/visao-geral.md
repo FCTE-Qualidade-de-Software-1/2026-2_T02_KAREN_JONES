@@ -20,9 +20,9 @@ A Fase 02 está organizada em sete documentos. A tabela mostra o estado de cada 
 | :--- | :--- | :---: |
 | [Método GQM e objetivos de medição](./estrutura-gqm.md) | Resumo do método, adaptação das etapas ao contexto da avaliação e os objetivos G1, G2 e G3 | Publicado |
 | [Abstraction sheets](./abstraction-sheets.md) | Uma ficha por objetivo, preenchida em reunião da equipe | Publicado |
-| GQM de Manutenibilidade (G1) | Questões Q1.1 a Q1.5, hipóteses e fichas das métricas | Pendente |
-| GQM de Confiabilidade (G2) | Questões, hipóteses e fichas das métricas | Pendente |
-| GQM de Flexibilidade (G3) | Questões Q3.1 a Q3.4, hipóteses e fichas das métricas | Pendente |
+| [GQM de Manutenibilidade (G1)](./gqm-manutenibilidade.md) | Questões Q1.1 a Q1.5, hipóteses e fichas das métricas | Publicado |
+| [GQM de Confiabilidade (G2)](./gqm-confiabilidade.md) | Questões Q2.1 a Q2.4, hipóteses e fichas das métricas | Publicado |
+| [GQM de Flexibilidade (G3)](./gqm-flexibilidade.md) | Questões Q3.1 a Q3.4, hipóteses e fichas das métricas | Publicado |
 | Níveis de pontuação e critérios de julgamento | Faixas de valores e regras de interpretação, da métrica até a característica | Pendente |
 | Plano GQM e diagrama da hierarquia | Diagrama objetivo, questões e métricas, com a rastreabilidade para a Fase 01 | Pendente |
 
@@ -42,3 +42,4 @@ A Fase 02 está organizada em sete documentos. A tabela mostra o estado de cada 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação da visão geral da Fase 02 e das referências cruzadas com a Fase 01 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
+| 1.1 | 19/10/2026 | Publicação dos GQM de G1, G2 e G3 na tabela de documentos | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
