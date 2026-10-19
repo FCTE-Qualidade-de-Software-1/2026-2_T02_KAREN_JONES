@@ -222,6 +222,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 7. Q1.5 — Testabilidade
+
+**Questão:** O código pode ser verificado por testes automatizados, em diferentes níveis, executados a cada alteração?
+
+**Requisitos:** RQ-MAN-11 (condições para testes automatizados), RQ-MAN-12 (níveis de teste) e RQ-MAN-13 (execução automática).
+
+**Hipótese:** a biblioteca tem cobertura de testes maior do que a aplicação web. Predominam testes unitários e de integração. Os testes rodam em toda contribuição antes da integração.
+
+### M1.5.1 — Cobertura de linhas por pacote
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das linhas do código de produção de cada pacote executadas pelo conjunto de testes automatizados do projeto. |
+| Procedimento de cálculo | (linhas executadas pelos testes ÷ linhas executáveis) × 100, por pacote e no total. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Código de produção e de teste de todos os pacotes; configuração de cobertura em `vitest.config.mts`. |
+| Procedimento de coleta | Execução do comando do próprio projeto `yarn test:coverage` (Vitest), no ambiente definido no plano de avaliação, lendo o relatório `json-summary` gerado. |
+| Critério de interpretação | Confirma a hipótese se a cobertura da biblioteca for maior que a da aplicação web. Pacotes com cobertura baixa têm mais código que pode ser alterado sem nenhum teste perceber a mudança. Os limites mínimos já configurados pelo projeto em `vitest.config.mts` servem de referência. |
+| Questão respondida | Q1.5 |
+| Características desejáveis | Objetiva e consistente, porque usa a configuração do próprio projeto. Robusta, porque permite comparar pacotes. Fácil de coletar com um comando. Válida para RQ-MAN-11, com a limitação de que cobertura mede código executado, e não a qualidade das verificações. |
+
+### M1.5.2 — Distribuição dos testes por nível
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual dos arquivos de teste em cada nível: unitário, integração e ponta a ponta. |
+| Procedimento de cálculo | Classificar cada arquivo de teste por um critério fixo: **integração**, se renderiza componentes do editor (usa a função `render` dos utilitários de teste); **ponta a ponta**, se usa uma ferramenta que controla um navegador real (como Playwright, Cypress ou Puppeteer); **unitário**, nos demais casos. Calcular (arquivos do nível ÷ total de arquivos de teste) × 100. Unidade: percentual. Escala: 0 a 100 para cada nível. |
+| Fonte dos dados | Código de teste de todos os pacotes; `package.json` da raiz e dos pacotes, para identificar ferramentas de teste de ponta a ponta. |
+| Procedimento de coleta | Busca no código de teste (ferramenta `grep`) pelas chamadas e importações que definem cada nível. |
+| Critério de interpretação | Confirma a hipótese se os testes unitários e de integração somarem a maior parte dos arquivos de teste. Um nível ausente indica um tipo de falha que os testes automatizados não alcançam. |
+| Questão respondida | Q1.5 |
+| Características desejáveis | Objetiva, porque o critério de classificação é mecânico e não depende de julgamento. Fácil de coletar. Válida para RQ-MAN-12. |
+
+### M1.5.3 — Proporção de contribuições com testes executados antes da integração
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das contribuições integradas na janela histórica em que a verificação automática de testes foi executada antes da integração. |
+| Procedimento de cálculo | (contribuições com execução do fluxo de testes registrada ÷ contribuições integradas na janela) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Registros de execução das verificações (*check runs*) de cada contribuição no GitHub; fluxos de `.github/workflows/` disparados por `pull_request`. |
+| Procedimento de coleta | API do GitHub (`gh api`), consultando as verificações registradas no último commit de cada contribuição e procurando a execução do fluxo de testes. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100% ou próximo disso. Contribuições sem testes executados foram integradas sem verificação automática de comportamento. |
+| Questão respondida | Q1.5 |
+| Características desejáveis | Simples. Objetiva, porque usa os registros do próprio GitHub, e não a configuração declarada. Fácil de coletar automaticamente. Válida para RQ-MAN-13. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 41.
