@@ -141,11 +141,45 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 ---
 
+## 5. Níveis das métricas de Flexibilidade (G3)
+
+Os códigos das métricas são os das fichas do [GQM de Flexibilidade](./gqm-flexibilidade.md).
+
+| Métrica | Valor pontuado | `++` | `+` | `o` | `-` | `--` | Origem das faixas |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| M3.1.1 | Percentual de usuários cobertos pelos navegadores declarados | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável (seção 2.1) |
+| M3.1.2 | Combinações de React e empacotador com sucesso (de 6) | 6 | 5 | 4 | 2 ou 3 | 0 ou 1 | Proporção desejável (seção 2.1) |
+| M3.1.3 | Ações que funcionam por toque (de 10) | 10 | 8 ou 9 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável (seção 2.1) |
+| M3.2.1 | Tempo de abertura de cada cena de escala | até 1 s | 1 a 2 s | 2 a 5 s | 5 a 10 s | mais de 10 s | Nielsen (1993) e RAIL (ver abaixo) |
+| M3.2.2 | Quadros por segundo de cada cena ÷ 60 × 100 | 57 ou mais | 48 a 57 | 36 a 48 | 12 a 36 | menos de 12 | Proporção desejável (seção 2.1), com a meta de 60 quadros do RAIL |
+| M3.2.3 | Maior cena salva e exportada | 10.000 elementos | 5.000 | 1.000 | 100 | nenhuma | Equipe (ver abaixo) |
+| M3.3.1 | Operações de pacote com sucesso (de 9) | 9 | 8 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável (seção 2.1) |
+| M3.3.2 | Percentual de passos reproduzidos sem ajuste | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável (seção 2.1) |
+| M3.3.3 | Verificações do Docker que passam (de 4) | 4 | — | 3 | 1 ou 2 | 0 | Proporção desejável (seção 2.1) |
+| M3.4.1 | Formatos de exportação abertos | 4 ou mais | 3 | 2 | 1 | 0 | Equipe (ver abaixo) |
+| M3.4.2 | Percentual de elementos preservados em cada formato | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável (seção 2.1) |
+| M3.4.3 | Percentual de campos do formato documentados | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável (seção 2.1) |
+
+### 5.1 Justificativas específicas
+
+Esta seção explica só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da seção 2. As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
+
+- **M3.1.3:** a pontuação usa o toque com o dedo. Se houver caneta disponível, as duas formas de entrada são pontuadas e a pontuação da métrica é a média das duas.
+- **M3.2.1:** os limites de 1 e de 10 segundos são os de Nielsen (1993): até 1 segundo, o raciocínio do usuário não é interrompido, e 10 segundos é o limite para manter a atenção dele na tarefa. Os limites intermediários de 2 e de 5 segundos são as metas do modelo RAIL, do Google, para carregar uma página já visitada e uma página nova. O RAIL trata do carregamento de páginas; a equipe o aplica à abertura de um arquivo por ser a referência publicada mais próxima. Cada uma das quatro cenas de escala é pontuada, e a pontuação da métrica é a média.
+- **M3.2.2:** o RAIL considera fluida a animação com 60 quadros por segundo. A taxa medida é convertida em percentual dessa meta e pontuada com as faixas de proporção desejável. Cada cena é pontuada, e a pontuação da métrica é a média.
+- **M3.2.3:** a métrica tem cinco resultados possíveis (as quatro cenas de escala ou nenhuma), e cada um corresponde a um nível.
+- **M3.4.1:** a hipótese de G3 espera três formatos abertos (`.excalidraw`, PNG e SVG), o que corresponde ao nível `+`. Cada formato a menos desce um nível. Os limites são da equipe.
+- **M3.4.2:** cada um dos três formatos é pontuado, e a pontuação da métrica é a média.
+
+---
+
 ## Referências
 
 - AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 4, 16 e 17.
+- GOOGLE. Measure performance with the RAIL model. *web.dev*, atualizado em 10/06/2020. Seções "Load" e "Animation". Disponível em: https://web.dev/articles/rail.
 - HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30–39. Páginas 5 a 8 da versão dos autores, disponível em: https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf.
 - MARTIN, R. C. Stability. *The C++ Report*, 1997. Páginas 8 e 10. Disponível em: https://objectmentor.com/resources/articles/stability.pdf.
+- NIELSEN, J. *Usability Engineering*. Academic Press, 1993. Capítulo 5. Trecho disponível em: https://www.nngroup.com/articles/response-times-3-important-limits/.
 
 ---
 
