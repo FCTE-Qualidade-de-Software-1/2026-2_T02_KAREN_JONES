@@ -8,7 +8,7 @@ description: O que estamos definindo na segunda fase da avaliação de qualidade
 
 A Fase 01 definiu por que avaliar o Excalidraw, o que avaliar e quais características de qualidade priorizar. A Fase 02 responde à pergunta seguinte: **o que exatamente será medido, e como cada resultado será interpretado?**
 
-Para isso, a equipe usa o método *Goal–Question–Metric* (GQM). Cada característica priorizada na [Fase 01](../fase-01/modelo-de-qualidade.md) vira um objetivo de medição, desdobrado em questões, hipóteses e métricas, com níveis de pontuação e critérios de julgamento definidos antes da coleta. A coleta em si fica para a Fase 03.
+Para isso, a equipe usa o método *Goal–Question–Metric* (GQM). Cada característica priorizada na [Fase 01](../fase-01/modelo-de-qualidade.md) vira um objetivo de medição, desdobrado em questões, hipóteses e métricas, com níveis de pontuação e critérios de julgamento definidos antes da coleta. A coleta em si fica para a Fase 04, depois que a Fase 03 projetar a avaliação.
 
 ---
 

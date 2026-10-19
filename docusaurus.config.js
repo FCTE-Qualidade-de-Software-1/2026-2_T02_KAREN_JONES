@@ -70,6 +70,16 @@ const config = {
             label: 'Documentação',
           },
           {
+            to: '/docs/fase-01/visao-geral',
+            label: 'Fase 01',
+            position: 'left',
+          },
+          {
+            to: '/docs/fase-02/visao-geral',
+            label: 'Fase 02',
+            position: 'left',
+          },
+          {
             href: 'https://excalidraw.com/',
             label: 'Excalidraw',
             position: 'left',
