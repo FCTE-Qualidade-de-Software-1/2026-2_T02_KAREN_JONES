@@ -176,6 +176,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 6. Q1.4 — Modificabilidade
+
+**Questão:** As alterações no código ficam restritas a poucas partes, ou tendem a se espalhar e a passar por arquivos que concentram responsabilidades demais?
+
+**Requisitos:** RQ-MAN-09 (alcance das alterações) e RQ-MAN-10 (arquivos ou funções que concentram responsabilidades).
+
+**Hipótese:** a maioria das contribuições altera poucos arquivos. Há poucos arquivos muito extensos, mas eles são alterados por uma parte relevante das contribuições, o que torna essas alterações mais arriscadas.
+
+### M1.4.1 — Mediana de arquivos de produção alterados por contribuição
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Mediana do número de arquivos de produção alterados por contribuição integrada na janela histórica. |
+| Procedimento de cálculo | Para cada contribuição integrada na janela, contar os arquivos de produção alterados (adicionados, modificados ou removidos). Calcular a mediana dessas contagens. A mediana é usada no lugar da média para que poucas contribuições muito grandes não distorçam o resultado. Unidade: arquivos. Escala: absoluta. |
+| Fonte dos dados | Histórico de *pull requests* do repositório oficial no GitHub. |
+| Procedimento de coleta | API do GitHub (`gh api`), listando as contribuições integradas na janela e os arquivos de cada uma (`pulls/{número}/files`). Contribuições automáticas de atualização de dependências e de traduções são excluídas e contadas à parte. |
+| Critério de interpretação | Confirma a hipótese se a mediana for baixa. Medianas altas indicam que mudanças comuns exigem mexer em muitos lugares. |
+| Questão respondida | Q1.4 |
+| Características desejáveis | Simples. Objetiva, porque os dados vêm do registro do repositório. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para RQ-MAN-09. |
+
+### M1.4.2 — Arquivos de produção extensos
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Número de arquivos de produção com mais de 1.000 linhas de código, sem contar linhas em branco e comentários. |
+| Procedimento de cálculo | Contagem por pacote e no total, com a lista dos arquivos encontrados. O limite de 1.000 linhas é uma convenção da equipe para identificar arquivos que reúnem muitas responsabilidades; a justificativa das faixas fica nos níveis de pontuação. Unidade: arquivos. Escala: absoluta. |
+| Fonte dos dados | Código de produção de todos os pacotes. |
+| Procedimento de coleta | Contagem de linhas por arquivo com a ferramenta cloc (versão 1.86, opção `--by-file`), aplicando as convenções da seção 2. |
+| Critério de interpretação | Confirma a hipótese se houver poucos arquivos acima do limite. Cada arquivo encontrado é candidato a concentrar responsabilidades demais (RQ-MAN-10). |
+| Questão respondida | Q1.4 |
+| Características desejáveis | Simples e fácil de coletar. Objetiva, porque o limite é fixo e a ferramenta define o que é linha de código. Robusta, porque permite comparar pacotes e versões. |
+
+### M1.4.3 — Proporção de contribuições que alteram arquivos extensos
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das contribuições integradas na janela histórica que alteram pelo menos um dos arquivos identificados em M1.4.2. |
+| Procedimento de cálculo | (contribuições que alteram ao menos um arquivo extenso ÷ contribuições integradas na janela) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Histórico de *pull requests* (mesmos dados de M1.4.1) e lista de arquivos de M1.4.2. |
+| Procedimento de coleta | Cruzamento, por script, da lista de arquivos de cada contribuição com a lista de arquivos extensos. Arquivos renomeados na janela são acompanhados pelo nome atual. |
+| Critério de interpretação | Confirma a hipótese se o percentual for relevante, isto é, se os arquivos extensos forem alterados com frequência. Quanto maior o valor, mais o trabalho de manutenção passa pelos arquivos mais difíceis de alterar. |
+| Questão respondida | Q1.4 |
+| Características desejáveis | Simples (uma razão). Objetiva. Fácil de coletar a partir dos dados de M1.4.1 e M1.4.2. Válida, porque liga o tamanho dos arquivos ao esforço real de manutenção. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 41.
