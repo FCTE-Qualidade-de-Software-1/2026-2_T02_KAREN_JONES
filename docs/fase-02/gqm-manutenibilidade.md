@@ -130,11 +130,58 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 5. Q1.3 — Analisabilidade
+
+**Questão:** O código pode ser entendido com facilidade, com apoio de documentação e de verificações automáticas?
+
+**Requisitos:** RQ-MAN-06 (compreensão do código), RQ-MAN-07 (documentação de convenções, arquitetura e contribuição) e RQ-MAN-08 (lint, formatação e verificação de tipos).
+
+**Hipótese:** a maior parte das funções tem complexidade baixa, e as de complexidade alta se concentram em poucos arquivos, principalmente no componente principal do editor. A documentação para desenvolvedores cobre a contribuição e a preparação do ambiente. Lint, formatação e verificação de tipos são executados automaticamente.
+
+### M1.3.1 — Proporção de funções com complexidade ciclomática alta
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das funções do código de produção com complexidade ciclomática maior que 10. A complexidade ciclomática conta os caminhos independentes de execução de uma função, e 10 é o limite proposto por McCabe (1976). |
+| Procedimento de cálculo | (funções com complexidade > 10 ÷ total de funções) × 100, por pacote e no total. Também é registrada a lista dos arquivos com mais funções acima do limite. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Código de produção de todos os pacotes. |
+| Procedimento de coleta | ESLint (versão 8.57.0) com o analisador `@typescript-eslint/parser` e a regra `complexity` ativada com limite 0, para obter a complexidade de todas as funções. |
+| Critério de interpretação | Confirma a hipótese se o percentual for baixo e se as funções acima do limite estiverem concentradas em poucos arquivos. Funções muito complexas são mais difíceis de entender e de testar. |
+| Questão respondida | Q1.3 |
+| Características desejáveis | Objetiva e consistente, porque o cálculo é definido pela regra da ferramenta. Fácil de coletar automaticamente. Robusta, porque permite comparar pacotes. Baseada na estrutura de controle do programa, e não na sintaxe da linguagem. |
+
+### M1.3.2 — Cobertura da documentação para desenvolvedores
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Número de tópicos de documentação para desenvolvedores presentes, de uma lista de quatro: (1) guia de contribuição; (2) preparação do ambiente de desenvolvimento; (3) convenções de código; (4) descrição da arquitetura ou da organização do código. |
+| Procedimento de cálculo | Soma dos tópicos presentes. Um tópico está presente se houver um documento ou uma seção dedicada a ele. Unidade: tópicos. Escala: 0 a 4. |
+| Fonte dos dados | `README.md`, `CONTRIBUTING.md` e `AGENTS.md` da raiz; páginas de `dev-docs/docs/` (documentação publicada em docs.excalidraw.com). |
+| Procedimento de coleta | Inspeção dos arquivos, preenchendo uma lista de verificação com o caminho do documento que comprova cada tópico. |
+| Critério de interpretação | Confirma a hipótese se pelo menos os tópicos 1 e 2 estiverem presentes. Cada tópico ausente obriga quem chega ao projeto a descobrir a informação pelo código. |
+| Questão respondida | Q1.3 |
+| Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item exige um documento como evidência. Fácil de coletar. Válida para RQ-MAN-07. |
+
+### M1.3.3 — Verificações estáticas executadas automaticamente
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Número de verificações estáticas executadas automaticamente em toda alteração proposta, de uma lista de três: lint, formatação e verificação de tipos. |
+| Procedimento de cálculo | Soma das verificações que aparecem em um fluxo de integração contínua disparado por *pull request*. Unidade: verificações. Escala: 0 a 3. |
+| Fonte dos dados | Arquivos de fluxo em `.github/workflows/` e scripts do `package.json` da raiz. |
+| Procedimento de coleta | Inspeção dos fluxos disparados por `pull_request` e dos scripts que eles chamam (por exemplo, `test:code`, `test:other` e `test:typecheck`). |
+| Critério de interpretação | Confirma a hipótese se o valor for 3. Uma verificação que não roda automaticamente depende da disciplina de cada contribuidor. |
+| Questão respondida | Q1.3 |
+| Características desejáveis | Simples e objetiva, com evidência nos arquivos de configuração. Fácil de coletar. Válida para RQ-MAN-08. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 41.
 - Especificação do trabalho final da disciplina de Qualidade de Software 1 (2026-2 Trabalho final completo v1). Página 1, premissa 2.
 - MARTIN, R. C. *Agile Software Development: Principles, Patterns, and Practices*. Prentice Hall, 2002.
+- McCABE, T. J. A Complexity Measure. *IEEE Transactions on Software Engineering*, v. SE-2, n. 4, p. 308–320, 1976.
 - ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
 - Excalidraw. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0.
 
