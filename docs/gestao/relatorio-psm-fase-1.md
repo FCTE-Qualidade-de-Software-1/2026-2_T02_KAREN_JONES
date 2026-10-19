@@ -208,4 +208,4 @@ Conforme determina a **Premissa 5**, todos os números apresentados neste relat�
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 0.1 | 18/10/2026 | Criação do Relatório PSM/CID da Fase 1 com measurement constructs, medições e decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
+| 1.0 | 18/10/2026 | Criação do Relatório PSM/CID da Fase 1 com measurement constructs, medições e decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |

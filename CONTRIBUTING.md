@@ -188,12 +188,12 @@ Todo documento de conteúdo publicado no GitPage (`docs/**/*.md`) e nos apêndic
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 0.1 | DD/MM/AAAA | Criação do documento ou descrição sucinta da alteração | [Nome](link-github) | [Nome](link-github) |
+| 1.0 | DD/MM/AAAA | Criação do documento ou descrição sucinta da alteração | [Nome](link-github) | |
 ```
 
-- **Versão inicial:** Começa em `0.1` na criação do documento e é incrementada (`0.2`, `0.3`...) a cada revisão ou nova submissão.
+- **Versão inicial:** Começa em `1.0` na criação do documento e é incrementada (`1.1`, `1.2`... ou `2.0`) a cada revisão ou nova entrega.
 - **Autor(es):** Nome e link do perfil no GitHub de quem elaborou o artefato.
-- **Revisor(es):** Nome e link do perfil no GitHub do integrante responsável por revisar e aprovar o Pull Request.
+- **Revisor(es):** Nome e link do perfil no GitHub do integrante que revisou a entrega (deixar vazio enquanto aguarda revisão).
 
 ## 9. Dados, Evidências e Atas
 
