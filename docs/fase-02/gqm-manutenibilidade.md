@@ -268,6 +268,28 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 8. Rastreabilidade com a Fase 01
+
+| Requisito | Subcaracterística | Questão | Métricas |
+| :--- | :--- | :--- | :--- |
+| RQ-MAN-01 | Modularidade | Q1.1 | M1.1.2 |
+| RQ-MAN-02 | Modularidade | Q1.1 | M1.1.1, M1.1.2 |
+| RQ-MAN-03 | Modularidade | Q1.1 | M1.1.3 |
+| RQ-MAN-04 | Reusabilidade | Q1.2 | M1.2.1 |
+| RQ-MAN-05 | Reusabilidade | Q1.2 | M1.2.2 |
+| RQ-MAN-06 | Analisabilidade | Q1.3 | M1.3.1 |
+| RQ-MAN-07 | Analisabilidade | Q1.3 | M1.3.2 |
+| RQ-MAN-08 | Analisabilidade | Q1.3 | M1.3.3 |
+| RQ-MAN-09 | Modificabilidade | Q1.4 | M1.4.1 |
+| RQ-MAN-10 | Modificabilidade | Q1.4 | M1.4.2, M1.4.3 |
+| RQ-MAN-11 | Testabilidade | Q1.5 | M1.5.1 |
+| RQ-MAN-12 | Testabilidade | Q1.5 | M1.5.2 |
+| RQ-MAN-13 | Testabilidade | Q1.5 | M1.5.3 |
+
+Todos os 13 requisitos de Manutenibilidade da Fase 01 são atendidos por pelo menos uma métrica.
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 41.
