@@ -1,6 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 
-\usepackage[brazil]{babel}
+\usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{indentfirst}
@@ -9,6 +9,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage[top=2.0cm, bottom=2.0cm, left=2.5cm, right=2.0cm]{geometry}
 
 \hypersetup{
     colorlinks=true,
@@ -18,6 +19,7 @@
 }
 
 \begin{document}
+\hypersetup{pageanchor=false}
 
 % % % % % % % % % % % % % % % CAPA % % % % % % % % % % % % % % %
 \begin{titlepage}
@@ -27,32 +29,22 @@
 		\textbf{\large CURSO DE ENGENHARIA DE SOFTWARE}\\
 		\large DISCIPLINA: QUALIDADE DE SOFTWARE 1 -- TURMA 02\\
 		\large PROFESSORA: Ms. CRISTIANE SOARES RAMOS\\
-		\vspace{40pt}
+		\vspace{35pt}
 		
-		\textbf{\large EQUIPE KAREN JONES}
+		\textbf{\large EQUIPE KAREN JONES}\\
+		\vspace{6pt}
+		{\normalsize
+		Christopher \quad$\cdot$\quad Davi Pierre \quad$\cdot$\quad Gabriel Monteiro\\
+		Letícia de Carvalho \quad$\cdot$\quad Luiz Henrique Soares \quad$\cdot$\quad Maria Eduarda
+		}
 		
-		\vspace{80pt}
+		\vspace{70pt}
 		
 		\textbf{\LARGE{AVALIAÇÃO DA QUALIDADE DE PRODUTO DE SOFTWARE}}\\
 		\vspace{12pt}
 		\textbf{\Large{Estudo de Caso no Software Open Source Excalidraw segundo a ISO/IEC 25000 (SQuaRE)}}\\
 		
 		\vspace{\fill}
-		
-		\begin{flushleft}
-			\textbf{Integrantes da Equipe:}
-			\begin{itemize}
-				\itemsep 2pt
-				\item Christopher
-				\item Davi Pierre
-				\item Gabriel Monteiro
-				\item Letícia de Carvalho
-				\item Luiz Henrique Soares
-				\item Maria Eduarda
-			\end{itemize}
-		\end{flushleft}
-		
-		\vspace{30pt}
 		
 		Gama -- DF\\
 		2026
@@ -65,11 +57,16 @@
 		\textbf{\large UNIVERSIDADE DE BRASÍLIA -- UnB}\\
 		\textbf{\large FACULDADE DE CIÊNCIAS E TECNOLOGIAS EM ENGENHARIA -- FCTE}\\
 		\textbf{\large ENGENHARIA DE SOFTWARE}\\
-		\vspace{40pt}
+		\vspace{35pt}
 		
-		\textbf{\large EQUIPE KAREN JONES}
+		\textbf{\large EQUIPE KAREN JONES}\\
+		\vspace{6pt}
+		{\normalsize
+		Christopher \quad$\cdot$\quad Davi Pierre \quad$\cdot$\quad Gabriel Monteiro\\
+		Letícia de Carvalho \quad$\cdot$\quad Luiz Henrique Soares \quad$\cdot$\quad Maria Eduarda
+		}
 		
-		\vspace{60pt}
+		\vspace{50pt}
 		
 		\textbf{\LARGE{AVALIAÇÃO DA QUALIDADE DE PRODUTO DE SOFTWARE}}\\
 		\vspace{12pt}
@@ -98,104 +95,448 @@
 	\end{center}
 \end{titlepage}
 
-\newpage
 \tableofcontents
 \thispagestyle{empty}
 
 \newpage
+\hypersetup{pageanchor=true}
 \pagenumbering{arabic}
 
 % % % % % % % % % % % % SEÇÕES DO ARTIGO % % % % % % % % % % %
 \section{Resumo}
-Este trabalho apresenta a avaliação da qualidade de produto do software livre Excalidraw, fundamentada nas normas da família ISO/IEC 25000 (SQuaRE). A avaliação foi conduzida sob o papel de equipe de garantia da qualidade (QA) independente, aplicando o processo formal da ISO/IEC 25040 e selecionando três características do modelo ISO/IEC 25010:2023: Manutenabilidade, Confiabilidade e Flexibilidade. As métricas foram desdobradas através da abordagem Goal-Question-Metric (GQM), e a gestão do projeto foi guiada por indicadores do modelo PSM/CID.
+Este trabalho apresenta a avaliação da qualidade de produto do software de código aberto Excalidraw, uma ferramenta web voltada para criação de diagramas e desenhos livres com colaboração em tempo real. O estudo foi desenvolvido pela Equipe Karen Jones na disciplina de Qualidade de Software 1 da Universidade de Brasília (FCTE/UnB), assumindo o papel de equipe independente de garantia da qualidade (QA). O processo baseia-se na norma ISO/IEC 25040 e adota o modelo de qualidade da ISO/IEC 25010:2023, com foco em três características priorizadas: Manutenibilidade, Confiabilidade e Flexibilidade. As métricas e critérios de julgamento foram formulados por meio da abordagem Goal-Question-Metric (GQM), enquanto o acompanhamento gerencial do projeto utilizou indicadores do modelo PSM/CID. As análises tiveram como linha de base o commit \texttt{e1b7aac} da branch principal do projeto.
 
-\vspace{10pt}
+\vspace{8pt}
 \noindent\textbf{Palavras-chave:} Qualidade de Software, SQuaRE, ISO/IEC 25010, ISO/IEC 25040, GQM, Excalidraw.
 
-\newpage
 \section{Introdução}
-O Excalidraw é uma ferramenta web de código aberto amplamente utilizada para diagramação e colaboração em tempo real. Desenvolvido em TypeScript e React com arquitetura monorepo, o projeto conta com expressiva adoção comunitária e acadêmica.
 
-O objetivo desta avaliação é \textbf{indicar pontos para melhoria no produto}, apoiando desenvolvedores, mantenedores e integradores da biblioteca \texttt{@excalidraw/excalidraw}. A equipe Karen Jones atua como requisitante independente de QA, sem vínculo formal prévio com os mantenedores do software.
+Garantir a qualidade técnica de um sistema vai muito além de checar se suas funcionalidades executam sem falhas visíveis no navegador. Em ferramentas modernas com múltiplos usuários simultâneos, fatores como organização modular do código, estabilidade perante quedas de rede e capacidade de rodar em diferentes dispositivos são decisivos para que a aplicação continue evoluindo sem acumular custos proibitivos de manutenção. Para mensurar esses aspectos de forma estruturada, a engenharia de software recorre a normas consolidadas, como a família ISO/IEC 25000 (SQuaRE) \cite{iso25010}.
 
-\subsection{Link de Rastreabilidade do Repositório}
-Todos os artefatos de medição, atas de reunião, relatórios PSM/CID e códigos-fonte da documentação estão disponíveis no repositório oficial da equipe:
-\begin{center}
-    \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}
-\end{center}
+O software analisado neste trabalho é o \textbf{Excalidraw}\footnote{Repositório oficial: \url{https://github.com/excalidraw/excalidraw}}, uma ferramenta de código aberto para criação de esboços rápidos, diagramas e quadros brancos virtuais. Seu estilo visual simula traços feitos à mão, o que tornou a ferramenta amplamente adotada por desenvolvedores, educadores e equipes ágeis para dinâmicas de desenho e arquitetura. Do ponto de vista técnico, o projeto é construído em TypeScript e React sob a estrutura de monorepo, englobando tanto a aplicação web final (\texttt{excalidraw.com}) quanto uma biblioteca reutilizável distribuída via npm (\texttt{@excalidraw/excalidraw}).
 
+Apesar do grande alcance do projeto e de sua comunidade ativa, não identificamos trabalhos ou relatórios formais avaliando sua qualidade técnica segundo padrões internacionais reconhecidos. O fato de o software ter código aberto, histórico transparente de commits, discussões públicas em issues e pipelines de integração contínua (CI) acessíveis torna o Excalidraw um objeto de estudo adequado e prático para as atividades da disciplina.
+
+O objetivo principal desta avaliação é diagnosticar a qualidade interna e externa do produto e identificar pontos de melhoria, gerando insumos úteis tanto para os mantenedores quanto para desenvolvedores que integram sua biblioteca. A Equipe Karen Jones conduz essa avaliação como um grupo independente de QA, no âmbito da disciplina de Qualidade de Software 1 da Faculdade de Ciências e Tecnologias em Engenharia (FCTE) da Universidade de Brasília (UnB).
+
+O trabalho foi estruturado com base no processo em quatro fases da norma ISO/IEC 25040 \cite{iso25040}: (1)~estabelecimento dos requisitos de avaliação, (2)~especificação da avaliação via GQM, (3)~planejamento da execução e (4)~execução das medições com julgamento dos resultados. A partir do modelo ISO/IEC 25010:2023 \cite{iso25010}, priorizamos três características centrais: \textbf{Manutenibilidade}, \textbf{Confiabilidade} e \textbf{Flexibilidade}.
+
+Toda a documentação complementar, atas de reunião e relatórios de medição estão disponíveis no repositório do grupo: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}.
+
+\textbf{Estrutura do artigo.} A Seção~\ref{sec:referencial} apresenta a fundamentação teórica; a Seção~\ref{sec:fase1} detalha a Fase~1 com escopo, interessados e requisitos levantados; a Seção~\ref{sec:fase2} resume a especificação das métricas na Fase~2 com GQM; e a Seção~\ref{sec:conclusao} reúne as considerações parciais desta entrega. As Fases~3 e~4 farão parte da entrega seguinte da disciplina.
+
+% ================================================================
 \section{Referencial Teórico}
-Esta seção aborda as normas e métodos utilizados:
-\begin{itemize}
-    \item \textbf{Família ISO/IEC 25000 (SQuaRE):} Conjunto de normas que padroniza os requisitos e a avaliação de qualidade de produtos de software.
-    \item \textbf{ISO/IEC 25040 (Processo de Avaliação):} Roteiro estruturado em quatro fases (Requisitos, Especificação, Projeto e Execução).
-    \item \textbf{ISO/IEC 25010:2023 (Modelo de Qualidade do Produto):} Versão atualizada da norma, adotando características como Manutenabilidade, Confiabilidade e Flexibilidade.
-    \item \textbf{Goal-Question-Metric (GQM):} Metodologia de definição orientada a objetivos para métricas de software.
-    \item \textbf{PSM/CID (Practical Software Measurement):} Acompanhamento gerencial do processo, cronograma e esforço.
-\end{itemize}
+\label{sec:referencial}
 
+Para dar suporte metodológico às decisões da avaliação, esta seção reúne os principais conceitos e modelos utilizados: as normas da família ISO/IEC 25000, o processo da ISO/IEC 25040, o paradigma GQM e a gestão com base no PSM/CID.
+
+\subsection{Família ISO/IEC 25000 (SQuaRE)}
+
+A série de normas ISO/IEC 25000, conhecida pelo acrônimo \textbf{SQuaRE} (\textit{Systems and Software Quality Requirements and Evaluation}), consolida as melhores práticas internacionais para especificação e avaliação da qualidade de software \cite{iso25010}, substituindo os padrões anteriores ISO/IEC 9126 e 14598. A série é estruturada em cinco divisões: 2500n (Gestão da Qualidade), 2501n (Modelos de Qualidade), 2502n (Medição), 2503n (Requisitos) e 2504n (Processo de Avaliação). No presente estudo, a investigação fundamenta-se principalmente nas diretrizes das normas ISO/IEC 25010:2023 e ISO/IEC 25040.
+
+\subsection{ISO/IEC 25010:2023 — Modelo de Qualidade do Produto}
+
+A revisão de 2023 da ISO/IEC 25010 organiza a qualidade do produto de software em \textbf{nove características} de alto nível \cite{iso25010}. Em comparação com a edição de 2011, destacam-se a substituição do termo \textit{Portabilidade} por \textbf{Flexibilidade}, a inclusão formal de \textbf{Escalabilidade} como subcaracterística e a introdução de \textbf{Segurança de Proteção} (\textit{Safety}).
+
+Diante do escopo de um projeto de código aberto sem acesso direto aos servidores em produção, selecionamos três características essenciais: \textbf{Manutenibilidade} (5 subcaracterísticas), \textbf{Confiabilidade} (4 subcaracterísticas) e \textbf{Flexibilidade} (4 subcaracterísticas), totalizando \textbf{13 subcaracterísticas} sob escrutínio da equipe.
+
+\subsection{ISO/IEC 25040 — Processo de Avaliação}
+
+A ISO/IEC 25040 prescreve um processo sistemático em quatro etapas para conduzir avaliações de qualidade \cite{iso25040}: (1)~estabelecer os requisitos da avaliação, (2)~especificar as métricas e critérios, (3)~projetar os procedimentos de teste e (4)~executar as medições e produzir o diagnóstico. Este trabalho segue esse fluxo, detalhando as Fases~1 e~2 nesta primeira entrega.
+
+\subsection{Goal-Question-Metric (GQM)}
+
+O paradigma \textbf{GQM} (\textit{Goal-Question-Metric}), concebido por Basili, Caldiera e Rombach \cite{basili1994gqm}, estrutura a medição em três níveis hierárquicos: o \textbf{Objetivo} conceitual (o que se deseja avaliar e com que finalidade), as \textbf{Questões} operacionais (perguntas que caracterizam o alcance do objetivo) e as \textbf{Métricas} objetivas (dados quantitativos ou qualitativos que respondem a essas perguntas). A principal vantagem do GQM é evitar a coleta indiscriminada de dados: cada indicador só existe porque responde a uma pergunta técnica diretamente vinculada às características de qualidade priorizadas.
+
+\subsection{PSM/CID — Practical Software Measurement}
+
+O modelo \textbf{PSM} (\textit{Practical Software Measurement}) \cite{psm} fornece um método para acompanhamento e governança de projetos de software por meio de indicadores agrupados em Categorias de Informação de Decisão (\textbf{CID}). Ao longo do trabalho, acompanhamos o esforço e os prazos da equipe em três categorias: Desempenho dos Processos (produtividade), Calendário e Progresso (cumprimento de marcos) e Recursos e Custos (horas dedicadas e estimadas), com registros documentados nas atas e relatórios de medição.
+
+% ================================================================
 \section{Fase 1: Requisitos de Avaliação}
-Na primeira fase do processo de avaliação da ISO/IEC 25040, foram estabelecidos o escopo, o propósito da avaliação e o alinhamento com as partes interessadas.
+\label{sec:fase1}
 
-\subsection{Propósito e Requisitante da Avaliação}
-A equipe Karen Jones declarou-se como requisitante no papel de equipe de QA independente. O uso pretendido dos resultados compreende o fornecimento de um diagnóstico técnico transparente e a elaboração de recomendações e propostas de melhoria (incluindo prototipação de alta fidelidade para o site).
+A Fase 1 da ISO/IEC 25040 estabelece o alicerce de todo o trabalho de avaliação \cite{iso25040}: antes de coletar qualquer dado, é necessário delimitar o propósito do estudo, o produto sob análise, os interessados nos resultados e os atributos de qualidade que justificam o esforço de medição.
 
-\subsection{Partes Interessadas e Critérios de Sucesso}
-Foram mapeados os seguintes grupos de interessados: usuários finais, desenvolvedores do projeto, mantenedores, contribuidores open source, integradores da biblioteca, equipes de implantação/operação, equipes de qualidade, equipe avaliadora/docentes e comunidade adotante. Para cada grupo, foram delimitados critérios de sucesso específicos e sua influência nas características de qualidade selecionadas.
+\subsection{Propósito da Avaliação}
 
-\subsection{Descrição Estruturada do Produto e Arquitetura}
-O Excalidraw é classificado tecnicamente como uma aplicação web rich client (PWA/SPA) associada a uma biblioteca gráfica reutilizável, estruturada em monorepo com TypeScript e React. O repositório divide-se entre a aplicação de produção (\texttt{excalidraw-app/}), o pacote de biblioteca distribuído via npm (\texttt{packages/excalidraw/}) e módulos utilitários de suporte geométrico (\texttt{packages/math/} e \texttt{packages/utils/}). As interfaces externas compreendem o motor de renderização Rough.js (traçado estilo esboço), as APIs 2D Canvas do navegador, mecanismos de persistência local (IndexedDB e LocalStorage) e o servidor de colaboração síncrona (\textit{Room Server}) com criptografia ponta a ponta. 
+O propósito primordial definido pela equipe é \textbf{identificar pontos de melhoria no produto Excalidraw}, seguindo as tipologias de avaliação recomendadas na norma e na disciplina. Para isso, traçamos metas práticas: (1)~diagnosticar as características prioritárias (Manutenibilidade, Confiabilidade e Flexibilidade) via inspeção de código e dados do repositório; (2)~documentar boas práticas já consolidadas no projeto; (3)~mapear pontos de fragilidade e acoplamento arquitetural; (4)~sugerir ações corretivas (incluindo a concepção de um protótipo de interface de alta fidelidade); e (5)~gerar um relatório técnico rastreável.
 
-Em termos metodológicos para a avaliação, a arquitetura delimita claramente o que é viável medir: a qualidade interna, acoplamento e cobertura de testes são integralmente auditáveis via análise estática, enquanto subcaracterísticas dependentes de execução (Disponibilidade, Tolerância a falhas e Recuperabilidade) são investigadas através de inspeção estática das rotinas de persistência e tratamento de exceções, contornando a indisponibilidade de telemetria fechada de produção.
+Ficam fora do escopo do estudo comparações mercadológicas com ferramentas concorrentes, auditorias para certificação comercial e a medição das outras seis características da ISO/IEC 25010:2023.
 
-\subsection{Seleção das Características e Método de Priorização}
-A seleção das características não foi arbitrária: aplicou-se um método formal ponderando três critérios — abrangência de partes interessadas (quantos grupos elegem a característica como prioritária), viabilidade técnica de medição e impacto nas metas de melhoria do software. Foram selecionadas três características da ISO/IEC 25010:2023:
-\begin{enumerate}
-    \item \textbf{Manutenabilidade (Prioridade 1):} Prioritária para 4 dos 7 grupos de interessados, avaliada em Modularidade, Reusabilidade, Analisabilidade, Modificabilidade e Testabilidade.
-    \item \textbf{Confiabilidade (Prioridade 2):} Prioritária para 3 grupos, avaliada em Maturidade, Disponibilidade, Tolerância a falhas e Recuperabilidade.
-    \item \textbf{Flexibilidade (Prioridade 3):} Prioritária para 2 grupos, avaliada em Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade.
-\end{enumerate}
+\subsection{Requisitante da Avaliação}
 
-A seleção envolveu \textit{trade-offs} deliberados: priorizou-se a profundidade analítica em detrimento da cobertura superficial das nove características da norma (excluindo Usabilidade, Desempenho e Segurança), além de balancear o esforço de coleta estática para viabilizar conclusões rastreáveis no semestre letivo.
+A \textbf{Equipe Karen Jones} se declara como a própria requisitante, atuando como \textbf{equipe de QA independente}, sem qualquer vínculo institucional ou comercial com os mantenedores do Excalidraw (Tabela~\ref{tab:requisitante}). O objetivo é estritamente formativo e acadêmico.
+
+\begin{table}[!ht]
+\centering
+\caption{Identificação do requisitante da avaliação}
+\label{tab:requisitante}
+\vspace{4pt}
+\small
+\begin{tabular}{ll}
+\toprule
+\textbf{Campo} & \textbf{Descrição} \\
+\midrule
+Requisitante & Equipe Karen Jones \\
+Papel & Equipe de QA independente \\
+Contexto & Qualidade de Software 1, FCTE/UnB, 2$^\circ$ sem. 2026 \\
+Objetivo declarado & Identificar pontos de melhoria no produto \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Identificação do Produto}
+
+A Tabela~\ref{tab:produto} resume os dados de identificação do software avaliado e a linha de base adotada.
+
+\begin{table}[!ht]
+\centering
+\caption{Identificação do produto avaliado}
+\label{tab:produto}
+\vspace{4pt}
+\small
+\begin{tabular}{ll}
+\toprule
+\textbf{Campo} & \textbf{Descrição} \\
+\midrule
+Produto & Excalidraw \\
+Licença & MIT (código aberto) \\
+Domínio & Ferramenta web de quadro branco virtual \\
+Tecnologias & TypeScript, React, Vite, Yarn Workspaces \\
+Repositório & \url{https://github.com/excalidraw/excalidraw} \\
+Commit de referência & \texttt{e1b7aac} (branch \texttt{master}, 18/10/2026) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Descrição do Produto e Arquitetura}
+
+O Excalidraw pode ser classificado, no enquadramento de Pressman \cite{pressman2021}, como uma \textbf{aplicação web (WebApp)} de produtividade e colaboração, atuando também como componente de prateleira (COTS) quando sua biblioteca é integrada diretamente em soluções externas. O projeto combina duas naturezas complementares: (1)~uma aplicação web e PWA para criação de esboços, com colaboração em tempo real e funcionamento offline; e (2)~uma biblioteca React reutilizável (\texttt{@excalidraw/excalidraw}) distribuída via npm.
+
+O repositório adota a estrutura de \textbf{monorepo} sob Yarn Workspaces. Os principais módulos incluem: \texttt{excalidraw-app/} (camada de aplicação web, armazenamento local e build), \texttt{packages/excalidraw/} (editor visual principal), \texttt{packages/element/} (operações e tipos dos elementos gráficos), módulos utilitários compartilhados (\texttt{packages/math/}, \texttt{packages/common/} e \texttt{packages/utils/}) e rotinas de automação em \texttt{.github/workflows/}.
+
+Nas interfaces externas, o sistema apoia-se nas APIs 2D Canvas do navegador, no motor Rough.js para traçado com estilo manual, na persistência local via IndexedDB e LocalStorage, e em comunicação WebSocket criptografada de ponta a ponta para o servidor de colaboração. A Figura~\ref{fig:arquitetura} ilustra o diagrama de contexto e arquitetura do software.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figura-arquitetura.pdf}
+\caption{Diagrama de contexto e arquitetura do Excalidraw (Fonte: Equipe Karen Jones).}
+\label{fig:arquitetura}
+\end{figure}
+
+Como não temos acesso a servidores em produção ou a métricas internas de telemetria dos mantenedores, a avaliação apoia-se em \textbf{inspeção estática} dos artefatos públicos do monorepo. A Tabela~\ref{tab:implicacoes} sintetiza o que é viável ou não medir sob essas condições.
+
+\begin{table}[!ht]
+\centering
+\caption{Implicações arquiteturais para a avaliação}
+\label{tab:implicacoes}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{2.4cm}p{4.0cm}p{4.5cm}}
+\toprule
+\textbf{Subcaract.} & \textbf{Viável medir} & \textbf{Não viável medir} \\
+\midrule
+Modularidade & Dependências estáticas e acoplamento de pacotes & Comportamento em redes restritivas corporativas \\
+Reusabilidade & Isolamento da biblioteca e APIs públicas & Compatibilidade com empacotadores legados \\
+Analisabilidade & Complexidade ciclomática, LoC e tipagem estática & Compreensão subjetiva sem histórico prévio \\
+Testabilidade & Suíte de testes automatizados no CI & Testes manuais em hardware heterogêneo \\
+Maturidade & Histórico de issues, releases e verificações pré-merge & Taxa real de falhas observada em produção \\
+Disponibilidade & Service Worker, manifesto PWA e rotinas offline & Tempo de atividade e SLA dos servidores \\
+Toler. a falhas & Tratamento de exceções e isolamento de falhas & Testes de estresse com injeção de pacotes \\
+Recuperabilidade & Persistência local no IndexedDB e undo/redo & Falhas de disco ou danos físicos no cliente \\
+Adaptabilidade & Layout responsivo e suporte a dispositivos de entrada & Execução em sistemas operacionais não homologados \\
+Escalabilidade & Capacidade com múltiplos elementos no canvas & Sobrecarga extrema em hardware de baixo custo \\
+Instalabilidade & Integridade de dependências npm e Dockerfile & Instalação em ambientes sem acesso à internet \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Partes Interessadas}
+\label{subsec:interessados}
+
+A norma ISO/IEC 25040 orienta o mapeamento dos grupos que utilizam ou são afetados pelo software \cite{iso25040}. Mapeamos sete grupos de interessados com prioridades bem delineadas em relação às características investigadas (Tabela~\ref{tab:interessados}).
+
+\begin{table}[!ht]
+\centering
+\caption{Matriz de prioridades dos interessados}
+\label{tab:interessados}
+\vspace{4pt}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Interessado} & \textbf{Manut.} & \textbf{Confiab.} & \textbf{Flexib.} \\
+\midrule
+Usuários finais                 & --        & Principal  & Secundário \\
+Desenvolvedores do projeto      & Principal & Secundário & --         \\
+Mantenedores                    & Principal & Principal  & Secundário \\
+Contribuidores open source      & Principal & Secundário & Secundário \\
+Integradores da biblioteca      & Secundário & Secundário & Principal \\
+Equipes de implantação/operação & --        & Secundário & Principal  \\
+Equipes de qualidade            & Principal & Principal  & Secundário \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Priorização das Características}
+\label{subsec:priorizacao}
+
+Para evitar escolhas subjetivas, adotamos um processo sistemático em duas etapas. Na primeira etapa, calculamos uma nota de ênfase a partir dos interesses declarados de cada grupo (peso 2 para interesse Principal e 1 para Secundário, em escala normalizada de 1 a 5). Na segunda etapa, cruzamos essa ênfase com a estimativa de risco técnico de o Excalidraw apresentar falhas ou dívidas naquela área, gerando a matriz impacto $\times$ risco da Tabela~\ref{tab:priorizacao}.
+
+\begin{table}[!ht]
+\centering
+\caption{Resultado da priorização impacto $\times$ risco}
+\label{tab:priorizacao}
+\vspace{4pt}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Característica} & \textbf{Ênfase} & \textbf{Risco} & \textbf{I $\times$ R} & \textbf{Resultado} \\
+\midrule
+Confiabilidade   & 4 & 4 & 16 & Selecionada (P2) \\
+Manutenibilidade & 4 & 3 & 12 & Selecionada (P1) \\
+Flexibilidade    & 3 & 3 & 9  & Selecionada (P3) \\
+\midrule
+Eficiência de Desempenho & 2 & 4 & 8 & Não selecionada \\
+Segurança        & 2 & 3 & 6  & Não selecionada \\
+Adequação Funcional & 2 & 2 & 4 & Não selecionada \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Embora Confiabilidade tenha alcançado o maior índice absoluto no cruzamento ($16$), definimos Manutenibilidade como nossa prioridade central ($P1$). O motivo reside na abrangência: Manutenibilidade afeta diretamente quatro dos sete grupos de interessados e é a dimensão com maior riqueza de artefatos acessíveis no repositório. Desempenho ficou fora do escopo principal pelo prazo reduzido da disciplina, embora o comportamento com muitos elementos no canvas acabe sendo avaliado na subcaracterística de Escalabilidade.
+
+\subsection{Modelo de Qualidade Adotado}
+
+A partir do processo de priorização, consolidamos o modelo de qualidade em três características e 13 subcaracterísticas (Figura~\ref{fig:modelo}). As definições teóricas da norma foram interpretadas no contexto específico do Excalidraw, conforme detalhado nas Tabelas~\ref{tab:manut},~\ref{tab:confiab} e~\ref{tab:flex}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figura-modelo-qualidade.pdf}
+\caption{Modelo de qualidade adotado (Fonte: Equipe Karen Jones).}
+\label{fig:modelo}
+\end{figure}
+
+\begin{table}[!ht]
+\centering
+\caption{Manutenibilidade — subcaracterísticas e aplicação ao Excalidraw}
+\label{tab:manut}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{2.2cm}p{9.5cm}}
+\toprule
+\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
+\midrule
+Modularidade      & Separação nítida entre \texttt{excalidraw-app/} e \texttt{packages/excalidraw/}, coesão interna e ausência de dependências circulares. \\
+Reusabilidade     & Independência da biblioteca React, estabilidade da API pública e existência de exemplos claros de integração. \\
+Analisabilidade   & Clareza dos diretórios, documentação de contribuição, consistência na tipagem TypeScript e ferramentas de análise estática. \\
+Modificabilidade  & Baixo acoplamento entre componentes, ausência de funções excessivamente longas e facilidade de alteração no histórico de commits. \\
+Testabilidade     & Estrutura de testes automatizados em múltiplos níveis (unitários e de integração) e execução contínua no CI. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{Confiabilidade — subcaracterísticas e aplicação ao Excalidraw}
+\label{tab:confiab}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{2.2cm}p{9.5cm}}
+\toprule
+\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
+\midrule
+Maturidade        & Frequência de lançamentos, rigor na revisão de PRs, checagem de tipos/lint e triagem organizada de defeitos. \\
+Disponibilidade   & Capacidade de operação offline via PWA e independência funcional frente a falhas de serviços externos. \\
+Toler. a falhas   & Isolamento do editor local caso a sessão colaborativa caia e tratamento robusto de exceções em arquivos inválidos. \\
+Recuperabilidade  & Salvamento automático local, restauração do último estado ao reabrir o navegador e integridade do histórico de desfazer/refazer. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{Flexibilidade — subcaracterísticas e aplicação ao Excalidraw}
+\label{tab:flex}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{2.2cm}p{9.5cm}}
+\toprule
+\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
+\midrule
+Adaptabilidade     & Suporte a diferentes navegadores modernos, telas responsivas, comandos por toque e integração em versões do React. \\
+Escalabilidade     & Capacidade do editor de suportar grandes volumes de elementos gráficos sem travamento e expansibilidade da API. \\
+Instalabilidade    & Facilidade de instalação via gerenciadores npm, existência de imagem Docker e clareza no guia de instalação local. \\
+Substituibilidade  & Opções de exportação em múltiplos formatos (\texttt{.excalidraw}, PNG e SVG) e fidelidade na reimportação sem perda de dados. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Ponderação metodológica:} vale destacar que, embora subcaracterísticas como Disponibilidade, Tolerância a Falhas e Recuperabilidade envolvam comportamento em tempo de execução, nesta avaliação investigamos esses fatores principalmente por meio de inspeção estática no código (manifesto PWA, Service Workers, tratamento de exceções assíncronas e estratégias de persistência local). Essa escolha permite obter diagnósticos técnicos consistentes mesmo sem acesso aos servidores de produção.
+
+\subsection{Escopo e Objetos de Avaliação}
+
+Para orientar a coleta, definimos seis objetos de avaliação concretos que compõem o repositório (Tabela~\ref{tab:objetos}).
+
+\begin{table}[!ht]
+\centering
+\caption{Objetos de avaliação e características relacionadas}
+\label{tab:objetos}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{0.8cm}p{4.2cm}p{6.5cm}}
+\toprule
+\textbf{ID} & \textbf{Objeto} & \textbf{Características} \\
+\midrule
+O1 & Editor e biblioteca React (\texttt{packages/excalidraw/}) & Manutenib., Confiab. e Flexib. \\
+O2 & Aplicação web (\texttt{excalidraw-app/}) & Confiab., Flexib. e Manutenib. \\
+O3 & Colaboração e persistência cliente & Confiabilidade \\
+O4 & Módulos reutilizáveis (\texttt{element/}, \texttt{math/}, etc.) & Manutenib. e Flexib. \\
+O5 & Pipeline de build, qualidade e documentação & Manutenib. e Flexib. \\
+O6 & Histórico público de commits, issues e PRs & Manutenib. e Confiab. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Limites de escopo:} ficam excluídos servidores em nuvem, testes intrusivos de segurança cibernética, testes manuais em dezenas de aparelhos físicos, código interno de dependências terceirizadas e módulos comerciais da versão Excalidraw+. Todas as conclusões são estritamente válidas para o commit fixado (\texttt{e1b7aac}) e têm caráter primordialmente estático.
+
+\subsection{Requisitos de Avaliação}
+
+Os requisitos representam as perguntas técnicas que o produto deve permitir responder. Eles foram organizados por subcaracterística nas Tabelas~\ref{tab:reqman},~\ref{tab:reqconf} e~\ref{tab:reqflex}.
+
+\begin{table}[!ht]
+\centering
+\caption{Requisitos de avaliação — Manutenibilidade}
+\label{tab:reqman}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{1.6cm}p{7.2cm}p{2.5cm}}
+\toprule
+\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
+\midrule
+RQ-MAN-01 & Existem limites claros entre aplicação e biblioteca? & Modularidade \\
+RQ-MAN-02 & As dependências entre pacotes seguem direção consistente, sem ciclos? & Modularidade \\
+RQ-MAN-03 & Cada pacote tem responsabilidade coesa e baixo acoplamento? & Modularidade \\
+RQ-MAN-04 & Os componentes podem ser reutilizados de forma isolada? & Reusabilidade \\
+RQ-MAN-05 & A interface pública está documentada e separada dos internos? & Reusabilidade \\
+RQ-MAN-06 & O código pode ser compreendido com facilidade? & Analisabilidade \\
+RQ-MAN-07 & Existem convenções de código e documentação de contribuição? & Analisabilidade \\
+RQ-MAN-08 & Ferramentas de lint, formatação e verificação de tipos integradas? & Analisabilidade \\
+RQ-MAN-09 & Alterações podem ser feitas sem impacto excessivo em outros módulos? & Modificabilidade \\
+RQ-MAN-10 & Há arquivos ou funções que concentram responsabilidades demais? & Modificabilidade \\
+RQ-MAN-11 & O sistema apresenta condições adequadas para testes automatizados? & Testabilidade \\
+RQ-MAN-12 & Os testes cobrem diferentes níveis (unitário, integração, E2E)? & Testabilidade \\
+RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{Requisitos de avaliação — Confiabilidade}
+\label{tab:reqconf}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{1.6cm}p{7.2cm}p{2.5cm}}
+\toprule
+\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
+\midrule
+RQ-CONF-01 & Verificações automáticas atuam antes da integração? & Maturidade \\
+RQ-CONF-02 & Defeitos são registrados e tratados de forma organizada? & Maturidade \\
+RQ-CONF-03 & O editor continua utilizável sem conexão após primeiro carregamento? & Disponibilidade \\
+RQ-CONF-04 & O editor local funciona sem depender de sessão colaborativa? & Disponibilidade \\
+RQ-CONF-05 & Funcionalidades essenciais se mantêm diante de problemas de rede? & Toler. a falhas \\
+RQ-CONF-06 & O editor local continua funcionando quando a colaboração falha? & Toler. a falhas \\
+RQ-CONF-07 & Arquivos inválidos são tratados sem comprometer a aplicação? & Toler. a falhas \\
+RQ-CONF-08 & O último estado é restaurado ao reabrir a aplicação? & Recuperabilidade \\
+RQ-CONF-09 & Desenhos podem ser armazenados e recuperados em \texttt{.excalidraw}? & Recuperabilidade \\
+RQ-CONF-10 & Arquivos de versões anteriores continuam abrindo? & Recuperabilidade \\
+RQ-CONF-11 & Desfazer e refazer ações é possível? & Recuperabilidade \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\centering
+\caption{Requisitos de avaliação — Flexibilidade}
+\label{tab:reqflex}
+\vspace{4pt}
+\footnotesize
+\begin{tabular}{p{1.6cm}p{7.2cm}p{2.5cm}}
+\toprule
+\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
+\midrule
+RQ-FLEX-01 & A aplicação pode ser utilizada em diferentes navegadores? & Adaptabilidade \\
+RQ-FLEX-02 & A biblioteca pode ser integrada em diferentes versões React? & Adaptabilidade \\
+RQ-FLEX-03 & Há dependências que dificultam o uso em determinados ambientes? & Adaptabilidade \\
+RQ-FLEX-04 & O editor é utilizável em dispositivos móveis e com toque? & Adaptabilidade \\
+RQ-FLEX-05 & O editor mantém desempenho quando o nº de elementos cresce? & Escalabilidade \\
+RQ-FLEX-06 & Desenhos grandes podem ser abertos e exportados sem travar? & Escalabilidade \\
+RQ-FLEX-07 & A biblioteca pode ser instalada e removida por npm? & Instalabilidade \\
+RQ-FLEX-08 & A aplicação pode ser construída em diferentes ambientes? & Instalabilidade \\
+RQ-FLEX-09 & O suporte a Docker facilita a implantação? & Instalabilidade \\
+RQ-FLEX-10 & As instruções de instalação são reproduzíveis? & Instalabilidade \\
+RQ-FLEX-11 & Dados podem ser exportados em formatos utilizáveis fora da app? & Substituibilidade \\
+RQ-FLEX-12 & Os formatos exportados são abertos e permitem reimportação? & Substituibilidade \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Relação com os Objetivos de Desenvolvimento Sustentável (ODS)}
-O Excalidraw foi relacionado aos seguintes ODS da Agenda 2030 da ONU:
+
+Para além dos critérios estritamente computacionais, analisamos o papel social do Excalidraw frente aos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU \cite{onu2015ods}. Três metas dialogam diretamente com a proposta do projeto:
+
 \begin{itemize}
-    \item \textbf{ODS 4 (Educação de Qualidade):} Ferramenta gratuita de apoio pedagógico e colaboração (Metas 4.3, 4.4 e 4.a).
-    \item \textbf{ODS 9 (Indústria, Inovação e Infraestrutura):} Fomento à tecnologia aberta e suporte a funcionamento offline (Metas 9.5, 9.b e 9.c).
-    \item \textbf{ODS 10 (Redução das Desigualdades):} Redução de barreiras financeiras e adoção de formatos abertos de exportação (Metas 10.2 e 10.3).
+    \item \textbf{ODS 4 — Educação de Qualidade:} por ser gratuito, acessível diretamente no navegador e sem exigir cadastro obrigatório, o Excalidraw é utilizado de forma recorrente em salas de aula e estudos para desenhar algoritmos e explicar ideias visuais. A colaboração síncrona apoia dinâmicas remotas de estudo em grupo.
+    \item \textbf{ODS 9 — Indústria, Inovação e Infraestrutura:} sua arquitetura modular e publicação de pacotes reutilizáveis no npm estimulam a inovação de terceiros, que incorporam o editor em novos softwares sem custos de licenciamento. O suporte a PWA amplia o acesso em contextos de conexão instável.
+    \item \textbf{ODS 10 — Redução das Desigualdades:} ao adotar a licença MIT e permitir exportação em formatos abertos (\texttt{.excalidraw}, SVG e PNG), a ferramenta reduz as barreiras financeiras e evita aprisionamento tecnológico para quem não pode pagar por ferramentas proprietárias.
 \end{itemize}
 
+% ================================================================
 \section{Fase 2: Especificação da Avaliação}
-Aplicação da abordagem Goal-Question-Metric (GQM) para derivar questões e métricas a partir dos objetivos de qualidade, acompanhada dos níveis de pontuação e critérios de julgamento.
+\label{sec:fase2}
 
-\section{Fase 3: Planejamento da Avaliação}
-Definição dos métodos de medição, ferramentas de análise estática e dinâmica, especificação do ambiente de testes e cronograma de execução da avaliação.
+A Fase 2 da ISO/IEC 25040 realiza a transição entre o levantamento de requisitos de qualidade e a sua operacionalização prática por meio da abordagem Goal-Question-Metric (GQM) \cite{basili1994gqm}. Para cada subcaracterística priorizada na Fase~1, a equipe estabeleceu objetivos de medição formalizados sob a ótica dos interessados, desdobrados em questões investigativas e métricas com critérios claros de julgamento.
 
-\section{Fase 4: Execução da Avaliação e Ações de Melhoria}
-Apresentação dos dados coletados, respostas ao GQM, julgamento dos resultados segundo os critérios pré-estabelecidos e elaboração de ações de melhoria (com desenvolvimento de protótipo de alta fidelidade).
+O processo foi estruturado em quatro etapas principais:
+\begin{enumerate}
+    \item \textbf{Definição dos Objetivos GQM:} formalização do propósito de medição de cada característica do produto (por exemplo, avaliar a modularidade do monorepo sob o ponto de vista dos mantenedores e colaboradores);
+    \item \textbf{Formulação das Questões Operacionais:} elaboração de perguntas técnicas diretamente associadas aos requisitos de avaliação (RQ-MAN-01 a RQ-FLEX-12);
+    \item \textbf{Seleção e Padronização das Métricas:} identificação de medidas de análise estática (complexidade ciclomática, linhas de código por arquivo, acoplamento aferente/eferente e taxa de cobertura de testes) e inspeções qualitativas com escalas graduadas;
+    \item \textbf{Critérios de Julgamento:} definição de faixas de aceitabilidade para que os dados coletados na fase seguinte possam ser classificados sem viés subjetivo.
+\end{enumerate}
 
-\section{Gestão do Projeto (Métricas PSM/CID)}
-Monitoramento contínuo da equipe através de métricas de Desempenho dos Processos, Calendário e Progresso, e Recursos e Custos, registradas nas atas e relatórios de medição.
+O catálogo detalhado contendo a totalidade das questões GQM, fórmulas de cálculo e réguas de pontuação está integralmente documentado no repositório do projeto\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}.
 
-\section{Considerações Finais}
-Síntese das lições aprendidas, limitações do estudo e impacto da avaliação para a sustentabilidade do Excalidraw.
+% ================================================================
+\section{Considerações Parciais}
+\label{sec:conclusao}
 
-\newpage
+Este trabalho consolida o planejamento inicial e a especificação técnica da avaliação da qualidade do software Excalidraw, cobrindo as Fases~1 e~2 do processo da ISO/IEC 25040. A delimitação de escopo e a priorização sistemática garantiram que os esforços da equipe ficassem concentrados nas dimensões de maior impacto técnico para a comunidade do projeto (Manutenibilidade, Confiabilidade e Flexibilidade).
+
+Como resultado desta primeira etapa, obtivemos uma base de 36 requisitos de avaliação contextualizados para um sistema de código aberto real, além de um modelo de qualidade adaptado e desdobrado em métricas viáveis de serem coletadas por análise estática. Os próximos passos da disciplina envolverão a execução prática das medições planejadas (Fase~3 e Fase~4), o confronto dos dados obtidos com os critérios de julgamento estabelecidos e a proposição de intervenções de melhoria para o software, acompanhadas por um protótipo de alta fidelidade.
+
 \addcontentsline{toc}{section}{Referências}
 \begin{thebibliography}{99}
 
 \bibitem{iso25010}
-ISO/IEC. \textit{ISO/IEC 25010:2023 -- Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Product quality model}. International Organization for Standardization, Geneva, 2023.
+ISO/IEC. \textit{ISO/IEC 25010:2023 --- Systems and software engineering --- Systems and software Quality Requirements and Evaluation (SQuaRE) --- Product quality model}. International Organization for Standardization, Geneva, 2023.
 
 \bibitem{iso25040}
-ISO/IEC. \textit{ISO/IEC 25040:2011 -- Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation process}. International Organization for Standardization, Geneva, 2011.
+ISO/IEC. \textit{ISO/IEC 25040:2011 --- Systems and software engineering --- Systems and software Quality Requirements and Evaluation (SQuaRE) --- Evaluation process}. International Organization for Standardization, Geneva, 2011.
+
+\bibitem{iso25023}
+ISO/IEC. \textit{ISO/IEC 25023:2016 --- Systems and software engineering --- Systems and software Quality Requirements and Evaluation (SQuaRE) --- Measurement of system and software product quality}. International Organization for Standardization, Geneva, 2016.
 
 \bibitem{basili1994gqm}
-BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. \textit{The Goal Question Metric Approach}. Encyclopedia of Software Engineering, John Wiley \& Sons, 1994.
+BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: \textit{Encyclopedia of Software Engineering}. John Wiley \& Sons, 1994.
 
 \bibitem{psm}
-CARD, D. et al. \textit{Practical Software Measurement: Objective Information for Decision Makers}. Department of Defense, 2000.
+CARD, D. et al. \textit{Practical Software Measurement: Objective Information for Decision Makers}. Department of Defense / Joint Logistics Commanders, 2000.
+
+\bibitem{pressman2021}
+PRESSMAN, R. S.; MAXIM, B. R. \textit{Engenharia de Software: uma abordagem profissional}. 9. ed. Porto Alegre: AMGH, 2021.
 
 \bibitem{onu2015ods}
 ONU. \textit{Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável}. Organização das Nações Unidas, 2015.
@@ -205,35 +546,36 @@ ONU. \textit{Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sus
 \newpage
 \appendix
 \section{Tabela de Contribuição dos Membros da Equipe}
-Em conformidade com as premissas da disciplina de Qualidade de Software 1, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes para a entrega do projeto.
+Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes para a entrega do projeto.
 
 \begin{table}[!ht]
 \centering
-\caption{Contribuição individual dos membros da Equipe Karen Jones}
+\caption{Tabela de contribuição individual da equipe (Entrega 1)}
 \label{tab:contribuicao}
-\vspace{6pt}
-\begin{tabular}{lcccc}
+\vspace{4pt}
+\small
+\begin{tabular}{lccccr}
 \toprule
-\textbf{Integrante} & \textbf{Issues} & \textbf{Horas Estimadas} & \textbf{Horas Reais} & \textbf{Esforço (\%)} \\
+\textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \midrule
-Christopher          & 5 & 0.8h & 2.5h & 38.46\% \\
-Davi Pierre          & 6 & 0.0h & 0.0h & 0.00\% \\
-Gabriel Monteiro     & 6 & 0.0h & 0.0h & 0.00\% \\
-Letícia de Carvalho  & 6 & 0.0h & 0.0h & 0.00\% \\
-Luiz Henrique Soares & 6 & 0.0h & 0.0h & 0.00\% \\
-Maria Eduarda        & 6 & 2.8h & 4.0h & 61.54\% \\
+Christopher          & 5 & 0.8h & 2.5h & 0/1 & 38.46\% \\
+Davi Pierre          & 6 & 0.0h & 0.0h & 1/1 & 0.00\% \\
+Gabriel Monteiro     & 6 & 0.0h & 0.0h & 9/1 & 0.00\% \\
+Letícia de Carvalho  & 6 & 0.0h & 0.0h & 1/1 & 0.00\% \\
+Luiz Henrique Soares & 6 & 0.0h & 0.0h & 0/0 & 0.00\% \\
+Maria Eduarda        & 6 & 2.8h & 4.0h & 0/0 & 61.54\% \\
 \midrule
-\textbf{Total}       & \textbf{35} & \textbf{3.6h} & \textbf{6.5h} & \textbf{100.00\%} \\
+\textbf{Total}       & \textbf{35} & \textbf{3.6h} & \textbf{6.5h} & \textbf{11/4} & \textbf{100.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \section{Declaração de Uso de Inteligência Artificial}
-Em atendimento aos critérios de avaliação da disciplina, declara-se que ferramentas de Inteligência Artificial generativa foram utilizadas para auxiliar nas seguintes atividades:
+Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara o uso de ferramentas de IA generativa nas seguintes atividades:
 \begin{itemize}
-    \item \textbf{Ferramenta utilizada:} Antigravity IDE (Claude / Gemini).
-    \item \textbf{Finalidade:} Auxílio na estruturação de templates LaTeX, formatação de tabelas, revisão gramatical e levantamento de metas e indicadores dos ODS da Agenda 2030 da ONU.
-    \item \textbf{Supervisão e Validação Humana:} Todo o conteúdo textual gerado ou revisado por ferramentas automatizadas foi minuciosamente conferido, ajustado e validado pelos membros da equipe, garantindo a conformidade técnica, ausência de jargões genéricos ou inconsistências conceituais.
+    \item \textbf{Ferramentas Utilizadas:} Antigravity / Gemini 3.8 e Claude Code.
+    \item \textbf{Consolidação por Tarefas:} auxílio na formatação e adaptação de diretrizes de governança em PRs iniciais; apoio ao script de cálculo de métricas em Python (\texttt{scripts/coleta\_psm.py}); e suporte na conversão de estruturas para código LaTeX e levantamento dos ODS.
+    \item \textbf{Conferência Crítica pela Equipe:} todo código-fonte, dados numéricos e conteúdos textuais gerados ou adaptados foram integralmente revisados, confrontados com os artefatos reais do GitHub e validados pelos integrantes da equipe, garantindo a fidelidade técnica dos dados e ausência de alucinações.
 \end{itemize}
 
 \end{document}
