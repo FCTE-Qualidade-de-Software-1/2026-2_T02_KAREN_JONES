@@ -253,9 +253,28 @@ Todos os 12 requisitos de Flexibilidade da Fase 01 são atendidos por pelo menos
 
 ---
 
+## 8. Verificação das métricas
+
+A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo (AULA 08, p. 42). A equipe fez essa verificação no código da versão avaliada e no repositório oficial, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+
+| Métrica | O que foi verificado |
+| :--- | :--- |
+| M3.1.1 | O campo `browserslist` está declarado em `excalidraw-app/package.json` e em `packages/excalidraw/package.json`, e o comando `npx browserslist --coverage=global` (versão 4.24.4) calcula a cobertura dessa consulta. |
+| M3.1.2 | O campo `peerDependencies` da biblioteca declara React 17, 18 e 19. O guia de integração explica o uso com Next.js por importação apenas no navegador, e o repositório tem o exemplo `examples/with-nextjs`. |
+| M3.1.3 | O componente principal do editor trata eventos de ponteiro do tipo toque e caneta. O teste depende de um dispositivo com tela de toque, definido no plano de avaliação. |
+| M3.2.1, M3.2.2 e M3.2.3 | O painel de desempenho é um recurso padrão das ferramentas de desenvolvedor dos navegadores. As cenas de escala podem ser geradas por script porque o formato `.excalidraw` é texto em JSON. |
+| M3.3.1 | O pacote pode ser construído pelo script `build:packages` da versão avaliada, e a versão 0.17.6 está publicada no registro npm. O guia de instalação traz os comandos para npm e Yarn. |
+| M3.3.2 | O guia de desenvolvimento (`dev-docs/docs/introduction/development.mdx`) traz os passos com Node.js e Yarn e com Docker Compose. O campo `engines` da raiz exige Node.js 18 ou superior. |
+| M3.3.3 | O `Dockerfile` da raiz constrói a aplicação e a serve com nginx, e declara uma verificação de saúde. O `docker-compose.yml` publica a aplicação na porta 3000. |
+| M3.4.1 | A biblioteca exporta as funções de exportação de `packages/excalidraw/scene/export.ts`. |
+| M3.4.2 | O repositório tem exemplos de PNG e SVG com desenho incorporado em `packages/excalidraw/tests/fixtures/`, o que confirma que esses formatos guardam o desenho. |
+| M3.4.3 | A documentação do formato está em `dev-docs/docs/codebase/json-schema.mdx`. |
+
+---
+
 ## Referências
 
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
+- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 42.
 - Especificação do trabalho final da disciplina de Qualidade de Software 1 (2026-2 Trabalho final completo v1). Página 1, premissa 2.
 - ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
 - Excalidraw. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0.
