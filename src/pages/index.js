@@ -14,7 +14,7 @@ const team = [
 const docSections = [
   {
     title: 'Fase 01 — Requisitos de Avaliação',
-    description: 'Propósito da avaliação, escopo do produto, partes interessadas e modelo de qualidade ISO/IEC 25010.',
+    description: 'Propósito da avaliação, escopo do produto, partes interessadas e modelo de qualidade ISO/IEC 25010:2023.',
     link: '/docs/fase-01/visao-geral',
     badge: 'Fase atual',
   },
@@ -33,7 +33,7 @@ const docSections = [
 
 const qualityFocus = [
   {
-    title: 'Manutenabilidade',
+    title: 'Manutenibilidade',
     description: 'Avaliação da modularidade, facilidade de alteração do código, reusabilidade e cobertura de testes.',
   },
   {
@@ -41,8 +41,8 @@ const qualityFocus = [
     description: 'Análise de maturidade, disponibilidade da aplicação e tolerância a erros e falhas.',
   },
   {
-    title: 'Portabilidade',
-    description: 'Verificação do funcionamento em diferentes navegadores e facilidade de instalação e execução.',
+    title: 'Flexibilidade',
+    description: 'Análise da adaptabilidade a ambientes, escalabilidade, instalabilidade e substituibilidade.',
   },
 ];
 

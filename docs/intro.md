@@ -30,19 +30,19 @@ Três razões principais guiaram a escolha:
 
 - **Código acessível e bem documentado:** o repositório público, com histórico de commits, issues e pull requests, nos permite ir além da superfície e olhar para o que realmente está acontecendo no desenvolvimento.
 - **Diversidade de contextos de uso:** o Excalidraw é ao mesmo tempo uma aplicação web para usuários finais e uma biblioteca npm para desenvolvedores que querem embedar o editor em outras aplicações. Isso cria perspectivas de avaliação bastante diferentes.
-- **Conexão com a disciplina:** as características que escolhemos avaliar — Manutenabilidade, Confiabilidade e Portabilidade — aparecem de forma natural no projeto e nos permitem exercitar os conceitos da norma com situações reais.
+- **Conexão com a disciplina:** as características que escolhemos avaliar — Manutenibilidade, Confiabilidade e Flexibilidade — aparecem de forma natural no projeto e nos permitem exercitar os conceitos da norma com situações reais.
 
 ---
 
 ## Características avaliadas
 
-Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos grupos de interessados que mapeamos, escolhemos três características da **ISO/IEC 25010**:
+Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos grupos de interessados que mapeamos, escolhemos três características da **ISO/IEC 25010:2023**:
 
 | Característica | O que estamos investigando |
 | :--- | :--- |
-| **Manutenabilidade** | A organização do código, a clareza dos módulos, a facilidade de fazer mudanças sem introduzir problemas e a cobertura de testes. |
+| **Manutenibilidade** | A organização do código, a clareza dos módulos, a facilidade de fazer mudanças sem introduzir problemas e a cobertura de testes. |
 | **Confiabilidade** | O comportamento da aplicação em situações de falha ou perda de conexão, o salvamento automático e a maturidade do processo de desenvolvimento. |
-| **Portabilidade** | O funcionamento em diferentes navegadores e dispositivos, a facilidade de instalar a biblioteca e as opções de exportação dos dados. |
+| **Flexibilidade** | O funcionamento em diferentes navegadores e dispositivos, a facilidade de instalar a biblioteca e as opções de exportação dos dados. |
 
 ---
 

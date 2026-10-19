@@ -1,3 +1,9 @@
+---
+sidebar_position: 6
+title: Requisitos de Avaliação
+description: Requisitos do Excalidraw por característica e subcaracterística da ISO/IEC 25010:2023
+---
+
 # Requisitos de Avaliação do Excalidraw
 
 
