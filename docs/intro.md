@@ -30,7 +30,7 @@ Três razões principais guiaram a escolha:
 
 - **Código acessível e bem documentado:** o repositório público, com histórico de commits, issues e pull requests, nos permite ir além da superfície e olhar para o que realmente está acontecendo no desenvolvimento.
 - **Diversidade de contextos de uso:** o Excalidraw é ao mesmo tempo uma aplicação web para usuários finais e uma biblioteca npm para desenvolvedores que querem embedar o editor em outras aplicações. Isso cria perspectivas de avaliação bastante diferentes.
-- **Conexão com a disciplina:** as características que escolhemos avaliar — Manutenabilidade, Confiabilidade e Flexibilidade — aparecem de forma natural no projeto e nos permitem exercitar os conceitos da norma com situações reais.
+- **Conexão com a disciplina:** as características que escolhemos avaliar — Manutenibilidade, Confiabilidade e Flexibilidade — aparecem de forma natural no projeto e nos permitem exercitar os conceitos da norma com situações reais.
 
 ---
 
@@ -48,10 +48,10 @@ Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos gr
 
 ## Como o projeto está estruturado
 
-O trabalho segue as quatro fases do processo de avaliação definido pela ISO/IEC 25040:
+O trabalho segue as quatro fases do processo de avaliação definido pela ISO/IEC 25040. **Fase atual: Fase 02.**
 
-- **Fase 01 — Estabelecer requisitos de avaliação:** definir o propósito, delimitar o escopo, mapear os interessados e escolher o modelo de qualidade. É o que estamos fazendo agora.
-- **Fase 02 — Especificar a avaliação:** definir as métricas com base na ISO/IEC 25023 e os critérios que vamos usar para julgar os resultados.
+- **Fase 01 — [Estabelecer requisitos de avaliação](./fase-01/visao-geral.md):** definir o propósito, delimitar o escopo, mapear os interessados e escolher o modelo de qualidade. Concluída.
+- **Fase 02 — [Especificar a avaliação](./fase-02/visao-geral.md):** definir os objetivos de medição com o método GQM, as métricas e os critérios que vamos usar para pontuar e julgar os resultados. **Em andamento.**
 - **Fase 03 — Projetar a avaliação:** decidir o método de coleta, as ferramentas, as responsabilidades e o cronograma de execução.
 - **Fase 04 — Executar a avaliação:** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias.
 
