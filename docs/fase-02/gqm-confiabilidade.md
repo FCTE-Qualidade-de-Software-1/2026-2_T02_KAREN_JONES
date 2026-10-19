@@ -208,6 +208,26 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 7. Rastreabilidade com a Fase 01
+
+| Requisito | Subcaracterística | Questão | Métricas |
+| :--- | :--- | :--- | :--- |
+| RQ-CONF-01 | Ausência de falhas | Q2.1 | M2.1.3 |
+| RQ-CONF-02 | Ausência de falhas | Q2.1 | M2.1.1, M2.1.2 |
+| RQ-CONF-03 | Disponibilidade | Q2.2 | M2.2.1 |
+| RQ-CONF-04 | Disponibilidade | Q2.2 | M2.2.2 |
+| RQ-CONF-05 | Tolerância a falhas | Q2.3 | M2.3.2 |
+| RQ-CONF-06 | Tolerância a falhas | Q2.3 | M2.3.2 |
+| RQ-CONF-07 | Tolerância a falhas | Q2.3 | M2.3.1 |
+| RQ-CONF-08 | Recuperabilidade | Q2.4 | M2.4.1 |
+| RQ-CONF-09 | Recuperabilidade | Q2.4 | M2.4.2 |
+| RQ-CONF-10 | Recuperabilidade | Q2.4 | M2.4.2 |
+| RQ-CONF-11 | Recuperabilidade | Q2.4 | M2.4.3 |
+
+Todos os 11 requisitos de Confiabilidade da Fase 01 são atendidos por pelo menos uma métrica.
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
