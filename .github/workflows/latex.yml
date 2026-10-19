@@ -12,22 +12,22 @@ permissions:
 
 jobs:
   build:
-    name: Compile article placeholder
+    name: Compile article
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX placeholder
+      - name: Compile LaTeX article
         uses: xu-cheng/latex-action@v3
         with:
           working_directory: artigo
-          root_file: placeholder.tex
+          root_file: main.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Upload compiled PDF
         uses: actions/upload-artifact@v4
         with:
-          name: artigo-placeholder-pdf
-          path: artigo/placeholder.pdf
+          name: artigo-pdf
+          path: artigo/main.pdf
           if-no-files-found: error
