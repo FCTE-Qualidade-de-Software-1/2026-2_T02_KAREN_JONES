@@ -1,6 +1,10 @@
 // @ts-check
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const siteVersion = '1.0';
+const buildDate = new Date().toLocaleDateString('pt-BR', {timeZone: 'America/Sao_Paulo'});
+const repoUrl = 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Qualidade Excalidraw',
@@ -31,6 +35,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
           editUrl:
             'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/tree/main/',
         },
@@ -53,7 +59,7 @@ const config = {
       navbar: {
         title: 'Qualidade Excalidraw',
         logo: {
-          alt: 'Logo',
+          alt: 'Logo do projeto Qualidade Excalidraw',
           src: 'img/logo.svg',
         },
         items: [
@@ -69,8 +75,13 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES',
+            href: repoUrl,
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: `${repoUrl}/releases`,
+            label: 'Release',
             position: 'right',
           },
         ],
@@ -109,12 +120,16 @@ const config = {
             items: [
               {
                 label: 'Repositório do Grupo',
-                href: 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES',
+                href: repoUrl,
+              },
+              {
+                label: 'Releases',
+                href: `${repoUrl}/releases`,
               },
             ],
           },
         ],
-        copyright: `Grupo Karen Jones · Qualidade de Software 1 · FCTE/UnB`,
+        copyright: `Grupo Karen Jones · Qualidade de Software 1 · FCTE/UnB<br/>Versão ${siteVersion} · Atualizado em ${buildDate}`,
       },
       prism: {
         theme: prismThemes.github,

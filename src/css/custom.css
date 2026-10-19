@@ -331,17 +331,25 @@ body {
   background-color: var(--surface-bg);
 }
 
+.footer__link-item {
+  color: var(--ifm-font-color-base);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}
+
 .footer__title {
   font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--text-dim);
+  color: var(--ifm-color-emphasis-700);
 }
 
 .footer__copyright {
   font-size: 0.8125rem;
-  color: var(--text-dim);
+  color: var(--ifm-color-emphasis-700);
 }
 
 /* ============================================
