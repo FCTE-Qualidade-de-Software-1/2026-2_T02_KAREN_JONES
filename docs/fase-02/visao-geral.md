@@ -19,7 +19,7 @@ A Fase 02 está organizada em sete documentos. A tabela mostra o estado de cada 
 | Documento | Conteúdo | Situação |
 | :--- | :--- | :---: |
 | [Método GQM e objetivos de medição](./estrutura-gqm.md) | Resumo do método, adaptação das etapas ao contexto da avaliação e os objetivos G1, G2 e G3 | Publicado |
-| Abstraction sheets | Uma ficha por objetivo, preenchida em reunião da equipe | Em andamento |
+| [Abstraction sheets](./abstraction-sheets.md) | Uma ficha por objetivo, preenchida em reunião da equipe | Publicado |
 | GQM de Manutenibilidade (G1) | Questões Q1.1 a Q1.5, hipóteses e fichas das métricas | Pendente |
 | GQM de Confiabilidade (G2) | Questões, hipóteses e fichas das métricas | Pendente |
 | GQM de Flexibilidade (G3) | Questões Q3.1 a Q3.4, hipóteses e fichas das métricas | Pendente |

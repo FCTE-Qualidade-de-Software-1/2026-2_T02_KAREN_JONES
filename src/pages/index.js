@@ -16,6 +16,11 @@ const docSections = [
     title: 'Fase 01 — Requisitos de Avaliação',
     description: 'Propósito da avaliação, escopo do produto, partes interessadas e modelo de qualidade ISO/IEC 25010:2023.',
     link: '/docs/fase-01/visao-geral',
+  },
+  {
+    title: 'Fase 02 — Especificação da Avaliação',
+    description: 'Método GQM, objetivos de medição, abstraction sheets, métricas e critérios de julgamento.',
+    link: '/docs/fase-02/visao-geral',
     badge: 'Fase atual',
   },
   {
