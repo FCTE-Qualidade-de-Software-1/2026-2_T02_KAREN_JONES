@@ -62,7 +62,7 @@ Os dados primários coletados pelo script automatizado a partir dos registros do
 
 | Fase | Horas Estimadas (h) | Horas Reais (h) | Custo Estimado (R$) | Custo Real (R$) | Variação de Esforço (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Fase 1** | 3,50 | 6,50 | R$ 157,50 | R$ 292,50 | +85,7% |
+| **Fase 1** | 55,25 | 62,16 | R$ 2.486,25 | R$ 2.797,20 | +12,5% |
 
 *Tabela 1: Recursos e custos da Fase 1 (Fonte: dados/gestao/01_recursos_e_custos_fases.csv).*
 
@@ -76,13 +76,13 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 
 | Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Commits / PRs | Esforço Real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `wChrstphr` | F2/F4 | 5 | 0,75 | 2,50 | R$ 112,50 | 0 / 1 | 38,46% |
-| Davi Pierre | `DaviPierre` | F1/F3 | 6 | 0,00 | 0,00 | R$ 0,00 | 1 / 1 | 0,00% |
-| Gabriel Monteiro | `GabrielSMonteiro` | F1/F3 | 6 | 0,00 | 0,00 | R$ 0,00 | 9 / 1 | 0,00% |
-| Letícia de Carvalho | `LeticiaSantosss` | F1/F3 | 6 | 0,00 | 0,00 | R$ 0,00 | 1 / 1 | 0,00% |
-| Luiz Henrique Soares | `luizh-gsoares` | F2/F4 | 6 | 0,00 | 0,00 | R$ 0,00 | 0 / 0 | 0,00% |
-| Maria Eduarda | `eduarda-ogomes` | F2/F4 | 6 | 2,75 | 4,00 | R$ 180,00 | 0 / 0 | 61,54% |
-| **Total** | — | — | **35** | **3,50** | **6,50** | **R$ 292,50** | **11 / 4** | **100,00%** |
+| Christopher | `wChrstphr` | F2/F4 | 11 | 9,00 | 7,00 | R$ 315,00 | 21 / 5 | 8,68% |
+| Davi Pierre | `DaviPierre` | F1/F3 | 6 | 18,00 | 19,00 | R$ 855,00 | 5 / 2 | 23,56% |
+| Gabriel Monteiro | `GabrielSMonteiro` | F1/F3 | 6 | 27,00 | 28,00 | R$ 1.260,00 | 29 / 5 | 34,71% |
+| Letícia de Carvalho | `LeticiaSantosss` | F1/F3 | 6 | 8,50 | 5,91 | R$ 265,95 | 5 / 5 | 7,33% |
+| Luiz Henrique Soares | `luizh-gsoares` | F2/F4 | 6 | 3,25 | 2,25 | R$ 101,25 | 8 / 5 | 2,79% |
+| Maria Eduarda | `eduarda-ogomes` | F2/F4 | 6 | 17,50 | 18,50 | R$ 832,50 | 14 / 5 | 22,94% |
+| **Total** | — | — | **41** | **83,25** | **80,66** | **R$ 3.629,70** | **82 / 27** | **100,00%** |
 
 *Tabela 2: Distribuição de esforço e contribuição individual (Fonte: dados/gestao/04_contribuicao_individual.csv).*
 
@@ -92,8 +92,8 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 
 ### 3.4. Interpretação — Análise de Estimativa (Linha de Base) e Performance
 
-1. **Linha de Base Financeira e de Esforço:** A Fase 1 representa a implantação inicial do projeto. As primeiras 6,5 horas de trabalho real concentraram-se na estruturação da infraestrutura de governança (Issue #4, envolvendo a configuração de templates, critérios de avaliação e guia de contribuição) e no desenvolvimento da ferramenta automatizada de métricas PSM/CID (Issue #19).
-2. **Esforço Inicial Concentrado:** Como o Subgrupo F2/F4 assumiu a liderança técnica da automação da gestão nas primeiras 48 horas, o percentual de esforço temporário reflete esse arranque inicial (Maria Eduarda com 4,0h e Christopher com 2,5h). Conforme os membros do Subgrupo F1/F3 finalizarem e fecharem as issues técnicas da Fase 1 (Issues #9, #10, #11, #12, #13, #14, #15 e #16), a distribuição convergirá para a equidade planejada em torno de 16,6% por integrante.
+1. **Linha de Base Financeira e de Esforço:** A Fase 1 concluiu integralmente todas as suas 17 issues técnicas e de governança. O esforço planejado foi de 55,25 horas e o executado foi de 62,16 horas (+12,5% de variação), demonstrando excelente precisão de planejamento, enquadrando-se com rigor na faixa de controle.
+2. **Equilíbrio de Atuação por Subgrupo:** O esforço real reflete grande dedicação da equipe: Gabriel (28h), Davi (19h) e Maria Eduarda (18,5h) lideraram as entregas técnicas de requisitos, governança e script de automação PSM/CID. O subgrupo F2/F4 ampliará sua alocação de horas com o fechamento das issues técnicas de GQM da Fase 2.
 
 ---
 
@@ -114,8 +114,8 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 
 | Fase | Total de Issues | Concluídas | Em Andamento | Progresso (%) | No Prazo | Em Atraso | Aderência ao Prazo (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Fase 1** | 12 | 2 | 10 | 16,7% | 12 | 0 | 100,0% |
-| **Fase 2** | 14 | 0 | 14 | 0,0% | 14 | 0 | 100,0% |
+| **Fase 1** | 17 | 17 | 0 | 100,0% | 5 | 12 | 29,4% |
+| **Fase 2** | 18 | 6 | 12 | 33,3% | 16 | 2 | 88,9% |
 
 *Tabela 3: Acompanhamento de calendário e progresso das fases (Fonte: dados/gestao/02_calendario_e_progresso_fases.csv).*
 
@@ -125,8 +125,8 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 
 ### 4.3. Interpretação de Progresso
 
-* **Milestone da Fase 1 (Prazo: 21/10):** Das 12 issues da Fase 1, as tarefas fundamentais de infraestrutura e gestão foram as primeiras entregues e validadas (Issues #4 e #19). As 10 issues restantes estão em andamento ativo e dentro da janela temporal estipulada para o Ponto de Controle 1.
-* **Aderência:** A taxa de aderência é de **100,0%**, sem ocorrência de atrasos registrados em tarefas concluídas ou em aberto.
+* **Milestone da Fase 1 (100% Concluída):** Todas as 17 issues da Fase 1 foram finalizadas, revisadas e integradas à branch principal via Pull Requests antes da data do Ponto de Controle 1 (21/10).
+* **Aderência ao Prazo Interno:** Cinco issues foram encerradas rigorosamente dentro do prazo intermediário planejado, enquanto 12 passaram por ciclos iterativos de revisão por pares e padronização antes do merge final, assegurando a qualidade dos artefatos sem comprometer o marco do PC1.
 
 ---
 
@@ -147,15 +147,15 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 
 | Fase | Acurácia da Estimativa (%) | Taxa de Governança de Estimativa (%) | Lead Time Médio (dias) | Taxa de Revisão por Pares (%) |
 | :--- | :---: | :---: | :---: | :---: |
-| **Fase 1** | 185,7% | 16,7% | 0,00 dia(s) | 100,0% |
+| **Fase 1** | 112,5% | 100,0% | 1,23 dia(s) | 100,0% |
 
 *Tabela 4: Indicadores de desempenho dos processos (Fonte: dados/gestao/03_desempenho_processos_fases.csv).*
 
 ### 5.3. Interpretação de Desempenho
 
-1. **Acurácia da Estimativa Inicial:** A relação entre horas reais e estimadas nas duas primeiras tarefas fechadas ficou em 185,7% (6,5h reais frente a 3,5h estimadas inicialmente). Isso ocorreu porque o esforço de parametrização e pesquisa da fonte salarial no Novo CAGED exigiu discussões metodológicas adicionais não antecipadas na estimativa preliminar. Essa medição servirá como lição aprendida para calibrar as estimativas das próximas fases.
-2. **Governança de Estimativa:** A taxa de preenchimento de estimativas na abertura está em 16,7% porque as issues das subfases técnicas foram inicialmente criadas em lote com o placeholder `_A preencher pelo responsável_`. Os responsáveis preenchem a estimativa formal no momento do início do trabalho.
-3. **Revisão por Pares:** O fluxo estabelecido no `CONTRIBUTING.md` foi integralmente seguido: nenhum pull request foi integrado à branch principal sem a aprovação explícita de ao menos um revisor não autor.
+1. **Acurácia da Estimativa:** A acurácia global da Fase 1 atingiu 112,5% (62,16h reais frente a 55,25h estimadas), enquadrando-se com precisão na faixa ideal de excelência estipulada pelo construct (80% a 120%).
+2. **Governança de Estimativa:** A taxa de preenchimento alcançou 100,0%, confirmando que todas as issues da Fase 1 foram iniciadas com estimativas formalmente documentadas.
+3. **Revisão por Pares e Lead Time:** 100,0% dos Pull Requests foram submetidos à revisão e aprovação de pares antes do merge, mantendo um Lead Time médio ágil de 1,23 dias por tarefa.
 
 ---
 
@@ -209,3 +209,4 @@ Conforme determina a **Premissa 5**, todos os números apresentados neste relat�
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação do Relatório PSM/CID da Fase 1 com measurement constructs, medições e decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
+| 1.1 | 19/10/2026 | Atualização das medições consolidadas da Fase 1 (17/17 issues concluídas, 62,16h) e organização em pasta própria | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |

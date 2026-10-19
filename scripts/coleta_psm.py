@@ -91,16 +91,21 @@ def extrair_numero_float(texto: str) -> float:
     """
     Extrai valor em horas de uma string, suportando formatos como:
     - '1h30m' ou '2h30' -> 1.5, 2.5
+    - '20m' ou '30 min' -> 0.33, 0.5
     - '2.5' ou '2,5' ou '4' -> 2.5, 4.0
     """
     if not texto:
         return 0.0
     texto_limpo = texto.strip().lower().replace(",", ".")
-    match_hm = re.search(r"(\d+)\s*h\s*(\d+)", texto_limpo)
+    match_hm = re.search(r"(\d+)\s*h(?:oras?)?\s*(\d+)", texto_limpo)
     if match_hm:
         horas = int(match_hm.group(1))
         minutos = int(match_hm.group(2))
         return round(horas + (minutos / 60.0), 2)
+    match_m = re.search(r"(\d+)\s*(?:m|min|minutos)\b", texto_limpo)
+    if match_m:
+        minutos = int(match_m.group(1))
+        return round(minutos / 60.0, 2)
     match = re.search(r"(\d+(?:\.\d+)?)", texto_limpo)
     return float(match.group(1)) if match else 0.0
 

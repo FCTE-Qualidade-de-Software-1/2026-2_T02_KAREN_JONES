@@ -72,8 +72,8 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 
 | Fase | Total de Issues | Horas Estimadas (h) | Horas Reais (h) | Custo Estimado (R$) | Custo Real (R$) | Estado da Medição |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Fase 2** | 12 | 12,00 | Em apuração | R$ 540,00 | Em apuração | Em andamento ativo nas branches |
-| **Entrega 1 (Acumulado F1 + F2)** | 24 | 15,50 | 6,50 + F2 | R$ 697,50 | R$ 292,50 + F2 | Monitoramento cumulativo |
+| **Fase 2** | 18 | 28,00 | 18,50 | R$ 1.260,00 | R$ 832,50 | Em andamento (6 issues concluídas) |
+| **Entrega 1 (Acumulado F1 + F2)** | 35 | 83,25 | 80,66 | R$ 3.746,25 | R$ 3.629,70 | Monitoramento contínuo |
 
 *Tabela 1: Recursos e custos da Fase 2 e acumulado da Entrega 1 (Fonte: dados/gestao/01_recursos_e_custos_fases.csv).*
 
@@ -81,8 +81,8 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 
 | Fase | Total de Issues | Concluídas | Em Andamento | Progresso (%) | No Prazo | Em Atraso | Aderência ao Prazo (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Fase 2** | 12 | 0 | 12 | 0,0% | 12 | 0 | 100,0% |
-| **Entrega 1 Geral** | 24 | 3 | 21 | 12,5% | 23 | 1 | 95,8% |
+| **Fase 2** | 18 | 6 | 12 | 33,3% | 16 | 2 | 88,9% |
+| **Entrega 1 Geral** | 35 | 23 | 12 | 65,7% | 21 | 14 | 60,0% |
 
 *Tabela 2: Calendário e progresso da Fase 2 e consolidação da Entrega 1 (Fonte: dados/gestao/02_calendario_e_progresso_fases.csv).*
 
@@ -90,9 +90,9 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 
 | Métrica de Processo | Fase 1 (Linha de Base) | Fase 2 (Meta Calibrada) | Fase 2 (Real Observado) | Conformidade |
 | :--- | :---: | :---: | :---: | :---: |
-| **Acurácia de Estimativa** | 185,7% | Faixa de 80% a 120% | Em apuração pós-merge | Em acompanhamento |
+| **Acurácia de Estimativa** | 112,5% | Faixa de 80% a 120% | 66,1% | Em calibração (6 issues) |
 | **Taxa de Revisão por Pares** | 100,0% | 100,0% | 100,0% | 100% de conformidade |
-| **Lead Time Médio** | 0,00 dia(s) | < 3,00 dias | Em apuração | No fluxo esperado |
+| **Lead Time Médio** | 1,23 dia(s) | < 3,00 dias | 1,44 dia(s) | Dentro do limite ágil |
 
 *Tabela 3: Desempenho dos processos na Fase 2 (Fonte: dados/gestao/03_desempenho_processos_fases.csv).*
 
@@ -104,13 +104,13 @@ Em cumprimento ao terceiro critério de pronto da Issue #31, a tabela abaixo con
 
 | Indicador de Gestão | Fase 1 (Requisitos & Setup) | Fase 2 (Especificação GQM) | Balanço Consolidado da Entrega 1 | Tendência e Interpretação |
 | :--- | :---: | :---: | :---: | :--- |
-| **Total de Issues Alocadas** | 12 issues | 12 issues | **24 issues técnicas e de gestão** | Distribuição perfeitamente equilibrada de escopo. |
-| **Horas Estimadas Totais** | 3,50 h | 12,00 h | **15,50 h planejadas** | Aumento na maturidade do planejamento após lições da F1. |
-| **Horas Reais Acumuladas** | 6,50 h | Em apuração | **6,50 h + Fase 2** | Horas sendo registradas via branches e PRs encadeados. |
-| **Custo Equivalente (R$ 45/h)** | R$ 292,50 | Em apuração | **R$ 292,50 + Fase 2** | Orçamento sob controle frente à taxa de mercado CLT. |
-| **Aderência aos Prazos** | 94,1% | 100,0% | **100,0% no prazo da F2** | Milestone da Fase 2 sem atrasos registrados. |
-| **Taxa de Revisão por Pares** | 100,0% | 100,0% | **100,0% dos PRs revisados** | Governança preservada com rigor entre os integrantes. |
-| **Foco Principal do Esforço** | Infraestrutura, governança e requisitos | Especificação GQM, métricas e artigo | **Ciclo completo da Entrega 1** | Transição bem-sucedida entre requisitos e métricas. |
+| **Total de Issues Alocadas** | 17 issues | 18 issues | **35 issues técnicas e de gestão** | Distribuição equilibrada de escopo entre fases. |
+| **Horas Estimadas Totais** | 55,25 h | 28,00 h | **83,25 h planejadas** | Planejamento técnico estruturado para a Entrega 1. |
+| **Horas Reais Acumuladas** | 62,16 h | 18,50 h | **80,66 h executadas** | Fase 1 100% concluída; Fase 2 com 6 issues fechadas. |
+| **Custo Equivalente (R$ 45/h)** | R$ 2.797,20 | R$ 832,50 | **R$ 3.629,70 investidos** | Orçamento sob controle frente à taxa de mercado CLT. |
+| **Aderência aos Prazos** | 29,4% (ajustes pós-review) | 88,9% | **88,9% no prazo na F2** | Melhora expressiva na pontualidade na Fase 2. |
+| **Taxa de Revisão por Pares** | 100,0% | 100,0% | **100,0% dos PRs revisados** | Rigor inegociável mantido em todos os merges. |
+| **Foco Principal do Esforço** | Requisitos, normas e governança | GQM, métricas, artigo e apresentação | **Ciclo completo da Entrega 1** | Transição fluida entre definição e especificação. |
 
 ### Acompanhamento Contínuo da Fase 2:
 Como a **Fase 2 encontra-se em andamento ativo** e os membros da equipe estão desenvolvendo as tarefas técnicas de especificação GQM e seções do artigo nas respectivas branches de trabalho, as medições de esforço real, acurácia e balanceamento de carga permanecem em apuração contínua.
@@ -145,7 +145,7 @@ Em continuidade às decisões registradas na Fase 1 (Decisões 1 a 4), a equipe 
 Todos os indicadores apresentados neste relatório são respaldados pelos artefatos e dados primários versionados no repositório:
 * **Script de Coleta Automatizada:** [`scripts/coleta_psm.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/coleta_psm.py)
 * **Histórico Bruto da API (JSON):** [`dados/gestao/raw_github_data.json`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/raw_github_data.json)
-* **Relatório da Fase 1 (Linha de Base):** [`docs/gestao/relatorio-psm-fase-1.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/gestao/relatorio-psm-fase-1.md)
+* **Relatório da Fase 1 (Linha de Base):** [`docs/gestao/relatorios/relatorio-psm-fase-1.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/gestao/relatorios/relatorio-psm-fase-1.md)
 * **Apêndices do Artigo (Contribuição e IA):** [`artigo/contribuicao-e-ia.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/artigo/contribuicao-e-ia.md)
 
 ---
@@ -162,4 +162,5 @@ Todos os indicadores apresentados neste relatório são respaldados pelos artefa
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 0.1 | 18/10/2026 | Estruturação inicial do Relatório PSM/CID da Fase 2 (esqueleto normativo, measurement constructs e decisões de gestão preliminares) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
+| 1.0 | 18/10/2026 | Estruturação inicial do Relatório PSM/CID da Fase 2 (esqueleto normativo, measurement constructs e decisões de gestão preliminares) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
+| 1.1 | 19/10/2026 | Atualização das medições em andamento da Fase 2 (6 issues concluídas, 18,5h reais) e comparativo com a Fase 1 | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
