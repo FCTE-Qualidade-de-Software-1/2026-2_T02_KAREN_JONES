@@ -48,6 +48,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 3. Q2.1 — Ausência de falhas
+
+**Questão:** O projeto evita que falhas cheguem ao usuário e trata de forma organizada os defeitos que chegam?
+
+**Requisitos:** RQ-CONF-01 (verificações automáticas e revisão antes da integração) e RQ-CONF-02 (registro, classificação e tratamento dos defeitos).
+
+**Hipótese:** as correções são uma parte relevante das contribuições integradas, compatível com um projeto muito usado. Os defeitos relatados são corrigidos em poucas semanas. Toda contribuição passa por verificações automáticas e por revisão de outra pessoa antes da integração.
+
+### M2.1.1 — Proporção de correções entre as contribuições integradas
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das contribuições integradas na janela histórica que são correções de defeitos. |
+| Procedimento de cálculo | (correções integradas na janela ÷ contribuições integradas na janela) × 100. Também é registrada a distribuição das correções pelo escopo indicado no título (por exemplo, `fix(editor)` ou `fix(app)`). Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Histórico de *pull requests* do repositório oficial no GitHub. |
+| Procedimento de coleta | Busca da API do GitHub (`gh api search/issues`) com os filtros `is:pr is:merged` e o intervalo da janela, separando as correções pelo tipo `fix` no início do título. Contribuições automáticas de atualização de dependências e de traduções são excluídas. |
+| Critério de interpretação | Confirma a hipótese se o percentual for relevante. O resultado mostra quanto do esforço do projeto vai para corrigir defeitos em vez de criar funcionalidades. Ele não mede quantos defeitos existem, só quantos foram corrigidos. |
+| Questão respondida | Q2.1 |
+| Características desejáveis | Simples (uma razão). Objetiva, porque o tipo da contribuição é verificado automaticamente pelo próprio projeto. Fácil de coletar pela API. Robusta, porque permite comparar janelas diferentes. |
+
+### M2.1.2 — Mediana do tempo entre o relato e a correção
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Mediana do tempo entre a abertura de um relato de defeito e a integração da correção que o encerra, para as correções integradas na janela histórica. |
+| Procedimento de cálculo | Para cada correção integrada na janela que declara encerrar um relato (*closing issue reference* do GitHub), calcular a diferença em dias entre a data de integração da correção e a data de abertura do relato. Calcular a mediana. Também é registrada a proporção das correções que declaram encerrar um relato. Unidade: dias. Escala: absoluta. |
+| Fonte dos dados | Histórico de *pull requests* e de *issues* do repositório oficial no GitHub. |
+| Procedimento de coleta | API GraphQL do GitHub (`gh api graphql`), campo `closingIssuesReferences` de cada correção, com a data de abertura de cada relato ligado. |
+| Critério de interpretação | Confirma a hipótese se a mediana for de poucas semanas. Medianas longas indicam que o usuário convive mais tempo com o defeito. Se poucas correções estiverem ligadas a relatos, o resultado vale só para essa parte e isso é registrado. |
+| Questão respondida | Q2.1 |
+| Características desejáveis | Objetiva, porque as datas vêm do registro do GitHub. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para o tratamento dos defeitos (RQ-CONF-02). |
+
+### M2.1.3 — Proporção de contribuições revisadas antes da integração
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das contribuições integradas na janela histórica que receberam pelo menos uma aprovação de revisão de uma pessoa diferente do autor. |
+| Procedimento de cálculo | (contribuições com ao menos uma revisão aprovada por outra pessoa ÷ contribuições integradas na janela) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Revisões registradas em cada *pull request* do repositório oficial no GitHub; fluxos de `.github/workflows/` disparados por `pull_request`. |
+| Procedimento de coleta | API GraphQL do GitHub, campo `reviews` com estado `APPROVED` de cada contribuição, comparando o autor da revisão com o autor da contribuição. As verificações automáticas são as mesmas medidas no objetivo de Manutenibilidade e não são contadas de novo aqui. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100% ou próximo disso. Contribuições integradas sem revisão dependem só das verificações automáticas para evitar falhas. |
+| Questão respondida | Q2.1 |
+| Características desejáveis | Simples. Objetiva, porque usa o registro de revisões do GitHub. Fácil de coletar automaticamente. Válida para RQ-CONF-01. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
