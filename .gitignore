@@ -3,6 +3,7 @@
 
 # Production
 /build
+/artigo/*.pdf
 
 # Generated files
 .docusaurus
