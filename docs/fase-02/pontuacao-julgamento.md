@@ -202,9 +202,37 @@ Média da característica: (4,0 + 2,5 + 2,0) ÷ 3 = 2,8, que é arredondada para
 
 ---
 
+## 7. Critérios de julgamento
+
+### 7.1 Julgamento de cada característica
+
+Cada característica recebe um de três resultados:
+
+| Resultado | Condição |
+| :--- | :--- |
+| **Atende** | A característica tem nível `o` ou melhor, e nenhuma das suas questões está no nível `--`. |
+| **Não atende** | A característica tem nível `-` ou `--`, ou pelo menos uma das suas questões está no nível `--`. |
+| **Inconclusiva** | Mais da metade das métricas da característica não foi coletada (seção 6.1). |
+
+O limite vem do esquema de certificação de manutenibilidade da TÜViT, que usa o modelo de Heitlager, Kuipers e Visser em uma escala de 1 a 5 estrelas. Para obter o certificado, um sistema precisa de ao menos 2 estrelas em todas as subcaracterísticas e de ao menos 3 estrelas na característica (Baggen; Schill; Visser, 2010, p. 3). Na escala desta página, 2 estrelas correspondem ao nível `-` e 3 estrelas ao nível `o`. A equipe aplica o mesmo limite às três características avaliadas.
+
+No exemplo da seção 6.2, a característica atende: o nível dela é `o`, e nenhuma questão está no nível `--`.
+
+### 7.2 Hipóteses
+
+O nível de pontuação e a hipótese de cada métrica são avaliados separadamente. A hipótese é confirmada ou refutada pelo critério de interpretação da ficha da métrica, nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md). Uma métrica pode estar no nível `++` e refutar a hipótese, por exemplo quando a equipe esperava um resultado pior. O relatório registra os dois resultados, porque as hipóteses auxiliam na interpretação dos resultados (AULA 08, p. 34): uma hipótese refutada mostra onde a expectativa da equipe sobre o Excalidraw estava errada.
+
+### 7.3 Pontos de melhoria
+
+Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de melhoria, com a questão e a subcaracterística afetadas. Como cada nível pode ser rastreado até a métrica que o originou, o relatório indica a causa de cada resultado ruim, e não só o resultado (Heitlager; Kuipers; Visser, 2007, p. 8).
+
+---
+
 ## Referências
 
+- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 34.
 - AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 4, 16 e 17.
+- BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Página 3. Disponível em: https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf. Versão ampliada: BAGGEN, R. et al. *Software Quality Journal*, v. 20, p. 287–307, 2012.
 - GOOGLE. Measure performance with the RAIL model. *web.dev*, atualizado em 10/06/2020. Seções "Load" e "Animation". Disponível em: https://web.dev/articles/rail.
 - HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30–39. Páginas 5 a 8 da versão dos autores, disponível em: https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf.
 - MARTIN, R. C. Stability. *The C++ Report*, 1997. Páginas 8 e 10. Disponível em: https://objectmentor.com/resources/articles/stability.pdf.
