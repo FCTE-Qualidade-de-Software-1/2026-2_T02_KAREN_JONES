@@ -3,7 +3,8 @@
 
 # Production
 /build
-/artigo/*.pdf
+/artigo/main.pdf
+!/artigo/figura-*.pdf
 /artigo/*.aux
 /artigo/*.log
 /artigo/*.out
