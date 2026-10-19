@@ -19,7 +19,7 @@ A Fase 01 está organizada em cinco entregas:
 1. **[Propósito da avaliação](./proposito-avaliacao.md)** — por que escolhemos o Excalidraw, quem solicita a avaliação, quem se beneficia dos resultados e como eles serão usados.
 2. **Escopo do produto** — [tipo de produto e arquitetura](./tipo-produto.md) e [escopo, profundidade e objetos de avaliação](./escopo-avaliacao.md), incluindo os limites de validade dos resultados.
 3. **[Partes interessadas](./interessados.md)** — quem são as pessoas afetadas pelos resultados: usuários, desenvolvedores, mantenedores, contribuidores externos, quem integra a biblioteca e a própria equipe avaliadora.
-4. **[Modelo de qualidade](./modelo-de-qualidade.md)** — quais características e subcaracterísticas da ISO/IEC 25010 vamos usar como guia: Manutenibilidade, Confiabilidade e Flexibilidade.
+4. **[Modelo de qualidade](./modelo-de-qualidade.md)** — quais características e subcaracterísticas da ISO/IEC 25010 vamos usar como guia: Manutenabilidade, Confiabilidade e Flexibilidade.
 5. **[ODS e a Avaliação](./ods.md)** — relação do software com os Objetivos de Desenvolvimento Sustentável da Agenda 2030 (ODS 4, 9 e 10).
 
 ---

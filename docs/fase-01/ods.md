@@ -58,11 +58,11 @@ Além disso, o modelo open source reduz as barreiras para o desenvolvimento de i
 
 | Meta | Descrição | Relação com a avaliação |
 |---|---|---|
-| 9.5 | Fortalecer a pesquisa científica e a capacidade tecnológica, incentivando a inovação | O Excalidraw é mantido por uma comunidade aberta que contribui com código, testes e documentação. A avaliação de Manutenibilidade (Modularidade, Testabilidade e Analisabilidade) verifica se a estrutura do projeto facilita ou dificulta essas contribuições. |
+| 9.5 | Fortalecer a pesquisa científica e a capacidade tecnológica, incentivando a inovação | O Excalidraw é mantido por uma comunidade aberta que contribui com código, testes e documentação. A avaliação de Manutenabilidade (Modularidade, Testabilidade e Analisabilidade) verifica se a estrutura do projeto facilita ou dificulta essas contribuições. |
 | 9.b | Apoiar o desenvolvimento de tecnologia, pesquisa e inovação nos países em desenvolvimento | Ferramentas gratuitas e de código aberto reduzem a dependência de software proprietário. A avaliação de Flexibilidade (Instalabilidade) verifica se é viável instalar e manter o Excalidraw em diferentes ambientes. |
 | 9.c | Aumentar o acesso às tecnologias da informação e comunicação e fornecer acesso universal à internet nos países menos desenvolvidos | O Excalidraw funciona como PWA (Progressive Web App) e tem suporte a funcionamento offline, o que é relevante em contextos com conectividade limitada. A avaliação de Confiabilidade (Disponibilidade) analisa esse aspecto. |
 
-**Indicador de referência:** número de contribuições externas e facilidade de integração da biblioteca. As métricas de Manutenibilidade e Flexibilidade que definimos na Fase 02 ajudam a mensurar a facilidade com que novos desenvolvedores podem inovar a partir do código existente.
+**Indicador de referência:** número de contribuições externas e facilidade de integração da biblioteca. As métricas de Manutenabilidade e Flexibilidade que definimos na Fase 02 ajudam a mensurar a facilidade com que novos desenvolvedores podem inovar a partir do código existente.
 
 ## 5. ODS 10: Redução das Desigualdades
 
@@ -87,7 +87,7 @@ A capacidade de exportar dados em formatos abertos (.excalidraw, PNG, SVG) tamb�
 
 A tabela abaixo resume como cada ODS se conecta às três características de qualidade que estamos avaliando no Excalidraw:
 
-| ODS | Manutenibilidade | Confiabilidade | Flexibilidade |
+| ODS | Manutenabilidade | Confiabilidade | Flexibilidade |
 |---|---|---|---|
 | 4 (Educação) | Código bem organizado facilita contribuições de desenvolvedores que queiram adaptar o Excalidraw para contextos educacionais | Estabilidade e recuperação de dados são essenciais para uso em sala de aula | Funcionamento em navegadores diversos, dispositivos móveis e ambientes com restrições garante o acesso |
 | 9 (Inovação) | Modularidade e testabilidade determinam a viabilidade de contribuição e inovação pela comunidade | Maturidade do processo de desenvolvimento sustenta a confiança da comunidade no projeto | Instalabilidade e adaptabilidade permitem que organizações hospedem e customizem suas instâncias |

@@ -33,7 +33,7 @@ const docSections = [
 
 const qualityFocus = [
   {
-    title: 'Manutenibilidade',
+    title: 'Manutenabilidade',
     description: 'Avaliação da modularidade, facilidade de alteração do código, reusabilidade e cobertura de testes.',
   },
   {
@@ -41,8 +41,8 @@ const qualityFocus = [
     description: 'Análise de maturidade, disponibilidade da aplicação e tolerância a erros e falhas.',
   },
   {
-    title: 'Flexibilidade',
-    description: 'Análise da adaptabilidade a ambientes, escalabilidade, instalabilidade e substituibilidade.',
+    title: 'Portabilidade',
+    description: 'Verificação do funcionamento em diferentes navegadores e facilidade de instalação e execução.',
   },
 ];
 
