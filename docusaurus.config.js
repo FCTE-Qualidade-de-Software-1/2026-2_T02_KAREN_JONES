@@ -111,10 +111,14 @@ const config = {
                 label: 'Repositório do Grupo',
                 href: 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES',
               },
+              {
+                label: 'Releases do Projeto',
+                href: 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases',
+              },
             ],
           },
         ],
-        copyright: `Grupo Karen Jones · Qualidade de Software 1 · FCTE/UnB`,
+        copyright: `Grupo Karen Jones · Qualidade de Software 1 (FCTE/UnB) · Versão 1.0 (Outubro/2026)`,
       },
       prism: {
         theme: prismThemes.github,

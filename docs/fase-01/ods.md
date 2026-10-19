@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 title: ODS e a Avaliação
 description: Relação entre a avaliação do Excalidraw e os Objetivos de Desenvolvimento Sustentável da Agenda 2030
 ---

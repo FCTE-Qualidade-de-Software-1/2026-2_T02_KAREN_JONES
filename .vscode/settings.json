@@ -1,0 +1,35 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex ➞ pdflatex",
+      "tools": [
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "tools": [
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.formatting.latex": "none",
+  "[latex]": {
+    "editor.formatOnSave": false
+  }
+}

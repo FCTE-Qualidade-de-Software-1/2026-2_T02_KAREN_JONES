@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+title: Partes Interessadas
+description: Mapeamento de grupos de interessados, necessidades, matriz de prioridades e critérios de sucesso.
+---
 
 # Interessados no projeto Excalidraw
 
@@ -19,7 +24,7 @@ Os aspectos da avaliação mais relevantes para os usuários finais são:
 - **Adaptabilidade** — o editor funciona bem em diferentes navegadores, tamanhos de tela e dispositivos de entrada?
 - **Substituibilidade** — se o usuário quiser migrar para outra ferramenta, consegue exportar os dados num formato que preserve o conteúdo?
 
-Para os usuários finais, **confiabilidade é a prioridade principal** e portabilidade aparece como aspecto secundário.
+Para os usuários finais, **confiabilidade é a prioridade principal** e flexibilidade aparece como aspecto secundário.
 
 ## 2. Desenvolvedores do projeto
 
@@ -48,7 +53,7 @@ Os aspectos mais relevantes para os mantenedores:
 - **Testabilidade** — sem testes automatizados e integração contínua bem configurada, revisar contribuições externas vira um trabalho manual enorme.
 - **Maturidade** — com que frequência bugs sérios aparecem? O processo de revisão está detectando problemas antes de chegar à produção? As versões publicadas são estáveis?
 
-Para os mantenedores, **manutenabilidade e confiabilidade têm prioridade equivalente**, com portabilidade em papel secundário.
+Para os mantenedores, **manutenabilidade e confiabilidade têm prioridade equivalente**, com flexibilidade em papel secundário.
 
 ## 4. Contribuidores open source
 
@@ -77,7 +82,7 @@ Os aspectos mais relevantes para integradores:
 - **Instalabilidade** — é simples instalar, configurar e atualizar a biblioteca?
 - **Substituibilidade** — se um projeto precisar trocar de ferramenta, consegue exportar os dados de um formato interoperável?
 
-Para os integradores da biblioteca, **portabilidade é a prioridade principal**.
+Para os integradores da biblioteca, **flexibilidade é a prioridade principal**.
 
 ## 6. Equipes de implantação e operação
 
@@ -90,7 +95,7 @@ Os aspectos mais relevantes para equipes de operação:
 - **Instalabilidade** — o processo de build está documentado de forma clara? O Dockerfile funciona? Há configurações de ambiente que precisam ser ajustadas?
 - **Disponibilidade** — a aplicação funciona offline? Quais recursos externos ela acessa e o que acontece quando eles não estão disponíveis?
 
-Para equipes de implantação, **portabilidade é a prioridade principal** com confiabilidade em papel secundário.
+Para equipes de implantação, **flexibilidade é a prioridade principal** com confiabilidade em papel secundário.
 
 ## 7. Equipes de qualidade
 
@@ -122,7 +127,7 @@ Esse grupo inclui equipes, escolas e organizações que usam o Excalidraw regula
 
 O que importa para esse grupo é a continuidade: o projeto vai continuar sendo mantido? Os formatos de arquivo vão continuar compatíveis entre versões? Se um dia precisarem migrar para outra ferramenta, vão conseguir levar o conteúdo?
 
-Esse grupo não aparece na matriz de prioridades com valores formais, mas suas preocupações se relacionam com confiabilidade (estabilidade entre versões) e portabilidade (exportação dos dados).
+Esse grupo não aparece na matriz de prioridades com valores formais, mas suas preocupações se relacionam com confiabilidade (estabilidade entre versões) e flexibilidade (exportação dos dados).
 
 ---
 
@@ -130,7 +135,7 @@ Esse grupo não aparece na matriz de prioridades com valores formais, mas suas p
 
 A tabela abaixo resume as prioridades de cada grupo em relação às três características avaliadas. **Principal** significa que aquela característica atende diretamente os interesses do grupo; **Secundário** indica relevância indireta; **–** indica que a característica não é aplicável ou é muito periférica para o grupo.
 
-| Interessado | Manutenabilidade | Confiabilidade | Portabilidade |
+| Interessado | Manutenabilidade | Confiabilidade | Flexibilidade |
 |---|---|---|---|
 | Usuários finais | – | Principal | Secundário |
 | Desenvolvedores do projeto | Principal | Secundário | – |
@@ -141,6 +146,32 @@ A tabela abaixo resume as prioridades de cada grupo em relação às três carac
 | Equipes de qualidade | Principal | Principal | Secundário |
 
 A equipe avaliadora/docentes e a comunidade adotante têm interesses transversais e não entram nessa classificação formal.
+
+### Influência dos interessados nas escolhas da avaliação
+
+A seleção das três características de qualidade — Manutenabilidade, Confiabilidade e Flexibilidade — foi diretamente determinada pelas prioridades dos grupos de interessados:
+
+- **Manutenabilidade** aparece como prioridade *principal* para quatro dos sete grupos formais (desenvolvedores, mantenedores, contribuidores e equipes de qualidade) — é a característica com maior abrangência de interessados.
+- **Confiabilidade** é prioridade *principal* para três grupos (usuários finais, mantenedores e equipes de qualidade) e *secundária* para os quatro restantes.
+- **Flexibilidade** é prioridade *principal* para dois grupos (integradores da biblioteca e equipes de implantação) e *secundária* para três outros.
+
+Nenhuma outra combinação de três características da ISO/IEC 25010:2023 cobriria todos os sete grupos com ao menos uma prioridade principal. Essa cobertura completa confirma que as escolhas da avaliação estão ancoradas nas necessidades reais dos interessados, e não em conveniência ou preferência da equipe avaliadora.
+
+### Critérios de sucesso por grupo de interessados
+
+Para cada grupo, a tabela abaixo define o que consideramos um resultado bem-sucedido da avaliação — ou seja, o que o relatório final precisa entregar para que aquele grupo considere a avaliação útil.
+
+| Grupo de interessados | Critério de sucesso da avaliação |
+|---|---|
+| Usuários finais | A avaliação identifica riscos concretos de perda de dados, falhas no funcionamento offline e problemas de compatibilidade entre dispositivos, com recomendações acionáveis. |
+| Desenvolvedores do projeto | O relatório mapeia os módulos com maior acoplamento, menor cobertura de testes e concentração excessiva de responsabilidades, indicando onde priorizar refatorações. |
+| Mantenedores | A avaliação produz indicadores objetivos sobre a saúde do código que apoiem decisões de planejamento de releases e revisão de contribuições externas. |
+| Contribuidores open source | O relatório identifica áreas do repositório com maior necessidade de contribuição (testes, documentação, tipagem), orientando novos contribuidores. |
+| Integradores da biblioteca | A avaliação verifica a estabilidade da API pública, a compatibilidade com diferentes versões de React e empacotadores, e a facilidade de instalação e atualização. |
+| Equipes de implantação e operação | O relatório confirma se o processo de build é reproduzível, se o Dockerfile funciona e se a aplicação pode ser hospedada de forma independente. |
+| Equipes de qualidade | A avaliação demonstra rastreabilidade completa entre requisitos, métricas e conclusões, servindo como referência metodológica verificável. |
+
+Esses critérios orientam diretamente a definição das métricas na Fase 2 e os julgamentos da Fase 4: uma métrica só tem valor se contribui para atender ao critério de sucesso de ao menos um grupo de interessados.
 
 ---
 
@@ -169,5 +200,6 @@ A tabela a seguir mostra, para cada subcaracterística que vamos avaliar, quais 
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | ------ | ---- | --------- | --------- | ----------- |
-| 0.1 | 04/10/2026 | Documento dos possíveis interessados nesse projeto | [Davi Pierre](https://gitlab.com/DaviPierre) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 0.2 | 15/10/2026 | Revisão geral e adição de contexto | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 0.1 | 04/10/2026 | Documento dos possíveis interessados nesse projeto | [Davi Pierre](https://github.com/DaviPierre) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 0.2 | 15/10/2026 | Revisão geral e adição de contexto | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 0.3 | 18/10/2026 | Inclusão de critérios de sucesso por interessado e influência nas escolhas | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |

@@ -1,0 +1,19 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Resumo}{1}{section.1}%
+\contentsline {section}{\numberline {2}Introdução}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Link de Rastreabilidade do Repositório}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Referencial Teórico}{2}{section.3}%
+\contentsline {section}{\numberline {4}Fase 1: Requisitos de Avaliação}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Propósito e Requisitante da Avaliação}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Partes Interessadas e Critérios de Sucesso}{3}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Descrição Estruturada do Produto e Arquitetura}{3}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Seleção das Características e Método de Priorização}{4}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Relação com os Objetivos de Desenvolvimento Sustentável (ODS)}{4}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Fase 2: Especificação da Avaliação}{5}{section.5}%
+\contentsline {section}{\numberline {6}Fase 3: Planejamento da Avaliação}{5}{section.6}%
+\contentsline {section}{\numberline {7}Fase 4: Execução da Avaliação e Ações de Melhoria}{5}{section.7}%
+\contentsline {section}{\numberline {8}Gestão do Projeto (Métricas PSM/CID)}{5}{section.8}%
+\contentsline {section}{\numberline {9}Considerações Finais}{5}{section.9}%
+\contentsline {section}{Referências}{6}{section.9}%
+\contentsline {section}{\numberline {A}Tabela de Contribuição dos Membros da Equipe}{7}{appendix.A}%
+\contentsline {section}{\numberline {B}Declaração de Uso de Inteligência Artificial}{7}{appendix.B}%
