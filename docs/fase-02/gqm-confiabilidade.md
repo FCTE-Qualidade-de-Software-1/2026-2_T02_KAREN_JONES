@@ -94,6 +94,40 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 4. Q2.2 — Disponibilidade
+
+**Questão:** O editor continua disponível para o usuário sem conexão e sem depender de serviços externos?
+
+**Requisitos:** RQ-CONF-03 (uso sem conexão após o primeiro carregamento) e RQ-CONF-04 (independência de colaboração e de recursos remotos).
+
+**Hipótese:** depois do primeiro carregamento, o editor funciona sem conexão. A colaboração em tempo real e o compartilhamento por link não funcionam sem conexão. O editor local carrega poucos recursos de servidores externos, e nenhum deles é indispensável para desenhar.
+
+### M2.2.1 — Proporção de funções essenciais disponíveis sem conexão
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de uma lista fixa de funções essenciais do editor que funcionam sem conexão, depois de um primeiro carregamento com conexão. |
+| Procedimento de cálculo | Lista de funções verificadas: (1) recarregar a página; (2) criar formas; (3) escrever texto; (4) mover e redimensionar elementos; (5) desfazer e refazer; (6) salvar em arquivo `.excalidraw`; (7) abrir um arquivo `.excalidraw`; (8) exportar em PNG; (9) exportar em SVG; (10) exibir o texto com a fonte padrão. Calcular (funções que funcionam ÷ 10) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web em execução no ambiente de teste; configuração do *service worker* em `excalidraw-app/vite.config.mts`. |
+| Procedimento de coleta | Abrir a aplicação com conexão, aguardar o registro do *service worker*, desligar a rede pelo modo *offline* das ferramentas do navegador e executar a lista na ordem, registrando cada item como funciona ou não funciona, com captura de tela. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada função que falha é um caso em que o usuário perde acesso ao editor sem conexão. |
+| Questão respondida | Q2.2 |
+| Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item tem resultado binário com evidência. Válida, porque testa o comportamento, e não só a presença da configuração. Robusta, porque pode ser repetida em outros navegadores. |
+
+### M2.2.2 — Origens externas necessárias para o editor local
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Número de domínios diferentes do da aplicação dos quais o editor carrega recursos ao ser aberto sem sessão de colaboração. Também é registrado quantos desses recursos são indispensáveis para desenhar. |
+| Procedimento de cálculo | Contar os domínios externos no registro de requisições da abertura do editor. Para cada domínio, bloquear suas requisições e verificar se o editor ainda permite criar formas e texto; se não permitir, o domínio é indispensável. Unidade: domínios. Escala: absoluta. |
+| Fonte dos dados | Registro de rede (arquivo HAR) do navegador no ambiente de teste. |
+| Procedimento de coleta | Abrir o editor com o cache vazio, exportar o registro de rede das ferramentas do navegador e listar os domínios. Repetir a abertura com cada domínio bloqueado pela opção de bloqueio de requisições do navegador. |
+| Critério de interpretação | Confirma a hipótese se houver poucos domínios externos e nenhum indispensável. Cada domínio indispensável é um serviço cuja queda deixa o editor indisponível. |
+| Questão respondida | Q2.2 |
+| Características desejáveis | Objetiva, porque os domínios saem do registro do navegador. Fácil de coletar com ferramentas do próprio navegador. Válida para RQ-CONF-04. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
