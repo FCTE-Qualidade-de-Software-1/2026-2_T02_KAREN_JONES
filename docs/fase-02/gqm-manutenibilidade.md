@@ -96,6 +96,40 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 4. Q1.2 — Reusabilidade
+
+**Questão:** Os pacotes podem ser usados fora do editor, e a interface pública da biblioteca está documentada para quem vai reutilizá-la?
+
+**Requisitos:** RQ-MAN-04 (reutilização dos componentes e dos pacotes menores) e RQ-MAN-05 (interface pública documentada).
+
+**Hipótese:** os pacotes `math` e `utils` não dependem de React nem de recursos do navegador. A maior parte das propriedades públicas da biblioteca está documentada, mas parte delas só aparece nos tipos do código.
+
+### M1.2.1 — Arquivos de pacotes de base com dependência de React ou do navegador
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Número de arquivos de produção de cada pacote de base que importam `react` ou `react-dom`, ou que usam diretamente os objetos globais do navegador `window` e `document`. |
+| Procedimento de cálculo | Contagem por pacote. Unidade: arquivos. Escala: absoluta. Também é registrada a proporção em relação ao total de arquivos de produção do pacote. |
+| Fonte dos dados | Código de produção dos pacotes de base. |
+| Procedimento de coleta | Busca no código por importações de `react` e `react-dom` e por usos de `window.` e `document.` (ferramenta `grep`), excluindo comentários. |
+| Critério de interpretação | Confirma a hipótese se o valor for 0 em `math` e `utils`. Nos demais pacotes de base, valores maiores indicam que o pacote só funciona dentro de um navegador ou junto com React. |
+| Questão respondida | Q1.2 |
+| Características desejáveis | Simples e fácil de coletar. Objetiva, porque depende só do texto do código. Válida como indicador de reutilização fora do editor, já que essas dependências impedem o uso em outros ambientes, como servidores. |
+
+### M1.2.2 — Proporção de propriedades públicas documentadas
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das propriedades do componente principal da biblioteca (`ExcalidrawProps`) que estão descritas na documentação oficial para desenvolvedores. |
+| Procedimento de cálculo | (propriedades descritas na documentação ÷ propriedades declaradas em `ExcalidrawProps`) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Tipo `ExcalidrawProps` em `packages/excalidraw/types.ts`; páginas da pasta `dev-docs/docs/@excalidraw/excalidraw/api/`. |
+| Procedimento de coleta | Listar os nomes das propriedades declaradas no tipo e procurar cada nome nas páginas da documentação. Uma propriedade conta como documentada se tiver ao menos uma descrição do seu propósito. |
+| Critério de interpretação | Confirma a hipótese se o valor for alto, mas menor que 100%. Quanto menor o valor, mais quem integra a biblioteca precisa ler o código para usá-la. |
+| Questão respondida | Q1.2 |
+| Características desejáveis | Simples (uma razão). Objetiva, porque a lista de propriedades vem do código. Fácil de coletar, com uma lista finita. Válida para a separação entre interface pública e detalhes internos (RQ-MAN-05). |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 41.
