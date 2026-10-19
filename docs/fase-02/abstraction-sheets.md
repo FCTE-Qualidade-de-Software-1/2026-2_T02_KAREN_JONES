@@ -182,4 +182,4 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 19/10/2026 | Criação das abstraction sheets dos objetivos G1, G2 e G3 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.0 | 19/10/2026 | Criação das abstraction sheets dos objetivos G1, G2 e G3 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |

@@ -259,4 +259,4 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G2 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G2 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares), [Maria Eduarda](https://github.com/eduarda-ogomes) |
