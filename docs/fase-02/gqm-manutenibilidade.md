@@ -75,9 +75,9 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Número de importações de valor que contrariam a direção de dependência declarada pelo próprio projeto: pacotes de base importando da biblioteca `excalidraw`, ou qualquer pacote importando da aplicação web. |
-| Procedimento de cálculo | Contar, nos arquivos de produção, as importações de valor cujo destino é proibido pela regra. A regra é a configuração de lint `packages/eslintrc.base.json` do Excalidraw, que proíbe os pacotes de base de importar da biblioteca qualquer coisa além de tipos. Unidade: importações. Escala: absoluta. |
-| Fonte dos dados | Código de produção dos pacotes de base e da biblioteca; arquivo `packages/eslintrc.base.json`. |
-| Procedimento de coleta | Busca no código das importações de `@excalidraw/excalidraw` e de `excalidraw-app` (ferramenta `grep` ou ESLint com a regra do projeto), descartando as importações apenas de tipo (`import type`). |
+| Procedimento de cálculo | Resolver o destino de cada importação de valor dos arquivos de produção, inclusive caminhos relativos, nomes `@excalidraw/*` e reexportações (`export ... from`), para o pacote do arquivo importado. Contar as importações que se enquadram em uma das duas condições: (1) origem em um pacote de base e destino na biblioteca; (2) destino na aplicação web, a partir de qualquer pacote. A condição 1 é a regra de lint `packages/eslintrc.base.json` do Excalidraw, que proíbe os pacotes de base de importar da biblioteca qualquer coisa além de tipos. A condição 2 vem da organização do repositório, em que a aplicação web é a camada mais externa e consome a biblioteca. Unidade: importações (pares arquivo de origem → arquivo de destino). Escala: absoluta. |
+| Fonte dos dados | Código de produção de todos os pacotes; arquivo `packages/eslintrc.base.json`. |
+| Procedimento de coleta | O grafo de importações de valor de M1.1.1, em que o Madge já resolve os destinos para arquivos. Um script classifica cada aresta pelas duas condições e conta as que as violam. O ESLint do projeto não serve sozinho como coleta, porque a regra não trata de importações da aplicação web e só é aplicada nos pacotes cuja configuração a estende (`common` e `element`). |
 | Critério de interpretação | Confirma a hipótese se o valor for 0. Cada importação encontrada é um ponto em que o código não respeita a arquitetura que o próprio projeto declara. |
 | Questão respondida | Q1.1 |
 | Características desejáveis | Simples e objetiva, porque a direção esperada vem de uma regra escrita pelo projeto, e não de opinião da equipe. Fácil de coletar. Válida para os limites entre aplicação, biblioteca e pacotes de base (RQ-MAN-01). |
@@ -297,7 +297,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | Métrica | O que foi verificado |
 | :--- | :--- |
 | M1.1.1 e M1.1.3 | O Madge 8.0.0 monta o grafo de dependências do código usando o `tsconfig.json` do repositório, que mapeia os nomes `@excalidraw/*` para as pastas dos pacotes. |
-| M1.1.2 | A regra de direção existe em `packages/eslintrc.base.json` e o projeto exige importações de tipo separadas (regra `consistent-type-imports` em `.eslintrc.json`), o que permite distinguir importações de tipo das de valor. |
+| M1.1.2 | A regra de direção existe em `packages/eslintrc.base.json`, mas só `common` e `element` têm configuração que a estende; por isso a coleta usa o grafo de M1.1.1, e não o lint. O projeto exige importações de tipo separadas (regra `consistent-type-imports` em `.eslintrc.json`), o que permite distinguir importações de tipo das de valor. |
 | M1.2.1 | Os pacotes de base têm código-fonte próprio em `packages/*/src`, onde a busca pode ser feita. |
 | M1.2.2 | O tipo `ExcalidrawProps` está em `packages/excalidraw/types.ts`, e a documentação das propriedades está em `dev-docs/docs/@excalidraw/excalidraw/api/props/`. |
 | M1.3.1 | O ESLint 8.57.0 com `@typescript-eslint/parser` analisou com sucesso um arquivo `.tsx` do editor e informou a complexidade de cada função. A ferramenta lizard foi descartada porque não reconheceu a maior parte das funções em arquivos `.tsx`. |
