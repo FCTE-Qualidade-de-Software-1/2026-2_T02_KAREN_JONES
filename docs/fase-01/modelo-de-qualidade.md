@@ -10,7 +10,7 @@ description: Características e subcaracterísticas da ISO/IEC 25010:2023 seleci
 
 A avaliação adota o modelo de qualidade definido pela **ISO/IEC 25010:2023**, integrante da família de normas **SQuaRE (Systems and softWare Quality Requirements and Evaluation)**. Essa edição estrutura a qualidade de produto de software em **nove características** de alto nível, cada uma subdividida em subcaracterísticas que permitem uma análise mais precisa e rastreável — entre as novidades em relação à edição de 2011 estão a renomeação de *Portabilidade* para **Flexibilidade**, a adição de **Escalabilidade** como subcaracterística e a inclusão de **Segurança de Proteção** como nova característica de nível superior.
 
-Para este trabalho, foram selecionadas **três características**: Manutenabilidade, Confiabilidade e Flexibilidade. A seleção é justificada na seção seguinte.
+Para este trabalho, foram selecionadas **três características**: Manutenibilidade, Confiabilidade e Flexibilidade. A seleção é justificada na seção seguinte.
 
 ---
 
@@ -20,7 +20,7 @@ A escolha das três características levou em conta o perfil do produto, o acess
 
 O Excalidraw é um projeto open source organizado em monorepo, com código público, histórico de versões acessível e integração contínua configurada. Isso viabiliza uma avaliação baseada em análise estática do repositório, sem necessidade de acesso à infraestrutura de produção.
 
-A **Manutenabilidade** é relevante por se tratar de um projeto com contribuições externas frequentes. Aspectos como a organização do código, a separação entre módulos e a cobertura de testes são determinantes para a sustentabilidade do projeto a longo prazo.
+A **Manutenibilidade** é relevante por se tratar de um projeto com contribuições externas frequentes. Aspectos como a organização do código, a separação entre módulos e a cobertura de testes são determinantes para a sustentabilidade do projeto a longo prazo.
 
 A **Confiabilidade** responde às necessidades dos usuários que utilizam a ferramenta em contextos colaborativos e dependem da persistência do trabalho. Falhas de rede, perda de dados e ausência de feedback adequado em situações de erro são pontos críticos para esse grupo.
 
@@ -30,7 +30,7 @@ Essas três características, em conjunto, cobrem os interesses dos oito grupos 
 
 ---
 
-## Manutenabilidade
+## Manutenibilidade
 
 Segundo a ISO/IEC 25010, manutenabilidade corresponde ao grau de eficácia e eficiência com que um produto pode ser modificado pelos seus mantenedores. No contexto do Excalidraw, com múltiplos contribuidores externos e uma base de código em monorepo, essa característica é central para a sustentabilidade do desenvolvimento.
 
@@ -87,7 +87,7 @@ A ISO/IEC 25010:2023 define um modelo genérico, aplicável a qualquer produto d
 
 | # | Adaptação | Justificativa pelo contexto do produto | Interessados que a motivam |
 |---|---|---|---|
-| 1 | **Seleção de 3 das 9 características** (Manutenabilidade, Confiabilidade e Flexibilidade) | O Excalidraw é, ao mesmo tempo, aplicação web colaborativa e biblioteca npm, mantida em monorepo open source. Essa combinação coloca em primeiro plano a facilidade de evoluir o código, a confiança no trabalho salvo e a capacidade de ser instalado, integrado e migrado. Na matriz de prioridades, cada um dos sete grupos tem ao menos uma dessas três características como prioridade principal: Manutenabilidade para quatro grupos, Confiabilidade para três e Flexibilidade para dois. | Todos os grupos da matriz de prioridades |
+| 1 | **Seleção de 3 das 9 características** (Manutenibilidade, Confiabilidade e Flexibilidade) | O Excalidraw é, ao mesmo tempo, aplicação web colaborativa e biblioteca npm, mantida em monorepo open source. Essa combinação coloca em primeiro plano a facilidade de evoluir o código, a confiança no trabalho salvo e a capacidade de ser instalado, integrado e migrado. Na matriz de prioridades, cada um dos sete grupos tem ao menos uma dessas três características como prioridade principal: Manutenibilidade para quatro grupos, Confiabilidade para três e Flexibilidade para dois. | Todos os grupos da matriz de prioridades |
 | 2 | **Manutenção das 13 subcaracterísticas, cada uma ligada a interessados e a artefatos** | Nenhuma subcaracterística foi descartada, porque cada uma responde a ao menos um interessado principal e tem um artefato do repositório que serve de evidência (ver tabela de rastreabilidade). Isso evita avaliar algo sem destinatário e evita deixar de fora algo que alguém precisa. | Conforme indicado sob cada subcaracterística na Figura 1 |
 | 3 | **Interpretação das subcaracterísticas para o Excalidraw** | As definições da norma foram traduzidas para o produto. Modularidade é lida como o limite entre `excalidraw-app/` e `packages/excalidraw/`; Testabilidade considera as particularidades de um editor baseado em canvas; Disponibilidade é tratada como funcionamento offline via PWA; Substituibilidade é lida como exportação em `.excalidraw`, PNG e SVG; Escalabilidade considera desenhos com muitos elementos e extensão pela API pública. | Desenvolvedores, integradores da biblioteca, usuários finais e equipes de operação |
 | 4 | **Disponibilidade, Tolerância a falhas e Recuperabilidade investigadas por análise estática** | Essas subcaracterísticas são, por natureza, medidas em tempo de execução. Sem acesso à infraestrutura de produção do `excalidraw.com`, a avaliação examina a configuração de PWA, o tratamento de exceções e os mecanismos de persistência no código. A limitação é assumida e será documentada na Fase 02. | Usuários finais e equipes de operação |
@@ -101,7 +101,7 @@ Para que a avaliação seja objetiva e factível, precisamos definir claramente 
 
 | Característica | O que será avaliado | O que não entra no escopo |
 |---|---|---|
-| **Manutenabilidade** | Código-fonte do monorepo (`excalidraw-app/`, `packages/`), configurações de TypeScript e lint, documentação de contribuição e histórico de commits e pull requests. | Código interno das dependências externas e refatorações futuras que não estejam presentes no repositório no momento da análise. |
+| **Manutenibilidade** | Código-fonte do monorepo (`excalidraw-app/`, `packages/`), configurações de TypeScript e lint, documentação de contribuição e histórico de commits e pull requests. | Código interno das dependências externas e refatorações futuras que não estejam presentes no repositório no momento da análise. |
 | **Confiabilidade** | Configurações de PWA/offline, código de tratamento de erros e colaboração, mecanismos de persistência local, funções de importação/exportação e histórico de issues. | Infraestrutura de produção do `excalidraw.com`, métricas de disponibilidade em tempo real e dados de telemetria de uso. |
 | **Flexibilidade** | Pacote `packages/excalidraw/`, API pública, exemplos disponibilizados, `package.json`, `Dockerfile`, documentação de instalação e comportamento sob carga. | Testes em hardware físico, benchmarks de escalabilidade em produção e comportamento em ambientes corporativos com restrições de segurança. |
 
@@ -115,11 +115,11 @@ A tabela a seguir apresenta, para cada subcaracterística, os grupos de interess
 
 | Subcaracterística | Característica | Interessados principais | Artefatos previstos como evidência |
 |---|---|---|---|
-| Modularidade | Manutenabilidade | Desenvolvedores; mantenedores | `packages/`, `excalidraw-app/`, arquivos de dependências |
-| Reusabilidade | Manutenabilidade | Integradores da biblioteca | `packages/excalidraw/`, `examples/`, interface pública |
-| Analisabilidade | Manutenabilidade | Contribuidores; desenvolvedores | Estrutura de diretórios, configurações de TypeScript e lint, documentação |
-| Modificabilidade | Manutenabilidade | Desenvolvedores; mantenedores | Código dos pacotes, commits, pull requests |
-| Testabilidade | Manutenabilidade | Equipes de qualidade; mantenedores | Arquivos de teste, configurações, `.github/workflows/` |
+| Modularidade | Manutenibilidade | Desenvolvedores; mantenedores | `packages/`, `excalidraw-app/`, arquivos de dependências |
+| Reusabilidade | Manutenibilidade | Integradores da biblioteca | `packages/excalidraw/`, `examples/`, interface pública |
+| Analisabilidade | Manutenibilidade | Contribuidores; desenvolvedores | Estrutura de diretórios, configurações de TypeScript e lint, documentação |
+| Modificabilidade | Manutenibilidade | Desenvolvedores; mantenedores | Código dos pacotes, commits, pull requests |
+| Testabilidade | Manutenibilidade | Equipes de qualidade; mantenedores | Arquivos de teste, configurações, `.github/workflows/` |
 | Maturidade | Confiabilidade | Mantenedores; equipes de qualidade | Histórico de issues, pull requests e pipelines de CI |
 | Disponibilidade | Confiabilidade | Usuários finais; equipes de operação | Configuração de PWA e suporte offline em `excalidraw-app/` |
 | Tolerância a falhas | Confiabilidade | Usuários finais | Código de colaboração e tratamento de erros |

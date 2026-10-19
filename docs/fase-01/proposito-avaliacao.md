@@ -35,7 +35,7 @@ Seguindo os tipos de objetivos apresentados na norma ISO/IEC 25040 e na Aula 07 
 
 Para cumprir esse objetivo, definimos as seguintes metas específicas:
 
-1. Diagnosticar a qualidade atual do Excalidraw nas características Manutenabilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023), utilizando análise estática e inspeção dos artefatos do repositório.
+1. Diagnosticar a qualidade atual do Excalidraw nas características Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023), utilizando análise estática e inspeção dos artefatos do repositório.
 2. Identificar boas práticas e pontos fortes já consolidados no código e nos fluxos de desenvolvimento.
 3. Mapear pontos fracos e dívida técnica, como componentes excessivamente complexos, acoplamento indevido ou lacunas em testes.
 4. Propor melhorias práticas para a aplicação ao final do trabalho, incluindo o desenvolvimento de um protótipo de alta fidelidade para demonstrar soluções de usabilidade, interface e fluxo para o site.

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="790" viewBox="0 0 1280 790" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Visão lógica simplificada da arquitetura do Excalidraw</title>
+  <desc id="descricao">Usuários no navegador interagem com a aplicação web excalidraw-app, que usa a biblioteca React packages/excalidraw. A biblioteca usa pacotes auxiliares de elementos, matemática e utilidades. A aplicação acessa armazenamento local e serviços externos de colaboração e armazenamento remoto. Outra aplicação React também pode consumir a biblioteca diretamente.</desc>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#34537a"/></marker>
+    <style>
+      .background{fill:#ffffff}.box{fill:#ecf3ff;stroke:#34537a;stroke-width:2.2;rx:14}.primary{fill:#dfeeff}.external{fill:#f7f8fa;stroke:#667085;stroke-width:2;stroke-dasharray:6 4;rx:14}.title{font-family:Arial,sans-serif;font-size:28px;font-weight:bold;fill:#172b4d}.head{font-family:Arial,sans-serif;font-size:19px;font-weight:bold;fill:#172b4d}.text{font-family:Arial,sans-serif;font-size:16px;fill:#334155}.note{font-family:Arial,sans-serif;font-size:15px;fill:#475569}.line{fill:none;stroke:#34537a;stroke-width:2.4;marker-end:url(#seta)}.line-dash{fill:none;stroke:#667085;stroke-width:2;stroke-dasharray:8 6;marker-end:url(#seta)}
+    </style>
+  </defs>
+  <rect class="background" x="0" y="0" width="1280" height="790"/>
+  <text class="title" x="60" y="54">Excalidraw — aplicação, biblioteca e dependências</text>
+  <text class="note" x="60" y="82">Arquitetura conceitual do commit e1b7aac (18/10/2026). Setas indicam uso/interação, não todas as importações.</text>
+  <rect class="box" x="64" y="116" width="330" height="90"/>
+  <text class="head" x="87" y="151">Usuário / navegador</text>
+  <text class="text" x="87" y="177">Canvas e interface gráfica</text>
+  <rect class="box primary" x="64" y="275" width="330" height="129"/>
+  <text class="head" x="87" y="308">Aplicação web</text>
+  <text class="text" x="87" y="337">excalidraw-app/</text>
+  <text class="text" x="87" y="363">UI, colaboração e persistência</text>
+  <path class="line" d="M228 206 V275"/>
+  <rect class="box primary" x="470" y="275" width="336" height="129"/>
+  <text class="head" x="493" y="308">Biblioteca / editor React</text>
+  <text class="text" x="493" y="337">packages/excalidraw/</text>
+  <text class="text" x="493" y="363">Canvas, cena, ações, import/export</text>
+  <path class="line" d="M394 340 H470"/>
+  <text class="note" x="401" y="323">usa</text>
+  <rect class="box" x="897" y="275" width="320" height="129"/>
+  <text class="head" x="920" y="308">Outra aplicação React</text>
+  <text class="text" x="920" y="337">Consumo via pacote npm</text>
+  <text class="text" x="920" y="363">@excalidraw/excalidraw</text>
+  <path class="line" d="M897 341 H806"/>
+  <rect class="box" x="472" y="494" width="335" height="120"/>
+  <text class="head" x="493" y="529">Pacotes compartilhados</text>
+  <text class="text" x="493" y="556">element, common, math, utils...</text>
+  <text class="text" x="493" y="580">Geometria, tipos e utilidades</text>
+  <path class="line" d="M639 404 V494"/>
+  <rect class="external" x="63" y="492" width="331" height="121"/>
+  <text class="head" x="86" y="529">Armazenamento local</text>
+  <text class="text" x="86" y="555">localStorage e IndexedDB</text>
+  <text class="text" x="86" y="580">Persistência no navegador</text>
+  <path class="line-dash" d="M170 404 V492"/>
+  <rect class="external" x="63" y="663" width="567" height="84"/>
+  <text class="head" x="86" y="695">Serviços externos da aplicação</text>
+  <text class="text" x="86" y="720">Comunicação em tempo real (Socket.IO) e Firebase</text>
+  <path class="line-dash" d="M119 404 V444 H38 V702 H63"/>
+  <text class="note" x="60" y="776">Serviços externos não equivalem a código de servidor integralmente presente no repositório público.</text>
+</svg>
