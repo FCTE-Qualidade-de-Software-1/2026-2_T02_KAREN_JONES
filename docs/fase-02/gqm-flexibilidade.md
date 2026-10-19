@@ -140,6 +140,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 5. Q3.3 — Instalabilidade
+
+**Questão:** A biblioteca e a aplicação podem ser instaladas, construídas e implantadas seguindo apenas a documentação, em ambientes diferentes?
+
+**Requisitos:** RQ-FLEX-07 (instalar, atualizar e remover a biblioteca), RQ-FLEX-08 (construção, implantação e pré-requisitos), RQ-FLEX-09 (suporte a Docker) e RQ-FLEX-10 (instruções documentadas e reproduzíveis).
+
+**Hipótese:** a biblioteca é instalada com um único comando dos gerenciadores de pacotes usuais. A imagem Docker é construída sem passos manuais adicionais, e as instruções de execução local são suficientes, desde que as versões de ferramentas exigidas sejam respeitadas.
+
+### M3.3.1 — Proporção de operações de pacote bem-sucedidas
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das operações de instalação, atualização e remoção da biblioteca que terminam sem erro nos gerenciadores de pacotes usuais. |
+| Procedimento de cálculo | Gerenciadores: npm, Yarn e pnpm. Operações: (1) instalar o pacote avaliado em um projeto React vazio; (2) atualizar da versão publicada 0.17.6 para o pacote avaliado; (3) remover o pacote. São 9 combinações. Uma operação tem sucesso se termina sem erro e o projeto continua construindo. Também é registrado o número de comandos de cada instalação. Calcular (operações com sucesso ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Pacote avaliado; versão 0.17.6 do registro npm; guia de instalação em `dev-docs/docs/@excalidraw/excalidraw/installation.mdx`. |
+| Procedimento de coleta | Execução dos comandos em ambiente limpo, registrando a saída de cada um. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100% e a instalação exigir um único comando. Cada operação que falha é um passo que o integrador precisa resolver por conta própria. |
+| Questão respondida | Q3.3 |
+| Características desejáveis | Simples. Objetiva, porque o sucesso é dado pelo código de saída dos comandos. Fácil de coletar. Válida para RQ-FLEX-07. |
+
+### M3.3.2 — Proporção de passos documentados reproduzidos sem ajuste
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual dos passos das instruções oficiais de execução local que funcionam exatamente como escritos, em ambiente limpo. |
+| Procedimento de cálculo | Numerar cada comando ou ação das seções de execução local (com Node.js e Yarn) e com Docker Compose do guia de desenvolvimento. Executar os passos na ordem. Um passo é reproduzido sem ajuste se funciona sem nenhuma ação não escrita no guia. Calcular (passos reproduzidos sem ajuste ÷ total de passos) × 100. Também é registrado cada pré-requisito necessário e não declarado. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | `README.md` e `dev-docs/docs/introduction/development.mdx`; campo `engines` do `package.json` da raiz. |
+| Procedimento de coleta | Execução em ambiente limpo, registrando cada ajuste necessário e o motivo. |
+| Critério de interpretação | Confirma a hipótese se todos os passos forem reproduzidos quando as versões exigidas de ferramentas são usadas. Cada ajuste é algo que a documentação deixou de dizer. |
+| Questão respondida | Q3.3 |
+| Características desejáveis | Objetiva, porque a regra de "sem ajuste" é fixa e cada ajuste é registrado com o motivo. Válida para RQ-FLEX-08 e RQ-FLEX-10. |
+
+### M3.3.3 — Implantação com Docker
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Resultado da construção e da execução da imagem Docker da aplicação, a partir do `Dockerfile` da versão avaliada, sem passos além dos documentados. |
+| Procedimento de cálculo | Verificações: (1) a imagem é construída sem erro; (2) o contêiner inicia; (3) a verificação de saúde (*healthcheck*) declarada no `Dockerfile` passa; (4) o editor abre no navegador e permite criar uma forma. Calcular (verificações que passam ÷ 4) × 100. Também é registrado o tempo de construção. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | `Dockerfile` e `docker-compose.yml` da raiz; instruções de Docker do guia de desenvolvimento. |
+| Procedimento de coleta | Comandos `docker build` e `docker run` em ambiente limpo com Docker instalado, registrando a saída e a versão do Docker. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada verificação que falha é um obstáculo para quem precisa implantar a aplicação em um servidor próprio. |
+| Questão respondida | Q3.3 |
+| Características desejáveis | Simples. Objetiva, porque cada verificação tem resultado binário. Fácil de coletar. Válida para RQ-FLEX-09. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
