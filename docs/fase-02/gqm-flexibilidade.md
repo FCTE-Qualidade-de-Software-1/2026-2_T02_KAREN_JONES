@@ -48,6 +48,52 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 ---
 
+## 3. Q3.1 — Adaptabilidade
+
+**Questão:** O Excalidraw pode ser usado em diferentes navegadores, dispositivos e ambientes de integração sem adaptações no código?
+
+**Requisitos:** RQ-FLEX-01 (navegadores suportados), RQ-FLEX-02 (versões de React, renderização no servidor e empacotadores), RQ-FLEX-03 (dependências que limitam ambientes) e RQ-FLEX-04 (dispositivos móveis, toque e caneta).
+
+**Hipótese:** a aplicação funciona nas versões recentes dos principais navegadores, mas não em navegadores antigos. A biblioteca aceita mais de uma versão principal de React e precisa ser carregada apenas no navegador quando usada em frameworks com renderização no servidor. O editor aceita toque e caneta.
+
+### M3.1.1 — Cobertura de usuários pelos navegadores declarados
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual dos usuários de navegadores no mundo cobertos pela lista de navegadores que a aplicação declara suportar. |
+| Procedimento de cálculo | Aplicar a consulta de navegadores declarada no campo `browserslist` (perfil `production`) do `package.json` da aplicação à base de uso global da ferramenta Browserslist. Unidade: percentual. Escala: 0 a 100. Também é registrada a lista de navegadores excluídos explicitamente. |
+| Fonte dos dados | Campo `browserslist` de `excalidraw-app/package.json` e de `packages/excalidraw/package.json`. |
+| Procedimento de coleta | Comando `npx browserslist --coverage=global "<consulta>"`, registrando a versão da ferramenta e da base de dados de uso (`caniuse-lite`), porque a base muda com o tempo. |
+| Critério de interpretação | Confirma a hipótese se a cobertura for alta e a lista excluir navegadores antigos. Quanto menor a cobertura, mais usuários ficam sem suporte declarado. |
+| Questão respondida | Q3.1 |
+| Características desejáveis | Simples. Objetiva, porque a lista é a que o próprio projeto declara e a base de uso é pública. Fácil de coletar com um comando. Robusta, porque permite comparar com outros projetos que usam a mesma ferramenta. |
+
+### M3.1.2 — Proporção de ambientes de integração com sucesso
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual das combinações de versão de React e de empacotador em que um projeto mínimo constrói e exibe o editor sem erros. |
+| Procedimento de cálculo | Combinações: React 17, 18 e 19 (as versões declaradas em `peerDependencies`) com Vite e com Next.js, este usando a importação apenas no navegador indicada na documentação. São 6 combinações. Uma combinação tem sucesso se o projeto constrói sem erros e o editor aparece e permite criar uma forma. Calcular (combinações com sucesso ÷ 6) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Pacote avaliado; campo `peerDependencies` de `packages/excalidraw/package.json`; guia de integração em `dev-docs/docs/@excalidraw/excalidraw/integration.mdx`; exemplo `examples/with-nextjs`. |
+| Procedimento de coleta | Criar um projeto mínimo para cada combinação seguindo apenas o guia de instalação e integração, instalar o pacote avaliado, construir e abrir no navegador do ambiente de teste. Registrar erros de construção e de execução. |
+| Critério de interpretação | Confirma a hipótese se as 6 combinações tiverem sucesso. Cada combinação que falha é um ambiente em que o integrador precisa adaptar o próprio sistema para usar a biblioteca. |
+| Questão respondida | Q3.1 |
+| Características desejáveis | Objetiva, porque o critério de sucesso é definido antes do teste. Válida, porque testa a integração de fato, e não só a declaração de compatibilidade. Robusta, porque a matriz pode crescer com novas versões. |
+
+### M3.1.3 — Proporção de ações de edição que funcionam por toque e caneta
+
+| Campo | Descrição |
+| :--- | :--- |
+| Definição | Percentual de uma lista fixa de ações de edição que podem ser feitas em um dispositivo com tela de toque, sem mouse nem teclado físico. |
+| Procedimento de cálculo | Ações: (1) criar uma forma; (2) desenhar à mão livre; (3) selecionar um elemento; (4) mover um elemento; (5) redimensionar um elemento; (6) aproximar e afastar com pinça; (7) deslocar a tela com dois dedos; (8) escrever texto com o teclado virtual; (9) desfazer; (10) abrir o menu principal. Calcular (ações que funcionam ÷ 10) × 100, separadamente para toque com o dedo e para caneta, quando houver caneta disponível. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web em um *tablet* ou celular com navegador de versão fixa, definido no plano de avaliação; tratamento de eventos de toque e caneta em `packages/excalidraw/components/App.tsx`. |
+| Procedimento de coleta | Teste manual roteirizado no dispositivo, registrando cada ação como funciona ou não funciona, com gravação de tela. |
+| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada ação que falha é algo que o usuário de dispositivo móvel não consegue fazer. |
+| Questão respondida | Q3.1 |
+| Características desejáveis | Simples. Objetiva, porque cada ação tem resultado binário com evidência gravada. Válida para RQ-FLEX-04. |
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
