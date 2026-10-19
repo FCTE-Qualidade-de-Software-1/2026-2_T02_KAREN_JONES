@@ -228,9 +228,27 @@ Todos os 11 requisitos de Confiabilidade da Fase 01 são atendidos por pelo meno
 
 ---
 
+## 8. Verificação das métricas
+
+A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo (AULA 08, p. 42). A equipe fez essa verificação no código da versão avaliada e no repositório oficial, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+
+| Métrica | O que foi verificado |
+| :--- | :--- |
+| M2.1.1 | O fluxo `semantic-pr-title.yml` exige o tipo no título de toda contribuição, e a busca da API do GitHub retorna as contribuições integradas na janela, filtráveis pelo tipo `fix`. Foi verificado também que nenhum relato aberto na janela recebeu o rótulo `bug`, o que confirmou a decisão de não contar defeitos por rótulo. |
+| M2.1.2 e M2.1.3 | A API GraphQL do GitHub retorna, para cada contribuição, os relatos que ela encerra e as revisões aprovadas. |
+| M2.2.1 | A aplicação registra um *service worker* (plugin `vite-plugin-pwa` em `excalidraw-app/vite.config.mts`) com regras de cache para os arquivos da aplicação e para as fontes. O teste depende da execução da aplicação no ambiente de teste. |
+| M2.2.2 | O registro de rede e o bloqueio de requisições são recursos padrão das ferramentas de desenvolvedor dos navegadores. |
+| M2.3.1 | O código de abertura de arquivos (`packages/excalidraw/data/blob.ts`) lança erros para arquivos inválidos, e a interface tem mensagens para esses casos, como "Couldn't load invalid file". |
+| M2.3.2 | O código de colaboração (`excalidraw-app/collab/Collab.tsx`) acompanha o estado de conexão do navegador, e a configuração de produção aponta para um servidor de colaboração público. |
+| M2.4.1 | O salvamento local está em `excalidraw-app/data/LocalData.ts`, com intervalo de 300 ms definido em `excalidraw-app/app_constants.ts`. |
+| M2.4.2 | As marcações das versões v0.15.0, v0.16.4, v0.17.6 e v0.18.0 existem no repositório oficial, e os arquivos de exemplo com desenho incorporado estão em `packages/excalidraw/tests/fixtures/`. |
+| M2.4.3 | O histórico de edição está implementado em `packages/excalidraw/history.ts` e tem testes próprios (`history.test.tsx`). |
+
+---
+
 ## Referências
 
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34 e 38.
+- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 42.
 - Especificação do trabalho final da disciplina de Qualidade de Software 1 (2026-2 Trabalho final completo v1). Página 1, premissa 2.
 - ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
 - Excalidraw. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0.
