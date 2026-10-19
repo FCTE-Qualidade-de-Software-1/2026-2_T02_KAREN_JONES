@@ -38,6 +38,7 @@ Os documentos de cada item acima estão nesta seção e estruturam o relatório 
 
 * Os objetivos e o público mapeados em [Propósito da avaliação](./proposito-avaliacao.md) e [Partes interessadas](./interessados.md) orientam a [Priorização das Características](./priorizacao-caracteristicas.md) e o [Modelo de qualidade](./modelo-de-qualidade.md).
 * A estrutura técnica apresentada em [Tipo de produto e arquitetura](./tipo-produto.md) e [Descrição e arquitetura do produto](./descricao-produto.md) define a delimitação em [Escopo e objetos de avaliação](./escopo-avaliacao.md) e os critérios em [Requisitos de avaliação](./requisitos-avaliacao.md).
+* Os requisitos de avaliação desta fase alimentam a [Fase 02 — Especificação da Avaliação](../fase-02/visao-geral.md), em que cada característica vira um objetivo de medição com questões, hipóteses e métricas.
 * As implicações sociais do projeto são abordadas em [ODS e a Avaliação](./ods.md).
 
 ---
@@ -47,4 +48,5 @@ Os documentos de cada item acima estão nesta seção e estruturam o relatório 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Estruturação da visão geral da Fase 1 e links de navegação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.2 | 19/10/2026 | Referência cruzada para a Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |

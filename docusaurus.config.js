@@ -100,6 +100,10 @@ const config = {
                 label: 'Fase 01 — Requisitos',
                 to: '/docs/fase-01/visao-geral',
               },
+              {
+                label: 'Fase 02 — Especificação',
+                to: '/docs/fase-02/visao-geral',
+              },
             ],
           },
           {
