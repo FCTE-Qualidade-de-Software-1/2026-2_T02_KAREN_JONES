@@ -228,11 +228,20 @@ Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de me
 
 ---
 
+## 8. Limitações
+
+- **Calibração:** as faixas do modelo foram definidas pela experiência dos autores com sistemas industriais (Heitlager; Kuipers; Visser, 2007, p. 6). Depois, o modelo passou a ser recalibrado todo ano com uma base de sistemas reais, de forma que 5%, 30%, 30%, 30% e 5% dos sistemas fiquem em cada nível (Baggen; Schill; Visser, 2010, p. 2). A equipe não tem acesso a essa base e usa as faixas publicadas em 2007, sem recalibrar para projetos em TypeScript.
+- **Reaproveitamento de faixas:** as faixas de cobertura e de duplicação foram publicadas para essas duas propriedades. Usá-las para outras proporções (seção 2) é uma decisão da equipe.
+- **Faixas da equipe:** as métricas M1.4.1, M2.1.1, M2.1.2, M2.2.2, M3.2.3 e M3.4.1 têm faixas definidas pela equipe, com as justificativas das seções 3.2, 4.1 e 5.1.
+- **Norma de origem:** o modelo foi feito para a ISO/IEC 9126. A equipe aplica a mesma escala e a mesma agregação às subcaracterísticas da ISO/IEC 25010 escolhidas na Fase 01.
+
+---
+
 ## Referências
 
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 34.
 - AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 4, 16 e 17.
-- BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Página 3. Disponível em: https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf. Versão ampliada: BAGGEN, R. et al. *Software Quality Journal*, v. 20, p. 287–307, 2012.
+- BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Páginas 2 e 3. Disponível em: https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf. Versão ampliada: BAGGEN, R. et al. *Software Quality Journal*, v. 20, p. 287–307, 2012.
 - GOOGLE. Measure performance with the RAIL model. *web.dev*, atualizado em 10/06/2020. Seções "Load" e "Animation". Disponível em: https://web.dev/articles/rail.
 - HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30–39. Páginas 5 a 8 da versão dos autores, disponível em: https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf.
 - MARTIN, R. C. Stability. *The C++ Report*, 1997. Páginas 8 e 10. Disponível em: https://objectmentor.com/resources/articles/stability.pdf.
