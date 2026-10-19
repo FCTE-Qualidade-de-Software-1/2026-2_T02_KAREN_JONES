@@ -258,10 +258,10 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 | Campo | Descrição |
 | :--- | :--- |
-| Definição | Percentual das contribuições integradas na janela histórica em que a verificação automática de testes foi executada antes da integração. |
-| Procedimento de cálculo | (contribuições com execução do fluxo de testes registrada ÷ contribuições integradas na janela) × 100. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Registros de execução das verificações (*check runs*) de cada contribuição no GitHub; fluxos de `.github/workflows/` disparados por `pull_request`. |
-| Procedimento de coleta | API do GitHub (`gh api`), consultando as verificações registradas no último commit de cada contribuição e procurando a execução do fluxo de testes. |
+| Definição | Percentual das contribuições integradas na janela histórica em que a etapa de testes automatizados foi efetivamente executada e terminou antes da integração. |
+| Procedimento de cálculo | Uma contribuição conta como verificada se, em alguma execução do fluxo `test-coverage-pr.yml` sobre o último commit da contribuição, o passo `Test Coverage` tiver sido executado (conclusão `success` ou `failure`, e não `skipped`, `cancelled` ou ausente) e tiver terminado antes do horário de integração (`merged_at`). Contribuições sem registros suficientes para essa decisão (execução não encontrada ou passos indisponíveis) são contadas à parte e ficam fora do denominador. Cálculo: (contribuições verificadas ÷ contribuições integradas na janela com evidência suficiente) × 100. O número de contribuições sem evidência é informado junto com o percentual. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Execuções do fluxo `test-coverage-pr.yml` de cada contribuição no GitHub, com os passos de cada job; horário de integração de cada contribuição. |
+| Procedimento de coleta | API do GitHub (`gh api`): para cada contribuição, as execuções do fluxo sobre o último commit (`actions/workflows/test-coverage-pr.yml/runs?head_sha=...`), os passos de cada job, com conclusão e horário de término (`actions/runs/{id}/jobs`), e o campo `merged_at` da contribuição (`pulls/{número}`). Um script aplica a regra do procedimento de cálculo. A existência de um *check* no commit não basta, porque a execução pode terminar depois da integração ou falhar na instalação das dependências, antes do passo de testes. |
 | Critério de interpretação | Confirma a hipótese se o valor for 100% ou próximo disso. Contribuições sem testes executados foram integradas sem verificação automática de comportamento. |
 | Questão respondida | Q1.5 |
 | Características desejáveis | Simples. Objetiva, porque usa os registros do próprio GitHub, e não a configuração declarada. Fácil de coletar automaticamente. Válida para RQ-MAN-13. |
@@ -302,7 +302,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | M1.2.2 | O tipo `ExcalidrawProps` está em `packages/excalidraw/types.ts`, e a documentação das propriedades está em `dev-docs/docs/@excalidraw/excalidraw/api/props/`. |
 | M1.3.1 | O ESLint 8.57.0 com `@typescript-eslint/parser` analisou com sucesso um arquivo `.tsx` do editor e informou a complexidade de cada função. A ferramenta lizard foi descartada porque não reconheceu a maior parte das funções em arquivos `.tsx`. |
 | M1.3.2 | `README.md`, `CONTRIBUTING.md` (que remete à documentação publicada) e a pasta `dev-docs/docs/` estão na versão avaliada. |
-| M1.3.3 e M1.5.3 | O fluxo `lint.yml` é disparado por `pull_request` e executa os scripts de formatação, lint e tipos. O fluxo `test-coverage-pr.yml` é disparado por `pull_request` e executa os testes. A API do GitHub retorna as verificações registradas em cada commit. |
+| M1.3.3 e M1.5.3 | O fluxo `lint.yml` é disparado por `pull_request` e executa os scripts de formatação, lint e tipos. O fluxo `test-coverage-pr.yml` é disparado por `pull_request` e executa os testes no passo `Test Coverage`, depois da instalação das dependências. A API do GitHub retorna, para cada execução do fluxo, os passos do job com conclusão e horário de término. |
 | M1.4.1 e M1.4.3 | A API do GitHub retorna as contribuições integradas e a lista de arquivos alterados por cada uma. |
 | M1.4.2 | O cloc 1.86 contou as linhas de código de arquivos `.ts` da versão avaliada, separando linhas em branco e comentários. |
 | M1.5.1 | O script `test:coverage` e a configuração de cobertura existem na versão avaliada. A execução depende da instalação das dependências do projeto, que será feita no ambiente definido no plano de avaliação. |
