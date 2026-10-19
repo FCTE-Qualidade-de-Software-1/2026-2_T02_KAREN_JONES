@@ -112,6 +112,35 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 ---
 
+## 4. Níveis das métricas de Confiabilidade (G2)
+
+Os códigos das métricas são os das fichas do [GQM de Confiabilidade](./gqm-confiabilidade.md).
+
+| Métrica | Valor pontuado | `++` | `+` | `o` | `-` | `--` | Origem das faixas |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| M2.1.1 | Percentual de correções entre as contribuições integradas | 0 a 20% | 20 a 40% | 40 a 60% | 60 a 80% | acima de 80% | Equipe (ver abaixo) |
+| M2.1.2 | Mediana de dias entre o relato e a correção | até 7 | 8 a 14 | 15 a 30 | 31 a 90 | mais de 90 | Equipe (ver abaixo) |
+| M2.1.3 | Percentual de contribuições revisadas por outra pessoa | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável (seção 2.1) |
+| M2.2.1 | Funções que funcionam sem conexão (de 10) | 10 | 8 ou 9 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável (seção 2.1) |
+| M2.2.2 | Domínios externos indispensáveis e total de domínios externos | nenhum domínio externo | nenhum indispensável; 1 a 3 externos | nenhum indispensável; 4 ou mais externos | 1 indispensável | 2 ou mais indispensáveis | Equipe (ver abaixo) |
+| M2.3.1 | Arquivos inválidos tratados (de 9) | 9 | 8 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável (seção 2.1) |
+| M2.3.2 | Verificações que passam após a falha da colaboração (de 5) | 5 | 4 | 3 | 1 ou 2 | 0 | Proporção desejável (seção 2.1) |
+| M2.4.1 | Cenários de fechamento com restauração (de 4) | 4 | — | 3 | 1 ou 2 | 0 | Proporção desejável (seção 2.1) |
+| M2.4.2 | Arquivos reabertos sem perda (de 7) | 7 | 6 | 5 | 2 a 4 | 0 ou 1 | Proporção desejável (seção 2.1) |
+| M2.4.3 | Tipos de ação desfeitos e refeitos (de 10) | 10 | 8 ou 9 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável (seção 2.1) |
+
+O conjunto de M2.4.2 tem 7 arquivos: a cena de referência salva pela versão avaliada e pelas versões v0.15.0, v0.16.4, v0.17.6 e v0.18.0, e as duas imagens com desenho incorporado.
+
+### 4.1 Justificativas específicas
+
+Esta seção explica só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da seção 2. As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
+
+- **M2.1.1:** menos correções significam menos falhas encontradas no período, por isso o valor menor é o melhor. Não foi encontrada referência publicada com a proporção esperada de correções. As faixas de proporção indesejável não servem aqui, porque foram feitas para algo raro, como a duplicação de código: qualquer projeto ativo teria mais de 20% de correções e ficaria no nível `--`. Por isso, a equipe divide a escala de 0 a 100% em cinco faixas de mesma largura, sem escolher limites próprios.
+- **M2.1.2:** não foi encontrada referência publicada com faixas para o tempo de correção. A equipe usa unidades de calendário que um usuário percebe: uma semana, duas semanas, um mês e três meses.
+- **M2.2.2:** um domínio indispensável é um serviço externo cuja queda impede o uso do editor, por isso basta um para o nível `-`. Domínios externos que não são indispensáveis não impedem o uso, mas ainda são dependências de terceiros, e por isso diferenciam os níveis `++`, `+` e `o`. Os limites são da equipe.
+
+---
+
 ## Referências
 
 - AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 4, 16 e 17.
