@@ -1,11 +1,10 @@
 ---
-sidebar_position: 6
+sidebar_position: 9
 title: Requisitos de Avaliação
 description: Requisitos do Excalidraw por característica e subcaracterística da ISO/IEC 25010:2023
 ---
 
 # Requisitos de Avaliação do Excalidraw
-
 
 ## 1. Introdução e papel desta seção
 
@@ -43,12 +42,12 @@ Requisitos ligados à Manutenibilidade, organizados pelas subcaracterísticas Mo
 
 ## 3. Requisitos de Confiabilidade
 
-Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Ausência de falhas, Disponibilidade, Tolerância a falhas e Recuperabilidade.
+Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Maturidade, Disponibilidade, Tolerância a falhas e Recuperabilidade.
 
 | ID | Requisito (pergunta a responder) | Subcaracterística |
 | :--- | :--- | :--- |
-| **RQ-CONF-01** | Verificações automáticas (tipos, lint e testes) e revisão de código atuam antes da integração das alterações, reduzindo falhas e regressões? | Ausência de falhas |
-| **RQ-CONF-02** | Os defeitos relatados são registrados, classificados e tratados de forma organizada? | Ausência de falhas |
+| **RQ-CONF-01** | Verificações automáticas (tipos, lint e testes) e revisão de código atuam antes da integração das alterações, reduzindo falhas e regressões? | Maturidade |
+| **RQ-CONF-02** | Os defeitos relatados são registrados, classificados e tratados de forma organizada? | Maturidade |
 | **RQ-CONF-03** | O editor continua utilizável sem conexão após o primeiro carregamento (PWA)? | Disponibilidade |
 | **RQ-CONF-04** | O editor local funciona sem depender de sessão colaborativa ou de recursos carregados remotamente em tempo de execução? | Disponibilidade |
 | **RQ-CONF-05** | O editor mantém as funcionalidades essenciais diante de problemas de conectividade, com falhas de serviços externos isoladas das funcionalidades locais? | Tolerância a falhas |
@@ -84,6 +83,7 @@ Requisitos ligados à Flexibilidade (denominada Portabilidade na edição de 201
 
 ## Controle de Versão
 
-| Versão | Data | Descrição | Autora |
-| :---: | :---: | :--- | :--- |
-| `1.0` | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| `1.0` | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| `1.1` | 18/10/2026 | Harmonização da terminologia Maturidade e padronização do frontmatter | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |

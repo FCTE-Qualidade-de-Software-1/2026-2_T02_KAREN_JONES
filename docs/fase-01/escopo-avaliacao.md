@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 8
 title: Escopo, Profundidade e Objetos de Avaliação
 description: Delimitação dos objetos, da profundidade e dos limites de validade da avaliação do Excalidraw
 ---

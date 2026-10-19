@@ -1,8 +1,8 @@
 // @ts-check
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const siteVersion = '1.0';
-const buildDate = new Date().toLocaleDateString('pt-BR', {timeZone: 'America/Sao_Paulo'});
+const buildDate = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 const repoUrl = 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES';
 
 /** @type {import('@docusaurus/types').Config} */

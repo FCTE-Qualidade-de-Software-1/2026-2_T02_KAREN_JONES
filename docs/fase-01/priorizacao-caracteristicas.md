@@ -1,3 +1,9 @@
+---
+sidebar_position: 6
+title: Priorização das Características
+description: Método em duas etapas (ênfase e matriz impacto × risco) para priorização e seleção das características da ISO/IEC 25010:2023
+---
+
 # Priorização das Características
 
 ## Objetivo e Método

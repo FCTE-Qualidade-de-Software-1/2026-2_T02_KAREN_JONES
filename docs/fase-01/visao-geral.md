@@ -14,19 +14,23 @@ Essa primeira fase existe exatamente para isso. Não vamos coletar métricas ain
 
 ## O que vamos definir aqui
 
-A Fase 01 está organizada em cinco entregas:
+A Fase 01 está organizada nas seguintes entregas e documentos de referência:
 
 1. **[Propósito da avaliação](./proposito-avaliacao.md)** — por que escolhemos o Excalidraw, quem solicita a avaliação, quem se beneficia dos resultados e como eles serão usados.
-2. **Escopo do produto** — [tipo de produto e arquitetura](./tipo-produto.md) e [escopo, profundidade e objetos de avaliação](./escopo-avaliacao.md), incluindo os limites de validade dos resultados.
-3. **[Partes interessadas](./interessados.md)** — quem são as pessoas afetadas pelos resultados: usuários, desenvolvedores, mantenedores, contribuidores externos, quem integra a biblioteca e a própria equipe avaliadora.
-4. **[Modelo de qualidade](./modelo-de-qualidade.md)** — quais características e subcaracterísticas da ISO/IEC 25010 vamos usar como guia: Manutenibilidade, Confiabilidade e Flexibilidade.
-5. **[ODS e a Avaliação](./ods.md)** — relação do software com os Objetivos de Desenvolvimento Sustentável da Agenda 2030 (ODS 4, 9 e 10).
+2. **[Tipo de produto e arquitetura](./tipo-produto.md)** — classificação segundo Pressman e IEEE 1062 (COTS/MOTS/FD), roteiro de caracterização e visão lógica dos componentes.
+3. **[Descrição e arquitetura do produto](./descricao-produto.md)** — caracterização técnica detalhada, organização em monorepo, diagrama de contexto/arquitetura, interfaces externas e implicações para a avaliação.
+4. **[Partes interessadas](./interessados.md)** — quem são as pessoas afetadas pelos resultados: usuários, desenvolvedores, mantenedores, contribuidores externos, integradores da biblioteca e equipe avaliadora, com matriz de prioridades e critérios de sucesso.
+5. **[Priorização das características](./priorizacao-caracteristicas.md)** — método em duas etapas (ênfase e matriz impacto × risco) para a seleção formal das características da ISO/IEC 25010:2023.
+6. **[Modelo de qualidade](./modelo-de-qualidade.md)** — características e subcaracterísticas da ISO/IEC 25010:2023 selecionadas: Manutenabilidade, Confiabilidade e Flexibilidade, com justificativas, adaptações e limites de validade.
+7. **[Escopo e objetos de avaliação](./escopo-avaliacao.md)** — delimitação dos objetos concretos (O1 a O6), profundidade e fronteiras operacionais da avaliação.
+8. **[Requisitos de avaliação](./requisitos-avaliacao.md)** — catálogo de requisitos técnicos e perguntas a responder formuladas por característica e subcaracterística.
+9. **[ODS e a Avaliação](./ods.md)** — relação do software com os Objetivos de Desenvolvimento Sustentável da Agenda 2030 (ODS 4, 9 e 10).
 
 ---
 
 ## Documentos desta fase
 
-Os documentos de cada item acima estão nesta seção e serão atualizados conforme o grupo os finaliza. Os [requisitos de avaliação](./requisitos-avaliacao.md) detalham as perguntas rastreáveis para as etapas seguintes.
+Os documentos de cada item acima estão nesta seção e estruturam o relatório de requisitos de avaliação da Fase 01. Os [requisitos de avaliação](./requisitos-avaliacao.md) detalham as perguntas rastreáveis para as etapas seguintes.
 
 ---
 

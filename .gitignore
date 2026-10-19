@@ -4,6 +4,11 @@
 # Production
 /build
 /artigo/*.pdf
+/artigo/*.aux
+/artigo/*.log
+/artigo/*.out
+/artigo/*.toc
+/artigo/*.synctex*
 
 # Generated files
 .docusaurus

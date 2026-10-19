@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Tipo de Produto e Arquitetura do Excalidraw
 description: Classificação do produto e descrição estruturada da arquitetura, interfaces, dependências e restrições do Excalidraw
 ---
