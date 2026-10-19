@@ -56,7 +56,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-MAN-01 (limites entre aplicação e biblioteca), RQ-MAN-02 (direção das dependências e ausência de ciclos) e RQ-MAN-03 (coesão e dependências desnecessárias).
 
-**Hipótese:** não há ciclos de dependência em tempo de execução entre os pacotes, e nenhum pacote importa código da aplicação web. A biblioteca `excalidraw` é o pacote mais dependente dos demais, e os pacotes de base são os mais estáveis.
+**Hipótese:** não há ciclos de dependência em tempo de execução entre os pacotes, e nenhum pacote importa código da aplicação web. A biblioteca `excalidraw` é o pacote que mais recebe dependências dos demais.
 
 ### M1.1.1 — Ciclos de dependência entre pacotes
 
@@ -82,15 +82,15 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Questão respondida | Q1.1 |
 | Características desejáveis | Simples e objetiva, porque a direção esperada vem de uma regra escrita pelo projeto, e não de opinião da equipe. Fácil de coletar. Válida para os limites entre aplicação, biblioteca e pacotes de base (RQ-MAN-01). |
 
-### M1.1.3 — Instabilidade de cada pacote
+### M1.1.3 — Acoplamento e instabilidade de cada pacote
 
 | Campo | Descrição |
 | :--- | :--- |
-| Definição | Instabilidade *I* de cada pacote (Martin, 2002): a proporção das dependências do pacote que apontam para fora dele. Um pacote estável (I perto de 0) é usado por muitos e usa poucos; um instável (I perto de 1) usa muitos e é usado por poucos. |
-| Procedimento de cálculo | *I* = Ce / (Ca + Ce), em que Ce (acoplamento eferente) é o número de outros pacotes que o pacote importa e Ca (acoplamento aferente) é o número de outros pacotes que o importam. Consideram-se só importações de valor no código de produção. Unidade: adimensional. Escala: 0 a 1. |
+| Definição | Acoplamento aferente (Ca), acoplamento eferente (Ce) e instabilidade *I* de cada pacote (Martin, 2002). Ca é o número de outros pacotes que importam o pacote; Ce é o número de outros pacotes que ele importa. *I* é a proporção das dependências do pacote que apontam para fora dele: um pacote estável (I perto de 0) é usado por muitos e usa poucos; um instável (I perto de 1) usa muitos e é usado por poucos. |
+| Procedimento de cálculo | Ca e Ce por contagem de pacotes distintos; *I* = Ce / (Ca + Ce). Consideram-se só importações de valor no código de produção. Unidade: pacotes (Ca e Ce) e adimensional (*I*). Escala: absoluta (Ca e Ce) e 0 a 1 (*I*). |
 | Fonte dos dados | Código de produção de todos os pacotes. |
-| Procedimento de coleta | O mesmo grafo de M1.1.1, contando as arestas distintas entre pacotes. |
-| Critério de interpretação | Confirma a hipótese se os pacotes de base tiverem *I* menor que a biblioteca e a biblioteca tiver *I* menor que a aplicação web. Um pacote de base com *I* alto depende de muitos outros e é mais difícil de reutilizar. |
+| Procedimento de coleta | O mesmo grafo de M1.1.1, agregado por pacote, contando as arestas distintas entre pacotes. |
+| Critério de interpretação | Confirma a hipótese se a biblioteca tiver o maior Ca entre os pacotes. *I* é registrado para comparar os pacotes entre si: um pacote de base com *I* alto depende de muitos outros e é mais difícil de reutilizar. |
 | Questão respondida | Q1.1 |
 | Características desejáveis | Simples (uma razão). Objetiva e robusta, porque permite comparar pacotes entre si e com outras versões. Válida, porque é uma medida consagrada de acoplamento entre módulos. Independente da linguagem. |
 
