@@ -42,6 +42,8 @@ As [Figuras 1](#2-g1-manutenibilidade), [2](#3-g2-confiabilidade) e [3](#4-g3-fl
 - **Setas à direita:** o sentido da definição (para baixo) e o da interpretação (para cima).
 - **Cores:** azul para G1, verde para G2 e laranja para G3, as mesmas do [modelo de qualidade](../fase-01/modelo-de-qualidade.md#representação-gráfica-do-modelo) da Fase 01.
 
+Os três diagramas foram desenhados no próprio Excalidraw, o produto avaliado. Para editar um deles, abra o arquivo correspondente ([`gqm-g1.excalidraw`](../images/gqm-g1.excalidraw), [`gqm-g2.excalidraw`](../images/gqm-g2.excalidraw) ou [`gqm-g3.excalidraw`](../images/gqm-g3.excalidraw)) em [excalidraw.com](https://excalidraw.com/) e exporte o PNG de novo com a opção de incluir a cena ativada. O PNG publicado também guarda a cena, então pode ser aberto direto no editor.
+
 Os códigos seguem a posição na hierarquia. Q1.3 é a terceira questão de G1, e M1.3.2 é a segunda métrica de Q1.3. A Tabela 2 resume o tamanho de cada objetivo.
 
 | Objetivo | Característica | Questões | Métricas | Detalhamento |
@@ -59,7 +61,7 @@ Os códigos seguem a posição na hierarquia. Q1.3 é a terceira questão de G1,
 
 **Objetivo:** analisar o código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), seus testes, sua documentação para desenvolvedores e o histórico público de alterações, para o propósito de entender, com respeito à Manutenibilidade, do ponto de vista de mantenedores e contribuidores do projeto ([G1 nos objetivos de medição](./estrutura-gqm.md#g1--manutenibilidade)).
 
-[![Diagrama em três níveis. Nível conceitual: objetivo G1, entender a manutenibilidade do código-fonte, dos testes e do histórico do ponto de vista de mantenedores e contribuidores do projeto. Nível operacional: 5 questões, uma por subcaracterística. Nível quantitativo: 14 métricas. Q1.1 (Modularidade) é respondida por M1.1.1, M1.1.2, M1.1.3. Q1.2 (Reusabilidade) é respondida por M1.2.1, M1.2.2. Q1.3 (Analisabilidade) é respondida por M1.3.1, M1.3.2, M1.3.3. Q1.4 (Modificabilidade) é respondida por M1.4.1, M1.4.2, M1.4.3. Q1.5 (Testabilidade) é respondida por M1.5.1, M1.5.2, M1.5.3.](../images/gqm-g1.svg)](../images/gqm-g1.svg)
+[![Diagrama em três níveis. Nível conceitual: objetivo G1, entender a manutenibilidade do código-fonte, dos testes e do histórico do ponto de vista de mantenedores e contribuidores do projeto. Nível operacional: 5 questões, uma por subcaracterística. Nível quantitativo: 14 métricas. Q1.1 (Modularidade) é respondida por M1.1.1, M1.1.2, M1.1.3. Q1.2 (Reusabilidade) é respondida por M1.2.1, M1.2.2. Q1.3 (Analisabilidade) é respondida por M1.3.1, M1.3.2, M1.3.3. Q1.4 (Modificabilidade) é respondida por M1.4.1, M1.4.2, M1.4.3. Q1.5 (Testabilidade) é respondida por M1.5.1, M1.5.2, M1.5.3.](../images/gqm-g1.png)](../images/gqm-g1.png)
 
 *Figura 1: Hierarquia GQM do objetivo G1 (Manutenibilidade), com 5 questões e 14 métricas. Clique na figura para abri-la em tamanho real.*
 
@@ -81,7 +83,7 @@ A [Figura 1](#2-g1-manutenibilidade) mostra a hierarquia completa de G1. A Tabel
 
 **Objetivo:** analisar o editor, a aplicação web e os mecanismos de colaboração e de salvamento no navegador, além do histórico público de defeitos relatados, para o propósito de entender, com respeito à Confiabilidade, do ponto de vista de usuários finais ([G2 nos objetivos de medição](./estrutura-gqm.md#g2--confiabilidade)).
 
-[![Diagrama em três níveis. Nível conceitual: objetivo G2, entender a confiabilidade do editor, da colaboração e do salvamento do ponto de vista de usuários finais. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 10 métricas. Q2.1 (Ausência de falhas) é respondida por M2.1.1, M2.1.2, M2.1.3. Q2.2 (Disponibilidade) é respondida por M2.2.1, M2.2.2. Q2.3 (Tolerância a falhas) é respondida por M2.3.1, M2.3.2. Q2.4 (Recuperabilidade) é respondida por M2.4.1, M2.4.2, M2.4.3.](../images/gqm-g2.svg)](../images/gqm-g2.svg)
+[![Diagrama em três níveis. Nível conceitual: objetivo G2, entender a confiabilidade do editor, da colaboração e do salvamento do ponto de vista de usuários finais. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 10 métricas. Q2.1 (Ausência de falhas) é respondida por M2.1.1, M2.1.2, M2.1.3. Q2.2 (Disponibilidade) é respondida por M2.2.1, M2.2.2. Q2.3 (Tolerância a falhas) é respondida por M2.3.1, M2.3.2. Q2.4 (Recuperabilidade) é respondida por M2.4.1, M2.4.2, M2.4.3.](../images/gqm-g2.png)](../images/gqm-g2.png)
 
 *Figura 2: Hierarquia GQM do objetivo G2 (Confiabilidade), com 4 questões e 10 métricas. Clique na figura para abri-la em tamanho real.*
 
@@ -102,7 +104,7 @@ A [Figura 2](#3-g2-confiabilidade) mostra a hierarquia completa de G2, e a Tabel
 
 **Objetivo:** analisar a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação, para o propósito de entender, com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca em seus sistemas e de equipes de implantação e operação ([G3 nos objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-portabilidade)).
 
-[![Diagrama em três níveis. Nível conceitual: objetivo G3, entender a flexibilidade da biblioteca e da aplicação web do ponto de vista de integradores e equipes de implantação e operação. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 12 métricas. Q3.1 (Adaptabilidade) é respondida por M3.1.1, M3.1.2, M3.1.3. Q3.2 (Escalabilidade) é respondida por M3.2.1, M3.2.2, M3.2.3. Q3.3 (Instalabilidade) é respondida por M3.3.1, M3.3.2, M3.3.3. Q3.4 (Substituibilidade) é respondida por M3.4.1, M3.4.2, M3.4.3.](../images/gqm-g3.svg)](../images/gqm-g3.svg)
+[![Diagrama em três níveis. Nível conceitual: objetivo G3, entender a flexibilidade da biblioteca e da aplicação web do ponto de vista de integradores e equipes de implantação e operação. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 12 métricas. Q3.1 (Adaptabilidade) é respondida por M3.1.1, M3.1.2, M3.1.3. Q3.2 (Escalabilidade) é respondida por M3.2.1, M3.2.2, M3.2.3. Q3.3 (Instalabilidade) é respondida por M3.3.1, M3.3.2, M3.3.3. Q3.4 (Substituibilidade) é respondida por M3.4.1, M3.4.2, M3.4.3.](../images/gqm-g3.png)](../images/gqm-g3.png)
 
 *Figura 3: Hierarquia GQM do objetivo G3 (Flexibilidade), com 4 questões e 12 métricas. Clique na figura para abri-la em tamanho real.*
 
@@ -189,3 +191,4 @@ Os planos devem ser avaliados com os membros da equipe e aprovados (AULA 08, p. 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação do Plano GQM, com os diagramas da hierarquia de G1, G2 e G3, as diretrizes de interpretação e a rastreabilidade com a Fase 01 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 20/10/2026 | Diagramas de G1, G2 e G3 refeitos no Excalidraw e publicados em PNG, com os arquivos editáveis `.excalidraw` | [Christopher Paraizo](https://github.com/wChrstphr) | |

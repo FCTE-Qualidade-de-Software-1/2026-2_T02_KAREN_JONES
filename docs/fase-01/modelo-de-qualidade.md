@@ -96,9 +96,9 @@ Na edição de 2023, **Flexibilidade** substitui o que a edição anterior chama
 ---
 ## Representação gráfica do modelo
 
-![Modelo de qualidade adotado: três características da ISO/IEC 25010:2023, suas treze subcaracterísticas e os interessados principais de cada uma](../images/modelo-qualidade.svg)
+![Modelo de qualidade adotado: três características da ISO/IEC 25010:2023, suas treze subcaracterísticas e os interessados principais de cada uma](../images/modelo-qualidade.png)
 
-*Figura 1 – Modelo de qualidade adotado para o Excalidraw (ISO/IEC 25010:2023). Elaborado por: Letícia Santos.*
+*Figura 1 – Modelo de qualidade adotado para o Excalidraw (ISO/IEC 25010:2023). Elaborado por: Letícia Santos. Redesenhado no Excalidraw por Christopher Paraizo ([arquivo editável](../images/modelo-qualidade.excalidraw)).*
 
 Cada característica selecionada se desdobra em suas subcaracterísticas, e abaixo do nome de cada subcaracterística aparecem os interessados principais mapeados na Fase 01. As seis características da norma que ficaram fora do escopo aparecem em cinza, para tornar a seleção visível.
 
@@ -171,3 +171,4 @@ A tabela a seguir apresenta, para cada subcaracterística, os grupos de interess
 | 0.1 | 15/10/2026 | Criação do documento | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 0.2 | 18/10/2026 | Elaboração do diagrama modelo de qualidade e tópico adaptações ao contexto | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 0.3 | 18/10/2026 | Inclusão de método formal de priorização, análise de trade-offs e limites de validade | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 0.4 | 20/10/2026 | Diagrama do modelo de qualidade redesenhado no Excalidraw e publicado em PNG, com o arquivo editável | [Christopher Paraizo](https://github.com/wChrstphr) | |
