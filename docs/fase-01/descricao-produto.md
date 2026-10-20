@@ -58,9 +58,9 @@ O Excalidraw opera primordialmente no lado do cliente, comunicando-se com servi�
 
 A Figura 1 apresenta o diagrama de contexto e arquitetura do Excalidraw, evidenciando as fronteiras entre os pacotes do monorepo, os perfis de usuários externos e as interfaces com o ambiente do navegador e serviços de rede.
 
-![Diagrama de contexto e arquitetura do Excalidraw](../images/arquitetura-excalidraw.svg)
+![Diagrama de contexto e arquitetura do Excalidraw](../images/arquitetura-excalidraw.png)
 
-*Figura 1 – Diagrama de contexto e arquitetura do Excalidraw. Elaborado por: Gabriel Monteiro.*
+*Figura 1 – Diagrama de contexto e arquitetura do Excalidraw. Elaborado por: Gabriel Monteiro. Redesenhado no Excalidraw por Christopher Paraizo ([arquivo editável](../images/arquitetura-excalidraw.excalidraw)).*
 
 ---
 
@@ -108,3 +108,4 @@ A contextualização arquitetural realizada neste documento fundamenta e valida 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação da descrição estruturada do produto, mapeamento de módulos, diagrama de contexto e análise de implicações para avaliação (Critério F1-C3) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 20/10/2026 | Diagrama de contexto e arquitetura redesenhado no Excalidraw e publicado em PNG, com o arquivo editável | [Christopher Paraizo](https://github.com/wChrstphr) | |

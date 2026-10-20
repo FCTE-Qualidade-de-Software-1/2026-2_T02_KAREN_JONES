@@ -68,7 +68,7 @@ O projeto é um **monorepo com workspaces** (`excalidraw-app`, `packages/*`, `ex
 
 ### 5.1 Diagrama de contexto e arquitetura
 
-![Diagrama de arquitetura do Excalidraw: o navegador acessa a aplicação web, que utiliza a biblioteca React de editor; o editor utiliza pacotes comuns, de elementos e matemática; a aplicação lida separadamente com armazenamento local e serviços de colaboração externos.](../images/arquitetura-excalidraw.svg)
+![Diagrama de arquitetura do Excalidraw: o navegador acessa a aplicação web, que utiliza a biblioteca React de editor; o editor utiliza pacotes comuns, de elementos e matemática; a aplicação lida separadamente com armazenamento local e serviços de colaboração externos.](../images/arquitetura-excalidraw.png)
 
 *Figura 1 — Visão lógica simplificada dos componentes no commit de referência. As setas representam dependências ou interações conceituais, não o mapa completo de importações de código.*
 
@@ -107,3 +107,4 @@ Fontes oficiais, todas referidas ao commit `e1b7aacb356a492aa1e0fc6eb57b88961240
 | Versão | Data | Descrição | Autor | Revisão |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Caracterização do produto, classificação Pressman/IEEE 1062 e arquitetura de referência | [Davi Pierre](https://github.com/DaviPierre) | |
+| 1.1 | 20/10/2026 | Diagrama de arquitetura redesenhado no Excalidraw e publicado em PNG ([arquivo editável](../images/arquitetura-excalidraw.excalidraw)) | [Christopher Paraizo](https://github.com/wChrstphr) | |

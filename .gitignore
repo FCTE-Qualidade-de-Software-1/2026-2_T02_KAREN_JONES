@@ -10,6 +10,10 @@
 /artigo/*.out
 /artigo/*.toc
 /artigo/*.synctex*
+/artigo/*.bbl
+/artigo/*.blg
+/artigo/*.fls
+/artigo/*.fdb_latexmk
 
 # Generated files
 .docusaurus
