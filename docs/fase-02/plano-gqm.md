@@ -42,6 +42,8 @@ As [Figuras 1](#2-g1-manutenibilidade), [2](#3-g2-confiabilidade) e [3](#4-g3-fl
 - **Setas à direita:** o sentido da definição (para baixo) e o da interpretação (para cima).
 - **Cores:** azul para G1, verde para G2 e laranja para G3, as mesmas do [modelo de qualidade](../fase-01/modelo-de-qualidade.md#representação-gráfica-do-modelo) da Fase 01.
 
+Os três diagramas foram desenhados no próprio Excalidraw, o produto avaliado. Para editar um deles, abra o arquivo correspondente ([`gqm-g1.excalidraw`](../images/gqm-g1.excalidraw), [`gqm-g2.excalidraw`](../images/gqm-g2.excalidraw) ou [`gqm-g3.excalidraw`](../images/gqm-g3.excalidraw)) em [excalidraw.com](https://excalidraw.com/) e exporte o SVG de novo com a opção de incluir a cena ativada. O SVG publicado também guarda a cena, então pode ser aberto direto no editor.
+
 Os códigos seguem a posição na hierarquia. Q1.3 é a terceira questão de G1, e M1.3.2 é a segunda métrica de Q1.3. A Tabela 2 resume o tamanho de cada objetivo.
 
 | Objetivo | Característica | Questões | Métricas | Detalhamento |
@@ -189,3 +191,4 @@ Os planos devem ser avaliados com os membros da equipe e aprovados (AULA 08, p. 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação do Plano GQM, com os diagramas da hierarquia de G1, G2 e G3, as diretrizes de interpretação e a rastreabilidade com a Fase 01 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 20/10/2026 | Diagramas de G1, G2 e G3 refeitos no Excalidraw, com os arquivos editáveis `.excalidraw` | [Christopher Paraizo](https://github.com/wChrstphr) | |
