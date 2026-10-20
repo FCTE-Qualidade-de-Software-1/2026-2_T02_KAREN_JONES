@@ -44,4 +44,4 @@ A Fase 02 está organizada em sete documentos. A tabela mostra o estado de cada 
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação da visão geral da Fase 02 e das referências cruzadas com a Fase 01 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
 | 1.1 | 19/10/2026 | Publicação dos GQM de G1, G2 e G3 na tabela de documentos | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
-| 1.2 | 20/10/2026 | Publicação das páginas de pontuação e do Plano GQM, com referência cruzada | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | |
+| 1.2 | 20/10/2026 | Publicação das páginas de pontuação e do Plano GQM, com referência cruzada | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
