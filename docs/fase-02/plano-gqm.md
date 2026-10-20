@@ -32,7 +32,7 @@ O GQM é uma hierarquia de três níveis (AULA 08, p. 8):
 
 A hierarquia é construída de cima para baixo e lida de baixo para cima. Na **definição**, cada objetivo é refinado em questões, e cada questão em métricas. Na **interpretação**, o caminho é o inverso: os valores das métricas respondem às questões, e as respostas das questões são usadas para concluir sobre o objetivo (AULA 08, p. 7 e 8).
 
-As [Figuras 1](#2-g1--manutenibilidade), [2](#3-g2--confiabilidade) e [3](#4-g3--flexibilidade) seguem a mesma legenda:
+As [Figuras 1](#2-g1-manutenibilidade), [2](#3-g2-confiabilidade) e [3](#4-g3-flexibilidade) seguem a mesma legenda:
 
 - **Faixas horizontais:** os três níveis da Tabela 1. A faixa de cima é o nível conceitual, a do meio é o operacional e a de baixo é o quantitativo.
 - **Caixa escura no alto:** o objetivo, com a característica avaliada, o propósito, o objeto e o ponto de vista. O texto completo de cada objetivo está nos [objetivos de medição](./estrutura-gqm.md#3-objetivos-de-medição).
@@ -55,7 +55,7 @@ Os códigos seguem a posição na hierarquia. Q1.3 é a terceira questão de G1,
 
 ---
 
-## 2. G1 — Manutenibilidade
+## 2. G1: Manutenibilidade
 
 **Objetivo:** analisar o código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), seus testes, sua documentação para desenvolvedores e o histórico público de alterações, para o propósito de entender, com respeito à Manutenibilidade, do ponto de vista de mantenedores e contribuidores do projeto ([G1 nos objetivos de medição](./estrutura-gqm.md#g1--manutenibilidade)).
 
@@ -63,7 +63,7 @@ Os códigos seguem a posição na hierarquia. Q1.3 é a terceira questão de G1,
 
 *Figura 1: Hierarquia GQM do objetivo G1 (Manutenibilidade), com 5 questões e 14 métricas. Clique na figura para abri-la em tamanho real.*
 
-A [Figura 1](#2-g1--manutenibilidade) mostra a hierarquia completa de G1. A Tabela 3 traz a pergunta e a hipótese de cada questão. A ficha de cada métrica, com definição, cálculo, fonte, coleta e critério de interpretação, está no link do código da métrica.
+A [Figura 1](#2-g1-manutenibilidade) mostra a hierarquia completa de G1. A Tabela 3 traz a pergunta e a hipótese de cada questão. A ficha de cada métrica, com definição, cálculo, fonte, coleta e critério de interpretação, está no link do código da métrica.
 
 | Questão | Pergunta | Hipótese | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -77,7 +77,7 @@ A [Figura 1](#2-g1--manutenibilidade) mostra a hierarquia completa de G1. A Tabe
 
 ---
 
-## 3. G2 — Confiabilidade
+## 3. G2: Confiabilidade
 
 **Objetivo:** analisar o editor, a aplicação web e os mecanismos de colaboração e de salvamento no navegador, além do histórico público de defeitos relatados, para o propósito de entender, com respeito à Confiabilidade, do ponto de vista de usuários finais ([G2 nos objetivos de medição](./estrutura-gqm.md#g2--confiabilidade)).
 
@@ -85,7 +85,7 @@ A [Figura 1](#2-g1--manutenibilidade) mostra a hierarquia completa de G1. A Tabe
 
 *Figura 2: Hierarquia GQM do objetivo G2 (Confiabilidade), com 4 questões e 10 métricas. Clique na figura para abri-la em tamanho real.*
 
-A [Figura 2](#3-g2--confiabilidade) mostra a hierarquia completa de G2, e a Tabela 4 detalha cada questão. A subcaracterística Ausência de falhas corresponde à Maturidade da edição de 2011 da norma, nome usado na Fase 01.
+A [Figura 2](#3-g2-confiabilidade) mostra a hierarquia completa de G2, e a Tabela 4 detalha cada questão. A subcaracterística Ausência de falhas corresponde à Maturidade da edição de 2011 da norma, nome usado na Fase 01.
 
 | Questão | Pergunta | Hipótese | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -98,7 +98,7 @@ A [Figura 2](#3-g2--confiabilidade) mostra a hierarquia completa de G2, e a Tabe
 
 ---
 
-## 4. G3 — Flexibilidade
+## 4. G3: Flexibilidade
 
 **Objetivo:** analisar a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação, para o propósito de entender, com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca em seus sistemas e de equipes de implantação e operação ([G3 nos objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-portabilidade)).
 
@@ -106,7 +106,7 @@ A [Figura 2](#3-g2--confiabilidade) mostra a hierarquia completa de G2, e a Tabe
 
 *Figura 3: Hierarquia GQM do objetivo G3 (Flexibilidade), com 4 questões e 12 métricas. Clique na figura para abri-la em tamanho real.*
 
-A [Figura 3](#4-g3--flexibilidade) mostra a hierarquia completa de G3, e a Tabela 5 detalha cada questão.
+A [Figura 3](#4-g3-flexibilidade) mostra a hierarquia completa de G3, e a Tabela 5 detalha cada questão.
 
 | Questão | Pergunta | Hipótese | Métricas |
 | :--- | :--- | :--- | :--- |
