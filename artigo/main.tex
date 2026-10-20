@@ -16,6 +16,10 @@
 
 \sloppy
 
+% Versão do Excalidraw usada como linha de base da avaliação
+\newcommand{\commitref}{\href{https://github.com/excalidraw/excalidraw/commit/e1b7aacb356a492aa1e0fc6eb57b8896124027f0}{\texttt{e1b7aac}}}
+
+
 \title{Avaliação da Qualidade de Produto de Software:\\ Estudo de Caso no Software Open Source Excalidraw\\ segundo a ISO/IEC 25000 (SQuaRE)}
 
 \author{Wanjo Christopher Pacheco Escobar, Davi Pierre, Gabriel Monteiro,\\
@@ -39,8 +43,8 @@
   follows ISO/IEC 25040 and the ISO/IEC 25010:2023 quality model, focusing on
   Maintainability, Reliability and Flexibility. Metrics and judgment criteria
   were defined with the Goal-Question-Metric (GQM) approach, and the project was
-  tracked with PSM/CID indicators. The baseline of the analyses is commit
-  \texttt{e1b7aac} of the Excalidraw repository.
+  tracked with PSM/CID indicators. The baseline is the Excalidraw repository
+  as of 18/10/2026 (commit \commitref).
 \end{abstract}
 
 \begin{resumo}
@@ -52,8 +56,8 @@
   qualidade da ISO/IEC 25010:2023, com foco em Manutenibilidade, Confiabilidade
   e Flexibilidade. As métricas e os critérios de julgamento foram definidos com a
   abordagem Goal-Question-Metric (GQM), e o projeto foi acompanhado com
-  indicadores do PSM/CID. A linha de base das análises é o commit
-  \texttt{e1b7aac} do repositório do Excalidraw.
+  indicadores do PSM/CID. A linha de base é o repositório do Excalidraw em
+  18/10/2026 (commit \commitref).
 \end{resumo}
 
 \tableofcontents
@@ -162,7 +166,7 @@ Licença & MIT (código aberto) \\
 Domínio & Ferramenta web de quadro branco virtual \\
 Tecnologias & TypeScript, React, Vite, Yarn Workspaces \\
 Repositório & \url{https://github.com/excalidraw/excalidraw} \\
-Commit de referência & \texttt{e1b7aac} (branch \texttt{master}, 18/10/2026) \\
+Versão de referência & Repositório em 18/10/2026, commit \commitref{} (branch \texttt{master}) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -355,7 +359,7 @@ O6 & Histórico público de commits, issues e PRs & Manutenib. e Confiab. \\
 \end{tabular}
 \end{table}
 
-\textbf{Limites de escopo:} ficam excluídos servidores em nuvem, testes intrusivos de segurança cibernética, testes manuais em dezenas de aparelhos físicos, código interno de dependências terceirizadas e módulos comerciais da versão Excalidraw+. Todas as conclusões são estritamente válidas para o commit fixado (\texttt{e1b7aac}) e têm caráter primordialmente estático.
+\textbf{Limites de escopo:} ficam excluídos servidores em nuvem, testes intrusivos de segurança cibernética, testes manuais em dezenas de aparelhos físicos, código interno de dependências terceirizadas e módulos comerciais da versão Excalidraw+. Todas as conclusões são estritamente válidas para a versão do repositório de 18/10/2026 (commit \commitref) e têm caráter primordialmente estático.
 
 \subsection{Requisitos de Avaliação}
 
