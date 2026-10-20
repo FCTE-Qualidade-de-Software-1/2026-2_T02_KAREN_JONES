@@ -11,7 +11,7 @@ LaTeX da SBC, também disponível no Overleaf como
 | :--- | :--- |
 | `main.tex` | Texto do artigo |
 | `bibliography.bib` | Referências, formatadas pelo estilo `sbc.bst` |
-| `figura-*.pdf` | Figuras do artigo |
+| `figura-*.png` | Figuras do artigo, exportadas do Excalidraw. Os arquivos editáveis ficam em [`docs/images/`](../docs/images/), com a extensão `.excalidraw` |
 | `contribuicao-e-ia.md` | Rascunho dos apêndices de contribuição e de uso de IA |
 
 ## Como compilar
