@@ -138,17 +138,17 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Hipótese:** a maior parte das funções tem complexidade baixa, e as de complexidade alta se concentram em poucos arquivos, principalmente no componente principal do editor. A documentação para desenvolvedores cobre a contribuição e a preparação do ambiente. Lint, formatação e verificação de tipos são executados automaticamente.
 
-### M1.3.1 — Proporção de funções com complexidade ciclomática alta
+### M1.3.1 — Perfil de risco de complexidade das funções
 
 | Campo | Descrição |
 | :--- | :--- |
-| Definição | Percentual das funções do código de produção com complexidade ciclomática maior que 10. A complexidade ciclomática conta os caminhos independentes de execução de uma função, e 10 é o limite proposto por McCabe (1976). |
-| Procedimento de cálculo | (funções com complexidade > 10 ÷ total de funções) × 100, por pacote e no total. Também é registrada a lista dos arquivos com mais funções acima do limite. Unidade: percentual. Escala: 0 a 100. |
+| Definição | Distribuição das linhas de código de produção pelas quatro faixas de risco de complexidade ciclomática das funções em que estão: risco baixo (complexidade de 1 a 10), moderado (11 a 20), alto (21 a 50) e muito alto (acima de 50). A complexidade ciclomática conta os caminhos independentes de execução de uma função (McCabe, 1976). As faixas são as do Software Engineering Institute, adotadas no modelo de manutenibilidade de Heitlager, Kuipers e Visser (2007, p. 6). |
+| Procedimento de cálculo | Para cada função, obter a complexidade ciclomática e as linhas de código próprias: as linhas da função que não estão em branco nem são comentários, descontadas as linhas das funções declaradas dentro dela, para que cada linha seja contada uma única vez. Classificar cada função em uma faixa e calcular, para cada faixa, (linhas próprias das funções da faixa ÷ linhas próprias de todas as funções) × 100, por pacote e no total. Também são registrados o percentual de funções em cada faixa e a lista dos arquivos com mais linhas nas faixas de risco alto e muito alto. Unidade: percentual de linhas de código. Escala: 0 a 100 em cada faixa, e as quatro faixas somam 100. |
 | Fonte dos dados | Código de produção de todos os pacotes. |
-| Procedimento de coleta | ESLint (versão 8.57.0) com o analisador `@typescript-eslint/parser` e a regra `complexity` ativada com limite 0, para obter a complexidade de todas as funções. |
-| Critério de interpretação | Confirma a hipótese se o percentual for baixo e se as funções acima do limite estiverem concentradas em poucos arquivos. Funções muito complexas são mais difíceis de entender e de testar. |
+| Procedimento de coleta | ESLint (versão 8.57.0) com o analisador `@typescript-eslint/parser` e a regra `complexity` ativada com limite 0, que informa a complexidade de cada função e as linhas em que ela começa e termina. Um script conta as linhas próprias de cada função a partir desses intervalos. Os inicializadores de campos de classe, que a regra também informa, não são funções e ficam de fora. |
+| Critério de interpretação | Confirma a hipótese se a maior parte das funções e das linhas estiver na faixa de risco baixo e se as linhas das faixas de risco alto e muito alto estiverem concentradas em poucos arquivos. O resultado é dado em linhas, e não em média de complexidade, porque a média esconde as poucas funções muito complexas (Heitlager; Kuipers; Visser, 2007, p. 6). Funções muito complexas são mais difíceis de entender e de testar. |
 | Questão respondida | Q1.3 |
-| Características desejáveis | Objetiva e consistente, porque o cálculo é definido pela regra da ferramenta. Fácil de coletar automaticamente. Robusta, porque permite comparar pacotes. Baseada na estrutura de controle do programa, e não na sintaxe da linguagem. |
+| Características desejáveis | Objetiva e consistente, porque o cálculo é definido pela regra da ferramenta e as faixas vêm de fonte publicada. Fácil de coletar automaticamente. Robusta, porque permite comparar pacotes. Baseada na estrutura de controle do programa, e não na sintaxe da linguagem. |
 
 ### M1.3.2 — Cobertura da documentação para desenvolvedores
 
@@ -300,7 +300,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | M1.1.2 | A regra de direção existe em `packages/eslintrc.base.json`, mas só `common` e `element` têm configuração que a estende; por isso a coleta usa o grafo de M1.1.1, e não o lint. O projeto exige importações de tipo separadas (regra `consistent-type-imports` em `.eslintrc.json`), o que permite distinguir importações de tipo das de valor. |
 | M1.2.1 | Os pacotes de base têm código-fonte próprio em `packages/*/src`, onde a busca pode ser feita. A dependência transitiva é necessária: `packages/utils/src/index.ts` reexporta valores de `@excalidraw/excalidraw/scene/export`, que usa `document`, e uma busca restrita a `utils` não encontraria esse uso. |
 | M1.2.2 | O tipo `ExcalidrawProps` está em `packages/excalidraw/types.ts`, e a documentação das propriedades está em `dev-docs/docs/@excalidraw/excalidraw/api/props/`. |
-| M1.3.1 | O ESLint 8.57.0 com `@typescript-eslint/parser` analisou com sucesso um arquivo `.tsx` do editor e informou a complexidade de cada função. A ferramenta lizard foi descartada porque não reconheceu a maior parte das funções em arquivos `.tsx`. |
+| M1.3.1 | O ESLint 8.57.0 com `@typescript-eslint/parser` analisou com sucesso um arquivo `.tsx` do editor e informou a complexidade e as linhas de início e fim de cada função, o que permite contar as linhas próprias de cada uma. A ferramenta lizard foi descartada porque não reconheceu a maior parte das funções em arquivos `.tsx`. |
 | M1.3.2 | `README.md`, `CONTRIBUTING.md` (que remete à documentação publicada) e a pasta `dev-docs/docs/` estão na versão avaliada. |
 | M1.3.3 e M1.5.3 | O fluxo `lint.yml` é disparado por `pull_request` e executa os scripts de formatação, lint e tipos. O fluxo `test-coverage-pr.yml` é disparado por `pull_request` e executa os testes no passo `Test Coverage`, depois da instalação das dependências. A API do GitHub retorna, para cada execução do fluxo, os passos do job com conclusão e horário de término. |
 | M1.4.1 e M1.4.3 | A API do GitHub retorna as contribuições integradas e a lista de arquivos alterados por cada uma. |
@@ -315,6 +315,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 - AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38, 41 e 42.
 - Especificação do trabalho final da disciplina de Qualidade de Software 1 (2026-2 Trabalho final completo v1). Página 1, premissa 2.
 - MARTIN, R. C. *Agile Software Development: Principles, Patterns, and Practices*. Prentice Hall, 2002.
+- HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Página 6 da versão dos autores, disponível em: https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf.
 - McCABE, T. J. A Complexity Measure. *IEEE Transactions on Software Engineering*, v. SE-2, n. 4, p. 308–320, 1976.
 - ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
 - Excalidraw. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0.
@@ -326,3 +327,4 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G1 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares), [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 19/10/2026 | M1.3.1 passa a medir o perfil de risco de complexidade em linhas de código, para usar as faixas de Heitlager, Kuipers e Visser (2007) | [Christopher Paraizo](https://github.com/wChrstphr) | |
