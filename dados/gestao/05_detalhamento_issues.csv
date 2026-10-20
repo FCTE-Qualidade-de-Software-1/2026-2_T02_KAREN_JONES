@@ -16,21 +16,22 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 19,Fase 1,[GESTAO] Script de coleta das métricas PSM/CID,closed,eduarda-ogomes,8.0,8.0,360.0,360.0,18/10,18/10/2026,Concluida no prazo,1.32
 20,Fase 1,[GESTAO] Relatório PSM/CID da Fase 1,closed,eduarda-ogomes,3.0,3.0,135.0,135.0,18/10,18/10/2026,Concluida no prazo,1.32
 21,Fase 1,[GESTAO] Atas de reunião da Fase 1,closed,LeticiaSantosss,0.5,0.33,22.5,14.85,18/10,19/10/2026,Concluida em atraso,1.56
-22,Fase 2,[F2] Estudo do GQM e proposta de estrutura dos objetivos,closed,wChrstphr,2.5,2.0,112.5,90.0,18/10,19/10/2026,Concluida em atraso,2.0
+22,Fase 2,[F2] Estudo do GQM e proposta de estrutura dos objetivos,closed,wChrstphr,1.5,1.3,67.5,58.5,18/10,19/10/2026,Concluida em atraso,2.0
 23,Fase 2,[GESTAO] Apresentação do Ponto de Controle 1 (21/10),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,2.0,270.0,90.0,20/10,-,Em andamento (no prazo),
-24,Fase 2,[ARTIGO] Modelo SBC e estrutura das seções,open,wChrstphr,0.0,0.0,0.0,0.0,18/10,-,Aberta em atraso,
+24,Fase 2,[ARTIGO] Modelo SBC e estrutura das seções,closed,wChrstphr,0.0,0.0,0.0,0.0,18/10,20/10/2026,Concluida em atraso,3.11
 25,Fase 2,"[ARTIGO] Introdução, Referencial teórico e seção da Fase 1",closed,GabrielSMonteiro,10.0,8.0,450.0,360.0,24/10,19/10/2026,Concluida no prazo,1.94
 26,Fase 2,[ARTIGO] Metodologia e seção da Fase 2,open,wChrstphr,0.0,0.0,0.0,0.0,24/10,-,Em andamento (no prazo),
 27,Fase 2,[ARTIGO] Tabela de contribuição e declaração de uso de IA,closed,eduarda-ogomes,0.0,0.0,0.0,0.0,24/10,18/10/2026,Concluida no prazo,1.33
 28,Fase 2,[ARTIGO] Revisão do artigo v1 e conferência com a rubrica,open,DaviPierre,2.0,0.0,90.0,0.0,25/10,-,Em andamento (no prazo),
-29,Fase 2,[SITE] Atualizar o GitPage com a Fase 2,open,luizh-gsoares,1.0,1.0,45.0,45.0,24/10,-,Em andamento (no prazo),
+29,Fase 2,[SITE] Atualizar o GitPage com a Fase 2,closed,luizh-gsoares,1.0,1.0,45.0,45.0,24/10,20/10/2026,Concluida no prazo,3.09
 30,Fase 2,[GESTAO] Release v1.0-E1 e submissão no Moodle,open,luizh-gsoares,0.0,0.0,0.0,0.0,26/10,-,Em andamento (no prazo),
 31,Fase 2,[GESTAO] Relatório PSM/CID da Fase 2,closed,eduarda-ogomes,3.0,2.5,135.0,112.5,25/10,19/10/2026,Concluida no prazo,1.45
-32,Fase 2,[GESTAO] Atas de reunião da Fase 2,open,luizh-gsoares,0.0,0.0,0.0,0.0,26/10,-,Em andamento (no prazo),
+32,Fase 2,[GESTAO] Atas de reunião da Fase 2,closed,luizh-gsoares,0.0,0.0,0.0,0.0,26/10,20/10/2026,Concluida no prazo,3.08
 33,Fase 2,[ARTIGO] Workflow de CI para compilar o artigo,closed,luizh-gsoares,0.5,0.5,22.5,22.5,20/10,19/10/2026,Concluida no prazo,1.85
-52,Fase 2,[F2] Reunião GQM e abstraction sheets dos objetivos,closed,wChrstphr,1.0,1.0,45.0,45.0,19/10,19/10/2026,Concluida no prazo,0.07
-53,Fase 2,"[F2] GQM de Manutenibilidade (G1): questões, hipóteses e métricas",open,wChrstphr,2.0,1.5,90.0,67.5,19/10,-,Em andamento (no prazo),
-54,Fase 2,"[F2] GQM de Confiabilidade (G2): questões, hipóteses e métricas",open,wChrstphr,0.0,0.0,0.0,0.0,19/10,-,Em andamento (no prazo),
-55,Fase 2,"[F2] GQM de Flexibilidade (G3): questões, hipóteses e métricas",open,wChrstphr,0.0,0.0,0.0,0.0,19/10,-,Em andamento (no prazo),
-56,Fase 2,[F2] Níveis de pontuação e critérios de julgamento,open,wChrstphr,0.0,0.0,0.0,0.0,19/10,-,Em andamento (no prazo),
-57,Fase 2,[F2] Plano GQM e diagrama da hierarquia,open,wChrstphr,0.0,0.0,0.0,0.0,19/10,-,Em andamento (no prazo),
+52,Fase 2,[F2] Reunião GQM e abstraction sheets dos objetivos,closed,wChrstphr,1.0,0.6,45.0,27.0,19/10,19/10/2026,Concluida no prazo,0.07
+53,Fase 2,"[F2] GQM de Manutenibilidade (G1): questões, hipóteses e métricas",closed,wChrstphr,2.0,1.5,90.0,67.5,19/10,19/10/2026,Concluida no prazo,0.16
+54,Fase 2,"[F2] GQM de Confiabilidade (G2): questões, hipóteses e métricas",closed,wChrstphr,2.0,1.5,90.0,67.5,19/10,19/10/2026,Concluida no prazo,0.16
+55,Fase 2,"[F2] GQM de Flexibilidade (G3): questões, hipóteses e métricas",closed,wChrstphr,1.5,1.5,67.5,67.5,19/10,19/10/2026,Concluida no prazo,0.16
+56,Fase 2,[F2] Níveis de pontuação e critérios de julgamento,closed,wChrstphr,1.5,1.0,67.5,45.0,19/10,20/10/2026,Concluida em atraso,0.49
+57,Fase 2,[F2] Plano GQM e diagrama da hierarquia,closed,wChrstphr,0.0,0.0,0.0,0.0,19/10,20/10/2026,Concluida em atraso,0.49
+70,Fase 2,[F2] Atualizar a visão geral da Fase 02 com as páginas de pontuação e Plano GQM,closed,luizh-gsoares,0.25,0.3,11.25,13.5,N/A,20/10/2026,Concluida no prazo,0.69

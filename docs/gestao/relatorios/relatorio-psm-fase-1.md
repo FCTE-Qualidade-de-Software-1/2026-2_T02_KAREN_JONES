@@ -66,34 +66,34 @@ Os dados primários coletados pelo script automatizado a partir dos registros do
 
 *Tabela 1: Recursos e custos da Fase 1 (Fonte: dados/gestao/01_recursos_e_custos_fases.csv).*
 
-![Recursos e Custos por Fase](/img/gestao/01_recursos_e_custos_fases.png)
-
-*Figura 1: Comparativo entre horas e custos estimados versus realizados por fase do projeto.*
-
 ### 3.3. Contribuição Individual e Equilíbrio da Carga de Trabalho
 
-A transparência da contribuição individual (exigência do critério **AG-C5**) é monitorada por meio do cruzamento entre issues atribuídas, horas reais dedicadas, commits e pull requests:
+A transparência da contribuição individual (exigência do critério **AG-C5**) é monitorada pelo cruzamento entre issues atribuídas e horas reais dedicadas. Esta tabela considera **somente as issues da Fase 1**; o esforço da Fase 2 é apresentado no [Relatório PSM/CID da Fase 2](./relatorio-psm-fase-2.md) e a consolidação da Entrega 1 consta no apêndice do artigo.
 
-| Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Commits / PRs | Esforço Real (%) |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `wChrstphr` | F2/F4 | 11 | 9,00 | 7,00 | R$ 315,00 | 21 / 5 | 8,68% |
-| Davi Pierre | `DaviPierre` | F1/F3 | 6 | 18,00 | 19,00 | R$ 855,00 | 5 / 2 | 23,56% |
-| Gabriel Monteiro | `GabrielSMonteiro` | F1/F3 | 6 | 27,00 | 28,00 | R$ 1.260,00 | 29 / 5 | 34,71% |
-| Letícia de Carvalho | `LeticiaSantosss` | F1/F3 | 6 | 8,50 | 5,91 | R$ 265,95 | 5 / 5 | 7,33% |
-| Luiz Henrique Soares | `luizh-gsoares` | F2/F4 | 6 | 3,25 | 2,25 | R$ 101,25 | 8 / 5 | 2,79% |
-| Maria Eduarda | `eduarda-ogomes` | F2/F4 | 6 | 17,50 | 18,50 | R$ 832,50 | 14 / 5 | 22,94% |
-| **Total** | — | — | **41** | **83,25** | **80,66** | **R$ 3.629,70** | **82 / 27** | **100,00%** |
+| Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Esforço Real (%) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Christopher | `wChrstphr` | F2/F4 | 1 | 2,50 | 2,50 | R$ 112,50 | 4,02% |
+| Davi Pierre | `DaviPierre` | F1/F3 | 4 | 15,00 | 19,00 | R$ 855,00 | 30,57% |
+| Gabriel Monteiro | `GabrielSMonteiro` | F1/F3 | 4 | 16,00 | 20,00 | R$ 900,00 | 32,18% |
+| Letícia de Carvalho | `LeticiaSantosss` | F1/F3 | 5 | 7,50 | 5,91 | R$ 265,95 | 9,51% |
+| Luiz Henrique Soares | `luizh-gsoares` | F2/F4 | 1 | 0,75 | 0,75 | R$ 33,75 | 1,21% |
+| Maria Eduarda | `eduarda-ogomes` | F2/F4 | 3 | 13,50 | 14,00 | R$ 630,00 | 22,52% |
+| **Total** | — | — | **17** | **55,25** | **62,16** | **R$ 2.797,20** | **100,00%** |
 
-*Tabela 2: Distribuição de esforço e contribuição individual (Fonte: dados/gestao/04_contribuicao_individual.csv).*
+*Tabela 2: Distribuição de esforço da Fase 1 (Fonte: dados/gestao/06_contribuicao_por_fase.csv). Issues compartilhadas contam para cada responsável; o total corresponde às 17 issues distintas da fase.*
 
-![Contribuição Individual](/img/gestao/03_contribuicao_individual.png)
+![Horas estimadas e reais por integrante na Fase 1: Davi, Gabriel e Maria concentram o esforço; Letícia ficou abaixo do estimado.](/img/gestao/04_horas_integrante_fase_1.png)
 
-*Figura 2: Distribuição percentual do esforço real apurado entre os membros da equipe.*
+*Figura 1: Horas estimadas versus reais por integrante na Fase 1.*
+
+![Participação percentual de cada integrante no esforço real da Fase 1.](/img/gestao/05_esforco_integrante_fase_1.png)
+
+*Figura 2: Participação de cada integrante no esforço real da Fase 1 (soma de 100%).*
 
 ### 3.4. Interpretação — Análise de Estimativa (Linha de Base) e Performance
 
-1. **Linha de Base Financeira e de Esforço:** A Fase 1 concluiu integralmente todas as suas 17 issues técnicas e de governança. O esforço planejado foi de 55,25 horas e o executado foi de 62,16 horas (+12,5% de variação), demonstrando excelente precisão de planejamento, enquadrando-se com rigor na faixa de controle.
-2. **Equilíbrio de Atuação por Subgrupo:** O esforço real reflete grande dedicação da equipe: Gabriel (28h), Davi (19h) e Maria Eduarda (18,5h) lideraram as entregas técnicas de requisitos, governança e script de automação PSM/CID. O subgrupo F2/F4 ampliará sua alocação de horas com o fechamento das issues técnicas de GQM da Fase 2.
+1. **Linha de Base Financeira e de Esforço:** A Fase 1 concluiu integralmente as suas 17 issues técnicas e de governança. O esforço planejado foi de 55,25 horas e o executado foi de 62,16 horas (+12,5% de variação), dentro da faixa de controle definida no construct.
+2. **Distribuição entre Integrantes:** Gabriel (20h), Davi (19h) e Maria Eduarda (14h) concentram 85,3% do esforço da fase, por conduzirem os requisitos, a governança e o script de automação PSM/CID. Christopher (2,5h) e Luiz Henrique (0,75h) tiveram participação reduzida, o que é esperado, pois o Subgrupo F2/F4 assume o protagonismo técnico a partir da Fase 2.
 
 ---
 
@@ -115,13 +115,12 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 | Fase | Total de Issues | Concluídas | Em Andamento | Progresso (%) | No Prazo | Em Atraso | Aderência ao Prazo (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Fase 1** | 17 | 17 | 0 | 100,0% | 5 | 12 | 29,4% |
-| **Fase 2** | 18 | 6 | 12 | 33,3% | 16 | 2 | 88,9% |
 
-*Tabela 3: Acompanhamento de calendário e progresso das fases (Fonte: dados/gestao/02_calendario_e_progresso_fases.csv).*
+*Tabela 3: Acompanhamento de calendário e progresso da Fase 1 (Fonte: dados/gestao/02_calendario_e_progresso_fases.csv).*
 
-![Calendário e Progresso por Fase](/img/gestao/02_calendario_e_progresso_fases.png)
+![Situação das 17 issues da Fase 1: todas concluídas, sendo 5 no prazo e 12 com atraso em relação ao prazo da issue.](/img/gestao/07_status_issues_fase_1.png)
 
-*Figura 3: Progresso percentual de conclusão e aderência ao cronograma das fases.*
+*Figura 3: Situação e cumprimento de prazo das issues da Fase 1.*
 
 ### 4.3. Interpretação de Progresso
 
@@ -150,6 +149,10 @@ A transparência da contribuição individual (exigência do critério **AG-C5**
 | **Fase 1** | 112,5% | 100,0% | 1,23 dia(s) | 100,0% |
 
 *Tabela 4: Indicadores de desempenho dos processos (Fonte: dados/gestao/03_desempenho_processos_fases.csv).*
+
+![Acurácia da estimativa da Fase 1 em 112,5%, dentro da faixa ideal de 80% a 120%.](/img/gestao/06_acuracia_estimativa_fase_1.png)
+
+*Figura 4: Acurácia da estimativa da Fase 1 em relação à faixa ideal.*
 
 ### 5.3. Interpretação de Desempenho
 
@@ -209,4 +212,4 @@ Conforme determina a **Premissa 5**, todos os números apresentados neste relat�
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação do Relatório PSM/CID da Fase 1 com measurement constructs, medições e decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
-| 1.1 | 19/10/2026 | Atualização das medições consolidadas da Fase 1 (17/17 issues concluídas, 62,16h) e organização em pasta própria | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
+| 1.1 | 20/10/2026 | Isolamento dos dados da Fase 1 (contribuição individual e gráficos exclusivos da fase) e novos gráficos de apoio | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |

@@ -50,15 +50,15 @@ O percentual de esforço individual foi calculado com base no total de horas rea
 
 | Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Commits / PRs | Esforço Real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | F2/F4 | 11 | 9,00 | 7,00 | 21 / 5 | 8,68% |
-| Davi Pierre | `@DaviPierre` | F1/F3 | 6 | 18,00 | 19,00 | 5 / 2 | 23,56% |
-| Gabriel Monteiro | `@GabrielSMonteiro` | F1/F3 | 6 | 27,00 | 28,00 | 29 / 5 | 34,71% |
-| Letícia de Carvalho | `@LeticiaSantosss` | F1/F3 | 6 | 8,50 | 5,91 | 5 / 5 | 7,33% |
-| Luiz Henrique Soares | `@luizh-gsoares` | F2/F4 | 6 | 3,25 | 2,25 | 8 / 5 | 2,79% |
-| Maria Eduarda | `@eduarda-ogomes` | F2/F4 | 6 | 17,50 | 18,50 | 14 / 5 | 22,94% |
-| **Total** | — | — | **41** | **83,25** | **80,66** | **82 / 27** | **100,00%** |
+| Christopher | `@wChrstphr` | F2/F4 | 11 | 13,00 | 9,90 | 80 / 11 | 11,81% |
+| Davi Pierre | `@DaviPierre` | F1/F3 | 6 | 18,00 | 19,00 | 5 / 2 | 22,66% |
+| Gabriel Monteiro | `@GabrielSMonteiro` | F1/F3 | 6 | 27,00 | 28,00 | 30 / 5 | 33,39% |
+| Letícia de Carvalho | `@LeticiaSantosss` | F1/F3 | 6 | 8,50 | 5,91 | 5 / 5 | 7,05% |
+| Luiz Henrique Soares | `@luizh-gsoares` | F2/F4 | 7 | 3,50 | 2,55 | 20 / 7 | 3,04% |
+| Maria Eduarda | `@eduarda-ogomes` | F2/F4 | 6 | 17,50 | 18,50 | 14 / 5 | 22,06% |
+| **Total** | — | — | **42** | **87,50** | **83,86** | **154 / 35** | **100,00%** |
 
-*Nota explicativa sobre os dados:* Os valores refletem a conclusão integral de todas as issues da Fase 1 e o avanço inicial da Fase 2 (6 issues concluídas). O esforço do Subgrupo F1/F3 concentra a entrega dos requisitos de qualidade, enquanto o Subgrupo F2/F4 avança na especificação GQM e infraestrutura de governança.
+*Nota explicativa sobre os dados:* Os valores refletem a conclusão integral de todas as issues da Fase 1 e 15 issues concluídas da Fase 2 (totalizando 83,9h reais apuradas). O esforço do Subgrupo F1/F3 concentra a entrega dos requisitos de qualidade, enquanto o Subgrupo F2/F4 avança na especificação GQM e infraestrutura de governança.
 
 ### 2.3. Código LaTeX para o Artigo
 
@@ -74,14 +74,14 @@ Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da rubrica
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \hline
-Christopher & 11 & 9.0h & 7.0h & 21/5 & 8.68\% \\
-Davi Pierre & 6 & 18.0h & 19.0h & 5/2 & 23.56\% \\
-Gabriel Monteiro & 6 & 27.0h & 28.0h & 29/5 & 34.71\% \\
-Letícia de Carvalho & 6 & 8.5h & 5.9h & 5/5 & 7.33\% \\
-Luiz Henrique Soares & 6 & 3.2h & 2.2h & 8/5 & 2.79\% \\
-Maria Eduarda & 6 & 17.5h & 18.5h & 14/5 & 22.94\% \\
+Christopher & 11 & 13.0h & 9.9h & 80/11 & 11.81\% \\
+Davi Pierre & 6 & 18.0h & 19.0h & 5/2 & 22.66\% \\
+Gabriel Monteiro & 6 & 27.0h & 28.0h & 30/5 & 33.39\% \\
+Letícia de Carvalho & 6 & 8.5h & 5.9h & 5/5 & 7.05\% \\
+Luiz Henrique Soares & 7 & 3.5h & 2.5h & 20/7 & 3.04\% \\
+Maria Eduarda & 6 & 17.5h & 18.5h & 14/5 & 22.06\% \\
 \hline
-\textbf{Total} & \textbf{41} & \textbf{83.2h} & \textbf{80.7h} & \textbf{82/27} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{42} & \textbf{87.5h} & \textbf{83.9h} & \textbf{154/35} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -94,6 +94,6 @@ Maria Eduarda & 6 & 17.5h & 18.5h & 14/5 & 22.94\% \\
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Elaboração dos apêndices do artigo com tabela de contribuição individual e declaração de uso de IA | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
-| 1.1 | 19/10/2026 | Atualização da tabela de contribuição com conclusão da Fase 1 e avanço da Fase 2 (80,7h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
+| 1.1 | 20/10/2026 | Atualização da tabela de contribuição pós-merge da main com avanço da Fase 2 (83,9h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
 
 
