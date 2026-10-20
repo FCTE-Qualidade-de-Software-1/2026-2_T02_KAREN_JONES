@@ -88,13 +88,13 @@ Para dar suporte metodológico às decisões da avaliação, esta seção reúne
 
 A série de normas ISO/IEC 25000, conhecida pelo acrônimo \textbf{SQuaRE} (\textit{Systems and Software Quality Requirements and Evaluation}), consolida as melhores práticas internacionais para especificação e avaliação da qualidade de software \cite{iso25010}, substituindo os padrões anteriores ISO/IEC 9126 e 14598. A série é estruturada em cinco divisões: 2500n (Gestão da Qualidade), 2501n (Modelos de Qualidade), 2502n (Medição), 2503n (Requisitos) e 2504n (Processo de Avaliação). No presente estudo, a investigação fundamenta-se principalmente nas diretrizes das normas ISO/IEC 25010:2023 e ISO/IEC 25040.
 
-\subsection{ISO/IEC 25010:2023 — Modelo de Qualidade do Produto}
+\subsection{ISO/IEC 25010:2023: Modelo de Qualidade do Produto}
 
 A revisão de 2023 da ISO/IEC 25010 organiza a qualidade do produto de software em \textbf{nove características} de alto nível \cite{iso25010}. Em comparação com a edição de 2011, destacam-se a substituição do termo \textit{Portabilidade} por \textbf{Flexibilidade}, a inclusão formal de \textbf{Escalabilidade} como subcaracterística e a introdução de \textbf{Segurança de Proteção} (\textit{Safety}).
 
 Diante do escopo de um projeto de código aberto sem acesso direto aos servidores em produção, selecionamos três características essenciais: \textbf{Manutenibilidade} (5 subcaracterísticas), \textbf{Confiabilidade} (4 subcaracterísticas) e \textbf{Flexibilidade} (4 subcaracterísticas), totalizando \textbf{13 subcaracterísticas} sob escrutínio da equipe.
 
-\subsection{ISO/IEC 25040 — Processo de Avaliação}
+\subsection{ISO/IEC 25040: Processo de Avaliação}
 
 A ISO/IEC 25040 prescreve um processo sistemático em quatro etapas para conduzir avaliações de qualidade \cite{iso25040}. Primeiro, estabelecem-se os requisitos da avaliação e, em seguida, especificam-se as métricas e os critérios. Depois, projetam-se os procedimentos de teste e, por fim, executam-se as medições, que produzem o diagnóstico. Este trabalho segue esse fluxo, detalhando as Fases~1 e~2 nesta primeira entrega.
 
@@ -102,7 +102,7 @@ A ISO/IEC 25040 prescreve um processo sistemático em quatro etapas para conduzi
 
 O paradigma \textbf{GQM} (\textit{Goal-Question-Metric}), concebido por Basili, Caldiera e Rombach \cite{basili1994gqm}, estrutura a medição em três níveis hierárquicos: o \textbf{Objetivo} conceitual (o que se deseja avaliar e com que finalidade), as \textbf{Questões} operacionais (perguntas que caracterizam o alcance do objetivo) e as \textbf{Métricas} objetivas (dados quantitativos ou qualitativos que respondem a essas perguntas). A principal vantagem do GQM é evitar a coleta indiscriminada de dados: cada indicador só existe porque responde a uma pergunta técnica diretamente vinculada às características de qualidade priorizadas.
 
-\subsection{PSM/CID — Practical Software Measurement}
+\subsection{PSM/CID: Practical Software Measurement}
 
 O modelo \textbf{PSM} (\textit{Practical Software Measurement}) \cite{psm} fornece um método para acompanhamento e governança de projetos de software por meio de indicadores agrupados em Categorias de Informação de Decisão (\textbf{CID}). Ao longo do trabalho, acompanhamos o esforço e os prazos da equipe em três categorias: Desempenho dos Processos (produtividade), Calendário e Progresso (cumprimento de marcos) e Recursos e Custos (horas dedicadas e estimadas), com registros documentados nas atas e relatórios de medição.
 
@@ -279,7 +279,7 @@ A partir do processo de priorização, consolidamos o modelo de qualidade em tr�
 
 \begin{table}[!ht]
 \centering
-\caption{Manutenibilidade — subcaracterísticas e aplicação ao Excalidraw}
+\caption{Manutenibilidade: subcaracterísticas e aplicação ao Excalidraw}
 \label{tab:manut}
 \vspace{4pt}
 \footnotesize
@@ -298,7 +298,7 @@ Testabilidade     & Estrutura de testes automatizados em múltiplos níveis (uni
 
 \begin{table}[!ht]
 \centering
-\caption{Confiabilidade — subcaracterísticas e aplicação ao Excalidraw}
+\caption{Confiabilidade: subcaracterísticas e aplicação ao Excalidraw}
 \label{tab:confiab}
 \vspace{4pt}
 \footnotesize
@@ -316,7 +316,7 @@ Recuperabilidade  & Salvamento automático local, restauração do último estad
 
 \begin{table}[!ht]
 \centering
-\caption{Flexibilidade — subcaracterísticas e aplicação ao Excalidraw}
+\caption{Flexibilidade: subcaracterísticas e aplicação ao Excalidraw}
 \label{tab:flex}
 \vspace{4pt}
 \footnotesize
@@ -366,7 +366,7 @@ Os requisitos representam as perguntas técnicas que o produto deve permitir res
 
 \begin{table}[!ht]
 \centering
-\caption{Requisitos de avaliação — Manutenibilidade}
+\caption{Requisitos de avaliação: Manutenibilidade}
 \label{tab:reqman}
 \vspace{4pt}
 \footnotesize
@@ -393,7 +393,7 @@ RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade
 
 \begin{table}[!ht]
 \centering
-\caption{Requisitos de avaliação — Confiabilidade}
+\caption{Requisitos de avaliação: Confiabilidade}
 \label{tab:reqconf}
 \vspace{4pt}
 \footnotesize
@@ -418,7 +418,7 @@ RQ-CONF-11 & Desfazer e refazer ações é possível? & Recuperabilidade \\
 
 \begin{table}[!ht]
 \centering
-\caption{Requisitos de avaliação — Flexibilidade}
+\caption{Requisitos de avaliação: Flexibilidade}
 \label{tab:reqflex}
 \vspace{4pt}
 \footnotesize
