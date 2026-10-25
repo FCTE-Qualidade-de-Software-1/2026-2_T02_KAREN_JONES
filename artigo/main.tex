@@ -110,7 +110,32 @@ O modelo \textbf{PSM} (\textit{Practical Software Measurement}) \cite{psm} forne
 \section{Metodologia}
 \label{sec:metodologia}
 
-% Metodologia de desenvolvimento do projeto: conteúdo da issue #26.
+A condução deste trabalho fundamenta-se nas diretrizes da norma ISO/IEC 25040 \cite{iso25040}, que prescreve um processo sistemático em quatro etapas para a avaliação da qualidade de produto de software. Na Fase~1, estabelecem-se os requisitos da avaliação por meio da delimitação do propósito, da identificação das partes interessadas, da caracterização arquitetural do produto e da seleção justificada das características e subcaracterísticas prioritárias. Na Fase~2, realiza-se a especificação da avaliação com o paradigma Goal-Question-Metric (GQM), decompondo as características em objetivos conceituais, questões operacionais e métricas quantitativas e qualitativas, acompanhadas de réguas de pontuação e critérios objetivos de julgamento. Na Fase~3, projeta-se a avaliação com o planejamento detalhado dos procedimentos de coleta, definição do ambiente de testes e seleção de ferramentas automatizadas de inspeção estática. Na Fase~4, executam-se as medições sobre a linha de base do produto, confrontando os dados obtidos com os critérios estabelecidos para produzir o diagnóstico técnico e fundamentar recomendações de melhoria. Esta publicação consolida os resultados obtidos nas Fases~1 e~2, enquanto as Fases~3 e~4 serão executadas e relatadas na etapa subsequente do projeto.
+
+Para otimizar o esforço analítico, viabilizar o trabalho em paralelo e evitar sobreposição de tarefas ou bloqueios operacionais entre atividades com dependência mútua, os seis integrantes da Equipe Karen Jones foram organizados em dois subgrupos estáveis de três membros. O Subgrupo F1/F3, composto por Davi Pierre, Gabriel Monteiro e Letícia de Carvalho, assumiu a responsabilidade direta pelo levantamento de requisitos na Fase~1 e pelo projeto da avaliação na Fase~3. O Subgrupo F2/F4, composto por Wanjo Christopher Paraizo Escobar, Luiz Henrique Soares e Maria Eduarda, dedicou-se à especificação operacional no modelo GQM na Fase~2 e à execução prática das medições e análise de resultados na Fase~4. As dimensões transversais do projeto, compreendendo a governança contínua com métricas PSM/CID, a redação compartilhada do artigo científico no padrão da SBC e as apresentações perante a banca avaliadora nos pontos de controle da disciplina, foram conduzidas de maneira cooperativa com a participação direta de todos os seis integrantes da equipe. A Tabela~\ref{tab:subgrupos} resume a distribuição organizacional adotada.
+
+\begin{table}[!ht]
+\centering
+\caption{Estrutura organizacional da equipe e distribuição de responsabilidades}
+\label{tab:subgrupos}
+\vspace{4pt}
+\small
+\begin{tabular}{p{2.2cm}p{3.8cm}p{2.0cm}p{4.2cm}}
+\toprule
+\textbf{Subgrupo} & \textbf{Integrantes} & \textbf{Fases} & \textbf{Escopo Principal} \\
+\midrule
+Subgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Propósito, interessados, requisitos, modelo de qualidade e projeto dos testes \\
+Subgrupo F2/F4 & Christopher Paraizo, Luiz Henrique Soares e Maria Eduarda & Fase 2 e Fase 4 & Objetivos e métricas GQM, pontuação, execução prática e ações de melhoria \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+O fluxo de trabalho técnico da equipe apoia-se em diretrizes rigorosas de governança no GitHub, formalizadas no documento de contribuição do repositório. O processo adota o princípio de que nenhuma alteração é enviada diretamente para a branch principal (\texttt{main}). Toda atividade técnica ou documental tem origem no cadastramento de uma issue com formulário padronizado, contendo a vinculação obrigatória com a milestone da respectiva fase, estimativa preliminar de esforço em horas, prazos de entrega, dependências entre tarefas e indicações precisas de referências normativas e acadêmicas. A partir da issue aprovada, o responsável cria uma branch secundária de trabalho com nomenclatura padronizada por tipo e área, a exemplo de ramificações dos tipos \texttt{docs/f1-...}, \texttt{docs/f2-...} ou \texttt{docs/artigo-...}. Após a conclusão e verificação local do artefato, abre-se um pull request direcionado para a branch principal, incluindo a associação formal para o fechamento automático da issue e a declaração explícita sobre a eventual utilização de ferramentas de inteligência artificial generativa, com o registro de como os resultados foram revisados e validados. Como critério inegociável de qualidade, cada pull request requer a revisão e a aprovação de ao menos um integrante do grupo que não seja autor da contribuição antes que a integração à linha de base seja autorizada.
+
+O acompanhamento e a tomada de decisões da equipe foram estruturados de acordo com o modelo Practical Software Measurement (PSM) \cite{psm} e as diretrizes de medição da norma ISO/IEC 15939 \cite{iso15939}, com indicadores organizados em três Categorias de Informação de Decisão (CID). Na categoria de Recursos e Custos, o esforço da equipe foi medido pelo registro sistemático das horas estimadas na abertura de cada tarefa e das horas reais apontadas no fechamento, rateando com precisão o tempo individual em atividades conjuntas e permitindo calcular a variação percentual de esforço e o custo financeiro equivalente, calculado com base no valor-hora de mercado de R\$ 45,00, obtido a partir de dados do Novo CAGED para o perfil de Analista de Sistemas Júnior sob regime formal. Na categoria de Calendário e Progresso, acompanhou-se a evolução do fechamento das tarefas em relação às datas dos marcos regimentais e pontos de controle do semestre, avaliando a taxa percentual de conclusão e a aderência aos prazos estipulados. Na categoria de Desempenho dos Processos, monitorou-se a acurácia das estimativas de esforço, o tempo médio de ciclo (lead time) das tarefas e a conformidade integral na revisão por pares dos pull requests.
+
+Para viabilizar a rastreabilidade total das medições e garantir que todos os indicadores sejam derivados exclusivamente de dados primários auditáveis, sem a necessidade de controle manual em planilhas externas, a equipe desenvolveu e versionou o script automatizado \texttt{scripts/coleta\_psm.py}. O script conecta-se diretamente à API do GitHub, extrai as métricas registradas nas issues e pull requests, persiste os dados brutos em formato JSON no repositório e gera automaticamente as tabelas tabuladas em CSV e as figuras gráficas correspondentes. Essa abordagem garante auditabilidade pública de ponta a ponta e reduz o esforço burocrático de coleta ao longo de todo o ciclo de vida do projeto.
+
 
 % ================================================================
 \section{Fase 1: Requisitos de Avaliação}
@@ -461,6 +486,7 @@ A Fase 2 da ISO/IEC 25040 realiza a transição entre o levantamento de requisit
 O processo foi estruturado em quatro etapas principais. A primeira foi a definição dos objetivos GQM, que formaliza o propósito de medição de cada característica do produto, como avaliar a modularidade do monorepo sob o ponto de vista dos mantenedores e colaboradores. Em seguida, foram formuladas as questões operacionais, perguntas técnicas diretamente associadas aos requisitos de avaliação (RQ-MAN-01 a RQ-FLEX-12). A terceira etapa foi a seleção e a padronização das métricas, que reúnem medidas de análise estática, como complexidade ciclomática, linhas de código por arquivo, acoplamento aferente e eferente e taxa de cobertura de testes, e inspeções qualitativas com escalas graduadas. Por fim, foram definidos os critérios de julgamento, com faixas de aceitabilidade para que os dados coletados na fase seguinte possam ser classificados sem viés subjetivo.
 
 O catálogo detalhado contendo a totalidade das questões GQM, fórmulas de cálculo e réguas de pontuação está integralmente documentado no repositório do projeto\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}.
+
 
 % ================================================================
 \section{Considerações Parciais}
