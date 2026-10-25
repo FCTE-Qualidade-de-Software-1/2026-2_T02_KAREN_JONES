@@ -51,7 +51,8 @@ else:
 images = re.findall(r'\\includegraphics(?:\[[^\]]*\])?\{([^}]+)\}', text)
 for img in images:
     path = os.path.join('artigo', img)
-    if not os.path.exists(path):
+    found = os.path.exists(path) or os.path.exists(path + '.png') or os.path.exists(path + '.pdf')
+    if not found:
         print('ERROR: Missing image file:', path)
     else:
         print('SUCCESS: Image verified:', path)
