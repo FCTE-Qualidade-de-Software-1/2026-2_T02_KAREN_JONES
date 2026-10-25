@@ -462,6 +462,37 @@ O processo foi estruturado em quatro etapas principais. A primeira foi a defini�
 
 O catálogo detalhado contendo a totalidade das questões GQM, fórmulas de cálculo e réguas de pontuação está integralmente documentado no repositório do projeto\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}.
 
+\subsection{Níveis de Pontuação e Critérios de Julgamento}
+\label{subsec:pontuacao-julgamento}
+
+A especificação da avaliação na norma ISO/IEC 25040 exige que sejam estabelecidos níveis de pontuação para as métricas e critérios para o julgamento dos resultados antes da coleta prática dos dados. Para transformar os dados brutos em diagnósticos qualitativos comparáveis, a equipe adotou a escala ordinal de cinco níveis concebida no modelo de avaliação de manutenibilidade de Heitlager, Kuipers e Visser \cite{heitlager2007}. A escala distribui os resultados nas graduações Muito Ruim (símbolo \texttt{--}, equivalente a 1 ponto), Ruim (símbolo \texttt{-}, equivalente a 2 pontos), Regular (símbolo \texttt{o}, equivalente a 3 pontos), Bom (símbolo \texttt{+}, equivalente a 4 pontos) e Excelente (símbolo \texttt{++}, equivalente a 5 pontos). A atribuição de valores numéricos de 1 a 5 viabiliza a realização de operações de agregação matemática entre os indicadores de cada subcaracterística.
+
+As faixas de aceitação que definem os intervalos numéricos de cada nível foram estabelecidas previamente à coleta, assegurando imparcialidade e impedindo que os limites sejam ajustados para favorecer ou prejudicar o produto avaliado. As faixas foram estruturadas a partir de quatro origens técnicas bem delimitadas. A primeira origem contempla faixas publicadas e validadas na literatura para propriedades específicas de código-fonte, aplicando sem modificações os limites do modelo de Heitlager, Kuipers e Visser para o perfil de risco de complexidade ciclomática das funções e para a taxa de cobertura de linhas nos testes automatizados. A segunda origem aplica-se às métricas de proporção desejável, em que valores percentuais mais elevados representam melhor qualidade, tais como a proporção de propriedades públicas documentadas e a cobertura de comandos funcionais sem conexão de rede; nesses casos, utilizam-se as faixas padronizadas de cobertura do modelo de referência, nas quais o nível Excelente (\texttt{++}) exige de 95\% a 100\%, o nível Bom (\texttt{+}) abrange de 80\% a 95\%, o nível Regular (\texttt{o}) de 60\% a 80\%, o nível Ruim (\texttt{-}) de 20\% a 60\% e o nível Muito Ruim (\texttt{--}) valores inferiores a 20\%. A terceira origem abrange as métricas de proporção indesejável, nas quais valores menores indicam maior qualidade, tais como acoplamentos cíclicos, importações que transgridem a direção arquitetural e percentual de arquivos extensos; para essas medidas, reaproveitam-se as faixas de duplicação de código da literatura, em que o nível Excelente (\texttt{++}) tolera de 0\% a 3\%, o nível Bom (\texttt{+}) de 3\% a 5\%, o nível Regular (\texttt{o}) de 5\% a 10\%, o nível Ruim (\texttt{-}) de 10\% a 20\% e o nível Muito Ruim (\texttt{--}) índices superiores a 20\%. A quarta origem recorre a referências consolidadas de engenharia de software e usabilidade, como os limiares de tempo de resposta propostos por Nielsen \cite{nielsen1993} e as metas de taxa de quadros por segundo do modelo de desempenho RAIL do Google para interações no canvas, ou a parâmetros calibrados pela equipe com base na arquitetura do monorepo. A Tabela~\ref{tab:escala_pontuacao} consolida a escala ordinal de avaliação e as faixas gerais de aceitação aplicadas às proporções.
+
+\begin{table}[!ht]
+\centering
+\caption{Escala de pontuação e faixas de aceitação para métricas de proporção}
+\label{tab:escala_pontuacao}
+\vspace{4pt}
+\small
+\begin{tabular}{lccllp{3.8cm}}
+\toprule
+\textbf{Nível} & \textbf{Símbolo} & \textbf{Pontos} & \textbf{Prop. Desejável} & \textbf{Prop. Indesejável} & \textbf{Leitura do Nível} \\
+\midrule
+Excelente  & \texttt{++} & 5 & 95\% a 100\% & 0\% a 3\%   & Desempenho na melhor faixa prevista. \\
+Bom        & \texttt{+}  & 4 & 80\% a 95\%  & 3\% a 5\%   & Desempenho acima do esperado para um projeto típico. \\
+Regular    & \texttt{o}  & 3 & 60\% a 80\%  & 5\% a 10\%  & Desempenho em faixa intermediária aceitável. \\
+Ruim       & \texttt{-}  & 2 & 20\% a 60\%  & 10\% a 20\% & Degradação relevante que requer intervenção técnica. \\
+Muito Ruim & \texttt{--} & 1 & 0\% a 20\%   & Acima de 20\% & Fragilidade crítica que compromete a característica. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A consolidação das medições segue um processo de agregação em duas etapas por média aritmética ponderada igualmente, conforme recomendado no modelo SIG e na norma ISO/IEC 25040. Na primeira etapa, a pontuação de cada questão investigativa do GQM, que corresponde a uma subcaracterística da ISO/IEC 25010, é calculada como a média aritmética simples dos pontos obtidos nas suas métricas constituintes. Na segunda etapa, a pontuação da característica de alto nível (Manutenibilidade, Confiabilidade ou Flexibilidade) é obtida a partir da média aritmética dos valores de suas respectivas questões, preservando as casas decimais antes do arredondamento para o nível ordinal mais próximo. Como convenção conservadora estabelecida pela equipe, em caso de fração exatamente igual a 0,5 o arredondamento é direcionado para baixo, garantindo que nenhum resultado receba classificação superior sem justificativa inequívoca.
+
+O julgamento conclusivo sobre a adequação da qualidade de produto de software apoia-se em critérios inspirados nos esquemas formais de certificação de código da TÜViT \cite{baggen2010}, que exigem conformidade mínima tanto na média global da característica quanto nas subcaracterísticas isoladas. Para cada uma das três características priorizadas, o resultado final da avaliação é classificado em três veredictos mutuamente excludentes. O veredicto Atende é emitido quando a característica obtém nível médio Regular (\texttt{o}) ou superior (pontuação igual ou superior a 3,0) e nenhuma de suas questões ou subcaracterísticas obtém classificação Muito Ruim (\texttt{--}). O veredicto Não Atende é atribuído quando a pontuação média da característica resulta nos níveis Ruim (\texttt{-}) ou Muito Ruim (\texttt{--}), ou quando ao menos uma de suas subcaracterísticas atinge o nível Muito Ruim (\texttt{--}), indicando uma vulnerabilidade localizada inaceitável para o produto. Por fim, o veredicto Inconclusivo é reservado para cenários excepcionais em que mais da metade das métricas planejadas para a característica não puderem ser medidas durante a execução. Todas as métricas que registrarem níveis Ruim ou Muito Ruim na Fase 4 serão formalmente catalogadas no relatório técnico como pontos de melhoria, fornecendo subsídios diretos para a elaboração de intervenções corretivas e protótipos de aperfeiçoamento.
+
+
 % ================================================================
 \section{Considerações Parciais}
 \label{sec:conclusao}
