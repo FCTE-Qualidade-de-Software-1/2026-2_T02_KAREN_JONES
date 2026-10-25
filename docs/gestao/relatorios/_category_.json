@@ -1,0 +1,8 @@
+{
+  "label": "Relatórios PSM/CID",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Relatórios periódicos de acompanhamento e medição da qualidade do processo (PSM/CID)."
+  }
+}
