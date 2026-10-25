@@ -41,9 +41,8 @@
   (FCTE/UnB), acting as an independent quality assurance team. The process
   follows ISO/IEC 25040 and the ISO/IEC 25010:2023 quality model, focusing on
   Maintainability, Reliability and Flexibility. Metrics and judgment criteria
-  were defined with the Goal-Question-Metric (GQM) approach, and the project was
-  tracked with PSM/CID indicators. The baseline is the Excalidraw repository
-  as of 18/10/2026 (commit \commitref).
+  were defined with the Goal-Question-Metric (GQM) approach. The baseline is
+  the Excalidraw repository as of 18/10/2026 (commit \commitref).
 \end{abstract}
 
 \begin{resumo}
@@ -54,12 +53,9 @@
   garantia da qualidade. O processo segue a ISO/IEC 25040 e o modelo de
   qualidade da ISO/IEC 25010:2023, com foco em Manutenibilidade, Confiabilidade
   e Flexibilidade. As métricas e os critérios de julgamento foram definidos com a
-  abordagem Goal-Question-Metric (GQM), e o projeto foi acompanhado com
-  indicadores do PSM/CID. A linha de base é o repositório do Excalidraw em
-  18/10/2026 (commit \commitref).
+  abordagem Goal-Question-Metric (GQM). A linha de base é o repositório do
+  Excalidraw em 18/10/2026 (commit \commitref).
 \end{resumo}
-
-\tableofcontents
 
 % % % % % % % % % % % % SEÇÕES DO ARTIGO % % % % % % % % % % %
 \section{Introdução}
@@ -76,41 +72,64 @@ O trabalho foi estruturado com base no processo em quatro fases da norma ISO/IEC
 
 Toda a documentação complementar, atas de reunião e relatórios de medição estão disponíveis no repositório do grupo: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}.
 
-\textbf{Estrutura do artigo.} A Seção~\ref{sec:referencial} apresenta a fundamentação teórica; a Seção~\ref{sec:metodologia} descreve a metodologia de desenvolvimento do projeto; a Seção~\ref{sec:fase1} detalha a Fase~1 com escopo, interessados e requisitos levantados; a Seção~\ref{sec:fase2} resume a especificação das métricas na Fase~2 com GQM; e a Seção~\ref{sec:conclusao} reúne as considerações parciais desta entrega. As Fases~3 e~4 farão parte da entrega seguinte da disciplina.
+\textbf{Estrutura do artigo.} A Seção~\ref{sec:referencial} apresenta a fundamentação teórica; a Seção~\ref{sec:metodologia} descreve a metodologia de avaliação e a estrutura de governança da equipe; a Seção~\ref{sec:fase1} detalha a Fase~1 com escopo, interessados e requisitos levantados; a Seção~\ref{sec:fase2} resume a especificação das métricas na Fase~2 com GQM e os critérios de julgamento; e a Seção~\ref{sec:conclusao} reúne as considerações parciais desta entrega. As Fases~3 e~4 farão parte da entrega seguinte da disciplina.
 
 % ================================================================
 \section{Referencial Teórico}
 \label{sec:referencial}
 
-Para dar suporte metodológico às decisões da avaliação, esta seção reúne os principais conceitos e modelos utilizados: as normas da família ISO/IEC 25000, o processo da ISO/IEC 25040, o paradigma GQM e a gestão com base no PSM/CID.
-
-\subsection{Família ISO/IEC 25000 (SQuaRE)}
-
-A série de normas ISO/IEC 25000, conhecida pelo acrônimo \textbf{SQuaRE} (\textit{Systems and Software Quality Requirements and Evaluation}), consolida as melhores práticas internacionais para especificação e avaliação da qualidade de software \cite{iso25010}, substituindo os padrões anteriores ISO/IEC 9126 e 14598. A série é estruturada em cinco divisões: 2500n (Gestão da Qualidade), 2501n (Modelos de Qualidade), 2502n (Medição), 2503n (Requisitos) e 2504n (Processo de Avaliação). No presente estudo, a investigação fundamenta-se principalmente nas diretrizes das normas ISO/IEC 25010:2023 e ISO/IEC 25040.
-
-\subsection{ISO/IEC 25010:2023: Modelo de Qualidade do Produto}
-
-A revisão de 2023 da ISO/IEC 25010 organiza a qualidade do produto de software em \textbf{nove características} de alto nível \cite{iso25010}. Em comparação com a edição de 2011, destacam-se a substituição do termo \textit{Portabilidade} por \textbf{Flexibilidade}, a inclusão formal de \textbf{Escalabilidade} como subcaracterística e a introdução de \textbf{Segurança de Proteção} (\textit{Safety}).
-
-Diante do escopo de um projeto de código aberto sem acesso direto aos servidores em produção, selecionamos três características essenciais: \textbf{Manutenibilidade} (5 subcaracterísticas), \textbf{Confiabilidade} (4 subcaracterísticas) e \textbf{Flexibilidade} (4 subcaracterísticas), totalizando \textbf{13 subcaracterísticas} sob escrutínio da equipe.
-
-\subsection{ISO/IEC 25040: Processo de Avaliação}
-
-A ISO/IEC 25040 prescreve um processo sistemático em quatro etapas para conduzir avaliações de qualidade \cite{iso25040}. Primeiro, estabelecem-se os requisitos da avaliação e, em seguida, especificam-se as métricas e os critérios. Depois, projetam-se os procedimentos de teste e, por fim, executam-se as medições, que produzem o diagnóstico. Este trabalho segue esse fluxo, detalhando as Fases~1 e~2 nesta primeira entrega.
-
-\subsection{Goal-Question-Metric (GQM)}
-
-O paradigma \textbf{GQM} (\textit{Goal-Question-Metric}), concebido por Basili, Caldiera e Rombach \cite{basili1994gqm}, estrutura a medição em três níveis hierárquicos: o \textbf{Objetivo} conceitual (o que se deseja avaliar e com que finalidade), as \textbf{Questões} operacionais (perguntas que caracterizam o alcance do objetivo) e as \textbf{Métricas} objetivas (dados quantitativos ou qualitativos que respondem a essas perguntas). A principal vantagem do GQM é evitar a coleta indiscriminada de dados: cada indicador só existe porque responde a uma pergunta técnica diretamente vinculada às características de qualidade priorizadas.
-
-\subsection{PSM/CID: Practical Software Measurement}
-
-O modelo \textbf{PSM} (\textit{Practical Software Measurement}) \cite{psm} fornece um método para acompanhamento e governança de projetos de software por meio de indicadores agrupados em Categorias de Informação de Decisão (\textbf{CID}). Ao longo do trabalho, acompanhamos o esforço e os prazos da equipe em três categorias: Desempenho dos Processos (produtividade), Calendário e Progresso (cumprimento de marcos) e Recursos e Custos (horas dedicadas e estimadas), com registros documentados nas atas e relatórios de medição.
+A fundamentação deste trabalho apoia-se na série de normas internacionais ISO/IEC 25000 (SQuaRE) \cite{iso25000}, empregando o modelo de qualidade da ISO/IEC 25010:2023 \cite{iso25010} concentrado nas características priorizadas de Manutenibilidade, Confiabilidade e Flexibilidade (13 subcaracterísticas investigadas) e o processo de avaliação em quatro fases da ISO/IEC 25040 \cite{iso25040}, que estrutura sequencialmente os requisitos de avaliação, a especificação das métricas e critérios, o projeto dos procedimentos e a execução empírica para emissão de diagnósticos e recomendações de melhoria. Para operacionalizar a medição de forma orientada a objetivos e sem dispersão, adota-se o paradigma Goal-Question-Metric (GQM) proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}, que estrutura a investigação em objetivos conceituais formulados sob a perspectiva dos interessados, questões operacionais e métricas quantitativas de software.
 
 % ================================================================
 \section{Metodologia}
 \label{sec:metodologia}
 
-% Metodologia de desenvolvimento do projeto: conteúdo da issue #26.
+A condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\ref{fig:metodologia} sintetiza visualmente a metodologia adotada pela equipe, dividida nas quatro fases sequenciais do processo de avaliação e em uma dimensão transversal de governança da equipe. As subseções seguintes descrevem detalhadamente o papel e a operacionalização de cada uma das cinco caixas representadas no diagrama.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figura-metodologia.png}
+\caption{Diagrama metodológico do processo de avaliação da qualidade (Fonte: Equipe Karen Jones).}
+\label{fig:metodologia}
+\end{figure}
+
+\subsection{Caixa 1: Requisitos de Avaliação (Fase 1)}
+
+A primeira etapa do fluxo metodológico estabelece as fronteiras e as prioridades da avaliação antes de qualquer atividade de medição. A equipe delimitou como propósito primordial o diagnóstico técnico do Excalidraw para identificar pontos de melhoria no produto, selecionando como linha de base estática o commit \commitref{} da branch principal do repositório oficial. Em seguida, foram mapeados sete grupos de partes interessadas com influência sobre o sistema, a partir dos quais foi construída uma matriz de impacto e risco técnico para priorizar três características de qualidade da ISO/IEC 25010:2023: Manutenibilidade (prioridade 1), Confiabilidade (prioridade 2) e Flexibilidade (prioridade 3). Essa priorização resultou em 13 subcaracterísticas investigadas e na formalização de 36 requisitos técnicos de avaliação (códigos RQ-MAN-01 a RQ-FLEX-12), os quais delimitam as perguntas concretas que o software deve permitir responder. Esta fase foi conduzida pelo Subgrupo F1/F3 como parte integrante da Entrega 1.
+
+\subsection{Caixa 2: Especificação da Avaliação (Fase 2)}
+
+A segunda etapa realiza a ponte entre os requisitos de qualidade e sua mensuração objetiva por meio do paradigma GQM. As três características priorizadas foram desdobradas em três objetivos conceituais de medição (G1, G2 e G3) formulados sob a perspectiva dos interessados. Cada objetivo foi refinado em questões operacionais, totalizando 13 questões associadas a hipóteses técnicas formais que registram as expectativas prévias da equipe. Para responder a essas questões, foi estabelecido um catálogo de 36 métricas objetivas com fórmulas matemáticas de cálculo, cobrindo análise estática do código, suíte de testes e histórico público do projeto. Para viabilizar a interpretação imparcial dos resultados, a equipe definiu previamente à coleta uma escala ordinal de cinco níveis inspirada no modelo SIG de Heitlager, Kuipers e Visser \cite{heitlager2007} e critérios conclusivos de julgamento baseados no esquema de certificação da TÜViT \cite{baggen2010}, classificando cada característica em Atende, Não Atende ou Inconclusivo. Esta fase foi conduzida pelo Subgrupo F2/F4, completando o escopo da Entrega 1.
+
+\subsection{Caixa 3: Projeto da Avaliação (Fase 3)}
+
+A terceira etapa planeja a instrumentação e a infraestrutura técnica necessárias para executar as medições na fase subsequente do projeto. Nela, a equipe estrutura os roteiros operacionais de teste e os procedimentos de inspeção estática, selecionando ferramentas consagradas no ecossistema TypeScript e React, tais como o linter ESLint, a API do compilador oficial da linguagem, o analisador de árvore sintática ts-morph, a ferramenta de contagem de linhas cloc e o executor de testes Vitest. Além disso, são formalizados o Plano de Medição, que define ferramentas, momentos de coleta e responsáveis para cada métrica, e o Plano de Análise, que antecipa o processamento e a agregação dos dados. A execução desta etapa está planejada para a Entrega 2 da disciplina sob a responsabilidade do Subgrupo F1/F3.
+
+\subsection{Caixa 4: Execução da Avaliação e Julgamento (Fase 4)}
+
+A quarta etapa materializa a avaliação por meio da coleta empírica das 36 métricas sobre a linha de base congelada do Excalidraw. Os valores mensurados são confrontados com as hipóteses técnicas estabelecidas e processados por meio de agregação matemática em duas etapas: primeiro calculam-se as médias aritméticas das métricas de cada questão e, em seguida, as médias das questões para obter a pontuação de cada característica de alto nível. Aplicando os critérios de corte da TÜViT, a equipe emite o diagnóstico de conformidade do produto e cataloga as fragilidades encontradas nos níveis Ruim e Muito Ruim. Com base nesse diagnóstico, são propostas intervenções técnicas de melhoria e concebido um protótipo de interface de alta fidelidade para o sistema, completando o ciclo da Entrega 2 sob a liderança do Subgrupo F2/F4.
+
+\subsection{Caixa 5: Estrutura da Equipe e Governança no GitHub}
+
+A quinta caixa representa a sustentação operacional transversal de todo o trabalho, articulando a organização dos seis membros da Equipe Karen Jones e a governança no repositório. Para viabilizar paralelismo sem sobreposição de tarefas, os integrantes foram organizados em dois subgrupos estáveis de três membros, conforme sintetizado na Tabela~\ref{tab:subgrupos}: o Subgrupo F1/F3 (Davi Pierre, Gabriel Monteiro e Letícia de Carvalho) responde pelas Fases 1 e 3, enquanto o Subgrupo F2/F4 (Wanjo Christopher Paraizo Escobar, Luiz Henrique Soares e Maria Eduarda) responde pelas Fases 2 e 4. A redação colaborativa do artigo científico e as apresentações perante a banca avaliadora nos pontos de controle ocorrem de maneira compartilhada por todos os integrantes.
+
+\begin{table}[!ht]
+\centering
+\caption{Estrutura organizacional da equipe e distribuição de responsabilidades}
+\label{tab:subgrupos}
+\vspace{4pt}
+\small
+\begin{tabular}{p{2.2cm}p{3.8cm}p{2.0cm}p{4.2cm}}
+\toprule
+\textbf{Subgrupo} & \textbf{Integrantes} & \textbf{Fases} & \textbf{Escopo Principal} \\
+\midrule
+Subgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Requisitos, partes interessadas, modelo de qualidade e projeto dos testes \\
+Subgrupo F2/F4 & Christopher Paraizo, Luiz Henrique Soares e Maria Eduarda & Fase 2 e Fase 4 & Objetivos e métricas GQM, pontuação, execução prática e ações de melhoria \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+O fluxo de trabalho no GitHub é regido pelo documento de contribuição do projeto. O processo veda expressamente qualquer alteração ou envio direto na branch principal (\texttt{main}). Toda atividade técnica ou documental nasce a partir de uma issue com formulário padronizado, contendo estimativa preliminar de esforço em horas, prazos regimentais e critérios de pronto. A partir da issue cadastrada, cria-se uma branch temática individual no padrão de nomenclatura por tipo e área (a exemplo de \texttt{docs/f1-...} ou \texttt{docs/artigo-...}). Concluída a atividade, abre-se um pull request apontando para a branch principal, contendo o fechamento automático da issue de origem e a declaração formal de uso de inteligência artificial generativa. Nenhum pull request é integrado sem a revisão formal e a aprovação prévia de ao menos um integrante do grupo que não seja autor da contribuição, assegurando a integridade e a rastreabilidade contínua da linha de base documental.
 
 % ================================================================
 \section{Fase 1: Requisitos de Avaliação}
@@ -456,11 +475,7 @@ No ODS~10 (Redução das Desigualdades), ao adotar a licença MIT e permitir a e
 \section{Fase 2: Especificação da Avaliação}
 \label{sec:fase2}
 
-A Fase 2 da ISO/IEC 25040 realiza a transição entre o levantamento de requisitos de qualidade e a sua operacionalização prática por meio da abordagem Goal-Question-Metric (GQM) \cite{basili1994gqm}. Para cada subcaracterística priorizada na Fase~1, a equipe estabeleceu objetivos de medição formalizados sob a ótica dos interessados, desdobrados em questões investigativas e métricas com critérios claros de julgamento.
-
-O processo foi estruturado em quatro etapas principais. A primeira foi a definição dos objetivos GQM, que formaliza o propósito de medição de cada característica do produto, como avaliar a modularidade do monorepo sob o ponto de vista dos mantenedores e colaboradores. Em seguida, foram formuladas as questões operacionais, perguntas técnicas diretamente associadas aos requisitos de avaliação (RQ-MAN-01 a RQ-FLEX-12). A terceira etapa foi a seleção e a padronização das métricas, que reúnem medidas de análise estática, como complexidade ciclomática, linhas de código por arquivo, acoplamento aferente e eferente e taxa de cobertura de testes, e inspeções qualitativas com escalas graduadas. Por fim, foram definidos os critérios de julgamento, com faixas de aceitabilidade para que os dados coletados na fase seguinte possam ser classificados sem viés subjetivo.
-
-O catálogo detalhado contendo a totalidade das questões GQM, fórmulas de cálculo e réguas de pontuação está integralmente documentado no repositório do projeto\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}.
+% Especificação da avaliação com GQM: conteúdo da issue #78.
 
 % ================================================================
 \section{Considerações Parciais}
@@ -475,7 +490,6 @@ Como resultado desta primeira etapa, obtivemos uma base de 36 requisitos de aval
 \bibliographystyle{sbc}
 \bibliography{bibliography}
 
-\newpage
 \appendix
 \section{Tabela de Contribuição dos Membros da Equipe}
 Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes para a entrega do projeto.
@@ -503,7 +517,7 @@ Maria Eduarda        & 6  & 17.5h & 18.5h & 14/5  & 22.06\% \\
 \end{table}
 
 \section{Declaração de Uso de Inteligência Artificial}
-Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara o uso das ferramentas de IA generativa Antigravity / Gemini 3.8 e Claude Code. Elas auxiliaram na formatação e na adaptação de diretrizes de governança em PRs iniciais, no script de cálculo de métricas em Python (\texttt{scripts/coleta\_psm.py}), na conversão de estruturas para código LaTeX e no levantamento dos ODS.
+Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara o uso das ferramentas de IA generativa Antigravity / Gemini 3.8 e Claude Code. Elas auxiliaram na formatação e na adaptação de diretrizes de governança em PRs iniciais, na elaboração de scripts auxiliares de automação em Python, na conversão de estruturas para código LaTeX e no levantamento dos ODS.
 
 Todo código-fonte, dado numérico e conteúdo textual gerado ou adaptado foi integralmente revisado, confrontado com os artefatos reais do GitHub e validado pelos integrantes da equipe, garantindo a fidelidade técnica dos dados e a ausência de alucinações.
 
