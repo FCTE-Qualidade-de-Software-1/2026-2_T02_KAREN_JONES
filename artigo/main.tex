@@ -1,11 +1,14 @@
-\documentclass[a4paper, 12pt]{article}
+﻿\documentclass[12pt]{article}
+
+\makeatletter
+\providecommand{\normalsfcodes}{\relax}
+\makeatother
 
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{sbc-template}
 \usepackage{amsmath}
-\usepackage{indentfirst}
 \usepackage{graphicx}
-\usepackage{multicol}
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{booktabs}
@@ -13,7 +16,6 @@
 \usepackage{microtype}
 \usepackage{placeins}
 \usepackage{needspace}
-\usepackage[top=1.75cm, bottom=1.75cm, left=2.2cm, right=1.8cm]{geometry}
 
 % Versão do Excalidraw usada como linha de base da avaliação
 \newcommand{\commitref}{\href{https://github.com/excalidraw/excalidraw/commit/e1b7aacb356a492aa1e0fc6eb57b8896124027f0}{\texttt{e1b7aac}}}
@@ -26,34 +28,31 @@
     urlcolor=blue
 }
 
+\title{Avaliação da Qualidade de Produto de Software:\\Estudo de Caso no Software Open Source Excalidraw segundo a ISO/IEC 25000 (SQuaRE)}
+
+\author{Christopher\inst{1} \and Davi Pierre\inst{1} \and Gabriel Monteiro\inst{1} \\
+        Letícia de Carvalho\inst{1} \and Luiz Henrique Soares\inst{1} \and Maria Eduarda\inst{1}}
+
+\address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE) -- Universidade de Brasília\\
+  Qualidade de Software 1 -- Turma 02 -- Profa. Cristiane Soares Ramos\\
+  Linha de base: Repositório oficial em 18/10/2026 (commit \texttt{e1b7aac})
+}
+
 \begin{document}
 \sloppy
 \hbadness=10000
 \hfuzz=20pt
-\hypersetup{pageanchor=true}
-\pagenumbering{arabic}
 
-% Cabeçalho direto na página 1 (sem capa/contracapa conforme orientação do PC1)
-\begin{center}
-	\textbf{\LARGE AVALIAÇÃO DA QUALIDADE DE PRODUTO DE SOFTWARE}\\[10pt]
-	\textbf{\Large Estudo de Caso no Software Open Source Excalidraw segundo a ISO/IEC 25000 (SQuaRE)}\\[16pt]
-	
-	{\normalsize
-	Christopher \quad$\cdot$\quad Davi Pierre \quad$\cdot$\quad Gabriel Monteiro\\[3pt]
-	Letícia de Carvalho \quad$\cdot$\quad Luiz Henrique Soares \quad$\cdot$\quad Maria Eduarda\\[10pt]
-	\small Faculdade de Ciências e Tecnologias em Engenharia -- Universidade de Brasília (FCTE/UnB)\\
-	Disciplina de Qualidade de Software 1 -- Turma 02 -- Profa. Dra. Cristiane Soares Ramos\\[3pt]
-	Linha de base: Repositório oficial em 18/10/2026 (commit \texttt{e1b7aac})
-	}
-\end{center}
+\maketitle
 
-\vspace{12pt}
+\begin{abstract}
+This paper presents a software product quality evaluation of the open-source software Excalidraw, a web-based tool for creating sketches and diagrams with real-time collaboration. The study was conducted by the Karen Jones Team within the Software Quality 1 course at the University of Brasília (FCTE/UnB), acting as an independent quality assurance (QA) team. The evaluation process is based on the ISO/IEC 25040 standard and adopts the ISO/IEC 25010:2023 product quality model, focusing on three prioritized characteristics: Maintainability, Reliability, and Flexibility. Metrics and decision criteria were formulated using the Goal-Question-Metric (GQM) approach. All analyses used commit \texttt{e1b7aac} from the main branch of the project as a baseline.
+\end{abstract}
 
-% % % % % % % % % % % % SEÇÕES DO ARTIGO % % % % % % % % % % %
-\section{Resumo}
+\begin{resumo}
 Este trabalho apresenta a avaliação da qualidade de produto do software de código aberto Excalidraw, uma ferramenta web voltada para criação de diagramas e desenhos livres com colaboração em tempo real. O estudo foi desenvolvido pela Equipe Karen Jones na disciplina de Qualidade de Software 1 da Universidade de Brasília (FCTE/UnB), assumindo o papel de equipe independente de garantia da qualidade (QA). O processo baseia-se na norma ISO/IEC 25040 e adota o modelo de qualidade da ISO/IEC 25010:2023, com foco em três características priorizadas: Manutenibilidade, Confiabilidade e Flexibilidade. As métricas e critérios de julgamento foram formulados por meio da abordagem Goal-Question-Metric (GQM). As análises tiveram como linha de base o commit \texttt{e1b7aac} da branch principal do projeto.
+\end{resumo}
 
-\vspace{8pt}
 \noindent\textbf{Palavras-chave:} Qualidade de Software, SQuaRE, ISO/IEC 25010, ISO/IEC 25040, GQM, Excalidraw.
 
 \section{Introdução}
@@ -86,32 +85,30 @@ A fundamentação deste trabalho apoia-se na série de normas internacionais ISO
 
 Para operacionalizar a medição de forma orientada a objetivos e sem dispersão empírica, adota-se o paradigma \textbf{GQM} (\textit{Goal-Question-Metric}) proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}. O método estrutura a avaliação em três níveis hierárquicos: os \textbf{Objetivos} conceituais formulados sob a perspectiva das partes interessadas (o que avaliar e com qual finalidade), as \textbf{Questões} operacionais (perguntas que caracterizam o alcance dos objetivos e investigam hipóteses prévias) e as \textbf{Métricas} objetivas (indicadores quantitativos com fórmulas matemáticas que respondem a essas perguntas). A principal vantagem do GQM é garantir que cada métrica coletada responda diretamente a uma necessidade real do produto, assegurando a rastreabilidade entre os requisitos de qualidade e os dados mensurados.
 
+\subsection{Trabalhos Relacionados}
+\label{subsec:trabalhos-relacionados}
+
+Diversos estudos na literatura abordam a avaliação de qualidade de software de código aberto com base em normas e modelos de medição consolidados. Samoladas et al.~\cite{samoladas2008} propuseram o modelo SQO-OSS, que associa métricas automatizadas a dimensões de qualidade de projetos open source. Adewumi et al.~\cite{adewumi2015} avaliaram modelos de qualidade para software livre confrontando-os com as características da ISO/IEC 25010, identificando lacunas de cobertura. Yılmaz e Tarhan~\cite{yilmaz2022} conduziram uma revisão sistemática da literatura sobre modelos de avaliação de qualidade para OSS, sintetizando como padrões internacionais são adaptados empiricamente. Van Solingen e Berghout~\cite{vansolingen1999} apresentaram um guia prático de aplicação do GQM para melhoria da qualidade em desenvolvimento de software. Samoladas et al.~\cite{samoladas2004} realizaram um estudo empírico pioneiro sobre manutenibilidade em larga escala em projetos de código aberto. O presente trabalho situa-se nessa linha ao aplicar a ISO/IEC 25010:2023 com GQM a um projeto real de código aberto, contribuindo com um estudo de caso inédito sobre o Excalidraw.
+
 % ================================================================
 \section{Metodologia}
 \label{sec:metodologia}
 
-A condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\ref{fig:metodologia} sintetiza a metodologia adotada pela equipe, articulada nas quatro fases sequenciais da avaliação e na dimensão transversal de governança.
+A condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A metodologia está articulada nas quatro fases sequenciais da avaliação e na dimensão transversal de governança, conforme descrito nas subseções a seguir.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.68\textwidth]{figura-metodologia}
-\caption{Diagrama metodológico do processo de avaliação da qualidade (Fonte: Equipe Karen Jones).}
-\label{fig:metodologia}
-\end{figure}
-
-\subsection{Caixa 1: Requisitos de Avaliação (Fase 1)}
+\subsection{Fase 1: Requisitos de Avaliação}
 Estabelece o escopo e as prioridades do estudo antes da medição empírica. A equipe definiu como propósito identificar pontos de melhoria no Excalidraw, adotando o commit congelado \texttt{e1b7aac} como linha de base estática. A partir da identificação de sete partes interessadas e de uma matriz de impacto $\times$ risco técnico, priorizaram-se três características da ISO/IEC 25010:2023: Manutenibilidade ($P1$), Confiabilidade ($P2$) e Flexibilidade ($P3$). Foram delineadas 13 subcaracterísticas e 36 requisitos formais de avaliação (RQ-MAN-01 a RQ-FLEX-12). Esta etapa foi conduzida pelo Subgrupo F1/F3 na Entrega 1.
 
-\subsection{Caixa 2: Especificação da Avaliação (Fase 2)}
+\subsection{Fase 2: Especificação da Avaliação}
 Traduz os requisitos de qualidade em medição objetiva via GQM. As características foram desdobradas em três objetivos conceituais (G1, G2 e G3), 13 questões com hipóteses técnicas e um catálogo de 36 métricas com fórmulas matemáticas de cálculo. Para garantir imparcialidade prévia à coleta, definiu-se uma escala ordinal de cinco níveis (Heitlager/SIG) e critérios conclusivos de corte inspirados na TÜViT (Atende, Não Atende e Inconclusivo). Esta etapa foi conduzida pelo Subgrupo F2/F4 na Entrega 1.
 
-\subsection{Caixa 3: Projeto da Avaliação (Fase 3)}
+\subsection{Fase 3: Projeto da Avaliação}
 Planeja a infraestrutura de medição e automação para inspeção estática e testes no ecossistema TypeScript e React, selecionando ferramentas consagradas (ESLint, API do TypeScript, ts-morph, cloc e Vitest). Formalizam-se o Plano de Medição e o Plano de Análise, preparando o processamento dos dados. A execução está planejada para a Entrega 2 sob a responsabilidade do Subgrupo F1/F3.
 
-\subsection{Caixa 4: Execução da Avaliação e Julgamento (Fase 4)}
+\subsection{Fase 4: Execução da Avaliação e Julgamento}
 Materializa a coleta empírica das 36 métricas sobre a linha de base congelada, confrontando os resultados com as hipóteses formuladas. A consolidação adota agregação matemática em duas etapas (média das métricas por questão e média das questões por característica), aplicando os critérios de corte da TÜViT para emissão do diagnóstico final, recomendação de melhorias e concepção de protótipo de interface de alta fidelidade na Entrega 2 pelo Subgrupo F2/F4.
 
-\subsection{Caixa 5: Estrutura da Equipe e Governança no GitHub}
+\subsection{Estrutura da Equipe e Governança no GitHub}
 Sustentação operacional transversal do projeto. A equipe organizou-se em dois subgrupos estáveis de três integrantes (Tabela~\ref{tab:subgrupos}) para atuar em paralelo sem sobreposição de escopo. A escrita do artigo e as apresentações ocorrem de maneira compartilhada por todos os membros.
 
 \begin{table}[!ht]
@@ -120,7 +117,7 @@ Sustentação operacional transversal do projeto. A equipe organizou-se em dois 
 \label{tab:subgrupos}
 \vspace{4pt}
 \small
-\begin{tabular}{p{2.3cm}p{4.2cm}p{2.0cm}p{6.5cm}}
+\begin{tabular}{p{2.2cm}p{3.8cm}p{1.8cm}p{5.5cm}}
 \toprule
 \textbf{Subgrupo} & \textbf{Integrantes} & \textbf{Fases} & \textbf{Escopo Principal} \\
 \midrule
@@ -213,7 +210,7 @@ Como não temos acesso a servidores em produção ou a métricas internas de tel
 \label{tab:implicacoes}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.4cm}p{4.2cm}p{9.0cm}}
+\begin{tabular}{p{2.6cm}p{3.7cm}p{7.3cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Viável medir} & \textbf{Não viável medir} \\
 \midrule
@@ -303,7 +300,7 @@ A partir do processo de priorização, consolidamos o modelo de qualidade em tr�
 \label{tab:manut}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.4cm}p{13.2cm}}
+\begin{tabular}{p{2.4cm}p{11.6cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
 \midrule
@@ -322,7 +319,7 @@ Testabilidade     & Estrutura de testes automatizados em múltiplos níveis (uni
 \label{tab:confiab}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.4cm}p{13.2cm}}
+\begin{tabular}{p{2.4cm}p{11.6cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
 \midrule
@@ -340,7 +337,7 @@ Recuperabilidade  & Salvamento automático local, restauração do último estad
 \label{tab:flex}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.4cm}p{13.2cm}}
+\begin{tabular}{p{2.4cm}p{11.6cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
 \midrule
@@ -364,7 +361,7 @@ Para orientar a coleta, definimos seis objetos de avaliação concretos que comp
 \label{tab:objetos}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{0.8cm}p{5.5cm}p{9.2cm}}
+\begin{tabular}{p{0.7cm}p{4.8cm}p{8.0cm}}
 \toprule
 \textbf{ID} & \textbf{Objeto} & \textbf{Características} \\
 \midrule
@@ -391,7 +388,7 @@ Os requisitos representam as perguntas técnicas que o produto deve permitir res
 \label{tab:reqman}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.1cm}p{11.3cm}p{2.6cm}}
+\begin{tabular}{p{2.2cm}p{8.8cm}p{2.6cm}}
 \toprule
 \textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
 \midrule
@@ -418,7 +415,7 @@ RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade
 \label{tab:reqconf}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.5cm}p{10.9cm}p{2.6cm}}
+\begin{tabular}{p{2.2cm}p{8.8cm}p{2.6cm}}
 \toprule
 \textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
 \midrule
@@ -443,7 +440,7 @@ RQ-CONF-11 & Desfazer e refazer ações é possível? & Recuperabilidade \\
 \label{tab:reqflex}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.1cm}p{11.3cm}p{2.6cm}}
+\begin{tabular}{p{2.2cm}p{8.8cm}p{2.6cm}}
 \toprule
 \textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
 \midrule
@@ -491,7 +488,7 @@ A questão Q2.1 investiga as correções, o tempo de resolução de defeitos e a
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.95}
-\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\begin{tabular}{p{1.0cm}p{3.4cm}p{4.7cm}p{5.0cm}}
 \toprule
 \textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
 \midrule
@@ -540,7 +537,7 @@ as fontes de dados de cada métrica estão disponíveis no documento
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.95}
-\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\begin{tabular}{p{1.0cm}p{3.4cm}p{4.7cm}p{5.0cm}}
 \toprule
 \textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
 \midrule
@@ -587,7 +584,7 @@ As faixas de aceitação que definem os intervalos numéricos de cada nível for
 \label{tab:escala_pontuacao}
 \vspace{4pt}
 \small
-\begin{tabular}{lccllp{3.3cm}}
+\begin{tabular}{lccllp{2.7cm}}
 \toprule
 \textbf{Nível} & \textbf{Símbolo} & \textbf{Pontos} & \textbf{Prop. Desejável} & \textbf{Prop. Indesejável} & \textbf{Leitura do Nível} \\
 \midrule
@@ -647,6 +644,22 @@ BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Im
 
 \bibitem{nielsen1993}
 NIELSEN, J. \textit{Usability Engineering}. Boston: Academic Press, 1993.
+
+
+\bibitem{samoladas2008}
+SAMOLADAS, I.; GOUSIOS, G.; SPINELLIS, D.; STAMELOS, I. The SQO-OSS Quality Model: Measurement Based Open Source Software Evaluation. In: \textit{Open Source Development, Communities and Quality (OSS 2008)}. Springer, p. 237--248, 2008.
+
+\bibitem{adewumi2015}
+ADEWUMI, A.; MISRA, S.; OMOREGBE, N. Evaluating Open Source Software Quality Models Against ISO 25010. In: \textit{IEEE International Conference on Computer and Information Technology (CIT 2015)}. IEEE, p. 872--877, 2015.
+
+\bibitem{yilmaz2022}
+YILMAZ, N.; TARHAN, A. K. Quality Evaluation Models or Frameworks for Open Source Software: A Systematic Literature Review. \textit{Journal of Software: Evolution and Process}, v. 34, n. 12, e2495, 2022.
+
+\bibitem{vansolingen1999}
+VAN SOLINGEN, R.; BERGHOUT, E. \textit{The Goal/Question/Metric Method: A Practical Guide for Quality Improvement of Software Development}. McGraw-Hill, 1999.
+
+\bibitem{samoladas2004}
+SAMOLADAS, I.; STAMELOS, I.; ANGELIS, L.; OIKONOMOU, A. Open Source Software Development Should Strive for Even Greater Code Maintainability. \textit{Communications of the ACM}, v. 47, n. 10, p. 68--73, 2004.
 
 \end{thebibliography}
 
