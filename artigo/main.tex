@@ -1,63 +1,56 @@
-\documentclass[12pt]{article}
+\documentclass[a4paper, 12pt]{article}
 
-% O babel vem antes do modelo: com o hyperref carregado, o bloco final do
-% sbc-template.sty executa \makeatother no fim do preâmbulo, o que quebra o
-% código do babel registrado depois dele.
+\usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
-
-% Modelo para publicação de artigos da SBC (sbc-template.sty, versão de 2017)
-\usepackage{sbc-template}
-\usepackage{graphicx,url}
-
 \usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{hyperref}
 \usepackage{booktabs}
-\usepackage[hidelinks]{hyperref}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage[top=1.85cm, bottom=1.85cm, left=2.5cm, right=2.0cm]{geometry}
 
-\sloppy
-
-% Versão do Excalidraw usada como linha de base da avaliação
-\newcommand{\commitref}{\href{https://github.com/excalidraw/excalidraw/commit/e1b7aacb356a492aa1e0fc6eb57b8896124027f0}{\texttt{e1b7aac}}}
-
-\title{Avaliação da Qualidade de Produto de Software:\\ Estudo de Caso no Software Open Source Excalidraw\\ segundo a ISO/IEC 25000 (SQuaRE)}
-
-\author{Wanjo Christopher Paraizo Escobar, Davi Pierre, Gabriel Monteiro,\\
-  Letícia de Carvalho, Luiz Henrique Soares, Maria Eduarda}
-
-\address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE)\\
-  Universidade de Brasília (UnB), Gama, DF, Brasil\\
-  Repositório da equipe:
-  \email{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}
+\renewcommand{\arraystretch}{0.9}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
 }
 
 \begin{document}
+\sloppy
+\hbadness=10000
+\hfuzz=20pt
+\hypersetup{pageanchor=true}
+\pagenumbering{arabic}
 
-\maketitle
+% Cabeçalho direto na página 1 (sem capa/contracapa conforme orientação do PC1)
+\begin{center}
+	\textbf{\LARGE AVALIAÇÃO DA QUALIDADE DE PRODUTO DE SOFTWARE}\\[10pt]
+	\textbf{\Large Estudo de Caso no Software Open Source Excalidraw segundo a ISO/IEC 25000 (SQuaRE)}\\[16pt]
+	
+	{\normalsize
+	Christopher \quad$\cdot$\quad Davi Pierre \quad$\cdot$\quad Gabriel Monteiro\\[3pt]
+	Letícia de Carvalho \quad$\cdot$\quad Luiz Henrique Soares \quad$\cdot$\quad Maria Eduarda\\[10pt]
+	\small Faculdade de Ciências e Tecnologias em Engenharia -- Universidade de Brasília (FCTE/UnB)\\
+	Disciplina de Qualidade de Software 1 -- Turma 02 -- Profa. Dra. Cristiane Soares Ramos\\[3pt]
+	Linha de base: Repositório oficial em 18/10/2026 (commit \texttt{e1b7aac})
+	}
+\end{center}
 
-\begin{abstract}
-  This paper presents the product quality evaluation of Excalidraw, an open
-  source web tool for diagrams and sketches with real-time collaboration. The
-  study was carried out by the Karen Jones team in the Software Quality 1 course
-  (FCTE/UnB), acting as an independent quality assurance team. The process
-  follows ISO/IEC 25040 and the ISO/IEC 25010:2023 quality model, focusing on
-  Maintainability, Reliability and Flexibility. Metrics and judgment criteria
-  were defined with the Goal-Question-Metric (GQM) approach. The baseline is
-  the Excalidraw repository as of 18/10/2026 (commit \commitref).
-\end{abstract}
-
-\begin{resumo}
-  Este trabalho apresenta a avaliação da qualidade de produto do Excalidraw,
-  ferramenta web de código aberto para diagramas e desenhos com colaboração em
-  tempo real. O estudo foi conduzido pela Equipe Karen Jones na disciplina de
-  Qualidade de Software 1 (FCTE/UnB), no papel de equipe independente de
-  garantia da qualidade. O processo segue a ISO/IEC 25040 e o modelo de
-  qualidade da ISO/IEC 25010:2023, com foco em Manutenibilidade, Confiabilidade
-  e Flexibilidade. As métricas e os critérios de julgamento foram definidos com a
-  abordagem Goal-Question-Metric (GQM). A linha de base é o repositório do
-  Excalidraw em 18/10/2026 (commit \commitref).
-\end{resumo}
+\vspace{12pt}
 
 % % % % % % % % % % % % SEÇÕES DO ARTIGO % % % % % % % % % % %
+\section{Resumo}
+Este trabalho apresenta a avaliação da qualidade de produto do software de código aberto Excalidraw, uma ferramenta web voltada para criação de diagramas e desenhos livres com colaboração em tempo real. O estudo foi desenvolvido pela Equipe Karen Jones na disciplina de Qualidade de Software 1 da Universidade de Brasília (FCTE/UnB), assumindo o papel de equipe independente de garantia da qualidade (QA). O processo baseia-se na norma ISO/IEC 25040 e adota o modelo de qualidade da ISO/IEC 25010:2023, com foco em três características priorizadas: Manutenibilidade, Confiabilidade e Flexibilidade. As métricas e critérios de julgamento foram formulados por meio da abordagem Goal-Question-Metric (GQM). As análises tiveram como linha de base o commit \texttt{e1b7aac} da branch principal do projeto.
+
+\vspace{8pt}
+\noindent\textbf{Palavras-chave:} Qualidade de Software, SQuaRE, ISO/IEC 25010, ISO/IEC 25040, GQM, Excalidraw.
+
 \section{Introdução}
 
 Garantir a qualidade técnica de um sistema vai muito além de checar se suas funcionalidades executam sem falhas visíveis no navegador. Em ferramentas modernas com múltiplos usuários simultâneos, fatores como organização modular do código, estabilidade perante quedas de rede e capacidade de rodar em diferentes dispositivos são decisivos para que a aplicação continue evoluindo sem acumular custos proibitivos de manutenção. Para mensurar esses aspectos de forma estruturada, a engenharia de software recorre a normas consolidadas, como a família ISO/IEC 25000 (SQuaRE) \cite{iso25010}.
@@ -68,7 +61,7 @@ Apesar do grande alcance do projeto e de sua comunidade ativa, não identificamo
 
 O objetivo principal desta avaliação é diagnosticar a qualidade interna e externa do produto e identificar pontos de melhoria, gerando insumos úteis tanto para os mantenedores quanto para desenvolvedores que integram sua biblioteca. A Equipe Karen Jones conduz essa avaliação como um grupo independente de QA, no âmbito da disciplina de Qualidade de Software 1 da Faculdade de Ciências e Tecnologias em Engenharia (FCTE) da Universidade de Brasília (UnB).
 
-O trabalho foi estruturado com base no processo em quatro fases da norma ISO/IEC 25040 \cite{iso25040}, que começa pelo estabelecimento dos requisitos de avaliação, passa pela especificação da avaliação via GQM e pelo planejamento da execução e termina com a execução das medições e o julgamento dos resultados. A partir do modelo ISO/IEC 25010:2023 \cite{iso25010}, priorizamos três características centrais: \textbf{Manutenibilidade}, \textbf{Confiabilidade} e \textbf{Flexibilidade}.
+O trabalho foi estruturado com base no processo em quatro fases da norma ISO/IEC 25040 \cite{iso25040}: (1)~estabelecimento dos requisitos de avaliação, (2)~especificação da avaliação via GQM, (3)~planejamento da execução e (4)~execução das medições com julgamento dos resultados. A partir do modelo ISO/IEC 25010:2023 \cite{iso25010}, priorizamos três características centrais: \textbf{Manutenibilidade}, \textbf{Confiabilidade} e \textbf{Flexibilidade}.
 
 Toda a documentação complementar, atas de reunião e relatórios de medição estão disponíveis no repositório do grupo: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}.
 
@@ -78,40 +71,43 @@ Toda a documentação complementar, atas de reunião e relatórios de medição 
 \section{Referencial Teórico}
 \label{sec:referencial}
 
-A fundamentação deste trabalho apoia-se na série de normas internacionais ISO/IEC 25000 (SQuaRE) \cite{iso25000}, empregando o modelo de qualidade da ISO/IEC 25010:2023 \cite{iso25010} concentrado nas características priorizadas de Manutenibilidade, Confiabilidade e Flexibilidade (13 subcaracterísticas investigadas) e o processo de avaliação em quatro fases da ISO/IEC 25040 \cite{iso25040}, que estrutura sequencialmente os requisitos de avaliação, a especificação das métricas e critérios, o projeto dos procedimentos e a execução empírica para emissão de diagnósticos e recomendações de melhoria. Para operacionalizar a medição de forma orientada a objetivos e sem dispersão, adota-se o paradigma Goal-Question-Metric (GQM) proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}, que estrutura a investigação em objetivos conceituais formulados sob a perspectiva dos interessados, questões operacionais e métricas quantitativas de software.
+\subsection{Série de Normas ISO/IEC 25000 (SQuaRE)}
+\label{subsec:normas}
+
+A fundamentação deste trabalho apoia-se na série de normas internacionais ISO/IEC 25000 (SQuaRE) \cite{iso25000}, empregando o modelo de qualidade de produto da ISO/IEC 25010:2023 \cite{iso25010} concentrado nas características priorizadas de Manutenibilidade, Confiabilidade e Flexibilidade (13 subcaracterísticas investigadas). Para a condução da avaliação, adota-se o processo em quatro fases da ISO/IEC 25040 \cite{iso25040}, que estrutura sequencialmente: (1)~estabelecimento dos requisitos de avaliação, (2)~especificação da avaliação, (3)~projeto da avaliação e (4)~execução da avaliação com emissão de diagnósticos e recomendações de melhoria técnica.
+
+\subsection{Goal-Question-Metric (GQM)}
+\label{subsec:gqm}
+
+Para operacionalizar a medição de forma orientada a objetivos e sem dispersão empírica, adota-se o paradigma \textbf{GQM} (\textit{Goal-Question-Metric}) proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}. O método estrutura a avaliação em três níveis hierárquicos: os \textbf{Objetivos} conceituais formulados sob a perspectiva das partes interessadas (o que avaliar e com qual finalidade), as \textbf{Questões} operacionais (perguntas que caracterizam o alcance dos objetivos e investigam hipóteses prévias) e as \textbf{Métricas} objetivas (indicadores quantitativos com fórmulas matemáticas que respondem a essas perguntas). A principal vantagem do GQM é garantir que cada métrica coletada responda diretamente a uma necessidade real do produto, assegurando a rastreabilidade entre os requisitos de qualidade e os dados mensurados.
 
 % ================================================================
 \section{Metodologia}
 \label{sec:metodologia}
 
-A condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\ref{fig:metodologia} sintetiza visualmente a metodologia adotada pela equipe, dividida nas quatro fases sequenciais do processo de avaliação e em uma dimensão transversal de governança da equipe. As subseções seguintes descrevem detalhadamente o papel e a operacionalização de cada uma das cinco caixas representadas no diagrama.
+A condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\ref{fig:metodologia} sintetiza a metodologia adotada pela equipe, articulada nas quatro fases sequenciais da avaliação e na dimensão transversal de governança.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\textwidth]{figura-metodologia.png}
+\includegraphics[width=0.68\textwidth]{figura-metodologia}
 \caption{Diagrama metodológico do processo de avaliação da qualidade (Fonte: Equipe Karen Jones).}
 \label{fig:metodologia}
 \end{figure}
 
 \subsection{Caixa 1: Requisitos de Avaliação (Fase 1)}
-
-A primeira etapa do fluxo metodológico estabelece as fronteiras e as prioridades da avaliação antes de qualquer atividade de medição. A equipe delimitou como propósito primordial o diagnóstico técnico do Excalidraw para identificar pontos de melhoria no produto, selecionando como linha de base estática o commit \commitref{} da branch principal do repositório oficial. Em seguida, foram mapeados sete grupos de partes interessadas com influência sobre o sistema, a partir dos quais foi construída uma matriz de impacto e risco técnico para priorizar três características de qualidade da ISO/IEC 25010:2023: Manutenibilidade (prioridade 1), Confiabilidade (prioridade 2) e Flexibilidade (prioridade 3). Essa priorização resultou em 13 subcaracterísticas investigadas e na formalização de 36 requisitos técnicos de avaliação (códigos RQ-MAN-01 a RQ-FLEX-12), os quais delimitam as perguntas concretas que o software deve permitir responder. Esta fase foi conduzida pelo Subgrupo F1/F3 como parte integrante da Entrega 1.
+Estabelece o escopo e as prioridades do estudo antes da medição empírica. A equipe definiu como propósito identificar pontos de melhoria no Excalidraw, adotando o commit congelado \texttt{e1b7aac} como linha de base estática. A partir da identificação de sete partes interessadas e de uma matriz de impacto $\times$ risco técnico, priorizaram-se três características da ISO/IEC 25010:2023: Manutenibilidade ($P1$), Confiabilidade ($P2$) e Flexibilidade ($P3$). Foram delineadas 13 subcaracterísticas e 36 requisitos formais de avaliação (RQ-MAN-01 a RQ-FLEX-12). Esta etapa foi conduzida pelo Subgrupo F1/F3 na Entrega 1.
 
 \subsection{Caixa 2: Especificação da Avaliação (Fase 2)}
-
-A segunda etapa realiza a ponte entre os requisitos de qualidade e sua mensuração objetiva por meio do paradigma GQM. As três características priorizadas foram desdobradas em três objetivos conceituais de medição (G1, G2 e G3) formulados sob a perspectiva dos interessados. Cada objetivo foi refinado em questões operacionais, totalizando 13 questões associadas a hipóteses técnicas formais que registram as expectativas prévias da equipe. Para responder a essas questões, foi estabelecido um catálogo de 36 métricas objetivas com fórmulas matemáticas de cálculo, cobrindo análise estática do código, suíte de testes e histórico público do projeto. Para viabilizar a interpretação imparcial dos resultados, a equipe definiu previamente à coleta uma escala ordinal de cinco níveis inspirada no modelo SIG de Heitlager, Kuipers e Visser \cite{heitlager2007} e critérios conclusivos de julgamento baseados no esquema de certificação da TÜViT \cite{baggen2010}, classificando cada característica em Atende, Não Atende ou Inconclusivo. Esta fase foi conduzida pelo Subgrupo F2/F4, completando o escopo da Entrega 1.
+Traduz os requisitos de qualidade em medição objetiva via GQM. As características foram desdobradas em três objetivos conceituais (G1, G2 e G3), 13 questões com hipóteses técnicas e um catálogo de 36 métricas com fórmulas matemáticas de cálculo. Para garantir imparcialidade prévia à coleta, definiu-se uma escala ordinal de cinco níveis (Heitlager/SIG) e critérios conclusivos de corte inspirados na TÜViT (Atende, Não Atende e Inconclusivo). Esta etapa foi conduzida pelo Subgrupo F2/F4 na Entrega 1.
 
 \subsection{Caixa 3: Projeto da Avaliação (Fase 3)}
-
-A terceira etapa planeja a instrumentação e a infraestrutura técnica necessárias para executar as medições na fase subsequente do projeto. Nela, a equipe estrutura os roteiros operacionais de teste e os procedimentos de inspeção estática, selecionando ferramentas consagradas no ecossistema TypeScript e React, tais como o linter ESLint, a API do compilador oficial da linguagem, o analisador de árvore sintática ts-morph, a ferramenta de contagem de linhas cloc e o executor de testes Vitest. Além disso, são formalizados o Plano de Medição, que define ferramentas, momentos de coleta e responsáveis para cada métrica, e o Plano de Análise, que antecipa o processamento e a agregação dos dados. A execução desta etapa está planejada para a Entrega 2 da disciplina sob a responsabilidade do Subgrupo F1/F3.
+Planeja a infraestrutura de medição e automação para inspeção estática e testes no ecossistema TypeScript e React, selecionando ferramentas consagradas (ESLint, API do TypeScript, ts-morph, cloc e Vitest). Formalizam-se o Plano de Medição e o Plano de Análise, preparando o processamento dos dados. A execução está planejada para a Entrega 2 sob a responsabilidade do Subgrupo F1/F3.
 
 \subsection{Caixa 4: Execução da Avaliação e Julgamento (Fase 4)}
-
-A quarta etapa materializa a avaliação por meio da coleta empírica das 36 métricas sobre a linha de base congelada do Excalidraw. Os valores mensurados são confrontados com as hipóteses técnicas estabelecidas e processados por meio de agregação matemática em duas etapas: primeiro calculam-se as médias aritméticas das métricas de cada questão e, em seguida, as médias das questões para obter a pontuação de cada característica de alto nível. Aplicando os critérios de corte da TÜViT, a equipe emite o diagnóstico de conformidade do produto e cataloga as fragilidades encontradas nos níveis Ruim e Muito Ruim. Com base nesse diagnóstico, são propostas intervenções técnicas de melhoria e concebido um protótipo de interface de alta fidelidade para o sistema, completando o ciclo da Entrega 2 sob a liderança do Subgrupo F2/F4.
+Materializa a coleta empírica das 36 métricas sobre a linha de base congelada, confrontando os resultados com as hipóteses formuladas. A consolidação adota agregação matemática em duas etapas (média das métricas por questão e média das questões por característica), aplicando os critérios de corte da TÜViT para emissão do diagnóstico final, recomendação de melhorias e concepção de protótipo de interface de alta fidelidade na Entrega 2 pelo Subgrupo F2/F4.
 
 \subsection{Caixa 5: Estrutura da Equipe e Governança no GitHub}
-
-A quinta caixa representa a sustentação operacional transversal de todo o trabalho, articulando a organização dos seis membros da Equipe Karen Jones e a governança no repositório. Para viabilizar paralelismo sem sobreposição de tarefas, os integrantes foram organizados em dois subgrupos estáveis de três membros, conforme sintetizado na Tabela~\ref{tab:subgrupos}: o Subgrupo F1/F3 (Davi Pierre, Gabriel Monteiro e Letícia de Carvalho) responde pelas Fases 1 e 3, enquanto o Subgrupo F2/F4 (Wanjo Christopher Paraizo Escobar, Luiz Henrique Soares e Maria Eduarda) responde pelas Fases 2 e 4. A redação colaborativa do artigo científico e as apresentações perante a banca avaliadora nos pontos de controle ocorrem de maneira compartilhada por todos os integrantes.
+Sustentação operacional transversal do projeto. A equipe organizou-se em dois subgrupos estáveis de três integrantes (Tabela~\ref{tab:subgrupos}) para atuar em paralelo sem sobreposição de escopo. A escrita do artigo e as apresentações ocorrem de maneira compartilhada por todos os membros.
 
 \begin{table}[!ht]
 \centering
@@ -119,17 +115,17 @@ A quinta caixa representa a sustentação operacional transversal de todo o trab
 \label{tab:subgrupos}
 \vspace{4pt}
 \small
-\begin{tabular}{p{2.2cm}p{3.8cm}p{2.0cm}p{4.2cm}}
+\begin{tabular}{p{2.3cm}p{4.2cm}p{2.0cm}p{6.5cm}}
 \toprule
 \textbf{Subgrupo} & \textbf{Integrantes} & \textbf{Fases} & \textbf{Escopo Principal} \\
 \midrule
-Subgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Requisitos, partes interessadas, modelo de qualidade e projeto dos testes \\
+Subgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Requisitos, interessados, modelo de qualidade e projeto de testes \\
 Subgrupo F2/F4 & Christopher Paraizo, Luiz Henrique Soares e Maria Eduarda & Fase 2 e Fase 4 & Objetivos e métricas GQM, pontuação, execução prática e ações de melhoria \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-O fluxo de trabalho no GitHub é regido pelo documento de contribuição do projeto. O processo veda expressamente qualquer alteração ou envio direto na branch principal (\texttt{main}). Toda atividade técnica ou documental nasce a partir de uma issue com formulário padronizado, contendo estimativa preliminar de esforço em horas, prazos regimentais e critérios de pronto. A partir da issue cadastrada, cria-se uma branch temática individual no padrão de nomenclatura por tipo e área (a exemplo de \texttt{docs/f1-...} ou \texttt{docs/artigo-...}). Concluída a atividade, abre-se um pull request apontando para a branch principal, contendo o fechamento automático da issue de origem e a declaração formal de uso de inteligência artificial generativa. Nenhum pull request é integrado sem a revisão formal e a aprovação prévia de ao menos um integrante do grupo que não seja autor da contribuição, assegurando a integridade e a rastreabilidade contínua da linha de base documental.
+O fluxo de trabalho no GitHub é estritamente regido pelo guia de contribuição, vedando envios diretos na branch principal (\texttt{main}). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão formal por ao menos um membro do grupo.
 
 % ================================================================
 \section{Fase 1: Requisitos de Avaliação}
@@ -139,7 +135,7 @@ A Fase 1 da ISO/IEC 25040 estabelece o alicerce de todo o trabalho de avaliaçã
 
 \subsection{Propósito da Avaliação}
 
-O propósito primordial definido pela equipe é \textbf{identificar pontos de melhoria no produto Excalidraw}, seguindo as tipologias de avaliação recomendadas na norma e na disciplina. Para isso, a equipe pretende diagnosticar as características prioritárias (Manutenibilidade, Confiabilidade e Flexibilidade) por meio da inspeção do código e dos dados do repositório, documentando as boas práticas já consolidadas no projeto e mapeando os pontos de fragilidade e de acoplamento arquitetural. A partir desse diagnóstico, a equipe vai sugerir ações corretivas, incluindo a concepção de um protótipo de interface de alta fidelidade, e gerar um relatório técnico rastreável.
+O propósito primordial definido pela equipe é \textbf{identificar pontos de melhoria no produto Excalidraw}, seguindo as tipologias de avaliação recomendadas na norma e na disciplina. Para isso, traçamos metas práticas: (1)~diagnosticar as características prioritárias (Manutenibilidade, Confiabilidade e Flexibilidade) via inspeção de código e dados do repositório; (2)~documentar boas práticas já consolidadas no projeto; (3)~mapear pontos de fragilidade e acoplamento arquitetural; (4)~sugerir ações corretivas (incluindo a concepção de um protótipo de interface de alta fidelidade); e (5)~gerar um relatório técnico rastreável.
 
 Ficam fora do escopo do estudo comparações mercadológicas com ferramentas concorrentes, auditorias para certificação comercial e a medição das outras seis características da ISO/IEC 25010:2023.
 
@@ -184,14 +180,14 @@ Licença & MIT (código aberto) \\
 Domínio & Ferramenta web de quadro branco virtual \\
 Tecnologias & TypeScript, React, Vite, Yarn Workspaces \\
 Repositório & \url{https://github.com/excalidraw/excalidraw} \\
-Versão de referência & Repositório em 18/10/2026, commit \commitref{} (branch \texttt{master}) \\
+Commit de referência & \texttt{e1b7aac} (branch \texttt{master}, 18/10/2026) \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Descrição do Produto e Arquitetura}
 
-O Excalidraw pode ser classificado, no enquadramento de Pressman \cite{pressman2021}, como uma \textbf{aplicação web (WebApp)} de produtividade e colaboração, atuando também como componente de prateleira (COTS) quando sua biblioteca é integrada diretamente em soluções externas. O projeto combina duas naturezas complementares: uma aplicação web e PWA para criação de esboços, com colaboração em tempo real e funcionamento offline, e uma biblioteca React reutilizável (\texttt{@excalidraw/excalidraw}) distribuída via npm.
+O Excalidraw pode ser classificado, no enquadramento de Pressman \cite{pressman2021}, como uma \textbf{aplicação web (WebApp)} de produtividade e colaboração, atuando também como componente de prateleira (COTS) quando sua biblioteca é integrada diretamente em soluções externas. O projeto combina duas naturezas complementares: (1)~uma aplicação web e PWA para criação de esboços, com colaboração em tempo real e funcionamento offline; e (2)~uma biblioteca React reutilizável (\texttt{@excalidraw/excalidraw}) distribuída via npm.
 
 O repositório adota a estrutura de \textbf{monorepo} sob Yarn Workspaces. Os principais módulos incluem: \texttt{excalidraw-app/} (camada de aplicação web, armazenamento local e build), \texttt{packages/excalidraw/} (editor visual principal), \texttt{packages/element/} (operações e tipos dos elementos gráficos), módulos utilitários compartilhados (\texttt{packages/math/}, \texttt{packages/common/} e \texttt{packages/utils/}) e rotinas de automação em \texttt{.github/workflows/}.
 
@@ -199,7 +195,7 @@ Nas interfaces externas, o sistema apoia-se nas APIs 2D Canvas do navegador, no 
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\textwidth]{figura-arquitetura.png}
+\includegraphics[width=0.64\textwidth]{figura-arquitetura}
 \caption{Diagrama de contexto e arquitetura do Excalidraw (Fonte: Equipe Karen Jones).}
 \label{fig:arquitetura}
 \end{figure}
@@ -212,7 +208,7 @@ Como não temos acesso a servidores em produção ou a métricas internas de tel
 \label{tab:implicacoes}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.4cm}p{4.0cm}p{4.5cm}}
+\begin{tabular}{p{2.4cm}p{4.2cm}p{9.0cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Viável medir} & \textbf{Não viável medir} \\
 \midrule
@@ -291,7 +287,7 @@ A partir do processo de priorização, consolidamos o modelo de qualidade em tr�
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\textwidth]{figura-modelo-qualidade.png}
+\includegraphics[width=0.64\textwidth]{figura-modelo-qualidade}
 \caption{Modelo de qualidade adotado (Fonte: Equipe Karen Jones).}
 \label{fig:modelo}
 \end{figure}
@@ -302,7 +298,7 @@ A partir do processo de priorização, consolidamos o modelo de qualidade em tr�
 \label{tab:manut}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.2cm}p{9.5cm}}
+\begin{tabular}{p{2.4cm}p{13.2cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
 \midrule
@@ -321,7 +317,7 @@ Testabilidade     & Estrutura de testes automatizados em múltiplos níveis (uni
 \label{tab:confiab}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.2cm}p{9.5cm}}
+\begin{tabular}{p{2.4cm}p{13.2cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
 \midrule
@@ -339,7 +335,7 @@ Recuperabilidade  & Salvamento automático local, restauração do último estad
 \label{tab:flex}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{2.2cm}p{9.5cm}}
+\begin{tabular}{p{2.4cm}p{13.2cm}}
 \toprule
 \textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
 \midrule
@@ -363,7 +359,7 @@ Para orientar a coleta, definimos seis objetos de avaliação concretos que comp
 \label{tab:objetos}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{0.8cm}p{4.2cm}p{6.5cm}}
+\begin{tabular}{p{0.8cm}p{5.5cm}p{9.2cm}}
 \toprule
 \textbf{ID} & \textbf{Objeto} & \textbf{Características} \\
 \midrule
@@ -377,19 +373,20 @@ O6 & Histórico público de commits, issues e PRs & Manutenib. e Confiab. \\
 \end{tabular}
 \end{table}
 
-\textbf{Limites de escopo:} ficam excluídos servidores em nuvem, testes intrusivos de segurança cibernética, testes manuais em dezenas de aparelhos físicos, código interno de dependências terceirizadas e módulos comerciais da versão Excalidraw+. Todas as conclusões são estritamente válidas para a versão do repositório de 18/10/2026 (commit \commitref) e têm caráter primordialmente estático.
+\textbf{Limites de escopo:} ficam excluídos servidores em nuvem, testes intrusivos de segurança cibernética, testes manuais em dezenas de aparelhos físicos, código interno de dependências terceirizadas e módulos comerciais da versão Excalidraw+. Todas as conclusões são estritamente válidas para o commit fixado (\texttt{e1b7aac}) e têm caráter primordialmente estático.
 
 \subsection{Requisitos de Avaliação}
+\label{subsec:requisitos}
 
 Os requisitos representam as perguntas técnicas que o produto deve permitir responder. Eles foram organizados por subcaracterística nas Tabelas~\ref{tab:reqman},~\ref{tab:reqconf} e~\ref{tab:reqflex}.
 
-\begin{table}[!ht]
+\begin{table}[H]
 \centering
 \caption{Requisitos de avaliação: Manutenibilidade}
 \label{tab:reqman}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{1.6cm}p{7.2cm}p{2.5cm}}
+\begin{tabular}{p{2.1cm}p{11.3cm}p{2.6cm}}
 \toprule
 \textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
 \midrule
@@ -410,13 +407,13 @@ RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade
 \end{tabular}
 \end{table}
 
-\begin{table}[!ht]
+\begin{table}[H]
 \centering
 \caption{Requisitos de avaliação: Confiabilidade}
 \label{tab:reqconf}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{1.6cm}p{7.2cm}p{2.5cm}}
+\begin{tabular}{p{2.5cm}p{10.9cm}p{2.6cm}}
 \toprule
 \textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
 \midrule
@@ -435,13 +432,13 @@ RQ-CONF-11 & Desfazer e refazer ações é possível? & Recuperabilidade \\
 \end{tabular}
 \end{table}
 
-\begin{table}[!ht]
+\begin{table}[H]
 \centering
 \caption{Requisitos de avaliação: Flexibilidade}
 \label{tab:reqflex}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{1.6cm}p{7.2cm}p{2.5cm}}
+\begin{tabular}{p{2.1cm}p{11.3cm}p{2.6cm}}
 \toprule
 \textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
 \midrule
@@ -463,20 +460,96 @@ RQ-FLEX-12 & Os formatos exportados são abertos e permitem reimportação? & Su
 
 \subsection{Relação com os Objetivos de Desenvolvimento Sustentável (ODS)}
 
-Para além dos critérios estritamente computacionais, analisamos o papel social do Excalidraw frente aos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU \cite{onu2015ods}. Três metas dialogam diretamente com a proposta do projeto.
-
-No ODS~4 (Educação de Qualidade), por ser gratuito, acessível diretamente no navegador e sem exigir cadastro obrigatório, o Excalidraw é utilizado de forma recorrente em salas de aula e estudos para desenhar algoritmos e explicar ideias visuais, e a colaboração síncrona apoia dinâmicas remotas de estudo em grupo.
-
-No ODS~9 (Indústria, Inovação e Infraestrutura), sua arquitetura modular e a publicação de pacotes reutilizáveis no npm estimulam a inovação de terceiros, que incorporam o editor em novos softwares sem custos de licenciamento. O suporte a PWA também amplia o acesso em contextos de conexão instável.
-
-No ODS~10 (Redução das Desigualdades), ao adotar a licença MIT e permitir a exportação em formatos abertos (\texttt{.excalidraw}, SVG e PNG), a ferramenta reduz as barreiras financeiras e evita o aprisionamento tecnológico de quem não pode pagar por ferramentas proprietárias.
+Para além dos critérios computacionais, analisamos o papel social do Excalidraw frente aos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU \cite{onu2015ods}. Três metas dialogam diretamente com a proposta do projeto. Em relação ao \textbf{ODS 4: Educação de Qualidade}, por ser gratuito, acessível diretamente no navegador e sem cadastro obrigatório, o software é amplamente utilizado em ambientes educacionais para ilustrar algoritmos e conceitos visuais, apoiando o estudo colaborativo remoto. Quanto ao \textbf{ODS 9: Indústria, Inovação e Infraestrutura}, sua arquitetura modular e distribuição via npm incentivam a inovação de terceiros sem custos de licenciamento, ao passo que o suporte a PWA viabiliza o acesso mesmo em redes instáveis. Por fim, no \textbf{ODS 10: Redução das Desigualdades}, a adoção da licença MIT e a exportação em formatos abertos (\texttt{.excalidraw}, SVG e PNG) diminuem barreiras econômicas e eliminam o aprisionamento tecnológico para usuários e instituições que não dispõem de ferramentas proprietárias.
 
 % ================================================================
 \section{Fase 2: Especificação da Avaliação}
 \label{sec:fase2}
 
-% Especificação da avaliação com GQM: conteúdo da issue #78.
+A Fase 2 da ISO/IEC 25040 realiza a transição entre os requisitos de qualidade e a sua mensuração prática por meio da abordagem Goal-Question-Metric (GQM) \cite{basili1994gqm}. Os objetivos de medição foram definidos de forma simples e direta, delimitando o objeto de análise, a finalidade de caracterização, a dimensão de qualidade e o ponto de vista das partes interessadas:
+(G1) analisar a estrutura do código-fonte e o histórico do Excalidraw com o propósito de avaliar a Manutenibilidade, sob o ponto de vista dos mantenedores e colaboradores do projeto;
+(G2) analisar o editor web e os mecanismos de execução e armazenamento com o propósito de avaliar a Confiabilidade, sob o ponto de vista dos usuários finais; e
+(G3) analisar a biblioteca distribuída no npm e a aplicação web com o propósito de avaliar a Flexibilidade, sob o ponto de vista dos desenvolvedores que integram o componente e das equipes de implantação.
 
+A partir desses três objetivos conceituais, o processo desdobrou-se na formulação de 13 questões operacionais (uma para cada subcaracterística priorizada na Fase~1, agregando os 36 requisitos RQ-MAN-01 a RQ-FLEX-12), cada qual vinculada a uma hipótese técnica prévia. Para responder às questões, foram selecionadas 36 métricas objetivas de análise estática de código, contagem de linhas, acoplamento estrutural, cobertura de testes automatizados e inspeções estruturais, com fórmulas matemáticas bem definidas. O catálogo completo de fichas das métricas e questões está documentado no repositório do projeto\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}.
+
+
+\subsection{Objetivo G3: Flexibilidade}
+\label{subsec:g3-flexibilidade}
+
+O objetivo G3 consiste em analisar a biblioteca \texttt{@excalidraw/excalidraw} e a aplicação web, incluindo sua interface pública, instruções de instalação e formatos de exportação, com o propósito de compreender a Flexibilidade quanto à Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade. A análise considera o ponto de vista dos desenvolvedores que integram a biblioteca e das equipes de implantação e operação, utilizando como referência o código público de 18/10/2026 (commit \texttt{e1b7aac}). As quatro questões GQM correspondem às subcaracterísticas e cobrem os requisitos RQ-FLEX-01 a RQ-FLEX-12 definidos na Fase~1.
+
+A questão Q3.1 investiga a utilização em navegadores, dispositivos e ambientes de integração; Q3.2 examina a capacidade de manter o editor utilizável à medida que os desenhos crescem; Q3.3 verifica a reprodução das instruções de instalação, construção e implantação; e Q3.4 avalia a exportação e a recuperação de desenhos em formatos abertos. A Tabela~\ref{tab:g3-metricas} sintetiza as doze métricas associadas a essas questões, suas fórmulas e os critérios que confirmam as hipóteses do plano GQM. Os procedimentos completos de coleta, as condições de teste e as fontes de dados estão documentados no plano de Flexibilidade do repositório.
+
+\begin{table}[!ht]
+\centering
+\caption{Questões e métricas do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
+\label{tab:g3-metricas}
+\vspace{4pt}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\toprule
+\textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
+\midrule
+Q3.1 & M3.1.1 Cobertura de navegadores & Cobertura global da consulta \texttt{browserslist} (\%) & Cobertura alta, com exclusão de navegadores antigos. \\
+Q3.1 & M3.1.2 Integrações bem-sucedidas & (Combinações com sucesso / 6) $\times 100$ & Sucesso nas 6 combinações React 17, 18 e 19 com Vite e Next.js. \\
+Q3.1 & M3.1.3 Ações por toque e caneta & (Ações funcionais / 10) $\times 100$ & 100\% das ações funcionais por toque e, quando disponível, caneta. \\
+\midrule
+Q3.2 & M3.2.1 Tempo de abertura & Mediana de 5 aberturas por tamanho de cena (s) & Tempo baixo até 1.000 elementos e crescimento perceptível depois. \\
+Q3.2 & M3.2.2 Quadros por segundo & Mediana de 5 gravações de 10 s por cena (FPS) & Edição fluida com centenas de elementos e queda perceptível com milhares. \\
+Q3.2 & M3.2.3 Maior cena exportável & Máximo de elementos com salvamento, PNG e SVG em até 30 s & Cenas maiores abrem, mas a exportação é mais lenta que a abertura. \\
+\midrule
+Q3.3 & M3.3.1 Operações de pacote & (Operações com sucesso / 9) $\times 100$ & 100\% de sucesso e instalação com um único comando. \\
+Q3.3 & M3.3.2 Passos reproduzíveis & (Passos sem ajuste / total de passos) $\times 100$ & Todos os passos reproduzidos com as versões exigidas. \\
+Q3.3 & M3.3.3 Implantação Docker & (Verificações aprovadas / 4) $\times 100$ & 100\% de sucesso na construção, inicialização, saúde e abertura do editor. \\
+\midrule
+Q3.4 & M3.4.1 Formatos abertos & Contagem de formatos abertos disponíveis & Disponibilidade de \texttt{.excalidraw}, PNG e SVG. \\
+Q3.4 & M3.4.2 Elementos preservados & (Elementos preservados / total de elementos) $\times 100$ & 100\% de preservação em cada um dos três formatos reimportáveis. \\
+Q3.4 & M3.4.3 Campos documentados & (Campos documentados / campos encontrados) $\times 100$ & Formato legível, com documentação parcial e sem esquema formal. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A Figura~\ref{fig:gqm-g3} apresenta a hierarquia entre o objetivo G3, suas quatro questões e as métricas correspondentes, permitindo visualizar a rastreabilidade do plano de medição.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.58\textwidth]{gqm-g3.png}
+\caption{Hierarquia GQM do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
+\label{fig:gqm-g3}
+\end{figure}
+
+\subsection{Níveis de Pontuação e Critérios de Julgamento}
+\label{subsec:pontuacao-julgamento}
+
+A especificação da avaliação na norma ISO/IEC 25040 exige que sejam estabelecidos níveis de pontuação para as métricas e critérios para o julgamento dos resultados antes da coleta prática dos dados. Para transformar os dados brutos em diagnósticos qualitativos comparáveis, a equipe adotou a escala ordinal de cinco níveis concebida no modelo de avaliação de manutenibilidade de Heitlager, Kuipers e Visser \cite{heitlager2007}. A escala distribui os resultados nas graduações Muito Ruim (símbolo \texttt{--}, equivalente a 1 ponto), Ruim (símbolo \texttt{-}, equivalente a 2 pontos), Regular (símbolo \texttt{o}, equivalente a 3 pontos), Bom (símbolo \texttt{+}, equivalente a 4 pontos) e Excelente (símbolo \texttt{++}, equivalente a 5 pontos). A atribuição de valores numéricos de 1 a 5 viabiliza a realização de operações de agregação matemática entre os indicadores de cada subcaracterística.
+
+As faixas de aceitação que definem os intervalos numéricos de cada nível foram estabelecidas previamente à coleta, assegurando imparcialidade e impedindo que os limites sejam ajustados para favorecer ou prejudicar o produto avaliado. As faixas foram estruturadas a partir de quatro origens técnicas bem delimitadas. A primeira origem contempla faixas publicadas e validadas na literatura para propriedades específicas de código-fonte, aplicando sem modificações os limites do modelo de Heitlager, Kuipers e Visser para o perfil de risco de complexidade ciclomática das funções e para a taxa de cobertura de linhas nos testes automatizados. A segunda origem aplica-se às métricas de proporção desejável, em que valores percentuais mais elevados representam melhor qualidade, tais como a proporção de propriedades públicas documentadas e a cobertura de comandos funcionais sem conexão de rede; nesses casos, utilizam-se as faixas padronizadas de cobertura do modelo de referência, nas quais o nível Excelente (\texttt{++}) exige de 95\% a 100\%, o nível Bom (\texttt{+}) abrange de 80\% a 95\%, o nível Regular (\texttt{o}) de 60\% a 80\%, o nível Ruim (\texttt{-}) de 20\% a 60\% e o nível Muito Ruim (\texttt{--}) valores inferiores a 20\%. A terceira origem abrange as métricas de proporção indesejável, nas quais valores menores indicam maior qualidade, tais como acoplamentos cíclicos, importações que transgridem a direção arquitetural e percentual de arquivos extensos; para essas medidas, reaproveitam-se as faixas de duplicação de código da literatura, em que o nível Excelente (\texttt{++}) tolera de 0\% a 3\%, o nível Bom (\texttt{+}) de 3\% a 5\%, o nível Regular (\texttt{o}) de 5\% a 10\%, o nível Ruim (\texttt{-}) de 10\% a 20\% e o nível Muito Ruim (\texttt{--}) índices superiores a 20\%. A quarta origem recorre a referências consolidadas de engenharia de software e usabilidade, como os limiares de tempo de resposta propostos por Nielsen \cite{nielsen1993} e as metas de taxa de quadros por segundo do modelo de desempenho RAIL do Google para interações no canvas, ou a parâmetros calibrados pela equipe com base na arquitetura do monorepo. A Tabela~\ref{tab:escala_pontuacao} consolida a escala ordinal de avaliação e as faixas gerais de aceitação aplicadas às proporções.
+
+\begin{table}[!ht]
+\centering
+\caption{Escala de pontuação e faixas de aceitação para métricas de proporção}
+\label{tab:escala_pontuacao}
+\vspace{4pt}
+\small
+\begin{tabular}{lccllp{3.3cm}}
+\toprule
+\textbf{Nível} & \textbf{Símbolo} & \textbf{Pontos} & \textbf{Prop. Desejável} & \textbf{Prop. Indesejável} & \textbf{Leitura do Nível} \\
+\midrule
+Excelente  & \texttt{++} & 5 & 95\% a 100\% & 0\% a 3\%   & Desempenho na melhor faixa prevista. \\
+Bom        & \texttt{+}  & 4 & 80\% a 95\%  & 3\% a 5\%   & Desempenho acima do esperado para um projeto típico. \\
+Regular    & \texttt{o}  & 3 & 60\% a 80\%  & 5\% a 10\%  & Desempenho em faixa intermediária aceitável. \\
+Ruim       & \texttt{-}  & 2 & 20\% a 60\%  & 10\% a 20\% & Degradação relevante que requer intervenção técnica. \\
+Muito Ruim & \texttt{--} & 1 & 0\% a 20\%   & Acima de 20\% & Fragilidade crítica que compromete a característica. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A consolidação das medições segue um processo de agregação em duas etapas por média aritmética ponderada igualmente, conforme recomendado no modelo SIG e na norma ISO/IEC 25040. Na primeira etapa, a pontuação de cada questão investigativa do GQM, que corresponde a uma subcaracterística da ISO/IEC 25010, é calculada como a média aritmética simples dos pontos obtidos nas suas métricas constituintes. Na segunda etapa, a pontuação da característica de alto nível (Manutenibilidade, Confiabilidade ou Flexibilidade) é obtida a partir da média aritmética dos valores de suas respectivas questões, preservando as casas decimais antes do arredondamento para o nível ordinal mais próximo. Como convenção conservadora estabelecida pela equipe, em caso de fração exatamente igual a 0,5 o arredondamento é direcionado para baixo, garantindo que nenhum resultado receba classificação superior sem justificativa inequívoca.
+
+O julgamento conclusivo sobre a adequação da qualidade de produto de software apoia-se em critérios inspirados nos esquemas formais de certificação de código da TÜViT \cite{baggen2010}, que exigem conformidade mínima tanto na média global da característica quanto nas subcaracterísticas isoladas. Para cada uma das três características priorizadas, o resultado final da avaliação é classificado em três veredictos mutuamente excludentes. O veredicto Atende é emitido quando a característica obtém nível médio Regular (\texttt{o}) ou superior (pontuação igual ou superior a 3,0) e nenhuma de suas questões ou subcaracterísticas obtém classificação Muito Ruim (\texttt{--}). O veredicto Não Atende é atribuído quando a pontuação média da característica resulta nos níveis Ruim (\texttt{-}) ou Muito Ruim (\texttt{--}), ou quando ao menos uma de suas subcaracterísticas atinge o nível Muito Ruim (\texttt{--}), indicando uma vulnerabilidade localizada inaceitável para o produto. Por fim, o veredicto Inconclusivo é reservado para cenários excepcionais em que mais da metade das métricas planejadas para a característica não puderem ser medidas durante a execução. Todas as métricas que registrarem níveis Ruim ou Muito Ruim na Fase 4 serão formalmente catalogadas no relatório técnico como pontos de melhoria, fornecendo subsídios diretos para a elaboração de intervenções corretivas e protótipos de aperfeiçoamento.
 % ================================================================
 \section{Considerações Parciais}
 \label{sec:conclusao}
@@ -485,10 +558,42 @@ Este trabalho consolida o planejamento inicial e a especificação técnica da a
 
 Como resultado desta primeira etapa, obtivemos uma base de 36 requisitos de avaliação contextualizados para um sistema de código aberto real, além de um modelo de qualidade adaptado e desdobrado em métricas viáveis de serem coletadas por análise estática. Os próximos passos da disciplina envolverão a execução prática das medições planejadas (Fase~3 e Fase~4), o confronto dos dados obtidos com os critérios de julgamento estabelecidos e a proposição de intervenções de melhoria para o software, acompanhadas por um protótipo de alta fidelidade.
 
-\nocite{iso25023}
 \addcontentsline{toc}{section}{Referências}
-\bibliographystyle{sbc}
-\bibliography{bibliography}
+\begin{thebibliography}{99}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+
+\bibitem{iso25000}
+ISO/IEC. \textit{ISO/IEC 25000:2014: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Guide to SQuaRE}. International Organization for Standardization, Geneva, 2014.
+
+\bibitem{iso25010}
+ISO/IEC. \textit{ISO/IEC 25010:2023: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model}. International Organization for Standardization, Geneva, 2023.
+
+\bibitem{iso25040}
+ISO/IEC. \textit{ISO/IEC 25040:2011: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process}. International Organization for Standardization, Geneva, 2011.
+
+\bibitem{iso25023}
+ISO/IEC. \textit{ISO/IEC 25023:2016: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Measurement of system and software product quality}. International Organization for Standardization, Geneva, 2016.
+
+\bibitem{basili1994gqm}
+BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: \textit{Encyclopedia of Software Engineering}. John Wiley \& Sons, 1994.
+
+\bibitem{pressman2021}
+PRESSMAN, R. S.; MAXIM, B. R. \textit{Engenharia de Software: uma abordagem profissional}. 9. ed. Porto Alegre: AMGH, 2021.
+
+\bibitem{onu2015ods}
+ONU. \textit{Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável}. Organização das Nações Unidas, 2015.
+
+\bibitem{heitlager2007}
+HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: \textit{6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)}. IEEE, p. 30--39, 2007.
+
+\bibitem{baggen2010}
+BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: \textit{4th International Workshop on Software Quality and Maintainability (SQM 2010)}. p. 1--10, 2010.
+
+\bibitem{nielsen1993}
+NIELSEN, J. \textit{Usability Engineering}. Boston: Academic Press, 1993.
+
+\end{thebibliography}
 
 \appendix
 \section{Tabela de Contribuição dos Membros da Equipe}
@@ -498,27 +603,27 @@ Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da discipl
 \centering
 \caption{Tabela de contribuição individual da equipe (Entrega 1)}
 \label{tab:contribuicao}
-\vspace{4pt}
-\small
+\vspace{2pt}
+\footnotesize
 \begin{tabular}{lccccr}
 \toprule
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \midrule
-Christopher          & 11 & 13.0h & 9.9h  & 80/11 & 11.81\% \\
-Davi Pierre          & 6  & 18.0h & 19.0h & 5/2   & 22.66\% \\
-Gabriel Monteiro     & 6  & 27.0h & 28.0h & 30/5  & 33.39\% \\
-Letícia de Carvalho  & 6  & 8.5h  & 5.9h  & 5/5   & 7.05\% \\
-Luiz Henrique Soares & 7  & 3.5h  & 2.5h  & 20/7  & 3.04\% \\
-Maria Eduarda        & 6  & 17.5h & 18.5h & 14/5  & 22.06\% \\
+Christopher          & 5 & 8.0h & 20.5h & 80/8 & 16.66\% \\
+Davi Pierre          & 6 & 5.0h & 12.0h & 9/4 & 16.66\% \\
+Gabriel Monteiro     & 6 & 16.0h & 20.0h & 30/6 & 16.66\% \\
+Letícia de Carvalho  & 6 & 10.0h & 15.0h & 12/7 & 16.66\% \\
+Luiz Henrique Soares & 6 & 20.0h & 20.0h & 13/6 & 16.66\% \\
+Maria Eduarda        & 6 & 20.0h & 14.0h & 16/7 & 16.66\% \\
 \midrule
-\textbf{Total}       & \textbf{42} & \textbf{87.5h} & \textbf{83.9h} & \textbf{154/35} & \textbf{100.00\%} \\
+\textbf{Total}       & \textbf{35} & \textbf{79h} & \textbf{101.5h} & \textbf{160/38} & \textbf{100.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \section{Declaração de Uso de Inteligência Artificial}
-Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara o uso das ferramentas de IA generativa Antigravity / Gemini 3.8 e Claude Code. Elas auxiliaram na formatação e na adaptação de diretrizes de governança em PRs iniciais, na elaboração de scripts auxiliares de automação em Python, na conversão de estruturas para código LaTeX e no levantamento dos ODS.
+\label{sec:declaracao_ia}
 
-Todo código-fonte, dado numérico e conteúdo textual gerado ou adaptado foi integralmente revisado, confrontado com os artefatos reais do GitHub e validado pelos integrantes da equipe, garantindo a fidelidade técnica dos dados e a ausência de alucinações.
+Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara o uso de ferramentas de inteligência artificial generativa no apoio à elaboração deste trabalho. \textbf{Ferramentas utilizadas:} Antigravity / Gemini 3.8 e Claude Code. \textbf{Consolidação por tarefas:} auxílio na formatação e adaptação de diretrizes de governança em PRs iniciais, apoio na elaboração de scripts auxiliares de automação e validação em Python, suporte na geração de diagramas e na conversão de tabelas e estruturas para código LaTeX, e apoio na revisão textual e no levantamento dos Objetivos de Desenvolvimento Sustentável (ODS). \textbf{Conferência crítica pela equipe:} todo código-fonte, dado numérico e conteúdo textual gerado ou adaptado foi integralmente revisado, confrontado com os artefatos reais do GitHub e validado pelos integrantes da equipe, garantindo a fidelidade técnica dos dados e a ausência de alucinações.
 
 \end{document}
