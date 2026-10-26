@@ -11,7 +11,12 @@
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{microtype}
+\usepackage{placeins}
+\usepackage{needspace}
 \usepackage[top=1.85cm, bottom=1.85cm, left=2.5cm, right=2.0cm]{geometry}
+
+% Versão do Excalidraw usada como linha de base da avaliação
+\newcommand{\commitref}{\href{https://github.com/excalidraw/excalidraw/commit/e1b7aacb356a492aa1e0fc6eb57b8896124027f0}{\texttt{e1b7aac}}}
 
 \renewcommand{\arraystretch}{0.9}
 \hypersetup{
@@ -550,6 +555,61 @@ Muito Ruim & \texttt{--} & 1 & 0\% a 20\%   & Acima de 20\% & Fragilidade críti
 A consolidação das medições segue um processo de agregação em duas etapas por média aritmética ponderada igualmente, conforme recomendado no modelo SIG e na norma ISO/IEC 25040. Na primeira etapa, a pontuação de cada questão investigativa do GQM, que corresponde a uma subcaracterística da ISO/IEC 25010, é calculada como a média aritmética simples dos pontos obtidos nas suas métricas constituintes. Na segunda etapa, a pontuação da característica de alto nível (Manutenibilidade, Confiabilidade ou Flexibilidade) é obtida a partir da média aritmética dos valores de suas respectivas questões, preservando as casas decimais antes do arredondamento para o nível ordinal mais próximo. Como convenção conservadora estabelecida pela equipe, em caso de fração exatamente igual a 0,5 o arredondamento é direcionado para baixo, garantindo que nenhum resultado receba classificação superior sem justificativa inequívoca.
 
 O julgamento conclusivo sobre a adequação da qualidade de produto de software apoia-se em critérios inspirados nos esquemas formais de certificação de código da TÜViT \cite{baggen2010}, que exigem conformidade mínima tanto na média global da característica quanto nas subcaracterísticas isoladas. Para cada uma das três características priorizadas, o resultado final da avaliação é classificado em três veredictos mutuamente excludentes. O veredicto Atende é emitido quando a característica obtém nível médio Regular (\texttt{o}) ou superior (pontuação igual ou superior a 3,0) e nenhuma de suas questões ou subcaracterísticas obtém classificação Muito Ruim (\texttt{--}). O veredicto Não Atende é atribuído quando a pontuação média da característica resulta nos níveis Ruim (\texttt{-}) ou Muito Ruim (\texttt{--}), ou quando ao menos uma de suas subcaracterísticas atinge o nível Muito Ruim (\texttt{--}), indicando uma vulnerabilidade localizada inaceitável para o produto. Por fim, o veredicto Inconclusivo é reservado para cenários excepcionais em que mais da metade das métricas planejadas para a característica não puderem ser medidas durante a execução. Todas as métricas que registrarem níveis Ruim ou Muito Ruim na Fase 4 serão formalmente catalogadas no relatório técnico como pontos de melhoria, fornecendo subsídios diretos para a elaboração de intervenções corretivas e protótipos de aperfeiçoamento.
+% ================================================================
+\subsection{Objetivo G3: Flexibilidade}
+\label{subsec:g3-flexibilidade}
+
+O objetivo G3 consiste em analisar a biblioteca \texttt{@excalidraw/excalidraw} e a aplicação web, incluindo sua interface pública, instruções de instalação e formatos de exportação, com o propósito de compreender a Flexibilidade quanto à Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade. A análise considera o ponto de vista dos desenvolvedores que integram a biblioteca e das equipes de implantação e operação, utilizando como referência o código público de 18/10/2026 (commit \texttt{e1b7aac}). As quatro questões GQM correspondem às subcaracterísticas e cobrem os requisitos RQ-FLEX-01 a RQ-FLEX-12 definidos na Fase~1.
+
+A questão Q3.1 investiga a utilização em navegadores, dispositivos e ambientes de integração; Q3.2 examina a capacidade de manter o editor utilizável à medida que os desenhos crescem; Q3.3 verifica a reprodução das instruções de instalação, construção e implantação; e Q3.4 avalia a exportação e a recuperação de desenhos em formatos abertos. A Tabela~\ref{tab:g3-metricas} sintetiza as doze métricas associadas a essas questões, suas fórmulas e os critérios que confirmam as hipóteses do plano GQM. Os procedimentos detalhados de coleta, as condições de teste e
+as fontes de dados de cada métrica estão disponíveis no documento
+\textit{GQM de Flexibilidade}\footnote{
+\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md}
+}, no repositório do projeto.
+
+\begin{table}[!ht]
+\centering
+\caption{Questões e métricas do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
+\label{tab:g3-metricas}
+\vspace{4pt}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.13}
+\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\toprule
+\textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
+\midrule
+Q3.1 & M3.1.1 Cobertura de usuários pelos navegadores declarados & Cobertura global da consulta \texttt{browserslist} (\%) Escala: 0 a 100.& Cobertura alta, com exclusão de navegadores antigos. \\
+Q3.1 & M3.1.2 Integrações bem-sucedidas & (Combinações com sucesso / 6) $\times 100$ & Sucesso nas 6 combinações React 17, 18 e 19 com Vite e Next.js. \\
+Q3.1 & M3.1.3 Ações por toque e caneta & (Ações funcionais / 10) $\times 100$ &  100\% de sucesso nas ações avaliadas. \\ 
+\midrule
+Q3.2 & M3.2.1 Tempo de abertura por tamanho de cena & Mediana de 5 aberturas por tamanho de cena (s) & Tempo baixo até 1.000 elementos e crescimento perceptível depois. \\
+Q3.2 & M3.2.2 Taxa de quadros durante a edição por tamanho de cena & Mediana de 5 gravações de 10 s por cena (FPS) & Edição fluida com centenas de elementos e queda perceptível com milhares. \\
+Q3.2 & M3.2.3 Maior cena exportável & Máximo de elementos com salvamento, PNG e SVG em até 30 s & Cenas maiores abrem, mas a exportação é mais lenta que a abertura. \\
+\midrule
+Q3.3 & M3.3.1 Operações de pacote & (Operações com sucesso / 9) $\times 100$ & 100\% de sucesso e instalação com um único comando. \\
+Q3.3 & M3.3.2 Proporção de passos documentados reproduzidos sem ajuste & (Passos sem ajuste / total de passos) $\times 100$ & Todos os passos reproduzidos com as versões exigidas. \\
+Q3.3 & M3.3.3 Implantação Docker & (Verificações aprovadas / 4) $\times 100$ & 100\% de sucesso. \\
+\midrule
+Q3.4 & M3.4.1 Formatos de exportação abertos disponíveis & Contagem de formatos abertos disponíveis & Disponibilidade de \texttt{.excalidraw}, PNG e SVG. \\
+Q3.4 & M3.4.2 Elementos preservados na importação e reimportação & (Elementos preservados / elementos da cena) $\times 100$ & 100\% de preservação nos três formatos. \\
+Q3.4 & M3.4.3 Campos do formato \texttt{.excalidraw} documentados & (Campos documentados / campos encontrados) $\times 100$ & Formato legível, com documentação parcial e sem esquema formal. \\
+\bottomrule
+\end{tabular}
+\end{table}
+\Needspace{0.45\textheight}
+A Figura~\ref{fig:gqm-g3} apresenta a organização do objetivo
+G3 em quatro questões, cada uma associada a uma subcaracterística
+de Flexibilidade e a três métricas de avaliação.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.70\textwidth]{gqm-g3.png}
+\caption{Hierarquia GQM do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
+\label{fig:gqm-g3}
+\end{figure}
+\FloatBarrier
+
 % ================================================================
 \section{Considerações Parciais}
 \label{sec:conclusao}
