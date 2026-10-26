@@ -496,7 +496,7 @@ A questão Q1.1 examina a divisão do código em pacotes e a direção de suas d
 \midrule
 Q1.1 & M1.1.1 Ciclos entre pacotes & Contagem de pares de pacotes com dependência recíproca & Nenhum ciclo entre pacotes. \\
 Q1.1 & M1.1.2 Importações que violam a direção declarada & Contagem de importações de valor que violam a direção definida para os pacotes & Nenhuma importação em desacordo com a arquitetura. \\
-Q1.1 & M1.1.3 Acoplamento e instabilidade & $Ca$, $Ce$ e $I = Ce/(Ca+Ce)$, por pacote & A biblioteca apresenta o maior $Ca$; $I$ permite comparar a instabilidade entre pacotes. \\
+Q1.1 & M1.1.3 Acoplamento e instabilidade & $Ca$: número de outros pacotes distintos que importam o pacote; $Ce$: número de outros pacotes distintos que ele importa; $I = Ce/(Ca+Ce)$. Apenas importações de valor do código de produção. & A biblioteca apresenta o maior $Ca$; $I$ permite comparar a instabilidade entre pacotes. \\
 \midrule
 Q1.2 & M1.2.1 Dependências de React ou do navegador em pacotes de base & Contagem de arquivos com dependências diretas ou transitivas, por pacote & Valor igual a zero nos pacotes \texttt{math} e \texttt{utils}. \\
 Q1.2 & M1.2.2 Propriedades públicas documentadas & (Propriedades documentadas / propriedades em \texttt{ExcalidrawProps}) $\times 100$ & Percentual alto, mas inferior a 100\%. \\
