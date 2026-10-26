@@ -6,7 +6,7 @@ description: Questões, hipóteses e métricas do objetivo de medição G3, que 
 
 # GQM de Flexibilidade (G3)
 
-Esta página detalha o objetivo G3, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-portabilidade). Para cada subcaracterística de Flexibilidade há uma questão, a hipótese da questão e as métricas que a respondem.
+Esta página detalha o objetivo G3, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade). Para cada subcaracterística de Flexibilidade há uma questão, a hipótese da questão e as métricas que a respondem.
 
 | Campo do template | Valor |
 | :--- | :--- |

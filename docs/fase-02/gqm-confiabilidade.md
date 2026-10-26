@@ -6,7 +6,7 @@ description: Questões, hipóteses e métricas do objetivo de medição G2, que 
 
 # GQM de Confiabilidade (G2)
 
-Esta página detalha o objetivo G2, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g2--confiabilidade). Para cada subcaracterística de Confiabilidade há uma questão, a hipótese da questão e as métricas que a respondem.
+Esta página detalha o objetivo G2, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g2-confiabilidade). Para cada subcaracterística de Confiabilidade há uma questão, a hipótese da questão e as métricas que a respondem.
 
 | Campo do template | Valor |
 | :--- | :--- |

@@ -6,7 +6,7 @@ description: Questões, hipóteses e métricas do objetivo de medição G1, que 
 
 # GQM de Manutenibilidade (G1)
 
-Esta página detalha o objetivo G1, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g1--manutenibilidade). Para cada subcaracterística de Manutenibilidade há uma questão, a hipótese da questão e as métricas que a respondem.
+Esta página detalha o objetivo G1, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g1-manutenibilidade). Para cada subcaracterística de Manutenibilidade há uma questão, a hipótese da questão e as métricas que a respondem.
 
 | Campo do template | Valor |
 | :--- | :--- |
