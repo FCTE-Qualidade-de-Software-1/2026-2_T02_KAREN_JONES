@@ -1,37 +1,47 @@
 numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,custo_real,prazo_str,data_fechamento,status_prazo,lead_time_dias
 4,Fase 1,"[GESTAO] Configurar guia de contribuição, formulário de issue, labels e milestones",closed,"wChrstphr, eduarda-ogomes",5.0,5.5,225.0,247.5,N/A,18/10/2026,Concluida no prazo,1.35
 6,Fase 1,[F1] Mapeamento de interessados,closed,DaviPierre,5.0,7.0,225.0,315.0,15/10,17/10/2026,Concluida em atraso,0.0
-7,Fase 1,[F1] Modelo de qualidade ISO/IEC 25010:2023,closed,GabrielSMonteiro,8.0,12.0,360.0,540.0,17/10,17/10/2026,Concluida no prazo,0.0
+7,Fase 1,[F1] Modelo de qualidade ISO/IEC 25010:2023,closed,GabrielSMonteiro,8.0,10.0,360.0,450.0,17/10,17/10/2026,Concluida no prazo,0.0
 8,Fase 1,[F1] Requisitos de avaliação,closed,LeticiaSantosss,2.0,1.5,90.0,67.5,17/10,17/10/2026,Concluida no prazo,0.0
 9,Fase 1,"[F1] Propósito da avaliação, uso pretendido e requisitante",closed,GabrielSMonteiro,5.0,5.0,225.0,225.0,18/10,19/10/2026,Concluida em atraso,1.44
-10,Fase 1,[F1] Tipo de produto e descrição estruturada do Excalidraw,closed,DaviPierre,5.0,6.0,225.0,270.0,18/10,19/10/2026,Concluida em atraso,1.5
+10,Fase 1,[F1] Tipo de produto e descrição estruturada do Excalidraw,closed,DaviPierre,5.0,5.0,225.0,225.0,18/10,19/10/2026,Concluida em atraso,1.5
 11,Fase 1,[F1] Diagrama do modelo de qualidade e justificativa das adaptações,closed,LeticiaSantosss,1.5,1.25,67.5,56.25,18/10,19/10/2026,Concluida em atraso,1.46
 12,Fase 1,[F1] Priorização das características: ênfase de 1 a 5 e matriz impacto×risco,closed,LeticiaSantosss,2.0,1.5,90.0,67.5,18/10,19/10/2026,Concluida em atraso,1.46
 13,Fase 1,"[F1] Escopo, profundidade e objetos de avaliação",closed,DaviPierre,3.0,4.0,135.0,180.0,18/10,19/10/2026,Concluida em atraso,1.5
 14,Fase 1,"[F1] ODS, metas e indicadores",closed,GabrielSMonteiro,2.0,1.0,90.0,45.0,18/10,19/10/2026,Concluida em atraso,1.44
 15,Fase 1,[F1] Revisão do documento de interessados,closed,GabrielSMonteiro,1.0,2.0,45.0,90.0,18/10,19/10/2026,Concluida em atraso,1.56
 16,Fase 1,"[F1] Padronização da norma, grafia e nomes de arquivo",closed,DaviPierre,2.0,2.0,90.0,90.0,18/10,19/10/2026,Concluida em atraso,1.5
-17,Fase 1,"[SITE] Estrutura do GitPage: rodapé, atualização e links",closed,luizh-gsoares,0.75,0.75,33.75,33.75,18/10,19/10/2026,Concluida em atraso,1.56
+17,Fase 1,"[SITE] Estrutura do GitPage: rodapé, atualização e links",closed,luizh-gsoares,1.0,1.0,45.0,45.0,18/10,19/10/2026,Concluida em atraso,1.56
 18,Fase 1,[SITE] Atualizar o GitPage com a Fase 1,closed,LeticiaSantosss,1.5,1.33,67.5,59.85,18/10,19/10/2026,Concluida em atraso,1.9
-19,Fase 1,[GESTAO] Script de coleta das métricas PSM/CID,closed,eduarda-ogomes,8.0,8.0,360.0,360.0,18/10,18/10/2026,Concluida no prazo,1.32
+19,Fase 1,[GESTAO] Script de coleta das métricas PSM/CID,closed,eduarda-ogomes,6.0,6.5,270.0,292.5,18/10,18/10/2026,Concluida no prazo,1.32
 20,Fase 1,[GESTAO] Relatório PSM/CID da Fase 1,closed,eduarda-ogomes,3.0,3.0,135.0,135.0,18/10,18/10/2026,Concluida no prazo,1.32
 21,Fase 1,[GESTAO] Atas de reunião da Fase 1,closed,LeticiaSantosss,0.5,0.33,22.5,14.85,18/10,19/10/2026,Concluida em atraso,1.56
 22,Fase 2,[F2] Estudo do GQM e proposta de estrutura dos objetivos,closed,wChrstphr,1.5,1.3,67.5,58.5,18/10,19/10/2026,Concluida em atraso,2.0
-23,Fase 2,[GESTAO] Apresentação do Ponto de Controle 1 (21/10),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,2.0,270.0,90.0,20/10,-,Em andamento (no prazo),
-24,Fase 2,[ARTIGO] Modelo SBC e estrutura das seções,closed,wChrstphr,0.0,0.0,0.0,0.0,18/10,20/10/2026,Concluida em atraso,3.11
+23,Fase 2,[GESTAO] Apresentação do Ponto de Controle 1 (21/10),closed,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,6.0,270.0,270.0,20/10,26/10/2026,Concluida em atraso,8.46
+24,Fase 2,[ARTIGO] Modelo SBC e estrutura das seções,closed,wChrstphr,2.0,2.8,90.0,126.0,18/10,20/10/2026,Concluida em atraso,3.11
 25,Fase 2,"[ARTIGO] Introdução, Referencial teórico e seção da Fase 1",closed,GabrielSMonteiro,10.0,8.0,450.0,360.0,24/10,19/10/2026,Concluida no prazo,1.94
-26,Fase 2,[ARTIGO] Metodologia e seção da Fase 2,open,wChrstphr,0.0,0.0,0.0,0.0,24/10,-,Em andamento (no prazo),
+26,Fase 2,[ARTIGO] Metodologia e seção da Fase 2,closed,,0.0,0.0,0.0,0.0,24/10,20/10/2026,Concluida no prazo,3.37
 27,Fase 2,[ARTIGO] Tabela de contribuição e declaração de uso de IA,closed,eduarda-ogomes,0.0,0.0,0.0,0.0,24/10,18/10/2026,Concluida no prazo,1.33
-28,Fase 2,[ARTIGO] Revisão do artigo v1 e conferência com a rubrica,open,DaviPierre,2.0,0.0,90.0,0.0,25/10,-,Em andamento (no prazo),
-29,Fase 2,[SITE] Atualizar o GitPage com a Fase 2,closed,luizh-gsoares,1.0,1.0,45.0,45.0,24/10,20/10/2026,Concluida no prazo,3.09
-30,Fase 2,[GESTAO] Release v1.0-E1 e submissão no Moodle,open,luizh-gsoares,0.0,0.0,0.0,0.0,26/10,-,Em andamento (no prazo),
+28,Fase 2,[ARTIGO] Revisão do artigo v1 e conferência com a rubrica,open,DaviPierre,2.0,1.5,90.0,67.5,25/10,-,Aberta em atraso,
+29,Fase 2,[SITE] Atualizar o GitPage com a Fase 2,closed,luizh-gsoares,2.0,2.0,90.0,90.0,24/10,20/10/2026,Concluida no prazo,3.09
+30,Fase 2,[GESTAO] Release v1.0-E1 e submissão no Moodle,open,,0.0,0.0,0.0,0.0,26/10,-,Aberta em atraso,
 31,Fase 2,[GESTAO] Relatório PSM/CID da Fase 2,closed,eduarda-ogomes,3.0,2.5,135.0,112.5,25/10,19/10/2026,Concluida no prazo,1.45
-32,Fase 2,[GESTAO] Atas de reunião da Fase 2,closed,luizh-gsoares,0.0,0.0,0.0,0.0,26/10,20/10/2026,Concluida no prazo,3.08
-33,Fase 2,[ARTIGO] Workflow de CI para compilar o artigo,closed,luizh-gsoares,0.5,0.5,22.5,22.5,20/10,19/10/2026,Concluida no prazo,1.85
+32,Fase 2,[GESTAO] Atas de reunião da Fase 2,closed,luizh-gsoares,2.0,2.0,90.0,90.0,26/10,20/10/2026,Concluida no prazo,3.08
+33,Fase 2,[ARTIGO] Workflow de CI para compilar o artigo,closed,luizh-gsoares,3.0,3.0,135.0,135.0,20/10,19/10/2026,Concluida no prazo,1.85
 52,Fase 2,[F2] Reunião GQM e abstraction sheets dos objetivos,closed,wChrstphr,1.0,0.6,45.0,27.0,19/10,19/10/2026,Concluida no prazo,0.07
 53,Fase 2,"[F2] GQM de Manutenibilidade (G1): questões, hipóteses e métricas",closed,wChrstphr,2.0,1.5,90.0,67.5,19/10,19/10/2026,Concluida no prazo,0.16
 54,Fase 2,"[F2] GQM de Confiabilidade (G2): questões, hipóteses e métricas",closed,wChrstphr,2.0,1.5,90.0,67.5,19/10,19/10/2026,Concluida no prazo,0.16
 55,Fase 2,"[F2] GQM de Flexibilidade (G3): questões, hipóteses e métricas",closed,wChrstphr,1.5,1.5,67.5,67.5,19/10,19/10/2026,Concluida no prazo,0.16
 56,Fase 2,[F2] Níveis de pontuação e critérios de julgamento,closed,wChrstphr,1.5,1.0,67.5,45.0,19/10,20/10/2026,Concluida em atraso,0.49
-57,Fase 2,[F2] Plano GQM e diagrama da hierarquia,closed,wChrstphr,0.0,0.0,0.0,0.0,19/10,20/10/2026,Concluida em atraso,0.49
-70,Fase 2,[F2] Atualizar a visão geral da Fase 02 com as páginas de pontuação e Plano GQM,closed,luizh-gsoares,0.25,0.3,11.25,13.5,N/A,20/10/2026,Concluida no prazo,0.69
+57,Fase 2,[F2] Plano GQM e diagrama da hierarquia,closed,wChrstphr,2.0,1.8,90.0,81.0,19/10,20/10/2026,Concluida em atraso,0.49
+70,Fase 2,[F2] Atualizar a visão geral da Fase 02 com as páginas de pontuação e Plano GQM,closed,luizh-gsoares,2.0,1.7,90.0,76.5,N/A,20/10/2026,Concluida no prazo,0.69
+73,Fase 2,[ARTIGO] Metodologia de desenvolvimento do projeto,closed,eduarda-ogomes,2.0,2.0,90.0,90.0,23/10,25/10/2026,Concluida em atraso,5.02
+74,Fase 2,[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1,closed,GabrielSMonteiro,0.0,0.0,0.0,0.0,23/10,26/10/2026,Concluida em atraso,5.79
+75,Fase 2,[ARTIGO] Fase 2: objetivo G1 (Manutenibilidade),closed,luizh-gsoares,1.0,1.7,45.0,76.5,23/10,26/10/2026,Concluida em atraso,5.99
+76,Fase 2,[ARTIGO] Fase 2: objetivo G2 (Confiabilidade),closed,DaviPierre,4.0,3.0,180.0,135.0,23/10,26/10/2026,Concluida em atraso,5.13
+77,Fase 2,[ARTIGO] Fase 2: objetivo G3 (Flexibilidade),closed,LeticiaSantosss,3.5,3.0,157.5,135.0,23/10,25/10/2026,Concluida em atraso,4.98
+78,Fase 2,[ARTIGO] Fase 2: níveis de pontuação e critérios de julgamento,closed,eduarda-ogomes,2.0,2.5,90.0,112.5,23/10,26/10/2026,Concluida em atraso,5.09
+85,Fase 3,[SITE] docs: publicar no GitPages a metodologia da equipe removida do artigo,open,,2.0,0.0,90.0,0.0,03/11,-,Em andamento (no prazo),
+86,Fase 3,[ARTIGO] fix: alinhar tabela de contribuição do artigo com os dados do PSM/CID,open,,1.0,0.0,45.0,0.0,03/11,-,Em andamento (no prazo),
+87,Fase 3,[ARTIGO] fix: voltar o artigo ao modelo SBC,open,,2.0,0.0,90.0,0.0,03/11,-,Em andamento (no prazo),
+88,Fase 2,[ARTIGO] docs: enxugar o artigo da Entrega 1,closed,,3.0,0.0,135.0,0.0,26/10,27/10/2026,Concluida em atraso,0.06
