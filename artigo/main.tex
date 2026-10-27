@@ -58,113 +58,48 @@ Este trabalho apresenta a avaliação da qualidade de produto do software de có
 
 \section{Introdução}
 
-Garantir a qualidade técnica de um sistema vai muito além de checar se suas funcionalidades executam sem falhas visíveis no navegador. Em ferramentas modernas com múltiplos usuários simultâneos, fatores como organização modular do código, estabilidade perante quedas de rede e capacidade de rodar em diferentes dispositivos são decisivos para que a aplicação continue evoluindo sem acumular custos proibitivos de manutenção. Para mensurar esses aspectos de forma estruturada, a engenharia de software recorre a normas consolidadas, como a família ISO/IEC 25000 (SQuaRE) \cite{iso25010}.
+Garantir a qualidade técnica de um sistema vai muito além de checar se suas funcionalidades executam sem falhas visíveis no navegador. Em ferramentas modernas com múltiplos usuários simultâneos, fatores como organização modular do código, estabilidade perante quedas de rede e capacidade de rodar em diferentes dispositivos são decisivos para que a aplicação continue evoluindo sem acumular custos proibitivos de manutenção. Para mensurar esses aspectos de forma estruturada, a engenharia de software recorre a normas consolidadas, como a família ISO/IEC 25000 (SQuaRE) \cite{iso25000}.
 
-O software analisado neste trabalho é o \textbf{Excalidraw}\footnote{Repositório oficial: \url{https://github.com/excalidraw/excalidraw}}, uma ferramenta de código aberto para criação de esboços rápidos, diagramas e quadros brancos virtuais. Seu estilo visual simula traços feitos à mão, o que tornou a ferramenta amplamente adotada por desenvolvedores, educadores e equipes ágeis para dinâmicas de desenho e arquitetura. Do ponto de vista técnico, o projeto é construído em TypeScript e React sob a estrutura de monorepo, englobando tanto a aplicação web final (\texttt{excalidraw.com}) quanto uma biblioteca reutilizável distribuída via npm (\texttt{@excalidraw/excalidraw}).
+O software analisado neste trabalho é o \textbf{Excalidraw}\footnote{Repositório oficial: \url{https://github.com/excalidraw/excalidraw}}, uma ferramenta de código aberto para criação de esboços rápidos, diagramas e quadros brancos virtuais, cujo traço simula o desenho à mão e que é amplamente adotada por desenvolvedores, educadores e equipes ágeis. Apesar do grande alcance do projeto, não identificamos trabalhos ou relatórios formais avaliando sua qualidade técnica segundo padrões internacionais. O código aberto, o histórico transparente de commits, as discussões públicas em issues e os pipelines de integração contínua acessíveis tornam o Excalidraw um objeto de estudo adequado para a disciplina.
 
-Apesar do grande alcance do projeto e de sua comunidade ativa, não identificamos trabalhos ou relatórios formais avaliando sua qualidade técnica segundo padrões internacionais reconhecidos. O fato de o software ter código aberto, histórico transparente de commits, discussões públicas em issues e pipelines de integração contínua (CI) acessíveis torna o Excalidraw um objeto de estudo adequado e prático para as atividades da disciplina.
+O objetivo desta avaliação é diagnosticar a qualidade do produto e identificar pontos de melhoria, gerando insumos para os mantenedores e para os desenvolvedores que integram sua biblioteca. A Equipe Karen Jones conduz a avaliação como grupo independente de QA, seguindo o processo da ISO/IEC 25040 \cite{iso25040} e priorizando três características do modelo ISO/IEC 25010:2023 \cite{iso25010}: \textbf{Manutenibilidade}, \textbf{Confiabilidade} e \textbf{Flexibilidade}. A documentação complementar está no repositório do grupo: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}.
 
-O objetivo principal desta avaliação é diagnosticar a qualidade interna e externa do produto e identificar pontos de melhoria, gerando insumos úteis tanto para os mantenedores quanto para desenvolvedores que integram sua biblioteca. A Equipe Karen Jones conduz essa avaliação como um grupo independente de QA, no âmbito da disciplina de Qualidade de Software 1 da Faculdade de Ciências e Tecnologias em Engenharia (FCTE) da Universidade de Brasília (UnB).
-
-O trabalho foi estruturado com base no processo em quatro fases da norma ISO/IEC 25040 \cite{iso25040}: (1)~estabelecimento dos requisitos de avaliação, (2)~especificação da avaliação via GQM, (3)~planejamento da execução e (4)~execução das medições com julgamento dos resultados. A partir do modelo ISO/IEC 25010:2023 \cite{iso25010}, priorizamos três características centrais: \textbf{Manutenibilidade}, \textbf{Confiabilidade} e \textbf{Flexibilidade}.
-
-Toda a documentação complementar, atas de reunião e relatórios de medição estão disponíveis no repositório do grupo: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}.
-
-\textbf{Estrutura do artigo.} A Seção~\ref{sec:referencial} apresenta a fundamentação teórica; a Seção~\ref{sec:metodologia} descreve a metodologia de avaliação e a estrutura de governança da equipe; a Seção~\ref{sec:fase1} detalha a Fase~1 com escopo, interessados e requisitos levantados; a Seção~\ref{sec:fase2} resume a especificação das métricas na Fase~2 com GQM e os critérios de julgamento; e a Seção~\ref{sec:conclusao} reúne as considerações parciais desta entrega. As Fases~3 e~4 farão parte da entrega seguinte da disciplina.
+A Seção~\ref{sec:referencial} apresenta o referencial e o método, a Seção~\ref{sec:fase1} a Fase~1, a Seção~\ref{sec:fase2} a Fase~2 e a Seção~\ref{sec:conclusao} as considerações parciais; as Fases~3 e~4 fazem parte da entrega seguinte.
 
 % ================================================================
-\section{Referencial Teórico}
+\section{Referencial Teórico e Método}
 \label{sec:referencial}
 
 \subsection{Série de Normas ISO/IEC 25000 (SQuaRE)}
 \label{subsec:normas}
 
-A fundamentação deste trabalho apoia-se na série de normas internacionais ISO/IEC 25000 (SQuaRE) \cite{iso25000}, empregando o modelo de qualidade de produto da ISO/IEC 25010:2023 \cite{iso25010} concentrado nas características priorizadas de Manutenibilidade, Confiabilidade e Flexibilidade (13 subcaracterísticas investigadas). Para a condução da avaliação, adota-se o processo em quatro fases da ISO/IEC 25040 \cite{iso25040}, que estrutura sequencialmente: (1)~estabelecimento dos requisitos de avaliação, (2)~especificação da avaliação, (3)~projeto da avaliação e (4)~execução da avaliação com emissão de diagnósticos e recomendações de melhoria técnica.
+A série ISO/IEC 25000 (SQuaRE) \cite{iso25000} organiza as normas de requisitos e de avaliação da qualidade de produto de software. Este trabalho usa três de suas divisões: o modelo de qualidade de produto da ISO/IEC 25010:2023 \cite{iso25010}, que define características e subcaracterísticas; a ISO/IEC 25023 \cite{iso25023}, divisão de medição que define medidas de qualidade de produto; e a ISO/IEC 25040 \cite{iso25040}, que organiza a avaliação em quatro fases: estabelecer os requisitos da avaliação, especificar a avaliação, projetar a avaliação e executá-la, com a emissão do diagnóstico e das recomendações de melhoria.
 
 \subsection{Goal-Question-Metric (GQM)}
 \label{subsec:gqm}
 
-Para operacionalizar a medição de forma orientada a objetivos e sem dispersão empírica, adota-se o paradigma \textbf{GQM} (\textit{Goal-Question-Metric}) proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}. O método estrutura a avaliação em três níveis hierárquicos: os \textbf{Objetivos} conceituais formulados sob a perspectiva das partes interessadas (o que avaliar e com qual finalidade), as \textbf{Questões} operacionais (perguntas que caracterizam o alcance dos objetivos e investigam hipóteses prévias) e as \textbf{Métricas} objetivas (indicadores quantitativos com fórmulas matemáticas que respondem a essas perguntas). A principal vantagem do GQM é garantir que cada métrica coletada responda diretamente a uma necessidade real do produto, assegurando a rastreabilidade entre os requisitos de qualidade e os dados mensurados.
+O paradigma \textbf{GQM} (\textit{Goal-Question-Metric}), proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}, estrutura a medição em três níveis: os \textbf{objetivos} conceituais, formulados sob a perspectiva das partes interessadas; as \textbf{questões} operacionais, que caracterizam o alcance de cada objetivo e carregam hipóteses prévias; e as \textbf{métricas}, que respondem às questões de forma quantitativa. A vantagem do método é garantir que cada métrica coletada responda a uma necessidade real, mantendo a rastreabilidade entre os requisitos de qualidade e os dados medidos.
 
-% ================================================================
-\section{Metodologia}
-\label{sec:metodologia}
+\subsection{Construção dos Artefatos da Avaliação}
+\label{subsec:metodo}
 
-A condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\ref{fig:metodologia} sintetiza a metodologia adotada pela equipe, articulada nas quatro fases sequenciais da avaliação e na dimensão transversal de governança.
+Na Fase~1, a priorização das características seguiu duas etapas. Primeiro, o interesse de cada grupo de interessados por característica foi classificado como Principal (peso 2) ou Secundário (peso 1), e a soma, normalizada de 1 a 5, resultou na nota de ênfase. Depois, a ênfase foi multiplicada pela estimativa de risco técnico de o Excalidraw apresentar falhas ou dívidas naquela área, formando a matriz impacto $\times$ risco. As características selecionadas foram interpretadas no contexto do produto e desdobradas, por subcaracterística, em requisitos de avaliação, que são as perguntas que a avaliação deve responder.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=0.68\textwidth]{figura-metodologia}
-\caption{Diagrama metodológico do processo de avaliação da qualidade (Fonte: Equipe Karen Jones).}
-\label{fig:metodologia}
-\end{figure}
-
-\subsection{Caixa 1: Requisitos de Avaliação (Fase 1)}
-Estabelece o escopo e as prioridades do estudo antes da medição empírica. A equipe definiu como propósito identificar pontos de melhoria no Excalidraw, adotando o commit congelado \texttt{e1b7aac} como linha de base estática. A partir da identificação de sete partes interessadas e de uma matriz de impacto $\times$ risco técnico, priorizaram-se três características da ISO/IEC 25010:2023: Manutenibilidade ($P1$), Confiabilidade ($P2$) e Flexibilidade ($P3$). Foram delineadas 13 subcaracterísticas e 36 requisitos formais de avaliação (RQ-MAN-01 a RQ-FLEX-12). Esta etapa foi conduzida pelo Subgrupo F1/F3 na Entrega 1.
-
-\subsection{Caixa 2: Especificação da Avaliação (Fase 2)}
-Traduz os requisitos de qualidade em medição objetiva via GQM. As características foram desdobradas em três objetivos conceituais (G1, G2 e G3), 13 questões com hipóteses técnicas e um catálogo de 36 métricas com fórmulas matemáticas de cálculo. Para garantir imparcialidade prévia à coleta, definiu-se uma escala ordinal de cinco níveis (Heitlager/SIG) e critérios conclusivos de corte inspirados na TÜViT (Atende, Não Atende e Inconclusivo). Esta etapa foi conduzida pelo Subgrupo F2/F4 na Entrega 1.
-
-\subsection{Caixa 3: Projeto da Avaliação (Fase 3)}
-Planeja a infraestrutura de medição e automação para inspeção estática e testes no ecossistema TypeScript e React, selecionando ferramentas consagradas (ESLint, API do TypeScript, ts-morph, cloc e Vitest). Formalizam-se o Plano de Medição e o Plano de Análise, preparando o processamento dos dados. A execução está planejada para a Entrega 2 sob a responsabilidade do Subgrupo F1/F3.
-
-\subsection{Caixa 4: Execução da Avaliação e Julgamento (Fase 4)}
-Materializa a coleta empírica das 36 métricas sobre a linha de base congelada, confrontando os resultados com as hipóteses formuladas. A consolidação adota agregação matemática em duas etapas (média das métricas por questão e média das questões por característica), aplicando os critérios de corte da TÜViT para emissão do diagnóstico final, recomendação de melhorias e concepção de protótipo de interface de alta fidelidade na Entrega 2 pelo Subgrupo F2/F4.
-
-\subsection{Caixa 5: Estrutura da Equipe e Governança no GitHub}
-Sustentação operacional transversal do projeto. A equipe organizou-se em dois subgrupos estáveis de três integrantes (Tabela~\ref{tab:subgrupos}) para atuar em paralelo sem sobreposição de escopo. A escrita do artigo e as apresentações ocorrem de maneira compartilhada por todos os membros.
-
-\begin{table}[!ht]
-\centering
-\caption{Estrutura organizacional da equipe e distribuição de responsabilidades}
-\label{tab:subgrupos}
-\vspace{4pt}
-\small
-\begin{tabular}{p{2.3cm}p{4.2cm}p{2.0cm}p{6.5cm}}
-\toprule
-\textbf{Subgrupo} & \textbf{Integrantes} & \textbf{Fases} & \textbf{Escopo Principal} \\
-\midrule
-Subgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Requisitos, interessados, modelo de qualidade e projeto de testes \\
-Subgrupo F2/F4 & Christopher Paraizo, Luiz Henrique Soares e Maria Eduarda & Fase 2 e Fase 4 & Objetivos e métricas GQM, pontuação, execução prática e ações de melhoria \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-O fluxo de trabalho no GitHub é estritamente regido pelo guia de contribuição, vedando envios diretos na branch principal (\texttt{main}). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão formal por ao menos um membro do grupo.
+Na Fase~2, cada característica originou um objetivo GQM, com foco e ponto de vista herdados da priorização e dos interessados da Fase~1. As \textit{abstraction sheets} de cada objetivo registraram os fatores de qualidade, as hipóteses e os fatores de variação, e deram origem a uma questão por subcaracterística, com hipótese prévia, e às métricas com fórmula e procedimento de coleta, tendo o catálogo de medidas da ISO/IEC 25023 \cite{iso25023} como referência. Por fim, antes de qualquer coleta, definiram-se os níveis de pontuação das métricas, a regra de agregação e os critérios de julgamento (Seção~\ref{subsec:pontuacao-julgamento}).
 
 % ================================================================
 \section{Fase 1: Requisitos de Avaliação}
 \label{sec:fase1}
 
-A Fase 1 da ISO/IEC 25040 estabelece o alicerce de todo o trabalho de avaliação \cite{iso25040}: antes de coletar qualquer dado, é necessário delimitar o propósito do estudo, o produto sob análise, os interessados nos resultados e os atributos de qualidade que justificam o esforço de medição.
+A Fase 1 da ISO/IEC 25040 delimita, antes de qualquer coleta, o propósito do estudo, o produto, os interessados e os atributos de qualidade que justificam a medição \cite{iso25040}.
 
 \subsection{Propósito da Avaliação}
 
-O propósito primordial definido pela equipe é \textbf{identificar pontos de melhoria no produto Excalidraw}, seguindo as tipologias de avaliação recomendadas na norma e na disciplina. Para isso, traçamos metas práticas: (1)~diagnosticar as características prioritárias (Manutenibilidade, Confiabilidade e Flexibilidade) via inspeção de código e dados do repositório; (2)~documentar boas práticas já consolidadas no projeto; (3)~mapear pontos de fragilidade e acoplamento arquitetural; (4)~sugerir ações corretivas (incluindo a concepção de um protótipo de interface de alta fidelidade); e (5)~gerar um relatório técnico rastreável.
-
-Ficam fora do escopo do estudo comparações mercadológicas com ferramentas concorrentes, auditorias para certificação comercial e a medição das outras seis características da ISO/IEC 25010:2023.
+O propósito definido pela equipe é \textbf{identificar pontos de melhoria no produto Excalidraw}. Para isso, a avaliação diagnostica as características priorizadas por inspeção do código e dos dados do repositório, registra as boas práticas já consolidadas no projeto, mapeia pontos de fragilidade e de acoplamento e sugere ações corretivas, entre elas um protótipo de interface de alta fidelidade, reunindo os resultados em um relatório técnico rastreável. Ficam fora do escopo comparações com ferramentas concorrentes, auditorias para certificação comercial e a medição das outras seis características da ISO/IEC 25010:2023.
 
 \subsection{Requisitante da Avaliação}
 
-A \textbf{Equipe Karen Jones} se declara como a própria requisitante, atuando como \textbf{equipe de QA independente}, sem qualquer vínculo institucional ou comercial com os mantenedores do Excalidraw (Tabela~\ref{tab:requisitante}). O objetivo é estritamente formativo e acadêmico.
-
-\begin{table}[!ht]
-\centering
-\caption{Identificação do requisitante da avaliação}
-\label{tab:requisitante}
-\vspace{4pt}
-\small
-\begin{tabular}{ll}
-\toprule
-\textbf{Campo} & \textbf{Descrição} \\
-\midrule
-Requisitante & Equipe Karen Jones \\
-Papel & Equipe de QA independente \\
-Contexto & Qualidade de Software 1, FCTE/UnB, 2$^\circ$ sem. 2026 \\
-Objetivo declarado & Identificar pontos de melhoria no produto \\
-\bottomrule
-\end{tabular}
-\end{table}
+A \textbf{Equipe Karen Jones} é a própria requisitante e atua como \textbf{equipe de QA independente}, sem vínculo institucional ou comercial com os mantenedores do Excalidraw. O objetivo é estritamente formativo e acadêmico, com fim de identificar pontos de melhoria no produto.
 
 \subsection{Identificação do Produto}
 
@@ -192,11 +127,9 @@ Commit de referência & \texttt{e1b7aac} (branch \texttt{master}, 18/10/2026) \\
 
 \subsection{Descrição do Produto e Arquitetura}
 
-O Excalidraw pode ser classificado, no enquadramento de Pressman \cite{pressman2021}, como uma \textbf{aplicação web (WebApp)} de produtividade e colaboração, atuando também como componente de prateleira (COTS) quando sua biblioteca é integrada diretamente em soluções externas. O projeto combina duas naturezas complementares: (1)~uma aplicação web e PWA para criação de esboços, com colaboração em tempo real e funcionamento offline; e (2)~uma biblioteca React reutilizável (\texttt{@excalidraw/excalidraw}) distribuída via npm.
+O Excalidraw pode ser classificado, no enquadramento de Pressman \cite{pressman2021}, como uma \textbf{aplicação web (WebApp)} de produtividade e colaboração, que atua também como componente de prateleira (COTS) quando sua biblioteca é integrada em soluções externas. O projeto combina uma aplicação web e PWA para criação de esboços, com colaboração em tempo real e funcionamento offline, e uma biblioteca React reutilizável (\texttt{@excalidraw/excalidraw}) distribuída via npm.
 
-O repositório adota a estrutura de \textbf{monorepo} sob Yarn Workspaces. Os principais módulos incluem: \texttt{excalidraw-app/} (camada de aplicação web, armazenamento local e build), \texttt{packages/excalidraw/} (editor visual principal), \texttt{packages/element/} (operações e tipos dos elementos gráficos), módulos utilitários compartilhados (\texttt{packages/math/}, \texttt{packages/common/} e \texttt{packages/utils/}) e rotinas de automação em \texttt{.github/workflows/}.
-
-Nas interfaces externas, o sistema apoia-se nas APIs 2D Canvas do navegador, no motor Rough.js para traçado com estilo manual, na persistência local via IndexedDB e LocalStorage, e em comunicação WebSocket criptografada de ponta a ponta para o servidor de colaboração. A Figura~\ref{fig:arquitetura} ilustra o diagrama de contexto e arquitetura do software.
+O repositório adota a estrutura de \textbf{monorepo}. Os principais módulos são \texttt{excalidraw-app/} (aplicação web, armazenamento local e build), \texttt{packages/excalidraw/} (editor visual principal), \texttt{packages/element/} (operações e tipos dos elementos gráficos), os utilitários compartilhados \texttt{packages/math/}, \texttt{packages/common/} e \texttt{packages/utils/}, e as rotinas de automação em \texttt{.github/workflows/}. Nas interfaces externas, o sistema apoia-se na API 2D Canvas do navegador, no Rough.js para o traçado manual, na persistência local via IndexedDB e LocalStorage e em comunicação WebSocket criptografada de ponta a ponta com o servidor de colaboração (Figura~\ref{fig:arquitetura}). Como não temos acesso aos servidores de produção nem à telemetria dos mantenedores, a avaliação apoia-se em inspeção dos artefatos públicos do monorepo; a Tabela~\ref{tab:subcaracteristicas} indica o que é viável ou não medir sob essas condições.
 
 \begin{figure}[!ht]
 \centering
@@ -204,33 +137,6 @@ Nas interfaces externas, o sistema apoia-se nas APIs 2D Canvas do navegador, no 
 \caption{Diagrama de contexto e arquitetura do Excalidraw (Fonte: Equipe Karen Jones).}
 \label{fig:arquitetura}
 \end{figure}
-
-Como não temos acesso a servidores em produção ou a métricas internas de telemetria dos mantenedores, a avaliação apoia-se em \textbf{inspeção estática} dos artefatos públicos do monorepo. A Tabela~\ref{tab:implicacoes} sintetiza o que é viável ou não medir sob essas condições.
-
-\begin{table}[!ht]
-\centering
-\caption{Implicações arquiteturais para a avaliação}
-\label{tab:implicacoes}
-\vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.4cm}p{4.2cm}p{9.0cm}}
-\toprule
-\textbf{Subcaract.} & \textbf{Viável medir} & \textbf{Não viável medir} \\
-\midrule
-Modularidade & Dependências estáticas e acoplamento de pacotes & Comportamento em redes restritivas corporativas \\
-Reusabilidade & Isolamento da biblioteca e APIs públicas & Compatibilidade com empacotadores legados \\
-Analisabilidade & Complexidade ciclomática, LoC e tipagem estática & Compreensão subjetiva sem histórico prévio \\
-Testabilidade & Suíte de testes automatizados no CI & Testes manuais em hardware heterogêneo \\
-Maturidade & Histórico de issues, releases e verificações pré-merge & Taxa real de falhas observada em produção \\
-Disponibilidade & Service Worker, manifesto PWA e rotinas offline & Tempo de atividade e SLA dos servidores \\
-Toler. a falhas & Tratamento de exceções e isolamento de falhas & Testes de estresse com injeção de pacotes \\
-Recuperabilidade & Persistência local no IndexedDB e undo/redo & Falhas de disco ou danos físicos no cliente \\
-Adaptabilidade & Layout responsivo e suporte a dispositivos de entrada & Execução em sistemas operacionais não homologados \\
-Escalabilidade & Capacidade com múltiplos elementos no canvas & Sobrecarga extrema em hardware de baixo custo \\
-Instalabilidade & Integridade de dependências npm e Dockerfile & Instalação em ambientes sem acesso à internet \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \subsection{Partes Interessadas}
 \label{subsec:interessados}
@@ -261,7 +167,7 @@ Equipes de qualidade            & Principal & Principal  & Secundário \\
 \subsection{Priorização das Características}
 \label{subsec:priorizacao}
 
-Para evitar escolhas subjetivas, adotamos um processo sistemático em duas etapas. Na primeira etapa, calculamos uma nota de ênfase a partir dos interesses declarados de cada grupo (peso 2 para interesse Principal e 1 para Secundário, em escala normalizada de 1 a 5). Na segunda etapa, cruzamos essa ênfase com a estimativa de risco técnico de o Excalidraw apresentar falhas ou dívidas naquela área, gerando a matriz impacto $\times$ risco da Tabela~\ref{tab:priorizacao}.
+A Tabela~\ref{tab:priorizacao} apresenta o resultado da matriz impacto $\times$ risco, construída como descrito na Seção~\ref{subsec:metodo}.
 
 \begin{table}[!ht]
 \centering
@@ -288,7 +194,7 @@ Embora Confiabilidade tenha alcançado o maior índice absoluto no cruzamento ($
 
 \subsection{Modelo de Qualidade Adotado}
 
-A partir do processo de priorização, consolidamos o modelo de qualidade em três características e 13 subcaracterísticas (Figura~\ref{fig:modelo}). As definições teóricas da norma foram interpretadas no contexto específico do Excalidraw, conforme detalhado nas Tabelas~\ref{tab:manut},~\ref{tab:confiab} e~\ref{tab:flex}.
+A partir da priorização, consolidamos o modelo de qualidade em três características e 13 subcaracterísticas (Figura~\ref{fig:modelo}). A Tabela~\ref{tab:subcaracteristicas} interpreta cada subcaracterística no contexto do Excalidraw e indica o que é viável medir sem acesso aos servidores de produção. Disponibilidade, Tolerância a falhas e Recuperabilidade envolvem comportamento em execução, mas são investigadas sobretudo pelo código (manifesto PWA, Service Worker, tratamento de exceções e persistência local) e por ensaios no navegador.
 
 \begin{figure}[!ht]
 \centering
@@ -299,60 +205,36 @@ A partir do processo de priorização, consolidamos o modelo de qualidade em tr�
 
 \begin{table}[!ht]
 \centering
-\caption{Manutenibilidade: subcaracterísticas e aplicação ao Excalidraw}
-\label{tab:manut}
+\caption{Subcaracterísticas: aplicação ao Excalidraw e implicações para a medição}
+\label{tab:subcaracteristicas}
 \vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.4cm}p{13.2cm}}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{2.2cm}p{6.6cm}p{3.6cm}p{3.6cm}}
 \toprule
-\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
+\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} & \textbf{Viável medir} & \textbf{Não viável medir} \\
 \midrule
-Modularidade      & Separação nítida entre \texttt{excalidraw-app/} e \texttt{packages/excalidraw/}, coesão interna e ausência de dependências circulares. \\
-Reusabilidade     & Independência da biblioteca React, estabilidade da API pública e existência de exemplos claros de integração. \\
-Analisabilidade   & Clareza dos diretórios, documentação de contribuição, consistência na tipagem TypeScript e ferramentas de análise estática. \\
-Modificabilidade  & Baixo acoplamento entre componentes, ausência de funções excessivamente longas e facilidade de alteração no histórico de commits. \\
-Testabilidade     & Estrutura de testes automatizados em múltiplos níveis (unitários e de integração) e execução contínua no CI. \\
+\multicolumn{4}{l}{\textit{Manutenibilidade}} \\
+Modularidade      & Separação entre \texttt{excalidraw-app/} e \texttt{packages/excalidraw/}, coesão interna e ausência de dependências circulares. & Dependências estáticas e acoplamento de pacotes & Comportamento em redes restritivas corporativas \\
+Reusabilidade     & Independência da biblioteca React, estabilidade da API pública e exemplos claros de integração. & Isolamento da biblioteca e APIs públicas & Compatibilidade com empacotadores legados \\
+Analisabilidade   & Clareza dos diretórios, documentação de contribuição, tipagem TypeScript e ferramentas de análise estática. & Complexidade ciclomática, LoC e tipagem estática & Compreensão subjetiva sem histórico prévio \\
+Modificabilidade  & Baixo acoplamento entre componentes, ausência de funções excessivamente longas e facilidade de alteração no histórico. & Tamanho dos arquivos e alcance das alterações nos PRs & -- \\
+Testabilidade     & Testes automatizados em múltiplos níveis (unitários e de integração) e execução contínua no CI. & Suíte de testes automatizados no CI & Testes manuais em hardware heterogêneo \\
+\midrule
+\multicolumn{4}{l}{\textit{Confiabilidade}} \\
+Maturidade        & Frequência de lançamentos, rigor na revisão de PRs, checagem de tipos e lint e triagem organizada de defeitos. & Histórico de issues, releases e verificações pré-merge & Taxa real de falhas em produção \\
+Disponibilidade   & Operação offline via PWA e independência frente a falhas de serviços externos. & Service Worker, manifesto PWA e rotinas offline & Tempo de atividade e SLA dos servidores \\
+Toler. a falhas   & Isolamento do editor local se a sessão colaborativa cair e tratamento de exceções em arquivos inválidos. & Tratamento de exceções e isolamento de falhas & Testes de estresse com injeção de pacotes \\
+Recuperabilidade  & Salvamento automático local, restauração do último estado e integridade do desfazer e refazer. & Persistência no IndexedDB e desfazer/refazer & Falhas de disco ou danos físicos no cliente \\
+\midrule
+\multicolumn{4}{l}{\textit{Flexibilidade}} \\
+Adaptabilidade    & Navegadores modernos, telas responsivas, comandos por toque e integração em versões do React. & Layout responsivo e dispositivos de entrada & Sistemas operacionais não homologados \\
+Escalabilidade    & Suporte a grandes volumes de elementos gráficos sem travamento e expansibilidade da API. & Capacidade com muitos elementos no canvas & Sobrecarga extrema em hardware de baixo custo \\
+Instalabilidade   & Instalação via npm, imagem Docker e clareza do guia de instalação local. & Dependências npm e Dockerfile & Instalação sem acesso à internet \\
+Substituibilidade & Exportação em \texttt{.excalidraw}, PNG e SVG e fidelidade na reimportação sem perda de dados. & Formatos de exportação e reimportação & -- \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\begin{table}[!ht]
-\centering
-\caption{Confiabilidade: subcaracterísticas e aplicação ao Excalidraw}
-\label{tab:confiab}
-\vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.4cm}p{13.2cm}}
-\toprule
-\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
-\midrule
-Maturidade        & Frequência de lançamentos, rigor na revisão de PRs, checagem de tipos/lint e triagem organizada de defeitos. \\
-Disponibilidade   & Capacidade de operação offline via PWA e independência funcional frente a falhas de serviços externos. \\
-Toler. a falhas   & Isolamento do editor local caso a sessão colaborativa caia e tratamento robusto de exceções em arquivos inválidos. \\
-Recuperabilidade  & Salvamento automático local, restauração do último estado ao reabrir o navegador e integridade do histórico de desfazer/refazer. \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-\centering
-\caption{Flexibilidade: subcaracterísticas e aplicação ao Excalidraw}
-\label{tab:flex}
-\vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.4cm}p{13.2cm}}
-\toprule
-\textbf{Subcaract.} & \textbf{Aplicação ao Excalidraw} \\
-\midrule
-Adaptabilidade     & Suporte a diferentes navegadores modernos, telas responsivas, comandos por toque e integração em versões do React. \\
-Escalabilidade     & Capacidade do editor de suportar grandes volumes de elementos gráficos sem travamento e expansibilidade da API. \\
-Instalabilidade    & Facilidade de instalação via gerenciadores npm, existência de imagem Docker e clareza no guia de instalação local. \\
-Substituibilidade  & Opções de exportação em múltiplos formatos (\texttt{.excalidraw}, PNG e SVG) e fidelidade na reimportação sem perda de dados. \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\textbf{Ponderação metodológica:} vale destacar que, embora subcaracterísticas como Disponibilidade, Tolerância a Falhas e Recuperabilidade envolvam comportamento em tempo de execução, nesta avaliação investigamos esses fatores principalmente por meio de inspeção estática no código (manifesto PWA, Service Workers, tratamento de exceções assíncronas e estratégias de persistência local). Essa escolha permite obter diagnósticos técnicos consistentes mesmo sem acesso aos servidores de produção.
 
 \subsection{Escopo e Objetos de Avaliação}
 
@@ -364,7 +246,7 @@ Para orientar a coleta, definimos seis objetos de avaliação concretos que comp
 \label{tab:objetos}
 \vspace{4pt}
 \footnotesize
-\begin{tabular}{p{0.8cm}p{5.5cm}p{9.2cm}}
+\begin{tabular}{p{0.8cm}p{9.0cm}p{5.7cm}}
 \toprule
 \textbf{ID} & \textbf{Objeto} & \textbf{Características} \\
 \midrule
@@ -383,140 +265,114 @@ O6 & Histórico público de commits, issues e PRs & Manutenib. e Confiab. \\
 \subsection{Requisitos de Avaliação}
 \label{subsec:requisitos}
 
-Os requisitos representam as perguntas técnicas que o produto deve permitir responder. Eles foram organizados por subcaracterística nas Tabelas~\ref{tab:reqman},~\ref{tab:reqconf} e~\ref{tab:reqflex}.
+Os requisitos representam as perguntas técnicas que o produto deve permitir responder. A Tabela~\ref{tab:requisitos} os organiza por subcaracterística e indica a questão GQM da Fase~2 que responde a cada um.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \centering
-\caption{Requisitos de avaliação: Manutenibilidade}
-\label{tab:reqman}
+\caption{Requisitos de avaliação e questões GQM correspondentes}
+\label{tab:requisitos}
 \vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.1cm}p{11.3cm}p{2.6cm}}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{1.9cm}p{10.0cm}p{2.4cm}p{1.2cm}}
 \toprule
-\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
+\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} & \textbf{Questão} \\
 \midrule
-RQ-MAN-01 & Existem limites claros entre aplicação e biblioteca? & Modularidade \\
-RQ-MAN-02 & As dependências entre pacotes seguem direção consistente, sem ciclos? & Modularidade \\
-RQ-MAN-03 & Cada pacote tem responsabilidade coesa e baixo acoplamento? & Modularidade \\
-RQ-MAN-04 & Os componentes podem ser reutilizados de forma isolada? & Reusabilidade \\
-RQ-MAN-05 & A interface pública está documentada e separada dos internos? & Reusabilidade \\
-RQ-MAN-06 & O código pode ser compreendido com facilidade? & Analisabilidade \\
-RQ-MAN-07 & Existem convenções de código e documentação de contribuição? & Analisabilidade \\
-RQ-MAN-08 & Ferramentas de lint, formatação e verificação de tipos integradas? & Analisabilidade \\
-RQ-MAN-09 & Alterações podem ser feitas sem impacto excessivo em outros módulos? & Modificabilidade \\
-RQ-MAN-10 & Há arquivos ou funções que concentram responsabilidades demais? & Modificabilidade \\
-RQ-MAN-11 & O sistema apresenta condições adequadas para testes automatizados? & Testabilidade \\
-RQ-MAN-12 & Os testes cobrem diferentes níveis (unitário, integração, E2E)? & Testabilidade \\
-RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{Requisitos de avaliação: Confiabilidade}
-\label{tab:reqconf}
-\vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.5cm}p{10.9cm}p{2.6cm}}
-\toprule
-\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
+RQ-MAN-01 & Existem limites claros entre aplicação e biblioteca? & Modularidade & Q1.1 \\
+RQ-MAN-02 & As dependências entre pacotes seguem direção consistente, sem ciclos? & Modularidade & Q1.1 \\
+RQ-MAN-03 & Cada pacote tem responsabilidade coesa e baixo acoplamento? & Modularidade & Q1.1 \\
+RQ-MAN-04 & Os componentes podem ser reutilizados de forma isolada? & Reusabilidade & Q1.2 \\
+RQ-MAN-05 & A interface pública está documentada e separada dos internos? & Reusabilidade & Q1.2 \\
+RQ-MAN-06 & O código pode ser compreendido com facilidade? & Analisabilidade & Q1.3 \\
+RQ-MAN-07 & Existem convenções de código e documentação de contribuição? & Analisabilidade & Q1.3 \\
+RQ-MAN-08 & Ferramentas de lint, formatação e verificação de tipos integradas? & Analisabilidade & Q1.3 \\
+RQ-MAN-09 & Alterações podem ser feitas sem impacto excessivo em outros módulos? & Modificabilidade & Q1.4 \\
+RQ-MAN-10 & Há arquivos ou funções que concentram responsabilidades demais? & Modificabilidade & Q1.4 \\
+RQ-MAN-11 & O sistema apresenta condições adequadas para testes automatizados? & Testabilidade & Q1.5 \\
+RQ-MAN-12 & Os testes cobrem diferentes níveis (unitário, integração, E2E)? & Testabilidade & Q1.5 \\
+RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade & Q1.5 \\
 \midrule
-RQ-CONF-01 & Verificações automáticas atuam antes da integração? & Maturidade \\
-RQ-CONF-02 & Defeitos são registrados e tratados de forma organizada? & Maturidade \\
-RQ-CONF-03 & O editor continua utilizável sem conexão após primeiro carregamento? & Disponibilidade \\
-RQ-CONF-04 & O editor local funciona sem depender de sessão colaborativa? & Disponibilidade \\
-RQ-CONF-05 & Funcionalidades essenciais se mantêm diante de problemas de rede? & Toler. a falhas \\
-RQ-CONF-06 & O editor local continua funcionando quando a colaboração falha? & Toler. a falhas \\
-RQ-CONF-07 & Arquivos inválidos são tratados sem comprometer a aplicação? & Toler. a falhas \\
-RQ-CONF-08 & O último estado é restaurado ao reabrir a aplicação? & Recuperabilidade \\
-RQ-CONF-09 & Desenhos podem ser armazenados e recuperados em \texttt{.excalidraw}? & Recuperabilidade \\
-RQ-CONF-10 & Arquivos de versões anteriores continuam abrindo? & Recuperabilidade \\
-RQ-CONF-11 & Desfazer e refazer ações é possível? & Recuperabilidade \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{Requisitos de avaliação: Flexibilidade}
-\label{tab:reqflex}
-\vspace{4pt}
-\footnotesize
-\begin{tabular}{p{2.1cm}p{11.3cm}p{2.6cm}}
-\toprule
-\textbf{ID} & \textbf{Requisito (pergunta a responder)} & \textbf{Subcaract.} \\
+RQ-CONF-01 & Verificações automáticas atuam antes da integração? & Maturidade & Q2.1 \\
+RQ-CONF-02 & Defeitos são registrados e tratados de forma organizada? & Maturidade & Q2.1 \\
+RQ-CONF-03 & O editor continua utilizável sem conexão após primeiro carregamento? & Disponibilidade & Q2.2 \\
+RQ-CONF-04 & O editor local funciona sem depender de sessão colaborativa? & Disponibilidade & Q2.2 \\
+RQ-CONF-05 & Funcionalidades essenciais se mantêm diante de problemas de rede? & Toler. a falhas & Q2.3 \\
+RQ-CONF-06 & O editor local continua funcionando quando a colaboração falha? & Toler. a falhas & Q2.3 \\
+RQ-CONF-07 & Arquivos inválidos são tratados sem comprometer a aplicação? & Toler. a falhas & Q2.3 \\
+RQ-CONF-08 & O último estado é restaurado ao reabrir a aplicação? & Recuperabilidade & Q2.4 \\
+RQ-CONF-09 & Desenhos podem ser armazenados e recuperados em \texttt{.excalidraw}? & Recuperabilidade & Q2.4 \\
+RQ-CONF-10 & Arquivos de versões anteriores continuam abrindo? & Recuperabilidade & Q2.4 \\
+RQ-CONF-11 & Desfazer e refazer ações é possível? & Recuperabilidade & Q2.4 \\
 \midrule
-RQ-FLEX-01 & A aplicação pode ser utilizada em diferentes navegadores? & Adaptabilidade \\
-RQ-FLEX-02 & A biblioteca pode ser integrada em diferentes versões React? & Adaptabilidade \\
-RQ-FLEX-03 & Há dependências que dificultam o uso em determinados ambientes? & Adaptabilidade \\
-RQ-FLEX-04 & O editor é utilizável em dispositivos móveis e com toque? & Adaptabilidade \\
-RQ-FLEX-05 & O editor mantém desempenho quando o nº de elementos cresce? & Escalabilidade \\
-RQ-FLEX-06 & Desenhos grandes podem ser abertos e exportados sem travar? & Escalabilidade \\
-RQ-FLEX-07 & A biblioteca pode ser instalada e removida por npm? & Instalabilidade \\
-RQ-FLEX-08 & A aplicação pode ser construída em diferentes ambientes? & Instalabilidade \\
-RQ-FLEX-09 & O suporte a Docker facilita a implantação? & Instalabilidade \\
-RQ-FLEX-10 & As instruções de instalação são reproduzíveis? & Instalabilidade \\
-RQ-FLEX-11 & Dados podem ser exportados em formatos utilizáveis fora da app? & Substituibilidade \\
-RQ-FLEX-12 & Os formatos exportados são abertos e permitem reimportação? & Substituibilidade \\
+RQ-FLEX-01 & A aplicação pode ser utilizada em diferentes navegadores? & Adaptabilidade & Q3.1 \\
+RQ-FLEX-02 & A biblioteca pode ser integrada em diferentes versões React? & Adaptabilidade & Q3.1 \\
+RQ-FLEX-03 & Há dependências que dificultam o uso em determinados ambientes? & Adaptabilidade & Q3.1 \\
+RQ-FLEX-04 & O editor é utilizável em dispositivos móveis e com toque? & Adaptabilidade & Q3.1 \\
+RQ-FLEX-05 & O editor mantém desempenho quando o nº de elementos cresce? & Escalabilidade & Q3.2 \\
+RQ-FLEX-06 & Desenhos grandes podem ser abertos e exportados sem travar? & Escalabilidade & Q3.2 \\
+RQ-FLEX-07 & A biblioteca pode ser instalada e removida por npm? & Instalabilidade & Q3.3 \\
+RQ-FLEX-08 & A aplicação pode ser construída em diferentes ambientes? & Instalabilidade & Q3.3 \\
+RQ-FLEX-09 & O suporte a Docker facilita a implantação? & Instalabilidade & Q3.3 \\
+RQ-FLEX-10 & As instruções de instalação são reproduzíveis? & Instalabilidade & Q3.3 \\
+RQ-FLEX-11 & Dados podem ser exportados em formatos utilizáveis fora da app? & Substituibilidade & Q3.4 \\
+RQ-FLEX-12 & Os formatos exportados são abertos e permitem reimportação? & Substituibilidade & Q3.4 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Relação com os Objetivos de Desenvolvimento Sustentável (ODS)}
 
-Para além dos critérios computacionais, analisamos o papel social do Excalidraw frente aos Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU \cite{onu2015ods}. Três metas dialogam diretamente com a proposta do projeto. Em relação ao \textbf{ODS 4: Educação de Qualidade}, por ser gratuito, acessível diretamente no navegador e sem cadastro obrigatório, o software é amplamente utilizado em ambientes educacionais para ilustrar algoritmos e conceitos visuais, apoiando o estudo colaborativo remoto. Quanto ao \textbf{ODS 9: Indústria, Inovação e Infraestrutura}, sua arquitetura modular e distribuição via npm incentivam a inovação de terceiros sem custos de licenciamento, ao passo que o suporte a PWA viabiliza o acesso mesmo em redes instáveis. Por fim, no \textbf{ODS 10: Redução das Desigualdades}, a adoção da licença MIT e a exportação em formatos abertos (\texttt{.excalidraw}, SVG e PNG) diminuem barreiras econômicas e eliminam o aprisionamento tecnológico para usuários e instituições que não dispõem de ferramentas proprietárias.
+Relacionamos o Excalidraw a três ODS da Agenda 2030 \cite{onu2015ods}, cada um com a meta e o indicador global \cite{unsd2025indicadores} a que o software se aplica. No \textbf{ODS 4}, a meta 4.4 prevê aumentar o número de jovens e adultos com habilidades técnicas relevantes, acompanhada pelo indicador 4.4.1 (proporção de jovens e adultos com habilidades em TIC); o editor é gratuito, roda no navegador sem cadastro e é usado em aulas para desenhar algoritmos e arquiteturas. No \textbf{ODS 9}, a meta 9.c busca ampliar o acesso às tecnologias de informação e comunicação, medida pelo indicador 9.c.1 (população coberta por rede móvel); o funcionamento offline como PWA mantém o editor útil onde essa cobertura é instável, o que liga o ODS à Disponibilidade avaliada no G2. No \textbf{ODS 10}, a meta 10.2 pede a inclusão social e econômica de todos, independentemente da condição econômica; a licença MIT e a exportação em formatos abertos eliminam custo de licença e aprisionamento tecnológico. Como o indicador 10.2.1 mede renda, a contribuição do software para essa meta é indireta.
 
 % ================================================================
 \section{Fase 2: Especificação da Avaliação}
 \label{sec:fase2}
 
-Concluída a Fase~1 com três características priorizadas, 13 subcaracterísticas e 36 requisitos de avaliação, a Fase~2 da ISO/IEC 25040 \cite{iso25040} converte essas necessidades em medição reprodutível por meio do paradigma Goal-Question-Metric (GQM) \cite{basili1994gqm}, que organiza a especificação em objetivos conceituais, questões operacionais com hipóteses prévias e métricas quantitativas. Cada característica originou um objetivo GQM cujo foco e ponto de vista derivam da Fase~1. O objetivo G1 herda a prioridade P1 (ênfase~4, impacto~$\times$~risco~=~12) e analisa código-fonte, testes, documentação e histórico de alterações para compreender a Manutenibilidade sob o ponto de vista dos mantenedores e contribuidores, os quatro grupos para os quais essa característica é prioridade principal. O objetivo G2 corresponde a P2 (ênfase~4, maior índice da seleção com~16), voltando-se ao editor web, aos mecanismos de colaboração e salvamento e ao histórico de defeitos para compreender a Confiabilidade do ponto de vista dos usuários finais. O objetivo G3 deriva de P3 (ênfase~3, índice~9), abrangendo a biblioteca npm e a aplicação web para avaliar a Flexibilidade sob a perspectiva dos integradores e equipes de implantação, perfis pouco contemplados pelas demais características.
-
-Os três objetivos desdobraram-se em 13 questões (uma por subcaracterística), agregando os 36 requisitos da Fase~1 (RQ-MAN-01 a RQ-FLEX-12). Cada questão recebeu hipótese técnica elaborada via \textit{abstraction sheets} e foi respondida por métricas de análise estática, acoplamento estrutural, cobertura de testes e inspeções funcionais, com fórmulas e procedimentos documentados no repositório do projeto\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}}. As subseções seguintes resumem os objetivos G1, G2 e G3; as definições e os procedimentos completos de coleta estão na documentação complementar.
+A Fase~2 da ISO/IEC 25040 \cite{iso25040} converte os 36 requisitos da Fase~1 em medição reprodutível por meio do GQM \cite{basili1994gqm}. Cada característica originou um objetivo cujo foco e ponto de vista derivam da Fase~1. O objetivo G1 herda a prioridade P1 (ênfase~4, impacto~$\times$~risco~=~12) e adota o ponto de vista dos mantenedores e contribuidores, grupos para os quais Manutenibilidade é prioridade principal. O objetivo G2 corresponde a P2 (ênfase~4, maior índice da seleção com~16) e adota o ponto de vista dos usuários finais. O objetivo G3 deriva de P3 (ênfase~3, índice~9) e adota a perspectiva dos integradores e das equipes de implantação, perfis pouco contemplados pelas demais características. Os três objetivos desdobram-se em 13 questões, uma por subcaracterística, ligadas aos requisitos pela Tabela~\ref{tab:requisitos}. As métricas históricas usam a janela de 18/04/2026 a 18/10/2026, e os ensaios funcionais, uma cena de referência em ambiente de navegador fixo. Nas tabelas a seguir, cada questão traz sua hipótese, seguida das métricas que a respondem; os nomes das métricas constam nas figuras.
 
 \subsection{Objetivo G1: Manutenibilidade}
 \label{subsec:g1-manutenibilidade}
 
-O objetivo G1 consiste em analisar o código-fonte do Excalidraw, seus testes, a documentação para desenvolvedores e o histórico público de alterações, com o propósito de compreender a Manutenibilidade sob o ponto de vista dos mantenedores e contribuidores do projeto. O contexto é o código público de 18/10/2026 (commit \texttt{e1b7aac}). As cinco questões correspondem às subcaracterísticas Modularidade, Reusabilidade, Analisabilidade, Modificabilidade e Testabilidade, cobrindo os requisitos RQ-MAN-01 a RQ-MAN-13.
-
-A questão Q1.1 examina a divisão do código em pacotes e a direção de suas dependências; Q1.2 verifica a possibilidade de reutilizar os pacotes e a documentação da interface pública; Q1.3 avalia a compreensão do código, a documentação de apoio e as verificações estáticas; Q1.4 investiga o alcance das alterações e a presença de arquivos extensos; e Q1.5 analisa a cobertura e a execução dos testes automatizados. A Tabela~\ref{tab:g1-metricas} resume as 14 métricas e os critérios de aceitação das hipóteses. Para as métricas históricas, considera-se a janela de 18/04/2026 a 18/10/2026. Os procedimentos e as fontes de coleta encontram-se na documentação complementar\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md}}.
+Analisar o código-fonte do Excalidraw, seus testes, a documentação para desenvolvedores e o histórico público de alterações, com o propósito de entender, com respeito à Manutenibilidade, do ponto de vista dos mantenedores e contribuidores, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}) avaliado por equipe independente. A Tabela~\ref{tab:g1-metricas} e a Figura~\ref{fig:gqm-g1} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Manutenibilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md}}.
 
 \begin{table}[!ht]
 \centering
-\caption{Questões e métricas do objetivo G1: Manutenibilidade (Fonte: Equipe Karen Jones).}
+\caption{Hipóteses e métricas do objetivo G1: Manutenibilidade (Fonte: Equipe Karen Jones).}
 \label{tab:g1-metricas}
 \vspace{4pt}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.95}
-\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\begin{tabular}{p{1.2cm}p{7.1cm}p{7.3cm}}
 \toprule
-\textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
+\textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
 \midrule
-Q1.1 & M1.1.1 Ciclos entre pacotes & Contagem de pares de pacotes com dependência recíproca & Nenhum ciclo entre pacotes. \\
-Q1.1 & M1.1.2 Importações que violam a direção declarada & Contagem de importações de valor que violam a direção definida para os pacotes & Nenhuma importação em desacordo com a arquitetura. \\
-Q1.1 & M1.1.3 Acoplamento e instabilidade & $Ca$: número de outros pacotes distintos que importam o pacote; $Ce$: número de outros pacotes distintos que ele importa; $I = Ce/(Ca+Ce)$. Apenas importações de valor do código de produção. & A biblioteca apresenta o maior $Ca$; $I$ permite comparar a instabilidade entre pacotes. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q1.1 Modularidade.} Hipótese: não há ciclos de dependência entre os pacotes, nenhum pacote importa código da aplicação web e a biblioteca é o pacote que mais recebe dependências.} \\
+M1.1.1 & Contagem de pares de pacotes com dependência recíproca & Nenhum ciclo entre pacotes. \\
+M1.1.2 & Contagem de importações de valor que violam a direção definida para os pacotes & Nenhuma importação em desacordo com a arquitetura. \\
+M1.1.3 & $Ca$: número de outros pacotes distintos que importam o pacote; $Ce$: número de outros pacotes distintos que ele importa; $I = Ce/(Ca+Ce)$. Apenas importações de valor do código de produção. & A biblioteca apresenta o maior $Ca$; $I$ permite comparar a instabilidade entre pacotes. \\
 \midrule
-Q1.2 & M1.2.1 Dependências de React ou do navegador em pacotes de base & Contagem de arquivos com dependências diretas ou transitivas, por pacote & Valor igual a zero nos pacotes \texttt{math} e \texttt{utils}. \\
-Q1.2 & M1.2.2 Propriedades públicas documentadas & (Propriedades documentadas / propriedades em \texttt{ExcalidrawProps}) $\times 100$ & Percentual alto, mas inferior a 100\%. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q1.2 Reusabilidade.} Hipótese: os pacotes \texttt{math} e \texttt{utils} não dependem de React nem do navegador, e a maior parte das propriedades públicas da biblioteca está documentada.} \\
+M1.2.1 & Contagem de arquivos com dependências diretas ou transitivas de React ou do navegador, por pacote & Valor igual a zero nos pacotes \texttt{math} e \texttt{utils}. \\
+M1.2.2 & (Propriedades documentadas / propriedades em \texttt{ExcalidrawProps}) $\times 100$ & Percentual alto, mas inferior a 100\%. \\
 \midrule
-Q1.3 & M1.3.1 Perfil de risco de complexidade das funções & Distribuição das linhas de código por faixa de complexidade ciclomática: 1--10, 11--20, 21--50 e acima de 50 & A maioria das funções e linhas está na faixa de baixo risco; as linhas de alto e muito alto risco concentram-se em poucos arquivos. \\
-Q1.3 & M1.3.2 Cobertura da documentação para desenvolvedores & Número de tópicos documentados, de uma lista de quatro & Estão presentes, no mínimo, o guia de contribuição e as instruções de preparação do ambiente. \\
-Q1.3 & M1.3.3 Verificações estáticas executadas automaticamente & Contagem de verificações em PRs: lint, formatação e tipos (0 a 3) & As três verificações são executadas automaticamente. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q1.3 Analisabilidade.} Hipótese: a maior parte das funções tem complexidade baixa, as complexas concentram-se em poucos arquivos, a documentação cobre contribuição e ambiente, e lint, formatação e tipos são verificados automaticamente.} \\
+M1.3.1 & Distribuição das linhas de código por faixa de complexidade ciclomática: 1--10, 11--20, 21--50 e acima de 50 & A maioria das funções e linhas está na faixa de baixo risco; as linhas de alto e muito alto risco concentram-se em poucos arquivos. \\
+M1.3.2 & Número de tópicos documentados, de uma lista de quatro & Estão presentes, no mínimo, o guia de contribuição e as instruções de preparação do ambiente. \\
+M1.3.3 & Contagem de verificações em PRs: lint, formatação e tipos (0 a 3) & As três verificações são executadas automaticamente. \\
 \midrule
-Q1.4 & M1.4.1 Arquivos de produção alterados por contribuição & Mediana do número de arquivos de produção alterados por contribuição integrada & Mediana baixa, indicando que alterações comuns afetam poucos arquivos. \\
-Q1.4 & M1.4.2 Arquivos de produção extensos & Contagem de arquivos com mais de 1.000 linhas de código, sem linhas em branco ou comentários & Poucos arquivos acima do limite. \\
-Q1.4 & M1.4.3 Contribuições que alteram arquivos extensos & (Contribuições que alteram ao menos um arquivo extenso / contribuições integradas) $\times 100$ & Percentual relevante, indicando que os arquivos extensos são alterados com frequência. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q1.4 Modificabilidade.} Hipótese: a maioria das contribuições altera poucos arquivos; há poucos arquivos muito extensos, mas eles são alterados por parte relevante das contribuições.} \\
+M1.4.1 & Mediana do número de arquivos de produção alterados por contribuição integrada & Mediana baixa, indicando que alterações comuns afetam poucos arquivos. \\
+M1.4.2 & Contagem de arquivos com mais de 1.000 linhas de código, sem linhas em branco ou comentários & Poucos arquivos acima do limite. \\
+M1.4.3 & (Contribuições que alteram ao menos um arquivo extenso / contribuições integradas) $\times 100$ & Percentual relevante, indicando que os arquivos extensos são alterados com frequência. \\
 \midrule
-Q1.5 & M1.5.1 Cobertura de linhas por pacote & (Linhas executadas pelos testes / linhas executáveis) $\times 100$, por pacote & A cobertura da biblioteca é maior que a da aplicação web. \\
-Q1.5 & M1.5.2 Distribuição dos testes por nível & (Arquivos de teste de cada nível / total de arquivos de teste) $\times 100$ & Testes unitários e de integração representam a maior parte dos arquivos de teste. \\
-Q1.5 & M1.5.3 Contribuições com testes executados antes da integração & (Contribuições verificadas / contribuições integradas com evidência suficiente) $\times 100$ & 100\% ou valor próximo, com os testes executados antes da integração. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q1.5 Testabilidade.} Hipótese: a biblioteca tem cobertura maior que a aplicação web, predominam testes unitários e de integração, e os testes rodam em toda contribuição antes da integração.} \\
+M1.5.1 & (Linhas executadas pelos testes / linhas executáveis) $\times 100$, por pacote & A cobertura da biblioteca é maior que a da aplicação web. \\
+M1.5.2 & (Arquivos de teste de cada nível / total de arquivos de teste) $\times 100$ & Testes unitários e de integração representam a maior parte dos arquivos de teste. \\
+M1.5.3 & (Contribuições verificadas / contribuições integradas com evidência suficiente) $\times 100$ & 100\% ou valor próximo, com os testes executados antes da integração. \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-A Figura~\ref{fig:gqm-g1} apresenta a hierarquia do objetivo G1, com suas cinco questões operacionais e 14 métricas quantitativas.
 
 \begin{figure}[!ht]
 \centering
@@ -528,40 +384,40 @@ A Figura~\ref{fig:gqm-g1} apresenta a hierarquia do objetivo G1, com suas cinco 
 \subsection{Objetivo G2: Confiabilidade}
 \label{subsec:g2-confiabilidade}
 
-O objetivo G2 consiste em analisar o editor e a aplicação web do Excalidraw, incluindo os mecanismos de colaboração, de salvamento no navegador e o histórico público de defeitos, com o propósito de compreender a Confiabilidade sob o ponto de vista dos usuários finais. O contexto é o código público de 18/10/2026 (commit \texttt{e1b7aac}), sem acesso aos servidores de produção. As quatro questões correspondem a Ausência de falhas (denominada Maturidade na Fase~1), Disponibilidade, Tolerância a falhas e Recuperabilidade, cobrindo os requisitos RQ-CONF-01 a RQ-CONF-11.
-
-A questão Q2.1 investiga as correções, o tempo de resolução de defeitos e as revisões anteriores à integração; Q2.2 examina a operação sem rede e a dependência de recursos externos; Q2.3 verifica o tratamento de arquivos inválidos e a continuidade da edição após a queda da colaboração; e Q2.4 avalia a restauração de desenhos, a reabertura de arquivos e o histórico de desfazer e refazer. A Tabela~\ref{tab:g2-metricas} resume as dez métricas e os critérios de aceitação das hipóteses. Os indicadores históricos utilizam a janela de 18/04/2026 a 18/10/2026, enquanto os ensaios funcionais adotam uma cena de referência e ambiente de navegador fixo. Os procedimentos e as fontes de coleta encontram-se na documentação complementar\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md}}.
+Analisar o editor, a aplicação web, os mecanismos de colaboração e de salvamento no navegador e o histórico público de defeitos, com o propósito de entender, com respeito à Confiabilidade, do ponto de vista dos usuários finais, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}), sem acesso aos servidores de produção. A questão Q2.1 corresponde à subcaracterística chamada Maturidade na Fase~1. A Tabela~\ref{tab:g2-metricas} e a Figura~\ref{fig:gqm-g2} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Confiabilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md}}.
 
 \begin{table}[!ht]
 \centering
-\caption{Questões e métricas do objetivo G2: Confiabilidade (Fonte: Equipe Karen Jones).}
+\caption{Hipóteses e métricas do objetivo G2: Confiabilidade (Fonte: Equipe Karen Jones).}
 \label{tab:g2-metricas}
 \vspace{4pt}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.95}
-\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\begin{tabular}{p{1.2cm}p{7.1cm}p{7.3cm}}
 \toprule
-\textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
+\textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
 \midrule
-Q2.1 & M2.1.1 Proporção de correções & (Correções integradas / contribuições integradas) $\times 100$ & Correções são parcela relevante das contribuições. \\
-Q2.1 & M2.1.2 Tempo para correção & Mediana dos dias entre relato e integração da correção & Defeitos vinculados a correções são resolvidos em poucas semanas. \\
-Q2.1 & M2.1.3 Contribuições revisadas & (Contribuições com revisão aprovada por outra pessoa / contribuições integradas) $\times 100$ & 100\% ou valor próximo de revisões aprovadas. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q2.1 Ausência de falhas.} Hipótese: as correções são parte relevante das contribuições, os defeitos relatados são corrigidos em poucas semanas e toda contribuição passa por verificações automáticas e revisão de outra pessoa.} \\
+M2.1.1 & (Correções integradas / contribuições integradas) $\times 100$ & Correções são parcela relevante das contribuições. \\
+M2.1.2 & Mediana dos dias entre relato e integração da correção & Defeitos vinculados a correções são resolvidos em poucas semanas. \\
+M2.1.3 & (Contribuições com revisão aprovada por outra pessoa / contribuições integradas) $\times 100$ & 100\% ou valor próximo de revisões aprovadas. \\
 \midrule
-Q2.2 & M2.2.1 Funções offline & (Funções disponíveis / 10) $\times 100$ & 100\% das dez funções essenciais disponíveis sem rede. \\
-Q2.2 & M2.2.2 Dependências externas & Contagem de domínios externos; teste de bloqueio individual & Poucos domínios externos e nenhum indispensável para desenhar. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q2.2 Disponibilidade.} Hipótese: após o primeiro carregamento o editor funciona sem conexão, exceto colaboração e compartilhamento por link, e nenhum recurso externo é indispensável para desenhar.} \\
+M2.2.1 & (Funções disponíveis / 10) $\times 100$ & 100\% das dez funções essenciais disponíveis sem rede. \\
+M2.2.2 & Contagem de domínios externos; teste de bloqueio individual & Poucos domínios externos e nenhum indispensável para desenhar. \\
 \midrule
-Q2.3 & M2.3.1 Arquivos inválidos tratados & (Casos tratados com mensagem / 9) $\times 100$ & 100\% dos casos exibem erro e preservam a edição. \\
-Q2.3 & M2.3.2 Continuidade após falha de colaboração & (Verificações aprovadas / 5) $\times 100$ & Aprovação das verificações 1 a 4: cena visível, edição, aviso e salvamento; a quinta verifica a sincronização. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q2.3 Tolerância a falhas.} Hipótese: arquivos inválidos são recusados com mensagem, sem travar o editor, e se a colaboração cair o desenho local continua editável e o usuário é avisado.} \\
+M2.3.1 & (Casos tratados com mensagem / 9) $\times 100$ & 100\% dos casos exibem erro e preservam a edição. \\
+M2.3.2 & (Verificações aprovadas / 5) $\times 100$ & Aprovação das verificações 1 a 4: cena visível, edição, aviso e salvamento; a quinta verifica a sincronização. \\
 \midrule
-Q2.4 & M2.4.1 Restauração após fechamento & (Cenários restaurados / 4) $\times 100$ & 100\% dos cenários restauram o desenho por completo. \\
-Q2.4 & M2.4.2 Arquivos reabertos sem perda & (Arquivos preservados / arquivos testados) $\times 100$ & 100\% dos arquivos atuais, antigos e exemplos sem perda. \\
-Q2.4 & M2.4.3 Desfazer e refazer & (Ações reversíveis / 10) $\times 100$ & 100\% das ações retornam aos estados anterior e posterior. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q2.4 Recuperabilidade.} Hipótese: o último desenho é restaurado ao reabrir, mesmo após fechamento inesperado, arquivos atuais e antigos reabrem sem perda, e desfazer e refazer cobrem as ações de edição.} \\
+M2.4.1 & (Cenários restaurados / 4) $\times 100$ & 100\% dos cenários restauram o desenho por completo. \\
+M2.4.2 & (Arquivos preservados / arquivos testados) $\times 100$ & 100\% dos arquivos atuais, antigos e exemplos sem perda. \\
+M2.4.3 & (Ações reversíveis / 10) $\times 100$ & 100\% das ações retornam aos estados anterior e posterior. \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-A Figura~\ref{fig:gqm-g2} apresenta a hierarquia do objetivo G2, com suas quatro questões operacionais e dez métricas quantitativas.
 
 \begin{figure}[!ht]
 \centering
@@ -573,48 +429,42 @@ A Figura~\ref{fig:gqm-g2} apresenta a hierarquia do objetivo G2, com suas quatro
 \subsection{Objetivo G3: Flexibilidade}
 \label{subsec:g3-flexibilidade}
 
-O objetivo G3 consiste em analisar a biblioteca \texttt{@excalidraw/excalidraw} e a aplicação web, incluindo sua interface pública, instruções de instalação e formatos de exportação, com o propósito de compreender a Flexibilidade quanto à Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade. A análise considera o ponto de vista dos desenvolvedores que integram a biblioteca e das equipes de implantação e operação, utilizando como referência o código público de 18/10/2026 (commit \texttt{e1b7aac}). As quatro questões GQM correspondem às subcaracterísticas e cobrem os requisitos RQ-FLEX-01 a RQ-FLEX-12 definidos na Fase~1.
-
-A questão Q3.1 investiga a utilização em navegadores, dispositivos e ambientes de integração; Q3.2 examina a capacidade de manter o editor utilizável à medida que os desenhos crescem; Q3.3 verifica a reprodução das instruções de instalação, construção e implantação; e Q3.4 avalia a exportação e a recuperação de desenhos em formatos abertos. A Tabela~\ref{tab:g3-metricas} sintetiza as doze métricas associadas a essas questões, suas fórmulas e os critérios que confirmam as hipóteses do plano GQM. Os procedimentos detalhados de coleta, as condições de teste e
-as fontes de dados de cada métrica estão disponíveis no documento
-\textit{GQM de Flexibilidade}\footnote{
-\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md}
-}, no repositório do projeto.
+Analisar a biblioteca \texttt{@excalidraw/excalidraw} e a aplicação web, incluindo a interface pública, as instruções de instalação e os formatos de exportação, com o propósito de entender, com respeito à Flexibilidade, do ponto de vista dos desenvolvedores que integram a biblioteca e das equipes de implantação e operação, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}). A Tabela~\ref{tab:g3-metricas} e a Figura~\ref{fig:gqm-g3} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Flexibilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md}}.
 
 \begin{table}[!ht]
 \centering
-\caption{Questões e métricas do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
+\caption{Hipóteses e métricas do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
 \label{tab:g3-metricas}
 \vspace{4pt}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.95}
-\begin{tabular}{p{1.3cm}p{3.7cm}p{5.1cm}p{5.4cm}}
+\begin{tabular}{p{1.2cm}p{7.1cm}p{7.3cm}}
 \toprule
-\textbf{Questão} & \textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
+\textbf{Métrica} & \textbf{Fórmula} & \textbf{Critério de aceitação da hipótese} \\
 \midrule
-Q3.1 & M3.1.1 Cobertura de usuários pelos navegadores declarados & Cobertura global da consulta \texttt{browserslist} (\%) Escala: 0 a 100.& Cobertura alta, com exclusão de navegadores antigos. \\
-Q3.1 & M3.1.2 Integrações bem-sucedidas & (Combinações com sucesso / 6) $\times 100$ & Sucesso nas 6 combinações React 17, 18 e 19 com Vite e Next.js. \\
-Q3.1 & M3.1.3 Ações por toque e caneta & (Ações funcionais / 10) $\times 100$ &  100\% de sucesso nas ações avaliadas. \\ 
+\multicolumn{3}{p{15.9cm}}{\textbf{Q3.1 Adaptabilidade.} Hipótese: a aplicação funciona nas versões recentes dos principais navegadores, a biblioteca aceita mais de uma versão principal de React e o editor aceita toque e caneta.} \\
+M3.1.1 & Cobertura global da consulta \texttt{browserslist}, de 0\% a 100\% & Cobertura alta, com exclusão de navegadores antigos. \\
+M3.1.2 & (Combinações com sucesso / 6) $\times 100$ & Sucesso nas 6 combinações React 17, 18 e 19 com Vite e Next.js. \\
+M3.1.3 & (Ações funcionais / 10) $\times 100$ & 100\% de sucesso nas ações avaliadas. \\
 \midrule
-Q3.2 & M3.2.1 Tempo de abertura por tamanho de cena & Mediana de 5 aberturas por tamanho de cena (s) & Tempo baixo até 1.000 elementos e crescimento perceptível depois. \\
-Q3.2 & M3.2.2 Taxa de quadros durante a edição por tamanho de cena & Mediana de 5 gravações de 10 s por cena (FPS) & Edição fluida com centenas de elementos e queda perceptível com milhares. \\
-Q3.2 & M3.2.3 Maior cena exportável & Máximo de elementos com salvamento, PNG e SVG em até 30 s & Cenas maiores abrem, mas a exportação é mais lenta que a abertura. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q3.2 Escalabilidade.} Hipótese: o editor continua utilizável com algumas centenas de elementos, o desempenho cai de forma perceptível com milhares e exportar um desenho grande é mais lento do que abri-lo.} \\
+M3.2.1 & Mediana de 5 aberturas por tamanho de cena (s) & Tempo baixo até 1.000 elementos e crescimento perceptível depois. \\
+M3.2.2 & Mediana de 5 gravações de 10 s por cena (FPS) & Edição fluida com centenas de elementos e queda perceptível com milhares. \\
+M3.2.3 & Máximo de elementos com salvamento, PNG e SVG em até 30 s & Cenas maiores abrem, mas a exportação é mais lenta que a abertura. \\
 \midrule
-Q3.3 & M3.3.1 Operações de pacote & (Operações com sucesso / 9) $\times 100$ & 100\% de sucesso e instalação com um único comando. \\
-Q3.3 & M3.3.2 Proporção de passos documentados reproduzidos sem ajuste & (Passos sem ajuste / total de passos) $\times 100$ & Todos os passos reproduzidos com as versões exigidas. \\
-Q3.3 & M3.3.3 Implantação Docker & (Verificações aprovadas / 4) $\times 100$ & 100\% de sucesso. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q3.3 Instalabilidade.} Hipótese: a biblioteca é instalada com um único comando, a imagem Docker é construída sem passos manuais e as instruções locais bastam, respeitadas as versões exigidas.} \\
+M3.3.1 & (Operações com sucesso / 9) $\times 100$ & 100\% de sucesso e instalação com um único comando. \\
+M3.3.2 & (Passos sem ajuste / total de passos) $\times 100$ & Todos os passos reproduzidos com as versões exigidas. \\
+M3.3.3 & (Verificações aprovadas / 4) $\times 100$ & 100\% de sucesso. \\
 \midrule
-Q3.4 & M3.4.1 Formatos de exportação abertos disponíveis & Contagem de formatos abertos disponíveis & Disponibilidade de \texttt{.excalidraw}, PNG e SVG. \\
-Q3.4 & M3.4.2 Elementos preservados na importação e reimportação & (Elementos preservados / elementos da cena) $\times 100$ & 100\% de preservação nos três formatos. \\
-Q3.4 & M3.4.3 Campos do formato \texttt{.excalidraw} documentados & (Campos documentados / campos encontrados) $\times 100$ & Formato legível, com documentação parcial e sem esquema formal. \\
+\multicolumn{3}{p{15.9cm}}{\textbf{Q3.4 Substituibilidade.} Hipótese: o desenho é exportado em \texttt{.excalidraw}, PNG e SVG, com reimportação a partir dos três, e o formato \texttt{.excalidraw} é legível, mas sem especificação formal publicada.} \\
+M3.4.1 & Contagem de formatos abertos disponíveis & Disponibilidade de \texttt{.excalidraw}, PNG e SVG. \\
+M3.4.2 & (Elementos preservados / elementos da cena) $\times 100$ & 100\% de preservação nos três formatos. \\
+M3.4.3 & (Campos documentados / campos encontrados) $\times 100$ & Formato legível, com documentação parcial e sem esquema formal. \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-A Figura~\ref{fig:gqm-g3} apresenta a organização do objetivo
-G3 em quatro questões, cada uma associada a uma subcaracterística
-de Flexibilidade e a três métricas de avaliação.
 
 \begin{figure}[!ht]
 \centering
@@ -628,14 +478,14 @@ de Flexibilidade e a três métricas de avaliação.
 
 A especificação da avaliação na norma ISO/IEC 25040 exige que sejam estabelecidos níveis de pontuação para as métricas e critérios para o julgamento dos resultados antes da coleta prática dos dados. Para transformar os dados brutos em diagnósticos qualitativos comparáveis, a equipe adotou a escala ordinal de cinco níveis concebida no modelo de avaliação de manutenibilidade de Heitlager, Kuipers e Visser \cite{heitlager2007}. A escala distribui os resultados nas graduações Muito Ruim (símbolo \texttt{--}, equivalente a 1 ponto), Ruim (símbolo \texttt{-}, equivalente a 2 pontos), Regular (símbolo \texttt{o}, equivalente a 3 pontos), Bom (símbolo \texttt{+}, equivalente a 4 pontos) e Excelente (símbolo \texttt{++}, equivalente a 5 pontos). A atribuição de valores numéricos de 1 a 5 viabiliza a realização de operações de agregação matemática entre os indicadores de cada subcaracterística.
 
-As faixas de aceitação que definem os intervalos numéricos de cada nível foram estabelecidas previamente à coleta, assegurando imparcialidade e impedindo que os limites sejam ajustados para favorecer ou prejudicar o produto avaliado. As faixas foram estruturadas a partir de quatro origens técnicas bem delimitadas. A primeira origem contempla faixas publicadas e validadas na literatura para propriedades específicas de código-fonte, aplicando sem modificações os limites do modelo de Heitlager, Kuipers e Visser para o perfil de risco de complexidade ciclomática das funções e para a taxa de cobertura de linhas nos testes automatizados. A segunda origem aplica-se às métricas de proporção desejável, em que valores percentuais mais elevados representam melhor qualidade, tais como a proporção de propriedades públicas documentadas e a cobertura de comandos funcionais sem conexão de rede; nesses casos, utilizam-se as faixas padronizadas de cobertura do modelo de referência, nas quais o nível Excelente (\texttt{++}) exige de 95\% a 100\%, o nível Bom (\texttt{+}) abrange de 80\% a 95\%, o nível Regular (\texttt{o}) de 60\% a 80\%, o nível Ruim (\texttt{-}) de 20\% a 60\% e o nível Muito Ruim (\texttt{--}) valores inferiores a 20\%. A terceira origem abrange as métricas de proporção indesejável, nas quais valores menores indicam maior qualidade, tais como acoplamentos cíclicos, importações que transgridem a direção arquitetural e percentual de arquivos extensos; para essas medidas, reaproveitam-se as faixas de duplicação de código da literatura, em que o nível Excelente (\texttt{++}) tolera de 0\% a 3\%, o nível Bom (\texttt{+}) de 3\% a 5\%, o nível Regular (\texttt{o}) de 5\% a 10\%, o nível Ruim (\texttt{-}) de 10\% a 20\% e o nível Muito Ruim (\texttt{--}) índices superiores a 20\%. A quarta origem recorre a referências consolidadas de engenharia de software e usabilidade, como os limiares de tempo de resposta propostos por Nielsen \cite{nielsen1993} e as metas de taxa de quadros por segundo do modelo de desempenho RAIL do Google para interações no canvas, ou a parâmetros calibrados pela equipe com base na arquitetura do monorepo. A Tabela~\ref{tab:escala_pontuacao} consolida a escala ordinal de avaliação e as faixas gerais de aceitação aplicadas às proporções.
+As faixas de cada nível foram fixadas antes da coleta, para que não pudessem ser ajustadas a favor ou contra o produto, e vêm de quatro origens: as faixas publicadas por Heitlager, Kuipers e Visser para complexidade ciclomática e cobertura de linhas, aplicadas sem modificação; as faixas de cobertura do mesmo modelo, para as métricas de proporção desejável, em que valores maiores são melhores; as faixas de duplicação de código, para as métricas de proporção indesejável, em que valores menores são melhores; e referências de engenharia e usabilidade, como os limiares de tempo de resposta de Nielsen \cite{nielsen1993} e as metas de quadros por segundo do modelo RAIL, ou parâmetros calibrados pela equipe. A Tabela~\ref{tab:escala_pontuacao} consolida a escala e as faixas das métricas de proporção.
 
 \begin{table}[!ht]
 \centering
 \caption{Escala de pontuação e faixas de aceitação para métricas de proporção}
 \label{tab:escala_pontuacao}
 \vspace{4pt}
-\small
+\footnotesize
 \begin{tabular}{lccllp{3.3cm}}
 \toprule
 \textbf{Nível} & \textbf{Símbolo} & \textbf{Pontos} & \textbf{Prop. Desejável} & \textbf{Prop. Indesejável} & \textbf{Leitura do Nível} \\
@@ -657,9 +507,7 @@ O julgamento conclusivo sobre a adequação da qualidade de produto de software 
 \section{Considerações Parciais}
 \label{sec:conclusao}
 
-Este trabalho consolida o planejamento inicial e a especificação técnica da avaliação da qualidade do software Excalidraw, cobrindo as Fases~1 e~2 do processo da ISO/IEC 25040. A delimitação de escopo e a priorização sistemática garantiram que os esforços da equipe ficassem concentrados nas dimensões de maior impacto técnico para a comunidade do projeto (Manutenibilidade, Confiabilidade e Flexibilidade).
-
-Como resultado desta primeira etapa, obtivemos uma base de 36 requisitos de avaliação contextualizados para um sistema de código aberto real, além de um modelo de qualidade adaptado e desdobrado em métricas viáveis de serem coletadas por análise estática. Os próximos passos da disciplina envolverão a execução prática das medições planejadas (Fase~3 e Fase~4), o confronto dos dados obtidos com os critérios de julgamento estabelecidos e a proposição de intervenções de melhoria para o software, acompanhadas por um protótipo de alta fidelidade.
+Esta entrega cobre as Fases~1 e~2 da ISO/IEC 25040 para o Excalidraw: a priorização de Manutenibilidade, Confiabilidade e Flexibilidade resultou em 13 subcaracterísticas e 36 requisitos de avaliação, desdobrados em três objetivos GQM, 13 questões com hipóteses e 36 métricas com níveis de pontuação e critérios de julgamento definidos antes da coleta. Os próximos passos são projetar e executar as medições (Fases~3 e~4), confrontar os dados com os critérios estabelecidos e propor intervenções de melhoria, acompanhadas de um protótipo de alta fidelidade.
 
 \addcontentsline{toc}{section}{Referências}
 \begin{thebibliography}{99}
@@ -686,7 +534,10 @@ BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. I
 PRESSMAN, R. S.; MAXIM, B. R. \textit{Engenharia de Software: uma abordagem profissional}. 9. ed. Porto Alegre: AMGH, 2021.
 
 \bibitem{onu2015ods}
-ONU. \textit{Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável}. Organização das Nações Unidas, 2015.
+ONU. \textit{Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável}. Organização das Nações Unidas, 2015. Metas disponíveis em: \url{https://brasil.un.org/pt-br/sdgs}. Acesso em: 26 out. 2026.
+
+\bibitem{unsd2025indicadores}
+UNITED NATIONS STATISTICS DIVISION. \textit{Global indicator framework for the Sustainable Development Goals and targets of the 2030 Agenda for Sustainable Development}. Disponível em: \url{https://unstats.un.org/sdgs/indicators/indicators-list/}. Acesso em: 26 out. 2026.
 
 \bibitem{heitlager2007}
 HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: \textit{6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)}. IEEE, p. 30--39, 2007.
@@ -729,6 +580,6 @@ Maria Eduarda        & 6 & 20.0h & 14.0h & 16/7 & 16.66\% \\
 \section{Declaração de Uso de Inteligência Artificial}
 \label{sec:declaracao_ia}
 
-Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara o uso de ferramentas de inteligência artificial generativa no apoio à elaboração deste trabalho. \textbf{Ferramentas utilizadas:} Antigravity / Gemini 3.8 e Claude Code. \textbf{Consolidação por tarefas:} auxílio na formatação e adaptação de diretrizes de governança em PRs iniciais, apoio na elaboração de scripts auxiliares de automação e validação em Python, suporte na geração de diagramas e na conversão de tabelas e estruturas para código LaTeX, e apoio na revisão textual e no levantamento dos Objetivos de Desenvolvimento Sustentável (ODS). \textbf{Conferência crítica pela equipe:} todo código-fonte, dado numérico e conteúdo textual gerado ou adaptado foi integralmente revisado, confrontado com os artefatos reais do GitHub e validado pelos integrantes da equipe, garantindo a fidelidade técnica dos dados e a ausência de alucinações.
+A equipe utilizou IA generativa como apoio, com revisão humana antes de cada integração. O Claude Code foi usado no rascunho das \textit{abstraction sheets}, questões e fichas GQM. O Antigravity, com Gemini 3.8 e Claude Sonnet 5.5, apoiou o script de coleta das métricas de gestão, a estruturação de seções do artigo e a formatação em LaTeX. O GitHub Copilot apoiou a edição das páginas do GitPages, do workflow de compilação e de trechos do artigo, e o Grammarly, a revisão ortográfica. Os integrantes conferiram citações, páginas e dados com as fontes e o repositório, e o registro por pull request está no repositório.
 
 \end{document}
