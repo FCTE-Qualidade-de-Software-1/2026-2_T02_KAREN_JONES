@@ -189,7 +189,7 @@ As hipóteses de G3 ([Q3.1 a Q3.4](./gqm-flexibilidade.md)) são iguais às de *
 | [M1.4.3](./gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) | Nenhuma | Responde à parte da hipótese de Modificabilidade sobre os arquivos extensos serem os mais alterados, que nenhuma candidata media. |
 | [M2.1.3](./gqm-confiabilidade.md#m213-proporção-de-contribuições-revisadas-antes-da-integração) | Verificações automáticas obrigatórias antes da integração | As verificações automáticas já são medidas em G1 ([M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) e [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração)). Em G2, mede-se a outra barreira antes da integração: a revisão por outra pessoa. |
 | [M2.2.2](./gqm-confiabilidade.md#m222-origens-externas-necessárias-para-o-editor-local) | Nenhuma | Responde ao RQ-CONF-04, que nenhuma candidata cobria. |
-| [M3.3.1](./gqm-flexibilidade.md#m331--proporção-de-operações-de-pacote-bem-sucedidas) | Número de passos para instalar a biblioteca | Além de contar se a instalação exige um único comando, mede se instalar, atualizar e remover terminam sem erro. |
+| [M3.3.1](./gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | Número de passos para instalar a biblioteca | Além de contar se a instalação exige um único comando, mede se instalar, atualizar e remover terminam sem erro. |
 
 ---
 
