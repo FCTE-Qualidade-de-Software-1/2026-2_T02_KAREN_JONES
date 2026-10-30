@@ -23,7 +23,7 @@ O cabeçalho repete o objeto, o propósito, o foco da qualidade e o ponto de vis
 | 3º | **Fatores de variação** | Quais fatores do ambiente podem influenciar as métricas? |
 | 4º | **Impacto nas hipóteses de baseline** | Como esses fatores influenciam as medições e que dependência existe entre eles e as métricas? |
 
-As hipóteses podem ser valores ou comparações, como "os módulos com mais defeitos" ou "o pior caso" (AULA 08, p. 31). Nesta página, as hipóteses são comparativas sempre que a equipe não tem base para estimar um valor antes da medição. A AULA 08 traz um exemplo preenchido para o foco de Confiabilidade (p. 30), que serviu de modelo para o formato.
+As hipóteses podem ser valores ou comparações, como "os módulos com mais defeitos" ou "o pior caso" (AULA 08, p. 31). Nesta página, cada hipótese tem uma única afirmação, ligada a uma métrica, e uma regra que diz quando ela é confirmada. Quando a equipe não tem base para estimar um valor, a hipótese é comparativa. A AULA 08 traz um exemplo preenchido para o foco de Confiabilidade (p. 30), que serviu de modelo para o formato.
 
 ---
 
@@ -33,7 +33,7 @@ A aula recomenda conduzir entrevistas individuais com a equipe do projeto avalia
 
 As três *abstraction sheets* foram preenchidas do zero, em conjunto, na [reunião de 19/10/2026](../gestao/atas/2026-10-19-reuniao-gqm.md) dos integrantes responsáveis pela Fase 02. A base foi a [descrição do produto](../fase-01/descricao-produto.md) e os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da Fase 01. Cada quadrante foi discutido até ser considerado suficientemente completo (AULA 08, p. 31).
 
-As métricas listadas no foco de qualidade são **candidatas**. A seleção final, com uma a três métricas por questão, é feita no detalhamento de cada objetivo, junto com a ficha de cada métrica ([estrutura das questões](./estrutura-gqm.md#4-estrutura-das-questões)).
+O quadrante 2º foi refeito na versão 1.1, depois da escolha das métricas, para que cada hipótese tenha uma única afirmação verificável por uma métrica. As métricas listadas no foco de qualidade são **candidatas**. A seleção final, com uma a três métricas por questão, é feita no detalhamento de cada objetivo, junto com a ficha de cada métrica ([estrutura das questões](./estrutura-gqm.md#4-estrutura-das-questões)).
 
 ---
 
@@ -55,11 +55,24 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 ### 2º Hipóteses de baseline
 
-- **Modularidade:** não há ciclos de dependência entre os pacotes, e a biblioteca não importa código da aplicação web. O pacote da biblioteca é o que mais recebe dependências dos demais.
-- **Reusabilidade:** os pacotes de matemática e utilitários não dependem de React nem de recursos do navegador e podem ser usados isoladamente. A interface pública da biblioteca é documentada, mas parte das opções avançadas só é descrita nos tipos do código.
-- **Analisabilidade:** a maior parte das funções tem complexidade baixa, mas a complexidade e o tamanho se concentram em poucos arquivos. O componente principal do editor deve ser o arquivo mais extenso e complexo do projeto. Lint, formatação e verificação de tipos são executados automaticamente.
-- **Modificabilidade:** a maioria das contribuições altera poucos arquivos. Os arquivos mais extensos são também os mais alterados, o que torna as mudanças neles mais arriscadas.
-- **Testabilidade:** a lógica da biblioteca tem mais testes do que a aplicação web. Predominam testes unitários e de integração, e os testes rodam em toda alteração proposta.
+Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vem da própria definição da métrica. São as mesmas hipóteses das questões, como a aula permite (AULA 08, p. 34), e o quadrante 4º indica o fator que justifica cada uma.
+
+| Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
+| :--- | :--- | :--- | :--- |
+| Modularidade | [H1.1.1](./gqm-manutenibilidade.md#3-q11--modularidade) | Não haverá ciclos de dependência entre os pacotes. | = 0 pares em ciclo |
+| Modularidade | [H1.1.2](./gqm-manutenibilidade.md#3-q11--modularidade) | As importações entre pacotes seguirão a direção declarada pelo projeto. | = 0 importações em desacordo |
+| Modularidade | [H1.1.3](./gqm-manutenibilidade.md#3-q11--modularidade) | A biblioteca `excalidraw` será o pacote que mais recebe dependências. | *Ca* da biblioteca > *Ca* de cada outro pacote |
+| Reusabilidade | [H1.2.1](./gqm-manutenibilidade.md#4-q12--reusabilidade) | Os pacotes `math` e `utils` não dependerão de React nem do navegador. | = 0 arquivos em `math` e `utils` |
+| Reusabilidade | [H1.2.2](./gqm-manutenibilidade.md#4-q12--reusabilidade) | A documentação cobrirá a maior parte das propriedades públicas, sem cobrir todas. | ≥ 80% e < 100% |
+| Analisabilidade | [H1.3.1](./gqm-manutenibilidade.md#5-q13--analisabilidade) | Haverá funções de complexidade muito alta no código. | > 0% das linhas em funções com complexidade acima de 50 |
+| Analisabilidade | [H1.3.2](./gqm-manutenibilidade.md#5-q13--analisabilidade) | A documentação para desenvolvedores cobrirá a contribuição e a preparação do ambiente. | tópicos (1) e (2) presentes |
+| Analisabilidade | [H1.3.3](./gqm-manutenibilidade.md#5-q13--analisabilidade) | Lint, formatação e tipos serão verificados automaticamente. | = 3 de 3 |
+| Modificabilidade | [H1.4.1](./gqm-manutenibilidade.md#6-q14--modificabilidade) | A maioria das contribuições alterará poucos arquivos de produção. | mediana ≤ 4 arquivos |
+| Modificabilidade | [H1.4.2](./gqm-manutenibilidade.md#6-q14--modificabilidade) | Poucos arquivos de produção serão extensos. | ≤ 5% dos arquivos com mais de 1.000 linhas |
+| Modificabilidade | [H1.4.3](./gqm-manutenibilidade.md#6-q14--modificabilidade) | Os arquivos extensos serão alterados com frequência. | > 10% das contribuições |
+| Testabilidade | [H1.5.1](./gqm-manutenibilidade.md#7-q15--testabilidade) | A biblioteca terá cobertura de testes maior que a da aplicação web. | cobertura da biblioteca > cobertura da aplicação web |
+| Testabilidade | [H1.5.2](./gqm-manutenibilidade.md#7-q15--testabilidade) | Testes unitários e de integração serão a maior parte dos arquivos de teste. | > 50% dos arquivos de teste, somados |
+| Testabilidade | [H1.5.3](./gqm-manutenibilidade.md#7-q15--testabilidade) | Os testes rodarão em toda contribuição antes da integração. | ≥ 95% |
 
 ### 3º Fatores de variação
 
@@ -70,10 +83,12 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 ### 4º Impacto nas hipóteses de baseline
 
-- A revisão concentrada em poucos mantenedores tende a preservar a direção das dependências entre pacotes, tornando ciclos raros. Por outro lado, é mais fácil acrescentar código a um componente existente do que criar um novo, o que faz os arquivos centrais crescerem.
-- As ferramentas obrigatórias reduzem a variação de estilo e melhoram a analisabilidade, mas não reduzem a complexidade das funções.
-- Um ritmo alto de entregas aumenta o número de alterações nos arquivos centrais e pode reduzir a proporção de código coberto por testes.
-- Tamanho, complexidade e razão de testes dependem da configuração da ferramenta. Se código gerado, testes e dependências não forem separados, os valores ficam distorcidos. Por isso, a configuração de cada ferramenta será registrada na ficha da métrica.
+- A revisão concentrada em poucos mantenedores tende a preservar a direção das dependências entre pacotes e a manter os pacotes de base livres de React e do navegador. Por isso se esperam pacotes sem ciclos, importações na direção declarada e a biblioteca no centro das dependências ([H1.1.1](./gqm-manutenibilidade.md#3-q11--modularidade), [H1.1.2](./gqm-manutenibilidade.md#3-q11--modularidade), [H1.1.3](./gqm-manutenibilidade.md#3-q11--modularidade) e [H1.2.1](./gqm-manutenibilidade.md#4-q12--reusabilidade)).
+- O modelo de contribuição aberto exige que quem chega consiga preparar o ambiente e enviar uma alteração sem ajuda, o que favorece o guia de contribuição e as contribuições pequenas ([H1.3.2](./gqm-manutenibilidade.md#5-q13--analisabilidade) e [H1.4.1](./gqm-manutenibilidade.md#6-q14--modificabilidade)).
+- É mais fácil acrescentar código a um componente existente do que criar um novo, o que faz os arquivos centrais crescerem e concentrarem funções complexas e alterações ([H1.3.1](./gqm-manutenibilidade.md#5-q13--analisabilidade), [H1.4.2](./gqm-manutenibilidade.md#6-q14--modificabilidade) e [H1.4.3](./gqm-manutenibilidade.md#6-q14--modificabilidade)).
+- As ferramentas obrigatórias reduzem a variação de estilo e fazem lint, tipos e testes rodarem em cada contribuição, mas não reduzem a complexidade das funções. O executor de testes do projeto, o Vitest, favorece testes unitários e de integração ([H1.3.3](./gqm-manutenibilidade.md#5-q13--analisabilidade), [H1.5.2](./gqm-manutenibilidade.md#7-q15--testabilidade) e [H1.5.3](./gqm-manutenibilidade.md#7-q15--testabilidade)).
+- Um ritmo alto de entregas aumenta o número de alterações nos arquivos centrais e faz a documentação da interface pública e os testes da aplicação web ficarem para trás ([H1.2.2](./gqm-manutenibilidade.md#4-q12--reusabilidade), [H1.4.3](./gqm-manutenibilidade.md#6-q14--modificabilidade) e [H1.5.1](./gqm-manutenibilidade.md#7-q15--testabilidade)).
+- Tamanho, complexidade e razão de testes dependem da configuração da ferramenta. Se código gerado, testes e dependências não forem separados, os valores ficam distorcidos, o que afeta a leitura de [H1.3.1](./gqm-manutenibilidade.md#5-q13--analisabilidade), [H1.4.2](./gqm-manutenibilidade.md#6-q14--modificabilidade), [H1.5.1](./gqm-manutenibilidade.md#7-q15--testabilidade) e [H1.5.2](./gqm-manutenibilidade.md#7-q15--testabilidade). Por isso, a configuração de cada ferramenta será registrada na ficha da métrica.
 
 ---
 
@@ -94,13 +109,24 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 ### 2º Hipóteses de baseline
 
-- **Ausência de falhas:** o volume de defeitos relatados é alto, compatível com um projeto muito usado, e a maior parte dos defeitos corrigidos é fechada em poucas semanas. Colaboração, edição de texto e exportação concentram mais defeitos do que o desenho de formas básicas. Toda alteração proposta passa por verificações automáticas.
-- **Disponibilidade:** depois do primeiro carregamento, o editor funciona sem conexão. A colaboração em tempo real e o compartilhamento por link não funcionam sem conexão.
-- **Tolerância a falhas:** arquivos inválidos ou corrompidos são recusados com uma mensagem, sem travar o editor. Se a sessão de colaboração cair, o desenho local continua editável.
-- **Recuperabilidade:** ao reabrir a aplicação, o último desenho é restaurado do armazenamento do navegador. Arquivos de versões antigas abrem nas versões atuais. Desfazer e refazer cobrem as ações de edição do próprio usuário, mas não necessariamente as alterações feitas por outros participantes da colaboração.
+Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou vem da própria definição da métrica. São as mesmas hipóteses das questões, como a aula permite (AULA 08, p. 34), e o quadrante 4º indica o fator que justifica cada uma.
+
+| Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
+| :--- | :--- | :--- | :--- |
+| Ausência de falhas | [H2.1.1](./gqm-confiabilidade.md#3-q21--ausência-de-falhas) | As correções serão uma parte relevante das contribuições integradas. | ≥ 20% |
+| Ausência de falhas | [H2.1.2](./gqm-confiabilidade.md#3-q21--ausência-de-falhas) | Os defeitos relatados serão corrigidos em poucas semanas. | mediana ≤ 30 dias |
+| Ausência de falhas | [H2.1.3](./gqm-confiabilidade.md#3-q21--ausência-de-falhas) | Toda contribuição terá revisão aprovada por outra pessoa antes da integração. | ≥ 95% |
+| Disponibilidade | [H2.2.1](./gqm-confiabilidade.md#4-q22--disponibilidade) | O editor funcionará sem conexão depois do primeiro carregamento. | = 10 de 10 funções |
+| Disponibilidade | [H2.2.2](./gqm-confiabilidade.md#4-q22--disponibilidade) | Nenhum serviço externo será indispensável para desenhar. | = 0 domínios indispensáveis |
+| Tolerância a falhas | [H2.3.1](./gqm-confiabilidade.md#5-q23--tolerância-a-falhas) | Arquivos inválidos serão recusados com mensagem, sem travar o editor. | = 9 de 9 casos |
+| Tolerância a falhas | [H2.3.2](./gqm-confiabilidade.md#5-q23--tolerância-a-falhas) | O desenho local continuará editável se a colaboração cair. | verificações 1 a 4 aprovadas |
+| Recuperabilidade | [H2.4.1](./gqm-confiabilidade.md#6-q24--recuperabilidade) | O último desenho será restaurado ao reabrir a aplicação, mesmo após fechamento inesperado. | = 4 de 4 cenários |
+| Recuperabilidade | [H2.4.2](./gqm-confiabilidade.md#6-q24--recuperabilidade) | Arquivos da versão atual e de versões anteriores reabrirão sem perda. | = 7 de 7 arquivos |
+| Recuperabilidade | [H2.4.3](./gqm-confiabilidade.md#6-q24--recuperabilidade) | Desfazer e refazer cobrirão as ações de edição do usuário. | = 10 de 10 ações |
 
 ### 3º Fatores de variação
 
+- **Regras de integração do repositório:** verificações automáticas e revisão exigidas antes de cada integração.
 - **Navegador e suas políticas de armazenamento:** limite de espaço, navegação privada e limpeza automática de dados.
 - **Condições de rede:** conexão instável ou ausente e indisponibilidade do servidor de colaboração.
 - **Tamanho do desenho:** número de elementos e imagens incorporadas.
@@ -109,10 +135,13 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 ### 4º Impacto nas hipóteses de baseline
 
-- A classificação inconsistente dos relatos pode aumentar ou reduzir a contagem de defeitos. As métricas de ausência de falhas precisam de um critério explícito para decidir o que conta como defeito.
-- As políticas do navegador podem impedir a restauração automática mesmo com o mecanismo correto no código. A avaliação verifica a existência e o funcionamento do mecanismo, não a garantia de restauração em qualquer navegador.
-- Desenhos grandes aumentam a chance de atingir o limite de armazenamento, o que afeta a recuperabilidade e liga este objetivo à escalabilidade do G3.
-- Sem acesso à produção, disponibilidade e tolerância a falhas são avaliadas pela presença dos mecanismos e por testes controlados. Os resultados indicam capacidade, não comportamento observado em uso real.
+- As regras de integração do repositório exigem verificações automáticas e revisão antes de cada integração, por isso se espera revisão aprovada em quase toda contribuição ([H2.1.3](./gqm-confiabilidade.md#3-q21--ausência-de-falhas)).
+- Em um projeto muito usado, o volume de relatos é alto, o que faz as correções serem parte relevante das contribuições e mantém os mantenedores atentos a defeitos recentes ([H2.1.1](./gqm-confiabilidade.md#3-q21--ausência-de-falhas) e [H2.1.2](./gqm-confiabilidade.md#3-q21--ausência-de-falhas)). A classificação inconsistente dos relatos pode aumentar ou reduzir essas contagens, por isso as métricas de ausência de falhas precisam de um critério explícito para decidir o que conta como defeito.
+- Sem acesso à produção, disponibilidade e tolerância a falhas são avaliadas pela presença dos mecanismos e por testes controlados. O *service worker* da aplicação instalável (PWA) está configurado em `excalidraw-app/vite.config.mts`, e a abertura de arquivos acontece toda no navegador, sem servidor que filtre arquivos inválidos. Por isso se espera que o editor funcione sem conexão e trate ele mesmo os arquivos inválidos ([H2.2.1](./gqm-confiabilidade.md#4-q22--disponibilidade) e [H2.3.1](./gqm-confiabilidade.md#5-q23--tolerância-a-falhas)). Os resultados indicam capacidade, não comportamento observado em uso real.
+- A colaboração é a única parte do editor que depende de um servidor. Por isso se espera que nenhum serviço externo seja indispensável para desenhar e que a queda da colaboração preserve o editor local, mas não necessariamente a sincronização, que fica fora da regra de [H2.3.2](./gqm-confiabilidade.md#5-q23--tolerância-a-falhas) ([H2.2.2](./gqm-confiabilidade.md#4-q22--disponibilidade) e [H2.3.2](./gqm-confiabilidade.md#5-q23--tolerância-a-falhas)).
+- As políticas do navegador podem impedir a restauração automática mesmo com o mecanismo correto no código. A avaliação usa um navegador fixo, fora da navegação privada, e verifica a existência e o funcionamento do mecanismo, não a garantia de restauração em qualquer navegador ([H2.4.1](./gqm-confiabilidade.md#6-q24--recuperabilidade)).
+- Desenhos grandes e imagens incorporadas aumentam a chance de atingir o limite de armazenamento e de falhar a reabertura de arquivos, o que afeta [H2.4.1](./gqm-confiabilidade.md#6-q24--recuperabilidade) e [H2.4.2](./gqm-confiabilidade.md#6-q24--recuperabilidade) e liga este objetivo à escalabilidade do G3. Como o formato `.excalidraw` é usado há várias versões publicadas, espera-se que o projeto mantenha a conversão de arquivos antigos e que eles reabram sem perda ([H2.4.2](./gqm-confiabilidade.md#6-q24--recuperabilidade)).
+- Em uma sessão colaborativa, as alterações feitas por outros participantes podem não entrar no histórico de desfazer. Por isso [H2.4.3](./gqm-confiabilidade.md#6-q24--recuperabilidade) trata só das ações do próprio usuário, com a colaboração desligada.
 
 ---
 
@@ -133,10 +162,22 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 ### 2º Hipóteses de baseline
 
-- **Adaptabilidade:** a aplicação funciona nas versões recentes dos principais navegadores, mas não em navegadores antigos. A biblioteca aceita mais de uma versão principal de React e precisa ser carregada apenas no navegador quando usada em frameworks com renderização no servidor. O editor aceita toque e caneta.
-- **Escalabilidade:** o editor continua utilizável com algumas centenas de elementos, e o desempenho cai de forma perceptível com milhares. Exportar um desenho grande é mais lento do que abri-lo.
-- **Instalabilidade:** a biblioteca é instalada com um único comando dos gerenciadores de pacotes usuais. A imagem Docker é construída sem passos manuais adicionais, e as instruções de execução local são suficientes, desde que as versões de ferramentas exigidas sejam respeitadas.
-- **Substituibilidade:** o desenho pode ser exportado em `.excalidraw`, PNG e SVG, e PNG e SVG podem guardar os dados do desenho para reimportação. O formato `.excalidraw` é legível (texto em JSON), mas não tem uma especificação formal publicada.
+Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vem da própria definição da métrica. São as mesmas hipóteses das questões, como a aula permite (AULA 08, p. 34), e o quadrante 4º indica o fator que justifica cada uma.
+
+| Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
+| :--- | :--- | :--- | :--- |
+| Adaptabilidade | [H3.1.1](./gqm-flexibilidade.md#3-q31--adaptabilidade) | Os navegadores declarados cobrirão a maior parte dos usuários. | ≥ 80% |
+| Adaptabilidade | [H3.1.2](./gqm-flexibilidade.md#3-q31--adaptabilidade) | A biblioteca funcionará com React 17, 18 e 19, em Vite e em Next.js. | = 6 de 6 combinações |
+| Adaptabilidade | [H3.1.3](./gqm-flexibilidade.md#3-q31--adaptabilidade) | O editor aceitará toque nas ações de edição. | = 10 de 10 ações |
+| Escalabilidade | [H3.2.1](./gqm-flexibilidade.md#4-q32--escalabilidade) | Um desenho de 1.000 elementos abrirá sem interromper o usuário. | ≤ 1 s na cena de 1.000 elementos |
+| Escalabilidade | [H3.2.2](./gqm-flexibilidade.md#4-q32--escalabilidade) | A edição será fluida com 1.000 elementos. | ≥ 48 quadros por segundo na cena de 1.000 elementos |
+| Escalabilidade | [H3.2.3](./gqm-flexibilidade.md#4-q32--escalabilidade) | Desenhos com milhares de elementos poderão ser salvos e exportados. | maior cena ≥ 5.000 elementos |
+| Instalabilidade | [H3.3.1](./gqm-flexibilidade.md#5-q33--instalabilidade) | A biblioteca será instalada e removida sem erro pelos gerenciadores de pacotes. | = 9 de 9 operações |
+| Instalabilidade | [H3.3.2](./gqm-flexibilidade.md#5-q33--instalabilidade) | As instruções de execução local bastarão, com as versões de ferramentas exigidas. | ≥ 95% dos passos sem ajuste |
+| Instalabilidade | [H3.3.3](./gqm-flexibilidade.md#5-q33--instalabilidade) | A imagem Docker será construída e executada sem passos manuais. | = 4 de 4 verificações |
+| Substituibilidade | [H3.4.1](./gqm-flexibilidade.md#6-q34--substituibilidade) | O desenho poderá ser exportado em formatos abertos. | ≥ 3 formatos |
+| Substituibilidade | [H3.4.2](./gqm-flexibilidade.md#6-q34--substituibilidade) | A reimportação preservará os elementos do desenho. | ≥ 95% em cada formato |
+| Substituibilidade | [H3.4.3](./gqm-flexibilidade.md#6-q34--substituibilidade) | O formato `.excalidraw` terá documentação apenas parcial. | < 60% dos campos documentados |
 
 ### 3º Fatores de variação
 
@@ -147,16 +188,17 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 
 ### 4º Impacto nas hipóteses de baseline
 
-- Medidas de desempenho só são comparáveis quando feitas no mesmo hardware e no mesmo navegador. O ambiente de teste será fixado e registrado.
-- Uma construção pode falhar por causa da versão de uma ferramenta, e não por um problema do produto. As versões usadas serão registradas, e falhas desse tipo serão distinguidas das demais.
-- Mudanças no ecossistema React podem tornar desatualizadas as versões declaradas como compatíveis. A avaliação considera o que está declarado na versão avaliada.
-- Imagens incorporadas aumentam o tamanho do desenho mais do que o número de elementos. Os desenhos de teste terão composição definida, para que o efeito de cada fator possa ser separado.
+- Medidas de desempenho e de entrada por toque só são comparáveis quando feitas no mesmo hardware e no mesmo navegador. O ambiente de teste será fixado e registrado ([H3.1.3](./gqm-flexibilidade.md#3-q31--adaptabilidade), [H3.2.1](./gqm-flexibilidade.md#4-q32--escalabilidade) e [H3.2.2](./gqm-flexibilidade.md#4-q32--escalabilidade)).
+- Uma construção pode falhar por causa da versão de uma ferramenta, e não por um problema do produto. As versões usadas serão registradas, e falhas desse tipo serão distinguidas das demais ([H3.3.1](./gqm-flexibilidade.md#5-q33--instalabilidade), [H3.3.2](./gqm-flexibilidade.md#5-q33--instalabilidade) e [H3.3.3](./gqm-flexibilidade.md#5-q33--instalabilidade)).
+- Mudanças no ecossistema React e na lista de navegadores podem tornar desatualizadas as versões declaradas como compatíveis. A avaliação considera o que está declarado na versão avaliada ([H3.1.1](./gqm-flexibilidade.md#3-q31--adaptabilidade) e [H3.1.2](./gqm-flexibilidade.md#3-q31--adaptabilidade)).
+- Imagens incorporadas aumentam o tamanho do desenho mais do que o número de elementos. Os desenhos de teste terão composição definida, para que o efeito de cada fator possa ser separado ([H3.2.3](./gqm-flexibilidade.md#4-q32--escalabilidade) e [H3.4.2](./gqm-flexibilidade.md#6-q34--substituibilidade)).
+- Os formatos de exportação e a falta de uma especificação publicada do formato `.excalidraw` já são visíveis no repositório no commit `e1b7aac`. Por isso [H3.4.1](./gqm-flexibilidade.md#6-q34--substituibilidade) e [H3.4.3](./gqm-flexibilidade.md#6-q34--substituibilidade) se apoiam no que se vê no código, e não em um fator de variação.
 
 ---
 
 ## 6. Uso das abstraction sheets nas próximas etapas
 
-- **Hipóteses das questões:** cada hipótese de *baseline* dá origem à hipótese da questão da mesma subcaracterística.
+- **Hipóteses das questões:** as hipóteses de *baseline* são as mesmas das questões da mesma subcaracterística, com os mesmos códigos ([H1.1.1](./gqm-manutenibilidade.md#3-q11--modularidade), [H1.1.2](./gqm-manutenibilidade.md#3-q11--modularidade) etc.).
 - **Seleção das métricas:** as métricas candidatas são filtradas pelas características desejáveis (AULA 08, p. 41) e pela possibilidade de coleta na versão avaliada (AULA 08, p. 42).
 - **Análise dos resultados:** os fatores de variação e seus impactos servem de guia para interpretar as medições (AULA 08, p. 31). Um resultado diferente do esperado é examinado à luz desses fatores antes de ser atribuído ao produto.
 
@@ -165,7 +207,7 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 ## 7. Limitações
 
 1. **Expectativas da equipe avaliadora.** As hipóteses refletem o que a equipe espera ao assumir o ponto de vista dos interessados, e não a opinião de mantenedores, integradores ou usuários reais ([limitações do método](./estrutura-gqm.md#6-limitações-do-método-nesta-avaliação)).
-2. **Conhecimento prévio limitado.** A equipe conhece o Excalidraw pela análise feita na Fase 01, e não por experiência de desenvolvimento no projeto. Por isso, a maior parte das hipóteses é comparativa, e não numérica.
+2. **Conhecimento prévio limitado.** A equipe conhece o Excalidraw pela análise feita na Fase 01, e não por experiência de desenvolvimento no projeto. Por isso, os limites das regras de confirmação vêm das faixas de pontuação já definidas, e não de valores estimados pela equipe.
 3. **Fatores não controláveis.** Fatores como a forma de registro de defeitos pela comunidade e as políticas dos navegadores não podem ser controlados pela equipe, apenas registrados e considerados na análise.
 
 ---
@@ -183,3 +225,4 @@ As métricas listadas no foco de qualidade são **candidatas**. A seleção fina
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das abstraction sheets dos objetivos G1, G2 e G3 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
+| 1.1 | 30/10/2026 | Hipóteses de baseline refeitas: uma por métrica, com uma única afirmação e regra de confirmação. Impactos passam a citar as hipóteses afetadas, e G2 ganha o fator de regras de integração | [Christopher Paraizo](https://github.com/wChrstphr) | |

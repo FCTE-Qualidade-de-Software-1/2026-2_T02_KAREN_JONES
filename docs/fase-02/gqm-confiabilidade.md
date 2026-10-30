@@ -6,7 +6,7 @@ description: Questões, hipóteses e métricas do objetivo de medição G2, que 
 
 # GQM de Confiabilidade (G2)
 
-Esta página detalha o objetivo G2, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g2--confiabilidade). Para cada subcaracterística de Confiabilidade há uma questão, a hipótese da questão e as métricas que a respondem.
+Esta página detalha o objetivo G2, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g2--confiabilidade). Para cada subcaracterística de Confiabilidade há uma questão, as hipóteses da questão e as métricas que a respondem.
 
 | Campo do template | Valor |
 | :--- | :--- |
@@ -54,7 +54,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-CONF-01 (verificações automáticas e revisão antes da integração) e RQ-CONF-02 (registro, classificação e tratamento dos defeitos).
 
-**Hipótese:** as correções são uma parte relevante das contribuições integradas, compatível com um projeto muito usado. Os defeitos relatados são corrigidos em poucas semanas. Toda contribuição passa por verificações automáticas e por revisão de outra pessoa antes da integração.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H2.1.1** | As correções serão uma parte relevante das contribuições integradas. | ≥ 20% | [M2.1.1](#m211--proporção-de-correções-entre-as-contribuições-integradas) |
+| **H2.1.2** | Os defeitos relatados serão corrigidos em poucas semanas. | mediana ≤ 30 dias | [M2.1.2](#m212--mediana-do-tempo-entre-o-relato-e-a-correção) |
+| **H2.1.3** | Toda contribuição terá revisão aprovada por outra pessoa antes da integração. | ≥ 95% | [M2.1.3](#m213--proporção-de-contribuições-revisadas-antes-da-integração) |
 
 ### M2.1.1 — Proporção de correções entre as contribuições integradas
 
@@ -64,7 +70,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | (correções integradas na janela ÷ contribuições integradas na janela) × 100. Também é registrada a distribuição das correções pelo escopo indicado no título (por exemplo, `fix(editor)` ou `fix(app)`). Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Histórico de *pull requests* do repositório oficial no GitHub. |
 | Procedimento de coleta | Busca da API do GitHub (`gh api search/issues`) com os filtros `is:pr is:merged` e o intervalo da janela, separando as correções pelo tipo `fix` no início do título. Contribuições automáticas de atualização de dependências e de traduções são excluídas. |
-| Critério de interpretação | Confirma a hipótese se o percentual for relevante. O resultado mostra quanto do esforço do projeto vai para corrigir defeitos em vez de criar funcionalidades. Ele não mede quantos defeitos existem, só quantos foram corrigidos. |
+| Critério de interpretação | Confirma [H2.1.1](#3-q21--ausência-de-falhas) se o valor for de pelo menos 20%. O resultado mostra quanto do esforço do projeto vai para corrigir defeitos em vez de criar funcionalidades. Ele não mede quantos defeitos existem, só quantos foram corrigidos. |
 | Questão respondida | Q2.1 |
 | Características desejáveis | Simples (uma razão). Objetiva, porque o tipo da contribuição é verificado automaticamente pelo próprio projeto. Fácil de coletar pela API. Robusta, porque permite comparar janelas diferentes. |
 
@@ -76,7 +82,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Para cada correção integrada na janela que declara encerrar um relato (*closing issue reference* do GitHub), calcular a diferença em dias entre a data de integração da correção e a data de abertura do relato. Calcular a mediana. Também é registrada a proporção das correções que declaram encerrar um relato. Unidade: dias. Escala: absoluta. |
 | Fonte dos dados | Histórico de *pull requests* e de *issues* do repositório oficial no GitHub. |
 | Procedimento de coleta | API GraphQL do GitHub (`gh api graphql`), campo `closingIssuesReferences` de cada correção, com a data de abertura de cada relato ligado. |
-| Critério de interpretação | Confirma a hipótese se a mediana for de poucas semanas. Medianas longas indicam que o usuário convive mais tempo com o defeito. Se poucas correções estiverem ligadas a relatos, o resultado vale só para essa parte e isso é registrado. |
+| Critério de interpretação | Confirma [H2.1.2](#3-q21--ausência-de-falhas) se a mediana for de no máximo 30 dias. Medianas longas indicam que o usuário convive mais tempo com o defeito. Se poucas correções estiverem ligadas a relatos, o resultado vale só para essa parte e isso é registrado. |
 | Questão respondida | Q2.1 |
 | Características desejáveis | Objetiva, porque as datas vêm do registro do GitHub. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para o tratamento dos defeitos (RQ-CONF-02). |
 
@@ -88,7 +94,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | (contribuições com ao menos uma revisão aprovada por outra pessoa ÷ contribuições integradas na janela) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Revisões registradas em cada *pull request* do repositório oficial no GitHub; fluxos de `.github/workflows/` disparados por `pull_request`. |
 | Procedimento de coleta | API GraphQL do GitHub, campo `reviews` com estado `APPROVED` de cada contribuição, comparando o autor da revisão com o autor da contribuição. As verificações automáticas são as mesmas medidas no objetivo de Manutenibilidade e não são contadas de novo aqui. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100% ou próximo disso. Contribuições integradas sem revisão dependem só das verificações automáticas para evitar falhas. |
+| Critério de interpretação | Confirma [H2.1.3](#3-q21--ausência-de-falhas) se o valor for de pelo menos 95%. Contribuições integradas sem revisão dependem só das verificações automáticas para evitar falhas. |
 | Questão respondida | Q2.1 |
 | Características desejáveis | Simples. Objetiva, porque usa o registro de revisões do GitHub. Fácil de coletar automaticamente. Válida para RQ-CONF-01. |
 
@@ -100,7 +106,12 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-CONF-03 (uso sem conexão após o primeiro carregamento) e RQ-CONF-04 (independência de colaboração e de recursos remotos).
 
-**Hipótese:** depois do primeiro carregamento, o editor funciona sem conexão. A colaboração em tempo real e o compartilhamento por link não funcionam sem conexão. O editor local carrega poucos recursos de servidores externos, e nenhum deles é indispensável para desenhar.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H2.2.1** | O editor funcionará sem conexão depois do primeiro carregamento. | = 10 de 10 funções | [M2.2.1](#m221--proporção-de-funções-essenciais-disponíveis-sem-conexão) |
+| **H2.2.2** | Nenhum serviço externo será indispensável para desenhar. | = 0 domínios indispensáveis | [M2.2.2](#m222--origens-externas-necessárias-para-o-editor-local) |
 
 ### M2.2.1 — Proporção de funções essenciais disponíveis sem conexão
 
@@ -110,7 +121,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Lista de funções verificadas: (1) recarregar a página; (2) criar formas; (3) escrever texto; (4) mover e redimensionar elementos; (5) desfazer e refazer; (6) salvar em arquivo `.excalidraw`; (7) abrir um arquivo `.excalidraw`; (8) exportar em PNG; (9) exportar em SVG; (10) exibir o texto com a fonte padrão. Calcular (funções que funcionam ÷ 10) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web em execução no ambiente de teste; configuração do *service worker* em `excalidraw-app/vite.config.mts`. |
 | Procedimento de coleta | Abrir a aplicação com conexão, aguardar o registro do *service worker*, desligar a rede pelo modo *offline* das ferramentas do navegador e executar a lista na ordem, registrando cada item como funciona ou não funciona, com captura de tela. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada função que falha é um caso em que o usuário perde acesso ao editor sem conexão. |
+| Critério de interpretação | Confirma [H2.2.1](#4-q22--disponibilidade) se o valor for 100%. Cada função que falha é um caso em que o usuário perde acesso ao editor sem conexão. |
 | Questão respondida | Q2.2 |
 | Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item tem resultado binário com evidência. Válida, porque testa o comportamento, e não só a presença da configuração. Robusta, porque pode ser repetida em outros navegadores. |
 
@@ -122,7 +133,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Contar os domínios externos no registro de requisições da abertura do editor. Para cada domínio, bloquear suas requisições e verificar se o editor ainda permite criar formas e texto; se não permitir, o domínio é indispensável. Unidade: domínios. Escala: absoluta. |
 | Fonte dos dados | Registro de rede (arquivo HAR) do navegador no ambiente de teste. |
 | Procedimento de coleta | Abrir o editor com o cache vazio, exportar o registro de rede das ferramentas do navegador e listar os domínios. Repetir a abertura com cada domínio bloqueado pela opção de bloqueio de requisições do navegador. |
-| Critério de interpretação | Confirma a hipótese se houver poucos domínios externos e nenhum indispensável. Cada domínio indispensável é um serviço cuja queda deixa o editor indisponível. |
+| Critério de interpretação | Confirma [H2.2.2](#4-q22--disponibilidade) se nenhum domínio externo for indispensável. Cada domínio indispensável é um serviço cuja queda deixa o editor indisponível. |
 | Questão respondida | Q2.2 |
 | Características desejáveis | Objetiva, porque os domínios saem do registro do navegador. Fácil de coletar com ferramentas do próprio navegador. Válida para RQ-CONF-04. |
 
@@ -134,7 +145,12 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-CONF-05 (funcionalidades essenciais diante de problemas de conectividade), RQ-CONF-06 (editor local após falha da colaboração) e RQ-CONF-07 (arquivos inválidos ou corrompidos).
 
-**Hipótese:** arquivos inválidos ou corrompidos são recusados com uma mensagem, sem travar o editor. Se a sessão de colaboração cair, o desenho local continua editável e o usuário é avisado.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H2.3.1** | Arquivos inválidos serão recusados com mensagem, sem travar o editor. | = 9 de 9 casos | [M2.3.1](#m231--proporção-de-arquivos-inválidos-tratados-com-mensagem) |
+| **H2.3.2** | O desenho local continuará editável se a colaboração cair. | verificações 1 a 4 aprovadas | [M2.3.2](#m232--continuidade-do-editor-após-falha-da-colaboração) |
 
 ### M2.3.1 — Proporção de arquivos inválidos tratados com mensagem
 
@@ -144,7 +160,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Lista de casos: (1) arquivo vazio com extensão `.excalidraw`; (2) JSON com erro de sintaxe; (3) JSON válido sem o campo `type`; (4) campo `type` com valor desconhecido; (5) lista de elementos com campos obrigatórios ausentes; (6) elemento com coordenadas não numéricas; (7) arquivo binário qualquer renomeado para `.excalidraw`; (8) imagem PNG sem desenho incorporado; (9) arquivo `.excalidraw` truncado no meio. Um caso é tratado se o editor mostra uma mensagem e, em seguida, ainda permite criar formas sem recarregar a página. Calcular (casos tratados ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web no ambiente de teste; arquivos de teste preparados pela equipe e guardados no repositório da avaliação. |
 | Procedimento de coleta | Abrir cada arquivo pelo menu de abertura e, em outra rodada, arrastando o arquivo para o editor. Registrar a mensagem exibida (ou a ausência dela) e se o editor continua utilizável, com captura de tela. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada caso não tratado é uma forma de o usuário travar o editor ou perder o trabalho em andamento. |
+| Critério de interpretação | Confirma [H2.3.1](#5-q23--tolerância-a-falhas) se o valor for 100%. Cada caso não tratado é uma forma de o usuário travar o editor ou perder o trabalho em andamento. |
 | Questão respondida | Q2.3 |
 | Características desejáveis | Objetiva e consistente, porque os arquivos são fixos e o critério de tratamento é definido antes do teste. Robusta, porque os mesmos arquivos servem para outras versões. Válida para RQ-CONF-07. |
 
@@ -156,7 +172,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Com uma sessão de colaboração ativa entre duas janelas, interromper a rede de uma delas e verificar: (1) o desenho continua na tela; (2) é possível criar e editar elementos; (3) o usuário recebe aviso de que está sem conexão; (4) é possível salvar o desenho em arquivo; (5) ao restabelecer a rede, as alterações feitas sem conexão aparecem na outra janela. Calcular (verificações que passam ÷ 5) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web no ambiente de teste, conectada ao servidor de colaboração configurado na versão avaliada; código de colaboração em `excalidraw-app/collab/`. |
 | Procedimento de coleta | Teste manual roteirizado, repetido três vezes, com o modo *offline* das ferramentas do navegador para interromper a rede. Cada verificação passa se passar nas três repetições. |
-| Critério de interpretação | Confirma a hipótese se as verificações 1 a 4 passarem. A verificação 5 mostra se o trabalho feito durante a falha é preservado na sessão compartilhada. |
+| Critério de interpretação | Confirma [H2.3.2](#5-q23--tolerância-a-falhas) se as verificações 1 a 4 passarem. A verificação 5 mostra se o trabalho feito durante a falha é preservado na sessão compartilhada. |
 | Questão respondida | Q2.3 |
 | Características desejáveis | Objetiva, porque cada verificação tem resultado binário definido antes do teste. Robusta, por exigir três repetições. Válida para RQ-CONF-05 e RQ-CONF-06. |
 
@@ -168,7 +184,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-CONF-08 (restauração automática do último estado), RQ-CONF-09 (salvar e reabrir arquivos), RQ-CONF-10 (arquivos de versões anteriores) e RQ-CONF-11 (desfazer e refazer).
 
-**Hipótese:** ao reabrir a aplicação, o último desenho é restaurado, inclusive depois de um fechamento inesperado. Arquivos salvos na versão atual e em versões anteriores são reabertos sem perda. Desfazer e refazer cobrem as ações de edição do próprio usuário.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H2.4.1** | O último desenho será restaurado ao reabrir a aplicação, mesmo após fechamento inesperado. | = 4 de 4 cenários | [M2.4.1](#m241--proporção-de-cenários-de-fechamento-com-restauração-do-desenho) |
+| **H2.4.2** | Arquivos da versão atual e de versões anteriores reabrirão sem perda. | = 7 de 7 arquivos | [M2.4.2](#m242--proporção-de-arquivos-reabertos-sem-perda) |
+| **H2.4.3** | Desfazer e refazer cobrirão as ações de edição do usuário. | = 10 de 10 ações | [M2.4.3](#m243--cobertura-de-desfazer-e-refazer) |
 
 ### M2.4.1 — Proporção de cenários de fechamento com restauração do desenho
 
@@ -178,7 +200,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Cenários: (1) recarregar a página; (2) fechar a aba e abrir de novo; (3) fechar o navegador normalmente; (4) encerrar o processo do navegador pelo sistema operacional, um segundo depois da última edição. Um cenário passa se todos os elementos da cena de referência voltarem com as mesmas propriedades. Calcular (cenários que passam ÷ 4) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web no ambiente de teste; armazenamento do navegador; código de salvamento local em `excalidraw-app/data/LocalData.ts`. |
 | Procedimento de coleta | Montar a cena de referência, executar cada cenário e comparar a cena reaberta com a original exportando ambas em `.excalidraw` e comparando os elementos com um script. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada cenário que falha é uma situação em que o usuário perde trabalho sem ter salvo um arquivo. |
+| Critério de interpretação | Confirma [H2.4.1](#6-q24--recuperabilidade) se o valor for 100%. Cada cenário que falha é uma situação em que o usuário perde trabalho sem ter salvo um arquivo. |
 | Questão respondida | Q2.4 |
 | Características desejáveis | Objetiva, porque a comparação entre as cenas é feita por script. Válida para RQ-CONF-08. Robusta, porque os cenários podem ser repetidos em outros navegadores. |
 
@@ -190,7 +212,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Conjunto de teste: a cena de referência salva em `.excalidraw` pela versão avaliada e pelas versões publicadas v0.15.0, v0.16.4, v0.17.6 e v0.18.0, mais as imagens com desenho incorporado que o próprio repositório usa como exemplo (`test_embedded_v1.png` e `smiley_embedded_v2.png`). Um arquivo é reaberto sem perda se todos os elementos aparecem com tipo, posição, tamanho e texto iguais aos do original. Calcular (arquivos reabertos sem perda ÷ arquivos do conjunto) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web das versões citadas, construída a partir das marcações (*tags*) do repositório; arquivos de exemplo em `packages/excalidraw/tests/fixtures/`. |
 | Procedimento de coleta | Gerar os arquivos em cada versão anterior, abri-los na versão avaliada e comparar os elementos com um script. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada arquivo com perda indica um desenho antigo que o usuário não consegue recuperar como foi salvo. |
+| Critério de interpretação | Confirma [H2.4.2](#6-q24--recuperabilidade) se o valor for 100%. Cada arquivo com perda indica um desenho antigo que o usuário não consegue recuperar como foi salvo. |
 | Questão respondida | Q2.4 |
 | Características desejáveis | Objetiva, porque a comparação é feita por script sobre um conjunto fixo. Robusta, porque o conjunto pode crescer com novas versões. Válida para RQ-CONF-09 e RQ-CONF-10. |
 
@@ -202,7 +224,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Tipos de ação: (1) criar elemento; (2) apagar elemento; (3) mover; (4) redimensionar; (5) girar; (6) mudar cor ou estilo; (7) editar texto; (8) agrupar e desagrupar; (9) mudar a ordem de sobreposição; (10) ligar uma seta a uma forma. Uma ação passa se, depois de desfazer, a cena volta ao estado anterior e, depois de refazer, volta ao estado posterior. Calcular (ações que passam ÷ 10) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web no ambiente de teste; código do histórico de edição em `packages/excalidraw/history.ts`. |
 | Procedimento de coleta | Teste manual roteirizado, exportando a cena antes da ação, depois da ação, depois de desfazer e depois de refazer, e comparando as exportações com um script. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada tipo de ação que não pode ser desfeito é um erro do usuário que não tem volta. |
+| Critério de interpretação | Confirma [H2.4.3](#6-q24--recuperabilidade) se o valor for 100%. Cada tipo de ação que não pode ser desfeito é um erro do usuário que não tem volta. |
 | Questão respondida | Q2.4 |
 | Características desejáveis | Simples. Objetiva, porque a comparação é feita por script. Válida para RQ-CONF-11. Robusta, porque a lista pode ser repetida em outras versões. |
 
@@ -260,3 +282,4 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G2 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares), [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |

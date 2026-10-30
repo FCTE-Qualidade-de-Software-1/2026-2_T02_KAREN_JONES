@@ -6,7 +6,7 @@ description: Questões, hipóteses e métricas do objetivo de medição G1, que 
 
 # GQM de Manutenibilidade (G1)
 
-Esta página detalha o objetivo G1, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g1--manutenibilidade). Para cada subcaracterística de Manutenibilidade há uma questão, a hipótese da questão e as métricas que a respondem.
+Esta página detalha o objetivo G1, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g1--manutenibilidade). Para cada subcaracterística de Manutenibilidade há uma questão, as hipóteses da questão e as métricas que a respondem.
 
 | Campo do template | Valor |
 | :--- | :--- |
@@ -56,7 +56,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-MAN-01 (limites entre aplicação e biblioteca), RQ-MAN-02 (direção das dependências e ausência de ciclos) e RQ-MAN-03 (coesão e dependências desnecessárias).
 
-**Hipótese:** não há ciclos de dependência em tempo de execução entre os pacotes, e nenhum pacote importa código da aplicação web. A biblioteca `excalidraw` é o pacote que mais recebe dependências dos demais.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H1.1.1** | Não haverá ciclos de dependência entre os pacotes. | = 0 pares em ciclo | [M1.1.1](#m111--ciclos-de-dependência-entre-pacotes) |
+| **H1.1.2** | As importações entre pacotes seguirão a direção declarada pelo projeto. | = 0 importações em desacordo | [M1.1.2](#m112--importações-que-violam-a-direção-declarada) |
+| **H1.1.3** | A biblioteca `excalidraw` será o pacote que mais recebe dependências. | *Ca* da biblioteca > *Ca* de cada outro pacote | [M1.1.3](#m113--acoplamento-e-instabilidade-de-cada-pacote) |
 
 ### M1.1.1 — Ciclos de dependência entre pacotes
 
@@ -66,7 +72,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Montar o grafo de dependências entre arquivos de produção, considerando só importações de valor (importações apenas de tipo são descartadas, porque desaparecem na compilação). Agrupar os arquivos por pacote e contar os pares de pacotes A e B em que A alcança B e B alcança A. Unidade: pares de pacotes. Escala: absoluta, de 0 em diante. |
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | Ferramenta Madge (versão 8.0.0), com o `tsconfig.json` do repositório para resolver os nomes `@excalidraw/*` e com a opção de ignorar importações de tipo, exportando o grafo completo entre arquivos (opção `--json`). Um script agrega as arestas por pacote, descarta as internas a um mesmo pacote e verifica, para cada par, se um pacote alcança o outro. A lista de ciclos entre arquivos (opção `--circular`) não basta: `A/a1 → B/b1` e `B/b2 → A/a2` não formam ciclo entre arquivos, mas formam ciclo entre os pacotes A e B. |
-| Critério de interpretação | Confirma a hipótese se o valor for 0. Cada par encontrado indica dois pacotes que não podem ser alterados ou reutilizados separadamente. |
+| Critério de interpretação | Confirma [H1.1.1](#3-q11--modularidade) se o valor for 0. Cada par encontrado indica dois pacotes que não podem ser alterados ou reutilizados separadamente. |
 | Questão respondida | Q1.1 |
 | Características desejáveis | Simples (contagem). Objetiva, porque o grafo sai das importações declaradas no código. Fácil de coletar com uma ferramenta automática. Válida, porque ciclos medem diretamente a falta de direção nas dependências. Baseada na estrutura do programa, e não na linguagem. |
 
@@ -78,7 +84,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Resolver o destino de cada importação de valor dos arquivos de produção, inclusive caminhos relativos, nomes `@excalidraw/*` e reexportações (`export ... from`), para o pacote do arquivo importado. Contar as importações que se enquadram em uma das duas condições: (1) origem em um pacote de base e destino na biblioteca; (2) destino na aplicação web, a partir de qualquer pacote. A condição 1 é a regra de lint `packages/eslintrc.base.json` do Excalidraw, que proíbe os pacotes de base de importar da biblioteca qualquer coisa além de tipos. A condição 2 vem da organização do repositório, em que a aplicação web é a camada mais externa e consome a biblioteca. Unidade: importações (pares arquivo de origem → arquivo de destino). Escala: absoluta. |
 | Fonte dos dados | Código de produção de todos os pacotes; arquivo `packages/eslintrc.base.json`. |
 | Procedimento de coleta | O grafo de importações de valor de M1.1.1, em que o Madge já resolve os destinos para arquivos. Um script classifica cada aresta pelas duas condições e conta as que as violam. O ESLint do projeto não serve sozinho como coleta, porque a regra não trata de importações da aplicação web e só é aplicada nos pacotes cuja configuração a estende (`common` e `element`). |
-| Critério de interpretação | Confirma a hipótese se o valor for 0. Cada importação encontrada é um ponto em que o código não respeita a arquitetura que o próprio projeto declara. |
+| Critério de interpretação | Confirma [H1.1.2](#3-q11--modularidade) se o valor for 0. Cada importação encontrada é um ponto em que o código não respeita a arquitetura que o próprio projeto declara. |
 | Questão respondida | Q1.1 |
 | Características desejáveis | Simples e objetiva, porque a direção esperada vem de uma regra escrita pelo projeto, e não de opinião da equipe. Fácil de coletar. Válida para os limites entre aplicação, biblioteca e pacotes de base (RQ-MAN-01). |
 
@@ -90,7 +96,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Ca e Ce por contagem de pacotes distintos; *I* = Ce / (Ca + Ce). Consideram-se só importações de valor no código de produção. Unidade: pacotes (Ca e Ce) e adimensional (*I*). Escala: absoluta (Ca e Ce) e 0 a 1 (*I*). |
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | O mesmo grafo de M1.1.1, agregado por pacote, contando as arestas distintas entre pacotes. |
-| Critério de interpretação | Confirma a hipótese se a biblioteca tiver o maior Ca entre os pacotes. *I* é registrado para comparar os pacotes entre si: um pacote de base com *I* alto depende de muitos outros e é mais difícil de reutilizar. |
+| Critério de interpretação | Confirma [H1.1.3](#3-q11--modularidade) se a biblioteca tiver o maior Ca entre os pacotes. *I* é registrado para comparar os pacotes entre si: um pacote de base com *I* alto depende de muitos outros e é mais difícil de reutilizar. |
 | Questão respondida | Q1.1 |
 | Características desejáveis | Simples (uma razão). Objetiva e robusta, porque permite comparar pacotes entre si e com outras versões. Válida, porque é uma medida consagrada de acoplamento entre módulos. Independente da linguagem. |
 
@@ -102,7 +108,12 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-MAN-04 (reutilização dos componentes e dos pacotes menores) e RQ-MAN-05 (interface pública documentada).
 
-**Hipótese:** os pacotes `math` e `utils` não dependem de React nem de recursos do navegador. A maior parte das propriedades públicas da biblioteca está documentada, mas parte delas só aparece nos tipos do código.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H1.2.1** | Os pacotes `math` e `utils` não dependerão de React nem do navegador. | = 0 arquivos em `math` e `utils` | [M1.2.1](#m121--arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) |
+| **H1.2.2** | A documentação cobrirá a maior parte das propriedades públicas, sem cobrir todas. | ≥ 80% e < 100% | [M1.2.2](#m122--proporção-de-propriedades-públicas-documentadas) |
 
 ### M1.2.1 — Arquivos de pacotes de base com dependência de React ou do navegador
 
@@ -112,7 +123,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Contagem por pacote, separando os arquivos com dependência direta dos que só têm dependência transitiva. Unidade: arquivos. Escala: absoluta. Também é registrada a proporção em relação ao total de arquivos de produção do pacote. |
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | Busca no código de produção de todos os pacotes por importações de `react` e `react-dom` e por usos de `window.` e `document.` (ferramenta `grep`), excluindo comentários. Os arquivos encontrados são marcados no grafo de importações de valor de M1.1.1, e um script conta os arquivos dos pacotes de base que alcançam algum arquivo marcado. |
-| Critério de interpretação | Confirma a hipótese se o valor for 0 em `math` e `utils`. Nos demais pacotes de base, valores maiores indicam que o pacote só funciona dentro de um navegador ou junto com React. |
+| Critério de interpretação | Confirma [H1.2.1](#4-q12--reusabilidade) se o valor for 0 em `math` e em `utils`. Nos demais pacotes de base, valores maiores indicam que o pacote só funciona dentro de um navegador ou junto com React. |
 | Questão respondida | Q1.2 |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque depende só do texto do código. Válida como indicador de reutilização fora do editor, já que essas dependências impedem o uso em outros ambientes, como servidores. |
 
@@ -124,7 +135,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | (propriedades descritas na documentação ÷ propriedades declaradas em `ExcalidrawProps`) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Tipo `ExcalidrawProps` em `packages/excalidraw/types.ts`; páginas da pasta `dev-docs/docs/@excalidraw/excalidraw/api/`. |
 | Procedimento de coleta | Listar os nomes das propriedades declaradas no tipo e procurar cada nome nas páginas da documentação. Uma propriedade conta como documentada se tiver ao menos uma descrição do seu propósito. |
-| Critério de interpretação | Confirma a hipótese se o valor for alto, mas menor que 100%. Quanto menor o valor, mais quem integra a biblioteca precisa ler o código para usá-la. |
+| Critério de interpretação | Confirma [H1.2.2](#4-q12--reusabilidade) se o valor for de pelo menos 80% e menor que 100%. Quanto menor o valor, mais quem integra a biblioteca precisa ler o código para usá-la. |
 | Questão respondida | Q1.2 |
 | Características desejáveis | Simples (uma razão). Objetiva, porque a lista de propriedades vem do código. Fácil de coletar, com uma lista finita. Válida para a separação entre interface pública e detalhes internos (RQ-MAN-05). |
 
@@ -136,7 +147,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-MAN-06 (compreensão do código), RQ-MAN-07 (documentação de convenções, arquitetura e contribuição) e RQ-MAN-08 (lint, formatação e verificação de tipos).
 
-**Hipótese:** a maior parte das funções tem complexidade baixa, e as de complexidade alta se concentram em poucos arquivos, principalmente no componente principal do editor. A documentação para desenvolvedores cobre a contribuição e a preparação do ambiente. Lint, formatação e verificação de tipos são executados automaticamente.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H1.3.1** | Haverá funções de complexidade muito alta no código. | > 0% das linhas em funções com complexidade acima de 50 | [M1.3.1](#m131--perfil-de-risco-de-complexidade-das-funções) |
+| **H1.3.2** | A documentação para desenvolvedores cobrirá a contribuição e a preparação do ambiente. | tópicos (1) e (2) presentes | [M1.3.2](#m132--cobertura-da-documentação-para-desenvolvedores) |
+| **H1.3.3** | Lint, formatação e tipos serão verificados automaticamente. | = 3 de 3 | [M1.3.3](#m133--verificações-estáticas-executadas-automaticamente) |
 
 ### M1.3.1 — Perfil de risco de complexidade das funções
 
@@ -146,7 +163,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Para cada função, obter a complexidade ciclomática e as linhas de código próprias: as linhas da função que não estão em branco nem são comentários, descontadas as linhas das funções declaradas dentro dela, para que cada linha seja contada uma única vez. Classificar cada função em uma faixa e calcular, para cada faixa, (linhas próprias das funções da faixa ÷ linhas próprias de todas as funções) × 100, por pacote e no total. Também são registrados o percentual de funções em cada faixa e a lista dos arquivos com mais linhas nas faixas de risco alto e muito alto. Unidade: percentual de linhas de código. Escala: 0 a 100 em cada faixa, e as quatro faixas somam 100. |
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | ESLint (versão 8.57.0) com o analisador `@typescript-eslint/parser` e a regra `complexity` ativada com limite 0, que informa a complexidade de cada função e as linhas em que ela começa e termina. Um script conta as linhas próprias de cada função a partir desses intervalos. Os inicializadores de campos de classe, que a regra também informa, não são funções e ficam de fora. |
-| Critério de interpretação | Confirma a hipótese se a maior parte das funções e das linhas estiver na faixa de risco baixo e se as linhas das faixas de risco alto e muito alto estiverem concentradas em poucos arquivos. O resultado é dado em linhas, e não em média de complexidade, porque a média esconde as poucas funções muito complexas (Heitlager; Kuipers; Visser, 2007, p. 6). Funções muito complexas são mais difíceis de entender e de testar. |
+| Critério de interpretação | Confirma [H1.3.1](#5-q13--analisabilidade) se houver linhas em funções com complexidade acima de 50. O resultado é dado em linhas, e não em média de complexidade, porque a média esconde as poucas funções muito complexas (Heitlager; Kuipers; Visser, 2007, p. 6). Funções muito complexas são mais difíceis de entender e de testar. A concentração das linhas de risco alto e muito alto em poucos arquivos, como o componente principal do editor, é registrada como observação, sem confirmar nem refutar hipótese. |
 | Questão respondida | Q1.3 |
 | Características desejáveis | Objetiva e consistente, porque o cálculo é definido pela regra da ferramenta e as faixas vêm de fonte publicada. Fácil de coletar automaticamente. Robusta, porque permite comparar pacotes. Baseada na estrutura de controle do programa, e não na sintaxe da linguagem. |
 
@@ -158,7 +175,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Soma dos tópicos presentes. Um tópico está presente se houver um documento ou uma seção dedicada a ele. Unidade: tópicos. Escala: 0 a 4. |
 | Fonte dos dados | `README.md`, `CONTRIBUTING.md` e `AGENTS.md` da raiz; páginas de `dev-docs/docs/` (documentação publicada em docs.excalidraw.com). |
 | Procedimento de coleta | Inspeção dos arquivos, preenchendo uma lista de verificação com o caminho do documento que comprova cada tópico. |
-| Critério de interpretação | Confirma a hipótese se pelo menos os tópicos 1 e 2 estiverem presentes. Cada tópico ausente obriga quem chega ao projeto a descobrir a informação pelo código. |
+| Critério de interpretação | Confirma [H1.3.2](#5-q13--analisabilidade) se os tópicos 1 e 2 estiverem presentes. Cada tópico ausente obriga quem chega ao projeto a descobrir a informação pelo código. |
 | Questão respondida | Q1.3 |
 | Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item exige um documento como evidência. Fácil de coletar. Válida para RQ-MAN-07. |
 
@@ -170,7 +187,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Soma das verificações que aparecem em um fluxo de integração contínua disparado por *pull request*. Unidade: verificações. Escala: 0 a 3. |
 | Fonte dos dados | Arquivos de fluxo em `.github/workflows/` e scripts do `package.json` da raiz. |
 | Procedimento de coleta | Inspeção dos fluxos disparados por `pull_request` e dos scripts que eles chamam (por exemplo, `test:code`, `test:other` e `test:typecheck`). |
-| Critério de interpretação | Confirma a hipótese se o valor for 3. Uma verificação que não roda automaticamente depende da disciplina de cada contribuidor. |
+| Critério de interpretação | Confirma [H1.3.3](#5-q13--analisabilidade) se o valor for 3. Uma verificação que não roda automaticamente depende da disciplina de cada contribuidor. |
 | Questão respondida | Q1.3 |
 | Características desejáveis | Simples e objetiva, com evidência nos arquivos de configuração. Fácil de coletar. Válida para RQ-MAN-08. |
 
@@ -182,7 +199,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-MAN-09 (alcance das alterações) e RQ-MAN-10 (arquivos ou funções que concentram responsabilidades).
 
-**Hipótese:** a maioria das contribuições altera poucos arquivos. Há poucos arquivos muito extensos, mas eles são alterados por uma parte relevante das contribuições, o que torna essas alterações mais arriscadas.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H1.4.1** | A maioria das contribuições alterará poucos arquivos de produção. | mediana ≤ 4 arquivos | [M1.4.1](#m141--mediana-de-arquivos-de-produção-alterados-por-contribuição) |
+| **H1.4.2** | Poucos arquivos de produção serão extensos. | ≤ 5% dos arquivos com mais de 1.000 linhas | [M1.4.2](#m142--arquivos-de-produção-extensos) |
+| **H1.4.3** | Os arquivos extensos serão alterados com frequência. | > 10% das contribuições | [M1.4.3](#m143--proporção-de-contribuições-que-alteram-arquivos-extensos) |
 
 ### M1.4.1 — Mediana de arquivos de produção alterados por contribuição
 
@@ -192,7 +215,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Para cada contribuição integrada na janela, contar os arquivos de produção alterados (adicionados, modificados ou removidos). Calcular a mediana dessas contagens. A mediana é usada no lugar da média para que poucas contribuições muito grandes não distorçam o resultado. Unidade: arquivos. Escala: absoluta. |
 | Fonte dos dados | Histórico de *pull requests* do repositório oficial no GitHub. |
 | Procedimento de coleta | API do GitHub (`gh api`), listando as contribuições integradas na janela e os arquivos de cada uma (`pulls/{número}/files`). Contribuições automáticas de atualização de dependências e de traduções são excluídas e contadas à parte. |
-| Critério de interpretação | Confirma a hipótese se a mediana for baixa. Medianas altas indicam que mudanças comuns exigem mexer em muitos lugares. |
+| Critério de interpretação | Confirma [H1.4.1](#6-q14--modificabilidade) se a mediana for de no máximo 4 arquivos. Medianas altas indicam que mudanças comuns exigem mexer em muitos lugares. |
 | Questão respondida | Q1.4 |
 | Características desejáveis | Simples. Objetiva, porque os dados vêm do registro do repositório. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para RQ-MAN-09. |
 
@@ -204,7 +227,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Contagem por pacote e no total, com a lista dos arquivos encontrados. O limite de 1.000 linhas é uma convenção da equipe para identificar arquivos que reúnem muitas responsabilidades; a justificativa das faixas fica nos níveis de pontuação. Unidade: arquivos. Escala: absoluta. |
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | Contagem de linhas por arquivo com a ferramenta cloc (versão 1.86, opção `--by-file`), aplicando as convenções da seção 2. |
-| Critério de interpretação | Confirma a hipótese se houver poucos arquivos acima do limite. Cada arquivo encontrado é candidato a concentrar responsabilidades demais (RQ-MAN-10). |
+| Critério de interpretação | Confirma [H1.4.2](#6-q14--modificabilidade) se no máximo 5% dos arquivos de produção tiverem mais de 1.000 linhas. Cada arquivo encontrado é candidato a concentrar responsabilidades demais (RQ-MAN-10). |
 | Questão respondida | Q1.4 |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque o limite é fixo e a ferramenta define o que é linha de código. Robusta, porque permite comparar pacotes e versões. |
 
@@ -216,7 +239,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | (contribuições que alteram ao menos um arquivo extenso ÷ contribuições integradas na janela) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Histórico de *pull requests* (mesmos dados de M1.4.1) e lista de arquivos de M1.4.2. |
 | Procedimento de coleta | Cruzamento, por script, da lista de arquivos de cada contribuição com a lista de arquivos extensos. Arquivos renomeados na janela são acompanhados pelo nome atual. |
-| Critério de interpretação | Confirma a hipótese se o percentual for relevante, isto é, se os arquivos extensos forem alterados com frequência. Quanto maior o valor, mais o trabalho de manutenção passa pelos arquivos mais difíceis de alterar. |
+| Critério de interpretação | Confirma [H1.4.3](#6-q14--modificabilidade) se o valor for maior que 10%. Quanto maior o valor, mais o trabalho de manutenção passa pelos arquivos mais difíceis de alterar. |
 | Questão respondida | Q1.4 |
 | Características desejáveis | Simples (uma razão). Objetiva. Fácil de coletar a partir dos dados de M1.4.1 e M1.4.2. Válida, porque liga o tamanho dos arquivos ao esforço real de manutenção. |
 
@@ -228,7 +251,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-MAN-11 (condições para testes automatizados), RQ-MAN-12 (níveis de teste) e RQ-MAN-13 (execução automática).
 
-**Hipótese:** a biblioteca tem cobertura de testes maior do que a aplicação web. Predominam testes unitários e de integração. Os testes rodam em toda contribuição antes da integração.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H1.5.1** | A biblioteca terá cobertura de testes maior que a da aplicação web. | cobertura da biblioteca > cobertura da aplicação web | [M1.5.1](#m151--cobertura-de-linhas-por-pacote) |
+| **H1.5.2** | Testes unitários e de integração serão a maior parte dos arquivos de teste. | > 50% dos arquivos de teste, somados | [M1.5.2](#m152--distribuição-dos-testes-por-nível) |
+| **H1.5.3** | Os testes rodarão em toda contribuição antes da integração. | ≥ 95% | [M1.5.3](#m153--proporção-de-contribuições-com-testes-executados-antes-da-integração) |
 
 ### M1.5.1 — Cobertura de linhas por pacote
 
@@ -238,7 +267,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | (linhas executadas pelos testes ÷ linhas executáveis) × 100, por pacote e no total. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Código de produção e de teste de todos os pacotes; configuração de cobertura em `vitest.config.mts`. |
 | Procedimento de coleta | Execução do comando do próprio projeto `yarn test:coverage` (Vitest), no ambiente definido no plano de avaliação, lendo o relatório `json-summary` gerado. |
-| Critério de interpretação | Confirma a hipótese se a cobertura da biblioteca for maior que a da aplicação web. Pacotes com cobertura baixa têm mais código que pode ser alterado sem nenhum teste perceber a mudança. Os limites mínimos já configurados pelo projeto em `vitest.config.mts` servem de referência. |
+| Critério de interpretação | Confirma [H1.5.1](#7-q15--testabilidade) se a cobertura da biblioteca for maior que a da aplicação web. Pacotes com cobertura baixa têm mais código que pode ser alterado sem nenhum teste perceber a mudança. Os limites mínimos já configurados pelo projeto em `vitest.config.mts` servem de referência. |
 | Questão respondida | Q1.5 |
 | Características desejáveis | Objetiva e consistente, porque usa a configuração do próprio projeto. Robusta, porque permite comparar pacotes. Fácil de coletar com um comando. Válida para RQ-MAN-11, com a limitação de que cobertura mede código executado, e não a qualidade das verificações. |
 
@@ -250,7 +279,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Classificar cada arquivo de teste por um critério fixo: **integração**, se renderiza componentes do editor (usa a função `render` dos utilitários de teste); **ponta a ponta**, se usa uma ferramenta que controla um navegador real (como Playwright, Cypress ou Puppeteer); **unitário**, nos demais casos. Calcular (arquivos do nível ÷ total de arquivos de teste) × 100. Unidade: percentual. Escala: 0 a 100 para cada nível. |
 | Fonte dos dados | Código de teste de todos os pacotes; `package.json` da raiz e dos pacotes, para identificar ferramentas de teste de ponta a ponta. |
 | Procedimento de coleta | Busca no código de teste (ferramenta `grep`) pelas chamadas e importações que definem cada nível. |
-| Critério de interpretação | Confirma a hipótese se os testes unitários e de integração somarem a maior parte dos arquivos de teste. Um nível ausente indica um tipo de falha que os testes automatizados não alcançam. |
+| Critério de interpretação | Confirma [H1.5.2](#7-q15--testabilidade) se os testes unitários e de integração somarem mais de 50% dos arquivos de teste. Um nível ausente indica um tipo de falha que os testes automatizados não alcançam. |
 | Questão respondida | Q1.5 |
 | Características desejáveis | Objetiva, porque o critério de classificação é mecânico e não depende de julgamento. Fácil de coletar. Válida para RQ-MAN-12. |
 
@@ -262,7 +291,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Uma contribuição conta como verificada se, em alguma execução do fluxo `test-coverage-pr.yml` sobre o último commit da contribuição, o passo `Test Coverage` tiver sido executado (conclusão `success` ou `failure`, e não `skipped`, `cancelled` ou ausente) e tiver terminado antes do horário de integração (`merged_at`). Contribuições sem registros suficientes para essa decisão (execução não encontrada ou passos indisponíveis) são contadas à parte e ficam fora do denominador. Cálculo: (contribuições verificadas ÷ contribuições integradas na janela com evidência suficiente) × 100. O número de contribuições sem evidência é informado junto com o percentual. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Execuções do fluxo `test-coverage-pr.yml` de cada contribuição no GitHub, com os passos de cada job; horário de integração de cada contribuição. |
 | Procedimento de coleta | API do GitHub (`gh api`): para cada contribuição, as execuções do fluxo sobre o último commit (`actions/workflows/test-coverage-pr.yml/runs?head_sha=...`), os passos de cada job, com conclusão e horário de término (`actions/runs/{id}/jobs`), e o campo `merged_at` da contribuição (`pulls/{número}`). Um script aplica a regra do procedimento de cálculo. A existência de um *check* no commit não basta, porque a execução pode terminar depois da integração ou falhar na instalação das dependências, antes do passo de testes. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100% ou próximo disso. Contribuições sem testes executados foram integradas sem verificação automática de comportamento. |
+| Critério de interpretação | Confirma [H1.5.3](#7-q15--testabilidade) se o valor for de pelo menos 95%. Contribuições sem testes executados foram integradas sem verificação automática de comportamento. |
 | Questão respondida | Q1.5 |
 | Características desejáveis | Simples. Objetiva, porque usa os registros do próprio GitHub, e não a configuração declarada. Fácil de coletar automaticamente. Válida para RQ-MAN-13. |
 
@@ -328,3 +357,4 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G1 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares), [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 19/10/2026 | M1.3.1 passa a medir o perfil de risco de complexidade em linhas de código, para usar as faixas de Heitlager, Kuipers e Visser (2007) | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |
