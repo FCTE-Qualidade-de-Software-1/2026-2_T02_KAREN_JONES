@@ -6,7 +6,7 @@ description: Questões, hipóteses e métricas do objetivo de medição G3, que 
 
 # GQM de Flexibilidade (G3)
 
-Esta página detalha o objetivo G3, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-portabilidade). Para cada subcaracterística de Flexibilidade há uma questão, a hipótese da questão e as métricas que a respondem.
+Esta página detalha o objetivo G3, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-portabilidade). Para cada subcaracterística de Flexibilidade há uma questão, as hipóteses da questão e as métricas que a respondem.
 
 | Campo do template | Valor |
 | :--- | :--- |
@@ -54,7 +54,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-FLEX-01 (navegadores suportados), RQ-FLEX-02 (versões de React, renderização no servidor e empacotadores), RQ-FLEX-03 (dependências que limitam ambientes) e RQ-FLEX-04 (dispositivos móveis, toque e caneta).
 
-**Hipótese:** a aplicação funciona nas versões recentes dos principais navegadores, mas não em navegadores antigos. A biblioteca aceita mais de uma versão principal de React e precisa ser carregada apenas no navegador quando usada em frameworks com renderização no servidor. O editor aceita toque e caneta.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H3.1.1** | Os navegadores declarados cobrirão a maior parte dos usuários. | ≥ 80% | [M3.1.1](#m311--cobertura-de-usuários-pelos-navegadores-declarados) |
+| **H3.1.2** | A biblioteca funcionará com React 17, 18 e 19, em Vite e em Next.js. | = 6 de 6 combinações | [M3.1.2](#m312--proporção-de-ambientes-de-integração-com-sucesso) |
+| **H3.1.3** | O editor aceitará toque nas ações de edição. | = 10 de 10 ações | [M3.1.3](#m313--proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) |
 
 ### M3.1.1 — Cobertura de usuários pelos navegadores declarados
 
@@ -64,7 +70,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Aplicar a consulta de navegadores declarada no campo `browserslist` (perfil `production`) do `package.json` da aplicação à base de uso global da ferramenta Browserslist. Unidade: percentual. Escala: 0 a 100. Também é registrada a lista de navegadores excluídos explicitamente. |
 | Fonte dos dados | Campo `browserslist` de `excalidraw-app/package.json` e de `packages/excalidraw/package.json`. |
 | Procedimento de coleta | Comando `npx browserslist --coverage=global "<consulta>"`, registrando a versão da ferramenta e da base de dados de uso (`caniuse-lite`), porque a base muda com o tempo. |
-| Critério de interpretação | Confirma a hipótese se a cobertura for alta e a lista excluir navegadores antigos. Quanto menor a cobertura, mais usuários ficam sem suporte declarado. |
+| Critério de interpretação | Confirma [H3.1.1](#3-q31--adaptabilidade) se a cobertura for de pelo menos 80%. Quanto menor a cobertura, mais usuários ficam sem suporte declarado. A exclusão de navegadores antigos na lista declarada é registrada como observação. |
 | Questão respondida | Q3.1 |
 | Características desejáveis | Simples. Objetiva, porque a lista é a que o próprio projeto declara e a base de uso é pública. Fácil de coletar com um comando. Robusta, porque permite comparar com outros projetos que usam a mesma ferramenta. |
 
@@ -76,7 +82,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Combinações: React 17, 18 e 19 (as versões declaradas em `peerDependencies`) com Vite e com Next.js, este usando a importação apenas no navegador indicada na documentação. São 6 combinações. Uma combinação tem sucesso se o projeto constrói sem erros e o editor aparece e permite criar uma forma. Calcular (combinações com sucesso ÷ 6) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Pacote avaliado; campo `peerDependencies` de `packages/excalidraw/package.json`; guia de integração em `dev-docs/docs/@excalidraw/excalidraw/integration.mdx`; exemplo `examples/with-nextjs`. |
 | Procedimento de coleta | Criar um projeto mínimo para cada combinação seguindo apenas o guia de instalação e integração, instalar o pacote avaliado, construir e abrir no navegador do ambiente de teste. Registrar erros de construção e de execução. |
-| Critério de interpretação | Confirma a hipótese se as 6 combinações tiverem sucesso. Cada combinação que falha é um ambiente em que o integrador precisa adaptar o próprio sistema para usar a biblioteca. |
+| Critério de interpretação | Confirma [H3.1.2](#3-q31--adaptabilidade) se as 6 combinações tiverem sucesso. Cada combinação que falha é um ambiente em que o integrador precisa adaptar o próprio sistema para usar a biblioteca. A necessidade de carregar a biblioteca apenas no navegador em frameworks com renderização no servidor, como o Next.js, é registrada como observação. |
 | Questão respondida | Q3.1 |
 | Características desejáveis | Objetiva, porque o critério de sucesso é definido antes do teste. Válida, porque testa a integração de fato, e não só a declaração de compatibilidade. Robusta, porque a matriz pode crescer com novas versões. |
 
@@ -88,7 +94,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Ações: (1) criar uma forma; (2) desenhar à mão livre; (3) selecionar um elemento; (4) mover um elemento; (5) redimensionar um elemento; (6) aproximar e afastar com pinça; (7) deslocar a tela com dois dedos; (8) escrever texto com o teclado virtual; (9) desfazer; (10) abrir o menu principal. Calcular (ações que funcionam ÷ 10) × 100, separadamente para toque com o dedo e para caneta, quando houver caneta disponível. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web em um *tablet* ou celular com navegador de versão fixa, definido no plano de avaliação; tratamento de eventos de toque e caneta em `packages/excalidraw/components/App.tsx`. |
 | Procedimento de coleta | Teste manual roteirizado no dispositivo, registrando cada ação como funciona ou não funciona, com gravação de tela. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada ação que falha é algo que o usuário de dispositivo móvel não consegue fazer. |
+| Critério de interpretação | Confirma [H3.1.3](#3-q31--adaptabilidade) se o valor for 100% com toque. Cada ação que falha é algo que o usuário de dispositivo móvel não consegue fazer. |
 | Questão respondida | Q3.1 |
 | Características desejáveis | Simples. Objetiva, porque cada ação tem resultado binário com evidência gravada. Válida para RQ-FLEX-04. |
 
@@ -100,7 +106,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-FLEX-05 (desempenho com mais elementos) e RQ-FLEX-06 (abrir, salvar e exportar desenhos grandes).
 
-**Hipótese:** o editor continua utilizável com algumas centenas de elementos, e o desempenho cai de forma perceptível com milhares. Exportar um desenho grande é mais lento do que abri-lo.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H3.2.1** | Um desenho de 1.000 elementos abrirá sem interromper o usuário. | ≤ 1 s na cena de 1.000 elementos | [M3.2.1](#m321--tempo-de-abertura-por-tamanho-de-cena) |
+| **H3.2.2** | A edição será fluida com 1.000 elementos. | ≥ 48 quadros por segundo na cena de 1.000 elementos | [M3.2.2](#m322--taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) |
+| **H3.2.3** | Desenhos com milhares de elementos poderão ser salvos e exportados. | maior cena ≥ 5.000 elementos | [M3.2.3](#m323--tamanho-máximo-de-cena-salva-e-exportada) |
 
 ### M3.2.1 — Tempo de abertura por tamanho de cena
 
@@ -110,7 +122,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Mediana de 5 aberturas de cada cena, em segundos. O resultado é uma curva de tempo por número de elementos. Unidade: segundos. Escala: absoluta. |
 | Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
 | Procedimento de coleta | Gravação no painel de desempenho (*Performance*) das ferramentas do navegador, do momento em que o arquivo é solto no editor até o último quadro desenhado. A página é recarregada e o armazenamento local é limpo entre as repetições. |
-| Critério de interpretação | Confirma a hipótese se o tempo for baixo até 1.000 elementos e crescer de forma perceptível a partir daí. A forma da curva mostra se o tempo cresce na mesma proporção do desenho ou mais rápido que ele. |
+| Critério de interpretação | Confirma [H3.2.1](#4-q32--escalabilidade) se a cena de 1.000 elementos abrir em até 1 segundo. A forma da curva mostra se o tempo cresce na mesma proporção do desenho ou mais rápido que ele. |
 | Questão respondida | Q3.2 |
 | Características desejáveis | Objetiva, porque a medição é feita pela ferramenta do navegador. Robusta, por usar a mediana de repetições. Válida para RQ-FLEX-06. Depende do hardware, que é fixado e registrado. |
 
@@ -122,7 +134,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Mediana dos quadros por segundo em 5 gravações de 10 segundos para cada cena: arrastar uma seleção de 50 elementos e deslocar a tela. Unidade: quadros por segundo. Escala: absoluta. |
 | Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
 | Procedimento de coleta | Painel de desempenho das ferramentas do navegador, com roteiro de movimento fixo. |
-| Critério de interpretação | Confirma a hipótese se a taxa for fluida até algumas centenas de elementos e cair de forma perceptível com milhares. Taxas baixas significam movimento travado para o usuário. |
+| Critério de interpretação | Confirma [H3.2.2](#4-q32--escalabilidade) se a cena de 1.000 elementos for editada com pelo menos 48 quadros por segundo. Taxas baixas significam movimento travado para o usuário. |
 | Questão respondida | Q3.2 |
 | Características desejáveis | Objetiva e robusta, pelos mesmos motivos de M3.2.1. Válida para RQ-FLEX-05, porque mede o que o usuário percebe ao editar. |
 
@@ -134,7 +146,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Para cada cena, em ordem crescente, executar salvar, exportar em PNG e exportar em SVG, registrando o tempo de cada operação. A operação falha se não termina em 30 segundos ou se o navegador avisa que a página não está respondendo. O resultado é o número de elementos da maior cena em que as três operações terminam. Unidade: elementos. Escala: ordinal (100, 1.000, 5.000 ou 10.000). |
 | Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
 | Procedimento de coleta | Teste manual roteirizado com cronômetro do painel de desempenho, comparando o tempo de exportar com o tempo de abrir (M3.2.1) na mesma cena. |
-| Critério de interpretação | Confirma a hipótese se as cenas maiores forem abertas mas tiverem exportação mais lenta que a abertura. O valor mostra até onde o usuário pode levar um desenho sem perder a capacidade de salvar e compartilhar. |
+| Critério de interpretação | Confirma [H3.2.3](#4-q32--escalabilidade) se a maior cena salva e exportada tiver pelo menos 5.000 elementos. O valor mostra até onde o usuário pode levar um desenho sem perder a capacidade de salvar e compartilhar. A comparação entre o tempo de exportação e o tempo de abertura de cada cena é registrada como observação. |
 | Questão respondida | Q3.2 |
 | Características desejáveis | Simples. Objetiva, porque o limite de tempo é fixo. Válida para RQ-FLEX-06. |
 
@@ -146,7 +158,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-FLEX-07 (instalar, atualizar e remover a biblioteca), RQ-FLEX-08 (construção, implantação e pré-requisitos), RQ-FLEX-09 (suporte a Docker) e RQ-FLEX-10 (instruções documentadas e reproduzíveis).
 
-**Hipótese:** a biblioteca é instalada com um único comando dos gerenciadores de pacotes usuais. A imagem Docker é construída sem passos manuais adicionais, e as instruções de execução local são suficientes, desde que as versões de ferramentas exigidas sejam respeitadas.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H3.3.1** | A biblioteca será instalada e removida sem erro pelos gerenciadores de pacotes. | = 9 de 9 operações | [M3.3.1](#m331--proporção-de-operações-de-pacote-bem-sucedidas) |
+| **H3.3.2** | As instruções de execução local bastarão, com as versões de ferramentas exigidas. | ≥ 95% dos passos sem ajuste | [M3.3.2](#m332--proporção-de-passos-documentados-reproduzidos-sem-ajuste) |
+| **H3.3.3** | A imagem Docker será construída e executada sem passos manuais. | = 4 de 4 verificações | [M3.3.3](#m333--implantação-com-docker) |
 
 ### M3.3.1 — Proporção de operações de pacote bem-sucedidas
 
@@ -156,7 +174,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Gerenciadores: npm, Yarn e pnpm. Operações: (1) instalar o pacote avaliado em um projeto React vazio; (2) atualizar da versão publicada 0.17.6 para o pacote avaliado; (3) remover o pacote. São 9 combinações. Uma operação tem sucesso se termina sem erro e o projeto continua construindo. Também é registrado o número de comandos de cada instalação. Calcular (operações com sucesso ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Pacote avaliado; versão 0.17.6 do registro npm; guia de instalação em `dev-docs/docs/@excalidraw/excalidraw/installation.mdx`. |
 | Procedimento de coleta | Execução dos comandos em ambiente limpo, registrando a saída de cada um. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100% e a instalação exigir um único comando. Cada operação que falha é um passo que o integrador precisa resolver por conta própria. |
+| Critério de interpretação | Confirma [H3.3.1](#5-q33--instalabilidade) se o valor for 100%. Cada operação que falha é um passo que o integrador precisa resolver por conta própria. O número de comandos necessários para instalar a biblioteca é registrado como observação. |
 | Questão respondida | Q3.3 |
 | Características desejáveis | Simples. Objetiva, porque o sucesso é dado pelo código de saída dos comandos. Fácil de coletar. Válida para RQ-FLEX-07. |
 
@@ -168,7 +186,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Numerar cada comando ou ação das seções de execução local (com Node.js e Yarn) e com Docker Compose do guia de desenvolvimento. Executar os passos na ordem. Um passo é reproduzido sem ajuste se funciona sem nenhuma ação não escrita no guia. Calcular (passos reproduzidos sem ajuste ÷ total de passos) × 100. Também é registrado cada pré-requisito necessário e não declarado. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | `README.md` e `dev-docs/docs/introduction/development.mdx`; campo `engines` do `package.json` da raiz. |
 | Procedimento de coleta | Execução em ambiente limpo, registrando cada ajuste necessário e o motivo. |
-| Critério de interpretação | Confirma a hipótese se todos os passos forem reproduzidos quando as versões exigidas de ferramentas são usadas. Cada ajuste é algo que a documentação deixou de dizer. |
+| Critério de interpretação | Confirma [H3.3.2](#5-q33--instalabilidade) se pelo menos 95% dos passos forem reproduzidos sem ajuste, com as versões exigidas de ferramentas. Cada ajuste é algo que a documentação deixou de dizer. |
 | Questão respondida | Q3.3 |
 | Características desejáveis | Objetiva, porque a regra de "sem ajuste" é fixa e cada ajuste é registrado com o motivo. Válida para RQ-FLEX-08 e RQ-FLEX-10. |
 
@@ -180,7 +198,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Verificações: (1) a imagem é construída sem erro; (2) o contêiner inicia; (3) a verificação de saúde (*healthcheck*) declarada no `Dockerfile` passa; (4) o editor abre no navegador e permite criar uma forma. Calcular (verificações que passam ÷ 4) × 100. Também é registrado o tempo de construção. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | `Dockerfile` e `docker-compose.yml` da raiz; instruções de Docker do guia de desenvolvimento. |
 | Procedimento de coleta | Comandos `docker build` e `docker run` em ambiente limpo com Docker instalado, registrando a saída e a versão do Docker. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100%. Cada verificação que falha é um obstáculo para quem precisa implantar a aplicação em um servidor próprio. |
+| Critério de interpretação | Confirma [H3.3.3](#5-q33--instalabilidade) se o valor for 100%. Cada verificação que falha é um obstáculo para quem precisa implantar a aplicação em um servidor próprio. |
 | Questão respondida | Q3.3 |
 | Características desejáveis | Simples. Objetiva, porque cada verificação tem resultado binário. Fácil de coletar. Válida para RQ-FLEX-09. |
 
@@ -192,7 +210,13 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** RQ-FLEX-11 (exportação em formatos utilizáveis fora da aplicação) e RQ-FLEX-12 (formatos abertos, documentados e reimportáveis sem perda).
 
-**Hipótese:** o desenho pode ser exportado em `.excalidraw`, PNG e SVG, e PNG e SVG podem guardar os dados do desenho para reimportação. O formato `.excalidraw` é legível (texto em JSON), mas não tem uma especificação formal publicada.
+**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+
+| Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
+| :--- | :--- | :--- | :--- |
+| **H3.4.1** | O desenho poderá ser exportado em formatos abertos. | ≥ 3 formatos | [M3.4.1](#m341--formatos-de-exportação-abertos-disponíveis) |
+| **H3.4.2** | A reimportação preservará os elementos do desenho. | ≥ 95% em cada formato | [M3.4.2](#m342--proporção-de-elementos-preservados-na-exportação-e-reimportação) |
+| **H3.4.3** | O formato `.excalidraw` terá documentação apenas parcial. | < 60% dos campos documentados | [M3.4.3](#m343--proporção-dos-campos-do-formato-excalidraw-documentados) |
 
 ### M3.4.1 — Formatos de exportação abertos disponíveis
 
@@ -202,7 +226,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Contar os formatos oferecidos pela interface de exportação e de salvamento da aplicação web, separando os abertos (como PNG, SVG e JSON) dos que dependem de um serviço específico. Unidade: formatos. Escala: absoluta. |
 | Fonte dos dados | Interface da aplicação web no ambiente de teste; funções de exportação da biblioteca (`packages/excalidraw/scene/export.ts`). |
 | Procedimento de coleta | Inspeção dos menus de exportação e salvamento, registrando cada formato com captura de tela, e conferência com as funções exportadas pela biblioteca. |
-| Critério de interpretação | Confirma a hipótese se pelo menos `.excalidraw`, PNG e SVG estiverem disponíveis. Quanto mais formatos abertos, mais fácil trocar de ferramenta sem refazer o desenho. |
+| Critério de interpretação | Confirma [H3.4.1](#6-q34--substituibilidade) se pelo menos 3 formatos abertos estiverem disponíveis. Quanto mais formatos abertos, mais fácil trocar de ferramenta sem refazer o desenho. |
 | Questão respondida | Q3.4 |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque cada formato é registrado com evidência. Válida para RQ-FLEX-11. |
 
@@ -214,7 +238,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Exportar a cena de referência em `.excalidraw`, em PNG com os dados do desenho incorporados e em SVG com os dados do desenho incorporados. Reimportar cada arquivo na aplicação e comparar os elementos com os originais. Um elemento é preservado se tipo, posição, tamanho, estilo e texto forem iguais. Calcular (elementos preservados ÷ elementos da cena) × 100 para cada formato. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web no ambiente de teste; cena de referência. |
 | Procedimento de coleta | Exportação e reimportação pela interface; comparação dos elementos por script, exportando a cena reimportada em `.excalidraw`. É o mesmo script de comparação usado no objetivo de Confiabilidade. |
-| Critério de interpretação | Confirma a hipótese se o valor for 100% nos três formatos. Elementos perdidos mostram o que o usuário não recupera ao reabrir uma imagem exportada. |
+| Critério de interpretação | Confirma [H3.4.2](#6-q34--substituibilidade) se o valor for de pelo menos 95% em cada formato. Elementos perdidos mostram o que o usuário não recupera ao reabrir uma imagem exportada. |
 | Questão respondida | Q3.4 |
 | Características desejáveis | Objetiva, porque a comparação é feita por script. Robusta, porque a mesma cena serve para outras versões. Válida para RQ-FLEX-12. |
 
@@ -226,7 +250,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de cálculo | Salvar a cena de referência em `.excalidraw` e listar todos os campos distintos do arquivo: os do nível principal e os de cada tipo de elemento. Procurar cada campo na documentação do formato. Calcular (campos documentados ÷ campos encontrados) × 100. Também é registrado se existe um esquema formal legível por máquina (por exemplo, um arquivo JSON Schema). Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Arquivo salvo da cena de referência; documentação do formato em `dev-docs/docs/codebase/json-schema.mdx`. |
 | Procedimento de coleta | Listagem dos campos por script e busca de cada nome na documentação. |
-| Critério de interpretação | Confirma a hipótese se o formato for legível mas a documentação cobrir só parte dos campos e não houver esquema formal. Quanto menor a cobertura, mais outra ferramenta precisa adivinhar o significado dos dados. |
+| Critério de interpretação | Confirma [H3.4.3](#6-q34--substituibilidade) se menos de 60% dos campos estiverem documentados. Quanto menor a cobertura, mais outra ferramenta precisa adivinhar o significado dos dados. A existência de um esquema formal publicado é registrada como observação. |
 | Questão respondida | Q3.4 |
 | Características desejáveis | Simples (uma razão). Objetiva, porque a lista de campos vem de um arquivo real. Fácil de coletar por script. Válida para RQ-FLEX-12. |
 
@@ -286,3 +310,4 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G3 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares), [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |
