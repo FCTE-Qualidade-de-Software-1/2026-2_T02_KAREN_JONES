@@ -47,8 +47,10 @@
 | Fase | Issues (Total / Concluidas) | Progresso (%) | Aderencia ao Prazo (%) | Horas Estimadas (h) | Horas Reais (h) | Custo Estimado (R$) | Custo Real (R$) | Acuracia Estimativa (%) | Lead Time Medio (dias) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 17 / 17 | 100.0% | 29.4% | 53.5 | 57.9 | R$ 2407.50 | R$ 2605.95 | 108.2% | 1.23 |
-| Fase 2 | 26 / 24 | 92.3% | 46.2% | 59.0 | 50.9 | R$ 2655.00 | R$ 2290.50 | 86.3% | 2.67 |
-| Fase 3 | 3 / 0 | 0.0% | 100.0% | 5.0 | 0.0 | R$ 225.00 | R$ 0.00 | 0.0% | 0.00 |
+| Fase 2 | 27 / 25 | 92.6% | 44.4% | 62.0 | 53.4 | R$ 2790.00 | R$ 2403.00 | 86.1% | 2.76 |
+| Fase 3 | 19 / 1 | 5.3% | 84.2% | 45.5 | 0.0 | R$ 2047.50 | R$ 0.00 | 0.0% | 0.03 |
+| Fase 4 | 22 / 0 | 0.0% | 100.0% | 71.0 | 0.0 | R$ 3195.00 | R$ 0.00 | 0.0% | 0.00 |
+| Sem Fase | 1 / 1 | 100.0% | 100.0% | 2.0 | 2.0 | R$ 90.00 | R$ 90.00 | 100.0% | 0.01 |
 
 ---
 
@@ -56,12 +58,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 10 | 17.0 | 14.5 | R$ 652.50 | 85 | 12 | **13.33%** |
-| Davi Pierre | `@DaviPierre` | 7 | 22.0 | 22.5 | R$ 1012.50 | 5 | 2 | **20.68%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 7 | 27.0 | 28.0 | R$ 1260.00 | 34 | 6 | **25.73%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 7 | 12.0 | 9.9 | R$ 445.95 | 6 | 6 | **9.11%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 7 | 12.0 | 12.4 | R$ 558.00 | 21 | 8 | **11.40%** |
-| Maria Eduarda | `@eduarda-ogomes` | 8 | 19.5 | 21.5 | R$ 967.50 | 28 | 8 | **19.76%** |
+| Christopher | `@wChrstphr` | 10 | 17.0 | 14.5 | R$ 652.50 | 87 | 13 | **13.09%** |
+| Davi Pierre | `@DaviPierre` | 7 | 22.0 | 22.5 | R$ 1012.50 | 5 | 2 | **20.31%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 7 | 27.0 | 28.0 | R$ 1260.00 | 37 | 6 | **25.27%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 7 | 12.0 | 9.9 | R$ 445.95 | 6 | 6 | **8.94%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 7 | 12.0 | 12.4 | R$ 558.00 | 21 | 8 | **11.19%** |
+| Maria Eduarda | `@eduarda-ogomes` | 10 | 22.5 | 23.5 | R$ 1057.50 | 31 | 10 | **21.21%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -74,14 +76,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 10 & 17.0h & 14.5h & 85/12 & 13.33\% \\
-Davi Pierre & 7 & 22.0h & 22.5h & 5/2 & 20.68\% \\
-Gabriel Monteiro & 7 & 27.0h & 28.0h & 34/6 & 25.73\% \\
-Leticia de Carvalho & 7 & 12.0h & 9.9h & 6/6 & 9.11\% \\
-Luiz Henrique Soares & 7 & 12.0h & 12.4h & 21/8 & 11.40\% \\
-Maria Eduarda & 8 & 19.5h & 21.5h & 28/8 & 19.76\% \\
+Christopher & 10 & 17.0h & 14.5h & 87/13 & 13.09\% \\
+Davi Pierre & 7 & 22.0h & 22.5h & 5/2 & 20.31\% \\
+Gabriel Monteiro & 7 & 27.0h & 28.0h & 37/6 & 25.27\% \\
+Leticia de Carvalho & 7 & 12.0h & 9.9h & 6/6 & 8.94\% \\
+Luiz Henrique Soares & 7 & 12.0h & 12.4h & 21/8 & 11.19\% \\
+Maria Eduarda & 10 & 22.5h & 23.5h & 31/10 & 21.21\% \\
 \hline
-\textbf{Total} & \textbf{46} & \textbf{109.5h} & \textbf{108.8h} & \textbf{179/42} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{48} & \textbf{112.5h} & \textbf{110.8h} & \textbf{187/45} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
