@@ -118,7 +118,7 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 | **Taxa de Revisão por Pares** | 50,0% (5 de 10 PRs) | 100,0% | 45,0% (9 de 20 PRs) | Abaixo da meta |
 | **Lead Time Médio** | 1,23 dia(s) | < 3,00 dias | 2,76 dia(s) | Dentro do limite ágil |
 
-*Tabela 4: Desempenho dos processos na Fase 2 (Fonte: dados/gestao/03_desempenho_processos_fases.csv; taxa de revisão consultada nos pull requests pela API do GitHub em 04/11/2026). A taxa conta os pull requests integrados que fecham issues da fase e têm aprovação registrada por quem não é o autor. Dos 11 sem aprovação na Fase 2, 6 foram integrados por outra pessoa e 5 pelo próprio autor. Revisões informais, feitas fora do GitHub, não aparecem nessa medida.*
+*Tabela 4: Desempenho dos processos na Fase 2 (Fonte: dados/gestao/03_desempenho_processos_fases.csv; taxa de revisão consultada nos pull requests pela API do GitHub em 04/11/2026). A taxa conta os pull requests integrados que fecham issues da fase e têm aprovação registrada por quem não é o autor. Dos 11 sem aprovação na Fase 2, 6 foram integrados por outra pessoa e 5 pelo próprio autor. Revisões informais, feitas fora do GitHub, não aparecem nessa medida, que por isso pode subestimar a revisão realmente feita. Os 11 pull requests integrados sem issue vinculada nas Fases 1 e 2 também ficam fora da conta.*
 
 ![Acurácia da estimativa por fase: Fase 1 em 108,2% e Fase 2 em 91,0%, ambas dentro da faixa ideal; as Fases 3 e 4 estavam começando na data da coleta.](/img/gestao/06_acuracia_estimativa_fases.png)
 
@@ -150,8 +150,8 @@ Os valores da Fase 1 nesta seção vêm da coleta atual e diferem dos publicados
 | Disparidade individual decrescendo | De 29,35 para 23,94 pontos percentuais | Atendido |
 | Ganho de acurácia positivo | -0,8 ponto: a Fase 1 ficou a 8,2 pontos de 100% e a Fase 2 a 9,0 | Não atendido, com as duas fases dentro da faixa |
 | Aderência geral de 100,0% | 44,4% | Não atendido |
-| 100,0% dos pull requests aprovados por pares | 45,0% | Não atendido |
-| Nenhuma issue pendente na submissão | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30) seguem abertas; a Entrega 1 foi submetida com a release [`v0.1`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v0.1), e a `v1.0-E1` planejada não foi criada | Não atendido |
+| 100,0% dos pull requests aprovados por pares | 45,0%, contando só as aprovações registradas no GitHub (ver limite da medida na Tabela 4) | Não atendido |
+| Nenhuma issue pendente na submissão | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30) seguem abertas; a Entrega 1 foi submetida no Moodle com o PDF e o link da release [`v0.1`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v0.1), e a `v1.0-E1` planejada não foi criada | Não atendido |
 
 O esforço ficou próximo do planejado, mas prazos e revisão ficaram abaixo do que a equipe definiu. Esses resultados entram como linha de base no plano de medição da [#134](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/134).
 
