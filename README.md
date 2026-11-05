@@ -12,7 +12,7 @@ Este projeto tem como objetivo realizar a avaliação de qualidade de software d
 
 1. **Manutenibilidade**
 2. **Confiabilidade**
-3. **Portabilidade**
+3. **Flexibilidade**
 
 ### Motivações
 

@@ -93,9 +93,9 @@ O contexto é o mesmo nos três objetivos: o código-fonte público do Excalidra
 
 **Origem na Fase 01:** ênfase 4 e maior prioridade da seleção (16). É prioridade principal para usuários finais, mantenedores e equipes de qualidade. O ponto de vista é o do usuário final porque é quem perde trabalho quando a confiabilidade falha.
 
-### G3 — Flexibilidade (antiga Portabilidade)
+### G3 — Flexibilidade (antiga Flexibilidade)
 
-Na ISO/IEC 25010:2023, adotada desde a Fase 01, a Portabilidade da edição de 2011 passou a se chamar Flexibilidade e ganhou a subcaracterística Escalabilidade. As demais (adaptabilidade, instalabilidade e substituibilidade) continuam as mesmas.
+Na ISO/IEC 25010:2023, adotada desde a Fase 01, a Flexibilidade da edição de 2011 passou a se chamar Flexibilidade e ganhou a subcaracterística Escalabilidade. As demais (adaptabilidade, instalabilidade e substituibilidade) continuam as mesmas.
 
 | Campo do template | Valor |
 | :--- | :--- |
