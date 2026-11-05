@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Script para sincronizar estimativas e horas reais das issues com o GitHub Projects (v2).
+Script para sincronizar estimativas, horas reais, revisor e prazo das issues com o GitHub Projects (v2).
 Lê os campos Markdown gerados pelo template tarefa.yml e atualiza os campos numéricos
-no quadro do GitHub Projects via API GraphQL.
+no quadro do GitHub Projects via API GraphQL. O prazo vai para o campo de data "Prazo".
 """
 
 import argparse
+import datetime
 import json
 import os
 import re
@@ -94,6 +95,25 @@ def extrair_horas_reais(texto: str) -> Optional[float]:
                 total += val
         return round(total, 2)
     return extrair_numero_float(texto)
+
+
+def extrair_prazo_iso(texto: str, ano_padrao: int = 2026) -> Optional[str]:
+    """
+    Converte o prazo da issue para o formato ISO aceito pelo campo de data:
+    - '08/11' -> '2026-11-08'
+    - '08/11/2026' -> '2026-11-08'
+    Retorna None quando o texto nao traz uma data valida.
+    """
+    if not texto:
+        return None
+    match = re.match(r"\s*(\d{1,2})/(\d{1,2})(?:/(\d{4}))?", texto)
+    if not match:
+        return None
+    dia, mes, ano = match.groups()
+    try:
+        return datetime.date(int(ano or ano_padrao), int(mes), int(dia)).isoformat()
+    except ValueError:
+        return None
 
 
 def buscar_dados_projeto(org: str, project_number: int, token: str) -> tuple[str, dict[str, dict[str, Any]]]:
@@ -210,6 +230,28 @@ def atualizar_campo_texto(project_id: str, item_id: str, field_id: str, valor: s
     }, token)
 
 
+def atualizar_campo_data(project_id: str, item_id: str, field_id: str, valor: str, token: str) -> None:
+    """Atualiza o valor de um campo do tipo Date no GitHub Projects."""
+    mutation = """
+    mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $date: Date!) {
+      updateProjectV2ItemFieldValue(input: {
+        projectId: $projectId,
+        itemId: $itemId,
+        fieldId: $fieldId,
+        value: { date: $date }
+      }) {
+        projectV2Item { id }
+      }
+    }
+    """
+    executar_graphql(mutation, {
+        "projectId": project_id,
+        "itemId": item_id,
+        "fieldId": field_id,
+        "date": valor
+    }, token)
+
+
 def processar_issue(
     issue_numero: int,
     issue_node_id: str,
@@ -218,21 +260,25 @@ def processar_issue(
     campo_estimativa: Optional[dict[str, Any]],
     campo_horas_reais: Optional[dict[str, Any]],
     campo_revisor: Optional[dict[str, Any]],
+    campo_prazo: Optional[dict[str, Any]],
     token: str
 ) -> None:
     """Extrai os dados de uma issue e atualiza os campos correspondentes no projeto."""
     est_texto = extrair_secao_markdown(corpo, "Estimativa (h)")
     reais_texto = extrair_secao_markdown(corpo, "Horas reais (h)") or extrair_secao_markdown(corpo, "Horas reais")
     revisor_texto = extrair_secao_markdown(corpo, "Revisor")
+    prazo_texto = extrair_secao_markdown(corpo, "Prazo")
 
     estimativa = extrair_numero_float(est_texto)
     horas_reais = extrair_horas_reais(reais_texto)
+    prazo = extrair_prazo_iso(prazo_texto)
 
     print(f"\n[Issue #{issue_numero}]")
     print(f"  Estimativa: {estimativa} (extraido de: '{est_texto}')")
     print(f"  Horas Reais: {horas_reais} (extraido de: '{reais_texto}')")
     if revisor_texto:
         print(f"  Revisor: {revisor_texto}")
+    print(f"  Prazo: {prazo} (extraido de: '{prazo_texto}')")
 
     item_id = adicionar_ou_obter_item(project_id, issue_node_id, token)
     if not item_id:
@@ -250,6 +296,12 @@ def processar_issue(
     if campo_revisor and revisor_texto:
         atualizar_campo_texto(project_id, item_id, campo_revisor["id"], revisor_texto, token)
         print(f"  ✓ Campo '{campo_revisor['name']}' atualizado para '{revisor_texto}'")
+
+    if campo_prazo and prazo:
+        atualizar_campo_data(project_id, item_id, campo_prazo["id"], prazo, token)
+        print(f"  ✓ Campo '{campo_prazo['name']}' atualizado para {prazo}")
+    elif campo_prazo:
+        print(f"  [AVISO] Prazo ausente ou invalido na issue #{issue_numero}: '{prazo_texto}'. Campo mantido.")
 
 
 def listar_todas_issues_repo(org: str, repo: str, token: str) -> list[dict[str, Any]]:
@@ -301,6 +353,7 @@ def main() -> None:
     campo_estimativa = encontrar_campo_por_palavras_chave(campos, "estimativa")
     campo_horas_reais = encontrar_campo_por_palavras_chave(campos, "horas", "reais") or encontrar_campo_por_palavras_chave(campos, "horas")
     campo_revisor = encontrar_campo_por_palavras_chave(campos, "revisor")
+    campo_prazo = encontrar_campo_por_palavras_chave(campos, "prazo")
 
     if campo_estimativa:
         print(f"[INFO] Mapeado campo de Estimativa: '{campo_estimativa['name']}' ({campo_estimativa['id']})")
@@ -311,6 +364,11 @@ def main() -> None:
         print(f"[INFO] Mapeado campo de Horas Reais: '{campo_horas_reais['name']}' ({campo_horas_reais['id']})")
     else:
         print("[AVISO] Campo de horas reais nao encontrado no projeto.")
+
+    if campo_prazo:
+        print(f"[INFO] Mapeado campo de Prazo: '{campo_prazo['name']}' ({campo_prazo['id']})")
+    else:
+        print("[AVISO] Campo de prazo nao encontrado no projeto.")
 
     if args.all:
         print(f"\n[INFO] Modo retroativo ativado: coletando todas as issues de {args.org}/{args.repo}...")
@@ -325,6 +383,7 @@ def main() -> None:
                 campo_estimativa=campo_estimativa,
                 campo_horas_reais=campo_horas_reais,
                 campo_revisor=campo_revisor,
+                campo_prazo=campo_prazo,
                 token=token
             )
         print("\n[SUCESSO] Sincronizacao retroativa concluida!")
@@ -337,6 +396,7 @@ def main() -> None:
             campo_estimativa=campo_estimativa,
             campo_horas_reais=campo_horas_reais,
             campo_revisor=campo_revisor,
+            campo_prazo=campo_prazo,
             token=token
         )
         print("\n[SUCESSO] Issue sincronizada com sucesso!")
