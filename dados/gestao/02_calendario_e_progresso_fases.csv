@@ -1,6 +1,6 @@
 fase,total_issues,issues_concluidas,issues_abertas,progresso_pct,issues_no_prazo,issues_em_atraso,aderencia_prazo_pct
 Fase 1,17,17,0,100.0,5,12,29.4
-Fase 2,27,25,2,92.6,12,15,44.4
+Fase 2,27,27,0,100.0,12,15,44.4
 Fase 3,21,1,20,4.8,21,0,100.0
 Fase 4,24,1,23,4.2,24,0,100.0
 Sem Fase,1,1,0,100.0,1,0,100.0

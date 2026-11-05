@@ -22,9 +22,9 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 25,Fase 2,"[ARTIGO] Introdução, Referencial teórico e seção da Fase 1",closed,GabrielSMonteiro,10.0,8.0,450.0,360.0,24/10,19/10/2026,Concluida no prazo,1.94
 26,Fase 2,[ARTIGO] Metodologia e seção da Fase 2,closed,,0.0,0.0,0.0,0.0,24/10,20/10/2026,Concluida no prazo,3.37
 27,Fase 2,[ARTIGO] Tabela de contribuição e declaração de uso de IA,closed,eduarda-ogomes,0.0,0.0,0.0,0.0,24/10,18/10/2026,Concluida no prazo,1.33
-28,Fase 2,[ARTIGO] Revisão do artigo v1 e conferência com a rubrica,open,DaviPierre,2.0,1.5,90.0,67.5,25/10,-,Aberta em atraso,
+28,Fase 2,[ARTIGO] Revisão do artigo v1 e conferência com a rubrica,closed,wChrstphr,2.0,1.0,90.0,45.0,25/10,05/11/2026,Concluida em atraso,19.18
 29,Fase 2,[SITE] Atualizar o GitPage com a Fase 2,closed,luizh-gsoares,2.0,2.0,90.0,90.0,24/10,20/10/2026,Concluida no prazo,3.09
-30,Fase 2,[GESTAO] Release v1.0-E1 e submissão no Moodle,open,wChrstphr,0.0,0.0,0.0,0.0,26/10,-,Aberta em atraso,
+30,Fase 2,[GESTAO] Release v1.0-E1 e submissão no Moodle,closed,wChrstphr,0.0,0.0,0.0,0.0,26/10,05/11/2026,Concluida em atraso,19.18
 31,Fase 2,[GESTAO] Relatório PSM/CID da Fase 2,closed,eduarda-ogomes,3.0,2.5,135.0,112.5,25/10,19/10/2026,Concluida no prazo,1.45
 32,Fase 2,[GESTAO] Atas de reunião da Fase 2,closed,luizh-gsoares,2.0,2.0,90.0,90.0,26/10,20/10/2026,Concluida no prazo,3.08
 33,Fase 2,[ARTIGO] Workflow de CI para compilar o artigo,closed,luizh-gsoares,3.0,3.0,135.0,135.0,20/10,19/10/2026,Concluida no prazo,1.85
@@ -60,7 +60,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 104,Fase 3,[F3] Visão geral da Fase 03 e rastreabilidade com a Fase 02,open,DaviPierre,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,open,GabrielSMonteiro,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
 106,Fase 3,[GESTAO] Atas de reunião da Fase 3,open,LeticiaSantosss,1.0,0.0,45.0,0.0,08/11,-,Em andamento (no prazo),
-107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,open,LeticiaSantosss,3.0,0.0,135.0,0.0,08/11,-,Em andamento (no prazo),
+107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,open,GabrielSMonteiro,3.0,0.0,135.0,0.0,08/11,-,Em andamento (no prazo),
 108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (16/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,270.0,0.0,16/11,-,Em andamento (no prazo),
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,open,GabrielSMonteiro,1.0,0.0,45.0,0.0,12/11,-,Em andamento (no prazo),
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,open,luizh-gsoares,3.0,0.0,135.0,0.0,08/11,-,Em andamento (no prazo),
@@ -74,15 +74,15 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 118,Fase 4,[F4] Oportunidades de melhoria e escolha da ação,open,wChrstphr,2.0,0.0,90.0,0.0,16/11,-,Em andamento (no prazo),
 119,Fase 4,[F4] Executar a ação de melhoria,open,wChrstphr,8.0,0.0,360.0,0.0,19/11,-,Em andamento (no prazo),
 120,Fase 4,"[F4] Julgamento final, coerência com o propósito e relações entre as características",open,luizh-gsoares,3.0,0.0,135.0,0.0,17/11,-,Em andamento (no prazo),
-121,Fase 4,[F4] Visão geral da Fase 04,open,DaviPierre,2.0,0.0,90.0,0.0,18/11,-,Em andamento (no prazo),
-122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,open,GabrielSMonteiro,2.0,0.0,90.0,0.0,20/11,-,Em andamento (no prazo),
+121,Fase 4,[F4] Visão geral da Fase 04,open,eduarda-ogomes,2.0,0.0,90.0,0.0,18/11,-,Em andamento (no prazo),
+122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,open,eduarda-ogomes,2.0,0.0,90.0,0.0,20/11,-,Em andamento (no prazo),
 123,Fase 4,[ARTIGO] Plano de avaliação (Fase 3) no artigo,open,GabrielSMonteiro,3.0,0.0,135.0,0.0,13/11,-,Em andamento (no prazo),
 124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),open,eduarda-ogomes,4.0,0.0,180.0,0.0,19/11,-,Em andamento (no prazo),
-125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",open,GabrielSMonteiro,2.0,0.0,90.0,0.0,19/11,-,Em andamento (no prazo),
+125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",open,luizh-gsoares,2.0,0.0,90.0,0.0,19/11,-,Em andamento (no prazo),
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,open,LeticiaSantosss,3.0,0.0,135.0,0.0,20/11,-,Em andamento (no prazo),
 127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,open,LeticiaSantosss,2.0,0.0,90.0,0.0,20/11,-,Em andamento (no prazo),
 128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,DaviPierre,3.0,0.0,135.0,0.0,21/11,-,Em andamento (no prazo),
-129,Fase 4,[GESTAO] Atas de reunião da Fase 4,closed,GabrielSMonteiro,1.0,0.0,45.0,0.0,21/11,05/11/2026,Concluida no prazo,2.15
+129,Fase 4,[GESTAO] Atas de reunião da Fase 4,closed,luizh-gsoares,1.0,0.0,45.0,0.0,21/11,05/11/2026,Concluida no prazo,2.16
 130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,open,eduarda-ogomes,1.0,0.0,45.0,0.0,22/11,-,Em andamento (no prazo),
 131,Fase 3,[GESTAO] Automatizar a execução do script de métricas PSM/CID via GitHub Actions,closed,eduarda-ogomes,1.0,1.0,45.0,45.0,04/11,04/11/2026,Concluida no prazo,0.03
 133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,open,luizh-gsoares,4.0,0.0,180.0,0.0,08/11,-,Em andamento (no prazo),
