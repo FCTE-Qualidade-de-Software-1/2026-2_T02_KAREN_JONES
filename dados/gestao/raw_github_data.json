@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-05T19:05:15.157326+00:00",
+  "coletado_em": "2026-11-05T19:05:57.276980+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -723,7 +723,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1191,7 +1191,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1369,14 +1369,14 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:18:01Z",
-      "updated_at": "2026-11-05T19:04:56Z",
-      "closed_at": "2026-11-05T19:04:56Z",
+      "updated_at": "2026-11-05T19:05:31Z",
+      "closed_at": "2026-11-05T19:05:31Z",
       "assignee": {
         "login": "luizh-gsoares",
         "id": 99836497,
@@ -1578,7 +1578,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1767,7 +1767,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1945,7 +1945,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2123,7 +2123,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2301,7 +2301,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2479,7 +2479,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2657,7 +2657,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2835,7 +2835,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3013,7 +3013,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3191,7 +3191,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3369,7 +3369,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3547,7 +3547,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3725,7 +3725,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3903,7 +3903,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4081,7 +4081,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4259,7 +4259,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4437,7 +4437,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4615,7 +4615,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4793,7 +4793,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4982,7 +4982,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5276,7 +5276,7 @@
         "closed_issues": 1,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:04:57Z",
+        "updated_at": "2026-11-05T19:05:32Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -22727,12 +22727,94 @@
       "closed_issues": 1,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-05T19:04:57Z",
+      "updated_at": "2026-11-05T19:05:32Z",
       "due_on": "2026-11-21T00:00:00Z",
       "closed_at": null
     }
   ],
   "commits": [
+    {
+      "sha": "bdb9a1baebede95b691d6ef6377507c68a064cbc",
+      "node_id": "C_kwDOUJBYZdoAKGJkYjlhMWJhZWJlZGU5NWI2OTFkNmVmNjM3NzUwN2M2OGEwNjRjYmM",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-05T19:05:16Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-05T19:05:16Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "13e9af39df394aa483b61cee9ed8ae74d1b379bd",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/13e9af39df394aa483b61cee9ed8ae74d1b379bd"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/bdb9a1baebede95b691d6ef6377507c68a064cbc",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/bdb9a1baebede95b691d6ef6377507c68a064cbc",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/bdb9a1baebede95b691d6ef6377507c68a064cbc",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/bdb9a1baebede95b691d6ef6377507c68a064cbc/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "22fe40c9ef43dde6de0fbb2416c097ad89736ef5",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/22fe40c9ef43dde6de0fbb2416c097ad89736ef5",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/22fe40c9ef43dde6de0fbb2416c097ad89736ef5"
+        }
+      ]
+    },
     {
       "sha": "22fe40c9ef43dde6de0fbb2416c097ad89736ef5",
       "node_id": "C_kwDOUJBYZdoAKDIyZmU0MGM5ZWY0M2RkZTZkZTBmYmIyNDE2YzA5N2FkODk3MzZlZjU",
