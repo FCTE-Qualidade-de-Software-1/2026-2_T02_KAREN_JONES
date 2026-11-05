@@ -82,7 +82,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,open,LeticiaSantosss,3.0,0.0,135.0,0.0,20/11,-,Em andamento (no prazo),
 127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,open,LeticiaSantosss,2.0,0.0,90.0,0.0,20/11,-,Em andamento (no prazo),
 128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,DaviPierre,3.0,0.0,135.0,0.0,21/11,-,Em andamento (no prazo),
-129,Fase 4,[GESTAO] Atas de reunião da Fase 4,open,GabrielSMonteiro,1.0,0.0,45.0,0.0,21/11,-,Em andamento (no prazo),
+129,Fase 4,[GESTAO] Atas de reunião da Fase 4,closed,GabrielSMonteiro,1.0,0.0,45.0,0.0,21/11,05/11/2026,Concluida no prazo,2.15
 130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,open,eduarda-ogomes,1.0,0.0,45.0,0.0,22/11,-,Em andamento (no prazo),
 131,Fase 3,[GESTAO] Automatizar a execução do script de métricas PSM/CID via GitHub Actions,closed,eduarda-ogomes,1.0,1.0,45.0,45.0,04/11,04/11/2026,Concluida no prazo,0.03
 133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,open,luizh-gsoares,4.0,0.0,180.0,0.0,08/11,-,Em andamento (no prazo),
