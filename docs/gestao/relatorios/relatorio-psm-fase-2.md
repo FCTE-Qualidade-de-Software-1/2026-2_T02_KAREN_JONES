@@ -66,13 +66,13 @@ Em conformidade estrita com o modelo da norma **ISO/IEC 15939** e com o template
 
 ## 3. Medições Registradas da Fase 2
 
-Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` a partir da API do GitHub registram o seguinte estado das três categorias **somente para a Fase 2**, com a coleta de 04/11/2026. Os valores da Fase 1 aparecem apenas como termo de comparação na seção 4, e a consolidação da Entrega 1 está no apêndice do artigo.
+Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` a partir da API do GitHub registram o seguinte estado das três categorias **somente para a Fase 2**, com a coleta de 05/11/2026. Os valores da Fase 1 aparecem apenas como termo de comparação na seção 4, e a consolidação da Entrega 1 está no apêndice do artigo.
 
 ### 3.1. Medições de Recursos e Custos da Fase 2
 
 | Fase | Total de Issues | Horas Estimadas (h) | Horas Reais (h) | Custo Estimado (R$) | Custo Real (R$) | Estado da Medição |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Fase 2** | 27 | 62,00 | 56,40 | R$ 2.790,00 | R$ 2.538,00 | 25 issues concluídas e 2 abertas |
+| **Fase 2** | 27 | 62,00 | 55,90 | R$ 2.790,00 | R$ 2.515,50 | 27 issues concluídas |
 
 *Tabela 1: Recursos e custos da Fase 2 (Fonte: dados/gestao/01_recursos_e_custos_fases.csv).*
 
@@ -80,15 +80,15 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 
 | Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Esforço Real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `wChrstphr` | F2/F4 | 12 | 20,50 | 17,50 | R$ 787,50 | 31,03% |
-| Davi Pierre | `DaviPierre` | F1/F3 | 3 | 7,00 | 4,50 | R$ 202,50 | 7,98% |
-| Gabriel Monteiro | `GabrielSMonteiro` | F1/F3 | 3 | 11,00 | 10,00 | R$ 450,00 | 17,73% |
-| Letícia de Carvalho | `LeticiaSantosss` | F1/F3 | 2 | 4,50 | 4,00 | R$ 180,00 | 7,09% |
-| Luiz Henrique Soares | `luizh-gsoares` | F2/F4 | 6 | 11,00 | 11,40 | R$ 513,00 | 20,21% |
-| Maria Eduarda | `eduarda-ogomes` | F2/F4 | 5 | 8,00 | 9,00 | R$ 405,00 | 15,96% |
-| **Total** | - | - | **27** | **62,00** | **56,40** | **R$ 2.538,00** | **100,00%** |
+| Christopher | `wChrstphr` | F2/F4 | 13 | 22,50 | 18,50 | R$ 832,50 | 33,09% |
+| Davi Pierre | `DaviPierre` | F1/F3 | 2 | 5,00 | 3,00 | R$ 135,00 | 5,37% |
+| Gabriel Monteiro | `GabrielSMonteiro` | F1/F3 | 3 | 11,00 | 10,00 | R$ 450,00 | 17,89% |
+| Letícia de Carvalho | `LeticiaSantosss` | F1/F3 | 2 | 4,50 | 4,00 | R$ 180,00 | 7,16% |
+| Luiz Henrique Soares | `luizh-gsoares` | F2/F4 | 6 | 11,00 | 11,40 | R$ 513,00 | 20,39% |
+| Maria Eduarda | `eduarda-ogomes` | F2/F4 | 5 | 8,00 | 9,00 | R$ 405,00 | 16,10% |
+| **Total** | - | - | **27** | **62,00** | **55,90** | **R$ 2.515,50** | **100,00%** |
 
-*Tabela 2: Esforço individual na Fase 2 (Fonte: dados/gestao/06_contribuicao_por_fase.csv). Issues compartilhadas contam para cada responsável; o total corresponde às 27 issues distintas da fase. Horas de issues ainda abertas só são contabilizadas quando registradas na issue. Ainda sem horas reais registradas: [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/26), [#27](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/27) e [#74](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/74), a parte de Davi Pierre na [#23](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/23) e a [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30), ainda aberta; os percentuais podem mudar quando forem preenchidas.*
+*Tabela 2: Esforço individual na Fase 2 (Fonte: dados/gestao/06_contribuicao_por_fase.csv). Issues compartilhadas contam para cada responsável; o total corresponde às 27 issues distintas da fase. Ainda sem horas reais registradas: [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/26), [#27](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/27) e [#74](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/74), a parte de Davi Pierre na [#23](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/23) e a [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30); os percentuais podem mudar quando forem preenchidas.*
 
 ![Horas estimadas e reais por integrante na Fase 2.](/img/gestao/04_horas_integrante_fase_2.png)
 
@@ -102,11 +102,11 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 
 | Fase | Total de Issues | Concluídas | Em Andamento | Progresso (%) | No Prazo | Em Atraso | Aderência ao Prazo (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Fase 2** | 27 | 25 | 2 | 92,6% | 12 | 15 | 44,4% |
+| **Fase 2** | 27 | 27 | 0 | 100,0% | 12 | 15 | 44,4% |
 
 *Tabela 3: Calendário e progresso da Fase 2 (Fonte: dados/gestao/02_calendario_e_progresso_fases.csv).*
 
-![Situação das 27 issues da Fase 2: 12 concluídas no prazo, 13 concluídas com atraso e 2 abertas em atraso.](/img/gestao/07_status_issues_fase_2.png)
+![Situação das 27 issues da Fase 2: 12 concluídas no prazo e 15 concluídas com atraso.](/img/gestao/07_status_issues_fase_2.png)
 
 *Figura 3: Situação e cumprimento de prazo das issues da Fase 2.*
 
@@ -114,13 +114,13 @@ Os dados primários coletados pelo coletor automatizado `scripts/coleta_psm.py` 
 
 | Métrica de Processo | Fase 1 (Linha de Base) | Fase 2 (Meta Calibrada) | Fase 2 (Real Observado) | Conformidade |
 | :--- | :---: | :---: | :---: | :---: |
-| **Acurácia de Estimativa** | 108,2% | Faixa de 80% a 120% | 91,0% | Dentro da faixa |
+| **Acurácia de Estimativa** | 108,2% | Faixa de 80% a 120% | 90,2% | Dentro da faixa |
 | **Taxa de Revisão por Pares** | 50,0% (5 de 10 PRs) | 100,0% | 45,0% (9 de 20 PRs) | Abaixo da meta |
-| **Lead Time Médio** | 1,23 dia(s) | < 3,00 dias | 2,76 dia(s) | Dentro do limite ágil |
+| **Lead Time Médio** | 1,23 dia(s) | < 3,00 dias | 3,97 dia(s) | Acima do limite |
 
-*Tabela 4: Desempenho dos processos na Fase 2 (Fonte: dados/gestao/03_desempenho_processos_fases.csv; taxa de revisão consultada nos pull requests pela API do GitHub em 04/11/2026). A taxa conta os pull requests integrados que fecham issues da fase e têm aprovação registrada por quem não é o autor. Dos 11 sem aprovação na Fase 2, 6 foram integrados por outra pessoa e 5 pelo próprio autor. Revisões informais, feitas fora do GitHub, não aparecem nessa medida, que por isso pode subestimar a revisão realmente feita. Os 11 pull requests integrados sem issue vinculada nas Fases 1 e 2 também ficam fora da conta.*
+*Tabela 4: Desempenho dos processos na Fase 2 (Fonte: dados/gestao/03_desempenho_processos_fases.csv; taxa de revisão consultada nos pull requests pela API do GitHub em 04/11/2026). A taxa conta os pull requests integrados que fecham issues da fase e têm aprovação registrada por quem não é o autor. Dos 11 sem aprovação na Fase 2, 6 foram integrados por outra pessoa e 5 pelo próprio autor. Revisões informais, feitas fora do GitHub, não aparecem nessa medida, que por isso pode subestimar a revisão realmente feita. Os 11 pull requests integrados sem issue vinculada nas Fases 1 e 2 também ficam fora da conta. O lead time era de 2,76 dias até a coleta de 04/11 e subiu porque a [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e a [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30), da Entrega 1, só foram fechadas em 05/11.*
 
-![Acurácia da estimativa por fase: Fase 1 em 108,2% e Fase 2 em 91,0%, ambas dentro da faixa ideal; as Fases 3 e 4 estavam começando na data da coleta.](/img/gestao/06_acuracia_estimativa_fases.png)
+![Acurácia da estimativa por fase: Fase 1 em 108,2% e Fase 2 em 90,2%, ambas dentro da faixa ideal; as Fases 3 e 4 estavam começando na data da coleta.](/img/gestao/06_acuracia_estimativa_fases.png)
 
 *Figura 4: Acurácia da estimativa por fase em relação à faixa ideal. A comparação vale para as Fases 1 e 2; as demais estavam começando na data da coleta.*
 
@@ -134,24 +134,24 @@ Em cumprimento ao terceiro critério de pronto da Issue #31, a tabela abaixo con
 | :--- | :---: | :---: | :---: | :--- |
 | **Total de Issues Alocadas** | 17 issues | 27 issues | **44 issues técnicas e de gestão** | A Fase 2 recebeu as correções do artigo depois do PC1. |
 | **Horas Estimadas Totais** | 53,50 h | 62,00 h | **115,50 h planejadas** | Planejamento próximo do executado no acumulado. |
-| **Horas Reais Acumuladas** | 57,91 h | 56,40 h | **114,31 h executadas** | Fase 1 concluída; Fase 2 com 25 de 27 issues fechadas. |
-| **Custo Equivalente (R$ 45/h)** | R$ 2.605,95 | R$ 2.538,00 | **R$ 5.143,95 investidos** | Abaixo dos R$ 5.197,50 estimados. |
+| **Horas Reais Acumuladas** | 57,91 h | 55,90 h | **113,81 h executadas** | Fases 1 e 2 concluídas. |
+| **Custo Equivalente (R$ 45/h)** | R$ 2.605,95 | R$ 2.515,50 | **R$ 5.121,45 investidos** | Abaixo dos R$ 5.197,50 estimados. |
 | **Aderência aos Prazos** | 29,4% | 44,4% | **44,4% no prazo na F2** | Melhora em relação à Fase 1, ainda longe da meta de 100%. |
 | **Taxa de Revisão por Pares** | 50,0% | 45,0% | **46,7% dos PRs aprovados (14 de 30)** | Abaixo da regra de aprovação do `CONTRIBUTING.md`. |
 | **Foco Principal do Esforço** | Requisitos, normas e governança | GQM, métricas, artigo e apresentação | **Ciclo completo da Entrega 1** | Transição fluida entre definição e especificação. |
 
-### Interpretação com os dados de 04/11/2026
+### Interpretação com os dados de 05/11/2026
 
 Os valores da Fase 1 nesta seção vêm da coleta atual e diferem dos publicados no [Relatório PSM/CID da Fase 1](relatorio-psm-fase-1.md), que registra 62,16 h e ainda não foi atualizado.
 
 | Critério de decisão (seção 2) | Resultado | Situação |
 | :--- | :--- | :--- |
-| Desvio de esforço dentro de ±20% | -9,0% (56,40 h reais para 62,00 h estimadas) | Atendido |
-| Disparidade individual decrescendo | De 29,35 para 23,94 pontos percentuais | Atendido |
-| Ganho de acurácia positivo | -0,8 ponto: a Fase 1 ficou a 8,2 pontos de 100% e a Fase 2 a 9,0 | Não atendido, com as duas fases dentro da faixa |
+| Desvio de esforço dentro de ±20% | -9,8% (55,90 h reais para 62,00 h estimadas) | Atendido |
+| Disparidade individual decrescendo | De 29,35 para 27,72 pontos percentuais | Atendido |
+| Ganho de acurácia positivo | -1,6 ponto: a Fase 1 ficou a 8,2 pontos de 100% e a Fase 2 a 9,8 | Não atendido, com as duas fases dentro da faixa |
 | Aderência geral de 100,0% | 44,4% | Não atendido |
 | 100,0% dos pull requests aprovados por pares | 45,0%, contando só as aprovações registradas no GitHub (ver limite da medida na Tabela 4) | Não atendido |
-| Nenhuma issue pendente na submissão | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30) seguem abertas; a Entrega 1 foi submetida no Moodle com o PDF e o link da release [`v0.1`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v0.1), e a `v1.0-E1` planejada não foi criada | Não atendido |
+| Nenhuma issue pendente na submissão | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30) estavam abertas e só foram fechadas em 05/11; a Entrega 1 foi submetida no Moodle com o PDF e o link da release [`v0.1`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v0.1), e a `v1.0-E1` planejada não foi criada | Não atendido |
 
 O esforço ficou próximo do planejado, mas prazos e revisão ficaram abaixo do que a equipe definiu. Esses resultados entram como linha de base no plano de medição da [#134](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/134).
 
@@ -203,4 +203,4 @@ Todos os indicadores apresentados neste relatório são respaldados pelos artefa
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Estruturação inicial do Relatório PSM/CID da Fase 2 (esqueleto normativo, measurement constructs e decisões de gestão preliminares) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
 | 1.1 | 20/10/2026 | Atualização das medições da Fase 2 (15 issues concluídas, 21,7h reais) e consolidação da Entrega 1 pós-merge com a main | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
-| 1.2 | 04/11/2026 | Atualização com a coleta de 04/11 (27 issues, 56,4h reais), novas figuras, taxa de revisão conferida nos pull requests e interpretação dos critérios de decisão | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 05/11/2026 | Atualização com a coleta de 05/11 (27 issues, 55,9h reais), novas figuras, taxa de revisão conferida nos pull requests e interpretação dos critérios de decisão | [Christopher Paraizo](https://github.com/wChrstphr) | |
