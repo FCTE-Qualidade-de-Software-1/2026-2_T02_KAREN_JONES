@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-06T10:04:17.700013+00:00",
+  "coletado_em": "2026-11-06T18:42:28.577803+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -113,7 +113,7 @@
       "milestone": null,
       "comments": 0,
       "created_at": "2026-11-05T19:37:11Z",
-      "updated_at": "2026-11-05T20:01:54Z",
+      "updated_at": "2026-11-06T18:33:39Z",
       "closed_at": null,
       "assignee": null,
       "author_association": "COLLABORATOR",
@@ -128,7 +128,7 @@
         "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/141.patch",
         "merged_at": null
       },
-      "body": "## O que foi feito?\n\n- Nova página curta `docs/gestao/priorizacao-issues.md`: regra e faixas da prioridade, construct, retrato de 05/11, datas, limites e referências.\n- Link de volta em `CONTRIBUTING.md`, seção 3.\n\n## Issue\n\nCloses #140\n\n## Como verificar\n\n1. Abrir a página \"Priorização no Project\" em Gestão do Projeto.\n2. Conferir os níveis com o campo `Prioridade` do [Project #36](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/36).\n\n## Critérios da rubrica atendidos\n\nNenhum: documentação de gestão.\n\n## Uso de IA\n\nClaude Code, cálculo dos níveis a partir das dependências das issues, redação da página e conferência das citações nos PDFs da disciplina; a regra foi escolhida pelo autor, que deve conferir o texto antes do merge.\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [x] `npm run build` passou localmente (quando altera o site)\n- [x] Critério de pronto da issue conferido\n- [x] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\n- [ ] Horas reais preenchidas na issue\n\n",
+      "body": "## O que foi feito?\n\n- Nova página curta `docs/gestao/priorizacao-issues.md`: regra e faixas da prioridade, construct, retrato de 05/11, datas, limites e referências.\n- Link de volta em `CONTRIBUTING.md`, seção 3.\n- Tabelas do site centralizadas em `src/css/custom.css`, e classes para título acima e fonte abaixo da tabela.\n\n## Issue\n\nCloses #140\n\n## Como verificar\n\n1. Abrir a página \"Priorização no Project\" em Gestão do Projeto.\n2. Conferir os níveis com o campo `Prioridade` do [Project #36](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/36).\n\n## Critérios da rubrica atendidos\n\nNenhum: documentação de gestão.\n\n## Uso de IA\n\nClaude Code, cálculo dos níveis a partir das dependências das issues, redação da página e conferência das citações nos PDFs da disciplina; a regra foi escolhida pelo autor, que deve conferir o texto antes do merge.\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [x] `npm run build` passou localmente (quando altera o site)\n- [x] Critério de pronto da issue conferido\n- [x] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\n- [ ] Horas reais preenchidas na issue\n\n\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/141/reactions",
@@ -268,11 +268,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -518,11 +518,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -768,11 +768,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -946,11 +946,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1124,11 +1124,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1572,11 +1572,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6013,11 +6013,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6191,11 +6191,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6369,11 +6369,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6547,11 +6547,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6725,11 +6725,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6859,7 +6859,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -6914,18 +6914,18 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:26Z",
-      "updated_at": "2026-11-05T01:47:33Z",
-      "closed_at": null,
+      "updated_at": "2026-11-06T18:42:09Z",
+      "closed_at": "2026-11-06T18:42:09Z",
       "assignee": {
         "login": "LeticiaSantosss",
         "id": 196245739,
@@ -6962,8 +6962,28 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nMontar o cronograma da Fase 4 alinhado ao cronograma atualizado da disciplina: ambiente pronto em 08/11, TAI2 em 09/11 (sem tarefa do projeto), coleta de 10/11 a 12/11, verificação dos dados brutos em 13/11, análise e respostas GQM até 15/11, Ponto de Controle 2 em 16/11 (slides em 15/11), julgamento em 17/11, ação de melhoria até 19/11, artigo e site até 20/11, revisão final em 21/11 e entrega final em 22/11. Incluir as leituras do PSM às quartas-feiras (11/11 e 18/11). Para cada métrica, indicar o responsável pela coleta, a data e a issue correspondente. Publicar em `docs/fase-03/cronograma-avaliacao.md`.\n\n### Critérios da rubrica atendidos\n\n- F3-C3: Cronograma de avaliação (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Cronograma das ações no plano de avaliação: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: responsável pela coleta e quando a medição é coletada: AULA 08 QSW1 GQM.pdf, p. 45\n- TAI2 (09/11), Ponto de Controle 2 (16/11 e 18/11) e entrega final (22/11): Cronograma atualizado da disciplina, Moodle (aprender3.unb.br), novembro\n- Critério F3-C3, cronograma realista alinhado à execução da Fase 4: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Atividades da Fase 4 com datas entre 10/11 e 22/11\n- [ ] Responsável e data de coleta de cada métrica\n- [ ] Folga prevista antes da Entrega 2\n- [ ] Datas iguais às das issues da milestone Fase 4\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n06/11\n\n### Depende de\n\n#95 (Método de avaliação)\n\n### Estimativa (h)\n\n1.5\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "body": "### Descrição\n\nMontar o cronograma da Fase 4 alinhado ao cronograma atualizado da disciplina: ambiente pronto em 08/11, TAI2 em 09/11 (sem tarefa do projeto), coleta de 10/11 a 12/11, verificação dos dados brutos em 13/11, análise e respostas GQM até 15/11, Ponto de Controle 2 em 16/11 (slides em 15/11), julgamento em 17/11, ação de melhoria até 19/11, artigo e site até 20/11, revisão final em 21/11 e entrega final em 22/11. Incluir as leituras do PSM às quartas-feiras (11/11 e 18/11). Para cada métrica, indicar o responsável pela coleta, a data e a issue correspondente. Publicar em `docs/fase-03/cronograma-avaliacao.md`.\n\n### Critérios da rubrica atendidos\n\n- F3-C3: Cronograma de avaliação (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Cronograma das ações no plano de avaliação: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: responsável pela coleta e quando a medição é coletada: AULA 08 QSW1 GQM.pdf, p. 45\n- TAI2 (09/11), Ponto de Controle 2 (16/11 e 18/11) e entrega final (22/11): Cronograma atualizado da disciplina, Moodle (aprender3.unb.br), novembro\n- Critério F3-C3, cronograma realista alinhado à execução da Fase 4: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [x] Atividades da Fase 4 com datas entre 10/11 e 22/11\n- [x] Responsável e data de coleta de cada métrica\n- [x] Folga prevista antes da Entrega 2\n- [x] Datas iguais às das issues da milestone Fase 4\n- [x] Página publicada com histórico de versões\n\n### Prazo\n\n06/11\n\n### Depende de\n\n#95 (Método de avaliação)\n\n### Estimativa (h)\n\n1.5\n\n### Horas reais (h)\n\n1.5\n\n### Revisor\n\n_No response_\n",
+      "closed_by": {
+        "login": "LeticiaSantosss",
+        "id": 196245739,
+        "node_id": "U_kgDOC7J46w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/196245739?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/LeticiaSantosss",
+        "html_url": "https://github.com/LeticiaSantosss",
+        "followers_url": "https://api.github.com/users/LeticiaSantosss/followers",
+        "following_url": "https://api.github.com/users/LeticiaSantosss/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LeticiaSantosss/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/LeticiaSantosss/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LeticiaSantosss/subscriptions",
+        "organizations_url": "https://api.github.com/users/LeticiaSantosss/orgs",
+        "repos_url": "https://api.github.com/users/LeticiaSantosss/repos",
+        "events_url": "https://api.github.com/users/LeticiaSantosss/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/LeticiaSantosss/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/102/reactions",
         "total_count": 0,
@@ -6978,7 +6998,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/102/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -7092,11 +7112,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7270,11 +7290,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7448,11 +7468,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7626,11 +7646,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7815,11 +7835,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7993,11 +8013,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8171,11 +8191,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8349,17 +8369,17 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:02Z",
-      "updated_at": "2026-11-05T21:46:45Z",
+      "updated_at": "2026-11-06T15:44:34Z",
       "closed_at": null,
       "assignee": {
         "login": "DaviPierre",
@@ -8397,7 +8417,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nEstudar o que a Fase 3 do processo de avaliação de produto pede (plano de avaliação com método, instruções para o avaliador, recursos e cronograma) e o que o GQM pede nos planos de medição e de análise. Propor a estrutura das páginas da Fase 3 em `docs/fase-03/` e registrar a proposta para a equipe.\n\nO plano precisa partir do que a Fase 2 já fixou: as convenções de coleta de cada objetivo ([GQM de Manutenibilidade (G1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md), [GQM de Confiabilidade (G2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md) e [GQM de Flexibilidade (G3)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md), seção 2 de cada página) deixaram para a Fase 3 a definição exata do ambiente de teste, e o [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md) define como os resultados serão julgados.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Fase 3, produzir o plano de avaliação (método com instruções, recursos e cronograma): AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Projetar a avaliação: método, instrução para o avaliador, recursos e cronograma: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Especificação detalhada para que a avaliação seja repetível e reprodutível: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 15\n- Conteúdo do Plano de Medição: AULA 08 QSW1 GQM.pdf, p. 45\n- Conteúdo do Plano de Análise: AULA 08 QSW1 GQM.pdf, p. 46\n- Critérios F3-C1 a F3-C8: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Lista das páginas da Fase 3 com o conteúdo de cada uma\n- [x] Itens do Plano de Medição (GQM, p. 45) e do Plano de Análise (GQM, p. 46) distribuídos entre as páginas\n- [ ] Pendências da Fase 2 para a Fase 3 levantadas (ambiente exato, cenas de teste, versões das ferramentas)\n- [ ] Proposta apresentada à equipe e registrada em ata\n\n### Prazo\n\n05/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nEstudar o que a Fase 3 do processo de avaliação de produto pede (plano de avaliação com método, instruções para o avaliador, recursos e cronograma) e o que o GQM pede nos planos de medição e de análise. Propor a estrutura das páginas da Fase 3 em `docs/fase-03/` e registrar a proposta para a equipe.\n\nO plano precisa partir do que a Fase 2 já fixou: as convenções de coleta de cada objetivo ([GQM de Manutenibilidade (G1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md), [GQM de Confiabilidade (G2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md) e [GQM de Flexibilidade (G3)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md), seção 2 de cada página) deixaram para a Fase 3 a definição exata do ambiente de teste, e o [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md) define como os resultados serão julgados.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Fase 3, produzir o plano de avaliação (método com instruções, recursos e cronograma): AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Projetar a avaliação: método, instrução para o avaliador, recursos e cronograma: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Especificação detalhada para que a avaliação seja repetível e reprodutível: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 15\n- Conteúdo do Plano de Medição: AULA 08 QSW1 GQM.pdf, p. 45\n- Conteúdo do Plano de Análise: AULA 08 QSW1 GQM.pdf, p. 46\n- Critérios F3-C1 a F3-C8: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [x] Lista das páginas da Fase 3 com o conteúdo de cada uma\n- [x] Itens do Plano de Medição (GQM, p. 45) e do Plano de Análise (GQM, p. 46) distribuídos entre as páginas\n- [x] Pendências da Fase 2 para a Fase 3 levantadas (ambiente exato, cenas de teste, versões das ferramentas)\n- [ ] Proposta apresentada à equipe e registrada em ata\n\n### Prazo\n\n05/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/94/reactions",
@@ -9452,11 +9472,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9641,11 +9661,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9830,11 +9850,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 22,
-        "closed_issues": 1,
+        "open_issues": 21,
+        "closed_issues": 2,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-05T19:36:42Z",
+        "updated_at": "2026-11-06T18:42:09Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -23248,11 +23268,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 22,
-      "closed_issues": 1,
+      "open_issues": 21,
+      "closed_issues": 2,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-05T19:36:42Z",
+      "updated_at": "2026-11-06T18:42:09Z",
       "due_on": "2026-11-08T00:00:00Z",
       "closed_at": null
     },
@@ -23296,6 +23316,88 @@
     }
   ],
   "commits": [
+    {
+      "sha": "526b2a86aa88d0da92fcc107093242d9efc5d31e",
+      "node_id": "C_kwDOUJBYZdoAKDUyNmIyYTg2YWE4OGQwZGE5MmZjYzEwNzA5MzI0MmQ5ZWZjNWQzMWU",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-06T10:04:18Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-06T10:04:18Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "270cb43021f68a9dc4c7924e9ed5415fa61cd0d8",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/270cb43021f68a9dc4c7924e9ed5415fa61cd0d8"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/526b2a86aa88d0da92fcc107093242d9efc5d31e",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/526b2a86aa88d0da92fcc107093242d9efc5d31e",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/526b2a86aa88d0da92fcc107093242d9efc5d31e",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/526b2a86aa88d0da92fcc107093242d9efc5d31e/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "2054573fbbf69f9cf0834e948bcc5003f6114171",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/2054573fbbf69f9cf0834e948bcc5003f6114171",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/2054573fbbf69f9cf0834e948bcc5003f6114171"
+        }
+      ]
+    },
     {
       "sha": "2054573fbbf69f9cf0834e948bcc5003f6114171",
       "node_id": "C_kwDOUJBYZdoAKDIwNTQ1NzNmYmJmNjlmOWNmMDgzNGU5NDhiY2M1MDAzZjYxMTQxNzE",

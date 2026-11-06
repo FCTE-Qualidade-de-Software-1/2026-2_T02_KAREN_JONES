@@ -55,7 +55,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),open,GabrielSMonteiro,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,open,wChrstphr,2.0,0.0,90.0,0.0,06/11,-,Em andamento (no prazo),
-102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,open,LeticiaSantosss,1.5,0.0,67.5,0.0,06/11,-,Em andamento (no prazo),
+102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,closed,LeticiaSantosss,1.5,1.5,67.5,67.5,06/11,06/11/2026,Concluida no prazo,3.14
 103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,open,eduarda-ogomes,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
 104,Fase 3,[F3] Visão geral da Fase 03 e rastreabilidade com a Fase 02,open,DaviPierre,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,open,GabrielSMonteiro,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
