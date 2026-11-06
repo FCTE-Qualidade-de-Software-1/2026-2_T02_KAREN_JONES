@@ -322,6 +322,25 @@ body {
 
 .markdown table {
   font-size: 0.9rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabela-titulo,
+.tabela-fonte {
+  text-align: center;
+}
+
+.tabela-titulo {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tabela-fonte {
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
 
 /* Footer */
