@@ -21,14 +21,14 @@ O GQM foi proposto por Victor Basili e parte de um princípio simples: **mede-se
 | Nível | Elemento | Papel nesta avaliação |
 | :--- | :--- | :--- |
 | Conceitual | **Objetivo** (*Goal*) | O que se quer entender sobre o Excalidraw, sob qual foco de qualidade e do ponto de vista de quem. |
-| Operacional | **Questão** (*Question*) | Perguntas cujas respostas dizem se o objetivo foi atendido. Para cada questão, elabora-se uma hipótese, que é a resposta esperada (AULA 08, p. 34). |
+| Operacional | **Questão** (*Question*) | Perguntas cujas respostas dizem se o objetivo foi atendido. Para cada questão, as respostas esperadas são elaboradas como hipóteses (AULA 08, p. 34). |
 | Quantitativo | **Métrica** (*Metric*) | Dados coletados para responder cada questão de forma objetiva. |
 
 A interpretação percorre o caminho inverso: as métricas respondem às questões, e as respostas às questões dizem se o objetivo foi alcançado (AULA 08, p. 7).
 
 Nesta avaliação, os objetivos são identificados por G1, G2 e G3 (de *goal*). As questões de cada objetivo recebem o número do objetivo seguido de um número sequencial (Q1.1 é a primeira questão de G1), e as métricas recebem o número da questão seguido de outro número sequencial (M1.1.1 é a primeira métrica de Q1.1).
 
-A aula admite questões sem hipótese quando não for possível formulá-la (AULA 08, p. 31). Nesta avaliação, todas as questões têm hipótese, para que cada resultado possa ser comparado com uma expectativa definida antes da medição.
+A aula admite questões sem hipótese quando não for possível formulá-la (AULA 08, p. 31). Nesta avaliação, todas as questões terão hipóteses, uma por métrica, para que cada resultado possa ser comparado com uma expectativa definida antes da medição. Cada hipótese tem uma única afirmação e uma regra de confirmação, cujo limite vem das [faixas de pontuação](./pontuacao-julgamento.md#2-como-as-faixas-foram-definidas) da métrica ou da própria definição da métrica. As hipóteses podem ser valores ou comparações (AULA 08, p. 31).
 
 ---
 
@@ -41,7 +41,7 @@ A aula apresenta oito etapas para a definição do GQM (AULA 08, p. 21). A tabel
 | Definir objetivos de medição (p. 22 e 24) | Um objetivo por característica selecionada, no template da aula ([seção 3](#3-objetivos-de-medição) desta página). | 02 |
 | Rever ou produzir modelos de processo (p. 27) | Na aula, essa etapa analisa o processo de desenvolvimento para ver onde as medições podem ser feitas. Como aqui o objeto medido é um produto, esse papel é cumprido pela [descrição do produto](../fase-01/descricao-produto.md) e pelas partes do Excalidraw delimitadas no [escopo](../fase-01/escopo-avaliacao.md). | 02 |
 | Conduzir entrevistas GQM (p. 28) | Os mantenedores do Excalidraw não estão disponíveis para entrevistas. A equipe avaliadora preenche, em reunião, uma *abstraction sheet* por objetivo, assumindo o ponto de vista dos interessados mapeados na Fase 01. A *abstraction sheet* é o quadro que registra as métricas possíveis, as expectativas sobre elas (hipóteses de *baseline*) e os fatores que podem influenciar os resultados (AULA 08, p. 29). As três estão em [Abstraction sheets dos objetivos](./abstraction-sheets.md), e as limitações dessa adaptação, na [seção 6](#6-limitações-do-método-nesta-avaliação). | 02 |
-| Definir e rever questões e hipóteses (p. 33 a 35) | Uma questão por subcaracterística, reunindo os requisitos de avaliação da Fase 01 ([seção 4](#4-estrutura-das-questões)). Cada questão recebe uma hipótese. | 02 |
+| Definir e rever questões e hipóteses (p. 33 a 35) | Uma questão por subcaracterística, reunindo os requisitos de avaliação da Fase 01 ([seção 4](#4-estrutura-das-questões)). Cada questão recebe uma hipótese por métrica. | 02 |
 | Definir métricas (p. 38) | Métricas documentadas em uma ficha padronizada ([seção 5](#5-ficha-de-cada-métrica)), escolhidas pelas características desejáveis apresentadas na p. 41. | 02 |
 | Verificar métricas (p. 42) | Conferir a consistência e a completude entre objetivos, questões e métricas, e se cada métrica pode ser coletada na versão avaliada do código, com as ferramentas disponíveis. O resultado está nas seções de rastreabilidade e de verificação das métricas de cada página de objetivo. | 02 |
 | Produzir planos (p. 43 a 46) | [Plano GQM](./plano-gqm.md) na Fase 02. Plano de Medição e Plano de Análise na Fase 03, junto com o plano de avaliação (AULA A07, p. 18 e 19). | 02 e 03 |
@@ -135,7 +135,7 @@ Cada objetivo tem **uma questão por subcaracterística**, porque as subcaracter
 
 Ao todo, são 3 objetivos, 13 questões e 36 requisitos de avaliação. Para manter a avaliação viável, a meta é de **uma a três métricas por questão**. Uma questão não deve ser apenas uma métrica escrita em forma de pergunta: ela precisa caracterizar o objeto em relação ao foco de qualidade, e as métricas é que a respondem (AULA 08, p. 33 e 34).
 
-Antes de seguir para as métricas, cada questão passa pela revisão proposta na aula: respondendo a questão, é possível concluir algo sobre o objetivo? A hipótese ajuda a analisar o resultado? (AULA 08, p. 35).
+Antes de seguir para as métricas, cada questão passa pela revisão proposta na aula: respondendo a questão, é possível concluir algo sobre o objetivo? As hipóteses ajudam a analisar o resultado? (AULA 08, p. 35).
 
 ---
 
@@ -149,7 +149,7 @@ Cada métrica é documentada com os campos abaixo. Os cinco primeiros garantem q
 | Procedimento de cálculo | Fórmula, unidade e escala. | Especificação do trabalho, p. 1 |
 | Fonte dos dados | Parte do produto e artefato de onde o dado sai. | Especificação do trabalho, p. 1 |
 | Procedimento de coleta | Como o dado é obtido: ferramenta, comando ou inspeção. | Especificação do trabalho, p. 1 |
-| Critério de interpretação | Como o valor é lido em relação à hipótese da questão. | Especificação do trabalho, p. 1 |
+| Critério de interpretação | Regra que confirma ou refuta a hipótese ligada à métrica e como o valor é lido. | Especificação do trabalho, p. 1 |
 | Questão respondida | Identificador da questão (ex.: Q1.1). | AULA 08, p. 38 |
 | Características desejáveis | Justificativa de simplicidade, consistência e objetividade, facilidade de coleta, robustez, validade e independência da linguagem de programação. | AULA 08, p. 41 |
 
@@ -182,3 +182,4 @@ Depois das fichas, os níveis de pontuação e os critérios de julgamento de to
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação do documento com o método GQM, os objetivos de medição e a estrutura das questões | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.1 | 26/10/2026 | Troca dos travessões dos títulos dos objetivos; texto das questões e links para as páginas de cada objetivo, para os requisitos da Fase 01 e para as demais páginas da Fase 02; explicação dos códigos G, Q e M e da *abstraction sheet*; adaptação da revisão dos planos; limitações alinhadas aos testes em ambiente local e à janela histórica | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 30/10/2026 | Hipóteses passam a ser uma por métrica, com uma única afirmação e regra de confirmação | [Christopher Paraizo](https://github.com/wChrstphr) | |

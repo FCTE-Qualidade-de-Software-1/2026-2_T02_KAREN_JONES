@@ -8,35 +8,51 @@ Os conteúdos estão apresentados em formato legível (Markdown) e acompanhados 
 
 ## 1. Apêndice A: Declaração de Uso de Inteligência Artificial
 
-### 1.1. Texto em Markdown
+### 1.1. Texto do artigo
 
-Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara que foram utilizadas ferramentas de inteligência artificial generativa durante o desenvolvimento deste trabalho:
+A equipe utilizou IA generativa como apoio, com revisão humana antes de cada integração. O Claude Code foi usado no rascunho das abstraction sheets, questões e fichas GQM. O Antigravity, com Gemini 3.8 e Claude Sonnet 5.5, apoiou o script de coleta das métricas de gestão, a estruturação de seções do artigo e a formatação em LaTeX. O GitHub Copilot apoiou a edição das páginas do GitPages, do workflow de compilação e de trechos do artigo, e o Grammarly, a revisão ortográfica. Os integrantes conferiram citações, páginas e dados com as fontes e o repositório, e o registro por pull request está no repositório.
 
-* **Ferramentas Utilizadas:** Antigravity / Gemini 3.8 e Claude Code.
-* **Consolidação por Pull Request e Tarefas Realizadas:**
-  * **PR #5 (Setup do Repositório e Governança):** Utilização do Claude Code no apoio à formatação e adaptação do `CONTRIBUTING.md`, modelos de PR/Issue e mapa dos critérios de avaliação;
-  * **PR #19 (Script de Métricas PSM/CID):** Utilização do Antigravity / Gemini 3.8 no apoio ao desenvolvimento do coletor em Python (`scripts/coleta_psm.py`), estruturação das fórmulas de cálculo das três categorias e implementação da renderização de gráficos em alta resolução com a biblioteca Pillow;
-  * **PR #20 (Relatório PSM/CID da Fase 1):** Utilização do Antigravity / Gemini 3.8 na formatação estruturada dos três Measurement Constructs e organização inicial das tabelas de métricas em Markdown;
-  * **PR atual (Apêndices do Artigo - Issue #27):** Utilização do Antigravity / Gemini 3.8 para formatação da tabela de contribuição individual e síntese da declaração em conformidade com as rubricas.
-* **Metodologia de Conferência Crítica pela Equipe:**
-  * Todo o código-fonte gerado foi testado e validado em ambiente local, sendo confrontado diretamente com os dados reais do repositório;
-  * Os cálculos de esforço, custos e percentuais foram auditados contra os logs primários do GitHub, assegurando ausência de divergências ou alucinações de dados;
-  * As formulações dos Measurement Constructs foram confrontadas com o modelo de informação do PSM/CID (ISO/IEC 15939) e com a especificação da disciplina;
-  * O documento final não contém emojis, ícones decorativos ou figurinhas, mantendo o padrão formal acadêmico exigido pela rubrica.
+O texto acima está na seção "Declaração de Uso de Inteligência Artificial" de [`main.tex`](./main.tex).
 
-### 1.2. Código LaTeX para o Artigo
+### 1.2. Registro por pull request
 
-```latex
-\section*{Apêndice A: Declaração de Uso de Inteligência Artificial}
-Em conformidade com a política institucional da disciplina (Critérios F1-C10 e F2-C9), a equipe declara que foram utilizadas ferramentas de inteligência artificial generativa durante o desenvolvimento deste trabalho:
-\begin{itemize}
-    \item \textbf{Ferramentas Utilizadas:} Antigravity / Gemini 3.8 e Claude Code.
-    \item \textbf{Consolidação por Pull Request:} PR \#5 (Claude Code -- suporte à estruturação de diretrizes e modelos de governança); PR \#19 (Antigravity / Gemini 3.8 -- implementação do coletor em Python e renderização de gráficos com Pillow); PR \#20 (Antigravity / Gemini 3.8 -- estruturação formal dos três Measurement Constructs); PR da Issue \#27 (Antigravity / Gemini 3.8 -- formatação da tabela de contribuição individual e síntese de governança).
-    \item \textbf{Metodologia de Conferência Crítica pela Equipe:} Todo o código-fonte, dados numéricos e conteúdos textuais foram integralmente revisados, validados e corrigidos pelos integrantes da equipe. Os cálculos de esforço foram confrontados diretamente com os logs primários do GitHub, assegurando ausência de alucinações e conformidade com a especificação da disciplina. Nenhuma imagem com texto sobreposto ou emoji foi mantida no documento final.
-\end{itemize}
-```
+Resumo da seção "Uso de IA" de cada pull request integrado. PRs que não declararam uso de IA ficam fora da tabela.
 
----
+| PR | Ferramenta | Uso declarado |
+| :---: | :--- | :--- |
+| #5 | Claude Code | Guia de contribuição e modelos de issue e PR |
+| #34 | Antigravity / Gemini | Script de coleta das métricas PSM/CID e gráficos |
+| #35 | Antigravity / Gemini | Textos e tabelas dos Measurement Constructs da Fase 1 |
+| #37 | Antigravity / Gemini | Tabela de contribuição e declaração de IA |
+| #39 | Não informada | Revisão gramatical do propósito da avaliação |
+| #40 | Grammarly | Correção ortográfica do documento de ODS |
+| #41 | Antigravity / Gemini | Seção de histórico de versões do guia de contribuição |
+| #42 | Grammarly e Gemini | Revisão do documento de interessados |
+| #43 | Antigravity / Gemini 3.8 | Measurement Constructs e tabelas do relatório PSM/CID da Fase 2 |
+| #46 | Gemini | Formatação da ata de reunião da Fase 1 |
+| #47 | GitHub Copilot | Metadados e links do GitPages |
+| #48 | GitHub Copilot | Workflow de LaTeX e arquivo temporário |
+| #50 | Não informada | Referências cruzadas da visão geral da Fase 1 |
+| #51 | Claude Code | Rascunho do método GQM e dos objetivos de medição |
+| #58 | GitHub Copilot | Workflow de compilação e README do artigo |
+| #60 | Claude Code | Rascunho das abstraction sheets e da ata da reunião GQM |
+| #61 | GitHub Copilot | Visão geral da Fase 2 e referências cruzadas |
+| #62 | Claude Code | Rascunho das questões e fichas do GQM G1 |
+| #63 | GitHub Copilot | Card da página inicial e tabelas |
+| #64 | Claude Code | Rascunho das questões e fichas do GQM G2 |
+| #65 | Claude Code | Rascunho das questões e fichas do GQM G3 |
+| #68 | Claude Code | Busca de artigos e regras de agregação e julgamento |
+| #69 | Claude Code | Plano GQM e diagramas da hierarquia |
+| #71 | GitHub Copilot | Tabela e referências cruzadas da visão geral da Fase 2 |
+| #72 | Claude Code | Migração do artigo para o modelo SBC e redesenho das imagens |
+| #79 | Antigravity (Gemini 3.8 e Claude Sonnet 5.5) | Correção do coletor PSM/CID, gráficos e tabelas |
+| #80 | Antigravity / Gemini 3.8 | Seção de metodologia do artigo |
+| #81 | Antigravity / Gemini 3.8 | Seção de pontuação e julgamento do artigo |
+| #82 | Não informada | Organização e revisão do texto do G3 no artigo e formatação LaTeX |
+| #83 | Antigravity | Ajuste da paginação em LaTeX |
+| #84 | GitHub Copilot | Redação e adaptação do resumo do G1 para LaTeX |
+
+Em todos os casos, o autor do PR declarou ter revisado o conteúdo gerado antes da integração.
 
 ## 2. Apêndice B: Tabela de Contribuição Individual da Equipe
 
@@ -95,5 +111,4 @@ Maria Eduarda & 6 & 17.5h & 18.5h & 14/5 & 22.06\% \\
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Elaboração dos apêndices do artigo com tabela de contribuição individual e declaração de uso de IA | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.1 | 20/10/2026 | Atualização da tabela de contribuição pós-merge da main com avanço da Fase 2 (83,9h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
-
-
+| 1.2 | 26/10/2026 | Declaração de IA reescrita conforme o artigo e registro de uso de IA por pull request até o PR #84 | [Christopher Paraizo](https://github.com/wChrstphr) | |

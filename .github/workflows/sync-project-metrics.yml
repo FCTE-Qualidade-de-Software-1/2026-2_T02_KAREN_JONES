@@ -1,0 +1,45 @@
+name: Sincronizar Métricas com GitHub Projects
+
+on:
+  issues:
+    types: [opened, edited, closed, reopened]
+  workflow_dispatch:
+    inputs:
+      sync_all:
+        description: 'Sincronizar todas as issues retroativamente (backfill)?'
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  sincronizar:
+    name: Sincronizar com GitHub Projects
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Executar sincronizacao
+        env:
+          PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
+          ISSUE_NODE_ID: ${{ github.event.issue.node_id }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          IS_DISPATCH: ${{ github.event_name == 'workflow_dispatch' }}
+          SYNC_ALL: ${{ inputs.sync_all }}
+        run: |
+          if [ "$IS_DISPATCH" = "true" ] && [ "$SYNC_ALL" = "true" ]; then
+            echo "[INFO] Executando sincronizacao retroativa de todas as issues..."
+            python3 scripts/sincronizar_projeto.py --all
+          else
+            echo "[INFO] Executando sincronizacao para a issue #$ISSUE_NUMBER..."
+            python3 scripts/sincronizar_projeto.py \
+              --issue-node-id "$ISSUE_NODE_ID" \
+              --issue-number "$ISSUE_NUMBER" \
+              --issue-body "$ISSUE_BODY"
+          fi

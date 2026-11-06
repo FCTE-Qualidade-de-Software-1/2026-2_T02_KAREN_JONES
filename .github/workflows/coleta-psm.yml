@@ -1,0 +1,50 @@
+name: Atualizar Métricas PSM/CID
+
+on:
+  issues:
+    types: [closed]
+  schedule:
+    - cron: '0 3 * * *' # Executa diariamente às 00:00 BRT (03:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  coleta-psm:
+    name: Coletar e atualizar dados PSM/CID
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependências
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: Executar script de coleta PSM/CID
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/coleta_psm.py
+
+      - name: Commit e push das métricas atualizadas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dados/gestao/
+          if git diff --staged --quiet; then
+            echo "[INFO] Nenhuma alteração detectada nas métricas."
+          else
+            git commit -m "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]"
+            git push
+            echo "[INFO] Métricas atualizadas e enviadas com sucesso."
+          fi
