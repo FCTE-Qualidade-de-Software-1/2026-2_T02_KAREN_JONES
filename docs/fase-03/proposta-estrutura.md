@@ -19,9 +19,9 @@ A proposta é desdobrar o plano em páginas especializadas, em vez de criar um �
 | :--- | :--- | :--- |
 | Produto: Excalidraw, commit `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`, 18/10/2026 | [Escopo da Fase 01](../fase-01/escopo-avaliacao.md) | Fazer checkout do commit em todas as medições de código e testes; documentar eventuais serviços externos. |
 | Histórico de PRs/relatos: 18/04/2026 a 18/10/2026 | Convenções de coleta dos GQM | Usar a mesma janela em todas as métricas históricas que a especificam. |
-| G1: Manutenibilidade, cinco questões, 14 métricas | [GQM G1](../fase-02/gqm-manutenibilidade.md) | Produzir 14 procedimentos em `instrucoes-g1-manutenibilidade.md`. |
-| G2: Confiabilidade, quatro questões, dez métricas | [GQM G2](../fase-02/gqm-confiabilidade.md) | Produzir dez procedimentos em `instrucoes-g2-confiabilidade.md`. |
-| G3: Flexibilidade, quatro questões, 12 métricas | [GQM G3](../fase-02/gqm-flexibilidade.md) | Produzir 12 procedimentos em `instrucoes-g3-flexibilidade.md`. |
+| G1: Manutenibilidade, 5 questões, 14 métricas | [GQM G1](../fase-02/gqm-manutenibilidade.md) | Produzir 14 procedimentos em `instrucoes-g1-manutenibilidade.md`. |
+| G2: Confiabilidade, 4 questões, 10 métricas | [GQM G2](../fase-02/gqm-confiabilidade.md) | Produzir dez procedimentos em `instrucoes-g2-confiabilidade.md`. |
+| G3: Flexibilidade, 4 questões, 12 métricas | [GQM G3](../fase-02/gqm-flexibilidade.md) | Produzir 12 procedimentos em `instrucoes-g3-flexibilidade.md`. |
 | Cinco níveis: `++` (5), `+` (4), `o` (3), `-` (2), `--` (1); agregação e julgamento previamente fixados | [Pontuação e julgamento](../fase-02/pontuacao-julgamento.md) | Não recalibrar faixas após a coleta; aplicar as regras já publicadas. |
 
 **Cobertura total:** três objetivos, 13 questões e 36 métricas, conforme o [Plano GQM](../fase-02/plano-gqm.md).
@@ -35,7 +35,7 @@ A proposta é desdobrar o plano em páginas especializadas, em vez de criar um �
 | `metodo-avaliacao.md` | Matriz completa com ID, método, fonte, instrumento/ferramenta, justificativa técnica e relação com cada faixa de pontuação; distinguir análise estática, histórico, testes, inspeção e desempenho. | #95 | Davi Pierre |
 | `recursos-ambiente.md` | Máquinas e hardware, sistema operacional, navegador, Node.js, gerenciadores, versões de ferramentas, contêiner limpo, conhecimentos exigidos, redes, gravação de tela e recursos de acessibilidade/touch/pen. | #96 | Letícia de Carvalho |
 | `instrucoes-g1-manutenibilidade.md` | Procedimentos para **14 métricas** de G1, desde pré-condições e comandos até fórmula, saída esperada, dados brutos e fatores de variação. | #98 | Davi Pierre |
-| `instrucoes-g2-confiabilidade.md` | Procedimentos para **dez métricas** de G2; formulários e gravações nos testes manuais, tratamento das falhas, identificação do coletor e evidências. | #99 | Letícia de Carvalho |
+| `instrucoes-g2-confiabilidade.md` | Procedimentos para **10 métricas** de G2; formulários e gravações nos testes manuais, tratamento das falhas, identificação do coletor e evidências. | #99 | Letícia de Carvalho |
 | `instrucoes-g3-flexibilidade.md` | Procedimentos para **12 métricas** de G3; integrações, execução local, performance, toque/caneta, Docker e exportação/importação. | #100 | Gabriel Monteiro |
 | `plano-analise.md` | Processamento dos dados, fórmulas, pontuação, tratamento de ausências, arredondamento, hipóteses, gráficos/tabelas para as 13 questões e conclusões por objetivo. | #101 | Christopher Paraizo |
 | `cronograma-avaliacao.md` | Marco de cada atividade, responsável por cada métrica, data de coleta, disponibilidade dos recursos, conferência, piloto, análise e folga antes da entrega. | #102 | Letícia de Carvalho |
@@ -124,17 +124,6 @@ Antes de aprovar cada documento da Fase 03, conferir:
 6. Uma pessoa que não redigiu as instruções consegue executar o piloto sem orientação verbal adicional; divergências geram revisão documentada.
 7. `docs/fase-03/visao-geral.md` contém links válidos para cada ficha da Fase 02, procedimento, recurso, método e pontuação.
 
-## 8. Deliberações solicitadas à equipe
-
-Na reunião de apresentação, solicitar decisão explícita sobre:
-
-- Aceitar a organização do plano de avaliação em páginas por função, com o Plano de Medição distribuído e o Plano de Análise centralizado.
-- Ratificar que as definições de Fase 02 (versão, janela, 36 métricas, fórmulas e pontuação) são imutáveis durante a coleta, salvo correção formalmente justificada e versionada.
-- Aprovar a distribuição de autores/revisores das issues #95–#104, e os marcos das dependências.
-- Fixar quem harmonizará a terminologia G3 entre Fases 1 e 2.
-- Aprovar convenção de nomes, localização de evidências e os requisitos de gravação/salvamento dos dados brutos antes de iniciar #110.
-
-**Comprovação para encerrar #94:** link para esta proposta + link para a ata de reunião com participantes reais, data, discussão, decisões e encaminhamentos. Não marcar como aprovada antes da deliberação real.
 
 ## Referências
 
