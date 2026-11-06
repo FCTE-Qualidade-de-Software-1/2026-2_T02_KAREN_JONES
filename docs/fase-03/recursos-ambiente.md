@@ -99,10 +99,10 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 
 | Responsável | Métricas coletadas | Processador | Memória | Sistema operacional e versão | Navegador e versão |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| _a preencher_ | Análise estática e histórico: M1.1.1 a M1.5.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
-| _a preencher_ | Histórico de defeitos: M2.1.1 a M2.1.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
-| _a preencher_ | Testes no navegador de G2: M2.2.1 a M2.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
-| _a preencher_ | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
+| Christopher | Análise estática e histórico: M1.1.1 a M1.5.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
+| Luiz Henrique Soares| Histórico de defeitos: M2.1.1 a M2.1.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
+| Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
+| Maria Eduarda | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
 | Maria Eduarda | Desempenho: M3.2.1 e M3.2.2 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
 
 **Máquina de desempenho.** [M3.2.1](../fase-02/gqm-flexibilidade.md) e [M3.2.2](../fase-02/gqm-flexibilidade.md) dependem do hardware, porque o tempo de abertura e a taxa de quadros mudam com o processador, a memória, a placa gráfica e a tela. Por isso elas são coletadas somente na máquina da Maria Eduarda, e resultados dessas duas métricas obtidos em outra máquina não são usados. Além dos campos da tabela, ela registra o modelo da placa gráfica e a taxa de atualização da tela, porque [M3.2.2](../fase-02/pontuacao-julgamento.md) converte os quadros por segundo em percentual da meta de 60 quadros.
@@ -136,21 +136,21 @@ O aparelho precisa aceitar toque com mais de um dedo (ações 6 e 7: pinça e de
 
 A versão efetiva de cada ferramenta é registrada na primeira coleta, com o comando de versão e a saída. Versões já definidas na Fase 02 não mudam.
 
-| Ferramenta | Versão | Métricas | Comando de versão |
-| :--- | :--- | :--- | :--- |
-| Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 | `madge --version` |
-| ESLint, com `@typescript-eslint/parser` | 8.57.0 (parser: _a preencher_) | M1.3.1 | `npx eslint --version` |
-| cloc | 1.86 | M1.4.2 | `cloc --version` |
-| GitHub CLI (`gh`) | _a preencher_ | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
-| Vitest com `@vitest/coverage-v8` | 3.0.6 e 3.0.7, conforme o `package.json` do commit | M1.5.1 | `yarn vitest --version` |
-| `grep` | _a preencher_ | M1.2.1, M1.5.2 | `grep --version` |
-| Browserslist e `caniuse-lite` | _a preencher_ | M3.1.1 | `npx browserslist --version` |
-| Node.js | 24 (digest da seção 1) | todas as que executam código | `node --version` |
-| Yarn | 1.22.22 | M1.5.1, M3.3.2 | `yarn --version` |
-| npm e pnpm | _a preencher_ | M3.3.1 | `npm --version`, `pnpm --version` |
-| Docker | _a preencher_ | M3.3.2, M3.3.3 | `docker --version` |
-| Vite e Next.js dos projetos mínimos | _a preencher_ | M3.1.2 | registrado no `package.json` de cada projeto |
-| Scripts da avaliação (agregação de grafo, contagem de linhas por função, cruzamento de contribuições, comparação de elementos, geração de cenas) | versão do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1, M2.4.2, M2.4.3, M3.2.x, M3.4.2, M3.4.3 | commit do repositório da avaliação |
+| Ferramenta | Versão | Métricas |
+| :--- | :--- | :--- |
+| Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 |
+| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint) / 5.9.3 (TypeScript) | M1.3.1 |
+| cloc | 1.86 | M1.4.2 |
+| GitHub CLI (`gh`) | _a preencher (Christopher e Luiz Henrique)_ | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
+| Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 |
+| `grep` | _a preencher (Christopher)_ | M1.2.1, M1.5.2 |
+| Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` (via `yarn.lock`) | M3.1.1 |
+| Node.js | _a preencher (Equipe deve concordar em uma versão fixa `>=18.0.0`)_ | Todas as que executam código |
+| Yarn | 1.22.22 | M1.5.1, M3.3.2 |
+| npm e pnpm | _a preencher (Maria Eduarda)_ | M3.3.1 |
+| Docker e Docker Compose | _a preencher (Maria Eduarda)_ | M3.3.2, M3.3.3 |
+| Vite e Next.js dos projetos mínimos | _a preencher (Maria Eduarda)_ | M3.1.2 |
+| Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 |
 
 As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-02/gqm-confiabilidade.md), podem exigir uma versão de Node.js diferente da do commit avaliado. A versão usada em cada construção é registrada.
 
