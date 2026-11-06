@@ -26,8 +26,6 @@ A prioridade mede quantas issues abertas ficam travadas, direta ou indiretamente
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-As faixas funcionam como critério de decisão [[1, p. 7]](#ref-1) e foram definidas com a distribuição de 05/11/2026, porque ainda não há histórico dessa medida.
-
 ## Measurement construct
 
 O construct segue o template da disciplina [[1, p. 19]](#ref-1), como nos [relatórios PSM](relatorios/relatorio-psm-fase-2.md#2-measurement-constructs-da-fase-2-template-psmcid--aula-09-p-19), na categoria Calendário e Progresso [[2, p. 2]](#ref-2).
@@ -79,7 +77,7 @@ Os dois campos de data desenham as barras na visualização de roteiro do Projec
 
 ## Referências
 
-> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA 09 QSW1 PSM resumo**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 7 e 19. Disponível no Moodle da disciplina.
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA 09 QSW1 PSM resumo**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 19. Disponível no Moodle da disciplina.
 >
 > <Link id="ref-2">2.</Link> **2026-2 Trabalho final completo v1**. Especificação do trabalho final de Qualidade de Software 1, FCTE/UnB, 2026. Página 2, seção 2. Disponível no Moodle da disciplina.
 >
@@ -91,5 +89,4 @@ Os dois campos de data desenham as barras na visualização de roteiro do Projec
 | :--- | :--- | :--- | :--- | :--- |
 | 1.0 | 05/11/2026 | Criação da página | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.1 | 05/11/2026 | Inclusão de referências e links entre documentos | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.2 | 05/11/2026 | Simplificação da página | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.3 | 06/11/2026 | Títulos acima das tabelas, fontes abaixo e nome do autor com link | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 06/11/2026 | Títulos acima das tabelas, fontes abaixo e nome do autor com link | [Christopher Paraizo](https://github.com/wChrstphr) | |
