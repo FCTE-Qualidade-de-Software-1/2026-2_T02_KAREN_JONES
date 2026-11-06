@@ -6,7 +6,7 @@ description: Caracterização estruturada do Excalidraw, arquitetura em monorepo
 
 # Descrição Estruturada e Arquitetura do Excalidraw
 
-Em conformidade com a norma **ISO/IEC 25040:2011** e com os critérios da disciplina (critério **F1-C3**), a especificação dos requisitos de avaliação exige uma compreensão detalhada da natureza do produto, sua organização arquitetural interna, dependências, fronteiras funcionais e as restrições que influenciam diretamente a viabilidade e a profundidade das medições.
+Em conformidade com a norma **ISO/IEC 25040:2011**, a especificação dos requisitos de avaliação exige uma compreensão detalhada da natureza do produto, sua organização arquitetural interna, dependências, fronteiras funcionais e as restrições que influenciam diretamente a viabilidade e a profundidade das medições.
 
 ---
 
@@ -107,5 +107,6 @@ A contextualização arquitetural realizada neste documento fundamenta e valida 
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 18/10/2026 | Criação da descrição estruturada do produto, mapeamento de módulos, diagrama de contexto e análise de implicações para avaliação (Critério F1-C3) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.0 | 18/10/2026 | Criação da descrição estruturada do produto, mapeamento de módulos, diagrama de contexto e análise de implicações para avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 20/10/2026 | Diagrama de contexto e arquitetura redesenhado no Excalidraw e publicado em PNG, com o arquivo editável | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 06/11/2026 | Retirada da citação ao critério de avaliação da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | |

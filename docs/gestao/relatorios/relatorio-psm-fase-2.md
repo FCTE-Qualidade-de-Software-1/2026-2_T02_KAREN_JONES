@@ -178,7 +178,7 @@ Todos os indicadores apresentados neste relatório são respaldados pelos artefa
 
 ---
 
-## 7. Declaração de Uso de Inteligência Artificial (Critério F2-C9)
+## 7. Declaração de Uso de Inteligência Artificial
 
 * **Ferramenta utilizada:** Antigravity / Gemini 3.8.
 * **Finalidade no relatório:** Apoio na estruturação dos Measurement Constructs da Fase 2 no template da Aula 09 (p. 19), formatação das tabelas de dados e consolidação das decisões de gestão.
@@ -192,3 +192,4 @@ Todos os indicadores apresentados neste relatório são respaldados pelos artefa
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Estruturação inicial do Relatório PSM/CID da Fase 2 (esqueleto normativo, measurement constructs e decisões de gestão preliminares) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
 | 1.1 | 20/10/2026 | Atualização das medições da Fase 2 (15 issues concluídas, 21,7h reais) e consolidação da Entrega 1 pós-merge com a main | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
+| 1.2 | 06/11/2026 | Retirada da citação ao critério de avaliação da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | |

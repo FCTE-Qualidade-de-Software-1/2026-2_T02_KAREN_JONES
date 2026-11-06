@@ -199,7 +199,7 @@ Conforme determina a **Premissa 5**, todos os números apresentados neste relat�
 
 ---
 
-## 8. Declaração de Uso de Inteligência Artificial (Critério F1-C10)
+## 8. Declaração de Uso de Inteligência Artificial
 
 * **Ferramenta utilizada:** Antigravity / Gemini 3.8.
 * **Finalidade no relatório:** Apoio na estruturação lógica dos Measurement Constructs, organização dos indicadores segundo o modelo PSM/CID e redação inicial das análises de performance e estimativa.
@@ -213,3 +213,4 @@ Conforme determina a **Premissa 5**, todos os números apresentados neste relat�
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação do Relatório PSM/CID da Fase 1 com measurement constructs, medições e decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.1 | 20/10/2026 | Isolamento dos dados da Fase 1 (contribuição individual e gráficos exclusivos da fase) e novos gráficos de apoio | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
+| 1.2 | 06/11/2026 | Retirada da citação ao critério de avaliação da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | |
