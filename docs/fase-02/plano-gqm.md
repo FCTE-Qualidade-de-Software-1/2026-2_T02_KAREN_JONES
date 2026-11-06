@@ -4,68 +4,74 @@ title: Plano GQM
 description: Plano GQM da avaliação do Excalidraw, com os diagramas da hierarquia de objetivos, questões e métricas de G1, G2 e G3, as hipóteses, as diretrizes de interpretação e a rastreabilidade com a Fase 01
 ---
 
+import Link from '@docusaurus/Link';
+
 # Plano GQM
 
-O Plano GQM reúne em um só lugar os objetivos, as questões, as métricas e as hipóteses da medição, junto com as diretrizes para interpretar os resultados. Ele é a base para definir os procedimentos de coleta e para elaborar os planos de medição e de análise (AULA 08, p. 44).
+## Introdução
 
-Esta página não cria nenhum item novo. Ela consolida o que foi definido nas demais páginas da Fase 02:
+O Plano GQM reúne em um só lugar os objetivos, as questões, as métricas e as hipóteses da medição, junto com as diretrizes para interpretar os resultados. Ele é a base para definir os procedimentos de coleta e para elaborar os planos de medição e de análise [[1, p. 44]](#ref-1).
 
-- os objetivos G1, G2 e G3 vêm dos [objetivos de medição](./estrutura-gqm.md#3-objetivos-de-medição);
-- as questões, as hipóteses e as fichas das métricas vêm das páginas de [Manutenibilidade (G1)](./gqm-manutenibilidade.md), [Confiabilidade (G2)](./gqm-confiabilidade.md) e [Flexibilidade (G3)](./gqm-flexibilidade.md);
-- as diretrizes de interpretação vêm dos [níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md).
+Esta página não cria nenhum item novo: ela consolida o que foi definido nas demais páginas da Fase 02. Os planos de medição e de análise ficam para a Fase 03, como registrado na [divisão entre as Fases 02 e 03](./estrutura-gqm.md#divisão-entre-as-fases-02-e-03).
 
-Os planos de medição e de análise ficam para a Fase 03, como registrado na [divisão entre as Fases 02 e 03](./estrutura-gqm.md#divisão-entre-as-fases-02-e-03).
+## Metodologia
+
+O conteúdo do plano é o que a aula pede que ele contenha [[1, p. 44]](#ref-1). A construção seguiu estes passos:
+
+1. **Entrada:** os [objetivos de medição](./estrutura-gqm.md#3-objetivos-de-medição), as páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md) e os [níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md).
+2. **Diagramas:** a hierarquia de cada objetivo foi desenhada no Excalidraw, com os três níveis do GQM identificados.
+3. **Consolidação:** as questões, as hipóteses e as métricas foram reunidas por objetivo, com links para as páginas de origem, e completadas com as [diretrizes de interpretação](#5-diretrizes-de-interpretação) e a [rastreabilidade com a Fase 01](#6-rastreabilidade-com-a-fase-01).
 
 ---
 
 ## 1. Como ler os diagramas
 
-O GQM é uma hierarquia de três níveis (AULA 08, p. 8):
+O GQM é uma hierarquia de três níveis [[1, p. 8]](#ref-1):
+
+<p className="tabela-titulo">Tabela 1: Níveis do GQM</p>
 
 | Nível | Elemento | O que representa nesta avaliação |
 | :--- | :--- | :--- |
-| Conceitual | Objetivo | Uma característica de qualidade da ISO/IEC 25010 escolhida na Fase 01, analisada do ponto de vista dos seus interessados principais. |
+| Conceitual | Objetivo | Uma característica de qualidade da [ISO/IEC 25010](../fase-01/modelo-de-qualidade.md) escolhida na Fase 01, analisada do ponto de vista dos seus interessados principais. |
 | Operacional | Questão | Uma subcaracterística da característica do objetivo. Cada questão caracteriza o produto em relação a ela. |
 | Quantitativo | Métrica | Um dado coletado do produto que ajuda a responder a questão. |
 
-*Tabela 1: Níveis do GQM (AULA 08, p. 8).*
+<p className="tabela-fonte">Fonte: adaptada de Ramos [[1, p. 8]](#ref-1).</p>
 
-A hierarquia é construída de cima para baixo e lida de baixo para cima. Na **definição**, cada objetivo é refinado em questões, e cada questão em métricas. Na **interpretação**, o caminho é o inverso: os valores das métricas respondem às questões, e as respostas das questões são usadas para concluir sobre o objetivo (AULA 08, p. 7 e 8).
+A hierarquia é construída de cima para baixo e lida de baixo para cima. Na **definição**, cada objetivo é refinado em questões, e cada questão em métricas. Na **interpretação**, o caminho é o inverso: os valores das métricas respondem às questões, e as respostas das questões são usadas para concluir sobre o objetivo [[1, p. 7 e 8]](#ref-1).
 
-As [Figuras 1](#2-g1-manutenibilidade), [2](#3-g2-confiabilidade) e [3](#4-g3-flexibilidade) seguem a mesma legenda:
+Nas Figuras [1](#2-g1-manutenibilidade), [2](#3-g2-confiabilidade) e [3](#4-g3-flexibilidade), cada faixa horizontal é um nível da Tabela 1, e cada métrica fica abaixo da questão que responde. As setas à direita indicam o sentido da definição e o da interpretação. As cores são as do [modelo de qualidade](../fase-01/modelo-de-qualidade.md#representação-gráfica-do-modelo) da Fase 01: azul para G1, verde para G2 e laranja para G3. Clique em uma figura para abri-la em tamanho real.
 
-- **Faixas horizontais:** os três níveis da Tabela 1. A faixa de cima é o nível conceitual, a do meio é o operacional e a de baixo é o quantitativo.
-- **Caixa escura no alto:** o objetivo, com a característica avaliada, o propósito, o objeto e o ponto de vista. O texto completo de cada objetivo está nos [objetivos de medição](./estrutura-gqm.md#3-objetivos-de-medição).
-- **Caixas escuras do meio:** as questões, com o código e a subcaracterística correspondente.
-- **Caixas claras de baixo:** as métricas, com o código e o nome. Cada métrica fica abaixo da questão que responde.
-- **Linhas:** ligam cada elemento ao elemento de nível superior que ele detalha.
-- **Setas à direita:** o sentido da definição (para baixo) e o da interpretação (para cima).
-- **Cores:** azul para G1, verde para G2 e laranja para G3, as mesmas do [modelo de qualidade](../fase-01/modelo-de-qualidade.md#representação-gráfica-do-modelo) da Fase 01.
+Os diagramas foram desenhados no próprio Excalidraw, o produto avaliado. Os arquivos editáveis são [`gqm-g1.excalidraw`](../images/gqm-g1.excalidraw), [`gqm-g2.excalidraw`](../images/gqm-g2.excalidraw) e [`gqm-g3.excalidraw`](../images/gqm-g3.excalidraw).
 
-Os três diagramas foram desenhados no próprio Excalidraw, o produto avaliado. Para editar um deles, abra o arquivo correspondente ([`gqm-g1.excalidraw`](../images/gqm-g1.excalidraw), [`gqm-g2.excalidraw`](../images/gqm-g2.excalidraw) ou [`gqm-g3.excalidraw`](../images/gqm-g3.excalidraw)) em [excalidraw.com](https://excalidraw.com/) e exporte o PNG de novo com a opção de incluir a cena ativada. O PNG publicado também guarda a cena, então pode ser aberto direto no editor.
+A Tabela 2 resume o tamanho de cada objetivo.
 
-Os códigos seguem a posição na hierarquia. Q1.3 é a terceira questão de G1, e M1.3.2 é a segunda métrica de Q1.3. A Tabela 2 resume o tamanho de cada objetivo.
+<p className="tabela-titulo">Tabela 2: Quantidade de questões e de métricas por objetivo</p>
 
 | Objetivo | Característica | Questões | Métricas | Detalhamento |
 | :--- | :--- | :---: | :---: | :--- |
-| G1 | Manutenibilidade | 5 | 14 | [GQM de Manutenibilidade](./gqm-manutenibilidade.md) |
-| G2 | Confiabilidade | 4 | 10 | [GQM de Confiabilidade](./gqm-confiabilidade.md) |
-| G3 | Flexibilidade | 4 | 12 | [GQM de Flexibilidade](./gqm-flexibilidade.md) |
+| [G1](./estrutura-gqm.md#g1-manutenibilidade) | Manutenibilidade | 5 | 14 | [GQM de Manutenibilidade](./gqm-manutenibilidade.md) |
+| [G2](./estrutura-gqm.md#g2-confiabilidade) | Confiabilidade | 4 | 10 | [GQM de Confiabilidade](./gqm-confiabilidade.md) |
+| [G3](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade) | Flexibilidade | 4 | 12 | [GQM de Flexibilidade](./gqm-flexibilidade.md) |
 | **Total** | | **13** | **36** | |
 
-*Tabela 2: Quantidade de questões e de métricas por objetivo.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
 ## 2. G1: Manutenibilidade
 
-**Objetivo:** analisar o código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), seus testes, sua documentação para desenvolvedores e o histórico público de alterações, para o propósito de entender, com respeito à Manutenibilidade, do ponto de vista de mantenedores e contribuidores do projeto ([G1 nos objetivos de medição](./estrutura-gqm.md#g1-manutenibilidade)).
+**Objetivo:** analisar o código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), seus testes, sua documentação para desenvolvedores e o histórico público de alterações, para o propósito de entender, com respeito à Manutenibilidade, do ponto de vista de mantenedores e contribuidores do projeto, no contexto de código-fonte público na versão de 18/10/2026, avaliado por equipe independente ([G1 nos objetivos de medição](./estrutura-gqm.md#g1-manutenibilidade)).
+
+<p className="tabela-titulo">Figura 1: Hierarquia GQM do objetivo G1 (Manutenibilidade), com 5 questões e 14 métricas</p>
 
 [![Diagrama em três níveis. Nível conceitual: objetivo G1, entender a manutenibilidade do código-fonte, dos testes e do histórico do ponto de vista de mantenedores e contribuidores do projeto. Nível operacional: 5 questões, uma por subcaracterística. Nível quantitativo: 14 métricas. Q1.1 (Modularidade) é respondida por M1.1.1, M1.1.2, M1.1.3. Q1.2 (Reusabilidade) é respondida por M1.2.1, M1.2.2. Q1.3 (Analisabilidade) é respondida por M1.3.1, M1.3.2, M1.3.3. Q1.4 (Modificabilidade) é respondida por M1.4.1, M1.4.2, M1.4.3. Q1.5 (Testabilidade) é respondida por M1.5.1, M1.5.2, M1.5.3.](../images/gqm-g1.png)](../images/gqm-g1.png)
 
-*Figura 1: Hierarquia GQM do objetivo G1 (Manutenibilidade), com 5 questões e 14 métricas. Clique na figura para abri-la em tamanho real.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 A [Figura 1](#2-g1-manutenibilidade) mostra a hierarquia completa de G1. A Tabela 3 traz a pergunta e as hipóteses de cada questão, uma por métrica. A regra que confirma ou refuta cada hipótese está na tabela de hipóteses da questão, no link do código da questão. A ficha de cada métrica, com definição, cálculo, fonte, coleta e critério de interpretação, está no link do código da métrica.
+
+<p className="tabela-titulo">Tabela 3: Questões, hipóteses e métricas de G1</p>
 
 | Questão | Pergunta | Hipóteses | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -75,19 +81,23 @@ A [Figura 1](#2-g1-manutenibilidade) mostra a hierarquia completa de G1. A Tabel
 | [Q1.4](./gqm-manutenibilidade.md#6-q14-modificabilidade) Modificabilidade | As alterações no código ficam restritas a poucas partes, ou tendem a se espalhar e a passar por arquivos que concentram responsabilidades demais? | [H1.4.1](./gqm-manutenibilidade.md#6-q14-modificabilidade) A maioria das contribuições alterará poucos arquivos de produção.<br/>[H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade) Poucos arquivos de produção serão extensos.<br/>[H1.4.3](./gqm-manutenibilidade.md#6-q14-modificabilidade) Os arquivos extensos serão alterados com frequência. | [M1.4.1](./gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição) Mediana de arquivos de produção alterados por contribuição<br/>[M1.4.2](./gqm-manutenibilidade.md#m142-arquivos-de-produção-extensos) Arquivos de produção extensos<br/>[M1.4.3](./gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) Proporção de contribuições que alteram arquivos extensos |
 | [Q1.5](./gqm-manutenibilidade.md#7-q15-testabilidade) Testabilidade | O código pode ser verificado por testes automatizados, em diferentes níveis, executados a cada alteração? | [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade) A biblioteca terá cobertura de testes maior que a da aplicação web.<br/>[H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade) Testes unitários e de integração serão a maior parte dos arquivos de teste.<br/>[H1.5.3](./gqm-manutenibilidade.md#7-q15-testabilidade) Os testes rodarão em toda contribuição antes da integração. | [M1.5.1](./gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote) Cobertura de linhas por pacote<br/>[M1.5.2](./gqm-manutenibilidade.md#m152-distribuição-dos-testes-por-nível) Distribuição dos testes por nível<br/>[M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração) Proporção de contribuições com testes executados antes da integração |
 
-*Tabela 3: Questões, hipóteses e métricas de G1.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
 ## 3. G2: Confiabilidade
 
-**Objetivo:** analisar o editor, a aplicação web e os mecanismos de colaboração e de salvamento no navegador, além do histórico público de defeitos relatados, para o propósito de entender, com respeito à Confiabilidade, do ponto de vista de usuários finais ([G2 nos objetivos de medição](./estrutura-gqm.md#g2-confiabilidade)).
+**Objetivo:** analisar o editor, a aplicação web e os mecanismos de colaboração e de salvamento no navegador, além do histórico público de defeitos relatados, para o propósito de entender, com respeito à Confiabilidade, do ponto de vista de usuários finais, no contexto de código-fonte público na versão de 18/10/2026, avaliado por equipe independente, sem acesso aos servidores de produção ([G2 nos objetivos de medição](./estrutura-gqm.md#g2-confiabilidade)).
+
+<p className="tabela-titulo">Figura 2: Hierarquia GQM do objetivo G2 (Confiabilidade), com 4 questões e 10 métricas</p>
 
 [![Diagrama em três níveis. Nível conceitual: objetivo G2, entender a confiabilidade do editor, da colaboração e do salvamento do ponto de vista de usuários finais. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 10 métricas. Q2.1 (Ausência de falhas) é respondida por M2.1.1, M2.1.2, M2.1.3. Q2.2 (Disponibilidade) é respondida por M2.2.1, M2.2.2. Q2.3 (Tolerância a falhas) é respondida por M2.3.1, M2.3.2. Q2.4 (Recuperabilidade) é respondida por M2.4.1, M2.4.2, M2.4.3.](../images/gqm-g2.png)](../images/gqm-g2.png)
 
-*Figura 2: Hierarquia GQM do objetivo G2 (Confiabilidade), com 4 questões e 10 métricas. Clique na figura para abri-la em tamanho real.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-A [Figura 2](#3-g2-confiabilidade) mostra a hierarquia completa de G2, e a Tabela 4 detalha cada questão. A subcaracterística Ausência de falhas corresponde à Maturidade da edição de 2011 da norma, nome usado na Fase 01.
+A [Figura 2](#3-g2-confiabilidade) mostra a hierarquia completa de G2, e a Tabela 4 detalha cada questão. A subcaracterística Ausência de falhas corresponde à Maturidade da edição de 2011 da norma, nome usado na [Fase 01](../fase-01/modelo-de-qualidade.md#rastreabilidade-entre-subcaracterísticas-interessados-e-artefatos).
+
+<p className="tabela-titulo">Tabela 4: Questões, hipóteses e métricas de G2</p>
 
 | Questão | Pergunta | Hipóteses | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -96,19 +106,23 @@ A [Figura 2](#3-g2-confiabilidade) mostra a hierarquia completa de G2, e a Tabel
 | [Q2.3](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) Tolerância a falhas | O editor continua funcionando quando recebe dados inválidos ou quando a conexão com a colaboração falha? | [H2.3.1](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) Arquivos inválidos serão recusados com mensagem, sem travar o editor.<br/>[H2.3.2](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) O desenho local continuará editável se a colaboração cair. | [M2.3.1](./gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem) Proporção de arquivos inválidos tratados com mensagem<br/>[M2.3.2](./gqm-confiabilidade.md#m232-continuidade-do-editor-após-falha-da-colaboração) Continuidade do editor após falha da colaboração |
 | [Q2.4](./gqm-confiabilidade.md#6-q24-recuperabilidade) Recuperabilidade | O usuário recupera seu trabalho depois de fechar a aplicação, de reabrir arquivos antigos ou de cometer um erro de edição? | [H2.4.1](./gqm-confiabilidade.md#6-q24-recuperabilidade) O último desenho será restaurado ao reabrir a aplicação, mesmo após fechamento inesperado.<br/>[H2.4.2](./gqm-confiabilidade.md#6-q24-recuperabilidade) Arquivos da versão atual e de versões anteriores reabrirão sem perda.<br/>[H2.4.3](./gqm-confiabilidade.md#6-q24-recuperabilidade) Desfazer e refazer cobrirão as ações de edição do usuário. | [M2.4.1](./gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) Proporção de cenários de fechamento com restauração do desenho<br/>[M2.4.2](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda) Proporção de arquivos reabertos sem perda<br/>[M2.4.3](./gqm-confiabilidade.md#m243-cobertura-de-desfazer-e-refazer) Cobertura de desfazer e refazer |
 
-*Tabela 4: Questões, hipóteses e métricas de G2.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
 ## 4. G3: Flexibilidade
 
-**Objetivo:** analisar a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação, para o propósito de entender, com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca em seus sistemas e de equipes de implantação e operação ([G3 nos objetivos de medição](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade)).
+**Objetivo:** analisar a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação, para o propósito de entender, com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca em seus sistemas e de equipes de implantação e operação, no contexto de código-fonte público na versão de 18/10/2026, avaliado por equipe independente ([G3 nos objetivos de medição](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade)).
+
+<p className="tabela-titulo">Figura 3: Hierarquia GQM do objetivo G3 (Flexibilidade), com 4 questões e 12 métricas</p>
 
 [![Diagrama em três níveis. Nível conceitual: objetivo G3, entender a flexibilidade da biblioteca e da aplicação web do ponto de vista de integradores e equipes de implantação e operação. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 12 métricas. Q3.1 (Adaptabilidade) é respondida por M3.1.1, M3.1.2, M3.1.3. Q3.2 (Escalabilidade) é respondida por M3.2.1, M3.2.2, M3.2.3. Q3.3 (Instalabilidade) é respondida por M3.3.1, M3.3.2, M3.3.3. Q3.4 (Substituibilidade) é respondida por M3.4.1, M3.4.2, M3.4.3.](../images/gqm-g3.png)](../images/gqm-g3.png)
 
-*Figura 3: Hierarquia GQM do objetivo G3 (Flexibilidade), com 4 questões e 12 métricas. Clique na figura para abri-la em tamanho real.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 A [Figura 3](#4-g3-flexibilidade) mostra a hierarquia completa de G3, e a Tabela 5 detalha cada questão.
+
+<p className="tabela-titulo">Tabela 5: Questões, hipóteses e métricas de G3</p>
 
 | Questão | Pergunta | Hipóteses | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -117,18 +131,20 @@ A [Figura 3](#4-g3-flexibilidade) mostra a hierarquia completa de G3, e a Tabela
 | [Q3.3](./gqm-flexibilidade.md#5-q33-instalabilidade) Instalabilidade | A biblioteca e a aplicação podem ser instaladas, construídas e implantadas seguindo apenas a documentação, em ambientes diferentes? | [H3.3.1](./gqm-flexibilidade.md#5-q33-instalabilidade) A biblioteca será instalada e removida sem erro pelos gerenciadores de pacotes.<br/>[H3.3.2](./gqm-flexibilidade.md#5-q33-instalabilidade) As instruções de execução local bastarão, com as versões de ferramentas exigidas.<br/>[H3.3.3](./gqm-flexibilidade.md#5-q33-instalabilidade) A imagem Docker será construída e executada sem passos manuais. | [M3.3.1](./gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) Proporção de operações de pacote bem-sucedidas<br/>[M3.3.2](./gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) Proporção de passos documentados reproduzidos sem ajuste<br/>[M3.3.3](./gqm-flexibilidade.md#m333-implantação-com-docker) Implantação com Docker |
 | [Q3.4](./gqm-flexibilidade.md#6-q34-substituibilidade) Substituibilidade | Os desenhos feitos no Excalidraw podem ser levados para outras ferramentas, em formatos abertos e sem perda de conteúdo? | [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) O desenho poderá ser exportado em formatos abertos.<br/>[H3.4.2](./gqm-flexibilidade.md#6-q34-substituibilidade) A reimportação preservará os elementos do desenho.<br/>[H3.4.3](./gqm-flexibilidade.md#6-q34-substituibilidade) O formato `.excalidraw` terá documentação apenas parcial. | [M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis) Formatos de exportação abertos disponíveis<br/>[M3.4.2](./gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação) Proporção de elementos preservados na exportação e reimportação<br/>[M3.4.3](./gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados) Proporção dos campos do formato `.excalidraw` documentados |
 
-*Tabela 5: Questões, hipóteses e métricas de G3.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
 ## 5. Diretrizes de interpretação
 
-As hipóteses ajudam a interpretar os resultados (AULA 08, p. 34). Cada resultado é lido de duas formas independentes, definidas antes da coleta:
+As hipóteses ajudam a interpretar os resultados [[1, p. 34]](#ref-1). Cada resultado é lido de duas formas independentes, definidas antes da coleta:
 
-1. **Hipótese.** O valor da métrica confirma ou refuta a hipótese ligada a ela, pela regra de confirmação escrita no critério de interpretação da ficha da métrica. As hipóteses estão nas Tabelas 3, 4 e 5 e são as mesmas hipóteses de baseline das [abstraction sheets](./abstraction-sheets.md).
+1. **Hipótese.** O valor da métrica confirma ou refuta a hipótese ligada a ela, pela regra de confirmação escrita no critério de interpretação da ficha da métrica. As hipóteses estão nas Tabelas 3, 4 e 5 e são as mesmas hipóteses de *baseline* das [abstraction sheets](./abstraction-sheets.md), como a aula permite [[1, p. 34]](#ref-1).
 2. **Nível de pontuação.** O valor da métrica é convertido em um dos cinco níveis da [escala de pontuação](./pontuacao-julgamento.md#1-escala-de-pontuação), pelas faixas de [G1](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1), [G2](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) e [G3](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 A interpretação segue o sentido de baixo para cima das figuras:
+
+<p className="tabela-titulo">Tabela 6: Passos da interpretação, do nível quantitativo ao conceitual</p>
 
 | Passo | Nível do GQM | O que é feito | Regra |
 | :---: | :--- | :--- | :--- |
@@ -137,7 +153,7 @@ A interpretação segue o sentido de baixo para cima das figuras:
 | 3 | Conceitual | A característica do objetivo recebe a média das suas questões e é julgada como *atende*, *não atende* ou *inconclusiva*. | [Seção 7.1](./pontuacao-julgamento.md#71-julgamento-de-cada-característica) da página de pontuação |
 | 4 | Todos | Métricas nos dois piores níveis viram pontos de melhoria, rastreáveis até a questão e a subcaracterística. | [Seção 7.3](./pontuacao-julgamento.md#73-pontos-de-melhoria) da página de pontuação |
 
-*Tabela 6: Passos da interpretação, do nível quantitativo ao conceitual.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 Se uma métrica não puder ser coletada, a regra das [métricas não coletadas](./pontuacao-julgamento.md#61-métricas-não-coletadas) define como a questão e a característica são tratadas.
 
@@ -146,6 +162,8 @@ Se uma métrica não puder ser coletada, a regra das [métricas não coletadas](
 ## 6. Rastreabilidade com a Fase 01
 
 A Tabela 7 liga cada questão à subcaracterística, aos interessados e aos requisitos de avaliação da Fase 01 de onde ela veio. Os interessados principais são os da [rastreabilidade do modelo de qualidade](../fase-01/modelo-de-qualidade.md#rastreabilidade-entre-subcaracterísticas-interessados-e-artefatos). Os requisitos são os da [estrutura das questões](./estrutura-gqm.md#4-estrutura-das-questões). A ligação de cada requisito com as métricas está na seção de rastreabilidade de [G1](./gqm-manutenibilidade.md#8-rastreabilidade-com-a-fase-01), [G2](./gqm-confiabilidade.md#7-rastreabilidade-com-a-fase-01) e [G3](./gqm-flexibilidade.md#7-rastreabilidade-com-a-fase-01).
+
+<p className="tabela-titulo">Tabela 7: Rastreabilidade entre a Fase 01 e o Plano GQM</p>
 
 | Característica (Fase 01) | Subcaracterística | Interessados principais | Requisitos de avaliação | Questão | Métricas |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -163,26 +181,26 @@ A Tabela 7 liga cada questão à subcaracterística, aos interessados e aos requ
 | [Flexibilidade](../fase-01/modelo-de-qualidade.md#flexibilidade) | Instalabilidade | [Integradores](../fase-01/interessados.md#5-desenvolvedores-que-integram-a-biblioteca); [Equipes de operação](../fase-01/interessados.md#6-equipes-de-implantação-e-operação); [Contribuidores](../fase-01/interessados.md#4-contribuidores-open-source) | [RQ-FLEX-07 a 10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | [Q3.3](./gqm-flexibilidade.md#5-q33-instalabilidade) | [M3.3.1](./gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas), [M3.3.2](./gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste), [M3.3.3](./gqm-flexibilidade.md#m333-implantação-com-docker) |
 | [Flexibilidade](../fase-01/modelo-de-qualidade.md#flexibilidade) | Substituibilidade | [Usuários finais](../fase-01/interessados.md#1-usuários-finais); [Integradores](../fase-01/interessados.md#5-desenvolvedores-que-integram-a-biblioteca) | [RQ-FLEX-11 e 12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | [Q3.4](./gqm-flexibilidade.md#6-q34-substituibilidade) | [M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis), [M3.4.2](./gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação), [M3.4.3](./gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados) |
 
-*Tabela 7: Rastreabilidade entre a Fase 01 e o Plano GQM.*
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-Todas as 13 subcaracterísticas do [modelo de qualidade](../fase-01/modelo-de-qualidade.md) têm uma questão, e todos os 36 requisitos de avaliação da Fase 01 são cobertos por pelo menos uma métrica. A Fase 01 usa o nome Maturidade, da edição de 2011 da norma, para a subcaracterística que a Fase 02 chama de Ausência de falhas.
+Todas as 13 subcaracterísticas do [modelo de qualidade](../fase-01/modelo-de-qualidade.md) têm uma questão, e todos os 36 [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da Fase 01 são cobertos por pelo menos uma métrica: 27 por completo e 9 em parte. A coluna "Atendimento" da rastreabilidade de cada objetivo mostra quais são os atendidos em parte e o que fica de fora.
 
 ---
 
 ## 7. Uso do plano nas próximas fases
 
-Na Fase 03, o Plano GQM é a base de dois outros planos (AULA 08, p. 45 e 46):
+Na Fase 03, o Plano GQM é a base de dois outros planos [[1, p. 45 e 46]](#ref-1):
 
 - o **Plano de Medição**, que define o responsável pela coleta de cada métrica, o momento da coleta e o meio usado (formulário ou ferramenta), a partir dos procedimentos de coleta das fichas das métricas;
-- o **Plano de Análise**, que simula a interpretação antes de a medição começar, seguindo as diretrizes da [seção 5](#5-diretrizes-de-interpretação), e define como os resultados serão apresentados em tabelas e gráficos.
+- o **Plano de Análise**, que simula a interpretação antes de a medição começar, seguindo as diretrizes da [seção 5](#5-diretrizes-de-interpretação), define como os resultados serão apresentados em tabelas e gráficos, e registra as hipóteses e os fatores de variação das [abstraction sheets](./abstraction-sheets.md) para comparação com os valores reais.
 
-Os planos devem ser avaliados com os membros da equipe e aprovados (AULA 08, p. 47). Se a revisão alterar alguma questão, hipótese ou métrica, a alteração deve ser feita na página de origem e repetida nesta página e nas figuras, com registro no histórico de versões das duas páginas.
+A aula pede que os planos sejam avaliados com os membros da equipe do projeto e aprovados [[1, p. 47]](#ref-1). Como não há acesso à equipe do Excalidraw, a revisão é feita por outro integrante da equipe avaliadora ([adaptação das etapas](./estrutura-gqm.md#2-como-as-etapas-do-gqm-foram-adaptadas)). Se a revisão alterar alguma questão, hipótese ou métrica, a alteração deve ser feita na página de origem e repetida nesta página e nas figuras, com registro no histórico de versões das duas páginas.
 
 ---
 
 ## Referências
 
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 7, 8, 34, 44, 45, 46 e 47.
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA 08 QSW1 GQM**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 7, 8, 34, 44, 45, 46 e 47. Disponível no Moodle da disciplina.
 
 ---
 
@@ -193,3 +211,4 @@ Os planos devem ser avaliados com os membros da equipe e aprovados (AULA 08, p. 
 | 1.0 | 19/10/2026 | Criação do Plano GQM, com os diagramas da hierarquia de G1, G2 e G3, as diretrizes de interpretação e a rastreabilidade com a Fase 01 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.1 | 20/10/2026 | Diagramas de G1, G2 e G3 refeitos no Excalidraw e publicados em PNG, com os arquivos editáveis `.excalidraw` | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Tabelas 3, 4 e 5 com as hipóteses refeitas, uma por métrica, e diretriz de interpretação ajustada à regra de confirmação | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 06/11/2026 | Inclusão de introdução e metodologia; legenda dos diagramas resumida; tabelas e figuras numeradas, com título e fonte; referências numeradas e ligadas às citações; contexto nos objetivos; atendimento parcial dos requisitos na rastreabilidade; hipóteses e fatores de variação no Plano de Análise; adaptação da revisão dos planos ([#56](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/56)) | [Christopher Paraizo](https://github.com/wChrstphr) | |
