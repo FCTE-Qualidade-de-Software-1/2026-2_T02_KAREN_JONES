@@ -14,29 +14,12 @@ Esta página define como cada resultado das métricas de [G1](./gqm-manutenibili
 
 As regras daqui são usadas na [interpretação do Plano GQM](./plano-gqm.md#5-diretrizes-de-interpretação).
 
-## Objetivos
-
-A página atende ao critério F2-C5 do trabalho final, que pede níveis para todas as métricas e critérios que definam como os resultados serão interpretados [[3, p. 5]](#ref-3).
-
-<p className="tabela-titulo">Tabela 1: Objetivos da página e seções que os atendem</p>
-
-| Objetivo | Seção |
-| :--- | :--- |
-| Adotar uma escala única para métricas, questões e características | [Seção 1](#1-escala-de-pontuação) |
-| Justificar a origem das faixas de valores | [Seção 2](#2-como-as-faixas-foram-definidas) |
-| Estabelecer os níveis de todas as métricas | Seções [3](#3-níveis-das-métricas-de-manutenibilidade-g1), [4](#4-níveis-das-métricas-de-confiabilidade-g2) e [5](#5-níveis-das-métricas-de-flexibilidade-g3) |
-| Definir como as pontuações são combinadas | [Seção 6](#6-agregação-da-métrica-à-característica) |
-| Definir como os resultados são julgados | [Seção 7](#7-critérios-de-julgamento) |
-| Registrar os limites dessas escolhas | [Seção 8](#8-limitações) |
-
-<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
-
 ## Metodologia
 
 Todas as regras desta página foram definidas antes da coleta, que acontece na Fase 04. Assim, as faixas não podem ser ajustadas para favorecer ou prejudicar o resultado. A construção seguiu estes passos:
 
 1. **Entrada:** o valor de cada métrica e a forma de calculá-lo, nas fichas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md).
-2. **Escala:** adoção dos cinco níveis do modelo de Heitlager, Kuipers e Visser [[4, p. 5]](#ref-4).
+2. **Escala:** adoção dos cinco níveis do modelo de Heitlager, Kuipers e Visser [[3, p. 5]](#ref-3).
 3. **Faixas:** cada métrica recebe a primeira origem aplicável da [seção 2](#2-como-as-faixas-foram-definidas), e o que não vem do modelo é justificado nas seções [3.2](#32-justificativas-específicas), [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas).
 4. **Agregação e julgamento:** as regras das seções [6](#6-agregação-da-métrica-à-característica) e [7](#7-critérios-de-julgamento) levam da métrica à característica.
 5. **Saída:** cada nível é usado no [Plano GQM](./plano-gqm.md#5-diretrizes-de-interpretação), e cada [hipótese](#72-hipóteses) é avaliada à parte.
@@ -45,9 +28,9 @@ Todas as regras desta página foram definidas antes da coleta, que acontece na F
 
 ## 1. Escala de pontuação
 
-A equipe adota a escala de cinco níveis do modelo de manutenibilidade de Heitlager, Kuipers e Visser, usada para pontuar tanto as propriedades medidas quanto as características: `++` / `+` / `o` / `-` / `--` [[4, p. 5]](#ref-4). O modelo foi criado para ligar métricas de código-fonte às características de qualidade da ISO/IEC 9126, que deu origem à [ISO/IEC 25010](../fase-01/modelo-de-qualidade.md#norma-de-referência), e tem regras explícitas para pontuar e para agregar os resultados.
+A equipe adota a escala de cinco níveis do modelo de manutenibilidade de Heitlager, Kuipers e Visser, usada para pontuar tanto as propriedades medidas quanto as características: `++` / `+` / `o` / `-` / `--` [[3, p. 5]](#ref-3). O modelo foi criado para ligar métricas de código-fonte às características de qualidade da ISO/IEC 9126, que deu origem à [ISO/IEC 25010](../fase-01/modelo-de-qualidade.md#norma-de-referência), e tem regras explícitas para pontuar e para agregar os resultados.
 
-<p className="tabela-titulo">Tabela 2: Escala de pontuação</p>
+<p className="tabela-titulo">Tabela 1: Escala de pontuação</p>
 
 | Nível | Símbolo | Pontos | Leitura |
 | :--- | :---: | :---: | :--- |
@@ -57,9 +40,9 @@ A equipe adota a escala de cinco níveis do modelo de manutenibilidade de Heitla
 | Ruim | `-` | 2 | O resultado indica um problema que afeta a característica. |
 | Muito ruim | `--` | 1 | O resultado indica um problema grave ou generalizado. |
 
-<p className="tabela-fonte">Fonte: adaptada de Heitlager, Kuipers e Visser [[4, p. 5]](#ref-4).</p>
+<p className="tabela-fonte">Fonte: adaptada de Heitlager, Kuipers e Visser [[3, p. 5]](#ref-3).</p>
 
-Os nomes dos níveis e os pontos de 1 a 5 são da equipe. O modelo usa só os símbolos e calcula médias entre níveis [[4, p. 8]](#ref-4), o que exige um valor numérico para cada um.
+Os nomes dos níveis e os pontos de 1 a 5 são da equipe. O modelo usa só os símbolos e calcula médias entre níveis [[3, p. 8]](#ref-3), o que exige um valor numérico para cada um.
 
 ---
 
@@ -67,36 +50,36 @@ Os nomes dos níveis e os pontos de 1 a 5 são da equipe. O modelo usa só os s�
 
 Cada métrica tem cinco faixas de valores, uma para cada nível. As faixas vêm de quatro origens, aplicadas nesta ordem:
 
-1. **Faixas publicadas para a própria métrica.** O modelo de Heitlager, Kuipers e Visser publica faixas para a complexidade das funções [[4, p. 6]](#ref-4) e para a cobertura de testes [[4, p. 7]](#ref-4). As métricas [M1.3.1](./gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) e [M1.5.1](./gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote) usam essas faixas sem alteração.
-2. **Faixas de proporção desejável.** Para as métricas que medem a parte de um conjunto que atende a um critério (por exemplo, funções que funcionam sem conexão ou contribuições revisadas), a equipe reaproveita as faixas de cobertura de testes do modelo, que medem o mesmo tipo de grandeza: a parte do código que os testes alcançam [[4, p. 7]](#ref-4).
-3. **Faixas de proporção indesejável.** Para as métricas que medem a parte de um conjunto que tem um problema (por exemplo, importações que violam a direção declarada), a equipe reaproveita as faixas de duplicação de código do modelo, que medem a parte do código que é cópia de outra [[4, p. 7]](#ref-4).
+1. **Faixas publicadas para a própria métrica.** O modelo de Heitlager, Kuipers e Visser publica faixas para a complexidade das funções [[3, p. 6]](#ref-3) e para a cobertura de testes [[3, p. 7]](#ref-3). As métricas [M1.3.1](./gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) e [M1.5.1](./gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote) usam essas faixas sem alteração.
+2. **Faixas de proporção desejável.** Para as métricas que medem a parte de um conjunto que atende a um critério (por exemplo, funções que funcionam sem conexão ou contribuições revisadas), a equipe reaproveita as faixas de cobertura de testes do modelo, que medem o mesmo tipo de grandeza: a parte do código que os testes alcançam [[3, p. 7]](#ref-3).
+3. **Faixas de proporção indesejável.** Para as métricas que medem a parte de um conjunto que tem um problema (por exemplo, importações que violam a direção declarada), a equipe reaproveita as faixas de duplicação de código do modelo, que medem a parte do código que é cópia de outra [[3, p. 7]](#ref-3).
 4. **Referências externas ou faixas da equipe.** As métricas de tempo e de fluidez usam limites publicados de tempo de resposta e de taxa de quadros. As métricas restantes têm faixas definidas pela equipe, sempre com a justificativa registrada nas seções [3.2](#32-justificativas-específicas), [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas).
 
-O modelo também avalia propriedades que não são métricas de código por meio de listas de verificação [[4, p. 8]](#ref-4), mas não publica as faixas usadas nesses casos. Por isso, o reaproveitamento das faixas de cobertura e de duplicação nas origens 2 e 3 é uma decisão da equipe, e não uma regra do modelo.
+O modelo também avalia propriedades que não são métricas de código por meio de listas de verificação [[3, p. 8]](#ref-3), mas não publica as faixas usadas nesses casos. Por isso, o reaproveitamento das faixas de cobertura e de duplicação nas origens 2 e 3 é uma decisão da equipe, e não uma regra do modelo.
 
 ### 2.1 Faixas de proporção desejável
 
 Quanto maior o valor, melhor. O reaproveitamento vale para as métricas marcadas com esta origem nas seções [3](#3-níveis-das-métricas-de-manutenibilidade-g1) a [5](#5-níveis-das-métricas-de-flexibilidade-g3).
 
-<p className="tabela-titulo">Tabela 3: Faixas de proporção desejável, iguais às de cobertura de testes</p>
+<p className="tabela-titulo">Tabela 2: Faixas de proporção desejável, iguais às de cobertura de testes</p>
 
 | Nível | `++` | `+` | `o` | `-` | `--` |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | Percentual | 95 a 100 | 80 a 95 | 60 a 80 | 20 a 60 | 0 a 20 |
 
-<p className="tabela-fonte">Fonte: Heitlager, Kuipers e Visser [[4, p. 7]](#ref-4).</p>
+<p className="tabela-fonte">Fonte: Heitlager, Kuipers e Visser [[3, p. 7]](#ref-3).</p>
 
 ### 2.2 Faixas de proporção indesejável
 
 Quanto menor o valor, melhor. O reaproveitamento vale para as métricas marcadas com esta origem nas seções [3](#3-níveis-das-métricas-de-manutenibilidade-g1) a [5](#5-níveis-das-métricas-de-flexibilidade-g3).
 
-<p className="tabela-titulo">Tabela 4: Faixas de proporção indesejável, iguais às de duplicação de código</p>
+<p className="tabela-titulo">Tabela 3: Faixas de proporção indesejável, iguais às de duplicação de código</p>
 
 | Nível | `++` | `+` | `o` | `-` | `--` |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | Percentual | 0 a 3 | 3 a 5 | 5 a 10 | 10 a 20 | 20 a 100 |
 
-<p className="tabela-fonte">Fonte: Heitlager, Kuipers e Visser [[4, p. 7]](#ref-4).</p>
+<p className="tabela-fonte">Fonte: Heitlager, Kuipers e Visser [[3, p. 7]](#ref-3).</p>
 
 ### 2.3 Regras gerais
 
@@ -111,22 +94,22 @@ Quanto menor o valor, melhor. O reaproveitamento vale para as métricas marcadas
 
 Os códigos das métricas são os das fichas do [GQM de Manutenibilidade](./gqm-manutenibilidade.md): [M1.1.1](./gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) é a primeira métrica da questão [Q1.1](./gqm-manutenibilidade.md#3-q11-modularidade), [M1.1.2](./gqm-manutenibilidade.md#m112-importações-que-violam-a-direção-declarada) é a segunda, e assim por diante. A coluna "Valor pontuado" indica qual resultado da ficha é comparado com as faixas.
 
-<p className="tabela-titulo">Tabela 5: Níveis das métricas de G1</p>
+<p className="tabela-titulo">Tabela 4: Níveis das métricas de G1</p>
 
 | Métrica | Valor pontuado | `++` | `+` | `o` | `-` | `--` | Origem das faixas |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | [M1.1.1](./gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) | Pares de pacotes em ciclo ÷ 28 pares possíveis × 100 (ver [seção 3.2](#32-justificativas-específicas)) | 0 pares | 1 par | 2 pares | 3 a 5 pares | 6 ou mais | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
 | [M1.1.2](./gqm-manutenibilidade.md#m112-importações-que-violam-a-direção-declarada) | Importações que violam a direção ÷ importações de valor entre pacotes diferentes × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
-| [M1.1.3](./gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote) | Dependências entre pacotes que contrariam o Princípio das Dependências Estáveis ÷ dependências entre pacotes × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)), com a regra de Martin [[6, p. 8 e 10]](#ref-6) |
+| [M1.1.3](./gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote) | Dependências entre pacotes que contrariam o Princípio das Dependências Estáveis ÷ dependências entre pacotes × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)), com a regra de Martin [[5, p. 8 e 10]](#ref-5) |
 | [M1.2.1](./gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) | Arquivos dos pacotes de base com dependência de React ou do navegador ÷ arquivos de produção dos pacotes de base × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
 | [M1.2.2](./gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas) | Percentual de propriedades documentadas | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
-| [M1.3.1](./gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) | Perfil de risco de complexidade, no total | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | Publicada [[4, p. 6]](#ref-4) |
+| [M1.3.1](./gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) | Perfil de risco de complexidade, no total | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | ver [tabela 3.1](#31-faixas-de-m131) | Publicada [[3, p. 6]](#ref-3) |
 | [M1.3.2](./gqm-manutenibilidade.md#m132-cobertura-da-documentação-para-desenvolvedores) | Tópicos presentes (de 4) | 4 | nenhum | 3 | 1 ou 2 | 0 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 | [M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) | Verificações automáticas (de 3) | 3 | nenhum | 2 | 1 | 0 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 | [M1.4.1](./gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição) | Mediana de arquivos de produção por contribuição | até 2 | 3 ou 4 | 5 a 8 | 9 a 16 | mais de 16 | Equipe (ver abaixo) |
 | [M1.4.2](./gqm-manutenibilidade.md#m142-arquivos-de-produção-extensos) | Arquivos com mais de 1.000 linhas ÷ arquivos de produção × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
 | [M1.4.3](./gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) | Percentual de contribuições que alteram arquivos extensos | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
-| [M1.5.1](./gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote) | Cobertura de linhas, no total | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Publicada [[4, p. 7]](#ref-4) |
+| [M1.5.1](./gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote) | Cobertura de linhas, no total | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Publicada [[3, p. 7]](#ref-3) |
 | [M1.5.2](./gqm-manutenibilidade.md#m152-distribuição-dos-testes-por-nível) | Níveis de teste presentes (de 3: unitário, integração e ponta a ponta) | 3 | nenhum | 2 | 1 | 0 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 | [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração) | Percentual de contribuições com testes executados antes da integração | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 
@@ -138,7 +121,7 @@ A palavra "nenhum" indica que nenhum valor possível da lista cai naquele nível
 
 A métrica [M1.3.1](./gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) distribui as linhas de código pelas faixas de risco de complexidade das funções: baixo (1 a 10), moderado (11 a 20), alto (21 a 50) e muito alto (acima de 50). O nível é o melhor cujos três limites são respeitados ao mesmo tempo.
 
-<p className="tabela-titulo">Tabela 6: Limites do perfil de risco de complexidade</p>
+<p className="tabela-titulo">Tabela 5: Limites do perfil de risco de complexidade</p>
 
 | Nível | Linhas em risco moderado (máximo) | Linhas em risco alto (máximo) | Linhas em risco muito alto (máximo) |
 | :---: | :---: | :---: | :---: |
@@ -148,7 +131,7 @@ A métrica [M1.3.1](./gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexida
 | `-` | 50% | 15% | 5% |
 | `--` | acima de 50% | acima de 15% | acima de 5% |
 
-<p className="tabela-fonte">Fonte: Heitlager, Kuipers e Visser [[4, p. 6]](#ref-4).</p>
+<p className="tabela-fonte">Fonte: Heitlager, Kuipers e Visser [[3, p. 6]](#ref-3).</p>
 
 O nível `--` é atribuído quando qualquer um dos limites do nível `-` é ultrapassado. Por exemplo, um código com 20% das linhas em risco moderado, 3% em risco alto e 1% em risco muito alto é `-`, porque ultrapassa o limite de 0% de risco muito alto dos níveis `++`, `+` e `o`.
 
@@ -158,7 +141,7 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 - **[M1.1.1](./gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes):** o Excalidraw tem 8 pacotes, como definido nas [convenções de coleta de G1](./gqm-manutenibilidade.md#2-convenções-de-coleta): as sete pastas de `packages/` (`common`, `element`, `excalidraw`, `fractional-indexing`, `laser-pointer`, `math` e `utils`) e a aplicação web (`excalidraw-app/`). A métrica conta os pares de pacotes em ciclo, isto é, dois pacotes em que cada um depende do outro, direta ou indiretamente. Com 8 pacotes, existem 28 pares possíveis (8 × 7 ÷ 2). Para usar as faixas de proporção indesejável, o número de pares em ciclo é dividido por 28. Assim, 1 par em ciclo (3,6%) fica no nível `+`, e 6 ou mais pares (21,4% ou mais) ficam no nível `--`.
 - **[M1.1.2](./gqm-manutenibilidade.md#m112-importações-que-violam-a-direção-declarada), [M1.2.1](./gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) e [M1.4.2](./gqm-manutenibilidade.md#m142-arquivos-de-produção-extensos):** as fichas dessas métricas dão contagens de importações ou de arquivos. Para usar as faixas de proporção indesejável, cada contagem é dividida pelo total indicado na coluna "Valor pontuado", para que o resultado não dependa do tamanho do projeto.
-- **[M1.1.3](./gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote):** o Princípio das Dependências Estáveis diz que um pacote deve depender apenas de pacotes mais estáveis do que ele, ou seja, a instabilidade *I* deve diminuir no sentido das dependências [[6, p. 8 e 10]](#ref-6). Uma dependência de A para B contraria o princípio quando *I* de A é menor que *I* de B. A contagem usa as mesmas dependências entre pacotes de M1.1.3. A hipótese [H1.1.3](./gqm-manutenibilidade.md#3-q11-modularidade), sobre o pacote com maior Ca, é comparativa e é verificada à parte, pelo critério de interpretação da ficha.
+- **[M1.1.3](./gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote):** o Princípio das Dependências Estáveis diz que um pacote deve depender apenas de pacotes mais estáveis do que ele, ou seja, a instabilidade *I* deve diminuir no sentido das dependências [[5, p. 8 e 10]](#ref-5). Uma dependência de A para B contraria o princípio quando *I* de A é menor que *I* de B. A contagem usa as mesmas dependências entre pacotes de M1.1.3. A hipótese [H1.1.3](./gqm-manutenibilidade.md#3-q11-modularidade), sobre o pacote com maior Ca, é comparativa e é verificada à parte, pelo critério de interpretação da ficha.
 - **[M1.4.1](./gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição):** não foi encontrada referência publicada com faixas para o número de arquivos por contribuição. A equipe usa faixas que dobram de tamanho (2, 4, 8 e 16 arquivos), porque cada nível abaixo representa o dobro de arquivos para quem revisa a contribuição.
 
 ---
@@ -167,7 +150,7 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 Os códigos das métricas são os das fichas do [GQM de Confiabilidade](./gqm-confiabilidade.md).
 
-<p className="tabela-titulo">Tabela 7: Níveis das métricas de G2</p>
+<p className="tabela-titulo">Tabela 6: Níveis das métricas de G2</p>
 
 | Métrica | Valor pontuado | `++` | `+` | `o` | `-` | `--` | Origem das faixas |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
@@ -200,15 +183,15 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 Os códigos das métricas são os das fichas do [GQM de Flexibilidade](./gqm-flexibilidade.md).
 
-<p className="tabela-titulo">Tabela 8: Níveis das métricas de G3</p>
+<p className="tabela-titulo">Tabela 7: Níveis das métricas de G3</p>
 
 | Métrica | Valor pontuado | `++` | `+` | `o` | `-` | `--` | Origem das faixas |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | [M3.1.1](./gqm-flexibilidade.md#m311-cobertura-de-usuários-pelos-navegadores-declarados) | Percentual de usuários cobertos pelos navegadores declarados | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 | [M3.1.2](./gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso) | Combinações de React e empacotador com sucesso (de 6) | 6 | 5 | 4 | 2 ou 3 | 0 ou 1 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 | [M3.1.3](./gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) | Ações que funcionam por toque (de 10) | 10 | 8 ou 9 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
-| [M3.2.1](./gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena) | Tempo de abertura de cada cena de escala | até 1 s | 1 a 2 s | 2 a 5 s | 5 a 10 s | mais de 10 s | Nielsen [[7]](#ref-7) e RAIL [[8]](#ref-8) (ver abaixo) |
-| [M3.2.2](./gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | Quadros por segundo de cada cena (limites iguais a 95%, 80%, 60% e 20% de 60 quadros) | 57 ou mais | 48 a 57 | 36 a 48 | 12 a 36 | menos de 12 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)), com a meta de 60 quadros do RAIL [[8]](#ref-8) |
+| [M3.2.1](./gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena) | Tempo de abertura de cada cena de escala | até 1 s | 1 a 2 s | 2 a 5 s | 5 a 10 s | mais de 10 s | Nielsen [[6]](#ref-6) e RAIL [[7]](#ref-7) (ver abaixo) |
+| [M3.2.2](./gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | Quadros por segundo de cada cena (limites iguais a 95%, 80%, 60% e 20% de 60 quadros) | 57 ou mais | 48 a 57 | 36 a 48 | 12 a 36 | menos de 12 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)), com a meta de 60 quadros do RAIL [[7]](#ref-7) |
 | [M3.2.3](./gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada) | Maior cena salva e exportada | 10.000 elementos | 5.000 | 1.000 | 100 | nenhuma | Equipe (ver abaixo) |
 | [M3.3.1](./gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | Operações de pacote com sucesso (de 9) | 9 | 8 | 6 ou 7 | 2 a 5 | 0 ou 1 | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
 | [M3.3.2](./gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) | Percentual de passos reproduzidos sem ajuste | 95 a 100% | 80 a 95% | 60 a 80% | 20 a 60% | abaixo de 20% | Proporção desejável ([seção 2.1](#21-faixas-de-proporção-desejável)) |
@@ -224,8 +207,8 @@ Os códigos das métricas são os das fichas do [GQM de Flexibilidade](./gqm-fle
 Esta seção explica só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da [seção 2](#2-como-as-faixas-foram-definidas). As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
 
 - **[M3.1.3](./gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta):** a pontuação usa o toque com o dedo. Se houver caneta disponível, as duas formas de entrada são pontuadas e a pontuação da métrica é a média das duas.
-- **[M3.2.1](./gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena):** os limites de 1 e de 10 segundos são os de Nielsen [[7]](#ref-7): até 1 segundo, o raciocínio do usuário não é interrompido, e 10 segundos é o limite para manter a atenção dele na tarefa. Os limites intermediários de 2 e de 5 segundos são as metas do modelo RAIL, do Google [[8]](#ref-8), para carregar uma página já visitada e uma página nova. O RAIL trata do carregamento de páginas; a equipe o aplica à abertura de um arquivo por ser a referência publicada mais próxima. Cada uma das quatro cenas de escala é pontuada, e a pontuação da métrica é a média.
-- **[M3.2.2](./gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena):** o RAIL considera fluida a animação com 60 quadros por segundo [[8]](#ref-8). A taxa medida é convertida em percentual dessa meta e pontuada com as faixas de proporção desejável. Cada cena é pontuada, e a pontuação da métrica é a média.
+- **[M3.2.1](./gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena):** os limites de 1 e de 10 segundos são os de Nielsen [[6]](#ref-6): até 1 segundo, o raciocínio do usuário não é interrompido, e 10 segundos é o limite para manter a atenção dele na tarefa. Os limites intermediários de 2 e de 5 segundos são as metas do modelo RAIL, do Google [[7]](#ref-7), para carregar uma página já visitada e uma página nova. O RAIL trata do carregamento de páginas; a equipe o aplica à abertura de um arquivo por ser a referência publicada mais próxima. Cada uma das quatro cenas de escala é pontuada, e a pontuação da métrica é a média.
+- **[M3.2.2](./gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena):** o RAIL considera fluida a animação com 60 quadros por segundo [[7]](#ref-7). A taxa medida é convertida em percentual dessa meta e pontuada com as faixas de proporção desejável. Cada cena é pontuada, e a pontuação da métrica é a média.
 - **[M3.2.3](./gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada):** a métrica tem cinco resultados possíveis (as quatro cenas de escala ou nenhuma), e cada um corresponde a um nível.
 - **[M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis):** a hipótese [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) espera pelo menos três formatos abertos (`.excalidraw`, PNG e SVG), e três formatos correspondem ao nível `+`. Cada formato a menos desce um nível. Os limites são da equipe.
 - **[M3.4.2](./gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação):** cada um dos três formatos é pontuado, e a pontuação da métrica é a média.
@@ -234,14 +217,14 @@ Esta seção explica só as métricas em que o valor pontuado não é o próprio
 
 ## 6. Agregação: da métrica à característica
 
-As pontuações são combinadas em duas etapas, com pesos iguais, como no modelo de Heitlager, Kuipers e Visser [[4, p. 8]](#ref-4):
+As pontuações são combinadas em duas etapas, com pesos iguais, como no modelo de Heitlager, Kuipers e Visser [[3, p. 8]](#ref-3):
 
 1. **Questão:** a pontuação de cada questão é a média aritmética dos pontos das suas métricas. Como cada questão corresponde a uma subcaracterística, essa é também a pontuação da subcaracterística.
 2. **Característica:** a pontuação de cada característica ([G1](./estrutura-gqm.md#g1-manutenibilidade), [G2](./estrutura-gqm.md#g2-confiabilidade) e [G3](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade)) é a média aritmética das médias das suas questões, sem arredondá-las antes.
 
 A média é convertida em nível pelo arredondamento para o inteiro mais próximo. Uma média terminada exatamente em 0,5 é arredondada para baixo, para que o resultado não seja favorecido em caso de empate. O relatório mostra a média com uma casa decimal e o nível correspondente. Essa regra de arredondamento é da equipe, porque o modelo não a define.
 
-Não é calculada uma pontuação única para o Excalidraw. Os autores do modelo também não veem valor em um número único: as pontuações por subcaracterística dizem mais e podem ser rastreadas até as métricas que as originaram [[4, p. 8]](#ref-4).
+Não é calculada uma pontuação única para o Excalidraw. Os autores do modelo também não veem valor em um número único: as pontuações por subcaracterística dizem mais e podem ser rastreadas até as métricas que as originaram [[3, p. 8]](#ref-3).
 
 ### 6.1 Métricas não coletadas
 
@@ -252,7 +235,7 @@ Uma métrica que não puder ser coletada na Fase 04 fica fora da média da sua q
 <details>
 <summary><b>Ver o exemplo com valores fictícios</b></summary>
 
-<p className="tabela-titulo">Tabela 9: Exemplo de cálculo com valores fictícios</p>
+<p className="tabela-titulo">Tabela 8: Exemplo de cálculo com valores fictícios</p>
 
 | Questão | Pontos das métricas | Média | Nível da questão |
 | :--- | :--- | :---: | :---: |
@@ -274,7 +257,7 @@ Média da característica: (4,0 + 2,5 + 2,0) ÷ 3 = 2,8, que é arredondada para
 
 Cada característica recebe um de três resultados.
 
-<p className="tabela-titulo">Tabela 10: Resultados do julgamento</p>
+<p className="tabela-titulo">Tabela 9: Resultados do julgamento</p>
 
 | Resultado | Condição |
 | :--- | :--- |
@@ -282,9 +265,9 @@ Cada característica recebe um de três resultados.
 | **Não atende** | A característica tem nível `-` ou `--`, ou pelo menos uma das suas questões está no nível `--`. |
 | **Inconclusiva** | Mais da metade das métricas da característica não foi coletada ([seção 6.1](#61-métricas-não-coletadas)). |
 
-<p className="tabela-fonte">Fonte: adaptada de Baggen, Schill e Visser [[5, p. 3]](#ref-5).</p>
+<p className="tabela-fonte">Fonte: adaptada de Baggen, Schill e Visser [[4, p. 3]](#ref-4).</p>
 
-O limite vem do esquema de certificação de manutenibilidade da TÜViT, que usa o modelo de Heitlager, Kuipers e Visser em uma escala de 1 a 5 estrelas. Para obter o certificado, um sistema precisa de ao menos 2 estrelas em todas as subcaracterísticas e de ao menos 3 estrelas na característica [[5, p. 3]](#ref-5). Na escala desta página, 2 estrelas correspondem ao nível `-` e 3 estrelas ao nível `o`. A equipe aplica o mesmo limite às três características avaliadas.
+O limite vem do esquema de certificação de manutenibilidade da TÜViT, que usa o modelo de Heitlager, Kuipers e Visser em uma escala de 1 a 5 estrelas. Para obter o certificado, um sistema precisa de ao menos 2 estrelas em todas as subcaracterísticas e de ao menos 3 estrelas na característica [[4, p. 3]](#ref-4). Na escala desta página, 2 estrelas correspondem ao nível `-` e 3 estrelas ao nível `o`. A equipe aplica o mesmo limite às três características avaliadas.
 
 No exemplo da [seção 6.2](#62-exemplo-de-cálculo), a característica atende: o nível dela é `o`, e nenhuma questão está no nível `--`.
 
@@ -296,13 +279,13 @@ Sempre que possível, o limite da regra de confirmação é uma fronteira entre 
 
 ### 7.3 Pontos de melhoria
 
-Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de melhoria, com a questão e a subcaracterística afetadas. Como cada nível pode ser rastreado até a métrica que o originou, o relatório indica a causa de cada resultado ruim, e não só o resultado [[4, p. 8]](#ref-4).
+Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de melhoria, com a questão e a subcaracterística afetadas. Como cada nível pode ser rastreado até a métrica que o originou, o relatório indica a causa de cada resultado ruim, e não só o resultado [[3, p. 8]](#ref-3).
 
 ---
 
 ## 8. Limitações
 
-- **Calibração:** as faixas do modelo foram definidas pela experiência dos autores com sistemas industriais [[4, p. 6]](#ref-4). Depois, o modelo passou a ser recalibrado todo ano com uma base de sistemas reais, de forma que 5%, 30%, 30%, 30% e 5% dos sistemas fiquem em cada nível [[5, p. 2]](#ref-5). A equipe não tem acesso a essa base e usa as faixas publicadas em 2007, sem recalibrar para projetos em TypeScript.
+- **Calibração:** as faixas do modelo foram definidas pela experiência dos autores com sistemas industriais [[3, p. 6]](#ref-3). Depois, o modelo passou a ser recalibrado todo ano com uma base de sistemas reais, de forma que 5%, 30%, 30%, 30% e 5% dos sistemas fiquem em cada nível [[4, p. 2]](#ref-4). A equipe não tem acesso a essa base e usa as faixas publicadas em 2007, sem recalibrar para projetos em TypeScript.
 - **Reaproveitamento de faixas:** as faixas de cobertura e de duplicação foram publicadas para essas duas propriedades. Usá-las para outras proporções ([seção 2](#2-como-as-faixas-foram-definidas)) é uma decisão da equipe.
 - **Faixas da equipe:** as métricas [M1.4.1](./gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição), [M2.1.1](./gqm-confiabilidade.md#m211-proporção-de-correções-entre-as-contribuições-integradas), [M2.1.2](./gqm-confiabilidade.md#m212-mediana-do-tempo-entre-o-relato-e-a-correção), [M2.2.2](./gqm-confiabilidade.md#m222-origens-externas-necessárias-para-o-editor-local), [M3.2.3](./gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada) e [M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis) têm faixas definidas pela equipe, com as justificativas das seções [3.2](#32-justificativas-específicas), [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas).
 - **Norma de origem:** o modelo foi feito para a ISO/IEC 9126. A equipe aplica a mesma escala e a mesma agregação às subcaracterísticas da ISO/IEC 25010 [escolhidas na Fase 01](../fase-01/modelo-de-qualidade.md#justificativa-da-seleção).
@@ -315,17 +298,15 @@ Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de me
 >
 > <Link id="ref-2">2.</Link> RAMOS, Cristiane Soares. **AULA 08 QSW1 GQM**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 34. Disponível no Moodle da disciplina.
 >
-> <Link id="ref-3">3.</Link> **2026-2 Trabalho final completo v1**. Especificação do trabalho final de Qualidade de Software 1, FCTE/UnB, 2026. Página 5, critério F2-C5. Disponível no Moodle da disciplina.
+> <Link id="ref-3">3.</Link> HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Páginas 5 a 8 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 06 nov. 2026.
 >
-> <Link id="ref-4">4.</Link> HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Páginas 5 a 8 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 06 nov. 2026.
+> <Link id="ref-4">4.</Link> BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Páginas 2 e 3. Disponível em: [https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf](https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf). Acesso em: 06 nov. 2026.
 >
-> <Link id="ref-5">5.</Link> BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Páginas 2 e 3. Disponível em: [https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf](https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf). Acesso em: 06 nov. 2026.
+> <Link id="ref-5">5.</Link> MARTIN, R. C. Stability. *The C++ Report*, 1997. Páginas 8 e 10. Disponível em: [https://objectmentor.com/resources/articles/stability.pdf](https://objectmentor.com/resources/articles/stability.pdf). Acesso em: 06 nov. 2026.
 >
-> <Link id="ref-6">6.</Link> MARTIN, R. C. Stability. *The C++ Report*, 1997. Páginas 8 e 10. Disponível em: [https://objectmentor.com/resources/articles/stability.pdf](https://objectmentor.com/resources/articles/stability.pdf). Acesso em: 06 nov. 2026.
+> <Link id="ref-6">6.</Link> NIELSEN, J. *Usability Engineering*. Academic Press, 1993. Capítulo 5. Trecho disponível em: [https://www.nngroup.com/articles/response-times-3-important-limits/](https://www.nngroup.com/articles/response-times-3-important-limits/). Acesso em: 06 nov. 2026.
 >
-> <Link id="ref-7">7.</Link> NIELSEN, J. *Usability Engineering*. Academic Press, 1993. Capítulo 5. Trecho disponível em: [https://www.nngroup.com/articles/response-times-3-important-limits/](https://www.nngroup.com/articles/response-times-3-important-limits/). Acesso em: 06 nov. 2026.
->
-> <Link id="ref-8">8.</Link> GOOGLE. Measure performance with the RAIL model. *web.dev*, atualizado em 10/06/2020. Seções "Load" e "Animation". Disponível em: [https://web.dev/articles/rail](https://web.dev/articles/rail). Acesso em: 06 nov. 2026.
+> <Link id="ref-7">7.</Link> GOOGLE. Measure performance with the RAIL model. *web.dev*, atualizado em 10/06/2020. Seções "Load" e "Animation". Disponível em: [https://web.dev/articles/rail](https://web.dev/articles/rail). Acesso em: 06 nov. 2026.
 
 ---
 
@@ -335,4 +316,4 @@ Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de me
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação da escala, das faixas de cada métrica, das regras de agregação e dos critérios de julgamento | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.1 | 30/10/2026 | Seção 7.2 explica a ligação entre as regras de confirmação das hipóteses e as fronteiras das faixas. Menções a hipóteses passam a citar os códigos H1.1.3 e H3.4.1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.2 | 06/11/2026 | Inclusão de introdução, objetivos e metodologia; tabelas numeradas, com legenda e fonte; referências numeradas e ligadas às citações, com data de acesso; links para a norma, os objetivos e o Plano GQM ([#56](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/56)) | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 06/11/2026 | Inclusão de introdução e metodologia; tabelas numeradas, com legenda e fonte; referências numeradas e ligadas às citações, com data de acesso; links para a norma, os objetivos e o Plano GQM ([#56](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/56)) | [Christopher Paraizo](https://github.com/wChrstphr) | |
