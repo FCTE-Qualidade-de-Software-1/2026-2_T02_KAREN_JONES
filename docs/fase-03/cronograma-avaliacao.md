@@ -28,8 +28,6 @@ As datas preveem a execução da avaliação e a análise dos dados coletados.
 | **21/11/2026** | Revisão final |
 | **22/11/2026** | Entrega Final |
 
-## 2. Responsáveis, Ambiente e Coleta de Métricas
-
 ## 2. Cronograma de Coleta de Métricas
 
 A coleta de dados será realizada entre 10/11 e 12/11. Abaixo estão os responsáveis pela coleta de cada métrica, a data prevista e a respectiva issue de acompanhamento.
@@ -39,7 +37,7 @@ A coleta de dados será realizada entre 10/11 e 12/11. Abaixo estão os respons�
 | **G1:** Análise estática e histórico (M1.1.1 a M1.5.3) | Christopher | 10/11 a 12/11 | `[Issue #111]` |
 | **G2:** Histórico de defeitos (M2.1.1 a M2.1.3) | Luiz Henrique Soares | 10/11 a 12/11 | `[Issue #112]` |
 | **G2:** Testes no navegador (M2.2.1 a M2.4.3) | Luiz Henrique Soares | 10/11 a 12/11 | `[Issue #112]` |
-| **G3:** Adaptabilidade, instalabilidade e substituibilidade (M3.1.1, M3.1.2, M3.3.1 a M3.4.3) | Maria Eduarda | 10/11 a 12/11 | `[Issue #113]` |
+| **G3:** Adaptabilidade, instalabilidade e substituibilidade (M3.1.1 a M3.1.3, M3.3.1 a M3.4.3) | Maria Eduarda | 10/11 a 12/11 | `[Issue #113]` |
 | **G3:** Desempenho (M3.2.1 e M3.2.2) | Maria Eduarda | 10/11 a 12/11 | `[Issue #113]` |
 
 ---
@@ -48,4 +46,4 @@ A coleta de dados será realizada entre 10/11 e 12/11. Abaixo estão os respons�
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 |06/11 | Criação do cronograma de avaliação da Fase 4 | [Letícia Santos](https://github.com/LeticiaSantosss) | _a preencher_ |
+| 1.0 | 06/11 | Criação do cronograma de avaliação da Fase 4 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
