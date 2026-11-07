@@ -57,7 +57,7 @@ Ao criar a issue, preencha:
 
 - **Milestone** da fase (`Fase 1` a `Fase 4`);
 - **Uma ou duas labels de tipo** (tabela abaixo) e a **label do subgrupo** (`subgrupo-F1F3` ou `subgrupo-F2F4`);
-- **Prazo** e **Depende de** (issues que precisam terminar antes, ex.: `#9 (Propósito da avaliação)`, ou "Nenhuma");
+- **Prazo** e **Depende de** (issues que precisam terminar antes, ex.: `#9 (Propósito da avaliação)`, ou "Nenhuma"). Esses dois campos alimentam `Prazo`, `Início` e `Prioridade` no Project, conforme a [página de priorização](docs/gestao/priorizacao-issues.md);
 - **Estimativa (h)**, **Critério de pronto** e, quando houver, **Critérios da rubrica atendidos** (códigos em [`.github/criterios-avaliacao.md`](.github/criterios-avaliacao.md));
 - **Referências**: documentos de aula ou de avaliação que justificam a tarefa, sempre com nome do arquivo e página (ex.: `AULA 08 QSW1 GQM.pdf, p. 24`). Os PDFs ficam no Moodle e não são versionados no repositório;
 - **Responsável** (assignee) e **Revisor**.
