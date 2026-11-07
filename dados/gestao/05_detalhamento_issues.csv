@@ -88,6 +88,6 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,open,luizh-gsoares,4.0,0.0,180.0,0.0,08/11,-,Em andamento (no prazo),
 134,Fase 3,[GESTAO] Refazer o plano de medição PSM a partir das necessidades de informação da equipe,open,eduarda-ogomes,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
 135,Fase 3,[GESTAO] Adaptar o script de coleta PSM às medidas novas,open,wChrstphr,3.0,0.0,135.0,0.0,08/11,-,Em andamento (no prazo),
-136,Fase 3,[GESTAO] Atualizar o relatório PSM/CID da Fase 2 e o apêndice de contribuição,open,wChrstphr,1.5,1.0,67.5,45.0,05/11,-,Aberta em atraso,
+136,Fase 3,[GESTAO] Atualizar o relatório PSM/CID da Fase 2 e o apêndice de contribuição,closed,wChrstphr,1.5,1.0,67.5,45.0,05/11,07/11/2026,Concluida em atraso,2.61
 138,Fase 3,[GESTAO] Sincronizar o prazo das issues com o GitHub Projects,open,wChrstphr,1.0,0.0,45.0,0.0,06/11,-,Aberta em atraso,
 140,Fase 3,[GESTAO] Documentar a priorização e as datas do GitHub Project,open,wChrstphr,1.0,0.0,45.0,0.0,06/11,-,Aberta em atraso,
