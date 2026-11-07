@@ -28,7 +28,7 @@ A prioridade mede quantas issues abertas ficam travadas, direta ou indiretamente
 
 ## Measurement construct
 
-O construct segue o template da disciplina [[1, p. 19]](#ref-1), como nos [relatórios PSM](relatorios/relatorio-psm-fase-2.md#2-measurement-constructs-da-fase-2-template-psmcid--aula-09-p-19), na categoria Calendário e Progresso [[2, p. 2]](#ref-2).
+O construct segue o template da disciplina [[1, p. 19]](#ref-1), como no [Plano de Medição PSM](plano-medicao-psm.md#21-construct-1--calendário-e-progresso-ritmo-de-fechamento-e-dependências), na categoria Calendário e Progresso [[2, p. 2]](#ref-2).
 
 <p className="tabela-titulo">Tabela 2: Construct da prioridade</p>
 

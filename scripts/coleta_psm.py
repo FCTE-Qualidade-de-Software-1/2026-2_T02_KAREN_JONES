@@ -667,6 +667,10 @@ def _desenhar_grafico_acuracia_pil(caminho: Path, titulo: str, subtitulo: str,
                            fill="#e0e7ff", outline="#818cf8", width=escala)
     draw.text((lx + 26 * escala, 91 * escala), "Faixa ideal (80% a 120%)", fill="#111827", font=f_bold)
 
+    lx2 = 680 * escala
+    draw.line([(lx2, 99 * escala), (lx2 + 24 * escala, 99 * escala)], fill="#818cf8", width=2 * escala)
+    draw.text((lx2 + 32 * escala, 91 * escala), "100% = planejado", fill="#4338ca", font=f_bold)
+
     x0, y0 = 95 * escala, 140 * escala
     x1, y1 = w - 55 * escala, h - 75 * escala
     max_val = max(160.0, float(((int(max(valores, default=0) * 1.15) // 20) + 1) * 20))
@@ -683,7 +687,8 @@ def _desenhar_grafico_acuracia_pil(caminho: Path, titulo: str, subtitulo: str,
         bb = draw.textbbox((0, 0), txt, font=f_txt)
         draw.text((x0 - (bb[2] - bb[0]) - 14 * escala, py(v) - 8 * escala), txt, fill="#4b5563", font=f_txt)
     draw.line([(x0, py(100)), (x1, py(100))], fill="#818cf8", width=2 * escala)
-    draw.text((x1 - 150 * escala, py(100) - 22 * escala), "100% = planejado", fill="#4338ca", font=f_txt)
+    if len(fases) == 1:
+        draw.text((x1 - 150 * escala, py(100) - 22 * escala), "100% = planejado", fill="#4338ca", font=f_txt)
 
     n = max(len(fases), 1)
     bloco = (x1 - x0) / n
