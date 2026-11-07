@@ -90,4 +90,4 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 135,Fase 3,[GESTAO] Adaptar o script de coleta PSM às medidas novas,open,wChrstphr,3.0,0.0,135.0,0.0,08/11,-,Em andamento (no prazo),
 136,Fase 3,[GESTAO] Atualizar o relatório PSM/CID da Fase 2 e o apêndice de contribuição,closed,wChrstphr,1.5,1.0,67.5,45.0,05/11,07/11/2026,Concluida em atraso,2.61
 138,Fase 3,[GESTAO] Sincronizar o prazo das issues com o GitHub Projects,closed,wChrstphr,1.0,0.0,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.93
-140,Fase 3,[GESTAO] Documentar a priorização e as datas do GitHub Project,open,wChrstphr,1.0,0.0,45.0,0.0,06/11,-,Aberta em atraso,
+140,Fase 3,[GESTAO] Documentar a priorização e as datas do GitHub Project,closed,wChrstphr,1.0,0.0,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.91
