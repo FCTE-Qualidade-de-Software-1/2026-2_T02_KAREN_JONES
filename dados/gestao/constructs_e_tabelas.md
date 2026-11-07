@@ -48,7 +48,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 17 / 17 | 100.0% | 29.4% | 53.5 | 57.9 | R$ 2407.50 | R$ 2605.95 | 108.2% | 1.23 |
 | Fase 2 | 27 / 27 | 100.0% | 44.4% | 62.5 | 56.4 | R$ 2812.50 | R$ 2538.00 | 90.2% | 3.97 |
-| Fase 3 | 23 / 3 | 13.0% | 56.5% | 48.0 | 5.5 | R$ 2160.00 | R$ 247.50 | 11.5% | 1.93 |
+| Fase 3 | 23 / 4 | 17.4% | 56.5% | 48.0 | 5.5 | R$ 2160.00 | R$ 247.50 | 11.5% | 1.93 |
 | Fase 4 | 24 / 0 | 0.0% | 100.0% | 80.0 | 0.0 | R$ 3600.00 | R$ 0.00 | 0.0% | 0.00 |
 | Sem Fase | 1 / 1 | 100.0% | 100.0% | 2.0 | 2.0 | R$ 90.00 | R$ 90.00 | 100.0% | 0.01 |
 
@@ -58,12 +58,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 23 | 52.5 | 22.0 | R$ 990.00 | 91 | 16 | **18.06%** |
+| Christopher | `@wChrstphr` | 23 | 52.5 | 22.0 | R$ 990.00 | 92 | 16 | **18.06%** |
 | Davi Pierre | `@DaviPierre` | 13 | 37.0 | 23.0 | R$ 1035.00 | 5 | 3 | **18.88%** |
 | Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 28.5 | R$ 1282.50 | 37 | 6 | **23.40%** |
 | Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 11.4 | R$ 513.45 | 6 | 7 | **9.37%** |
 | Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 12.4 | R$ 558.00 | 21 | 8 | **10.18%** |
-| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 24.5 | R$ 1102.50 | 32 | 10 | **20.11%** |
+| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 24.5 | R$ 1102.50 | 33 | 10 | **20.11%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -76,14 +76,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 23 & 52.5h & 22.0h & 91/16 & 18.06\% \\
+Christopher & 23 & 52.5h & 22.0h & 92/16 & 18.06\% \\
 Davi Pierre & 13 & 37.0h & 23.0h & 5/3 & 18.88\% \\
 Gabriel Monteiro & 16 & 44.5h & 28.5h & 37/6 & 23.40\% \\
 Leticia de Carvalho & 16 & 30.5h & 11.4h & 6/7 & 9.37\% \\
 Luiz Henrique Soares & 15 & 35.0h & 12.4h & 21/8 & 10.18\% \\
-Maria Eduarda & 19 & 46.5h & 24.5h & 32/10 & 20.11\% \\
+Maria Eduarda & 19 & 46.5h & 24.5h & 33/10 & 20.11\% \\
 \hline
-\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{121.8h} & \textbf{192/50} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{121.8h} & \textbf{194/50} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
