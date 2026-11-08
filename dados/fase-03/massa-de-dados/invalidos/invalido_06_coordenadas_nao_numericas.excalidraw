@@ -1,0 +1,19 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "rec_coords_invalidas",
+      "type": "rectangle",
+      "x": "coordenada_invalida_string",
+      "y": null,
+      "width": "largura_texto",
+      "height": false
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

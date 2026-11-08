@@ -1,0 +1,17 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "descricao": "elemento sem id, type, coordenadas ou dimensoes"
+    },
+    {
+      "id": "elem_apenas_com_id"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
