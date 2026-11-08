@@ -8,7 +8,7 @@ description: Procedimento passo a passo para obtenção das 12 métricas do obje
 
 Este documento descreve o passo a passo para a coleta das 12 métricas do objetivo **G3 — Flexibilidade** na Fase 04. As instruções cobrem as quatro questões do GQM (Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade), com pré-condições, comandos exatos, saídas esperadas, modo de cálculo e armazenamento dos dados brutos.
 
-O roteiro atende aos critérios **F3-C1** (repetibilidade das instruções) e **F3-C8** (consistência entre Fases 02 e 03), permitindo que qualquer membro da equipe ou avaliador independente execute os passos sob o mesmo ambiente de [Recursos e ambiente](recursos-ambiente.md) e chegue aos mesmos resultados.
+O roteiro atende aos critérios **F3-C1** (repetibilidade das instruções) e **F3-C8** (consistência entre Fases 02 e 03), permitindo que qualquer membro da equipe ou avaliador independente execute os passos sob o mesmo ambiente de [Recursos e ambiente](./recursos-ambiente.md) e chegue aos mesmos resultados.
 
 ---
 
