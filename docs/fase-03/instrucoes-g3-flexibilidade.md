@@ -6,15 +6,15 @@ description: Procedimento passo a passo para obtenção das 12 métricas do obje
 
 # Instruções para o avaliador — Flexibilidade (G3)
 
-Este documento estabelece as instruções detalhadas e repetíveis para que qualquer avaliador da equipe Karen Jones ou um auditor independente execute a coleta das 12 métricas do objetivo **G3 — Flexibilidade** durante a Fase 04.
+Este documento descreve o passo a passo para a coleta das 12 métricas do objetivo **G3 — Flexibilidade** na Fase 04. As instruções cobrem as quatro questões do GQM (Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade), com pré-condições, comandos exatos, saídas esperadas, modo de cálculo e armazenamento dos dados brutos.
 
-As instruções atendem ao critério **F3-C1** (Definição do método e repetibilidade das instruções) e ao critério **F3-C8** (Consistência entre as Fases 02 e 03) da disciplina de Qualidade de Software 1. O objetivo é assegurar que avaliadores diferentes, executando os mesmos passos sob as mesmas condições especificadas na especificação de recursos e ambiente da Fase 03, obtenham rigorosamente os mesmos valores.
+O roteiro atende aos critérios **F3-C1** (repetibilidade das instruções) e **F3-C8** (consistência entre Fases 02 e 03), permitindo que qualquer membro da equipe ou avaliador independente execute os passos sob o mesmo ambiente de [Recursos e ambiente](recursos-ambiente.md) e chegue aos mesmos resultados.
 
 ---
 
 ## 1. Visão geral das métricas de G3
 
-A tabela a seguir consolida as 12 métricas de Flexibilidade divididas pelas quatro questões do [GQM de Flexibilidade](../fase-02/gqm-flexibilidade.md), indicando o tipo de coleta, o link para a respectiva ficha na Fase 02 e o link para a sua faixa de pontuação em [Níveis de pontuação e critérios de julgamento](../fase-02/pontuacao-julgamento.md).
+A tabela abaixo resume as 12 métricas de Flexibilidade divididas pelas quatro questões do [GQM de Flexibilidade](../fase-02/gqm-flexibilidade.md), indicando o tipo de coleta, o link para a respectiva ficha na Fase 02 e o link para a sua faixa de pontuação em [Níveis de pontuação e critérios de julgamento](../fase-02/pontuacao-julgamento.md).
 
 | Métrica | Nome da métrica | Questão | Tipo de coleta | Ficha na Fase 02 | Níveis de pontuação |
 | :--- | :--- | :---: | :--- | :---: | :---: |
@@ -37,7 +37,7 @@ A tabela a seguir consolida as 12 métricas de Flexibilidade divididas pelas qua
 
 ### 2.1 Repositório e commit avaliado
 
-Toda a coleta da Fase 04 parte obrigatoriamente do repositório oficial do Excalidraw clonado no commit fixado no [escopo da avaliação](../fase-01/escopo-avaliacao.md):
+A coleta da Fase 04 parte do repositório oficial do Excalidraw no commit fixado no [escopo da avaliação](../fase-01/escopo-avaliacao.md):
 
 ```bash
 git clone https://github.com/excalidraw/excalidraw.git
@@ -46,7 +46,7 @@ git checkout e1b7aacb356a492aa1e0fc6eb57b8896124027f0
 git rev-parse --short HEAD
 ```
 
-A saída do comando de conferência deve ser impreterivelmente `e1b7aac`.
+O comando deve imprimir `e1b7aac`. Se imprimir outro valor, a coleta não deve começar.
 
 ### 2.2 Local e padrão de nomenclatura dos dados brutos
 
@@ -274,7 +274,13 @@ Se houver caneta, calcule também a proporção para a caneta. A pontuação fin
 
 ### 3.2 Escalabilidade (Q3.2)
 
-As métricas de escalabilidade avaliam o comportamento do editor sob sobrecarga de elementos, utilizando as quatro **cenas de escala** (100, 1.000, 5.000 e 10.000 elementos) geradas pelo script de massa de dados da equipe.
+As métricas de escalabilidade avaliam o comportamento do editor sob diferentes volumes de elementos, utilizando as quatro **cenas de escala** (100, 1.000, 5.000 e 10.000 elementos com proporção fixa de 40% retângulos, 20% elipses, 20% setas e 20% textos dispostos em grade).
+
+Os arquivos ficam em `dados/fase-03/massa-de-dados/` (`cena_100.excalidraw`, `cena_1000.excalidraw`, `cena_5000.excalidraw` e `cena_10000.excalidraw`). Caso não estejam presentes, o avaliador pode recriá-los com o script gerador a partir da raiz do repositório:
+
+```bash
+python scripts/gerar_massa_dados.py --so-escala
+```
 
 #### M3.2.1 — Tempo de abertura por tamanho de cena
 
@@ -286,7 +292,7 @@ As métricas de escalabilidade avaliam o comportamento do editor sob sobrecarga 
 1. Aplicação executando localmente em contêiner de produção (`http://localhost:3000`).
 2. Google Chrome de versão fixa em perfil limpo e sem extensões de terceiros ativas.
 3. Computador conectado à tomada elétrica com plano de energia em alto desempenho.
-4. Arquivos `cena_100.excalidraw`, `cena_1000.excalidraw`, `cena_5000.excalidraw` e `cena_10000.excalidraw` acessíveis no sistema de arquivos.
+4. Cenas de escala disponíveis em `dados/fase-03/massa-de-dados/` (`cena_100.excalidraw`, `cena_1000.excalidraw`, `cena_5000.excalidraw` e `cena_10000.excalidraw`).
 
 ##### Passo a passo para cada cena
 Para cada uma das 4 cenas, realize 5 repetições seguindo este ciclo:
@@ -300,7 +306,7 @@ Para cada uma das 4 cenas, realize 5 repetições seguindo este ciclo:
    ```
 4. Recarregue a página com bypass de cache: pressione `Ctrl + Shift + R`.
 5. Na aba **Performance**, clique no botão circular **Record** (ou `Ctrl + E`) para iniciar a gravação do perfil de desempenho.
-6. Arraste e solte o arquivo da cena (ex.: `cena_1000.excalidraw`) diretamente sobre a área do canvas do editor.
+6. Arraste e solte o arquivo da cena correspondente (localizado em `dados/fase-03/massa-de-dados/cena_<tamanho>.excalidraw`, ex.: `dados/fase-03/massa-de-dados/cena_1000.excalidraw`) diretamente sobre a área do canvas do editor.
 7. Aguarde a conclusão visual da renderização de todos os elementos na tela.
 8. Clique no botão **Stop** no painel de gravação do DevTools.
 9. No gráfico temporal (*timeline*), identifique a duração do processo desde o evento `drop` do arquivo até a finalização da última tarefa longa (*Long Task*) de renderização ou commit do DOM.
@@ -334,8 +340,8 @@ Para cada uma das quatro cenas:
 ##### Passo a passo para cada cena
 Para cada uma das 4 cenas (100, 1.000, 5.000 e 10.000 elementos), realize 5 repetições de 10 segundos:
 
-1. Carregue o arquivo da cena no editor.
-2. Selecione uma amostra contígua de 50 elementos desenhando um retângulo de seleção ao redor deles.
+1. Carregue o arquivo da cena no editor arrastando-o a partir de `dados/fase-03/massa-de-dados/cena_<tamanho>.excalidraw`.
+2. Selecione uma amostra contígua de 50 elementos desenhando um retângulo de seleção ao redor deles (a disposição em grade regular facilita a seleção em bloco).
 3. Abra a aba **Performance** do DevTools.
 4. Inicie a gravação no DevTools (botão **Record**).
 5. Durante exatamente 10 segundos (acompanhados por cronômetro na tela), execute o roteiro de movimentação contínua:
@@ -366,13 +372,13 @@ Para cada uma das 4 cenas (100, 1.000, 5.000 e 10.000 elementos), realize 5 repe
 
 ##### Pré-condições
 1. Aplicação em execução no navegador em perfil limpo.
-2. Cenas de escala disponíveis.
+2. Cenas de escala disponíveis em `dados/fase-03/massa-de-dados/` (`cena_100.excalidraw`, `cena_1000.excalidraw`, `cena_5000.excalidraw` e `cena_10000.excalidraw`).
 3. Cronômetro digital visível durante a gravação de tela.
 
 ##### Passo a passo
-Em ordem estritamente crescente de complexidade (primeiro 100, depois 1.000, 5.000 e 10.000 elementos):
+Na ordem crescente de tamanho (100, 1.000, 5.000 e 10.000 elementos):
 
-1. Abra a cena no editor.
+1. Abra a cena no editor arrastando o arquivo correspondente de `dados/fase-03/massa-de-dados/` (ex.: `cena_100.excalidraw`).
 2. **Operação 1 — Salvar arquivo:**
    - Clique no menu principal (canto superior esquerdo) → **Salvar no disco** (formato `.excalidraw`);
    - Inicie o cronômetro no momento do clique e encerre quando o download for concluído na barra do navegador;
@@ -635,11 +641,11 @@ Contagem direta da quantidade de formatos abertos oferecidos pelo software (núm
 
 ##### Pré-condições
 1. Aplicação web em execução.
-2. Arquivo da **cena de referência** (`cena_referencia.excalidraw`) contendo os 10 tipos essenciais de elementos: retângulo, elipse, losango, seta, linha, desenho livre, texto, texto dentro de forma, imagem e moldura (*frame*).
-3. Script automatizado de conferência de elementos estruturais.
+2. Arquivo da **cena de referência** em `dados/fase-03/massa-de-dados/cena_referencia.excalidraw`, gerado por `scripts/gerar_massa_dados.py` (ou com `python scripts/gerar_massa_dados.py --so-referencia`), contendo os 10 tipos de elementos da Fase 02 (retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura).
+3. Script automatizado de conferência de integridade de elementos (`scripts/compara_elementos.py`).
 
 ##### Passo a passo
-1. Abra `cena_referencia.excalidraw` no editor do Excalidraw.
+1. Abra o arquivo `dados/fase-03/massa-de-dados/cena_referencia.excalidraw` no editor do Excalidraw.
 2. **Exportação nos 3 formatos suportados:**
    - **Arquivo 1:** Menu → **Salvar no disco** → salva como `export_referencia.excalidraw`.
    - **Arquivo 2:** `Ctrl + Shift + E` → certifique-se de que a opção de embutir metadados da cena esteja marcada (*Embed scene data*) → exporte como `export_referencia.png`.
@@ -649,11 +655,12 @@ Contagem direta da quantidade de formatos abertos oferecidos pelo software (núm
    - Arraste `export_referencia.excalidraw` para o editor. Salve a cena reaberta como `reimport_excalidraw.excalidraw`.
    - Limpe o editor. Arraste `export_referencia.png` para o editor. Salve a cena resultante como `reimport_png.excalidraw`.
    - Limpe o editor. Arraste `export_referencia.svg` para o editor. Salve a cena resultante como `reimport_svg.excalidraw`.
+   - Mova os três arquivos salvos para `dados/fase-04/brutos/`.
 4. **Comparação automatizada:**
    Execute o script de conferência comparando a cena original contra cada uma das três cenas reimportadas:
    ```bash
-   python3 scripts/compara_elementos.py \
-     --original dados/fase-04/brutos/cena_referencia.excalidraw \
+   python scripts/compara_elementos.py \
+     --original dados/fase-03/massa-de-dados/cena_referencia.excalidraw \
      --reimportados \
        dados/fase-04/brutos/reimport_excalidraw.excalidraw \
        dados/fase-04/brutos/reimport_png.excalidraw \
@@ -683,20 +690,21 @@ A pontuação final da métrica em [Níveis de pontuação](../fase-02/pontuacao
 - **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m343--proporção-dos-campos-do-formato-excalidraw-documentados) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
-1. Arquivo `cena_referencia.excalidraw` contendo todos os elementos padronizados da avaliação.
+1. Arquivo `cena_referencia.excalidraw` em `dados/fase-03/massa-de-dados/cena_referencia.excalidraw`.
 2. Arquivo de documentação técnica do formato: `dev-docs/docs/codebase/json-schema.mdx` no commit avaliado.
 
 ##### Passo a passo
-1. Execute o script extrator para listar todas as chaves distintas contidas no arquivo JSON do Excalidraw (campos de nível raiz, campos de `appState` e todas as propriedades que aparecem em qualquer objeto da lista `elements`):
+1. Execute o comando extrator para listar todas as chaves contidas no JSON (nível raiz, `appState` e todas as propriedades que aparecem em qualquer objeto da lista `elements`):
    ```bash
    node -e "
      const fs = require('fs');
-     const data = JSON.parse(fs.readFileSync('dados/fase-04/brutos/cena_referencia.excalidraw', 'utf8'));
+     const data = JSON.parse(fs.readFileSync('dados/fase-03/massa-de-dados/cena_referencia.excalidraw', 'utf8'));
      const rootKeys = Object.keys(data);
      const elementKeys = new Set();
      (data.elements || []).forEach(el => Object.keys(el).forEach(k => elementKeys.add(k)));
      const appStateKeys = data.appState ? Object.keys(data.appState) : [];
      const total = Array.from(new Set([...rootKeys, ...elementKeys, ...appStateKeys])).sort();
+     fs.mkdirSync('dados/fase-04/brutos', { recursive: true });
      fs.writeFileSync('dados/fase-04/brutos/M3.4.3_campos_encontrados.json', JSON.stringify(total, null, 2));
      console.log('Total de campos distintos encontrados:', total.length);
    "
@@ -769,4 +777,5 @@ Para as medições manuais ou que envolvem interface de usuário (M3.1.2, M3.1.3
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 07/11/2026 | Elaboração do roteiro de instruções das métricas do objetivo G3 (Flexibilidade) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 1.0 | 07/11/2026 | Elaboração do roteiro de instruções das métricas do objetivo G3 (Flexibilidade) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.1 | 08/11/2026 | Alinhamento dos caminhos da massa de dados e comandos de geração com scripts/gerar_massa_dados.py | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Gabriel Santos](https://github.com/gabriel-nitro) |
