@@ -769,4 +769,4 @@ Para as medições manuais ou que envolvem interface de usuário (M3.1.2, M3.1.3
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 07/11/2026 | Elaboração do roteiro de instruções detalhadas e repetíveis para obtenção das 12 métricas do objetivo G3 (Flexibilidade) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 1.0 | 07/11/2026 | Elaboração do roteiro de instruções das métricas do objetivo G3 (Flexibilidade) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
