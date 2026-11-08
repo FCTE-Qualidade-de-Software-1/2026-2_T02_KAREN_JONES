@@ -42,7 +42,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 77,Fase 2,[ARTIGO] Fase 2: objetivo G3 (Flexibilidade),closed,LeticiaSantosss,3.5,3.0,157.5,135.0,23/10,25/10/2026,Concluida em atraso,4.98
 78,Fase 2,[ARTIGO] Fase 2: níveis de pontuação e critérios de julgamento,closed,eduarda-ogomes,2.0,2.5,90.0,112.5,23/10,26/10/2026,Concluida em atraso,5.09
 85,Fase 3,[SITE] docs: publicar no GitPages a metodologia da equipe removida do artigo,open,LeticiaSantosss,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
-86,Fase 3,[ARTIGO] fix: alinhar tabela de contribuição do artigo com os dados do PSM/CID,open,GabrielSMonteiro,1.0,0.0,45.0,0.0,06/11,-,Aberta em atraso,
+86,Fase 3,[ARTIGO] fix: alinhar tabela de contribuição do artigo com os dados do PSM/CID,open,GabrielSMonteiro,1.0,1.0,45.0,45.0,06/11,-,Aberta em atraso,
 87,Fase 3,[ARTIGO] fix: voltar o artigo ao modelo SBC,closed,DaviPierre,2.0,2.0,90.0,90.0,06/11,07/11/2026,Concluida em atraso,11.76
 88,Fase 2,[ARTIGO] docs: enxugar o artigo da Entrega 1,closed,wChrstphr,3.0,2.0,135.0,90.0,26/10,27/10/2026,Concluida em atraso,0.06
 90,Sem Fase,[GESTAO] Automatizar sincronização de métricas com GitHub Projects,closed,eduarda-ogomes,2.0,2.0,90.0,90.0,28/10,28/10/2026,Concluida no prazo,0.01
@@ -51,9 +51,9 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 95,Fase 3,[F3] Método de avaliação e justificativa por métrica,open,DaviPierre,3.0,0.0,135.0,0.0,06/11,-,Aberta em atraso,
 96,Fase 3,[F3] Recursos e ambiente de avaliação,open,LeticiaSantosss,2.0,0.0,90.0,0.0,05/11,-,Aberta em atraso,
 97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",open,GabrielSMonteiro,3.0,0.0,135.0,0.0,06/11,-,Aberta em atraso,
-98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),open,DaviPierre,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
-99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
-100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),open,GabrielSMonteiro,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
+98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),open,DaviPierre,3.0,0.0,135.0,0.0,07/11,-,Aberta em atraso,
+99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,135.0,0.0,07/11,-,Aberta em atraso,
+100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),open,GabrielSMonteiro,3.0,4.0,135.0,180.0,07/11,-,Aberta em atraso,
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,open,wChrstphr,2.0,0.0,90.0,0.0,06/11,-,Aberta em atraso,
 102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,closed,LeticiaSantosss,1.5,1.5,67.5,67.5,06/11,06/11/2026,Concluida no prazo,3.14
 103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,open,eduarda-ogomes,2.0,0.0,90.0,0.0,08/11,-,Em andamento (no prazo),
@@ -86,7 +86,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,open,eduarda-ogomes,1.0,0.0,45.0,0.0,22/11,-,Em andamento (no prazo),
 131,Fase 3,[GESTAO] Automatizar a execução do script de métricas PSM/CID via GitHub Actions,closed,eduarda-ogomes,1.0,1.0,45.0,45.0,04/11,04/11/2026,Concluida no prazo,0.03
 133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,open,luizh-gsoares,4.0,0.0,180.0,0.0,08/11,-,Em andamento (no prazo),
-134,Fase 3,[GESTAO] Refazer o plano de medição PSM a partir das necessidades de informação da equipe,open,eduarda-ogomes,3.0,0.0,135.0,0.0,07/11,-,Em andamento (no prazo),
+134,Fase 3,[GESTAO] Refazer o plano de medição PSM a partir das necessidades de informação da equipe,open,eduarda-ogomes,3.0,3.0,135.0,135.0,07/11,-,Aberta em atraso,
 135,Fase 3,[GESTAO] Adaptar o script de coleta PSM às medidas novas,open,wChrstphr,3.0,0.0,135.0,0.0,08/11,-,Em andamento (no prazo),
 136,Fase 3,[GESTAO] Atualizar o relatório PSM/CID da Fase 2 e o apêndice de contribuição,closed,wChrstphr,1.5,1.0,67.5,45.0,05/11,07/11/2026,Concluida em atraso,2.61
 138,Fase 3,[GESTAO] Sincronizar o prazo das issues com o GitHub Projects,closed,wChrstphr,1.0,0.0,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.93
