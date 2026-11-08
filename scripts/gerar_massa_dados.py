@@ -53,7 +53,7 @@ def gerar_cena_referencia(caminho_saida: str) -> dict:
         {
             "id": "ref_frame_01",
             "type": "frame",
-            "name": "Moldura de Referência da Avaliação",
+            "name": "Quadro 1",
             "x": 40,
             "y": 30,
             "width": 1100,
@@ -105,8 +105,8 @@ def gerar_cena_referencia(caminho_saida: str) -> dict:
             "updated": timestamp_base,
             "link": None,
             "locked": False,
-            "text": "Cena de Referência — Avaliação Qualidade Excalidraw",
-            "originalText": "Cena de Referência — Avaliação Qualidade Excalidraw",
+            "text": "Cena de referência",
+            "originalText": "Cena de referência",
             "fontSize": 20,
             "fontFamily": 1,
             "textAlign": "left",
@@ -170,8 +170,8 @@ def gerar_cena_referencia(caminho_saida: str) -> dict:
             "updated": timestamp_base,
             "link": None,
             "locked": False,
-            "text": "Texto em Forma",
-            "originalText": "Texto em Forma",
+            "text": "Texto no retângulo",
+            "originalText": "Texto no retângulo",
             "fontSize": 16,
             "fontFamily": 1,
             "textAlign": "center",
@@ -396,17 +396,10 @@ def gerar_cena_referencia(caminho_saida: str) -> dict:
 
 
 def gerar_cena_escala(n_elementos: int, caminho_saida: str) -> dict:
-    """
-    Gera uma cena de escala com N elementos dispostos em grade,
-    mantendo a proporção estrita de:
-      - 40% retângulos
-      - 20% elipses
-      - 20% setas
-      - 20% textos
-    """
+    """Gera uma cena com N elementos em grade (40% retângulos, 20% elipses, 20% setas e 20% textos)."""
     assert n_elementos % 10 == 0, "O número de elementos deve ser múltiplo de 10"
 
-    # Seleção de colunas para distribuição em grade harmoniosa
+    # Colunas da grade por tamanho
     if n_elementos <= 100:
         colunas = 10
     elif n_elementos <= 1000:
@@ -532,22 +525,18 @@ def gerar_cena_escala(n_elementos: int, caminho_saida: str) -> dict:
 
 
 def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
-    """
-    Gera o conjunto completo dos 9 arquivos inválidos para a métrica M2.3.1
-    (Proporção de arquivos inválidos tratados com mensagem), cobrindo cada
-    caso com seu defeito intencional estritamente documentado.
-    """
+    """Gera os 9 arquivos inválidos de teste para M2.3.1."""
     os.makedirs(diretorio_saida, exist_ok=True)
     arquivos_gerados = {}
 
     # Caso 1: Arquivo vazio com extensão .excalidraw (0 bytes)
     c1 = os.path.join(diretorio_saida, "invalido_01_vazio.excalidraw")
     with open(c1, "wb") as f:
-        pass  # 0 bytes
+        pass
     arquivos_gerados["invalido_01_vazio.excalidraw"] = {
         "caminho": c1,
-        "defeito": "Arquivo de tamanho zero bytes com extensão .excalidraw.",
-        "comportamento_esperado": "Exibir aviso de arquivo vazio ou formato não reconhecido sem travar a aplicação.",
+        "defeito": "Arquivo vazio com 0 bytes",
+        "comportamento_esperado": "Avisar que o arquivo está vazio sem quebrar a página",
     }
 
     # Caso 2: JSON com erro de sintaxe
@@ -556,8 +545,8 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         f.write('{\n  "type": "excalidraw",\n  "version": 2,\n  "elements": [\n    {"id": "rec_01", "type": "rectangle",\n')
     arquivos_gerados["invalido_02_json_malformado.excalidraw"] = {
         "caminho": c2,
-        "defeito": "Sintaxe JSON corrompida: chave e colchetes não fechados e vírgula solta.",
-        "comportamento_esperado": "Capturar o erro de parse sintático e alertar o usuário sem fechar a aba.",
+        "defeito": "JSON com sintaxe quebrada",
+        "comportamento_esperado": "Tratar o erro de leitura do JSON e avisar o usuário",
     }
 
     # Caso 3: JSON válido sem o campo type
@@ -573,14 +562,14 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         json.dump(conteudo_c3, f, indent=2)
     arquivos_gerados["invalido_03_sem_campo_type.excalidraw"] = {
         "caminho": c3,
-        "defeito": "JSON válido, mas sem o campo obrigatório 'type' ('excalidraw').",
-        "comportamento_esperado": "Rejeitar o arquivo por ausência de discriminador de tipo e emitir mensagem explicativa.",
+        "defeito": "JSON sem o campo type",
+        "comportamento_esperado": "Rejeitar o arquivo por falta do identificador do formato",
     }
 
     # Caso 4: Campo type com valor desconhecido
     c4 = os.path.join(diretorio_saida, "invalido_04_type_desconhecido.excalidraw")
     conteudo_c4 = {
-        "type": "formato_desconhecido_exemplo",
+        "type": "desconhecido",
         "version": 2,
         "source": "https://excalidraw.com",
         "elements": [],
@@ -591,8 +580,8 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         json.dump(conteudo_c4, f, indent=2)
     arquivos_gerados["invalido_04_type_desconhecido.excalidraw"] = {
         "caminho": c4,
-        "defeito": "Campo 'type' contém valor desconhecido ('formato_desconhecido_exemplo') em vez de 'excalidraw'.",
-        "comportamento_esperado": "Identificar formato incompatível e avisar que o tipo não é suportado.",
+        "defeito": "Campo type com valor desconhecido",
+        "comportamento_esperado": "Avisar que o tipo de arquivo não é suportado",
     }
 
     # Caso 5: Lista de elementos com campos obrigatórios ausentes
@@ -602,8 +591,8 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         "version": 2,
         "source": "https://excalidraw.com",
         "elements": [
-            {"descricao": "elemento sem id, type, coordenadas ou dimensoes"},
-            {"id": "elem_apenas_com_id"},
+            {"cor": "azul"},
+            {"id": "elem_incompleto"},
         ],
         "appState": {"viewBackgroundColor": "#ffffff"},
         "files": {},
@@ -612,8 +601,8 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         json.dump(conteudo_c5, f, indent=2)
     arquivos_gerados["invalido_05_elementos_sem_campos_obrigatorios.excalidraw"] = {
         "caminho": c5,
-        "defeito": "Objetos no array 'elements' violam o esquema obrigatório (ausência de id, type, x, y, width, height).",
-        "comportamento_esperado": "Validar o esquema dos elementos, alertar erro de integridade e não corromper o canvas.",
+        "defeito": "Elementos sem id, type ou coordenadas",
+        "comportamento_esperado": "Identificar elemento incompleto sem travar o editor",
     }
 
     # Caso 6: Elemento com coordenadas não numéricas
@@ -624,11 +613,11 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         "source": "https://excalidraw.com",
         "elements": [
             {
-                "id": "rec_coords_invalidas",
+                "id": "rec_01",
                 "type": "rectangle",
-                "x": "coordenada_invalida_string",
+                "x": "cem",
                 "y": None,
-                "width": "largura_texto",
+                "width": "duzentos",
                 "height": False,
             }
         ],
@@ -639,20 +628,19 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         json.dump(conteudo_c6, f, indent=2)
     arquivos_gerados["invalido_06_coordenadas_nao_numericas.excalidraw"] = {
         "caminho": c6,
-        "defeito": "Campos de posição geométrica (x, y, width, height) contêm tipos não numéricos (string, null, booleano).",
-        "comportamento_esperado": "Sanitizar ou rejeitar as coordenadas corrompidas antes do cálculo vetorial.",
+        "defeito": "Coordenadas com texto ou null no lugar de números",
+        "comportamento_esperado": "Recusar ou descartar coordenadas inválidas sem erro",
     }
 
     # Caso 7: Arquivo binário qualquer renomeado para .excalidraw
     c7 = os.path.join(diretorio_saida, "invalido_07_binario_renomeado.excalidraw")
-    # Bytes simulando cabeçalho ELF e dados binários não decodificáveis em UTF-8
     dados_binarios = b"\x7fELF\x02\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00>\x00\x01\x00\x00\x00\xff\xfe\xfd\xfc\x80\x81\x82\x83"
     with open(c7, "wb") as f:
         f.write(dados_binarios)
     arquivos_gerados["invalido_07_binario_renomeado.excalidraw"] = {
         "caminho": c7,
-        "defeito": "Arquivo binário executável arbitrário (não-UTF8) renomeado com extensão .excalidraw.",
-        "comportamento_esperado": "Tratar exceção de decodificação de texto UTF-8 e exibir mensagem de arquivo corrompido.",
+        "defeito": "Arquivo binário com extensão .excalidraw",
+        "comportamento_esperado": "Tratar erro na leitura de texto UTF-8 e exibir mensagem",
     }
 
     # Caso 8: Imagem PNG sem desenho incorporado
@@ -660,8 +648,8 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
     criar_png_minimo(c8)
     arquivos_gerados["invalido_08_png_sem_desenho.png"] = {
         "caminho": c8,
-        "defeito": "Arquivo de imagem PNG válido, porém sem chunks tEXt contendo metadados de cena Excalidraw.",
-        "comportamento_esperado": "Ao tentar abrir como cena via menu de abertura de arquivo, alertar que a imagem não possui desenho editável incorporado.",
+        "defeito": "Imagem PNG comum sem desenho embutido",
+        "comportamento_esperado": "Ao tentar abrir pelo menu, avisar que não há desenho editável",
     }
 
     # Caso 9: Arquivo .excalidraw truncado no meio
@@ -677,8 +665,8 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
         f.write(conteudo_truncado)
     arquivos_gerados["invalido_09_truncado_no_meio.excalidraw"] = {
         "caminho": c9,
-        "defeito": "Arquivo .excalidraw interrompido abruptamente na metade da payload JSON (simulando corte de download ou falha de disco).",
-        "comportamento_esperado": "Identificar terminação inesperada do arquivo (EOF prematuro) e informar corrupção sem travar.",
+        "defeito": "Arquivo JSON cortado pela metade",
+        "comportamento_esperado": "Avisar que o arquivo está incompleto ou corrompido",
     }
 
     return arquivos_gerados

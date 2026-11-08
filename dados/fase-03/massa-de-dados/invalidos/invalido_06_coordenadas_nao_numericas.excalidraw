@@ -4,11 +4,11 @@
   "source": "https://excalidraw.com",
   "elements": [
     {
-      "id": "rec_coords_invalidas",
+      "id": "rec_01",
       "type": "rectangle",
-      "x": "coordenada_invalida_string",
+      "x": "cem",
       "y": null,
-      "width": "largura_texto",
+      "width": "duzentos",
       "height": false
     }
   ],

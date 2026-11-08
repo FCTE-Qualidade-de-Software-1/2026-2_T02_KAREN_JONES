@@ -4,10 +4,10 @@
   "source": "https://excalidraw.com",
   "elements": [
     {
-      "descricao": "elemento sem id, type, coordenadas ou dimensoes"
+      "cor": "azul"
     },
     {
-      "id": "elem_apenas_com_id"
+      "id": "elem_incompleto"
     }
   ],
   "appState": {
