@@ -170,40 +170,21 @@ Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilid
 | Dados do GitHub | Respostas brutas da API para a janela de 18/04/2026 a 18/10/2026 | Coletadas com `gh`, salvas em JSON | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
 | Projetos mínimos | Um projeto para cada combinação de React 17, 18 e 19 com Vite e com Next.js (6 projetos) | Criados pela equipe a partir do guia de integração | M3.1.2 |
 
-### 6.1 Justificativa da Massa de Dados (Critério F3-C2)
+### 6.1 Justificativa da massa de dados
 
-A utilização de conjuntos de dados ad-hoc desenhados livremente durante os testes comprometeria a repetibilidade da avaliação, introduzindo variabilidade não controlada de geometria, quantidade de vértices, densidade de elementos e propriedades de estilo. Para atender aos critérios F3-C2 e F3-C8, a massa de dados foi projetada com base em três justificativas metodológicas:
+Desenhar livremente durante as coletas impediria que dois avaliadores obtivessem o mesmo valor de tempo ou taxa de quadros. Por isso, a avaliação usa uma massa de dados fixa salva em `dados/fase-03/massa-de-dados/`, gerada por script (F3-C2 e F3-C8).
 
-#### 6.1.1 Justificativa da Cena de Referência (`cena_referencia.excalidraw`)
-- **Cobertura taxonômica completa:** O Excalidraw opera com um modelo vetorial heterogêneo onde cada elemento possui um ciclo de serialização e renderização distinto. A cena canônica reúne obrigatoriamente os 10 tipos primitivos essenciais (retângulo, elipse, losango, seta direcionada, linha poligonal, traço livre *freedraw* com pressão simulada, texto solto, texto vinculado a container de forma *bound text*, imagem raster com payload binária em base64 e moldura *frame* agrupando elementos).
-- **Consistência entre Confiabilidade e Flexibilidade:** A mesma cena canônica é adotada em [M2.4.1](../fase-02/gqm-confiabilidade.md) (para testar a restauração em falhas de processo do navegador), em [M2.4.2](../fase-02/gqm-confiabilidade.md) (compatibilidade de reabertura entre versões históricas), em [M3.4.2](../fase-02/gqm-flexibilidade.md) (preservação de propriedades na exportação e reimportação em `.excalidraw`, PNG e SVG) e em [M3.4.3](../fase-02/gqm-flexibilidade.md) (cobertura documental dos campos JSON do formato). Dessa forma, qualquer degradação de atributo observada em um formato ou versão é diretamente rastreável às características do mesmo conjunto padronizado.
+- **Cena de referência:** reúne um elemento de cada um dos 10 tipos definidos na Fase 02 (retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura). Ela é usada em [M2.4.1](../fase-02/gqm-confiabilidade.md) (restauração de sessão após fechar a aba ou matar o processo), [M2.4.2](../fase-02/gqm-confiabilidade.md) (compatibilidade de reabertura entre versões antigas e a atual), [M3.4.2](../fase-02/gqm-flexibilidade.md) (preservação de propriedades na exportação e reimportação em `.excalidraw`, PNG e SVG) e [M3.4.3](../fase-02/gqm-flexibilidade.md) (documentação dos campos do formato). Manter a mesma cena em todas essas métricas permite comparar os resultados diretamente.
+- **Cenas de escala:** quatro arquivos com 100, 1.000, 5.000 e 10.000 elementos, na proporção de 40% retângulos, 20% elipses, 20% setas e 20% textos, dispostos em grade. Essa proporção reflete diagramas típicos, onde caixas e textos predominam sobre conexões. Os quatro volumes permitem traçar a curva de tempo de abertura ([M3.2.1](../fase-02/gqm-flexibilidade.md)), medir a taxa de quadros ao arrastar 50 elementos ([M3.2.2](../fase-02/gqm-flexibilidade.md)) e identificar o tamanho máximo de cena que a aplicação consegue salvar e exportar sem travar o navegador ([M3.2.3](../fase-02/gqm-flexibilidade.md)). A disposição em grade evita que formas fiquem escondidas umas atrás das outras.
+- **Arquivos inválidos:** os 9 casos cobrem os erros de entrada mais comuns para avaliar a tolerância a falhas em [M2.3.1](../fase-02/gqm-confiabilidade.md): arquivo vazio, JSON com sintaxe quebrada, JSON sem o campo `type`, tipo desconhecido, elementos sem campos obrigatórios, coordenadas com texto ou `null`, arquivo binário renomeado para `.excalidraw`, imagem PNG comum sem desenho embutido e arquivo cortado pela metade. O teste verifica se o editor exibe mensagem de erro e continua utilizável em vez de travar o navegador.
 
-#### 6.1.2 Justificativa das Cenas de Escala (`cena_100` a `cena_10000.excalidraw`)
-- **Proporção representativa da carga de trabalho:** Diagramas reais de arquitetura de software e fluxos de processos são compostos predominantemente por blocos conceituais e anotações explicativas, conectados por vetores de relação. A proporção estrita fixada na Fase 02 — **40% de retângulos**, **20% de elipses**, **20% de setas** e **20% de textos** — espelha essa distribuição sem viés de sobre-representação de elementos triviais.
-- **Progressão de estresse do motor de renderização:** O escalonamento logarítmico (100, 1.000, 5.000 e 10.000 elementos) cobre desde o uso rotineiro até o ponto de sobrecarga da árvore de renderização do Canvas/HTML5. O arranjo em grade regular (`160 × 120 px` por célula) impede a oclusão mútua dos elementos e viabiliza a seleção uniforme de exatamente 50 elementos para a manipulação padronizada de [M3.2.2](../fase-02/gqm-flexibilidade.md).
-- **Homogeneidade paramétrica:** Todos os elementos possuem sementes aleatórias (`seed`) e nãoces de versão fixados deterministicamente, garantindo que o algoritmo de cálculo de linhas ásperas (*roughness*) produza exatamente a mesma quantidade de caminhos vetoriais em todas as máquinas de teste.
-
-#### 6.1.3 Justificativa do Conjunto de Arquivos Inválidos (`invalidos/`)
-- **Cobertura exaustiva de fronteiras de entrada:** Para verificar a tolerância a falhas do editor na métrica [M2.3.1](../fase-02/gqm-confiabilidade.md), foram construídos 9 arquivos cobrindo cada etapa do pipeline de carregamento:
-  1. *Arquivo vazio (0 bytes):* testa verificação prévia de comprimento de payload antes do consumo do stream;
-  2. *JSON com erro sintático:* testa tratamento de exceções léxicas e sintáticas na camada de parsing;
-  3. *JSON válido sem campo `type`:* valida o discriminador obrigatório de formato no cabeçalho;
-  4. *Campo `type` com valor não suportado:* avalia a identificação semântica de formatos externos;
-  5. *Elementos com propriedades essenciais ausentes:* avalia a validação de esquema de cada elemento do array;
-  6. *Coordenadas não numéricas:* testa a sanitização geométrica de `x`, `y`, `width` e `height`, prevenindo travamentos por propagação de `NaN` na biblioteca matemática de renderização;
-  7. *Binário executável renomeado:* avalia a resiliência à falha de decodificação UTF-8;
-  8. *Imagem PNG sem desenho incorporado:* verifica o tratamento adequado ao abrir arquivos raster sem metadados vetoriais `tEXt` de cena;
-  9. *Arquivo truncado no meio da carga:* simula falhas abruptas de E/S ou conexões interrompidas durante a persistência.
-
-### 6.2 Automação e Recriação da Massa de Dados
-
-Toda a massa de dados foi gerada pelo script [`scripts/gerar_massa_dados.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/gerar_massa_dados.py) e está documentada em detalhes no [`README da massa de dados`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-03/massa-de-dados/README.md).
-
-Para recriar integralmente os arquivos e executar o teste de conformidade dos esquemas e proporções, o avaliador executa na raiz do repositório:
+O script [`scripts/gerar_massa_dados.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/gerar_massa_dados.py) recria toda a massa de dados com o comando:
 
 ```bash
 python scripts/gerar_massa_dados.py --verificar
 ```
+
+O detalhamento de cada arquivo está no [README da pasta de massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-03/massa-de-dados/README.md).
 
 ---
 
@@ -339,4 +320,4 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | |
-| 1.1 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 (atendimento aos critérios F3-C2 e F3-C8) | [Gabriel Santos](https://github.com/gabriel-nitro) | |
+| 1.1 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |

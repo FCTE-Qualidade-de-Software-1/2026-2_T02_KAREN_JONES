@@ -1,137 +1,89 @@
-# Massa de Dados para Avaliação (Fase 03)
+# Massa de dados para avaliação (Fase 03)
 
-Este diretório contém a massa de dados padronizada necessária para a execução das medições dos objetivos de qualidade **G2 (Confiabilidade)** e **G3 (Flexibilidade)** durante a Fase 04, atendendo aos critérios de avaliação **F3-C2** (especificação e justificativa da massa de dados) e **F3-C8** (consistência entre as Fases 02 e 03).
+Arquivos de teste usados na medição das métricas de Confiabilidade (G2) e Flexibilidade (G3) durante a Fase 04.
 
-Todos os artefatos aqui armazenados são gerados de forma reproduzível e determinística pelo script versionado [`scripts/gerar_massa_dados.py`](../../scripts/gerar_massa_dados.py), permitindo que qualquer avaliador recrie integralmente o ambiente de dados de teste.
-
----
-
-## 1. Estrutura do Diretório
-
-```text
-dados/fase-03/massa-de-dados/
-├── README.md                      # Esta documentação técnica
-├── cena_referencia.excalidraw     # Cena canônica com os 10 tipos essenciais de elementos
-├── cena_100.excalidraw            # Cena de escala com 100 elementos (40/20/20/20)
-├── cena_1000.excalidraw           # Cena de escala com 1.000 elementos (40/20/20/20)
-├── cena_5000.excalidraw           # Cena de escala com 5.000 elementos (40/20/20/20)
-├── cena_10000.excalidraw          # Cena de escala com 10.000 elementos (40/20/20/20)
-└── invalidos/                     # Conjunto de 9 arquivos inválidos para M2.3.1
-    ├── invalido_01_vazio.excalidraw
-    ├── invalido_02_json_malformado.excalidraw
-    ├── invalido_03_sem_campo_type.excalidraw
-    ├── invalido_04_type_desconhecido.excalidraw
-    ├── invalido_05_elementos_sem_campos_obrigatorios.excalidraw
-    ├── invalido_06_coordenadas_nao_numericas.excalidraw
-    ├── invalido_07_binario_renomeado.excalidraw
-    ├── invalido_08_png_sem_desenho.png
-    └── invalido_09_truncado_no_meio.excalidraw
-```
+Todos os arquivos são gerados a partir do script `scripts/gerar_massa_dados.py`, para que qualquer pessoa consiga recriar a mesma base de dados.
 
 ---
 
-## 2. Cena de Referência (`cena_referencia.excalidraw`)
+## 1. Cena de referência (`cena_referencia.excalidraw`)
 
-A cena de referência consolida em um único arquivo todos os tipos primitivos de elementos manipulados pelo Excalidraw, servindo de base para os testes de restauração de sessão ([M2.4.1](../../docs/fase-02/gqm-confiabilidade.md#m241--proporção-de-cenários-de-fechamento-com-restauração-do-desenho)), compatibilidade retroativa e abertura sem perda ([M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242--proporção-de-arquivos-reabertos-sem-perda)), fidelidade de exportação e reimportação ([M3.4.2](../../docs/fase-02/gqm-flexibilidade.md#m342--proporção-de-elementos-preservados-na-exportação-e-reimportação)) e cobertura documental do formato ([M3.4.3](../../docs/fase-02/gqm-flexibilidade.md#m343--proporção-dos-campos-do-formato-excalidraw-documentados)).
+Contém um elemento de cada um dos 10 tipos definidos na Fase 02: retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura (*frame*).
 
-### Elementos Contidos na Cena
+Essa cena padronizada é usada em quatro métricas:
+- [M2.4.1](../../docs/fase-02/gqm-confiabilidade.md#m241--proporção-de-cenários-de-fechamento-com-restauração-do-desenho): restauração do desenho após fechamento ou queda do navegador;
+- [M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242--proporção-de-arquivos-reabertos-sem-perda): reabertura de arquivos de versões anteriores;
+- [M3.4.2](../../docs/fase-02/gqm-flexibilidade.md#m342--proporção-de-elementos-preservados-na-exportação-e-reimportação): elementos preservados após exportar e reimportar em `.excalidraw`, PNG e SVG;
+- [M3.4.3](../../docs/fase-02/gqm-flexibilidade.md#m343--proporção-dos-campos-do-formato-excalidraw-documentados): proporção dos campos do arquivo documentados na especificação.
 
-| # | Identificador (`id`) | Tipo (`type`) | Descrição do Elemento | Características Específicas |
-| :-: | :--- | :--- | :--- | :--- |
-| 1 | `ref_frame_01` | `frame` | Moldura estrutural | Delimita a prancheta de avaliação (`1100 × 680 px`), traço tracejado (`#868e96`). Agrupa os demais elementos via `frameId`. |
-| 2 | `ref_text_solto_01` | `text` | Texto independente | Rótulo de título posicionado no topo (`fontSize: 20`, alinhamento à esquerda, `containerId: null`). |
-| 3 | `ref_rect_01` | `rectangle` | Retângulo arredondado | Borda azul (`#1971c2`), preenchimento sólido (`#d0ebff`), cantos arredondados (`roundness: type 3`). Contém vínculo em `boundElements`. |
-| 4 | `ref_bound_text_01` | `text` | Texto contido em forma (*bound text*) | Texto interno ao retângulo (`containerId: "ref_rect_01"`), centralizado vertical e horizontalmente. |
-| 5 | `ref_ellipse_01` | `ellipse` | Elipse | Forma elíptica verde (`#2b8a3e`), preenchimento sólido (`#d3f9d8`), dimensões `180 × 110 px`. |
-| 6 | `ref_diamond_01` | `diamond` | Losango de decisão | Vértices simétricos amarelos/laranja (`#e67700`), preenchimento `#fff3bf`, dimensões `160 × 120 px`. |
-| 7 | `ref_arrow_01` | `arrow` | Seta direcional | Vetor linear horizontal de 180 px (`#c92a2a`) com ponta triangular (`endArrowhead: "arrow"`). |
-| 8 | `ref_line_01` | `line` | Linha poligonal | Linha com três pontos de ancoragem `[0,0]`, `[120,40]`, `[240,0]`, estilo tracejado cinza (`#495057`). |
-| 9 | `ref_freedraw_01` | `freedraw` | Traço livre à mão (*pencil*) | Curva com 5 coordenadas vetoriais, espessura e sensibilidade à pressão simulada (`pressures` e `simulatePressure: true`). |
-| 10 | `ref_image_01` | `image` | Imagem raster incorporada | Elemento de imagem vinculado à entrada `file_ref_logo_fcte` registrada no dicionário de arquivos raiz `files` (PNG 1×1 em base64). |
+### Elementos da cena
+
+| Identificador (`id`) | Tipo (`type`) | Descrição |
+| :--- | :--- | :--- |
+| `ref_frame_01` | `frame` | Moldura que agrupa os elementos da cena |
+| `ref_text_solto_01` | `text` | Texto solto com o título da cena |
+| `ref_rect_01` | `rectangle` | Retângulo com cantos arredondados e cor azul |
+| `ref_bound_text_01` | `text` | Texto vinculado dentro do retângulo (`ref_rect_01`) |
+| `ref_ellipse_01` | `ellipse` | Elipse com preenchimento verde |
+| `ref_diamond_01` | `diamond` | Losango com preenchimento amarelo |
+| `ref_arrow_01` | `arrow` | Seta com ponta triangular |
+| `ref_line_01` | `line` | Linha com três pontos e traço tracejado |
+| `ref_freedraw_01` | `freedraw` | Traçado livre feito à mão com variação de pressão |
+| `ref_image_01` | `image` | Imagem raster em PNG registrada no campo `files` do arquivo |
 
 ---
 
-## 3. Cenas de Escala (`cena_100`, `cena_1000`, `cena_5000`, `cena_10000.excalidraw`)
+## 2. Cenas de escala
 
-As cenas de escala fornecem cargas de trabalho crescentes e padronizadas para avaliar o comportamento do motor de renderização do Excalidraw sob estresse nas métricas de escalabilidade:
-- [M3.2.1](../../docs/fase-02/gqm-flexibilidade.md#m321--tempo-de-abertura-por-tamanho-de-cena): Tempo de abertura por tamanho de cena;
-- [M3.2.2](../../docs/fase-02/gqm-flexibilidade.md#m322--taxa-de-quadros-durante-a-edição-por-tamanho-de-cena): Taxa de quadros (FPS) durante manipulação em tela;
-- [M3.2.3](../../docs/fase-02/gqm-flexibilidade.md#m323--tamanho-máximo-de-cena-salva-e-exportada): Limite máximo de elementos suportados para persistência e exportação.
+Quatro arquivos gerados com 100, 1.000, 5.000 e 10.000 elementos para testar a escalabilidade do editor:
+- [M3.2.1](../../docs/fase-02/gqm-flexibilidade.md#m321--tempo-de-abertura-por-tamanho-de-cena): tempo de abertura de cada cena;
+- [M3.2.2](../../docs/fase-02/gqm-flexibilidade.md#m322--taxa-de-quadros-durante-a-edição-por-tamanho-de-cena): taxa de quadros (FPS) ao arrastar uma seleção de 50 elementos;
+- [M3.2.3](../../docs/fase-02/gqm-flexibilidade.md#m323--tamanho-máximo-de-cena-salva-e-exportada): maior cena que salva e exporta em PNG e SVG sem travar o navegador.
 
-### Distribuição e Proporção Fixa dos Elementos
+### Proporção dos elementos
 
-Todas as cenas de escala seguem rigorosamente a proporção canônica fixada na Fase 02: **40% de retângulos**, **20% de elipses**, **20% de setas** e **20% de textos**.
+Todas as cenas seguem a proporção definida na Fase 02: **40% retângulos, 20% elipses, 20% setas e 20% textos**. Os elementos são organizados em grade para que não fiquem sobrepostos.
 
-| Arquivo | Total de Elementos | Retângulos (40%) | Elipses (20%) | Setas (20%) | Textos (20%) | Arranjo Espacial em Grade |
+| Arquivo | Total | Retângulos (40%) | Elipses (20%) | Setas (20%) | Textos (20%) | Grade |
 | :--- | :-: | :-: | :-: | :-: | :-: | :--- |
-| `cena_100.excalidraw` | 100 | 40 | 20 | 20 | 20 | Grade 10 × 10 (passo 160 × 120 px) |
-| `cena_1000.excalidraw` | 1.000 | 400 | 200 | 200 | 200 | Grade 40 × 25 (passo 160 × 120 px) |
-| `cena_5000.excalidraw` | 5.000 | 2.000 | 1.000 | 1.000 | 1.000 | Grade 100 × 50 (passo 160 × 120 px) |
-| `cena_10000.excalidraw` | 10.000 | 4.000 | 2.000 | 2.000 | 2.000 | Grade 100 × 100 (passo 160 × 120 px) |
-
-Cada elemento possui identificador único determinístico (`scale_<N>_<ID>`), sementes pseudoaleatórias fixadas (`seed`, `versionNonce`) para garantir renderização consistente das arestas ásperas (*roughness*), e coordenadas geométricas que evitam sobreposição total, facilitando a seleção em lote de 50 elementos exigida por M3.2.2.
+| `cena_100.excalidraw` | 100 | 40 | 20 | 20 | 20 | 10 colunas × 10 linhas |
+| `cena_1000.excalidraw` | 1.000 | 400 | 200 | 200 | 200 | 40 colunas × 25 linhas |
+| `cena_5000.excalidraw` | 5.000 | 2.000 | 1.000 | 1.000 | 1.000 | 100 colunas × 50 linhas |
+| `cena_10000.excalidraw` | 10.000 | 4.000 | 2.000 | 2.000 | 2.000 | 100 colunas × 100 linhas |
 
 ---
 
-## 4. Conjunto de Arquivos Inválidos (`invalidos/`)
+## 3. Arquivos inválidos (`invalidos/`)
 
-Este subconjunto implementa os 9 cenários de teste exigidos pela métrica [M2.3.1](../../docs/fase-02/gqm-confiabilidade.md#m231--proporção-de-arquivos-inválidos-tratados-com-mensagem) (Proporção de arquivos inválidos tratados com mensagem), avaliando a robustez do software ao receber entradas corrompidas ou adversárias.
+Conjunto de 9 arquivos usados em [M2.3.1](../../docs/fase-02/gqm-confiabilidade.md#m231--proporção-de-arquivos-inválidos-tratados-com-mensagem) para verificar se o editor trata erros de arquivo exibindo mensagem ao usuário e continua funcionando sem travar.
 
-| Nome do Arquivo | Tipo / Extensão | Defeito Intencional Inserido | Comportamento Esperado no Editor |
-| :--- | :--- | :--- | :--- |
-| `invalido_01_vazio.excalidraw` | Texto (`.excalidraw`) | Arquivo com tamanho zero bytes (vazio). | Exibir aviso de erro de arquivo vazio ou inválido, sem lançar exceção não capturada nem congelar o canvas. |
-| `invalido_02_json_malformado.excalidraw` | Texto (`.excalidraw`) | Erro de sintaxe JSON: chaves e colchetes não fechados e vírgula solta. | Capturar a falha do analisador sintático (`JSON.parse`), alertando sobre formato corrompido sem derrubar a aplicação. |
-| `invalido_03_sem_campo_type.excalidraw` | JSON (`.excalidraw`) | JSON estruturalmente íntegro, mas omitindo a propriedade obrigatória `type`. | Rejeitar a carga por ausência do discriminador de tipo do documento com mensagem orientativa. |
-| `invalido_04_type_desconhecido.excalidraw` | JSON (`.excalidraw`) | O campo `type` possui o valor `"formato_desconhecido_exemplo"` em vez de `"excalidraw"`. | Identificar incompatibilidade de tipo de arquivo e notificar formato não suportado. |
-| `invalido_05_elementos_sem_campos_obrigatorios.excalidraw` | JSON (`.excalidraw`) | Objetos no array `elements` sem propriedades essenciais (`id`, `type`, `x`, `y`, `width`, `height`). | Validar o esquema de cada elemento, alertar a inconsistência estrutural e preservar a prancheta utilizável. |
-| `invalido_06_coordenadas_nao_numericas.excalidraw` | JSON (`.excalidraw`) | Campos de posição e dimensões contendo valores não numéricos (`x: "coordenada_invalida_string"`, `y: null`, `height: false`). | Sanitizar ou recusar as coordenadas corrompidas antes do cálculo vetorial, impedindo travamento por `NaN`. |
-| `invalido_07_binario_renomeado.excalidraw` | Binário (`.excalidraw`) | Conteúdo binário arbitrário (cabeçalho executável ELF e bytes não-UTF-8) com extensão `.excalidraw`. | Tratar a falha de decodificação de texto, informando que o arquivo é binário ou não legível. |
-| `invalido_08_png_sem_desenho.png` | Binário (`.png`) | Imagem raster PNG padrão (1×1 px) sem os metadados de chunk `tEXt`/`zTXt` contendo a cena Excalidraw. | Ao tentar abrir a imagem via menu de abertura de arquivo, notificar que o arquivo não contém um desenho editável incorporado. |
-| `invalido_09_truncado_no_meio.excalidraw` | Texto (`.excalidraw`) | Arquivo JSON legítimo cortado bruscamente na metade da payload de elementos (simulando corte de rede ou falha de E/S). | Identificar terminação inesperada do arquivo (fim de arquivo prematuro) e exibir mensagem de recuperação/erro. |
+| Arquivo | Defeito introduzido | O que a aplicação deve fazer |
+| :--- | :--- | :--- |
+| `invalido_01_vazio.excalidraw` | Arquivo vazio com 0 bytes | Exibir mensagem de arquivo vazio ou inválido sem quebrar a página |
+| `invalido_02_json_malformado.excalidraw` | JSON com erro de sintaxe (chaves e colchetes não fechados) | Tratar o erro de leitura do JSON e avisar o usuário |
+| `invalido_03_sem_campo_type.excalidraw` | JSON válido, mas sem a chave `type` | Rejeitar o arquivo por falta do identificador do formato |
+| `invalido_04_type_desconhecido.excalidraw` | Campo `type` com valor não suportado | Avisar que o tipo de arquivo não é reconhecido |
+| `invalido_05_elementos_sem_campos_obrigatorios.excalidraw` | Elementos sem propriedades obrigatórias (`id`, `type`, coordenadas) | Identificar que o elemento está incompleto sem travar o editor |
+| `invalido_06_coordenadas_nao_numericas.excalidraw` | Posição e dimensões com texto ou `null` no lugar de números | Descartar ou recusar as coordenadas inválidas sem erro no canvas |
+| `invalido_07_binario_renomeado.excalidraw` | Arquivo binário arbitrário salvo com extensão `.excalidraw` | Tratar a falha na leitura de texto UTF-8 e exibir mensagem |
+| `invalido_08_png_sem_desenho.png` | Imagem PNG comum sem dados do Excalidraw incorporados | Ao tentar abrir pelo menu, avisar que a imagem não contém um desenho editável |
+| `invalido_09_truncado_no_meio.excalidraw` | Arquivo `.excalidraw` cortado no meio da lista de elementos | Avisar que o arquivo está corrompido ou incompleto |
 
 ---
 
-## 5. Como Recriar e Validar os Arquivos
+## 4. Como recriar os arquivos
 
-A geração de toda a massa de dados é 100% automatizada e não requer dependências externas além do interpretador Python (versão 3.8 ou superior).
-
-### 5.1 Recriar Todos os Arquivos e Executar Validação Estrutural
-
-A partir da raiz do repositório, execute:
+Para recriar todos os arquivos e rodar a checagem automática, execute na raiz do repositório:
 
 ```bash
 python scripts/gerar_massa_dados.py --verificar
 ```
 
-A rotina irá:
-1. Gerar a cena canônica `cena_referencia.excalidraw`;
-2. Gerar as 4 cenas de escala (`cena_100`, `cena_1000`, `cena_5000` e `cena_10000.excalidraw`);
-3. Gerar os 9 arquivos inválidos no subdiretório `invalidos/`;
-4. Validar o esquema JSON, verificar a presença dos 10 tipos de elementos na cena de referência, conferir a proporção exata nas 4 cenas de escala e atestar a integridade do conjunto inválido.
+Comandos para recriar apenas uma parte:
 
-### 5.2 Comandos para Recriação Seletiva
-
-Caso deseje recriar apenas um subconjunto de dados específico:
-
-- **Apenas a cena de referência:**
-  ```bash
-  python scripts/gerar_massa_dados.py --so-referencia
-  ```
-
-- **Apenas as cenas de escala (100 a 10.000 elementos):**
-  ```bash
-  python scripts/gerar_massa_dados.py --so-escala
-  ```
-
-- **Apenas os arquivos de teste de falha (M2.3.1):**
-  ```bash
-  python scripts/gerar_massa_dados.py --so-invalidos
-  ```
-
-- **Especificar outro diretório de saída:**
-  ```bash
-  python scripts/gerar_massa_dados.py --output-dir caminho/personalizado/
-  ```
+- Só a cena de referência: `python scripts/gerar_massa_dados.py --so-referencia`
+- Só as cenas de escala: `python scripts/gerar_massa_dados.py --so-escala`
+- Só os arquivos inválidos: `python scripts/gerar_massa_dados.py --so-invalidos`
 
 ---
 
@@ -139,4 +91,4 @@ Caso deseje recriar apenas um subconjunto de dados específico:
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 08/11/2026 | Criação da massa de dados completa para G2 e G3 (cena de referência, cenas de escala e arquivos inválidos) e script gerador | [Gabriel Santos](https://github.com/gabriel-nitro) | |
+| 1.0 | 08/11/2026 | Documentação da massa de dados de G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |

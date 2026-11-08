@@ -1,20 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Script de geração e validação da massa de dados para avaliação do Excalidraw.
-Atende aos requisitos dos objetivos G2 (Confiabilidade) e G3 (Flexibilidade)
-definidos na Fase 02 e especificados na Fase 03.
-
-Gera:
-  1. Cena de referência (cena_referencia.excalidraw):
-     Contém ao menos um elemento de cada um dos 10 tipos essenciais:
-     retângulo, elipse, losango, seta, linha, desenho livre (freedraw),
-     texto solto, texto dentro de forma (bound text), imagem e moldura (frame).
-  2. Cenas de escala (cena_100, cena_1000, cena_5000, cena_10000.excalidraw):
-     Compostas na proporção fixa de 40% retângulos, 20% elipses, 20% setas
-     e 20% textos, dispostas em grade regular sem sobreposição total.
-  3. Conjunto de 9 arquivos inválidos de M2.3.1 (invalidos/):
-     Cobrindo cada um dos casos de teste de tolerância a falhas.
+Gera a massa de dados para a avaliação do Excalidraw (Fase 03):
+- Cena de referência com os 10 tipos de elemento da Fase 02
+- Cenas de escala com 100, 1.000, 5.000 e 10.000 elementos (40/20/20/20)
+- 9 arquivos inválidos para o teste de tolerância a falhas (M2.3.1)
 
 Uso:
   python scripts/gerar_massa_dados.py [--output-dir DIR] [--verificar]
@@ -695,14 +685,14 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
 
 
 def verificar_massa_dados(diretorio_base: str) -> bool:
-    """Valida a conformidade de toda a massa de dados gerada perante os critérios da Fase 02 e 03."""
+    """Confere se os arquivos gerados atendem às especificações das Fases 02 e 03."""
     sucesso_total = True
-    print("\n--- Verificação da Massa de Dados ---")
+    print("\nVerificando arquivos gerados...")
 
     # 1. Verificar Cena de Referência
     caminho_ref = os.path.join(diretorio_base, "cena_referencia.excalidraw")
     if not os.path.exists(caminho_ref):
-        print(f"[FALHA] Cena de referência não encontrada: {caminho_ref}")
+        print(f"[ERRO] Cena de referência não encontrada: {caminho_ref}")
         sucesso_total = False
     else:
         with open(caminho_ref, "r", encoding="utf-8") as f:
@@ -715,23 +705,23 @@ def verificar_massa_dados(diretorio_base: str) -> bool:
         faltantes = tipos_esperados - tipos_encontrados
 
         if faltantes:
-            print(f"[FALHA] Cena de referência faltando tipos: {faltantes}")
+            print(f"[ERRO] Cena de referência sem os tipos: {faltantes}")
             sucesso_total = False
         elif not tem_bound_text:
-            print("[FALHA] Cena de referência não contém texto dentro de forma (bound text).")
+            print("[ERRO] Cena de referência sem texto dentro de forma.")
             sucesso_total = False
         elif not tem_imagem_com_file:
-            print("[FALHA] Imagem na cena de referência não vinculada ao dicionário files.")
+            print("[ERRO] Imagem não vinculada ao dicionário files.")
             sucesso_total = False
         else:
-            print(f"[OK] Cena de referência ({caminho_ref}): 10 tipos essenciais confirmados ({len(dados_ref.get('elements', []))} elementos).")
+            print(f"OK: cena_referencia.excalidraw (10 tipos, {len(dados_ref.get('elements', []))} elementos)")
 
     # 2. Verificar Cenas de Escala
     tamanhos_escala = [100, 1000, 5000, 10000]
     for n in tamanhos_escala:
         caminho_escala = os.path.join(diretorio_base, f"cena_{n}.excalidraw")
         if not os.path.exists(caminho_escala):
-            print(f"[FALHA] Cena de escala não encontrada: {caminho_escala}")
+            print(f"[ERRO] Cena de escala não encontrada: {caminho_escala}")
             sucesso_total = False
             continue
         with open(caminho_escala, "r", encoding="utf-8") as f:
@@ -757,10 +747,10 @@ def verificar_massa_dados(diretorio_base: str) -> bool:
         )
 
         if not valido:
-            print(f"[FALHA] Cena de escala {n} fora da proporção esperada: {contagem}")
+            print(f"[ERRO] Cena de escala {n} fora da proporção esperada: {contagem}")
             sucesso_total = False
         else:
-            print(f"[OK] Cena de escala {n} ({caminho_escala}): {total} elementos (40% retângulos, 20% elipses, 20% setas, 20% textos).")
+            print(f"OK: cena_{n}.excalidraw ({total} elementos, proporção 40/20/20/20)")
 
     # 3. Verificar Arquivos Inválidos
     dir_invalidos = os.path.join(diretorio_base, "invalidos")
@@ -779,17 +769,16 @@ def verificar_massa_dados(diretorio_base: str) -> bool:
     for nome_arq in casos_invalidos:
         caminho_arq = os.path.join(dir_invalidos, nome_arq)
         if not os.path.exists(caminho_arq):
-            print(f"[FALHA] Arquivo inválido não encontrado: {caminho_arq}")
+            print(f"[ERRO] Arquivo não encontrado: {caminho_arq}")
             sucesso_total = False
         else:
-            tamanho = os.path.getsize(caminho_arq)
-            print(f"[OK] Arquivo inválido confirmado: {nome_arq} ({tamanho} bytes)")
+            print(f"OK: invalidos/{nome_arq}")
 
     return sucesso_total
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Gerador da massa de dados para avaliação do Excalidraw (Fase 03)")
+    parser = argparse.ArgumentParser(description="Gera a massa de dados para avaliação do Excalidraw (Fase 03)")
     parser.add_argument(
         "--output-dir",
         default=os.path.join("dados", "fase-03", "massa-de-dados"),
@@ -797,8 +786,8 @@ def main():
     )
     parser.add_argument("--so-referencia", action="store_true", help="Gera apenas a cena de referência")
     parser.add_argument("--so-escala", action="store_true", help="Gera apenas as cenas de escala")
-    parser.add_argument("--so-invalidos", action="store_true", help="Gera apenas o conjunto de arquivos inválidos")
-    parser.add_argument("--verificar", action="store_true", help="Executa a rotina de validação dos arquivos gerados")
+    parser.add_argument("--so-invalidos", action="store_true", help="Gera apenas os arquivos inválidos")
+    parser.add_argument("--verificar", action="store_true", help="Executa a verificação dos arquivos gerados")
 
     args = parser.parse_args()
     dir_saida = os.path.abspath(args.output_dir)
@@ -807,31 +796,32 @@ def main():
 
     gerar_tudo = not (args.so_referencia or args.so_escala or args.so_invalidos)
 
-    print(f"Diretório de saída da massa de dados: {dir_saida}")
+    print(f"Diretório de saída: {dir_saida}")
 
     if gerar_tudo or args.so_referencia:
         caminho_ref = os.path.join(dir_saida, "cena_referencia.excalidraw")
         gerar_cena_referencia(caminho_ref)
-        print(f"-> Cena de referência gerada em: {caminho_ref}")
+        print(f"Cena de referência salva em {caminho_ref}")
 
     if gerar_tudo or args.so_escala:
         for n in [100, 1000, 5000, 10000]:
             caminho_esc = os.path.join(dir_saida, f"cena_{n}.excalidraw")
             gerar_cena_escala(n, caminho_esc)
-            print(f"-> Cena de escala {n} gerada em: {caminho_esc}")
+            print(f"Cena de escala {n} salva em {caminho_esc}")
 
     if gerar_tudo or args.so_invalidos:
         gerar_arquivos_invalidos(dir_invalidos)
-        print(f"-> 9 arquivos inválidos de M2.3.1 gerados em: {dir_invalidos}")
+        print(f"9 arquivos inválidos salvos em {dir_invalidos}")
 
     if args.verificar or gerar_tudo:
         sucesso = verificar_massa_dados(dir_saida)
         if not sucesso:
-            print("\n[ERRO] A validação da massa de dados detectou inconformidades.")
+            print("\nA verificação encontrou problemas.")
             sys.exit(1)
         else:
-            print("\n[SUCESSO] Todos os conjuntos de dados foram gerados e verificados com sucesso.")
+            print("\nTodos os arquivos foram gerados e verificados com sucesso.")
 
 
 if __name__ == "__main__":
     main()
+
