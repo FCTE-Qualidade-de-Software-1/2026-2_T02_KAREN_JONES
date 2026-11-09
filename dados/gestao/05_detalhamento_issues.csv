@@ -53,7 +53,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",open,GabrielSMonteiro,3.0,5.0,135.0,225.0,06/11,-,Aberta em atraso,
 98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),open,DaviPierre,3.0,0.0,135.0,0.0,07/11,-,Aberta em atraso,
 99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,135.0,0.0,07/11,-,Aberta em atraso,
-100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),open,GabrielSMonteiro,3.0,4.0,135.0,180.0,07/11,-,Aberta em atraso,
+100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,open,wChrstphr,2.0,0.0,90.0,0.0,06/11,-,Aberta em atraso,
 102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,closed,LeticiaSantosss,1.5,1.5,67.5,67.5,06/11,06/11/2026,Concluida no prazo,3.14
 103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,open,eduarda-ogomes,2.0,0.0,90.0,0.0,08/11,-,Aberta em atraso,

@@ -48,7 +48,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 17 / 17 | 100.0% | 29.4% | 53.5 | 57.9 | R$ 2407.50 | R$ 2605.95 | 108.2% | 1.23 |
 | Fase 2 | 27 / 27 | 100.0% | 44.4% | 62.5 | 56.4 | R$ 2812.50 | R$ 2538.00 | 90.2% | 3.97 |
-| Fase 3 | 23 / 7 | 30.4% | 8.7% | 48.0 | 18.5 | R$ 2160.00 | R$ 832.50 | 38.5% | 4.92 |
+| Fase 3 | 23 / 8 | 34.8% | 8.7% | 48.0 | 18.5 | R$ 2160.00 | R$ 832.50 | 38.5% | 4.97 |
 | Fase 4 | 24 / 0 | 0.0% | 91.7% | 80.0 | 0.0 | R$ 3600.00 | R$ 0.00 | 0.0% | 0.00 |
 | Sem Fase | 1 / 1 | 100.0% | 100.0% | 2.0 | 2.0 | R$ 90.00 | R$ 90.00 | 100.0% | 0.01 |
 
@@ -60,10 +60,10 @@
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Christopher | `@wChrstphr` | 23 | 52.5 | 22.0 | R$ 990.00 | 97 | 16 | **16.32%** |
 | Davi Pierre | `@DaviPierre` | 13 | 37.0 | 23.0 | R$ 1035.00 | 6 | 3 | **17.06%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 39 | 9 | **28.56%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 45 | 9 | **28.56%** |
 | Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 11.4 | R$ 513.45 | 9 | 7 | **8.46%** |
 | Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 12.4 | R$ 558.00 | 21 | 8 | **9.20%** |
-| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 27.5 | R$ 1237.50 | 37 | 11 | **20.40%** |
+| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 27.5 | R$ 1237.50 | 38 | 11 | **20.40%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -78,12 +78,12 @@
 \hline
 Christopher & 23 & 52.5h & 22.0h & 97/16 & 16.32\% \\
 Davi Pierre & 13 & 37.0h & 23.0h & 6/3 & 17.06\% \\
-Gabriel Monteiro & 16 & 44.5h & 38.5h & 39/9 & 28.56\% \\
+Gabriel Monteiro & 16 & 44.5h & 38.5h & 45/9 & 28.56\% \\
 Leticia de Carvalho & 16 & 30.5h & 11.4h & 9/7 & 8.46\% \\
 Luiz Henrique Soares & 15 & 35.0h & 12.4h & 21/8 & 9.20\% \\
-Maria Eduarda & 19 & 46.5h & 27.5h & 37/11 & 20.40\% \\
+Maria Eduarda & 19 & 46.5h & 27.5h & 38/11 & 20.40\% \\
 \hline
-\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{134.8h} & \textbf{209/54} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{134.8h} & \textbf{216/54} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
