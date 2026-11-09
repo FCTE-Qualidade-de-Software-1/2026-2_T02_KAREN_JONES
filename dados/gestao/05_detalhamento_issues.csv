@@ -50,7 +50,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,custo_estimado,cu
 94,Fase 3,[F3] Estudo do processo de projetar a avaliação e estrutura do plano,open,DaviPierre,2.0,0.0,90.0,0.0,05/11,-,Aberta em atraso,
 95,Fase 3,[F3] Método de avaliação e justificativa por métrica,open,DaviPierre,3.0,0.0,135.0,0.0,06/11,-,Aberta em atraso,
 96,Fase 3,[F3] Recursos e ambiente de avaliação,open,LeticiaSantosss,2.0,0.0,90.0,0.0,05/11,-,Aberta em atraso,
-97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",open,GabrielSMonteiro,3.0,5.0,135.0,225.0,06/11,-,Aberta em atraso,
+97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",closed,GabrielSMonteiro,3.0,5.0,135.0,225.0,06/11,09/11/2026,Concluida em atraso,5.39
 98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),open,DaviPierre,3.0,0.0,135.0,0.0,07/11,-,Aberta em atraso,
 99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,135.0,0.0,07/11,-,Aberta em atraso,
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
