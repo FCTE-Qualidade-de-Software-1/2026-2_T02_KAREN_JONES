@@ -103,7 +103,7 @@ Os indicadores de eficiência do processo avaliam a estabilidade orçamentária,
 | **Acurácia da Estimativa** | 108,2% | 90,2% | **98,5%** | 80% a 120% | Excelente convergência: 114,31h reais frente a 116,00h estimadas (desvio de apenas -1,5% no acumulado). |
 | **Cycle / Lead Time Médio** | 1,23 dias | 3,97 dias | **2,91 dias** | Até 3,00 dias | Dentro do limite estipulado; o aumento na Fase 2 decorre da densidade técnica dos artefatos GQM e das issues #28 e #30 fechadas em 05/11. |
 | **Governança de Estimativa** | 100,0% | 88,9% | **93,2%** | 100,0% | Queda pontual na Fase 2 decorrente de issues complementares abertas inicialmente sem estimativa. |
-| **Taxa de Revisão por Pares (PRs)** | 50,0% (5 de 10) | 45,0% (9 de 20) | **46,7% (14 de 30)** | 100,0% | Abaixo da meta de 100%. A métrica contabiliza aprovações registradas via GitHub API por revisores não-autores antes do merge. Dos 11 PRs sem aprovação formal na Fase 2, 6 foram integrados por outro integrante e 5 pelo próprio autor (revisões informais fora do GitHub não foram registradas). |
+| **Taxa de Revisão por Pares (PRs)** | 43,8% (7 de 16) | 44,0% (11 de 25) | **43,9% (18 de 41)** | 100,0% | Abaixo da meta de 100%. Conta os PRs integrados com aprovação formal (`APPROVED`) de outro integrante no GitHub, calculados pelo `scripts/coleta_psm.py`. Os 23 PRs restantes foram integrados sem aprovação, e revisões informais fora do GitHub não são registradas. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/03_desempenho_processos_fases.csv</code> e auditoria de PRs via GitHub API, 2026.</p>
 
@@ -142,3 +142,4 @@ Para assegurar auditabilidade completa, todos os dados apresentados neste painel
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 07/11/2026 | Criação do Painel Executivo PSM/CID consolidado por entrega com Curva S, distribuição de esforço e indicadores de processo | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
+| 1.1 | 09/11/2026 | Taxa de revisão por pares das Fases 1 e 2 recalculada pela coleta automática de PRs | [Christopher Paraizo](https://github.com/wChrstphr) | |

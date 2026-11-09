@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-09T10:34:18.507605+00:00",
+  "coletado_em": "2026-11-09T22:19:00.123586+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -24510,6 +24510,88 @@
   ],
   "commits": [
     {
+      "sha": "7275a36c9266e754e46cbb2a4ed1dce289df5ccc",
+      "node_id": "C_kwDOUJBYZdoAKDcyNzVhMzZjOTI2NmU3NTRlNDZjYmIyYTRlZDFkY2UyODlkZjVjY2M",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-09T10:34:20Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-09T10:34:20Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "424bc93ec3b5866de42bd628323ba11aaa3afb73",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/424bc93ec3b5866de42bd628323ba11aaa3afb73"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/7275a36c9266e754e46cbb2a4ed1dce289df5ccc",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/7275a36c9266e754e46cbb2a4ed1dce289df5ccc",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/7275a36c9266e754e46cbb2a4ed1dce289df5ccc",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/7275a36c9266e754e46cbb2a4ed1dce289df5ccc/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "79c131f8ae42127db0adc82373d45cf3c1f094e8",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/79c131f8ae42127db0adc82373d45cf3c1f094e8",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/79c131f8ae42127db0adc82373d45cf3c1f094e8"
+        }
+      ]
+    },
+    {
       "sha": "79c131f8ae42127db0adc82373d45cf3c1f094e8",
       "node_id": "C_kwDOUJBYZdoAKDc5YzEzMWY4YWU0MjEyN2RiMGFkYzgyMzczZDQ1Y2YzYzFmMDk0ZTg",
       "commit": {
@@ -45005,5 +45087,292 @@
       },
       "parents": []
     }
-  ]
+  ],
+  "revisoes_prs": {
+    "150": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-09T03:09:44Z"
+      }
+    ],
+    "149": [
+      {
+        "revisor": "wChrstphr",
+        "estado": "CHANGES_REQUESTED",
+        "enviada_em": "2026-11-09T03:58:31Z"
+      }
+    ],
+    "148": [],
+    "147": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-09T00:36:57Z"
+      }
+    ],
+    "146": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-09T00:22:56Z"
+      }
+    ],
+    "145": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-09T00:14:58Z"
+      }
+    ],
+    "144": [
+      {
+        "revisor": "wChrstphr",
+        "estado": "CHANGES_REQUESTED",
+        "enviada_em": "2026-11-09T01:04:33Z"
+      },
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-09T03:01:47Z"
+      }
+    ],
+    "143": [],
+    "142": [],
+    "141": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-07T17:31:05Z"
+      }
+    ],
+    "139": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-07T17:26:42Z"
+      }
+    ],
+    "137": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-07T17:21:33Z"
+      }
+    ],
+    "132": [],
+    "93": [],
+    "91": [
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-28T20:23:20Z"
+      }
+    ],
+    "89": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-26T23:47:33Z"
+      }
+    ],
+    "84": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-26T22:59:18Z"
+      },
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-26T23:10:42Z"
+      }
+    ],
+    "83": [
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-26T21:40:23Z"
+      }
+    ],
+    "82": [],
+    "81": [],
+    "80": [],
+    "79": [],
+    "72": [],
+    "71": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-20T16:42:40Z"
+      }
+    ],
+    "69": [],
+    "68": [],
+    "67": [],
+    "66": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T18:11:43Z"
+      }
+    ],
+    "65": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T16:20:01Z"
+      }
+    ],
+    "64": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T16:27:00Z"
+      }
+    ],
+    "63": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T15:52:46Z"
+      },
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T23:24:16Z"
+      }
+    ],
+    "62": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T16:02:42Z"
+      },
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T16:27:15Z"
+      }
+    ],
+    "61": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T15:07:47Z"
+      },
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T15:14:55Z"
+      },
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T15:48:49Z"
+      }
+    ],
+    "60": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T15:19:21Z"
+      }
+    ],
+    "59": [],
+    "58": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T14:51:30Z"
+      }
+    ],
+    "51": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T14:14:02Z"
+      }
+    ],
+    "50": [],
+    "49": [],
+    "48": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T03:19:04Z"
+      }
+    ],
+    "47": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-10-19T03:01:25Z"
+      }
+    ],
+    "46": [],
+    "45": [],
+    "44": [],
+    "43": [],
+    "42": [],
+    "41": [],
+    "40": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T01:09:32Z"
+      }
+    ],
+    "39": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-19T00:22:07Z"
+      }
+    ],
+    "38": [],
+    "37": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-18T22:07:22Z"
+      }
+    ],
+    "35": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-18T22:06:55Z"
+      }
+    ],
+    "34": [
+      {
+        "revisor": "luizh-gsoares",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-18T22:06:09Z"
+      }
+    ],
+    "5": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-17T15:13:55Z"
+      }
+    ],
+    "3": [
+      {
+        "revisor": "GabrielSMonteiro",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-17T14:22:01Z"
+      }
+    ],
+    "2": [],
+    "1": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "APPROVED",
+        "enviada_em": "2026-10-15T11:45:31Z"
+      }
+    ]
+  }
 }
