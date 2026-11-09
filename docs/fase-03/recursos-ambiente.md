@@ -100,8 +100,8 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 | Responsável | Métricas coletadas | Processador | Memória | Sistema operacional e versão | Navegador e versão |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Christopher | Análise estática e histórico: M1.1.1 a M1.5.3 | Intel Core i7-12650H | 32 GB | Windows 11 Pro 25H2 (build 26200.9711), com WSL2 (Ubuntu 24.04.5 LTS) | não se aplica |
-| Luiz Henrique Soares | Histórico de defeitos: M2.1.1 a M2.1.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
-| Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
+| Luiz Henrique Soares | Histórico de defeitos: M2.1.1 a M2.1.3 | Intel(R) Core(TM) i5-14450HX| 15,6 GB utilizável (16 GB instalados)| Windows 11 Home Single Language (Build 26300)| não se aplica |
+| Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | Intel(R) Core(TM) i5-14450HX| 15,6 GB utilizável (16 GB instalados)| Windows 11 Home Single Language (Build 26300)|  Mozilla Firefox 159.0.1|
 | Maria Eduarda | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
 | Maria Eduarda | Desempenho: M3.2.1 e M3.2.2 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
 
@@ -109,7 +109,7 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 
 **Condições de controle nas coletas de desempenho.** Carregador conectado, mesmo modo de energia em todas as repetições, navegador com perfil novo e sem extensões, uma única aba aberta, zoom de 100% e nenhum outro programa pesado em execução.
 
-**Navegador.** Todos os testes no navegador usam o mesmo navegador e a mesma versão, fixados antes da Fase 04: Mozilla Firefox 159.0.1 (ou Google Chrome caso definido pela equipe). Os testes de G2 e G3 exigem do navegador as funções de: modo _offline_, bloqueio de requisições por domínio, exportação do registro de rede (HAR), painel de desempenho (_Performance_) e limpeza do armazenamento local. A atualização automática do navegador fica desligada durante a coleta.
+**Navegador.** Todos os testes no navegador usam o mesmo navegador e a mesma versão, fixados antes da Fase 04: Mozilla Firefox 159.0.1. Os testes de G2 e G3 exigem do navegador as funções de: modo _offline_, bloqueio de requisições por domínio, exportação do registro de rede (HAR), painel de desempenho (_Performance_) e limpeza do armazenamento local. A atualização automática do navegador fica desligada durante a coleta.
 
 **Sistema operacional.** O cenário 4 de [M2.4.1](../fase-02/gqm-confiabilidade.md) exige encerrar o processo do navegador pelo sistema operacional. O comando ou o procedimento usado é registrado junto com o sistema operacional de quem coleta.
 
@@ -136,21 +136,21 @@ O aparelho precisa aceitar toque com mais de um dedo (ações 6 e 7: pinça e de
 
 A versão efetiva de cada ferramenta é registrada na primeira coleta, com o comando de versão e a saída. Versões já definidas na Fase 02 não mudam.
 
-| Ferramenta | Versão | Métricas |
-| :--- | :--- | :--- |
-| Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 |
-| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint) / 5.9.3 (TypeScript) | M1.3.1 |
-| cloc | 1.86 | M1.4.2 |
-| GitHub CLI (`gh`) | 2.102.0 (Christopher) | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
-| Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 |
-| `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 |
-| Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` (via `yarn.lock`) | M3.1.1 |
-| Node.js | v24.16.0 (Maria Eduarda) / v24.14.1 (Christopher) (padronizado em Node 24.x) | Todas as que executam código |
-| Yarn | 1.22.22 | M1.5.1, M3.3.2 |
-| npm e pnpm | npm 11.13.0 (Maria Eduarda) / npm 11.11.0 (Christopher) | M3.3.1 |
-| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) / Docker 29.9.0 (Christopher) | M3.3.2, M3.3.3 |
-| Vite e Next.js dos projetos mínimos | _a preencher na criação dos projetos mínimos_ | M3.1.2 |
-| Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 |
+| Ferramenta | Versão | Métricas | Comando de versão 
+| :--- | :--- | :--- | :--- |
+| Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 | `madge --version` |
+| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint) / 5.62.0 `@typescript-eslint/parser` | M1.3.1 | `npx eslint --version` e `yarn why @typescript-eslint/parser` |
+| cloc | 1.86 | M1.4.2 | | `cloc --version` |
+| GitHub CLI (`gh`) | 2.102.0  | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
+| Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 | `yarn vitest --version` |
+| `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 | `grep --version` |
+| Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` 1.0.30001701 | M3.1.1 |`npx browserslist --version` e `yarn why caniuse-lite`|
+| Node.js | 24.20.0 | Todas as que executam código | `node --version`|
+| Yarn | 1.22.22 | M1.5.1, M3.3.2 |  `yarn --version`|
+| npm e pnpm | npm 11.13.0 (Maria Eduarda)  | M3.3.1 |`npm --version` e `pnpm --version` |
+| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
+| Vite e Next.js dos projetos mínimos | a preencher na criação dos projetos mínimos | M3.1.2 | `package.json` de cada projeto |
+| Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 |`git rev-parse HEAD` 
 
 As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-02/gqm-confiabilidade.md), podem exigir uma versão de Node.js diferente da do commit avaliado. A versão usada em cada construção é registrada.
 
@@ -189,7 +189,6 @@ O detalhamento de cada arquivo está no [README da pasta de massa de dados](http
 ---
 
 ## 7. Conhecimento exigido do avaliador
-
 
 ### 7.1 Informática
 
@@ -285,7 +284,7 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | Evidências | Caminho dos arquivos de gravação de tela, capturas, HAR e dados brutos |
 | Desvios | Qualquer diferença em relação ao método e o motivo |
 
-**Gravação de tela.** Os testes manuais no computador usam o software OBS Studio (ou gravador de tela nativo do sistema). A ferramenta grava a tela inteira com a hora visível, e os arquivos são salvos no repositório da avaliação com o código da métrica no nome. No aparelho de toque (iPad), usa-se a gravação de tela nativa do próprio iPadOS.
+**Gravação de tela.** Os testes manuais no computador usam o software OBS Studio. A ferramenta grava a tela inteira com a hora visível, e os arquivos são salvos no repositório da avaliação com o código da métrica no nome. No aparelho de toque (iPad), usa-se a gravação de tela nativa do próprio iPadOS.
 
 ---
 
@@ -306,8 +305,7 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 
 ## Referências
 
-- AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 10, 18 e 19.
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 38.
+
 - 2026-2 Trabalho final completo v1. Projeto final da disciplina, 05/10/2026. Página 7: critérios F3-C2 e F3-C8.
 - [`package.json` da raiz do Excalidraw no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/package.json).
 - [`Dockerfile` do Excalidraw no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/Dockerfile) e [`docker-compose.yml`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/docker-compose.yml).
@@ -321,4 +319,5 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia Santos](https://github.com/LeticiaSantosss) |
-| 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
+| 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | 
