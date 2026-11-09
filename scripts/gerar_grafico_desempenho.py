@@ -13,28 +13,32 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def fontes_pages(escala: int):
-    base = "/usr/share/fonts/truetype/inter-zorin-os/"
-    try:
-        return (
-            ImageFont.truetype(base + "Inter-Bold.ttf", 20 * escala),
-            ImageFont.truetype(base + "Inter-Medium.ttf", 13 * escala),
-            ImageFont.truetype(base + "Inter-Bold.ttf", 12 * escala),
-            ImageFont.truetype(base + "Inter-Regular.ttf", 11 * escala),
-            ImageFont.truetype(base + "Inter-Medium.ttf", 10 * escala)
-        )
-    except Exception:
-        dj = "/usr/share/fonts/truetype/dejavu/"
+    candidatos_bold = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Bold.ttf",
+    ]
+    candidatos_regular = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Medium.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Regular.ttf",
+    ]
+    f_bold_path = next((p for p in candidatos_bold if Path(p).is_file()), None)
+    f_reg_path = next((p for p in candidatos_regular if Path(p).is_file()), None)
+    if f_bold_path and f_reg_path:
         try:
             return (
-                ImageFont.truetype(dj + "DejaVuSans-Bold.ttf", 20 * escala),
-                ImageFont.truetype(dj + "DejaVuSans.ttf", 13 * escala),
-                ImageFont.truetype(dj + "DejaVuSans-Bold.ttf", 12 * escala),
-                ImageFont.truetype(dj + "DejaVuSans.ttf", 11 * escala),
-                ImageFont.truetype(dj + "DejaVuSans.ttf", 10 * escala)
+                ImageFont.truetype(f_bold_path, 20 * escala),
+                ImageFont.truetype(f_reg_path, 13 * escala),
+                ImageFont.truetype(f_bold_path, 12 * escala),
+                ImageFont.truetype(f_reg_path, 11 * escala),
+                ImageFont.truetype(f_reg_path, 10 * escala)
             )
         except Exception:
-            f = ImageFont.load_default()
-            return f, f, f, f, f
+            pass
+    f = ImageFont.load_default()
+    return f, f, f, f, f
 
 
 def gerar_grafico_desempenho(csv_path: Path, output_paths: list[Path]) -> None:
