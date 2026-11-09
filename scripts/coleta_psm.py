@@ -15,6 +15,8 @@ import csv
 import json
 import os
 import re
+import shutil
+import sys
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -406,11 +408,90 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
             l["percentual_esforco"] = round((l["horas_reais"] / soma_fase) * 100.0, 2) if soma_fase > 0 else 0.0
         contribuicao_por_fase.extend(linhas_fase)
 
+    # Consolidado por Entrega: Entrega 1 (F1 + F2) e Entrega 2 (F3 + F4)
+    mapa_entregas = [
+        ("Entrega 1", ["Fase 1", "Fase 2"]),
+        ("Entrega 2", ["Fase 3", "Fase 4"]),
+    ]
+    resumo_entregas = []
+    for nome_entrega, fases_ent in mapa_entregas:
+        lista_ent = [i for i in issues_processadas if i["fase"] in fases_ent]
+        tot = len(lista_ent)
+        conc = sum(1 for i in lista_ent if i["estado"] == "closed")
+        abert = tot - conc
+        nprazo = sum(1 for i in lista_ent if i["status_prazo"] in ("Concluida no prazo", "Em andamento (no prazo)"))
+        atraso = tot - nprazo
+        h_est = round(sum(i["estimativa_h"] for i in lista_ent), 2)
+        h_real = round(sum(i["horas_reais_h"] for i in lista_ent), 2)
+        c_est = round(h_est * valor_hora, 2)
+        c_real = round(h_real * valor_hora, 2)
+        acuracia = round((h_real / h_est) * 100.0, 1) if h_est > 0 else 0.0
+        com_est = sum(1 for i in lista_ent if i["estimativa_preenchida"])
+        tx_gov = round((com_est / tot) * 100.0, 1) if tot > 0 else 0.0
+        tempos = [i["lead_time_dias"] for i in lista_ent if i["lead_time_dias"] is not None]
+        lt_medio = round(sum(tempos) / len(tempos), 2) if tempos else 0.0
+
+        resumo_entregas.append({
+            "entrega": nome_entrega,
+            "fases": " + ".join(fases_ent),
+            "total_issues": tot,
+            "issues_concluidas": conc,
+            "issues_abertas": abert,
+            "progresso_pct": round((conc / tot) * 100.0, 1) if tot > 0 else 0.0,
+            "issues_no_prazo": nprazo,
+            "issues_em_atraso": atraso,
+            "aderencia_prazo_pct": round((nprazo / tot) * 100.0, 1) if tot > 0 else 0.0,
+            "horas_estimadas": h_est,
+            "horas_reais": h_real,
+            "custo_estimado_brl": c_est,
+            "custo_real_brl": c_real,
+            "acuracia_estimativa_pct": acuracia,
+            "taxa_preenchimento_estimativa_pct": tx_gov,
+            "lead_time_medio_dias": lt_medio
+        })
+
+    # Contribuicao individual por entrega
+    contribuicao_por_entrega = []
+    for nome_entrega, (fase_a, fase_b) in [("Entrega 1", ("Fase 1", "Fase 2")), ("Entrega 2", ("Fase 3", "Fase 4"))]:
+        linhas_ent = []
+        for login, nome in mapa_equipe.items():
+            issues_fa = [i for i in issues_processadas if i["fase"] == fase_a and login in i["assignees"]]
+            issues_fb = [i for i in issues_processadas if i["fase"] == fase_b and login in i["assignees"]]
+
+            h_est_fa = sum(i["estimativa_h"] / len(i["assignees"]) for i in issues_fa)
+            h_est_fb = sum(i["estimativa_h"] / len(i["assignees"]) for i in issues_fb)
+
+            h_real_fa = sum(i["horas_por_pessoa"].get(login, 0.0) for i in issues_processadas if i["fase"] == fase_a)
+            h_real_fb = sum(i["horas_por_pessoa"].get(login, 0.0) for i in issues_processadas if i["fase"] == fase_b)
+
+            h_est_tot = round(h_est_fa + h_est_fb, 2)
+            h_real_tot = round(h_real_fa + h_real_fb, 2)
+
+            linhas_ent.append({
+                "entrega": nome_entrega,
+                "integrante": nome,
+                "login": login,
+                "issues_fase_a": len(issues_fa),
+                "issues_fase_b": len(issues_fb),
+                "issues_atribuidas": len(issues_fa) + len(issues_fb),
+                "horas_estimadas": h_est_tot,
+                "horas_reais_fase_a": round(h_real_fa, 2),
+                "horas_reais_fase_b": round(h_real_fb, 2),
+                "horas_reais": h_real_tot,
+                "custo_real_brl": round(h_real_tot * valor_hora, 2)
+            })
+        soma_ent = sum(l["horas_reais"] for l in linhas_ent)
+        for l in linhas_ent:
+            l["percentual_esforco"] = round((l["horas_reais"] / soma_ent) * 100.0, 2) if soma_ent > 0 else 0.0
+        contribuicao_por_entrega.extend(linhas_ent)
+
     return {
         "issues": sorted(issues_processadas, key=lambda x: x["numero"]),
         "resumo_fases": resumo_fases,
+        "resumo_entregas": resumo_entregas,
         "contribuicao": contribuicao,
         "contribuicao_por_fase": contribuicao_por_fase,
+        "contribuicao_por_entrega": contribuicao_por_entrega,
         "total_prs": len(prs_processados),
         "total_commits": len(dados_brutos.get("commits", []))
     }
@@ -561,26 +642,32 @@ def _desenhar_grafico_barras_agrupadas_pil(
 
 
 def _fontes_pages(escala: int):
-    """Carrega a tipografia Inter (padrao do Pages) com fallback para DejaVu."""
+    """Carrega a tipografia Inter/DejaVu/Liberation com fallback seguro para default."""
     from PIL import ImageFont
-    base = "/usr/share/fonts/truetype/inter-zorin-os/"
-    try:
-        return (
-            ImageFont.truetype(base + "Inter-Bold.ttf", 20 * escala),
-            ImageFont.truetype(base + "Inter-Medium.ttf", 13 * escala),
-            ImageFont.truetype(base + "Inter-Bold.ttf", 13 * escala),
-        )
-    except Exception:
-        dj = "/usr/share/fonts/truetype/dejavu/"
+    candidatos_bold = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Bold.ttf",
+    ]
+    candidatos_regular = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Medium.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Regular.ttf",
+    ]
+    f_bold_path = next((p for p in candidatos_bold if Path(p).is_file()), None)
+    f_reg_path = next((p for p in candidatos_regular if Path(p).is_file()), None)
+    if f_bold_path and f_reg_path:
         try:
             return (
-                ImageFont.truetype(dj + "DejaVuSans-Bold.ttf", 20 * escala),
-                ImageFont.truetype(dj + "DejaVuSans.ttf", 13 * escala),
-                ImageFont.truetype(dj + "DejaVuSans-Bold.ttf", 13 * escala),
+                ImageFont.truetype(f_bold_path, 20 * escala),
+                ImageFont.truetype(f_reg_path, 13 * escala),
+                ImageFont.truetype(f_bold_path, 13 * escala),
             )
         except Exception:
-            f = ImageFont.load_default()
-            return f, f, f
+            pass
+    f = ImageFont.load_default()
+    return f, f, f
 
 
 def _desenhar_barras_horizontais_pil(
@@ -667,6 +754,10 @@ def _desenhar_grafico_acuracia_pil(caminho: Path, titulo: str, subtitulo: str,
                            fill="#e0e7ff", outline="#818cf8", width=escala)
     draw.text((lx + 26 * escala, 91 * escala), "Faixa ideal (80% a 120%)", fill="#111827", font=f_bold)
 
+    lx2 = 680 * escala
+    draw.line([(lx2, 99 * escala), (lx2 + 24 * escala, 99 * escala)], fill="#818cf8", width=2 * escala)
+    draw.text((lx2 + 32 * escala, 91 * escala), "100% = planejado", fill="#4338ca", font=f_bold)
+
     x0, y0 = 95 * escala, 140 * escala
     x1, y1 = w - 55 * escala, h - 75 * escala
     max_val = max(160.0, float(((int(max(valores, default=0) * 1.15) // 20) + 1) * 20))
@@ -683,7 +774,8 @@ def _desenhar_grafico_acuracia_pil(caminho: Path, titulo: str, subtitulo: str,
         bb = draw.textbbox((0, 0), txt, font=f_txt)
         draw.text((x0 - (bb[2] - bb[0]) - 14 * escala, py(v) - 8 * escala), txt, fill="#4b5563", font=f_txt)
     draw.line([(x0, py(100)), (x1, py(100))], fill="#818cf8", width=2 * escala)
-    draw.text((x1 - 150 * escala, py(100) - 22 * escala), "100% = planejado", fill="#4338ca", font=f_txt)
+    if len(fases) == 1:
+        draw.text((x1 - 150 * escala, py(100) - 22 * escala), "100% = planejado", fill="#4338ca", font=f_txt)
 
     n = max(len(fases), 1)
     bloco = (x1 - x0) / n
@@ -778,6 +870,23 @@ def gerar_graficos_por_fase(resultado: dict, dir_graficos: Path) -> None:
         subtitulo="Horas reais em relação às estimadas por fase; 100% significa que o planejado foi exatamente cumprido",
         fases=fases,
         valores=[r["acuracia_estimativa_pct"] for r in resultado["resumo_fases"]]
+    )
+
+
+def gerar_grafico_entrega_1(resultado: dict, dir_graficos: Path) -> None:
+    """Gera o grafico de barras horizontais de participacao no esforco real da Entrega 1."""
+    linhas_e1 = [l for l in resultado.get("contribuicao_por_entrega", []) if l["entrega"] == "Entrega 1"]
+    if not linhas_e1:
+        return
+    _desenhar_barras_horizontais_pil(
+        caminho=dir_graficos / "05_esforco_integrante_entrega_1.png",
+        titulo="PSM/CID: Participação no Esforço Real da Entrega 1",
+        subtitulo="Percentual do esforço consolidado (Fase 1 + Fase 2) por integrante (soma = 100%)",
+        categorias=[l["integrante"] for l in linhas_e1],
+        valores=[l["percentual_esforco"] for l in linhas_e1],
+        rotulos=[f"{l['percentual_esforco']:.1f}%  ({l['horas_reais']:.1f} h)" for l in linhas_e1],
+        cor="#4f46e5",
+        legenda="% das horas reais da Entrega 1"
     )
 
 
@@ -1036,6 +1145,18 @@ def main() -> None:
         resultado["contribuicao_por_fase"]
     )
 
+    salvar_csv(
+        dir_saida / "07_resumo_entregas.csv",
+        ["entrega", "fases", "total_issues", "issues_concluidas", "issues_abertas", "progresso_pct", "issues_no_prazo", "issues_em_atraso", "aderencia_prazo_pct", "horas_estimadas", "horas_reais", "custo_estimado_brl", "custo_real_brl", "acuracia_estimativa_pct", "taxa_preenchimento_estimativa_pct", "lead_time_medio_dias"],
+        resultado["resumo_entregas"]
+    )
+
+    salvar_csv(
+        dir_saida / "08_contribuicao_por_entrega.csv",
+        ["entrega", "integrante", "login", "issues_fase_a", "issues_fase_b", "issues_atribuidas", "horas_estimadas", "horas_reais_fase_a", "horas_reais_fase_b", "horas_reais", "custo_real_brl", "percentual_esforco"],
+        resultado["contribuicao_por_entrega"]
+    )
+
     issues_csv = []
     for i in resultado["issues"]:
         copia = dict(i)
@@ -1052,6 +1173,25 @@ def main() -> None:
     # 2. Gerar graficos PNG
     gerar_graficos(resultado, dir_saida / "graficos")
     gerar_graficos_por_fase(resultado, dir_saida / "graficos")
+    gerar_grafico_entrega_1(resultado, dir_saida / "graficos")
+
+    # Gerar Curva S de desempenho de execucao (esforco planejado vs. realizado)
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from gerar_grafico_desempenho import gerar_grafico_desempenho
+        gerar_grafico_desempenho(
+            dir_saida / "05_detalhamento_issues.csv",
+            [dir_saida / "graficos" / "08_desempenho_execucao_curva_s.png"]
+        )
+    except Exception as e:
+        print(f"[AVISO] Nao foi possivel gerar a Curva S automaticamente: {e}")
+
+    # Sincronizar PNGs gerados com static/img/gestao/
+    dir_static = raiz / "static" / "img" / "gestao"
+    if dir_static.exists():
+        for png in (dir_saida / "graficos").glob("*.png"):
+            shutil.copy2(png, dir_static / png.name)
+        print(f"[SYNC] Graficos sincronizados com: {dir_static}")
 
     # 3. Gerar documento com Measurement Constructs e tabelas Markdown/LaTeX
     gerar_relatorio_constructs(resultado, config, dir_saida / "constructs_e_tabelas.md")
