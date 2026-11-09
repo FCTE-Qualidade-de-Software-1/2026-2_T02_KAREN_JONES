@@ -48,7 +48,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 17 / 17 | 100.0% | 29.4% | 53.5 | 57.9 | R$ 2407.50 | R$ 2605.95 | 108.2% | 1.23 |
 | Fase 2 | 27 / 27 | 100.0% | 44.4% | 62.5 | 56.4 | R$ 2812.50 | R$ 2538.00 | 90.2% | 3.97 |
-| Fase 3 | 23 / 10 | 43.5% | 8.7% | 48.0 | 31.5 | R$ 2160.00 | R$ 1417.50 | 65.6% | 4.92 |
+| Fase 3 | 23 / 11 | 47.8% | 8.7% | 48.0 | 31.5 | R$ 2160.00 | R$ 1417.50 | 65.6% | 4.98 |
 | Fase 4 | 24 / 0 | 0.0% | 91.7% | 80.0 | 0.0 | R$ 3600.00 | R$ 0.00 | 0.0% | 0.00 |
 | Sem Fase | 1 / 1 | 100.0% | 100.0% | 2.0 | 2.0 | R$ 90.00 | R$ 90.00 | 100.0% | 0.01 |
 
@@ -58,7 +58,7 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 23 | 52.5 | 24.0 | R$ 1080.00 | 99 | 17 | **16.24%** |
+| Christopher | `@wChrstphr` | 23 | 52.5 | 24.0 | R$ 1080.00 | 101 | 17 | **16.24%** |
 | Davi Pierre | `@DaviPierre` | 13 | 37.0 | 34.0 | R$ 1530.00 | 6 | 5 | **23.00%** |
 | Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 48 | 9 | **26.05%** |
 | Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 11.4 | R$ 513.45 | 9 | 7 | **7.72%** |
@@ -76,14 +76,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 23 & 52.5h & 24.0h & 99/17 & 16.24\% \\
+Christopher & 23 & 52.5h & 24.0h & 101/17 & 16.24\% \\
 Davi Pierre & 13 & 37.0h & 34.0h & 6/5 & 23.00\% \\
 Gabriel Monteiro & 16 & 44.5h & 38.5h & 48/9 & 26.05\% \\
 Leticia de Carvalho & 16 & 30.5h & 11.4h & 9/7 & 7.72\% \\
 Luiz Henrique Soares & 15 & 35.0h & 12.4h & 21/8 & 8.39\% \\
 Maria Eduarda & 19 & 46.5h & 27.5h & 42/11 & 18.60\% \\
 \hline
-\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{147.8h} & \textbf{225/57} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{147.8h} & \textbf{227/57} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
