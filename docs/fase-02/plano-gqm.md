@@ -102,7 +102,7 @@ A [Figura 2](#3-g2-confiabilidade) mostra a hierarquia completa de G2, e a Tabel
 
 ## 4. G3: Flexibilidade
 
-**Objetivo:** analisar a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação, para o propósito de entender, com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca em seus sistemas e de equipes de implantação e operação ([G3 nos objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-flexibilidade)).
+**Objetivo:** analisar a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação, para o propósito de entender, com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca em seus sistemas e de equipes de implantação e operação ([G3 nos objetivos de medição](./estrutura-gqm.md#g3--flexibilidade-antiga-portabilidade)).
 
 [![Diagrama em três níveis. Nível conceitual: objetivo G3, entender a flexibilidade da biblioteca e da aplicação web do ponto de vista de integradores e equipes de implantação e operação. Nível operacional: 4 questões, uma por subcaracterística. Nível quantitativo: 12 métricas. Q3.1 (Adaptabilidade) é respondida por M3.1.1, M3.1.2, M3.1.3. Q3.2 (Escalabilidade) é respondida por M3.2.1, M3.2.2, M3.2.3. Q3.3 (Instalabilidade) é respondida por M3.3.1, M3.3.2, M3.3.3. Q3.4 (Substituibilidade) é respondida por M3.4.1, M3.4.2, M3.4.3.](../images/gqm-g3.png)](../images/gqm-g3.png)
 
