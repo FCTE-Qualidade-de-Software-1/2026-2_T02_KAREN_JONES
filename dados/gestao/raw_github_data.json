@@ -21590,7 +21590,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nPadronizar o uso da ISO/IEC 25010:2023 (Flexibilidade no lugar de Portabilidade) e a grafia \"Manutenibilidade\" em README, `docs/intro.md`, `src/pages/index.js` e páginas da Fase 1. Renomear `requisitos_avaliacao.md` para `requisitos-avaliacao.md` e incluir o frontmatter.\n\n### Critérios da rubrica atendidos\n\n- F1-C9: Português, estilo e padronização (CRITERIOS FASE 1.pdf, p. 3)\n- F2-C12: Relevância e adaptação da terminologia (2026-2 Trabalho final completo v1.pdf, p. 6)\n\n### Referências\n\n- Premissa 1, indicar a norma da família SQuaRE: 2026-2 Trabalho final completo v1.pdf, p. 1\n\n### Critério de pronto\n\n- [x] Nenhuma ocorrência de \"Manutenabilidade\"\n- [x] Edição 2023 usada de forma consistente\n- [x] Arquivo renomeado com frontmatter\n- [x] `npm run build` passando\n\n### Prazo\n\n18/10\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2h\n\n### Horas reais (h)\n\n@DaviPierre: 2h\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nPadronizar o uso da ISO/IEC 25010:2023 (Flexibilidade no lugar de Flexibilidade) e a grafia \"Manutenibilidade\" em README, `docs/intro.md`, `src/pages/index.js` e páginas da Fase 1. Renomear `requisitos_avaliacao.md` para `requisitos-avaliacao.md` e incluir o frontmatter.\n\n### Critérios da rubrica atendidos\n\n- F1-C9: Português, estilo e padronização (CRITERIOS FASE 1.pdf, p. 3)\n- F2-C12: Relevância e adaptação da terminologia (2026-2 Trabalho final completo v1.pdf, p. 6)\n\n### Referências\n\n- Premissa 1, indicar a norma da família SQuaRE: 2026-2 Trabalho final completo v1.pdf, p. 1\n\n### Critério de pronto\n\n- [x] Nenhuma ocorrência de \"Manutenabilidade\"\n- [x] Edição 2023 usada de forma consistente\n- [x] Arquivo renomeado com frontmatter\n- [x] `npm run build` passando\n\n### Prazo\n\n18/10\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2h\n\n### Horas reais (h)\n\n@DaviPierre: 2h\n\n### Revisor\n\n_No response_\n",
       "closed_by": {
         "login": "DaviPierre",
         "id": 73446334,
@@ -38079,7 +38079,7 @@
           "email": "noreply@github.com",
           "date": "2026-10-19T15:51:34Z"
         },
-        "message": "hot-fix: erro no termo de Portabilidade",
+        "message": "hot-fix: erro no termo de Flexibilidade",
         "tree": {
           "sha": "f3a746a4c1e617d046ffcd7b8ff094a139b307f3",
           "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/f3a746a4c1e617d046ffcd7b8ff094a139b307f3"
@@ -38090,7 +38090,7 @@
           "verified": true,
           "reason": "valid",
           "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq1jyGCRC1aQ7uu5UhlAAAHFIQADx3KjVm2fIbj4xJkvZhv2KV\naeun/AJVGEjGIxhbKjlFFq38H12kj08fzM/UQUowSjH6xwIspndjdz2JuC5rxYlp\nqhbk3IfJE2qsEpLrCIiMWc5nWtwOqJrg1PA096f4kuz48eV1pBhe/U34lxmA5Mr5\ndz2kMkcjOEVLIL74+Y4d02RpGU7xeF9y6r5apnonzz+xrp/OB2YI8aFKabdNFf+B\nSgvqg5vkIv6O0qYx+uxg1VKWyX1eNvDLssRy/lkmvfvnT1sOBE0hRgtVkcPpuj5x\nbWCUiKn1Cww3aEz7phSvF/TPp95MyO8+iPU6Dw8bASMjfNTX/ye9/rRdZ4GKx1e/\nI88mY53cHEE+RqZqi93Ri5vmzTZUClMlQpcapGyVCWJX74VJhg5twZFNPmS93Ldi\n75gG10j3cbXsbIqLAjLavM+h9Tr0hN5oAPO3C5mMX7uJapq/hpaF0HrSFdi4fW73\nbq0n6HsvG35lEHKZ2NL9xOdtlvWeh50Ez2zj2feV6GZrLisUmuCEp4dZ6rpGn2C/\n+0zeUUouFAQzpZP6cxoPQ2ALz8GcVJeJBYWXd0Ux0iQ/J2pNfTaoutau7rnWC8nj\nJ+X1vE0wguKp6aEVTADXecNeTcKRaJRxEBH+hfjrmOcUm60uxvYpWekcn4Gro1hc\ncvAmJUu0191gLByZG6oE\n=o4cS\n-----END PGP SIGNATURE-----\n",
-          "payload": "tree f3a746a4c1e617d046ffcd7b8ff094a139b307f3\nparent 0dd8a8fdc050dec345db828d14b2dd2bb0dba92e\nauthor Davi Pierre <73446334+DaviPierre@users.noreply.github.com> 1792425094 -0300\ncommitter GitHub <noreply@github.com> 1792425094 -0300\n\nhot-fix: erro no termo de Portabilidade",
+          "payload": "tree f3a746a4c1e617d046ffcd7b8ff094a139b307f3\nparent 0dd8a8fdc050dec345db828d14b2dd2bb0dba92e\nauthor Davi Pierre <73446334+DaviPierre@users.noreply.github.com> 1792425094 -0300\ncommitter GitHub <noreply@github.com> 1792425094 -0300\n\nhot-fix: erro no termo de Flexibilidade",
           "verified_at": "2026-10-19T15:51:35Z"
         }
       },

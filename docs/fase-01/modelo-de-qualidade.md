@@ -8,7 +8,7 @@ description: Características e subcaracterísticas da ISO/IEC 25010:2023 seleci
 
 ## Norma de referência
 
-A avaliação adota o modelo de qualidade definido pela **ISO/IEC 25010:2023**, integrante da família de normas **SQuaRE (Systems and softWare Quality Requirements and Evaluation)**. Essa edição estrutura a qualidade de produto de software em **nove características** de alto nível, cada uma subdividida em subcaracterísticas que permitem uma análise mais precisa e rastreável — entre as novidades em relação à edição de 2011 estão a renomeação de *Portabilidade* para **Flexibilidade**, a adição de **Escalabilidade** como subcaracterística e a inclusão de **Segurança de Proteção** como nova característica de nível superior.
+A avaliação adota o modelo de qualidade definido pela **ISO/IEC 25010:2023**, integrante da família de normas **SQuaRE (Systems and softWare Quality Requirements and Evaluation)**. Essa edição estrutura a qualidade de produto de software em **nove características** de alto nível, cada uma subdividida em subcaracterísticas que permitem uma análise mais precisa e rastreável — entre as novidades em relação à edição de 2011 estão a renomeação de *Flexibilidade* para **Flexibilidade**, a adição de **Escalabilidade** como subcaracterística e a inclusão de **Segurança de Proteção** como nova característica de nível superior.
 
 Para este trabalho, foram selecionadas **três características**: Manutenibilidade, Confiabilidade e Flexibilidade. A seleção é justificada na seção seguinte.
 
@@ -24,7 +24,7 @@ A **Manutenibilidade** é relevante por se tratar de um projeto com contribuiç�
 
 A **Confiabilidade** responde às necessidades dos usuários que utilizam a ferramenta em contextos colaborativos e dependem da persistência do trabalho. Falhas de rede, perda de dados e ausência de feedback adequado em situações de erro são pontos críticos para esse grupo.
 
-A **Flexibilidade** (renomeação de *Portabilidade* na edição 2023) é pertinente dado que o Excalidraw opera simultaneamente como aplicação web e como biblioteca npm. Isso impõe requisitos de adaptabilidade a diferentes ambientes, capacidade de escalar o uso, facilidade de instalação e interoperabilidade de dados.
+A **Flexibilidade** (renomeação de *Flexibilidade* na edição 2023) é pertinente dado que o Excalidraw opera simultaneamente como aplicação web e como biblioteca npm. Isso impõe requisitos de adaptabilidade a diferentes ambientes, capacidade de escalar o uso, facilidade de instalação e interoperabilidade de dados.
 
 Essas três características, em conjunto, cobrem os interesses dos oito grupos de interessados identificados na Fase 01.
 
@@ -36,7 +36,7 @@ Para garantir que a seleção das características não fosse arbitrária, a equ
 |---|:---:|:---:|:---:|:---:|
 | **Manutenabilidade** | 4 de 7 | Alta — código-fonte, testes, CI e PRs disponíveis | Alto — refatoração e dívida técnica são melhorias acionáveis | **Selecionada (prioridade 1)** |
 | **Confiabilidade** | 3 de 7 | Média — análise de runtime limitada à inspeção estática | Alto — persistência e tolerância a falhas afetam todos os perfis de uso | **Selecionada (prioridade 2)** |
-| **Flexibilidade** | 2 de 7 | Alta — package.json, Dockerfile, API pública, formatos de exportação | Médio-Alto — instalabilidade e portabilidade de dados são pontos concretos | **Selecionada (prioridade 3)** |
+| **Flexibilidade** | 2 de 7 | Alta — package.json, Dockerfile, API pública, formatos de exportação | Médio-Alto — instalabilidade e flexibilidade de dados são pontos concretos | **Selecionada (prioridade 3)** |
 | Usabilidade | — | Baixa — exigiria testes com usuários | Médio | Excluída (rubrica restringe) |
 | Adequação Funcional | — | Média | Baixo — foge do foco de qualidade interna | Excluída |
 | Segurança | — | Baixa — exigiria testes de penetração | Médio | Excluída |
@@ -84,7 +84,7 @@ Confiabilidade, na definição da norma, é o grau em que um sistema executa sua
 
 ## Flexibilidade
 
-Na edição de 2023, **Flexibilidade** substitui o que a edição anterior chamava de *Portabilidade*, com escopo ampliado: além da capacidade de operar em diferentes ambientes, a característica passa a incluir explicitamente a capacidade de escalar. Para o Excalidraw, essa característica é relevante tanto para usuários que acessam a aplicação web em diferentes dispositivos quanto para desenvolvedores que integram a biblioteca em seus próprios projetos.
+Na edição de 2023, **Flexibilidade** substitui o que a edição anterior chamava de *Flexibilidade*, com escopo ampliado: além da capacidade de operar em diferentes ambientes, a característica passa a incluir explicitamente a capacidade de escalar. Para o Excalidraw, essa característica é relevante tanto para usuários que acessam a aplicação web em diferentes dispositivos quanto para desenvolvedores que integram a biblioteca em seus próprios projetos.
 
 | Subcaracterística | Definição (ISO/IEC 25010:2023) | Aplicação ao Excalidraw |
 |---|---|---|

@@ -46,7 +46,7 @@ const qualityFocus = [
     description: 'Análise de maturidade, disponibilidade da aplicação e tolerância a erros e falhas.',
   },
   {
-    title: 'Portabilidade',
+    title: 'Flexibilidade',
     description: 'Verificação do funcionamento em diferentes navegadores e facilidade de instalação e execução.',
   },
 ];
