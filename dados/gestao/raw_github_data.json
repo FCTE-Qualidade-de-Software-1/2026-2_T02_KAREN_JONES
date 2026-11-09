@@ -1,7 +1,325 @@
 {
-  "coletado_em": "2026-11-09T00:37:31.235138+00:00",
+  "coletado_em": "2026-11-09T03:02:19.157040+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
+    {
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/150",
+      "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
+      "labels_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/150/labels{/name}",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/150/comments",
+      "events_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/150/events",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/150",
+      "id": 6278960582,
+      "node_id": "PR_kwDOUJBYZc8AAAABNwLqzQ",
+      "number": 150,
+      "title": "[F3-101] docs: plano de análise da Fase 03",
+      "user": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [
+        {
+          "id": 12729893444,
+          "node_id": "LA_kwDOUJBYZc8AAAAC9sLCRA",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/labels/especificacao",
+          "name": "especificacao",
+          "color": "006b75",
+          "default": false,
+          "description": "Definição usada nas fases seguintes (GQM, critérios de julgamento)",
+          "archived_at": null,
+          "archived_by": null
+        },
+        {
+          "id": 12729894375,
+          "node_id": "LA_kwDOUJBYZc8AAAAC9sLF5w",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/labels/subgrupo-F2F4",
+          "name": "subgrupo-F2F4",
+          "color": "c2e0c6",
+          "default": false,
+          "description": "Subgrupo das Fases 2 e 4: Christopher, Luiz Henrique, Maria Eduarda",
+          "archived_at": null,
+          "archived_by": null
+        }
+      ],
+      "state": "open",
+      "locked": false,
+      "assignees": [
+        {
+          "login": "wChrstphr",
+          "id": 105730846,
+          "node_id": "U_kgDOBk1THg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/wChrstphr",
+          "html_url": "https://github.com/wChrstphr",
+          "followers_url": "https://api.github.com/users/wChrstphr/followers",
+          "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+          "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+          "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+          "repos_url": "https://api.github.com/users/wChrstphr/repos",
+          "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        }
+      ],
+      "milestone": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/milestones/3",
+        "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/milestone/3",
+        "labels_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/milestones/3/labels",
+        "id": 18667105,
+        "node_id": "MI_kwDOUJBYZc4BHNZh",
+        "number": 3,
+        "title": "Fase 3",
+        "description": "Projetar a avaliação: método, instruções para o avaliador, recursos e cronograma. Entrega final (Fases 3 e 4) em 22/11.",
+        "creator": {
+          "login": "wChrstphr",
+          "id": 105730846,
+          "node_id": "U_kgDOBk1THg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/wChrstphr",
+          "html_url": "https://github.com/wChrstphr",
+          "followers_url": "https://api.github.com/users/wChrstphr/followers",
+          "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+          "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+          "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+          "repos_url": "https://api.github.com/users/wChrstphr/repos",
+          "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "open_issues": 14,
+        "closed_issues": 10,
+        "state": "open",
+        "created_at": "2026-10-17T14:26:28Z",
+        "updated_at": "2026-11-09T03:02:00Z",
+        "due_on": "2026-11-08T00:00:00Z",
+        "closed_at": null
+      },
+      "comments": 0,
+      "created_at": "2026-11-09T02:48:55Z",
+      "updated_at": "2026-11-09T02:57:06Z",
+      "closed_at": null,
+      "assignee": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "author_association": "COLLABORATOR",
+      "issue_field_values": [],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pulls/150",
+        "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/150",
+        "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/150.diff",
+        "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/150.patch",
+        "merged_at": null
+      },
+      "body": "## O que foi feito?\n\n- Criação de `docs/fase-03/plano-analise.md`, que liga por links as regras já definidas nas fichas do GQM, nos níveis de pontuação e no Plano GQM e acrescenta só o que faltava:\n  - Fluxo da análise, do dado bruto ao julgamento, com a regra de cada etapa.\n  - Tratamento dos dados: valores extremos, falha do ambiente e nome dos arquivos brutos.\n  - Tabela consolidada `dados/fase-04/consolidados/metricas.csv` e especificação dos scripts de cálculo e de análise, alinhadas às issues #110, #114 e #115 a #117.\n  - Formas de apresentação: tabela por questão, gráfico por característica e gráficos específicos de M1.3.1, M3.2.1, M3.2.2 e M3.4.2.\n  - Regra de comparação das hipóteses e de uso dos fatores de variação.\n  - Interpretação revisada no PR por quem não coletou a característica.\n- Os quadros de hipóteses com os valores reais ficam para as páginas de resultados da Fase 04.\n\n## Issue\n\nCloses #101\n\n## Como verificar\n\n- `npm run build` e abrir Fase 03 > Plano de análise.\n- Conferir que as regras citadas apontam para a seção exata da Fase 02 e que nada das fichas ou da pontuação foi copiado.\n- Observação: os links usam as âncoras da `main` (`#m111--...`). Se a branch `fix/ajustes-finos`, que troca o travessão dos títulos por dois-pontos, for integrada antes, as âncoras precisam passar de `--` para `-`.\n\n## Critérios da rubrica atendidos\n\nF3-C1, F3-C8\n\n## Uso de IA\n\nClaude Code: levantamento das regras já existentes nas páginas da Fase 02 e 03 e nas issues da Fase 04, redação inicial das seções e conferência das âncoras. As decisões do plano foram tomadas pelo autor, que revisou e ajustou o texto.\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [x] `npm run build` passou localmente (quando altera o site)\n- [x] Critério de pronto da issue conferido\n- [x] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\n- [x] Horas reais preenchidas na issue\n",
+      "closed_by": null,
+      "reactions": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/150/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/150/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null
+    },
+    {
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/149",
+      "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
+      "labels_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/149/labels{/name}",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/149/comments",
+      "events_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/149/events",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/149",
+      "id": 6278888675,
+      "node_id": "PR_kwDOUJBYZc8AAAABNwICBQ",
+      "number": 149,
+      "title": "docs: adicionar método de avaliação e instruções de G1",
+      "user": {
+        "login": "DaviPierre",
+        "id": 73446334,
+        "node_id": "MDQ6VXNlcjczNDQ2MzM0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73446334?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DaviPierre",
+        "html_url": "https://github.com/DaviPierre",
+        "followers_url": "https://api.github.com/users/DaviPierre/followers",
+        "following_url": "https://api.github.com/users/DaviPierre/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DaviPierre/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DaviPierre/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DaviPierre/subscriptions",
+        "organizations_url": "https://api.github.com/users/DaviPierre/orgs",
+        "repos_url": "https://api.github.com/users/DaviPierre/repos",
+        "events_url": "https://api.github.com/users/DaviPierre/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DaviPierre/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [],
+      "state": "open",
+      "locked": false,
+      "assignees": [],
+      "milestone": null,
+      "comments": 0,
+      "created_at": "2026-11-09T02:41:31Z",
+      "updated_at": "2026-11-09T02:41:31Z",
+      "closed_at": null,
+      "assignee": null,
+      "author_association": "COLLABORATOR",
+      "issue_field_values": [],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pulls/149",
+        "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/149",
+        "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/149.diff",
+        "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/149.patch",
+        "merged_at": null
+      },
+      "body": "Refs #95\nRefs #98\n\n## O que foi feito?\n\n- Criado o documento `docs/fase-03/metodo-avaliacao.md`, contendo a definição e a justificativa dos métodos de obtenção das 36 métricas GQM:\n  - **G1 — Manutenibilidade:** 14 métricas;\n  - **G2 — Confiabilidade:** 10 métricas;\n  - **G3 — Flexibilidade:** 12 métricas.\n- Documentadas as fontes de dados, as ferramentas utilizadas e as justificativas técnicas de cada método, mantendo a rastreabilidade com as fichas das métricas e os níveis de pontuação definidos na Fase 2.\n- Definidas estratégias para reduzir a subjetividade das avaliações manuais, incluindo procedimentos padronizados, registro de evidências e verificação independente.\n- Criado o documento `docs/fase-03/instrucoes-g1-manutenibilidade.md`, com instruções operacionais para a obtenção das 14 métricas de Manutenibilidade.\n- Especificados, para cada métrica de G1:\n  - Pré-condições e ferramentas necessárias;\n  - Comandos ou ações de coleta;\n  - Saídas esperadas;\n  - Procedimentos de cálculo;\n  - Localização e nomenclatura dos dados brutos;\n  - Fatores de variação que devem ser registrados;\n  - Referências à Fase 2 e aos critérios de pontuação.\n- Adicionados scripts auxiliares para apoiar a extração e o processamento das métricas de G1.\n- Adicionados testes automatizados com dados sintéticos para verificar o comportamento dos scripts auxiliares.\n- Organizada a documentação de maneira a favorecer a repetibilidade e a reprodutibilidade da avaliação, permitindo que outro integrante siga os procedimentos definidos.\n\n## Issue\n\nCloses #95  \nCloses #98\n\n## Como verificar\n\n1. Acessar `docs/fase-03/metodo-avaliacao.md` e conferir se as 36 métricas dos objetivos G1, G2 e G3 possuem método de obtenção, ferramenta e justificativa técnica.\n\n2. Conferir se os métodos estão alinhados às definições presentes nos documentos da Fase 2:\n   - `docs/fase-02/gqm-manutenibilidade.md`;\n   - `docs/fase-02/gqm-confiabilidade.md`;\n   - `docs/fase-02/gqm-flexibilidade.md`;\n   - `docs/fase-02/pontuacao-julgamento.md`.\n\n3. Acessar `docs/fase-03/instrucoes-g1-manutenibilidade.md` e verificar se as 14 métricas de G1 possuem procedimentos detalhados, comandos, saídas esperadas e regras de cálculo.\n\n4. Conferir se os procedimentos identificam os arquivos de evidência e os locais de armazenamento dos dados brutos em `dados/fase-04/`.\n\n5. Verificar se os scripts auxiliares estão disponíveis em `scripts/` e executar os testes automatizados:\n\n   ```bash\n   python3 -m unittest discover -s tests -v\n   ```\n\n6. Verificar a sintaxe do script JavaScript:\n\n   ```bash\n   node --check scripts/g1_typescript.cjs\n   ```\n\n7. Executar a construção do site:\n\n   ```bash\n   npm run build\n   ```\n\n8. Conferir a renderização das páginas, os links para a Fase 2 e as tabelas de Histórico de Versões.\n\n**Observação:** os testes automatizados utilizam dados sintéticos para verificar a lógica dos scripts. A execução das medições reais do Excalidraw está prevista para a Fase 4. A validação operacional dos procedimentos no ambiente real deve ser registrada separadamente.\n\n## Critérios da rubrica atendidos\n\n- **F3-C1 — Definição do método e repetibilidade das instruções:** documentação dos métodos das 36 métricas GQM e dos procedimentos operacionais das 14 métricas de Manutenibilidade, incluindo ferramentas, pré-condições, cálculos e evidências necessárias à execução da avaliação.\n- **F3-C8 — Consistência entre as Fases 2 e 3:** rastreabilidade entre os procedimentos de avaliação, as fichas das métricas, os objetivos GQM e os critérios de pontuação estabelecidos na Fase 2.\n\n## Uso de IA\n\nFoi utilizado o **ChatGPT (OpenAI)** como ferramenta de apoio à análise dos documentos da Fase 2, à estruturação dos métodos de avaliação e à elaboração das instruções técnicas das métricas de Manutenibilidade.\n\nA ferramenta também auxiliou na elaboração de scripts de processamento e testes automatizados com dados sintéticos.\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [ x] `npm run build` passou localmente (quando altera o site)\n- [ x] Critério de pronto da issue conferido\n- [ x] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\n- [ ] Horas reais preenchidas na issue",
+      "closed_by": null,
+      "reactions": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/149/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/149/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null
+    },
+    {
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/148",
+      "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
+      "labels_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/148/labels{/name}",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/148/comments",
+      "events_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/148/events",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/148",
+      "id": 6278320886,
+      "node_id": "PR_kwDOUJBYZc8AAAABNvrMAQ",
+      "number": 148,
+      "title": "Docs/planejamento fase 3",
+      "user": {
+        "login": "DaviPierre",
+        "id": 73446334,
+        "node_id": "MDQ6VXNlcjczNDQ2MzM0",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73446334?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/DaviPierre",
+        "html_url": "https://github.com/DaviPierre",
+        "followers_url": "https://api.github.com/users/DaviPierre/followers",
+        "following_url": "https://api.github.com/users/DaviPierre/following{/other_user}",
+        "gists_url": "https://api.github.com/users/DaviPierre/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/DaviPierre/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/DaviPierre/subscriptions",
+        "organizations_url": "https://api.github.com/users/DaviPierre/orgs",
+        "repos_url": "https://api.github.com/users/DaviPierre/repos",
+        "events_url": "https://api.github.com/users/DaviPierre/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/DaviPierre/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [],
+      "state": "open",
+      "locked": false,
+      "assignees": [],
+      "milestone": null,
+      "comments": 0,
+      "created_at": "2026-11-09T01:42:44Z",
+      "updated_at": "2026-11-09T01:44:06Z",
+      "closed_at": null,
+      "assignee": null,
+      "author_association": "COLLABORATOR",
+      "issue_field_values": [],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pulls/148",
+        "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/148",
+        "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/148.diff",
+        "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/148.patch",
+        "merged_at": null
+      },
+      "body": "## O que foi feito?\n\n- Realizado o estudo dos requisitos da Fase 3 do processo de avaliação de qualidade de produto de software, com base na ISO/IEC 25040 e nos materiais da disciplina.\n- Elaborada uma proposta de organização do plano de avaliação, contemplando método de avaliação, instruções para os avaliadores, recursos necessários, cronograma e plano de análise.\n- Definida a estrutura documental proposta para `docs/fase-03/`, considerando as responsabilidades e as issues já distribuídas entre os integrantes.\n- Identificada a distribuição dos componentes do Plano de Medição e do Plano de Análise do método Goal-Question-Metric (GQM) entre os documentos da Fase 3.\n- Verificada a rastreabilidade com a Fase 2, preservando os três objetivos GQM (G1 — Manutenibilidade, G2 — Confiabilidade e G3 — Flexibilidade), suas 13 questões e 36 métricas.\n- Levantadas as pendências técnicas necessárias à execução da avaliação, incluindo:\n  - Definição e padronização dos ambientes de teste;\n  - Identificação das versões de ferramentas e dependências;\n  - Preparação das cenas de referência e dos arquivos de teste;\n  - Definição dos procedimentos de coleta e armazenamento dos dados brutos;\n  - Padronização das evidências necessárias para garantir repetibilidade e reprodutibilidade.\n- Relacionadas as entregas propostas às issues responsáveis pela implementação dos documentos e recursos.\n- Preparado material de apresentação técnica da proposta para facilitar sua análise pela equipe.\n\n**Observação:** Não foi realizada uma reunião formal e, consequentemente, não houve elaboração de ata. A proposta foi organizada para discussão e validação assíncrona pelos integrantes, por meio dos comentários e da revisão deste Pull Request.\n\n## Issue\n\nRefs #94\n\n## Como verificar\n\n1. Acessar o documento `docs/gestao/proposta-plano-fase-03.md` e verificar a estrutura proposta para o plano de avaliação.\n2. Conferir se a proposta contempla os quatro componentes fundamentais da Fase 3:\n   - Método de avaliação;\n   - Instruções para os avaliadores;\n   - Recursos e ambiente de avaliação;\n   - Cronograma de execução.\n3. Verificar a distribuição dos elementos do Plano de Medição e do Plano de Análise GQM entre os documentos da Fase 3.\n4. Comparar a proposta com os documentos da Fase 2:\n   - `docs/fase-02/gqm-manutenibilidade.md`;\n   - `docs/fase-02/gqm-confiabilidade.md`;\n   - `docs/fase-02/gqm-flexibilidade.md`;\n   - `docs/fase-02/pontuacao-julgamento.md`;\n   - `docs/fase-02/plano-gqm.md`.\n5. Conferir se as 36 métricas permanecem vinculadas aos objetivos GQM e se os procedimentos previstos são compatíveis com as definições da Fase 2.\n6. Verificar se as pendências de ambiente, versões das ferramentas e massa de dados foram identificadas e encaminhadas às issues responsáveis.\n7. Executar `npm run build`, caso a proposta tenha sido adicionada à documentação publicada pelo GitPage.\n8. Revisar a proposta por meio dos comentários do PR, registrando eventuais ajustes e a concordância dos integrantes com a estrutura sugerida.\n\n## Critérios da rubrica atendidos\n\n- **F3-C1 — Definição do método e repetibilidade das instruções:** estudo e organização dos componentes necessários à elaboração de procedimentos claros, precisos, repetíveis e reproduzíveis.\n- **F3-C8 — Consistência entre as Fases 2 e 3:** definição da estrutura do plano de avaliação com rastreabilidade aos objetivos GQM, às métricas, aos níveis de pontuação e aos critérios de julgamento previamente estabelecidos.\n\nEsta issue contribui para o atendimento desses critérios ao estabelecer a estrutura metodológica que será detalhada nas demais entregas da Fase 3.\n\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [ x] `npm run build` passou localmente (quando altera o site)\n- [ x] Critério de pronto da issue conferido\n- [ x] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\n- [ x] Horas reais preenchidas na issue\n\n",
+      "closed_by": null,
+      "reactions": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/148/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/148/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null
+    },
     {
       "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/147",
       "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
@@ -437,14 +755,14 @@
         "site_admin": false
       },
       "labels": [],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [],
       "milestone": null,
-      "comments": 0,
+      "comments": 1,
       "created_at": "2026-11-07T22:55:07Z",
-      "updated_at": "2026-11-07T22:55:08Z",
-      "closed_at": null,
+      "updated_at": "2026-11-09T03:02:02Z",
+      "closed_at": "2026-11-09T03:01:58Z",
       "assignee": null,
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
@@ -456,10 +774,30 @@
         "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/144",
         "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/144.diff",
         "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/144.patch",
-        "merged_at": null
+        "merged_at": "2026-11-09T03:01:58Z"
       },
       "body": "## O que foi feito?\n\n- **Plano de Medição PSM (`docs/gestao/plano-medicao-psm.md`):** Reestruturado nos 15 campos da norma ISO/IEC 15939 / PSM a partir das necessidades e perguntas reais da equipe, com critérios de decisão vinculados a ações e cronograma formal de leituras periódicas.\n- **Painel de Medição PSM (`docs/gestao/painel-psm.md`):** Criado como painel executivo visual contendo o resumo consolidado por fase e por entrega, Curva S de execução (`08_desempenho_execucao_curva_s.png`), tabela oficial de contribuição individual da Entrega 1 (114,31h) alinhada ao apêndice do artigo SBC, e gráfico de acurácia com legenda ajustada.\n- **Registro de Medições e Decisões (`docs/gestao/registro-medicoes.md`):** Criado para histórico contínuo das medições, contendo a Medição 0 (Linha de base da E1 com análise causal de atrasos por dependências de tarefas e avaliação dos 6 critérios de decisão da E1), tabela consolidada de decisões D1 a D6 e templates prontos para as medições da Fase 3 e 4.\n- **Unificação e Limpeza da Barra Lateral:** Removida a pasta legada de relatórios separados por fase (`docs/gestao/relatorios/`), unificando a experiência de navegação em uma estrutura modular limpa inspirada na referência da equipe Mary Jackson.\n- **Correção em script:** Ajustada a função de desenho de gráficos em `scripts/coleta_psm.py` para evitar sobreposição da linha de 100% planejado na barra \"Sem Fase\".\n\n## Issue\n\nCloses #134\n\n## Como verificar\n\n- Navegar na seção \"Gestão do Projeto\" no site local (`npm run start` ou `npm run build`).\n- Conferir a coerência dos dados e tabelas entre o plano, painel e o apêndice do artigo (`artigo/contribuicao-e-ia.md`).\n- Verificar que o build estático passa sem erros: `npm run build`.\n\n## Critérios da rubrica atendidos\n\n- **Premissa 3:** Monitoramento contínuo de medições, interpretação e decisões de gestão documentadas.\n- **Premissa 5:** Auditabilidade e rastreabilidade total baseadas em dados primários versionados.\n\n## Uso de IA\n\nFoi utilizado o assistente Antigravity (Gemini) para estruturação dos Measurement Constructs, agregação das tabelas consolidadas, ajuste na função PIL do gráfico de acurácia e validação do build estático. Todas as análises causais e decisões foram validadas pela equipe.\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [x] `npm run build` passou localmente (0 erros, 0 links quebrados)\n- [x] Critério de pronto da issue conferido\n- [x] Tabela de Histórico de Versões preenchida no final dos documentos\n- [x] Sem emojis, figurinhas ou ícones no conteúdo dos documentos\n- [x] Revisor solicitado (@wChrstphr)",
-      "closed_by": null,
+      "closed_by": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/144/reactions",
         "total_count": 0,
@@ -875,10 +1213,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1165,10 +1503,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1455,10 +1793,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1653,10 +1991,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1784,7 +2122,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -1840,17 +2178,17 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-05T01:47:12Z",
-      "updated_at": "2026-11-07T22:54:42Z",
-      "closed_at": null,
+      "updated_at": "2026-11-09T03:02:00Z",
+      "closed_at": "2026-11-09T03:02:00Z",
       "assignee": {
         "login": "eduarda-ogomes",
         "id": 162516978,
@@ -1888,7 +2226,27 @@
         "total_blocking": 0
       },
       "body": "### Descrição\n\nNa apresentação das métricas PSM de 04/11, a professora sugeriu que as métricas respondam a perguntas que ajudem a equipe a melhorar o próprio processo de desenvolvimento, e indicou como exemplo o trabalho da equipe T01 Mary Jackson ([plano de medição](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T01_MARY_JACKSON/blob/main/docs/gestao/plano-de-medicao.md) e [registro de medições](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T01_MARY_JACKSON/blob/main/docs/gestao/registro-de-medicoes.md)). Hoje os relatórios PSM têm constructs com necessidades genéricas, e as decisões não voltam para o processo.\n\nRefazer o plano de medição do projeto inteiro em `docs/gestao/plano-medicao-psm.md`, com uma medida por categoria da especificação, partindo destas perguntas da equipe:\n\n- Calendário e Progresso: as issues da fase fecham ao longo da fase ou se acumulam na véspera da entrega?\n- Recursos e Custos: nossas estimativas por issue são confiáveis o bastante para planejar a fase seguinte?\n- Desempenho dos Processos: quanto tempo um PR espera por revisão até o merge, e quem está revisando?\n\nCada medida ganha critério de decisão que vira ação, por exemplo \"menos de 50% das issues fechadas na metade da fase, redistribuir\" e \"PR há mais de 1 dia sem revisão, cobrar o revisor indicado\". Medir as Fases 1 e 2 com as medidas de fechamento das issues e de acerto das estimativas, a partir de `dados/gestao/`, para servir de linha de base. A linha de base do tempo de espera por revisão fica na #135, porque esse dado ainda não está em `dados/gestao/`. A coleta é diária, automática, e a leitura com decisão é às quartas-feiras (11/11 e 18/11), registrada em ata. O PSM fica no GitPage e fora do artigo (retorno 7 do PC1).\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Premissa 3, registrar medições, interpretação e decisões: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Três categorias exigidas: 2026-2 Trabalho final completo v1.pdf, p. 2, seção 2\n- Necessidades de informação: AULA 09 QSW1 PSM resumo.pdf, p. 6\n- Critérios de decisão: AULA 09 QSW1 PSM resumo.pdf, p. 7\n- Template measurement construct: AULA 09 QSW1 PSM resumo.pdf, p. 19\n- Critérios para selecionar medidas: AULA 09 QSW1 PSM resumo.pdf, p. 23\n- Apresentações das métricas PSM em 04/11 e 11/11: Cronograma atualizado da disciplina, Moodle (aprender3.unb.br), novembro\n\n### Critério de pronto\n\n- [ ] Uma medida por categoria, cada uma partindo de uma pergunta da equipe\n- [ ] Measurement construct de cada medida\n- [ ] Critério de decisão de cada medida ligado a uma ação concreta\n- [ ] Linha de base das Fases 1 e 2 calculada para fechamento das issues e acerto das estimativas\n- [ ] Datas das leituras semanais definidas\n- [ ] Página de [priorização no Project](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/gestao/priorizacao-issues.md) citada no plano, com o recálculo de `Prioridade` e `Início` incluído nas leituras semanais\n- [ ] Referência ao trabalho da T01 Mary Jackson citada na página\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n07/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n3\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "closed_by": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/134/reactions",
         "total_count": 0,
@@ -1903,7 +2261,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/134/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -2288,10 +2646,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6729,10 +7087,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6907,10 +7265,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7085,10 +7443,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7263,10 +7621,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7441,10 +7799,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7630,10 +7988,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -7828,16 +8186,16 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:24Z",
-      "updated_at": "2026-11-05T01:47:32Z",
+      "updated_at": "2026-11-09T02:52:13Z",
       "closed_at": null,
       "assignee": {
         "login": "wChrstphr",
@@ -7875,7 +8233,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nDefinir, antes da coleta, como os dados brutos viram métricas e como as métricas serão comparadas com as faixas do [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md): fórmulas, arredondamento, tratamento de valores ausentes, agregação da métrica para a questão e o objetivo, e os gráficos e tabelas que a Fase 4 vai usar. Incluir as hipóteses de cada métrica (ver [abstraction sheets](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/abstraction-sheets.md)) para a comparação com os valores reais. Publicar em `docs/fase-03/plano-analise.md`.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Plano de Análise: processamento das medidas, formas de apresentação e hipóteses: AULA 08 QSW1 GQM.pdf, p. 46\n- Organizar os dados por questão e objetivo, com gráficos e tabelas: AULA 08 QSW1 GQM.pdf, p. 56\n- Premissa 5, procedimentos de tratamento e cálculo no repositório: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Critério F3-C8, coerência com as métricas, níveis de pontuação e critérios de julgamento: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Cálculo de cada métrica a partir do dado bruto descrito\n- [ ] Regra de comparação com as faixas de pontuação e de agregação até o objetivo\n- [ ] Gráfico ou tabela previsto para cada questão\n- [ ] Hipóteses listadas ao lado de cada métrica para comparação na Fase 4\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n06/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nDefinir, antes da coleta, como os dados brutos viram métricas e como as métricas serão comparadas com as faixas do [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md): fórmulas, arredondamento, tratamento de valores ausentes, agregação da métrica para a questão e o objetivo, e os gráficos e tabelas que a Fase 4 vai usar. Incluir as hipóteses de cada métrica (ver [abstraction sheets](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/abstraction-sheets.md)) para a comparação com os valores reais. Publicar em `docs/fase-03/plano-analise.md`.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Plano de Análise: processamento das medidas, formas de apresentação e hipóteses: AULA 08 QSW1 GQM.pdf, p. 46\n- Organizar os dados por questão e objetivo, com gráficos e tabelas: AULA 08 QSW1 GQM.pdf, p. 56\n- Premissa 5, procedimentos de tratamento e cálculo no repositório: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Critério F3-C8, coerência com as métricas, níveis de pontuação e critérios de julgamento: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Cálculo de cada métrica a partir do dado bruto descrito\n- [ ] Regra de comparação com as faixas de pontuação e de agregação até o objetivo\n- [ ] Gráfico ou tabela previsto para cada questão\n- [ ] Hipóteses listadas ao lado de cada métrica para comparação na Fase 4\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n06/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n2h\n\n### Revisor\n\n_No response_\n\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/101/reactions",
@@ -8006,10 +8364,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8204,10 +8562,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8382,16 +8740,16 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:17Z",
-      "updated_at": "2026-11-05T01:47:26Z",
+      "updated_at": "2026-11-09T02:39:59Z",
       "closed_at": null,
       "assignee": {
         "login": "DaviPierre",
@@ -8429,7 +8787,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nEscrever o passo a passo de obtenção de cada métrica de G1, a partir das fichas do [GQM de Manutenibilidade (G1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md): pré-condições, comandos ou ações exatas, saída esperada, como calcular o valor, onde salvar o dado bruto em `dados/fase-04/` e qual nome dar ao arquivo. As instruções devem permitir que um avaliador que não escreveu o plano obtenha o mesmo valor. Publicar em `docs/fase-03/instrucoes-g1-manutenibilidade.md`.\n\nMétricas cobertas:\n\n- M1.1.1 Ciclos de dependência entre pacotes\n- M1.1.2 Importações que violam a direção declarada\n- M1.1.3 Acoplamento e instabilidade de cada pacote\n- M1.2.1 Arquivos de pacotes de base com dependência de React ou do navegador\n- M1.2.2 Proporção de propriedades públicas documentadas\n- M1.3.1 Perfil de risco de complexidade das funções\n- M1.3.2 Cobertura da documentação para desenvolvedores\n- M1.3.3 Verificações estáticas executadas automaticamente\n- M1.4.1 Mediana de arquivos de produção alterados por contribuição\n- M1.4.2 Arquivos de produção extensos\n- M1.4.3 Proporção de contribuições que alteram arquivos extensos\n- M1.5.1 Cobertura de linhas por pacote\n- M1.5.2 Distribuição dos testes por nível\n- M1.5.3 Proporção de contribuições com testes executados antes da integração\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Instrução para o avaliador: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Plano que permita ao avaliador executar a avaliação completamente: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: quando coletar, meio de coleta e formulários para coleta manual: AULA 08 QSW1 GQM.pdf, p. 45\n- Coleta manual deve identificar quem coletou o dado: AULA 08 QSW1 GQM.pdf, p. 51\n- Critério F3-C1, instruções claras, precisas, repetíveis e reprodutíveis: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Passo a passo para todas as 14 métricas de G1\n- [ ] Cada passo com comando ou ação exata e saída esperada\n- [ ] Local e nome de arquivo do dado bruto de cada métrica definidos\n- [ ] Fatores de variação que o avaliador deve registrar em cada coleta (versão das ferramentas, navegador, rede)\n- [ ] Link de cada métrica para a ficha na Fase 2 e para a faixa de pontuação\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n07/11\n\n### Depende de\n\n#95 (Método de avaliação), #96 (Recursos e ambiente)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nEscrever o passo a passo de obtenção de cada métrica de G1, a partir das fichas do [GQM de Manutenibilidade (G1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md): pré-condições, comandos ou ações exatas, saída esperada, como calcular o valor, onde salvar o dado bruto em `dados/fase-04/` e qual nome dar ao arquivo. As instruções devem permitir que um avaliador que não escreveu o plano obtenha o mesmo valor. Publicar em `docs/fase-03/instrucoes-g1-manutenibilidade.md`.\n\nMétricas cobertas:\n\n- M1.1.1 Ciclos de dependência entre pacotes\n- M1.1.2 Importações que violam a direção declarada\n- M1.1.3 Acoplamento e instabilidade de cada pacote\n- M1.2.1 Arquivos de pacotes de base com dependência de React ou do navegador\n- M1.2.2 Proporção de propriedades públicas documentadas\n- M1.3.1 Perfil de risco de complexidade das funções\n- M1.3.2 Cobertura da documentação para desenvolvedores\n- M1.3.3 Verificações estáticas executadas automaticamente\n- M1.4.1 Mediana de arquivos de produção alterados por contribuição\n- M1.4.2 Arquivos de produção extensos\n- M1.4.3 Proporção de contribuições que alteram arquivos extensos\n- M1.5.1 Cobertura de linhas por pacote\n- M1.5.2 Distribuição dos testes por nível\n- M1.5.3 Proporção de contribuições com testes executados antes da integração\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Instrução para o avaliador: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Plano que permita ao avaliador executar a avaliação completamente: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: quando coletar, meio de coleta e formulários para coleta manual: AULA 08 QSW1 GQM.pdf, p. 45\n- Coleta manual deve identificar quem coletou o dado: AULA 08 QSW1 GQM.pdf, p. 51\n- Critério F3-C1, instruções claras, precisas, repetíveis e reprodutíveis: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [x] Passo a passo para todas as 14 métricas de G1\n- [x] Cada passo com comando ou ação exata e saída esperada\n- [x] Local e nome de arquivo do dado bruto de cada métrica definidos\n- [x] Fatores de variação que o avaliador deve registrar em cada coleta (versão das ferramentas, navegador, rede)\n- [x] Link de cada métrica para a ficha na Fase 2 e para a faixa de pontuação\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n07/11\n\n### Depende de\n\n#95 (Método de avaliação), #96 (Recursos e ambiente)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n4\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/98/reactions",
@@ -8571,10 +8929,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8769,10 +9127,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8947,16 +9305,16 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:06Z",
-      "updated_at": "2026-11-05T03:29:36Z",
+      "updated_at": "2026-11-09T02:39:41Z",
       "closed_at": null,
       "assignee": {
         "login": "DaviPierre",
@@ -8994,7 +9352,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nDefinir o método de obtenção de cada uma das métricas de G1, G2 e G3 (análise estática do código, mineração do histórico do repositório, teste manual no navegador, medição de desempenho, inspeção de documentação) e justificar a escolha a partir da ficha da métrica na Fase 2 e da faixa de pontuação que ela precisa alimentar. Publicar em `docs/fase-03/metodo-avaliacao.md`, com uma tabela métrica, método, ferramenta e justificativa.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Método de avaliação a ser utilizado, com instruções: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: meio de coleta (formulário ou ferramenta) e ferramentas: AULA 08 QSW1 GQM.pdf, p. 45\n- Coleta manual por formulário e por ferramentas: AULA 08 QSW1 GQM.pdf, p. 51\n- Premissa 2, procedimento de coleta de cada métrica: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Critério F3-C1, método detalhadamente justificado: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Método definido para todas as métricas de G1, G2 e G3\n- [ ] Justificativa de cada método ligada à ficha da métrica e ao nível de pontuação que ela alimenta\n- [ ] Ferramentas nomeadas, com o papel de cada uma\n- [ ] Métricas que dependem de julgamento humano identificadas, com a forma de reduzir a subjetividade (roteiro fixo e gravação de tela, com a conferência da #114 como segundo olhar)\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n06/11\n\n### Depende de\n\n#94 (Estudo do processo de projetar a avaliação)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nDefinir o método de obtenção de cada uma das métricas de G1, G2 e G3 (análise estática do código, mineração do histórico do repositório, teste manual no navegador, medição de desempenho, inspeção de documentação) e justificar a escolha a partir da ficha da métrica na Fase 2 e da faixa de pontuação que ela precisa alimentar. Publicar em `docs/fase-03/metodo-avaliacao.md`, com uma tabela métrica, método, ferramenta e justificativa.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Método de avaliação a ser utilizado, com instruções: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: meio de coleta (formulário ou ferramenta) e ferramentas: AULA 08 QSW1 GQM.pdf, p. 45\n- Coleta manual por formulário e por ferramentas: AULA 08 QSW1 GQM.pdf, p. 51\n- Premissa 2, procedimento de coleta de cada métrica: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Critério F3-C1, método detalhadamente justificado: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [ ] Método definido para todas as métricas de G1, G2 e G3\n- [ ] Justificativa de cada método ligada à ficha da métrica e ao nível de pontuação que ela alimenta\n- [ ] Ferramentas nomeadas, com o papel de cada uma\n- [ ] Métricas que dependem de julgamento humano identificadas, com a forma de reduzir a subjetividade (roteiro fixo e gravação de tela, com a conferência da #114 como segundo olhar)\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n06/11\n\n### Depende de\n\n#94 (Estudo do processo de projetar a avaliação)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n4\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/95/reactions",
@@ -9125,16 +9483,16 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:02Z",
-      "updated_at": "2026-11-06T15:44:34Z",
+      "updated_at": "2026-11-09T01:32:08Z",
       "closed_at": null,
       "assignee": {
         "login": "DaviPierre",
@@ -9172,7 +9530,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nEstudar o que a Fase 3 do processo de avaliação de produto pede (plano de avaliação com método, instruções para o avaliador, recursos e cronograma) e o que o GQM pede nos planos de medição e de análise. Propor a estrutura das páginas da Fase 3 em `docs/fase-03/` e registrar a proposta para a equipe.\n\nO plano precisa partir do que a Fase 2 já fixou: as convenções de coleta de cada objetivo ([GQM de Manutenibilidade (G1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md), [GQM de Confiabilidade (G2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md) e [GQM de Flexibilidade (G3)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md), seção 2 de cada página) deixaram para a Fase 3 a definição exata do ambiente de teste, e o [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md) define como os resultados serão julgados.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Fase 3, produzir o plano de avaliação (método com instruções, recursos e cronograma): AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Projetar a avaliação: método, instrução para o avaliador, recursos e cronograma: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Especificação detalhada para que a avaliação seja repetível e reprodutível: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 15\n- Conteúdo do Plano de Medição: AULA 08 QSW1 GQM.pdf, p. 45\n- Conteúdo do Plano de Análise: AULA 08 QSW1 GQM.pdf, p. 46\n- Critérios F3-C1 a F3-C8: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [x] Lista das páginas da Fase 3 com o conteúdo de cada uma\n- [x] Itens do Plano de Medição (GQM, p. 45) e do Plano de Análise (GQM, p. 46) distribuídos entre as páginas\n- [x] Pendências da Fase 2 para a Fase 3 levantadas (ambiente exato, cenas de teste, versões das ferramentas)\n- [ ] Proposta apresentada à equipe e registrada em ata\n\n### Prazo\n\n05/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nEstudar o que a Fase 3 do processo de avaliação de produto pede (plano de avaliação com método, instruções para o avaliador, recursos e cronograma) e o que o GQM pede nos planos de medição e de análise. Propor a estrutura das páginas da Fase 3 em `docs/fase-03/` e registrar a proposta para a equipe.\n\nO plano precisa partir do que a Fase 2 já fixou: as convenções de coleta de cada objetivo ([GQM de Manutenibilidade (G1)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md), [GQM de Confiabilidade (G2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md) e [GQM de Flexibilidade (G3)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md), seção 2 de cada página) deixaram para a Fase 3 a definição exata do ambiente de teste, e o [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md) define como os resultados serão julgados.\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Fase 3, produzir o plano de avaliação (método com instruções, recursos e cronograma): AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Projetar a avaliação: método, instrução para o avaliador, recursos e cronograma: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Especificação detalhada para que a avaliação seja repetível e reprodutível: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 15\n- Conteúdo do Plano de Medição: AULA 08 QSW1 GQM.pdf, p. 45\n- Conteúdo do Plano de Análise: AULA 08 QSW1 GQM.pdf, p. 46\n- Critérios F3-C1 a F3-C8: 2026-2 Trabalho final completo v1.pdf, p. 7\n\n### Critério de pronto\n\n- [x] Lista das páginas da Fase 3 com o conteúdo de cada uma\n- [x] Itens do Plano de Medição (GQM, p. 45) e do Plano de Análise (GQM, p. 46) distribuídos entre as páginas\n- [x] Pendências da Fase 2 para a Fase 3 levantadas (ambiente exato, cenas de teste, versões das ferramentas)\n- [ ] Proposta apresentada à equipe e registrada em ata\n\n### Prazo\n\n05/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n3\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/94/reactions",
@@ -10228,10 +10586,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10437,10 +10795,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10646,10 +11004,10 @@
           "site_admin": false
         },
         "open_issues": 14,
-        "closed_issues": 9,
+        "closed_issues": 10,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-09T00:37:07Z",
+        "updated_at": "2026-11-09T03:02:00Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -24064,10 +24422,10 @@
         "site_admin": false
       },
       "open_issues": 14,
-      "closed_issues": 9,
+      "closed_issues": 10,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-09T00:37:07Z",
+      "updated_at": "2026-11-09T03:02:00Z",
       "due_on": "2026-11-08T00:00:00Z",
       "closed_at": null
     },
@@ -24111,6 +24469,344 @@
     }
   ],
   "commits": [
+    {
+      "sha": "8f222a97302c185c217f644f08105edc1234c2fb",
+      "node_id": "C_kwDOUJBYZdoAKDhmMjIyYTk3MzAyYzE4NWMyMTdmNjQ0ZjA4MTA1ZWRjMTIzNGMyZmI",
+      "commit": {
+        "author": {
+          "name": "Christopher",
+          "email": "105730846+wChrstphr@users.noreply.github.com",
+          "date": "2026-11-09T03:01:58Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2026-11-09T03:01:58Z"
+        },
+        "message": "Merge pull request #144 from FCTE-Qualidade-de-Software-1/docs/gestao-plano-medicao-psm\n\n[GESTAO-134] docs: refazer plano de medicao psm, painel executivo e registro de medicoes",
+        "tree": {
+          "sha": "2a147ed8591262e92bf5b21b8d0e4268136b3bed",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/2a147ed8591262e92bf5b21b8d0e4268136b3bed"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/8f222a97302c185c217f644f08105edc1234c2fb",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq8TemCRC1aQ7uu5UhlAAAgbwQAHcZ4fvxCiok3zsMWT6jNZBK\nLkN+zy+KdfuCre6A25Do3JTUeJl+j12TthSHxQsLczwyJR9Q+u/NWBbJbcao+0Sx\njZ5mjUFV2n6UJR21EMB4dcDEaODTc435onqHr+KOfBGNBVM1soRecK426q36wn6+\nPvtxS9Rft6fiHnRQL4cWi1yW+1yiqLPe6tvuEtEkTZq5MFoxnlszC0BpnaQx1K8A\n316j4S2ezQ2+Ly11S5O5r+CNzKz8F3QzuTDFvvl7e/Ss242DkrCkHBDHpMhEDHN7\nLspWZP/YX1jCU/nsj9N1crwuKRY/onzT9rVwjsoouULvFowwLyX+C1n6+tSgPIRp\nb1mDli0WakQQz/+5qthk+YBBe0oKU5JPPPjG7pZBSB2j2CBOdM4qcE3ipfH9lhPB\nAR+O/t19448W9O2LujLbUNQh57K6vx3tMeMHVAQfFjXng6ru6Q0DprZtPPWKt7OZ\nlx66t33DQzfDNkTZS/3hjovsihi+be+/cXhkHWLAezIqSLo8QHLxq+j95fmXNF/P\nnJq/3/5/JUfgNuVWbbFYfavouI+GUxhWLgr4gIPgbjrQyqCpbSyicnpvpDuig3qD\ncrbFCVcm2Zy/UXbI2hIWIGhXAqnAaJoCnCuMlE9WKJlYAD/QLpWV+LMd7OihQrVz\nmyUuBvNAj7TX9UGKpy9C\n=ObpY\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 2a147ed8591262e92bf5b21b8d0e4268136b3bed\nparent 77206ce222ad0e9e6359248b0c38ca506a5b81ab\nparent f311e1b6f17c94d88f9812884a5f2afef949ad4e\nauthor Christopher <105730846+wChrstphr@users.noreply.github.com> 1794193318 -0300\ncommitter GitHub <noreply@github.com> 1794193318 -0300\n\nMerge pull request #144 from FCTE-Qualidade-de-Software-1/docs/gestao-plano-medicao-psm\n\n[GESTAO-134] docs: refazer plano de medicao psm, painel executivo e registro de medicoes",
+          "verified_at": "2026-11-09T03:01:58Z"
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/8f222a97302c185c217f644f08105edc1234c2fb",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/8f222a97302c185c217f644f08105edc1234c2fb",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/8f222a97302c185c217f644f08105edc1234c2fb/comments",
+      "author": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/77206ce222ad0e9e6359248b0c38ca506a5b81ab"
+        },
+        {
+          "sha": "f311e1b6f17c94d88f9812884a5f2afef949ad4e",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f311e1b6f17c94d88f9812884a5f2afef949ad4e",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f311e1b6f17c94d88f9812884a5f2afef949ad4e"
+        }
+      ]
+    },
+    {
+      "sha": "f311e1b6f17c94d88f9812884a5f2afef949ad4e",
+      "node_id": "C_kwDOUJBYZdoAKGYzMTFlMWI2ZjE3Yzk0ZDg4Zjk4MTI4ODRhNWYyYWZlZjk0OWFkNGU",
+      "commit": {
+        "author": {
+          "name": "eduarda-ogomes",
+          "email": "duda.red35@gmail.com",
+          "date": "2026-11-09T02:24:59Z"
+        },
+        "committer": {
+          "name": "eduarda-ogomes",
+          "email": "duda.red35@gmail.com",
+          "date": "2026-11-09T02:24:59Z"
+        },
+        "message": "docs(gestao): atender revisao do pr 144 com alinhamento de metricas e automacao",
+        "tree": {
+          "sha": "2a147ed8591262e92bf5b21b8d0e4268136b3bed",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/2a147ed8591262e92bf5b21b8d0e4268136b3bed"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/f311e1b6f17c94d88f9812884a5f2afef949ad4e",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f311e1b6f17c94d88f9812884a5f2afef949ad4e",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f311e1b6f17c94d88f9812884a5f2afef949ad4e",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f311e1b6f17c94d88f9812884a5f2afef949ad4e/comments",
+      "author": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "03ebf76eaca406439b87752b4549af57457f17d8",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/03ebf76eaca406439b87752b4549af57457f17d8",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/03ebf76eaca406439b87752b4549af57457f17d8"
+        }
+      ]
+    },
+    {
+      "sha": "03ebf76eaca406439b87752b4549af57457f17d8",
+      "node_id": "C_kwDOUJBYZdoAKDAzZWJmNzZlYWNhNDA2NDM5Yjg3NzUyYjQ1NDlhZjU3NDU3ZjE3ZDg",
+      "commit": {
+        "author": {
+          "name": "Christopher Paraizo",
+          "email": "wanjo.christopher@gmail.com",
+          "date": "2026-11-09T00:52:35Z"
+        },
+        "committer": {
+          "name": "Christopher Paraizo",
+          "email": "wanjo.christopher@gmail.com",
+          "date": "2026-11-09T00:52:35Z"
+        },
+        "message": "Merge branch 'main' into docs/gestao-plano-medicao-psm\n\nConflitos apenas nos gráficos gerados em dados/gestao/graficos/.\nResolvidos regerando-os com scripts/coleta_psm.py --offline sobre o\nsnapshot da main, e a cópia em static/img/gestao foi atualizada.",
+        "tree": {
+          "sha": "5c9c01d01b985b1216011b7f0fef002a92c23028",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/5c9c01d01b985b1216011b7f0fef002a92c23028"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/03ebf76eaca406439b87752b4549af57457f17d8",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/03ebf76eaca406439b87752b4549af57457f17d8",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/03ebf76eaca406439b87752b4549af57457f17d8",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/03ebf76eaca406439b87752b4549af57457f17d8/comments",
+      "author": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b1c2dfe5df7fda35a20b2116755588354200c611",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/b1c2dfe5df7fda35a20b2116755588354200c611",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/b1c2dfe5df7fda35a20b2116755588354200c611"
+        },
+        {
+          "sha": "77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/77206ce222ad0e9e6359248b0c38ca506a5b81ab"
+        }
+      ]
+    },
+    {
+      "sha": "77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+      "node_id": "C_kwDOUJBYZdoAKDc3MjA2Y2UyMjJhZDBlOWU2MzU5MjQ4YjBjMzhjYTUwNmE1YjgxYWI",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-09T00:37:32Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-09T00:37:32Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "5ff369c8ec0663f10f53a0d7ae39af9cee2648bf",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/5ff369c8ec0663f10f53a0d7ae39af9cee2648bf"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/77206ce222ad0e9e6359248b0c38ca506a5b81ab",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/77206ce222ad0e9e6359248b0c38ca506a5b81ab/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "e8e75ade153575fc0d683b7d3741259544788209",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/e8e75ade153575fc0d683b7d3741259544788209",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/e8e75ade153575fc0d683b7d3741259544788209"
+        }
+      ]
+    },
     {
       "sha": "e8e75ade153575fc0d683b7d3741259544788209",
       "node_id": "C_kwDOUJBYZdoAKGU4ZTc1YWRlMTUzNTc1ZmMwZDY4M2I3ZDM3NDEyNTk1NDQ3ODgyMDk",
@@ -25605,6 +26301,88 @@
         "repos_url": "https://api.github.com/users/GabrielSMonteiro/repos",
         "events_url": "https://api.github.com/users/GabrielSMonteiro/events{/privacy}",
         "received_events_url": "https://api.github.com/users/GabrielSMonteiro/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "1ec17f61077e29781087d89a359f203a017e863a",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/1ec17f61077e29781087d89a359f203a017e863a",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/1ec17f61077e29781087d89a359f203a017e863a"
+        }
+      ]
+    },
+    {
+      "sha": "b1c2dfe5df7fda35a20b2116755588354200c611",
+      "node_id": "C_kwDOUJBYZdoAKGIxYzJkZmU1ZGY3ZmRhMzVhMjBiMjExNjc1NTU4ODM1NDIwMGM2MTE",
+      "commit": {
+        "author": {
+          "name": "eduarda-ogomes",
+          "email": "duda.red35@gmail.com",
+          "date": "2026-11-07T22:48:22Z"
+        },
+        "committer": {
+          "name": "eduarda-ogomes",
+          "email": "duda.red35@gmail.com",
+          "date": "2026-11-07T22:48:22Z"
+        },
+        "message": "docs: refazer plano de medicao psm, painel executivo e registro de medicoes (#134)",
+        "tree": {
+          "sha": "f1cf6b4dab5621d2599c54a0fdfbede4da34e72b",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/f1cf6b4dab5621d2599c54a0fdfbede4da34e72b"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/b1c2dfe5df7fda35a20b2116755588354200c611",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/b1c2dfe5df7fda35a20b2116755588354200c611",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/b1c2dfe5df7fda35a20b2116755588354200c611",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/b1c2dfe5df7fda35a20b2116755588354200c611/comments",
+      "author": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
         "type": "User",
         "user_view_type": "public",
         "site_admin": false
