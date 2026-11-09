@@ -1,6 +1,6 @@
 fase,horas_estimadas,horas_reais,custo_estimado_brl,custo_real_brl
 Fase 1,53.5,57.91,2407.5,2605.95
 Fase 2,62.5,56.4,2812.5,2538.0
-Fase 3,48.0,13.5,2160.0,607.5
+Fase 3,48.0,18.5,2160.0,832.5
 Fase 4,80.0,0.0,3600.0,0.0
 Sem Fase,2.0,2.0,90.0,90.0

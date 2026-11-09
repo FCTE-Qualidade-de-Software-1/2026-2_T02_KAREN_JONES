@@ -99,17 +99,17 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 
 | Responsável | Métricas coletadas | Processador | Memória | Sistema operacional e versão | Navegador e versão |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Christopher | Análise estática e histórico: M1.1.1 a M1.5.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
-| Luiz Henrique Soares| Histórico de defeitos: M2.1.1 a M2.1.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
+| Christopher | Análise estática e histórico: M1.1.1 a M1.5.3 | Intel Core i7-12650H | 32 GB | Windows 11 Pro 25H2 (build 26200.9711), com WSL2 (Ubuntu 24.04.5 LTS) | não se aplica |
+| Luiz Henrique Soares | Histórico de defeitos: M2.1.1 a M2.1.3 | _a preencher_ | _a preencher_ | _a preencher_ | não se aplica |
 | Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
-| Maria Eduarda | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
-| Maria Eduarda | Desempenho: M3.2.1 e M3.2.2 | _a preencher_ | _a preencher_ | _a preencher_ | _a preencher_ |
+| Maria Eduarda | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
+| Maria Eduarda | Desempenho: M3.2.1 e M3.2.2 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
 
-**Máquina de desempenho.** [M3.2.1](../fase-02/gqm-flexibilidade.md) e [M3.2.2](../fase-02/gqm-flexibilidade.md) dependem do hardware, porque o tempo de abertura e a taxa de quadros mudam com o processador, a memória, a placa gráfica e a tela. Por isso elas são coletadas somente na máquina da Maria Eduarda, e resultados dessas duas métricas obtidos em outra máquina não são usados. Além dos campos da tabela, ela registra o modelo da placa gráfica e a taxa de atualização da tela, porque [M3.2.2](../fase-02/pontuacao-julgamento.md) converte os quadros por segundo em percentual da meta de 60 quadros.
+**Máquina de desempenho.** [M3.2.1](../fase-02/gqm-flexibilidade.md) e [M3.2.2](../fase-02/gqm-flexibilidade.md) dependem do hardware, porque o tempo de abertura e a taxa de quadros mudam com o processador, a memória, a placa gráfica e a tela. Por isso elas são coletadas somente na máquina da Maria Eduarda, e resultados dessas duas métricas obtidos em outra máquina não são usados. Na máquina da Maria Eduarda, a placa gráfica é a **AMD Radeon Graphics (integrada, Lucienne)** e a tela opera em **Full HD (1920 × 1080) a 60 Hz**, atendendo à meta de [M3.2.2](../fase-02/pontuacao-julgamento.md) que converte os quadros por segundo em percentual da meta de 60 quadros.
 
 **Condições de controle nas coletas de desempenho.** Carregador conectado, mesmo modo de energia em todas as repetições, navegador com perfil novo e sem extensões, uma única aba aberta, zoom de 100% e nenhum outro programa pesado em execução.
 
-**Navegador.** Todos os testes no navegador usam o mesmo navegador e a mesma versão, fixados antes da Fase 04: _a preencher_. Os testes de G2 e G3 exigem do navegador as funções de: modo _offline_, bloqueio de requisições por domínio, exportação do registro de rede (HAR), painel de desempenho (_Performance_) e limpeza do armazenamento local. A atualização automática do navegador fica desligada durante a coleta.
+**Navegador.** Todos os testes no navegador usam o mesmo navegador e a mesma versão, fixados antes da Fase 04: Mozilla Firefox 159.0.1 (ou Google Chrome caso definido pela equipe). Os testes de G2 e G3 exigem do navegador as funções de: modo _offline_, bloqueio de requisições por domínio, exportação do registro de rede (HAR), painel de desempenho (_Performance_) e limpeza do armazenamento local. A atualização automática do navegador fica desligada durante a coleta.
 
 **Sistema operacional.** O cenário 4 de [M2.4.1](../fase-02/gqm-confiabilidade.md) exige encerrar o processo do navegador pelo sistema operacional. O comando ou o procedimento usado é registrado junto com o sistema operacional de quem coleta.
 
@@ -121,12 +121,12 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 
 | Campo | Valor |
 | :--- | :--- |
-| Modelo do aparelho | _a preencher_ |
-| Sistema operacional e versão | _a preencher_ |
-| Navegador e versão | _a preencher_ |
-| Tela | _a preencher_ |
-| Caneta (modelo, ou "não disponível") | _a preencher_ |
-| Responsável | _a preencher_ |
+| Modelo do aparelho | iPad (A16) |
+| Sistema operacional e versão | iPadOS 26.6.1 |
+| Navegador e versão | Safari (versão nativa do iPadOS 26.6.1) |
+| Tela | 10.9" (Liquid Retina, 2360 × 1640) |
+| Caneta (modelo, ou "não disponível") | Caneta Goojodoq |
+| Responsável | Maria Eduarda |
 
 O aparelho precisa aceitar toque com mais de um dedo (ações 6 e 7: pinça e deslocamento com dois dedos) e ter teclado virtual (ação 8). Quando há caneta, as duas formas de entrada são testadas e pontuadas, e a pontuação da métrica é a média das duas ([Pontuação, seção 5.1](../fase-02/pontuacao-julgamento.md)).
 
@@ -141,15 +141,15 @@ A versão efetiva de cada ferramenta é registrada na primeira coleta, com o com
 | Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 |
 | ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint) / 5.9.3 (TypeScript) | M1.3.1 |
 | cloc | 1.86 | M1.4.2 |
-| GitHub CLI (`gh`) | _a preencher (Christopher e Luiz Henrique)_ | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
+| GitHub CLI (`gh`) | 2.102.0 (Christopher) | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
 | Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 |
-| `grep` | _a preencher (Christopher)_ | M1.2.1, M1.5.2 |
+| `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 |
 | Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` (via `yarn.lock`) | M3.1.1 |
-| Node.js | _a preencher (Equipe deve concordar em uma versão fixa `>=18.0.0`)_ | Todas as que executam código |
+| Node.js | v24.16.0 (Maria Eduarda) / v24.14.1 (Christopher) (padronizado em Node 24.x) | Todas as que executam código |
 | Yarn | 1.22.22 | M1.5.1, M3.3.2 |
-| npm e pnpm | _a preencher (Maria Eduarda)_ | M3.3.1 |
-| Docker e Docker Compose | _a preencher (Maria Eduarda)_ | M3.3.2, M3.3.3 |
-| Vite e Next.js dos projetos mínimos | _a preencher (Maria Eduarda)_ | M3.1.2 |
+| npm e pnpm | npm 11.13.0 (Maria Eduarda) / npm 11.11.0 (Christopher) | M3.3.1 |
+| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) / Docker 29.9.0 (Christopher) | M3.3.2, M3.3.3 |
+| Vite e Next.js dos projetos mínimos | _a preencher na criação dos projetos mínimos_ | M3.1.2 |
 | Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 |
 
 As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-02/gqm-confiabilidade.md), podem exigir uma versão de Node.js diferente da do commit avaliado. A versão usada em cada construção é registrada.
@@ -285,7 +285,7 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | Evidências | Caminho dos arquivos de gravação de tela, capturas, HAR e dados brutos |
 | Desvios | Qualquer diferença em relação ao método e o motivo |
 
-**Gravação de tela.** Os testes manuais usam a ferramenta: _a preencher_. Ela precisa gravar a tela inteira com a hora visível, e os arquivos são salvos no repositório da avaliação com o código da métrica no nome. No aparelho de toque, usa-se a gravação de tela do próprio sistema.
+**Gravação de tela.** Os testes manuais no computador usam o software OBS Studio (ou gravador de tela nativo do sistema). A ferramenta grava a tela inteira com a hora visível, e os arquivos são salvos no repositório da avaliação com o código da métrica no nome. No aparelho de toque (iPad), usa-se a gravação de tela nativa do próprio iPadOS.
 
 ---
 
@@ -319,5 +319,6 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | |
-| 1.1 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
+| 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
