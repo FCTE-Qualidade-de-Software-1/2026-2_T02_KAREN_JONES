@@ -158,17 +158,33 @@ As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-0
 
 ## 6. Massa de dados
 
-Sem os dados de entrada abaixo, as métricas de G2 e G3 não podem ser calculadas. Todos ficam no repositório da avaliação, para que qualquer pessoa os recrie ou reutilize.
+Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilidade (G3) não podem ser calculadas. Todos os arquivos encontram-se versionados no repositório em `dados/fase-03/massa-de-dados/` e podem ser integralmente recriados por script, assegurando repetibilidade e reprodutibilidade independente (critérios F3-C1 e F3-C2).
 
 | Conjunto | Conteúdo | Origem | Métricas |
 | :--- | :--- | :--- | :--- |
-| Cena de referência | Ao menos um elemento de cada tipo: retângulo, elipse, losango, seta, linha, desenho livre, texto, texto dentro de forma, imagem e moldura (_frame_) | Criada pela equipe | M2.4.1, M2.4.2, M3.4.2, M3.4.3 |
+| Cena de referência | Ao menos um elemento de cada tipo: retângulo, elipse, losango, seta, linha, desenho livre, texto, texto dentro de forma, imagem e moldura (_frame_) | Criada pela equipe via script gerador | M2.4.1, M2.4.2, M3.4.2, M3.4.3 |
 | Cenas de escala | Quatro cenas, com 100, 1.000, 5.000 e 10.000 elementos, em proporção fixa de 40% de retângulos, 20% de elipses, 20% de setas e 20% de textos, em grade | Geradas por script do repositório da avaliação | M3.2.1, M3.2.2, M3.2.3 |
 | Roteiro de movimento | Arrastar uma seleção de 50 elementos e deslocar a tela, por 10 segundos, em 5 gravações por cena | Roteiro fixo da equipe | M3.2.2 |
-| Arquivos inválidos | Os 9 casos listados em M2.3.1, de arquivo vazio a arquivo `.excalidraw` truncado | Preparados pela equipe | M2.3.1 |
+| Arquivos inválidos | Os 9 casos listados em M2.3.1, de arquivo vazio a arquivo `.excalidraw` truncado | Preparados pela equipe via script gerador | M2.3.1 |
 | Conjunto de reabertura | A cena de referência salva pela versão avaliada e pelas versões v0.15.0, v0.16.4, v0.17.6 e v0.18.0, mais `test_embedded_v1.png` e `smiley_embedded_v2.png` (7 arquivos) | Equipe e `packages/excalidraw/tests/fixtures/` | M2.4.2 |
 | Dados do GitHub | Respostas brutas da API para a janela de 18/04/2026 a 18/10/2026 | Coletadas com `gh`, salvas em JSON | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
 | Projetos mínimos | Um projeto para cada combinação de React 17, 18 e 19 com Vite e com Next.js (6 projetos) | Criados pela equipe a partir do guia de integração | M3.1.2 |
+
+### 6.1 Justificativa da massa de dados
+
+Desenhar livremente durante as coletas impediria que dois avaliadores obtivessem o mesmo valor de tempo ou taxa de quadros. Por isso, a avaliação usa uma massa de dados fixa salva em `dados/fase-03/massa-de-dados/`, gerada por script (F3-C2 e F3-C8).
+
+- **Cena de referência:** reúne um elemento de cada um dos 10 tipos definidos na Fase 02 (retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura). Ela é usada em [M2.4.1](../fase-02/gqm-confiabilidade.md) (restauração de sessão após fechar a aba ou matar o processo), [M2.4.2](../fase-02/gqm-confiabilidade.md) (compatibilidade de reabertura entre versões antigas e a atual), [M3.4.2](../fase-02/gqm-flexibilidade.md) (preservação de propriedades na exportação e reimportação em `.excalidraw`, PNG e SVG) e [M3.4.3](../fase-02/gqm-flexibilidade.md) (documentação dos campos do formato). Manter a mesma cena em todas essas métricas permite comparar os resultados diretamente.
+- **Cenas de escala:** quatro arquivos com 100, 1.000, 5.000 e 10.000 elementos, na proporção de 40% retângulos, 20% elipses, 20% setas e 20% textos, dispostos em grade. Essa proporção reflete diagramas típicos, onde caixas e textos predominam sobre conexões. Os quatro volumes permitem traçar a curva de tempo de abertura ([M3.2.1](../fase-02/gqm-flexibilidade.md)), medir a taxa de quadros ao arrastar 50 elementos ([M3.2.2](../fase-02/gqm-flexibilidade.md)) e identificar o tamanho máximo de cena que a aplicação consegue salvar e exportar sem travar o navegador ([M3.2.3](../fase-02/gqm-flexibilidade.md)). A disposição em grade evita que formas fiquem escondidas umas atrás das outras.
+- **Arquivos inválidos:** os 9 casos cobrem os erros de entrada mais comuns para avaliar a tolerância a falhas em [M2.3.1](../fase-02/gqm-confiabilidade.md): arquivo vazio, JSON com sintaxe quebrada, JSON sem o campo `type`, tipo desconhecido, elementos sem campos obrigatórios, coordenadas com texto ou `null`, arquivo binário renomeado para `.excalidraw`, imagem PNG comum sem desenho embutido e arquivo cortado pela metade. O teste verifica se o editor exibe mensagem de erro e continua utilizável em vez de travar o navegador.
+
+O script [`scripts/gerar_massa_dados.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/gerar_massa_dados.py) recria toda a massa de dados com o comando:
+
+```bash
+python scripts/gerar_massa_dados.py --verificar
+```
+
+O detalhamento de cada arquivo está no [README da pasta de massa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-03/massa-de-dados/README.md).
 
 ---
 
@@ -305,3 +321,4 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
