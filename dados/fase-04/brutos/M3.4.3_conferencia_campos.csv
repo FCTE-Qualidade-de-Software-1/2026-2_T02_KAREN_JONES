@@ -1,0 +1,53 @@
+campo,origem,status
+angle,element,Nao documentado
+appState,raiz,Documentado
+autoResize,element,Nao documentado
+backgroundColor,element,Nao documentado
+boundElements,element,Nao documentado
+containerId,element,Nao documentado
+elements,raiz,Documentado
+endArrowhead,element,Nao documentado
+endBinding,element,Nao documentado
+fileId,element,Documentado
+files,raiz,Documentado
+fillStyle,element,Nao documentado
+fontFamily,element,Nao documentado
+fontSize,element,Nao documentado
+frameId,element,Nao documentado
+gridSize,appState,Documentado
+groupIds,element,Nao documentado
+height,element,Documentado
+id,element,Documentado
+isDeleted,element,Nao documentado
+lastCommittedPoint,element,Nao documentado
+lineHeight,element,Nao documentado
+link,element,Nao documentado
+locked,element,Nao documentado
+name,element,Nao documentado
+opacity,element,Nao documentado
+originalText,element,Nao documentado
+points,element,Nao documentado
+pressures,element,Nao documentado
+roughness,element,Nao documentado
+roundness,element,Nao documentado
+scale,element,Nao documentado
+seed,element,Nao documentado
+simulatePressure,element,Nao documentado
+source,raiz,Documentado
+startArrowhead,element,Nao documentado
+startBinding,element,Nao documentado
+status,element,Nao documentado
+strokeColor,element,Nao documentado
+strokeStyle,element,Nao documentado
+strokeWidth,element,Nao documentado
+text,element,Nao documentado
+textAlign,element,Nao documentado
+type,raiz+element,Documentado
+updated,element,Nao documentado
+version,raiz+element,Documentado
+versionNonce,element,Nao documentado
+verticalAlign,element,Nao documentado
+viewBackgroundColor,appState,Documentado
+width,element,Documentado
+x,element,Documentado
+y,element,Documentado
