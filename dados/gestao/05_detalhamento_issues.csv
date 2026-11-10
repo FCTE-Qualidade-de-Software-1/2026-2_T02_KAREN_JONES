@@ -48,10 +48,10 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 90,Fase 2,[GESTAO] Automatizar sincronização de métricas com GitHub Projects,closed,eduarda-ogomes,2.0,2.0,0.0,na faixa,90.0,90.0,28/10,28/10/2026,Concluida no prazo,0.01
 92,Fase 2,"[ARTIGO] fix: ajustar siglas, pontuação e hipóteses GQM",closed,wChrstphr,3.0,2.5,-16.7,na faixa,135.0,112.5,03/11,04/11/2026,Concluida em atraso,4.98
 94,Fase 3,[F3] Estudo do processo de projetar a avaliação e estrutura do plano,open,DaviPierre,2.0,3.0,50.0,subestimada,90.0,135.0,05/11,-,Aberta em atraso,
-95,Fase 3,[F3] Método de avaliação e justificativa por métrica,open,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,06/11,-,Aberta em atraso,
+95,Fase 3,[F3] Método de avaliação e justificativa por métrica,closed,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,06/11,10/11/2026,Concluida em atraso,7.01
 96,Fase 3,[F3] Recursos e ambiente de avaliação,closed,LeticiaSantosss,2.0,7.0,250.0,subestimada,90.0,315.0,05/11,09/11/2026,Concluida em atraso,6.36
 97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",closed,GabrielSMonteiro,3.0,5.0,66.7,subestimada,135.0,225.0,06/11,09/11/2026,Concluida em atraso,5.39
-98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),open,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,-,Aberta em atraso,
+98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),closed,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,10/11/2026,Concluida em atraso,7.01
 99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,07/11,-,Aberta em atraso,
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,closed,wChrstphr,2.0,2.0,0.0,na faixa,90.0,90.0,06/11,09/11/2026,Concluida em atraso,5.53
