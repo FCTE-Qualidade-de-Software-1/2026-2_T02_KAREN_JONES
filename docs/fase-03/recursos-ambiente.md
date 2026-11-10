@@ -58,13 +58,15 @@ yarn test:coverage
 
 ### 2.2 Ambiente limpo
 
-O ambiente limpo é um contêiner sem ferramentas de desenvolvimento além das exigidas pela métrica, como definido nas convenções de [G3](../fase-02/gqm-flexibilidade.md). Ele é usado por [M3.1.2](../fase-02/gqm-flexibilidade.md), [M3.3.1](../fase-02/gqm-flexibilidade.md) e [M3.3.2](../fase-02/gqm-flexibilidade.md). A imagem base é a mesma que o projeto usa, com o digest fixado:
+O ambiente limpo segue as convenções de [G3](../fase-02/gqm-flexibilidade.md): contêiner ou máquina virtual sem ferramentas de desenvolvimento além das exigidas pela métrica. Ele é utilizado em M3.1.2, M3.3.1 e M3.3.2, conforme os procedimentos específicos de cada métrica. Para as execuções que utilizam o contêiner Node.js, a imagem de referência é a mesma definida no `Dockerfile` do Excalidraw, fixada pelo digest:
+
 
 ```bash
 docker run --rm -it node:24@sha256:8530f76a96d88820d288761f022e318970dda93d01536919fbc16076b7983e63 bash
 ```
 
-Dentro do contêiner, o avaliador clona o repositório e segue somente o guia do projeto. Toda ferramenta que faltar e que o guia não declare é registrada como pré-requisito não declarado, como pede M3.3.2. As versões de `node`, `npm`, `yarn` e `pnpm` do contêiner são registradas na primeira coleta.
+Nas execuções realizadas dentro do contêiner, o avaliador utiliza as versões das ferramentas previamente definidas na Seção 5. Em M3.3.2, são verificados separadamente os passos de execução local com Node.js e Yarn e os passos com Docker Compose, conforme o guia oficial. As versões das ferramentas e os requisitos do ambiente devem estar definidos antes da coleta. Durante a execução, o avaliador registra as versões efetivamente utilizadas para comprovar a conformidade com o ambiente planejado e documenta eventuais divergências.
+
 
 ### 2.3 Aplicação em execução (ambiente de teste)
 
@@ -140,12 +142,13 @@ A versão efetiva de cada ferramenta é registrada na primeira coleta, com o com
 | :--- | :--- | :--- | :--- |
 | Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 | `madge --version` |
 | ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint) / 5.62.0 `@typescript-eslint/parser` | M1.3.1 | `npx eslint --version` e `yarn why @typescript-eslint/parser` |
-| cloc | 1.86 | M1.4.2 | | `cloc --version` |
+| cloc | 1.86 | M1.4.2 | `cloc --version` |
 | GitHub CLI (`gh`) | 2.102.0  | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
 | Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 | `yarn vitest --version` |
 | `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 | `grep --version` |
 | Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` 1.0.30001701 | M3.1.1 |`npx browserslist --version` e `yarn why caniuse-lite`|
-| Node.js | 24.20.0 | Todas as que executam código | `node --version`|
+| Node.js (ambiente Docker) | 24.16.0 | Construção Docker e métricas executadas na imagem Node fixada | `node --version` dentro do contêiner |
+| Node.js (execução nativa) | 24.20.0 (versão de referência) | Métricas que utilizam Node fora do contêiner | `node --version` na máquina responsável |
 | Yarn | 1.22.22 | M1.5.1, M3.3.2 |  `yarn --version`|
 | npm e pnpm | npm 11.13.0 (Maria Eduarda)  | M3.3.1 |`npm --version` e `pnpm --version` |
 | Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
