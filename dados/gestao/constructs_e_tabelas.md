@@ -60,7 +60,7 @@
 | Christopher | `@wChrstphr` | 23 | 52.5 | 26.5 | R$ 1192.50 | 105 | 18 | **16.85%** |
 | Davi Pierre | `@DaviPierre` | 13 | 37.0 | 34.0 | R$ 1530.00 | 10 | 5 | **21.61%** |
 | Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 48 | 9 | **24.47%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 18.4 | R$ 828.45 | 9 | 7 | **11.70%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 18.4 | R$ 828.45 | 9 | 8 | **11.70%** |
 | Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 12.4 | R$ 558.00 | 21 | 8 | **7.88%** |
 | Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 27.5 | R$ 1237.50 | 42 | 11 | **17.48%** |
 
@@ -78,11 +78,11 @@
 Christopher & 23 & 52.5h & 26.5h & 105/18 & 16.85\% \\
 Davi Pierre & 13 & 37.0h & 34.0h & 10/5 & 21.61\% \\
 Gabriel Monteiro & 16 & 44.5h & 38.5h & 48/9 & 24.47\% \\
-Leticia de Carvalho & 16 & 30.5h & 18.4h & 9/7 & 11.70\% \\
+Leticia de Carvalho & 16 & 30.5h & 18.4h & 9/8 & 11.70\% \\
 Luiz Henrique Soares & 15 & 35.0h & 12.4h & 21/8 & 7.88\% \\
 Maria Eduarda & 19 & 46.5h & 27.5h & 42/11 & 17.48\% \\
 \hline
-\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{157.3h} & \textbf{235/58} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{102} & \textbf{246.0h} & \textbf{157.3h} & \textbf{235/59} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
