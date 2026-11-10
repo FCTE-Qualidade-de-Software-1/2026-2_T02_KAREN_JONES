@@ -4,17 +4,25 @@ title: Abstraction Sheets dos Objetivos
 description: Abstraction sheets dos objetivos de Manutenibilidade, Confiabilidade e Flexibilidade, com as métricas candidatas, as hipóteses de baseline e os fatores que podem influenciar as medições
 ---
 
+import Link from '@docusaurus/Link';
+
 # Abstraction sheets dos objetivos
 
-Os [objetivos de medição](./estrutura-gqm.md#3-objetivos-de-medição) dizem o que se quer entender sobre o Excalidraw. Antes de escrever as questões e escolher as métricas, o GQM recomenda registrar o que as pessoas envolvidas já sabem e esperam sobre cada objetivo. A ferramenta usada para isso é a *abstraction sheet* (AULA 08, p. 28 e 29).
+## Introdução
 
-Esta página apresenta uma *abstraction sheet* para cada objetivo: [G1](./estrutura-gqm.md#g1-manutenibilidade) (Manutenibilidade), [G2](./estrutura-gqm.md#g2-confiabilidade) (Confiabilidade) e [G3](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade) (Flexibilidade). As hipóteses registradas aqui são a base das hipóteses de cada questão, e os fatores de variação orientam a interpretação dos resultados nas fases seguintes. As questões, hipóteses e métricas que saíram delas estão nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md).
+Antes de escrever as questões e escolher as métricas, o GQM recomenda capturar as definições, suposições e expectativas das pessoas envolvidas com o objeto avaliado. A ferramenta usada para isso é a *abstraction sheet* [[1, p. 28]](#ref-1). Esta página apresenta uma *abstraction sheet* para cada [objetivo de medição](./estrutura-gqm.md#3-objetivos-de-medição): [G1](./estrutura-gqm.md#g1-manutenibilidade) (Manutenibilidade), [G2](./estrutura-gqm.md#g2-confiabilidade) (Confiabilidade) e [G3](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade) (Flexibilidade). As hipóteses registradas aqui são as mesmas das questões de cada objetivo, como a aula permite [[1, p. 34]](#ref-1), e estão detalhadas nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md).
+
+## Metodologia
+
+A aula recomenda entrevistas individuais com a equipe do projeto avaliado [[1, p. 28]](#ref-1). Como os mantenedores do Excalidraw não estão disponíveis, a própria equipe avaliadora preencheu as três *abstraction sheets*, em conjunto, na [reunião de 19/10/2026](../gestao/atas/2026-10-19-reuniao-gqm.md), assumindo o ponto de vista dos interessados de cada objetivo. A base foi a [descrição do produto](../fase-01/descricao-produto.md) e os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da Fase 01. Cada quadrante foi discutido até ser considerado satisfatoriamente completo [[1, p. 31]](#ref-1). O quadrante 2º foi refeito depois da escolha das métricas, para que cada hipótese tenha uma única afirmação, ligada a uma métrica, e uma regra que diz quando ela é confirmada. As métricas do quadrante 1º são candidatas: a seleção final é feita no detalhamento de cada objetivo, e as métricas que não vieram de uma candidata estão na [seção 6](#6-ajustes-feitos-no-detalhamento-do-gqm).
 
 ---
 
 ## 1. Estrutura de uma abstraction sheet
 
-O cabeçalho repete o objeto, o propósito, o foco da qualidade e o ponto de vista do objetivo. O corpo tem quatro quadrantes, preenchidos na ordem abaixo (AULA 08, p. 29):
+O cabeçalho repete o objeto, o propósito, o foco da qualidade e o ponto de vista do objetivo. O corpo tem quatro quadrantes, preenchidos na ordem da Tabela 1.
+
+<p className="tabela-titulo">Tabela 1: Quadrantes de uma abstraction sheet</p>
 
 | Ordem | Quadrante | Pergunta que responde |
 | :---: | :--- | :--- |
@@ -23,39 +31,41 @@ O cabeçalho repete o objeto, o propósito, o foco da qualidade e o ponto de vis
 | 3º | **Fatores de variação** | Quais fatores do ambiente podem influenciar as métricas? |
 | 4º | **Impacto nas hipóteses de baseline** | Como esses fatores influenciam as medições e que dependência existe entre eles e as métricas? |
 
-As hipóteses podem ser valores individuais ou ideias comparativas, como "os X mais" ou "os piores" (AULA 08, p. 31). Nesta página, cada hipótese tem uma única afirmação, ligada a uma métrica, e uma regra que diz quando ela é confirmada. Quando a equipe não tem base para estimar um valor, a hipótese é comparativa. A AULA 08 traz um exemplo preenchido para o foco de Confiabilidade (p. 30), que serviu de modelo para o formato.
+<p className="tabela-fonte">Fonte: adaptada de Ramos [[1, p. 29]](#ref-1).</p>
+
+As hipóteses podem ser valores individuais ou ideias comparativas, como "os X mais" ou "os piores" [[1, p. 31]](#ref-1). Quando a equipe não tem base para estimar um valor, a hipótese é comparativa. O exemplo preenchido da aula, com foco em Confiabilidade, serviu de modelo para o formato [[1, p. 30]](#ref-1).
 
 ---
 
-## 2. Como as abstraction sheets foram preenchidas
+## 2. G1: Manutenibilidade
 
-A aula recomenda conduzir entrevistas individuais com a equipe do projeto avaliado (AULA 08, p. 28). Como os mantenedores do Excalidraw não estão disponíveis para entrevistas, a própria equipe avaliadora preencheu as *abstraction sheets*, assumindo o ponto de vista dos interessados de cada objetivo.
-
-As três *abstraction sheets* foram preenchidas do zero, em conjunto, na [reunião de 19/10/2026](../gestao/atas/2026-10-19-reuniao-gqm.md) dos integrantes responsáveis pela Fase 02. A base foi a [descrição do produto](../fase-01/descricao-produto.md) e os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da Fase 01. Cada quadrante foi discutido até ser considerado suficientemente completo (AULA 08, p. 31).
-
-O quadrante 2º foi refeito na versão 1.2, depois da escolha das métricas, para que cada hipótese tenha uma única afirmação verificável por uma métrica. As métricas listadas no foco de qualidade são **candidatas**. A seleção final, com uma a três métricas por questão ([estrutura das questões](./estrutura-gqm.md#4-estrutura-das-questões)), é feita no detalhamento de cada objetivo, junto com a ficha de cada métrica, nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md). As diferenças entre o que foi registrado aqui e o que foi detalhado nessas páginas estão na [seção 7](#7-ajustes-feitos-no-detalhamento-do-gqm).
-
----
-
-## 3. G1: Manutenibilidade
+<p className="tabela-titulo">Tabela 2: Cabeçalho da abstraction sheet de G1</p>
 
 | Objeto | Propósito | Foco da qualidade | Ponto de vista |
 | :--- | :--- | :--- | :--- |
 | Código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), testes, documentação para desenvolvedores e histórico de alterações | Entender | [Manutenibilidade](../fase-01/modelo-de-qualidade.md#manutenabilidade) | Mantenedores e contribuidores do projeto |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### 1º Foco de qualidade
+
+<p className="tabela-titulo">Tabela 3: Foco de qualidade de G1</p>
 
 | Subcaracterística | Métricas candidatas |
 | :--- | :--- |
-| Modularidade | Número de ciclos de dependência entre pacotes; número de importações que violam a direção esperada (por exemplo, a biblioteca importando código da aplicação web); acoplamento aferente e eferente de cada pacote. |
-| Reusabilidade | Número de dependências de React ou do navegador nos pacotes auxiliares de matemática e utilitários; proporção de itens da interface pública da biblioteca que estão documentados. |
-| Analisabilidade | Complexidade ciclomática por função; tamanho dos arquivos em linhas de código; presença de guias de contribuição e de arquitetura; ferramentas de lint, formatação e verificação de tipos executadas automaticamente. |
-| Modificabilidade | Número de arquivos alterados por contribuição aceita; número de arquivos acima de um limite de tamanho ou de complexidade. |
-| Testabilidade | Razão entre arquivos de teste e arquivos de produção; cobertura de testes por pacote; níveis de teste presentes (unitário, integração, ponta a ponta); execução dos testes a cada alteração proposta. |
+| Modularidade | Número de ciclos de dependência entre pacotes. Número de importações que violam a direção esperada (por exemplo, a biblioteca importando código da aplicação web). Acoplamento aferente e eferente de cada pacote. |
+| Reusabilidade | Número de dependências de React ou do navegador nos pacotes auxiliares de matemática e utilitários. Proporção de itens da interface pública da biblioteca que estão documentados. |
+| Analisabilidade | Complexidade ciclomática por função. Tamanho dos arquivos em linhas de código. Presença de guias de contribuição e de arquitetura. Ferramentas de lint, formatação e verificação de tipos executadas automaticamente. |
+| Modificabilidade | Número de arquivos alterados por contribuição aceita. Número de arquivos acima de um limite de tamanho ou de complexidade. |
+| Testabilidade | Razão entre arquivos de teste e arquivos de produção. Cobertura de testes por pacote. Níveis de teste presentes (unitário, integração, ponta a ponta). Execução dos testes a cada alteração proposta. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ### 2º Hipóteses de baseline
 
-Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou vem da própria definição da métrica. São as mesmas hipóteses das questões, como a aula permite (AULA 08, p. 34), e o quadrante 4º indica o fator que justifica cada uma.
+Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1).
+
+<p className="tabela-titulo">Tabela 4: Hipóteses de baseline de G1</p>
 
 | Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
 | :--- | :--- | :--- | :--- |
@@ -73,6 +83,8 @@ Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite
 | Testabilidade | [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade) | A biblioteca terá cobertura de testes maior que a da aplicação web. | cobertura da biblioteca > cobertura da aplicação web |
 | Testabilidade | [H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade) | Testes unitários e de integração serão a maior parte dos arquivos de teste. | > 50% dos arquivos de teste, somados |
 | Testabilidade | [H1.5.3](./gqm-manutenibilidade.md#7-q15-testabilidade) | Os testes rodarão em toda contribuição antes da integração. | ≥ 95% |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ### 3º Fatores de variação
 
@@ -92,24 +104,34 @@ Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite
 
 ---
 
-## 4. G2: Confiabilidade
+## 3. G2: Confiabilidade
+
+<p className="tabela-titulo">Tabela 5: Cabeçalho da abstraction sheet de G2</p>
 
 | Objeto | Propósito | Foco da qualidade | Ponto de vista |
 | :--- | :--- | :--- | :--- |
 | Editor, aplicação web, mecanismos de colaboração e de salvamento no navegador e histórico de defeitos relatados | Entender | [Confiabilidade](../fase-01/modelo-de-qualidade.md#confiabilidade) | Usuários finais |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### 1º Foco de qualidade
+
+<p className="tabela-titulo">Tabela 6: Foco de qualidade de G2</p>
 
 | Subcaracterística | Métricas candidatas |
 | :--- | :--- |
-| Ausência de falhas | Número de defeitos relatados e corrigidos em um período; tempo até a correção de um defeito; distribuição dos defeitos por área do produto; verificações automáticas obrigatórias antes da integração. |
-| Disponibilidade | Presença de *service worker* e de manifesto de aplicação instalável (PWA); proporção das funcionalidades essenciais do editor que funcionam sem conexão. |
-| Tolerância a falhas | Pontos de tratamento de erro na abertura de arquivos e no carregamento de dados salvos; proporção de casos de arquivo inválido tratados com mensagem ao usuário; dependência do editor local em relação ao código de colaboração. |
-| Recuperabilidade | Intervalo do salvamento automático; tipos de dado restaurados ao reabrir a aplicação; existência de rotinas que convertem arquivos de versões antigas; ações que podem ser desfeitas e refeitas. |
+| Ausência de falhas | Número de defeitos relatados e corrigidos em um período. Tempo até a correção de um defeito. Distribuição dos defeitos por área do produto. Verificações automáticas obrigatórias antes da integração. |
+| Disponibilidade | Presença de *service worker* e de manifesto de aplicação instalável (PWA). Proporção das funcionalidades essenciais do editor que funcionam sem conexão. |
+| Tolerância a falhas | Pontos de tratamento de erro na abertura de arquivos e no carregamento de dados salvos. Proporção de casos de arquivo inválido tratados com mensagem ao usuário. Dependência do editor local em relação ao código de colaboração. |
+| Recuperabilidade | Intervalo do salvamento automático. Tipos de dado restaurados ao reabrir a aplicação. Existência de rotinas que convertem arquivos de versões antigas. Ações que podem ser desfeitas e refeitas. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ### 2º Hipóteses de baseline
 
-Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou vem da própria definição da métrica. São as mesmas hipóteses das questões, como a aula permite (AULA 08, p. 34), e o quadrante 4º indica o fator que justifica cada uma.
+Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2).
+
+<p className="tabela-titulo">Tabela 7: Hipóteses de baseline de G2</p>
 
 | Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
 | :--- | :--- | :--- | :--- |
@@ -123,6 +145,8 @@ Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite
 | Recuperabilidade | [H2.4.1](./gqm-confiabilidade.md#6-q24-recuperabilidade) | O último desenho será restaurado ao reabrir a aplicação, mesmo após fechamento inesperado. | = 4 de 4 cenários |
 | Recuperabilidade | [H2.4.2](./gqm-confiabilidade.md#6-q24-recuperabilidade) | Arquivos da versão atual e de versões anteriores reabrirão sem perda. | = 7 de 7 arquivos |
 | Recuperabilidade | [H2.4.3](./gqm-confiabilidade.md#6-q24-recuperabilidade) | Desfazer e refazer cobrirão as ações de edição do usuário. | = 10 de 10 ações |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ### 3º Fatores de variação
 
@@ -145,24 +169,34 @@ Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite
 
 ---
 
-## 5. G3: Flexibilidade
+## 4. G3: Flexibilidade
+
+<p className="tabela-titulo">Tabela 8: Cabeçalho da abstraction sheet de G3</p>
 
 | Objeto | Propósito | Foco da qualidade | Ponto de vista |
 | :--- | :--- | :--- | :--- |
 | Biblioteca `@excalidraw/excalidraw` e aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação | Entender | [Flexibilidade](../fase-01/modelo-de-qualidade.md#flexibilidade) | Desenvolvedores que integram a biblioteca e equipes de implantação e operação |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### 1º Foco de qualidade
+
+<p className="tabela-titulo">Tabela 9: Foco de qualidade de G3</p>
 
 | Subcaracterística | Métricas candidatas |
 | :--- | :--- |
-| Adaptabilidade | Navegadores e versões declarados como suportados; versões de React aceitas pela biblioteca; existência de instruções para frameworks com renderização no servidor; tratamento de entrada por toque e caneta. |
-| Escalabilidade | Tempo para abrir, mover e exportar desenhos com quantidades crescentes de elementos, em ambiente controlado; maior desenho que pode ser aberto e salvo sem travar a aplicação. |
-| Instalabilidade | Número de passos para instalar a biblioteca; pré-requisitos declarados (versões de ferramentas); sucesso na construção da imagem Docker; proporção dos passos documentados que podem ser reproduzidos sem ajustes. |
-| Substituibilidade | Formatos de exportação disponíveis; existência de documentação do formato `.excalidraw`; proporção do conteúdo preservado ao exportar e reimportar. |
+| Adaptabilidade | Navegadores e versões declarados como suportados. Versões de React aceitas pela biblioteca. Existência de instruções para frameworks com renderização no servidor. Tratamento de entrada por toque e caneta. |
+| Escalabilidade | Tempo para abrir, mover e exportar desenhos com quantidades crescentes de elementos, em ambiente controlado. Maior desenho que pode ser aberto e salvo sem travar a aplicação. |
+| Instalabilidade | Número de passos para instalar a biblioteca. Pré-requisitos declarados (versões de ferramentas). Sucesso na construção da imagem Docker. Proporção dos passos documentados que podem ser reproduzidos sem ajustes. |
+| Substituibilidade | Formatos de exportação disponíveis. Existência de documentação do formato `.excalidraw`. Proporção do conteúdo preservado ao exportar e reimportar. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ### 2º Hipóteses de baseline
 
-Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vem da própria definição da métrica. São as mesmas hipóteses das questões, como a aula permite (AULA 08, p. 34), e o quadrante 4º indica o fator que justifica cada uma.
+Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+
+<p className="tabela-titulo">Tabela 10: Hipóteses de baseline de G3</p>
 
 | Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
 | :--- | :--- | :--- | :--- |
@@ -179,6 +213,8 @@ Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite
 | Substituibilidade | [H3.4.2](./gqm-flexibilidade.md#6-q34-substituibilidade) | A reimportação preservará os elementos do desenho. | ≥ 95% em cada formato |
 | Substituibilidade | [H3.4.3](./gqm-flexibilidade.md#6-q34-substituibilidade) | O formato `.excalidraw` terá documentação apenas parcial. | < 60% dos campos documentados |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### 3º Fatores de variação
 
 - **Hardware e navegador** usados nos testes de desempenho.
@@ -193,20 +229,20 @@ Cada hipótese tem uma única afirmação e uma regra de confirmação. O limite
 - Mudanças no ecossistema React e na lista de navegadores podem tornar desatualizadas as versões declaradas como compatíveis. A avaliação considera o que está declarado na versão avaliada ([H3.1.1](./gqm-flexibilidade.md#3-q31-adaptabilidade) e [H3.1.2](./gqm-flexibilidade.md#3-q31-adaptabilidade)).
 - Imagens incorporadas aumentam o tamanho do desenho mais do que o número de elementos. Os desenhos de teste terão composição definida, para que o efeito de cada fator possa ser separado ([H3.2.3](./gqm-flexibilidade.md#4-q32-escalabilidade) e [H3.4.2](./gqm-flexibilidade.md#6-q34-substituibilidade)).
 - Os formatos de exportação e a falta de uma especificação publicada do formato `.excalidraw` já são visíveis no repositório no commit `e1b7aac`. Por isso [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) e [H3.4.3](./gqm-flexibilidade.md#6-q34-substituibilidade) se apoiam no que se vê no código, e não em um fator de variação.
+---
+
+## 5. Uso das abstraction sheets nas próximas etapas
+
+- **Seleção das métricas:** as métricas candidatas são filtradas pelas características desejáveis [[1, p. 41]](#ref-1) e pela possibilidade de coleta na versão avaliada [[1, p. 42]](#ref-1).
+- **Análise dos resultados:** os fatores de variação e seus impactos servem de guia para interpretar as medições [[1, p. 31]](#ref-1). Um resultado diferente do esperado é examinado à luz desses fatores antes de ser atribuído ao produto.
 
 ---
 
-## 6. Uso das abstraction sheets nas próximas etapas
+## 6. Ajustes feitos no detalhamento do GQM
 
-- **Hipóteses das questões:** as hipóteses de *baseline* são as mesmas das questões da mesma subcaracterística, com os mesmos códigos ([H1.1.1](./gqm-manutenibilidade.md#3-q11-modularidade), [H1.1.2](./gqm-manutenibilidade.md#3-q11-modularidade) etc.).
-- **Seleção das métricas:** as métricas candidatas são filtradas pelas características desejáveis (AULA 08, p. 41) e pela possibilidade de coleta na versão avaliada (AULA 08, p. 42). As métricas que não vieram de uma candidata estão na [seção 7](#7-ajustes-feitos-no-detalhamento-do-gqm).
-- **Análise dos resultados:** os fatores de variação e seus impactos servem de guia para interpretar as medições (AULA 08, p. 31). Um resultado diferente do esperado é examinado à luz desses fatores antes de ser atribuído ao produto.
+A aula recomenda preencher a *abstraction sheet* de forma iterativa [[1, p. 31]](#ref-1). As métricas candidatas das seções 2 a 4 são as aprovadas na reunião de 19/10/2026 e foram mantidas como registro dela. Ao escrever as métricas de cada objetivo, algumas foram acrescentadas. A Tabela 11 liga cada uma delas à *abstraction sheet*.
 
----
-
-## 7. Ajustes feitos no detalhamento do GQM
-
-A aula recomenda preencher a *abstraction sheet* de forma iterativa (AULA 08, p. 31). As métricas candidatas das seções 3 a 5 são as aprovadas na [reunião de 19/10/2026](../gestao/atas/2026-10-19-reuniao-gqm.md) e foram mantidas como registro dela. Ao escrever as métricas de cada objetivo, algumas foram acrescentadas. A tabela abaixo registra essas métricas, para que cada uma possa ser rastreada até a *abstraction sheet*.
+<p className="tabela-titulo">Tabela 11: Métricas sem candidata correspondente</p>
 
 | Métrica | Candidata mais próxima | Motivo |
 | :--- | :--- | :--- |
@@ -215,12 +251,15 @@ A aula recomenda preencher a *abstraction sheet* de forma iterativa (AULA 08, p.
 | [M2.2.2](./gqm-confiabilidade.md#m222-origens-externas-necessárias-para-o-editor-local) | Nenhuma | Responde ao RQ-CONF-04, que nenhuma candidata cobria. |
 | [M3.3.1](./gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | Número de passos para instalar a biblioteca | Além de contar se a instalação exige um único comando, mede se instalar, atualizar e remover terminam sem erro. |
 
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ---
 
-## 8. Limitações
+## 7. Limitações
 
 1. **Expectativas da equipe avaliadora.** As hipóteses refletem o que a equipe espera ao assumir o ponto de vista dos interessados, e não a opinião de mantenedores, integradores ou usuários reais ([limitações do método](./estrutura-gqm.md#6-limitações-do-método-nesta-avaliação)).
-2. **Preenchimento em conjunto.** A aula recomenda entrevistas individuais, para que uma pessoa não influencie a outra (AULA 08, p. 28). As *abstraction sheets* foram preenchidas em reunião, então as hipóteses registram o consenso do grupo, e não as expectativas individuais de cada integrante.
+2. **Preenchimento em conjunto.** A aula recomenda entrevistas individuais para que uma pessoa não influencie a outra [[1, p. 28]](#ref-1). Como o preenchimento foi feito em reunião, as hipóteses registram o consenso do grupo, e não as expectativas individuais de cada integrante.
 3. **Conhecimento prévio limitado.** A equipe conhece o Excalidraw pela análise feita na Fase 01, e não por experiência de desenvolvimento no projeto. Por isso, os limites das regras de confirmação vêm das faixas de pontuação já definidas, e não de valores estimados pela equipe.
 4. **Fatores não controláveis.** Fatores como a forma de registro de defeitos pela comunidade e as políticas dos navegadores não podem ser controlados pela equipe, apenas registrados e considerados na análise.
 
@@ -228,9 +267,7 @@ A aula recomenda preencher a *abstraction sheet* de forma iterativa (AULA 08, p.
 
 ## Referências
 
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 28 a 31, 41 e 42.
-- BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994. Disponível em: [https://www.cs.umd.edu/~mvz/handouts/gqm.pdf](https://www.cs.umd.edu/~mvz/handouts/gqm.pdf).
-- ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA 08 QSW1 GQM**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 28 a 31, 34, 41 e 42. Disponível no Moodle da disciplina.
 
 ---
 
@@ -239,5 +276,6 @@ A aula recomenda preencher a *abstraction sheet* de forma iterativa (AULA 08, p.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das abstraction sheets dos objetivos G1, G2 e G3 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
-| 1.1 | 27/10/2026 | Troca dos travessões dos títulos; links para os objetivos, o modelo de qualidade e as páginas de cada objetivo; citação literal da p. 31; seção 7 com as diferenças entre as *abstraction sheets* e o GQM detalhado; limitação do preenchimento em conjunto; fator de variação alinhado aos testes em ambiente local | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 27/10/2026 | Troca dos travessões dos títulos, links para os objetivos, o modelo de qualidade e as páginas de cada objetivo, citação literal da p. 31, seção 7 com as diferenças entre as *abstraction sheets* e o GQM detalhado, limitação do preenchimento em conjunto e fator de variação alinhado aos testes em ambiente local | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Hipóteses de baseline refeitas: uma por métrica, com uma única afirmação e regra de confirmação. Impactos passam a citar as hipóteses afetadas, e G2 ganha o fator de regras de integração | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 10/11/2026 | Introdução e Metodologia em texto corrido, com o preenchimento das sheets na Metodologia. Tabelas com título e fonte, citações numeradas e regra das hipóteses dita uma única vez. Seções renumeradas e referências restritas à AULA 08 | [Christopher Paraizo](https://github.com/wChrstphr) | |

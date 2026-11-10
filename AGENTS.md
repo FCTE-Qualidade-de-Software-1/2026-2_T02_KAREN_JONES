@@ -16,7 +16,7 @@
 
 - **Introdução e Metodologia** abrem a página, em texto corrido. O objetivo da página cabe numa frase da introdução.
 - **Citações** no formato `[[1, p. 46]](#ref-1)`, com a referência em `> <Link id="ref-1">1.</Link> ...` e `import Link from '@docusaurus/Link';` no topo.
-- **Tabelas** com `<p className="tabela-titulo">Tabela N: ...</p>` acima e `<p className="tabela-fonte">Fonte: ...</p>` abaixo. Tabela da equipe: `Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.`, ou o nome do autor no mesmo formato.
+- **Tabelas** com `<p className="tabela-titulo">Tabela N: ...</p>` acima e `<p className="tabela-fonte">Fonte: ...</p>` abaixo. Tabela da equipe: `Fonte: [Nome do Autor](https://github.com/login), 2026.`, com o nome de quem produziu o conteúdo da tabela (o autor da versão 1.0 da página ou de quem acrescentou a tabela). Quem só formata ou revisa a página não vira fonte.
 - **Histórico de versões** com o autor no formato acima e a coluna Revisor(es) vazia.
 
 ## Links e verificação

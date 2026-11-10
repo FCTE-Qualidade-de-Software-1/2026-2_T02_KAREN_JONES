@@ -4,23 +4,23 @@ title: GQM de Flexibilidade (G3)
 description: Questões, hipóteses e métricas do objetivo de medição G3, que avalia a flexibilidade da biblioteca e da aplicação web do Excalidraw
 ---
 
+import Link from '@docusaurus/Link';
+
 # GQM de Flexibilidade (G3)
 
-Esta página detalha o objetivo G3, definido em [Método GQM e objetivos de medição](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade). Para cada subcaracterística de Flexibilidade há uma questão, as hipóteses da questão e as métricas que a respondem.
+## Introdução
 
-| Campo do template | Valor |
-| :--- | :--- |
-| Analisar | a biblioteca `@excalidraw/excalidraw` e a aplicação web, incluindo a interface pública da biblioteca, as instruções de instalação e os formatos de exportação |
-| para o propósito de | entender |
-| com respeito a | Flexibilidade: adaptabilidade, escalabilidade, instalabilidade e substituibilidade |
-| do ponto de vista de | desenvolvedores que integram a biblioteca em seus sistemas e equipes de implantação e operação |
-| no contexto de | código-fonte público na versão de 18/10/2026, avaliado por equipe independente |
+Esta página detalha o objetivo [G3](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade), que analisa a biblioteca `@excalidraw/excalidraw` e a aplicação web com respeito à Flexibilidade, do ponto de vista de desenvolvedores que integram a biblioteca e de equipes de implantação e operação. Para cada uma das quatro subcaracterísticas há uma questão, as hipóteses da questão e as fichas das métricas que a respondem.
 
-As questões caracterizam o produto em relação a cada subcaracterística (AULA 08, p. 33 e 34). As hipóteses partem da [abstraction sheet de G3](./abstraction-sheets.md#5-g3-flexibilidade), como a aula permite (AULA 08, p. 34). As métricas respondem às questões de forma quantitativa (AULA 08, p. 38). Os níveis de pontuação e os critérios de julgamento de cada métrica estão em [Níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+## Metodologia
+
+As questões caracterizam o produto em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Flexibilidade](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) da Fase 01. As hipóteses foram formuladas antes da coleta, uma por métrica, e são as mesmas da [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade), como a aula permite [[1, p. 34]](#ref-1). Cada hipótese tem uma única afirmação e uma regra que a confirma ou refuta, com limite nas fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou na própria definição dela. As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1), e as métricas foram verificadas na versão avaliada quanto à possibilidade de coleta [[1, p. 42]](#ref-1).
 
 ---
 
 ## 1. Visão geral
+
+<p className="tabela-titulo">Tabela 1: Questões e métricas de G3</p>
 
 | Questão | Subcaracterística | Requisitos da Fase 01 | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -29,7 +29,9 @@ As questões caracterizam o produto em relação a cada subcaracterística (AULA
 | [Q3.3](#5-q33-instalabilidade) | Instalabilidade | [RQ-FLEX-07 a RQ-FLEX-10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | [M3.3.1](#m331-proporção-de-operações-de-pacote-bem-sucedidas), [M3.3.2](#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste), [M3.3.3](#m333-implantação-com-docker) |
 | [Q3.4](#6-q34-substituibilidade) | Substituibilidade | [RQ-FLEX-11 e RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | [M3.4.1](#m341-formatos-de-exportação-abertos-disponíveis), [M3.4.2](#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação), [M3.4.3](#m343-proporção-dos-campos-do-formato-excalidraw-documentados) |
 
-Os requisitos estão em [Requisitos da avaliação](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). A [seção 7](#7-rastreabilidade-com-a-fase-01) mostra qual métrica atende cada requisito.
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+A [seção 7](#7-rastreabilidade-com-a-fase-01) mostra qual métrica atende cada requisito.
 
 ---
 
@@ -37,14 +39,14 @@ Os requisitos estão em [Requisitos da avaliação](../fase-01/requisitos-avalia
 
 As definições abaixo valem para todas as métricas de G3 e evitam que pessoas diferentes testem coisas diferentes.
 
-- **Versão avaliada:** commit `e1b7aac` do repositório oficial, de 18/10/2026, identificado no [escopo](../fase-01/escopo-avaliacao.md).
+- **Versão avaliada:** commit `e1b7aac` do repositório oficial [[2]](#ref-2), de 18/10/2026, identificado no [escopo](../fase-01/escopo-avaliacao.md).
 - **Pacote avaliado:** a biblioteca `@excalidraw/excalidraw` construída a partir da versão avaliada (script `build:packages` do repositório) e empacotada com `npm pack`. A versão publicada no npm mais próxima é usada só quando a métrica pede uma versão anterior.
 - **Ambiente de teste:** a aplicação web construída a partir da versão avaliada e executada localmente, em uma máquina e em um navegador de versões fixas. O ambiente exato (máquina, sistema operacional, navegador, Node.js e gerenciadores de pacotes) é definido no plano de avaliação da Fase 03 e registrado em cada coleta.
 - **Ambiente limpo:** contêiner ou máquina virtual sem as ferramentas de desenvolvimento instaladas além das exigidas pela métrica, para que nenhum pré-requisito esquecido passe despercebido.
 - **Cena de referência:** desenho padronizado usado nos testes, com ao menos um elemento de cada tipo principal: retângulo, elipse, losango, seta, linha, desenho livre, texto, texto dentro de forma, imagem e moldura (*frame*). É a mesma cena usada no [objetivo de Confiabilidade](./gqm-confiabilidade.md#2-convenções-de-coleta).
 - **Cenas de escala:** cenas geradas por script com 100, 1.000, 5.000 e 10.000 elementos, em proporção fixa: 40% retângulos, 20% elipses, 20% setas e 20% textos, distribuídos em uma grade. O script fica no repositório da avaliação para que as cenas possam ser recriadas.
 
-Os fatores que podem influenciar os resultados também são registrados junto com cada coleta (AULA 08, p. 38): o hardware, o navegador e sua versão, as versões de Node.js e dos gerenciadores de pacotes, e a composição das cenas de teste. Esses fatores foram levantados na [abstraction sheet de G3](./abstraction-sheets.md#5-g3-flexibilidade).
+Os fatores que podem influenciar os resultados também são registrados junto com cada coleta [[1, p. 38]](#ref-1): o hardware, o navegador e sua versão, as versões de Node.js e dos gerenciadores de pacotes, e a composição das cenas de teste. Esses fatores foram levantados na [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade).
 
 ---
 
@@ -54,7 +56,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** [RQ-FLEX-01](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (navegadores suportados), [RQ-FLEX-02](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (versões de React, renderização no servidor e empacotadores), [RQ-FLEX-03](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (dependências que limitam ambientes) e [RQ-FLEX-04](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (dispositivos móveis, toque e caneta).
 
-**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+<p className="tabela-titulo">Tabela 2: Hipóteses de Q3.1</p>
 
 | Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
 | :--- | :--- | :--- | :--- |
@@ -62,7 +64,11 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | **H3.1.2** | A biblioteca funcionará com React 17, 18 e 19, em Vite e em Next.js. | = 6 de 6 combinações | [M3.1.2](#m312-proporção-de-ambientes-de-integração-com-sucesso) |
 | **H3.1.3** | O editor aceitará toque nas ações de edição. | = 10 de 10 ações | [M3.1.3](#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.1.1: Cobertura de usuários pelos navegadores declarados
+
+<p className="tabela-titulo">Tabela 3: Ficha da métrica M3.1.1</p>
 
 | Campo | Descrição |
 | :--- | :--- |
@@ -74,29 +80,39 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Questão respondida | Q3.1 |
 | Características desejáveis | Simples. Objetiva, porque a lista é a que o próprio projeto declara e a base de uso é pública. Fácil de coletar com um comando. Robusta, porque permite comparar com outros projetos que usam a mesma ferramenta. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.1.2: Proporção de ambientes de integração com sucesso
+
+<p className="tabela-titulo">Tabela 4: Ficha da métrica M3.1.2</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual das combinações de versão de React e de empacotador em que um projeto mínimo constrói e exibe o editor sem erros. |
 | Procedimento de cálculo | Combinações: React 17, 18 e 19 (as versões declaradas em `peerDependencies`) com Vite e com Next.js, este usando a importação apenas no navegador indicada na documentação. São 6 combinações. Uma combinação tem sucesso se o projeto constrói sem erros e o editor aparece e permite criar uma forma. Calcular (combinações com sucesso ÷ 6) × 100. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Pacote avaliado; campo `peerDependencies` de `packages/excalidraw/package.json`; guia de integração em `dev-docs/docs/@excalidraw/excalidraw/integration.mdx`; exemplo `examples/with-nextjs`. |
+| Fonte dos dados | Pacote avaliado, campo `peerDependencies` de `packages/excalidraw/package.json`, guia de integração em `dev-docs/docs/@excalidraw/excalidraw/integration.mdx` e exemplo `examples/with-nextjs`. |
 | Procedimento de coleta | Criar um projeto mínimo para cada combinação seguindo apenas o guia de instalação e integração, instalar o pacote avaliado, construir e abrir no navegador do ambiente de teste. Registrar erros de construção e de execução. |
 | Critério de interpretação | Confirma [H3.1.2](#3-q31-adaptabilidade) se as 6 combinações tiverem sucesso. Cada combinação que falha é um ambiente em que o integrador precisa adaptar o próprio sistema para usar a biblioteca. A necessidade de carregar a biblioteca apenas no navegador em frameworks com renderização no servidor, como o Next.js, é registrada como observação. |
 | Questão respondida | Q3.1 |
 | Características desejáveis | Objetiva, porque o critério de sucesso é definido antes do teste. Válida, porque testa a integração de fato, e não só a declaração de compatibilidade. Robusta, porque a matriz pode crescer com novas versões. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.1.3: Proporção de ações de edição que funcionam por toque e caneta
+
+<p className="tabela-titulo">Tabela 5: Ficha da métrica M3.1.3</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual de uma lista fixa de ações de edição que podem ser feitas em um dispositivo com tela de toque, sem mouse nem teclado físico. |
-| Procedimento de cálculo | Ações: (1) criar uma forma; (2) desenhar à mão livre; (3) selecionar um elemento; (4) mover um elemento; (5) redimensionar um elemento; (6) aproximar e afastar com pinça; (7) deslocar a tela com dois dedos; (8) escrever texto com o teclado virtual; (9) desfazer; (10) abrir o menu principal. Calcular (ações que funcionam ÷ 10) × 100, separadamente para toque com o dedo e para caneta, quando houver caneta disponível. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Aplicação web em um *tablet* ou celular com navegador de versão fixa, definido no plano de avaliação; tratamento de eventos de toque e caneta em `packages/excalidraw/components/App.tsx`. |
+| Procedimento de cálculo | Ações: (1) criar uma forma, (2) desenhar à mão livre, (3) selecionar um elemento, (4) mover um elemento, (5) redimensionar um elemento, (6) aproximar e afastar com pinça, (7) deslocar a tela com dois dedos, (8) escrever texto com o teclado virtual, (9) desfazer e (10) abrir o menu principal. Calcular (ações que funcionam ÷ 10) × 100, separadamente para toque com o dedo e para caneta, quando houver caneta disponível. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Aplicação web em um *tablet* ou celular com navegador de versão fixa, definido no plano de avaliação e tratamento de eventos de toque e caneta em `packages/excalidraw/components/App.tsx`. |
 | Procedimento de coleta | Teste manual roteirizado no dispositivo, registrando cada ação como funciona ou não funciona, com gravação de tela. |
 | Critério de interpretação | Confirma [H3.1.3](#3-q31-adaptabilidade) se o valor for 100% com toque. Cada ação que falha é algo que o usuário de dispositivo móvel não consegue fazer. |
 | Questão respondida | Q3.1 |
 | Características desejáveis | Simples. Objetiva, porque cada ação tem resultado binário com evidência gravada. Válida para RQ-FLEX-04. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
@@ -106,7 +122,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** [RQ-FLEX-05](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (desempenho com mais elementos) e [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (abrir, salvar e exportar desenhos grandes).
 
-**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+<p className="tabela-titulo">Tabela 6: Hipóteses de Q3.2</p>
 
 | Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
 | :--- | :--- | :--- | :--- |
@@ -114,41 +130,55 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | **H3.2.2** | A edição será fluida com 1.000 elementos. | ≥ 48 quadros por segundo na cena de 1.000 elementos | [M3.2.2](#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) |
 | **H3.2.3** | Desenhos com milhares de elementos poderão ser salvos e exportados. | maior cena ≥ 5.000 elementos | [M3.2.3](#m323-tamanho-máximo-de-cena-salva-e-exportada) |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.2.1: Tempo de abertura por tamanho de cena
+
+<p className="tabela-titulo">Tabela 7: Ficha da métrica M3.2.1</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Tempo entre a abertura de um arquivo e a exibição completa da cena, para cada uma das cenas de escala. |
 | Procedimento de cálculo | Mediana de 5 aberturas de cada cena, em segundos. O resultado é uma curva de tempo por número de elementos. Unidade: segundos. Escala: absoluta. |
-| Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
+| Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Gravação no painel de desempenho (*Performance*) das ferramentas do navegador, do momento em que o arquivo é solto no editor até o último quadro desenhado. A página é recarregada e o armazenamento local é limpo entre as repetições. |
 | Critério de interpretação | Confirma [H3.2.1](#4-q32-escalabilidade) se a cena de 1.000 elementos abrir em até 1 segundo. A forma da curva mostra se o tempo cresce na mesma proporção do desenho ou mais rápido que ele. |
 | Questão respondida | Q3.2 |
 | Características desejáveis | Objetiva, porque a medição é feita pela ferramenta do navegador. Robusta, por usar a mediana de repetições. Válida para RQ-FLEX-06. Depende do hardware, que é fixado e registrado. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.2.2: Taxa de quadros durante a edição por tamanho de cena
+
+<p className="tabela-titulo">Tabela 8: Ficha da métrica M3.2.2</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Quadros por segundo exibidos enquanto o usuário arrasta um grupo de elementos e desloca a tela, para cada uma das cenas de escala. |
 | Procedimento de cálculo | Mediana dos quadros por segundo em 5 gravações de 10 segundos para cada cena: arrastar uma seleção de 50 elementos e deslocar a tela. Unidade: quadros por segundo. Escala: absoluta. |
-| Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
+| Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Painel de desempenho das ferramentas do navegador, com roteiro de movimento fixo. |
 | Critério de interpretação | Confirma [H3.2.2](#4-q32-escalabilidade) se a cena de 1.000 elementos for editada com pelo menos 48 quadros por segundo. Taxas baixas significam movimento travado para o usuário. |
 | Questão respondida | Q3.2 |
 | Características desejáveis | Objetiva e robusta, pelos mesmos motivos de M3.2.1. Válida para RQ-FLEX-05, porque mede o que o usuário percebe ao editar. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.2.3: Tamanho máximo de cena salva e exportada
+
+<p className="tabela-titulo">Tabela 9: Ficha da métrica M3.2.3</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Maior cena de escala que pode ser salva em `.excalidraw` e exportada em PNG e em SVG sem que o navegador trave. |
 | Procedimento de cálculo | Para cada cena, em ordem crescente, executar salvar, exportar em PNG e exportar em SVG, registrando o tempo de cada operação. A operação falha se não termina em 30 segundos ou se o navegador avisa que a página não está respondendo. O resultado é o número de elementos da maior cena em que as três operações terminam. Unidade: elementos. Escala: ordinal (100, 1.000, 5.000 ou 10.000). |
-| Fonte dos dados | Aplicação web no ambiente de teste; cenas de escala. |
+| Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Teste manual roteirizado com cronômetro do painel de desempenho, comparando o tempo de exportar com o tempo de abrir (M3.2.1) na mesma cena. |
 | Critério de interpretação | Confirma [H3.2.3](#4-q32-escalabilidade) se a maior cena salva e exportada tiver pelo menos 5.000 elementos. O valor mostra até onde o usuário pode levar um desenho sem perder a capacidade de salvar e compartilhar. A comparação entre o tempo de exportação e o tempo de abertura de cada cena é registrada como observação. |
 | Questão respondida | Q3.2 |
 | Características desejáveis | Simples. Objetiva, porque o limite de tempo é fixo. Válida para RQ-FLEX-06. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
@@ -158,7 +188,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** [RQ-FLEX-07](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (instalar, atualizar e remover a biblioteca), [RQ-FLEX-08](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (construção, implantação e pré-requisitos), [RQ-FLEX-09](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (suporte a Docker) e [RQ-FLEX-10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (instruções documentadas e reproduzíveis).
 
-**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+<p className="tabela-titulo">Tabela 10: Hipóteses de Q3.3</p>
 
 | Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
 | :--- | :--- | :--- | :--- |
@@ -166,41 +196,55 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | **H3.3.2** | As instruções de execução local bastarão, com as versões de ferramentas exigidas. | ≥ 95% dos passos sem ajuste | [M3.3.2](#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) |
 | **H3.3.3** | A imagem Docker será construída e executada sem passos manuais. | = 4 de 4 verificações | [M3.3.3](#m333-implantação-com-docker) |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.3.1: Proporção de operações de pacote bem-sucedidas
+
+<p className="tabela-titulo">Tabela 11: Ficha da métrica M3.3.1</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual das operações de instalação, atualização e remoção da biblioteca que terminam sem erro nos gerenciadores de pacotes usuais. |
-| Procedimento de cálculo | Gerenciadores: npm, Yarn e pnpm. Operações: (1) instalar o pacote avaliado em um projeto React vazio; (2) atualizar da versão publicada 0.17.6 para o pacote avaliado; (3) remover o pacote. São 9 combinações. Uma operação tem sucesso se termina sem erro e o projeto continua construindo. Também é registrado o número de comandos de cada instalação. Calcular (operações com sucesso ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Pacote avaliado; versão 0.17.6 do registro npm; guia de instalação em `dev-docs/docs/@excalidraw/excalidraw/installation.mdx`. |
+| Procedimento de cálculo | Gerenciadores: npm, Yarn e pnpm. Operações: (1) instalar o pacote avaliado em um projeto React vazio, (2) atualizar da versão publicada 0.17.6 para o pacote avaliado e (3) remover o pacote. São 9 combinações. Uma operação tem sucesso se termina sem erro e o projeto continua construindo. Também é registrado o número de comandos de cada instalação. Calcular (operações com sucesso ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | Pacote avaliado, versão 0.17.6 do registro npm e guia de instalação em `dev-docs/docs/@excalidraw/excalidraw/installation.mdx`. |
 | Procedimento de coleta | Execução dos comandos em ambiente limpo, registrando a saída de cada um. |
 | Critério de interpretação | Confirma [H3.3.1](#5-q33-instalabilidade) se o valor for 100%. Cada operação que falha é um passo que o integrador precisa resolver por conta própria. O número de comandos necessários para instalar a biblioteca é registrado como observação. |
 | Questão respondida | Q3.3 |
 | Características desejáveis | Simples. Objetiva, porque o sucesso é dado pelo código de saída dos comandos. Fácil de coletar. Válida para RQ-FLEX-07. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.3.2: Proporção de passos documentados reproduzidos sem ajuste
+
+<p className="tabela-titulo">Tabela 12: Ficha da métrica M3.3.2</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual dos passos das instruções oficiais de execução local que funcionam exatamente como escritos, em ambiente limpo. |
 | Procedimento de cálculo | Numerar cada comando ou ação das seções de execução local (com Node.js e Yarn) e com Docker Compose do guia de desenvolvimento. Executar os passos na ordem. Um passo é reproduzido sem ajuste se funciona sem nenhuma ação não escrita no guia. Calcular (passos reproduzidos sem ajuste ÷ total de passos) × 100. Também é registrado cada pré-requisito necessário e não declarado. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Guia de desenvolvimento em `dev-docs/docs/introduction/development.mdx`; campo `engines` do `package.json` da raiz. |
+| Fonte dos dados | Guia de desenvolvimento em `dev-docs/docs/introduction/development.mdx` e campo `engines` do `package.json` da raiz. |
 | Procedimento de coleta | Execução em ambiente limpo, registrando cada ajuste necessário e o motivo. |
 | Critério de interpretação | Confirma [H3.3.2](#5-q33-instalabilidade) se pelo menos 95% dos passos forem reproduzidos sem ajuste, com as versões exigidas de ferramentas. Cada ajuste é algo que a documentação deixou de dizer. |
 | Questão respondida | Q3.3 |
 | Características desejáveis | Objetiva, porque a regra de "sem ajuste" é fixa e cada ajuste é registrado com o motivo. Válida para RQ-FLEX-08 e RQ-FLEX-10. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.3.3: Implantação com Docker
+
+<p className="tabela-titulo">Tabela 13: Ficha da métrica M3.3.3</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Resultado da construção e da execução da imagem Docker da aplicação, a partir do `Dockerfile` da versão avaliada, sem passos além dos documentados. |
-| Procedimento de cálculo | Verificações: (1) a imagem é construída sem erro; (2) o contêiner inicia; (3) a verificação de saúde (*healthcheck*) declarada no `Dockerfile` passa; (4) o editor abre no navegador e permite criar uma forma. Calcular (verificações que passam ÷ 4) × 100. Também é registrado o tempo de construção. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | `Dockerfile` e `docker-compose.yml` da raiz; instruções de Docker do guia de desenvolvimento. |
+| Procedimento de cálculo | Verificações: (1) a imagem é construída sem erro, (2) o contêiner inicia, (3) a verificação de saúde (*healthcheck*) declarada no `Dockerfile` passa e (4) o editor abre no navegador e permite criar uma forma. Calcular (verificações que passam ÷ 4) × 100. Também é registrado o tempo de construção. Unidade: percentual. Escala: 0 a 100. |
+| Fonte dos dados | `Dockerfile` e `docker-compose.yml` da raiz e instruções de Docker do guia de desenvolvimento. |
 | Procedimento de coleta | Comandos `docker build` e `docker run` em ambiente limpo com Docker instalado, registrando a saída e a versão do Docker. |
 | Critério de interpretação | Confirma [H3.3.3](#5-q33-instalabilidade) se o valor for 100%. Cada verificação que falha é um obstáculo para quem precisa implantar a aplicação em um servidor próprio. |
 | Questão respondida | Q3.3 |
 | Características desejáveis | Simples. Objetiva, porque cada verificação tem resultado binário. Fácil de coletar. Válida para RQ-FLEX-09. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
 ---
 
@@ -210,7 +254,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 **Requisitos:** [RQ-FLEX-11](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (exportação em formatos utilizáveis fora da aplicação) e [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (formatos abertos, documentados e reimportáveis sem perda).
 
-**Hipóteses:** formuladas antes da coleta, uma por métrica, cada uma com uma única afirmação. A última coluna traz a regra que confirma ou refuta a hipótese. Os limites coincidem com as fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou vêm da própria definição da métrica.
+<p className="tabela-titulo">Tabela 14: Hipóteses de Q3.4</p>
 
 | Hipótese | Enunciado | Confirmada se o valor medido for | Métrica |
 | :--- | :--- | :--- | :--- |
@@ -218,45 +262,61 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | **H3.4.2** | A reimportação preservará os elementos do desenho. | ≥ 95% em cada formato | [M3.4.2](#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação) |
 | **H3.4.3** | O formato `.excalidraw` terá documentação apenas parcial. | < 60% dos campos documentados | [M3.4.3](#m343-proporção-dos-campos-do-formato-excalidraw-documentados) |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.4.1: Formatos de exportação abertos disponíveis
+
+<p className="tabela-titulo">Tabela 15: Ficha da métrica M3.4.1</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Número de formatos de arquivo abertos em que a aplicação permite exportar um desenho. Um formato é aberto se tem especificação pública que permite a outras ferramentas lê-lo. |
 | Procedimento de cálculo | Contar os formatos oferecidos pela interface de exportação e de salvamento da aplicação web, separando os abertos (como PNG, SVG e JSON) dos que dependem de um serviço específico. Unidade: formatos. Escala: absoluta. |
-| Fonte dos dados | Interface da aplicação web no ambiente de teste; funções de exportação da biblioteca (`packages/excalidraw/scene/export.ts`). |
+| Fonte dos dados | Interface da aplicação web no ambiente de teste e funções de exportação da biblioteca (`packages/excalidraw/scene/export.ts`). |
 | Procedimento de coleta | Inspeção dos menus de exportação e salvamento, registrando cada formato com captura de tela, e conferência com as funções exportadas pela biblioteca. |
 | Critério de interpretação | Confirma [H3.4.1](#6-q34-substituibilidade) se pelo menos 3 formatos abertos estiverem disponíveis. Quanto mais formatos abertos, mais fácil trocar de ferramenta sem refazer o desenho. |
 | Questão respondida | Q3.4 |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque cada formato é registrado com evidência. Válida para RQ-FLEX-11. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.4.2: Proporção de elementos preservados na exportação e reimportação
+
+<p className="tabela-titulo">Tabela 16: Ficha da métrica M3.4.2</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual dos elementos da cena de referência que voltam iguais depois de exportar e reimportar a cena, para cada formato que permite reimportação. |
 | Procedimento de cálculo | Exportar a cena de referência em `.excalidraw`, em PNG com os dados do desenho incorporados e em SVG com os dados do desenho incorporados. Reimportar cada arquivo na aplicação e comparar os elementos com os originais. Um elemento é preservado se tipo, posição, tamanho, estilo e texto forem iguais. Calcular (elementos preservados ÷ elementos da cena) × 100 para cada formato. Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Aplicação web no ambiente de teste; cena de referência. |
-| Procedimento de coleta | Exportação e reimportação pela interface; comparação dos elementos por script, exportando a cena reimportada em `.excalidraw`. É o mesmo script de comparação usado em [M2.4.1](./gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) e [M2.4.2](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda), do objetivo de Confiabilidade. |
+| Fonte dos dados | Aplicação web no ambiente de teste e cena de referência. |
+| Procedimento de coleta | Exportação e reimportação pela interface e comparação dos elementos por script, exportando a cena reimportada em `.excalidraw`. É o mesmo script de comparação usado em [M2.4.1](./gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) e [M2.4.2](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda), do objetivo de Confiabilidade. |
 | Critério de interpretação | Confirma [H3.4.2](#6-q34-substituibilidade) se o valor for de pelo menos 95% em cada formato. Elementos perdidos mostram o que o usuário não recupera ao reabrir uma imagem exportada. |
 | Questão respondida | Q3.4 |
 | Características desejáveis | Objetiva, porque a comparação é feita por script. Robusta, porque a mesma cena serve para outras versões. Válida para RQ-FLEX-12. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ### M3.4.3: Proporção dos campos do formato `.excalidraw` documentados
+
+<p className="tabela-titulo">Tabela 17: Ficha da métrica M3.4.3</p>
 
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual dos campos que aparecem em um arquivo `.excalidraw` salvo que estão descritos na documentação oficial do formato. |
 | Procedimento de cálculo | Salvar a cena de referência em `.excalidraw` e listar todos os campos distintos do arquivo: os do nível principal e os de cada tipo de elemento. Procurar cada campo na documentação do formato. Calcular (campos documentados ÷ campos encontrados) × 100. Também é registrado se existe um esquema formal legível por máquina (por exemplo, um arquivo JSON Schema). Unidade: percentual. Escala: 0 a 100. |
-| Fonte dos dados | Arquivo salvo da cena de referência; documentação do formato em `dev-docs/docs/codebase/json-schema.mdx`. |
+| Fonte dos dados | Arquivo salvo da cena de referência e documentação do formato em `dev-docs/docs/codebase/json-schema.mdx`. |
 | Procedimento de coleta | Listagem dos campos por script e busca de cada nome na documentação. |
 | Critério de interpretação | Confirma [H3.4.3](#6-q34-substituibilidade) se menos de 60% dos campos estiverem documentados. Quanto menor a cobertura, mais outra ferramenta precisa adivinhar o significado dos dados. A existência de um esquema formal publicado é registrada como observação. |
 | Questão respondida | Q3.4 |
 | Características desejáveis | Simples (uma razão). Objetiva, porque a lista de campos vem de um arquivo real. Fácil de coletar por script. Válida para RQ-FLEX-12. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ---
 
 ## 7. Rastreabilidade com a Fase 01
+
+<p className="tabela-titulo">Tabela 18: Rastreabilidade dos requisitos de Flexibilidade</p>
 
 | Requisito | Subcaracterística | Questão | Métricas | Atendimento |
 | :--- | :--- | :--- | :--- | :--- |
@@ -273,13 +333,17 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | [RQ-FLEX-11](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Substituibilidade | [Q3.4](#6-q34-substituibilidade) | [M3.4.1](#m341-formatos-de-exportação-abertos-disponíveis) | Total. |
 | [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Substituibilidade | [Q3.4](#6-q34-substituibilidade) | [M3.4.1](#m341-formatos-de-exportação-abertos-disponíveis), [M3.4.2](#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação), [M3.4.3](#m343-proporção-dos-campos-do-formato-excalidraw-documentados) | Total. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 Todos os 12 requisitos de Flexibilidade da Fase 01 são atendidos por pelo menos uma métrica. Três deles são atendidos só em parte, e a coluna "Atendimento" diz o que fica de fora.
 
 ---
 
 ## 8. Verificação das métricas
 
-A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo (AULA 08, p. 42). A equipe fez essa verificação no código da versão avaliada e no repositório oficial, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo [[1, p. 42]](#ref-1). A equipe fez essa verificação no código da versão avaliada e no repositório oficial, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+
+<p className="tabela-titulo">Tabela 19: Verificação das métricas de G3</p>
 
 | Métrica | O que foi verificado |
 | :--- | :--- |
@@ -294,14 +358,15 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | M3.4.2 | O repositório tem exemplos de PNG e SVG com desenho incorporado em `packages/excalidraw/tests/fixtures/`, o que confirma que esses formatos guardam o desenho. |
 | M3.4.3 | A documentação do formato está em `dev-docs/docs/codebase/json-schema.mdx`. |
 
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
 ---
 
 ## Referências
 
-- AULA 08 QSW1 GQM. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38 e 42.
-- Especificação do trabalho final da disciplina de Qualidade de Software 1 (2026-2 Trabalho final completo v1). Página 1, premissa 2.
-- ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
-- Excalidraw. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: [https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0](https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0).
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA 08 QSW1 GQM**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 33, 34, 38, 41 e 42. Disponível no Moodle da disciplina.
+>
+> <Link id="ref-2">2.</Link> EXCALIDRAW. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: [https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0](https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0). Acesso em: 10 nov. 2026.
 
 ---
 
@@ -310,5 +375,6 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Criação das questões, hipóteses e métricas do objetivo G3 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares), [Maria Eduarda](https://github.com/eduarda-ogomes) |
-| 1.1 | 30/10/2026 | Troca dos travessões dos títulos das questões e das métricas; links para os requisitos, as questões, as métricas, o escopo, a abstraction sheet, os níveis de pontuação e as fichas de G2 citadas; critérios de interpretação ligados aos níveis de pontuação; fonte de M3.3.2 restrita ao guia de desenvolvimento; coluna de atendimento na rastreabilidade, com três requisitos atendidos em parte e métricas acrescentadas a RQ-FLEX-05, RQ-FLEX-08, RQ-FLEX-10 e RQ-FLEX-12 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 30/10/2026 | Troca dos travessões dos títulos das questões e das métricas, links para os requisitos, as questões, as métricas, o escopo, a abstraction sheet, os níveis de pontuação e as fichas de G2 citadas, critérios de interpretação ligados aos níveis de pontuação, fonte de M3.3.2 restrita ao guia de desenvolvimento, coluna de atendimento na rastreabilidade, com três requisitos atendidos em parte e métricas acrescentadas a RQ-FLEX-05, RQ-FLEX-08, RQ-FLEX-10 e RQ-FLEX-12 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 10/11/2026 | Introdução e Metodologia em texto corrido, com a regra das hipóteses dita uma única vez. O template do objetivo passa a ser apontado na página do método. Tabelas com título e fonte, citações numeradas, referências restritas às citadas e listas sem ponto e vírgula | [Christopher Paraizo](https://github.com/wChrstphr) | |
