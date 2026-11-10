@@ -141,7 +141,7 @@ A versão efetiva de cada ferramenta é registrada na primeira coleta, com o com
 | Ferramenta | Versão | Métricas | Comando de versão |
 | :--- | :--- | :--- | :--- |
 | Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 | `madge --version` |
-| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint), _a preencher_ (`@typescript-eslint/parser`) e 5.9.3 (TypeScript) | M1.3.1 | `npx eslint --version` e `npm ls @typescript-eslint/parser typescript`, na instalação da equipe, separada do projeto |
+| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint), 5.62.0 (`@typescript-eslint/parser`) e 5.9.3 (TypeScript) | M1.3.1 | `npx eslint --version` e `yarn why @typescript-eslint/parser` |
 | cloc | 1.86 | M1.4.2 | `cloc --version` |
 | GitHub CLI (`gh`) | 2.102.0 | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
 | Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 | `yarn vitest --version` |
@@ -323,4 +323,4 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | |
-| 1.4 | 10/11/2026 | Correção do ambiente limpo, das versões de Node.js, npm, Docker e do analisador do ESLint, dos links para as métricas de G3 e da formatação das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 10/11/2026 | Correção do ambiente limpo, das versões de Node.js, npm, Docker e TypeScript, dos links para as métricas de G3 e da formatação das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) | |
