@@ -1,9 +1,12 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[12pt]{article}
 
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
+\makeatletter
+\providecommand{\normalsfcodes}{\relax}
+\makeatother
+\usepackage{sbc-template}
 \usepackage{amsmath}
-\usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{url}
@@ -13,7 +16,6 @@
 \usepackage{microtype}
 \usepackage{placeins}
 \usepackage{needspace}
-\usepackage[top=1.75cm, bottom=1.75cm, left=2.2cm, right=1.8cm]{geometry}
 
 % Versão do Excalidraw usada como linha de base da avaliação
 \newcommand{\commitref}{\href{https://github.com/excalidraw/excalidraw/commit/e1b7aacb356a492aa1e0fc6eb57b8896124027f0}{\texttt{e1b7aac}}}
@@ -26,34 +28,29 @@
     urlcolor=blue
 }
 
+\title{Avaliação da Qualidade de Produto de Software:\\
+Estudo de Caso no Software Open Source Excalidraw segundo a ISO/IEC 25000 (SQuaRE)}
+
+\author{Christopher\inst{1} \and Davi Pierre\inst{1} \and Gabriel Monteiro\inst{1} \\
+        Letícia de Carvalho\inst{1} \and Luiz Henrique Soares\inst{1} \and Maria Eduarda\inst{1}}
+
+\address{Faculdade de Ciências e Tecnologias em Engenharia (FCTE) -- Universidade de Brasília\\
+  Disciplina de Qualidade de Software 1 -- Turma 02 -- Profa. Dra. Cristiane Soares Ramos\\
+  Linha de base: Repositório oficial em 18/10/2026 (commit \texttt{e1b7aac})
+}
+
 \begin{document}
-\sloppy
-\hbadness=10000
-\hfuzz=20pt
-\hypersetup{pageanchor=true}
-\pagenumbering{arabic}
+\maketitle
 
-% Cabeçalho direto na página 1 (sem capa/contracapa conforme orientação do PC1)
-\begin{center}
-	\textbf{\LARGE AVALIAÇÃO DA QUALIDADE DE PRODUTO DE SOFTWARE}\\[10pt]
-	\textbf{\Large Estudo de Caso no Software Open Source Excalidraw segundo a ISO/IEC 25000 (SQuaRE)}\\[16pt]
-	
-	{\normalsize
-	Christopher \quad$\cdot$\quad Davi Pierre \quad$\cdot$\quad Gabriel Monteiro\\[3pt]
-	Letícia de Carvalho \quad$\cdot$\quad Luiz Henrique Soares \quad$\cdot$\quad Maria Eduarda\\[10pt]
-	\small Faculdade de Ciências e Tecnologias em Engenharia -- Universidade de Brasília (FCTE/UnB)\\
-	Disciplina de Qualidade de Software 1 -- Turma 02 -- Profa. Dra. Cristiane Soares Ramos\\[3pt]
-	Linha de base: Repositório oficial em 18/10/2026 (commit \texttt{e1b7aac})
-	}
-\end{center}
+\begin{abstract}
+This paper presents a software product quality evaluation of Excalidraw, an open-source web-based tool for creating sketches and diagrams with real-time collaboration. The study follows the ISO/IEC 25040 evaluation process and adopts the ISO/IEC 25010:2023 product quality model, with a focus on maintainability, reliability, and flexibility. The evaluation uses the Goal-Question-Metric (GQM) approach, taking the official Excalidraw commit e1b7aac as its baseline.
+\end{abstract}
 
-\vspace{12pt}
-
-% % % % % % % % % % % % SEÇÕES DO ARTIGO % % % % % % % % % % %
-\section{Resumo}
+\begin{resumo}
 Este trabalho apresenta a avaliação da qualidade de produto do software de código aberto Excalidraw, uma ferramenta web voltada para criação de diagramas e desenhos livres com colaboração em tempo real. O estudo foi desenvolvido pela Equipe Karen Jones na disciplina de Qualidade de Software 1 da Universidade de Brasília (FCTE/UnB), assumindo o papel de equipe independente de garantia da qualidade, ou \textit{Quality Assurance} (QA). O processo baseia-se na norma ISO/IEC 25040 e adota o modelo de qualidade da ISO/IEC 25010:2023, com foco em três características priorizadas: Manutenibilidade, Confiabilidade e Flexibilidade. As métricas e critérios de julgamento foram formulados por meio da abordagem \textit{Goal-Question-Metric} (GQM). As análises tiveram como linha de base o commit \texttt{e1b7aac} da branch principal do projeto.
 
-\vspace{8pt}
+\end{resumo}
+
 \noindent\textbf{Palavras-chave:} Qualidade de Software, SQuaRE, ISO/IEC 25010, ISO/IEC 25040, GQM, Excalidraw.
 
 \section{Introdução}
@@ -509,50 +506,13 @@ O julgamento conclusivo sobre a adequação da qualidade de produto de software 
 
 Esta entrega cobre as Fases~1 e~2 da ISO/IEC 25040 para o Excalidraw: a priorização de Manutenibilidade, Confiabilidade e Flexibilidade resultou em 13 subcaracterísticas e 36 requisitos de avaliação, desdobrados em três objetivos GQM, 13 questões, 36 métricas com uma hipótese cada e níveis de pontuação e critérios de julgamento definidos antes da coleta. Os próximos passos são projetar e executar as medições (Fases~3 e~4), confrontar os dados com os critérios estabelecidos e propor intervenções de melhoria, acompanhadas de um protótipo de alta fidelidade.
 
-\addcontentsline{toc}{section}{Referências}
-\begin{thebibliography}{99}
-\small
-\setlength{\itemsep}{0pt}
-\setlength{\parskip}{0pt}
+\bibliographystyle{sbc}
+\bibliography{bibliography}
 
-\bibitem{iso25000}
-ISO/IEC. \textit{ISO/IEC 25000:2014: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Guide to SQuaRE}. International Organization for Standardization, Geneva, 2014.
-
-\bibitem{iso25010}
-ISO/IEC. \textit{ISO/IEC 25010:2023: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model}. International Organization for Standardization, Geneva, 2023.
-
-\bibitem{iso25040}
-ISO/IEC. \textit{ISO/IEC 25040:2011: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process}. International Organization for Standardization, Geneva, 2011.
-
-\bibitem{iso25023}
-ISO/IEC. \textit{ISO/IEC 25023:2016: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Measurement of system and software product quality}. International Organization for Standardization, Geneva, 2016.
-
-\bibitem{basili1994gqm}
-BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: \textit{Encyclopedia of Software Engineering}. John Wiley \& Sons, 1994.
-
-\bibitem{pressman2021}
-PRESSMAN, R. S.; MAXIM, B. R. \textit{Engenharia de Software: uma abordagem profissional}. 9. ed. Porto Alegre: AMGH, 2021.
-
-\bibitem{onu2015ods}
-ONU. \textit{Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável}. Organização das Nações Unidas, 2015. Metas disponíveis em: \url{https://brasil.un.org/pt-br/sdgs}. Acesso em: 26 out. 2026.
-
-\bibitem{unsd2025indicadores}
-UNITED NATIONS STATISTICS DIVISION. \textit{Global indicator framework for the Sustainable Development Goals and targets of the 2030 Agenda for Sustainable Development}. Disponível em: \url{https://unstats.un.org/sdgs/indicators/indicators-list/}. Acesso em: 26 out. 2026.
-
-\bibitem{heitlager2007}
-HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: \textit{6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)}. IEEE, p. 30--39, 2007.
-
-\bibitem{baggen2010}
-BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: \textit{4th International Workshop on Software Quality and Maintainability (SQM 2010)}. p. 1--10, 2010.
-
-\bibitem{nielsen1993}
-NIELSEN, J. \textit{Usability Engineering}. Boston: Academic Press, 1993.
-
-\end{thebibliography}
-
+\clearpage
 \appendix
 \section{Tabela de Contribuição dos Membros da Equipe}
-Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes para a entrega do projeto.
+Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes para a entrega do projeto. O percentual de esforço individual foi calculado pela razão entre as horas reais dedicadas por cada integrante e o total de 114,31\,h registradas nas \textit{issues} das \textit{milestones} das Fases~1 e~2, aplicando o rateio individualizado para tarefas com atuação conjunta.
 
 \begin{table}[!ht]
 \centering
@@ -565,14 +525,14 @@ Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da discipl
 \toprule
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \midrule
-Christopher          & 10 & 17.0h & 14.5h & 85/12 & 13.33\% \\
-Davi Pierre          & 7  & 22.0h & 22.5h & 5/2   & 20.68\% \\
-Gabriel Monteiro     & 7  & 27.0h & 28.0h & 34/6  & 25.73\% \\
-Letícia de Carvalho  & 7  & 12.0h & 9.9h  & 6/6   & 9.11\%  \\
-Luiz Henrique Soares & 7  & 12.0h & 12.4h & 21/8  & 11.40\% \\
-Maria Eduarda        & 8  & 19.5h & 21.5h & 28/8  & 19.76\% \\
+Christopher          & 13 & 25.0h & 21.0h & 87/15 & 18.37\% \\
+Davi Pierre          & 6  & 20.0h & 21.0h & 5/2   & 18.37\% \\
+Gabriel Monteiro     & 8  & 27.5h & 28.5h & 37/6  & 24.93\% \\
+Letícia de Carvalho  & 7  & 12.0h & 9.9h  & 6/6   & 8.67\%  \\
+Luiz Henrique Soares & 7  & 12.0h & 12.4h & 21/8  & 10.85\% \\
+Maria Eduarda        & 8  & 19.5h & 21.5h & 31/10 & 18.81\% \\
 \midrule
-\textbf{Total}       & \textbf{46} & \textbf{109.5h} & \textbf{108.8h} & \textbf{179/42} & \textbf{100.00\%} \\
+\textbf{Total}       & \textbf{49} & \textbf{116.0h} & \textbf{114.3h} & \textbf{187/47} & \textbf{100.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}

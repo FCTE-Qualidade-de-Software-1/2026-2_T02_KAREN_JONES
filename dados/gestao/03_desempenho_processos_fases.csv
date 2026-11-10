@@ -1,6 +1,5 @@
 fase,acuracia_estimativa_pct,taxa_preenchimento_estimativa_pct,lead_time_medio_dias
 Fase 1,108.2,100.0,1.23
-Fase 2,90.2,88.9,3.97
-Fase 3,11.5,100.0,1.58
+Fase 2,90.5,89.3,3.83
+Fase 3,132.3,100.0,5.37
 Fase 4,0.0,100.0,0.0
-Sem Fase,100.0,100.0,0.01

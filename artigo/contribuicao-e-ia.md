@@ -60,21 +60,21 @@ Em todos os casos, o autor do PR declarou ter revisado o conteúdo gerado antes 
 
 Conforme estabelecido nas Premissas 3 (Gestão do Projeto) e 5 (Rastreabilidade de Dados Primários), os dados que alimentam a Tabela de Contribuição foram extraídos de forma automatizada diretamente do repositório da equipe no GitHub (`dados/gestao/raw_github_data.json`).
 
-O percentual de esforço individual foi calculado com base no total de horas reais registradas nas issues fechadas da Entrega 1. Quando uma issue contou com atuação conjunta de mais de um integrante, as horas foram individualizadas a partir da sintaxe de rateio padronizada no guia de contribuição (`Total (@usuario1: N, @usuario2: M)`).
+O percentual de esforço individual foi calculado com base no total de horas reais registradas nas issues das milestones Fase 1 e Fase 2. Quando uma issue contou com atuação conjunta de mais de um integrante, as horas foram individualizadas a partir da sintaxe de rateio padronizada no guia de contribuição (`Total (@usuario1: N, @usuario2: M)`).
 
 ### 2.2. Tabela de Contribuição da Entrega 1 (Fases 1 e 2)
 
 | Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Commits / PRs | Esforço Real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | F2/F4 | 11 | 13,00 | 9,90 | 80 / 11 | 11,81% |
-| Davi Pierre | `@DaviPierre` | F1/F3 | 6 | 18,00 | 19,00 | 5 / 2 | 22,66% |
-| Gabriel Monteiro | `@GabrielSMonteiro` | F1/F3 | 6 | 27,00 | 28,00 | 30 / 5 | 33,39% |
-| Letícia de Carvalho | `@LeticiaSantosss` | F1/F3 | 6 | 8,50 | 5,91 | 5 / 5 | 7,05% |
-| Luiz Henrique Soares | `@luizh-gsoares` | F2/F4 | 7 | 3,50 | 2,55 | 20 / 7 | 3,04% |
-| Maria Eduarda | `@eduarda-ogomes` | F2/F4 | 6 | 17,50 | 18,50 | 14 / 5 | 22,06% |
-| **Total** | — | — | **42** | **87,50** | **83,86** | **154 / 35** | **100,00%** |
+| Christopher | `@wChrstphr` | F2/F4 | 13 | 25,00 | 21,00 | 87 / 15 | 18,37% |
+| Davi Pierre | `@DaviPierre` | F1/F3 | 6 | 20,00 | 21,00 | 5 / 2 | 18,37% |
+| Gabriel Monteiro | `@GabrielSMonteiro` | F1/F3 | 8 | 27,50 | 28,50 | 37 / 6 | 24,93% |
+| Letícia de Carvalho | `@LeticiaSantosss` | F1/F3 | 7 | 12,00 | 9,91 | 6 / 6 | 8,67% |
+| Luiz Henrique Soares | `@luizh-gsoares` | F2/F4 | 7 | 12,00 | 12,40 | 21 / 8 | 10,85% |
+| Maria Eduarda | `@eduarda-ogomes` | F2/F4 | 8 | 19,50 | 21,50 | 31 / 10 | 18,81% |
+| **Total** | - | - | **49** | **116,00** | **114,31** | **187 / 47** | **100,00%** |
 
-*Nota explicativa sobre os dados:* Os valores refletem a conclusão integral de todas as issues da Fase 1 e 15 issues concluídas da Fase 2 (totalizando 83,9h reais apuradas). O esforço do Subgrupo F1/F3 concentra a entrega dos requisitos de qualidade, enquanto o Subgrupo F2/F4 avança na especificação GQM e infraestrutura de governança.
+*Nota explicativa sobre os dados:* Os valores vêm da coleta de 05/11/2026 e somam as milestones Fase 1 e Fase 2, inclusive a [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e as correções [#88](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/88) e [#92](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/92), fechadas depois de 26/10. As issues compartilhadas contam para cada responsável. Commits e PRs cobrem o projeto inteiro até a data da coleta. Ainda faltam horas de [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/26), [#27](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/27) e [#74](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/74) e a parte de Davi Pierre na [#23](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/23), então os percentuais podem mudar.
 
 ### 2.3. Código LaTeX para o Artigo
 
@@ -90,14 +90,14 @@ Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da rubrica
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \hline
-Christopher & 11 & 13.0h & 9.9h & 80/11 & 11.81\% \\
-Davi Pierre & 6 & 18.0h & 19.0h & 5/2 & 22.66\% \\
-Gabriel Monteiro & 6 & 27.0h & 28.0h & 30/5 & 33.39\% \\
-Letícia de Carvalho & 6 & 8.5h & 5.9h & 5/5 & 7.05\% \\
-Luiz Henrique Soares & 7 & 3.5h & 2.5h & 20/7 & 3.04\% \\
-Maria Eduarda & 6 & 17.5h & 18.5h & 14/5 & 22.06\% \\
+Christopher & 13 & 25.0h & 21.0h & 87/15 & 18.37\% \\
+Davi Pierre & 6 & 20.0h & 21.0h & 5/2 & 18.37\% \\
+Gabriel Monteiro & 8 & 27.5h & 28.5h & 37/6 & 24.93\% \\
+Letícia de Carvalho & 7 & 12.0h & 9.9h & 6/6 & 8.67\% \\
+Luiz Henrique Soares & 7 & 12.0h & 12.4h & 21/8 & 10.85\% \\
+Maria Eduarda & 8 & 19.5h & 21.5h & 31/10 & 18.81\% \\
 \hline
-\textbf{Total} & \textbf{42} & \textbf{87.5h} & \textbf{83.9h} & \textbf{154/35} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{49} & \textbf{116.0h} & \textbf{114.3h} & \textbf{187/47} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -112,3 +112,4 @@ Maria Eduarda & 6 & 17.5h & 18.5h & 14/5 & 22.06\% \\
 | 1.0 | 18/10/2026 | Elaboração dos apêndices do artigo com tabela de contribuição individual e declaração de uso de IA | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.1 | 20/10/2026 | Atualização da tabela de contribuição pós-merge da main com avanço da Fase 2 (83,9h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
 | 1.2 | 26/10/2026 | Declaração de IA reescrita conforme o artigo e registro de uso de IA por pull request até o PR #84 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 05/11/2026 | Tabela de contribuição atualizada com a coleta de 05/11 (114,31h reais nas Fases 1 e 2) | [Christopher Paraizo](https://github.com/wChrstphr) | |

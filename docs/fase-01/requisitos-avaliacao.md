@@ -62,7 +62,7 @@ Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Matu
 
 ## 4. Requisitos de Flexibilidade
 
-Requisitos ligados à Flexibilidade (denominada Portabilidade na edição de 2011 da norma), organizados pelas subcaracterísticas Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade.
+Requisitos ligados à Flexibilidade (denominada Flexibilidade na edição de 2011 da norma), organizados pelas subcaracterísticas Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade.
 
 | ID | Requisito (pergunta a responder) | Subcaracterística |
 | :--- | :--- | :--- |
