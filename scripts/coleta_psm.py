@@ -13,10 +13,13 @@ modelo "Measurement Construct" das tres categorias exigidas:
 import argparse
 import csv
 import json
+import math
 import os
 import re
+import shutil
+import sys
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 
@@ -77,12 +80,27 @@ def coletar_dados_github(repo: str, token: str | None, arquivo_raw: Path, usar_o
     milestones = requisitar_github_paginado(f"{base_url}/milestones?state=all&per_page=100", token)
     commits = requisitar_github_paginado(f"{base_url}/commits?per_page=100", token)
 
+    revisoes_prs = {}
+    for item in issues_e_prs:
+        if "pull_request" not in item:
+            continue
+        revisoes = requisitar_github_paginado(f"{base_url}/pulls/{item['number']}/reviews?per_page=100", token)
+        revisoes_prs[str(item["number"])] = [
+            {
+                "revisor": (r.get("user") or {}).get("login"),
+                "estado": r.get("state"),
+                "enviada_em": r.get("submitted_at")
+            }
+            for r in revisoes
+        ]
+
     dados_brutos = {
         "coletado_em": datetime.now(timezone.utc).isoformat(),
         "repositorio": repo,
         "issues_e_prs": issues_e_prs,
         "milestones": milestones,
-        "commits": commits
+        "commits": commits,
+        "revisoes_prs": revisoes_prs
     }
 
     arquivo_raw.parent.mkdir(parents=True, exist_ok=True)
@@ -107,12 +125,20 @@ def extrair_secao_markdown(corpo: str, titulo_secao: str) -> str:
     return valor
 
 
-def extrair_numero_float(texto: str) -> float:
+def registrar_aviso(avisos: list | None, numero: int | None, tipo: str, mensagem: str) -> None:
+    """Guarda um aviso da coleta para imprimir no fim e salvar em CSV."""
+    if avisos is not None:
+        avisos.append({"issue": numero if numero is not None else "", "tipo": tipo, "mensagem": mensagem})
+
+
+def extrair_numero_float(texto: str, avisos: list | None = None, numero: int | None = None) -> float:
     """
     Extrai valor em horas de uma string, suportando formatos como:
     - '1h30m' ou '2h30' -> 1.5, 2.5
     - '20m' ou '30 min' -> 0.33, 0.5
     - '2.5' ou '2,5' ou '4' -> 2.5, 4.0
+    Um valor como '2h5' e lido como 2 horas e 5 minutos e gera aviso, porque
+    pode ter sido escrito querendo dizer 2,5 horas.
     """
     if not texto:
         return 0.0
@@ -121,6 +147,11 @@ def extrair_numero_float(texto: str) -> float:
     if match_hm:
         horas = int(match_hm.group(1))
         minutos = int(match_hm.group(2))
+        if len(match_hm.group(2)) == 1:
+            registrar_aviso(
+                avisos, numero, "formato ambiguo",
+                f"'{texto.strip()}' lido como {horas}h{minutos:02d}min, confira se nao era {horas}.{minutos}h"
+            )
         return round(horas + (minutos / 60.0), 2)
     match_m = re.search(r"(\d+)\s*(?:m|min|minutos)\b", texto_limpo)
     if match_m:
@@ -130,32 +161,165 @@ def extrair_numero_float(texto: str) -> float:
     return float(match.group(1)) if match else 0.0
 
 
-def extrair_horas_reais(texto: str, assignees: list[str]) -> tuple[float, dict[str, float]]:
+def extrair_horas_reais(
+    texto: str,
+    assignees: list[str],
+    avisos: list | None = None,
+    numero: int | None = None,
+    equipe: dict | None = None
+) -> tuple[float, dict[str, float]]:
     """
     Interpreta o campo 'Horas reais (h)' suportando os formatos:
     - '5 (@usuario1: 3, @usuario2: 2)'
-    - '@usuario1: 3, @usuario2: 2'
+    - '@usuario1: 3, @usuario2: 2' ou '@usuario1 3, @usuario2 2' (dois-pontos opcionais)
     - '4' (divide igualmente entre os assignees da issue)
-    Retorna (total_horas, dicionario_por_login).
+    Retorna (total_horas, dicionario_por_login). Horas que nao puderem ser
+    lidas ou atribuidas a alguem geram aviso com o numero da issue.
     """
     if not texto:
         return 0.0, {}
 
-    pares_usuarios = re.findall(r"@([A-Za-z0-9_-]+)\s*:\s*([^,)\n]+)", texto)
+    pares_usuarios = re.findall(r"@([A-Za-z0-9_-]+)\s*:?\s*(\d[^,;)\n@]*)", texto)
 
     por_usuario: dict[str, float] = {}
     if pares_usuarios:
         for login, horas_str in pares_usuarios:
-            por_usuario[login] = por_usuario.get(login, 0.0) + extrair_numero_float(horas_str)
-        total = sum(por_usuario.values())
+            horas = extrair_numero_float(horas_str, avisos, numero)
+            if horas <= 0:
+                registrar_aviso(avisos, numero, "horas nao lidas", f"valor de @{login} ilegivel: '{horas_str.strip()}'")
+            if equipe and login not in equipe:
+                registrar_aviso(avisos, numero, "horas nao atribuidas", f"@{login} nao esta em scripts/config.json")
+            por_usuario[login] = por_usuario.get(login, 0.0) + horas
+        total = round(sum(por_usuario.values()), 2)
+        logins_citados = set(re.findall(r"@([A-Za-z0-9_-]+)", texto))
+        sem_horas = logins_citados - set(por_usuario)
+        if sem_horas:
+            registrar_aviso(
+                avisos, numero, "horas nao lidas",
+                "logins sem horas lidas: " + ", ".join(f"@{l}" for l in sorted(sem_horas))
+            )
+        prefixo = texto.split("@", 1)[0].split("(", 1)[0]
+        total_declarado = extrair_numero_float(prefixo)
+        if total_declarado > 0 and abs(total_declarado - total) > 0.01:
+            registrar_aviso(
+                avisos, numero, "horas divergentes",
+                f"total declarado {total_declarado}h difere da soma por integrante {total}h"
+            )
         return total, por_usuario
 
-    total = extrair_numero_float(texto)
-    if total > 0 and assignees:
+    tem_login = "@" in texto
+    if tem_login:
+        registrar_aviso(avisos, numero, "horas nao lidas", f"nao foi possivel ler horas por integrante em '{texto.strip()}'")
+
+    total = extrair_numero_float(texto, avisos, numero)
+    if total <= 0:
+        if not tem_login:
+            registrar_aviso(avisos, numero, "horas nao lidas", f"valor ilegivel: '{texto.strip()}'")
+    elif not assignees:
+        registrar_aviso(avisos, numero, "horas nao atribuidas", f"{total}h sem responsavel na issue nem @login no campo")
+    else:
         parcela = round(total / len(assignees), 2)
         for login in assignees:
             por_usuario[login] = parcela
     return total, por_usuario
+
+
+MAX_FAIXA_DEPENDENCIAS = 100
+
+
+def extrair_dependencias(texto: str, avisos: list | None = None, numero: int | None = None) -> list[int]:
+    """
+    Le os numeros de issue do campo 'Depende de', incluindo faixas como '#73 a #78'.
+    Faixas invertidas ou com mais de MAX_FAIXA_DEPENDENCIAS issues sao ignoradas com aviso.
+    """
+    if not texto:
+        return []
+    numeros: set[int] = set()
+    for ini, fim in re.findall(r"#(\d+)\s*(?:a|até|ate|-)\s*#(\d+)", texto):
+        ini, fim = int(ini), int(fim)
+        if fim < ini or fim - ini >= MAX_FAIXA_DEPENDENCIAS:
+            registrar_aviso(avisos, numero, "dependencia ignorada", f"faixa #{ini} a #{fim} invalida ou longa demais")
+            continue
+        numeros.update(range(ini, fim + 1))
+    numeros.update(int(n) for n in re.findall(r"#(\d+)", texto))
+    return sorted(numeros)
+
+
+def para_datetime(valor: str | None) -> datetime | None:
+    """Converte um timestamp ISO da API do GitHub em datetime com fuso."""
+    if not valor:
+        return None
+    return datetime.fromisoformat(valor.replace("Z", "+00:00"))
+
+
+def janelas_das_fases(milestones: list, inicio_projeto: datetime) -> dict[str, tuple[datetime, datetime]]:
+    """
+    Define o inicio e o fim de cada fase. O fim e o fim do dia do due_on da
+    milestone no horario de Brasilia. O inicio e o fim da fase anterior ou,
+    na primeira fase, a data inicio_fase_1 do config.json.
+    """
+    fuso_brt = timezone(timedelta(hours=-3))
+    fases = sorted(
+        [m for m in milestones if m.get("due_on")],
+        key=lambda m: m["due_on"]
+    )
+    janelas: dict[str, tuple[datetime, datetime]] = {}
+    fim_anterior = None
+    for m in fases:
+        dia = para_datetime(m["due_on"]).date()
+        fim = datetime(dia.year, dia.month, dia.day, 23, 59, 59, tzinfo=fuso_brt)
+        inicio = fim_anterior or inicio_projeto
+        janelas[m["title"]] = (inicio, fim)
+        fim_anterior = fim
+    return janelas
+
+
+def fase_da_data(data: datetime, janelas: dict[str, tuple[datetime, datetime]]) -> str:
+    """Fase cuja janela contem a data. Datas apos a ultima fase ficam na ultima."""
+    for fase, (_, fim) in janelas.items():
+        if data <= fim:
+            return fase
+    return list(janelas)[-1] if janelas else "Sem Fase"
+
+
+ORDINAIS_FASE = {"primeira": 1, "segunda": 2, "terceira": 3, "quarta": 4}
+
+
+def fases_citadas(texto: str) -> set[int]:
+    """Fases citadas em um texto: F3, Fase 3, Fase3, Fase 03, fase-03 ou Terceira Fase."""
+    if not texto:
+        return set()
+    citadas = {int(n) for n in re.findall(r"\bf(?:ase)?[\s_-]*0?([1-4])(?!\d)", texto, flags=re.IGNORECASE)}
+    for ordinal, n in ORDINAIS_FASE.items():
+        if re.search(rf"\b{ordinal}\s+fase\b", texto, flags=re.IGNORECASE):
+            citadas.add(n)
+    return citadas
+
+
+def fase_do_pr(item: dict, fase_por_issue: dict[int, str], janelas: dict) -> tuple[str, str]:
+    """
+    Fase de um PR e a origem dela, na ordem: milestone da issue ligada (prefixo
+    [X-N] no titulo ou Closes/Fixes/Resolves #N no corpo), fase citada uma unica
+    vez no titulo ou no corpo, e por fim a data de abertura.
+    """
+    titulo = item.get("title") or ""
+    corpo = item.get("body") or ""
+    ligadas = [int(n) for n in re.findall(r"^\s*\[[A-Za-z0-9]+-(\d+)[\]}]", titulo)]
+    ligadas += [int(n) for n in re.findall(
+        r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\b\s*:?\s*#(\d+)", corpo, flags=re.IGNORECASE
+    )]
+    for n in ligadas:
+        if fase_por_issue.get(n) in janelas:
+            return fase_por_issue[n], f"issue #{n}"
+
+    for origem, texto in (("titulo", titulo), ("corpo", corpo)):
+        citadas = fases_citadas(texto)
+        if len(citadas) == 1 and f"Fase {next(iter(citadas))}" in janelas:
+            return f"Fase {next(iter(citadas))}", origem
+        if len(citadas) > 1:
+            break
+
+    return fase_da_data(para_datetime(item["created_at"]), janelas), "data"
 
 
 def interpretar_prazo(prazo_str: str, ano_ref: int) -> datetime | None:
@@ -175,7 +339,27 @@ def interpretar_prazo(prazo_str: str, ano_ref: int) -> datetime | None:
         return None
 
 
-def processar_dados(dados_brutos: dict, config: dict) -> dict:
+def acuracia_pct(issues: list) -> float:
+    """Horas reais / horas estimadas das issues que tem os dois valores preenchidos."""
+    avaliadas = [i for i in issues if i["estimativa_h"] > 0 and i["horas_reais_h"] > 0]
+    soma_e = sum(i["estimativa_h"] for i in avaliadas)
+    soma_r = sum(i["horas_reais_h"] for i in avaliadas)
+    return round(soma_r / soma_e * 100.0, 1) if soma_e > 0 else 0.0
+
+
+def classificar_estimativa(estimativa_h: float, horas_reais_h: float) -> tuple[float | None, str]:
+    """Desvio da estimativa (%) e classificacao na faixa de -20% a +20% do Construct 2."""
+    if estimativa_h <= 0 or horas_reais_h <= 0:
+        return None, ""
+    desvio = round((horas_reais_h - estimativa_h) / estimativa_h * 100.0, 1)
+    if desvio > 20.0:
+        return desvio, "subestimada"
+    if desvio < -20.0:
+        return desvio, "superestimada"
+    return desvio, "na faixa"
+
+
+def processar_dados(dados_brutos: dict, config: dict, avisos: list | None = None) -> dict:
     """
     Transforma os dados brutos da API nas estruturas das tres categorias PSM/CID:
     1. Recursos e Custos
@@ -205,9 +389,14 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
         estimativa_str = extrair_secao_markdown(corpo, "Estimativa (h)")
         horas_reais_str = extrair_secao_markdown(corpo, "Horas reais (h)")
         prazo_str = extrair_secao_markdown(corpo, "Prazo")
+        dependencias = extrair_dependencias(extrair_secao_markdown(corpo, "Depende de"), avisos, numero)
 
-        estimativa_h = extrair_numero_float(estimativa_str)
-        horas_reais_h, horas_por_pessoa = extrair_horas_reais(horas_reais_str, assignees)
+        estimativa_h = extrair_numero_float(estimativa_str, avisos, numero)
+        horas_reais_h, horas_por_pessoa = extrair_horas_reais(
+            horas_reais_str, assignees, avisos, numero, mapa_equipe
+        )
+        if estado == "closed" and horas_reais_h <= 0 and item.get("state_reason") != "not_planned":
+            registrar_aviso(avisos, numero, "fechada sem horas reais", f"'{titulo}' fechada sem horas reais registradas")
 
         dt_criacao = datetime.fromisoformat(item["created_at"].replace("Z", "+00:00"))
         dt_fechamento = (
@@ -227,6 +416,8 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
                 status_prazo = "Aberta em atraso"
             else:
                 status_prazo = "Em andamento (no prazo)"
+
+        desvio_estimativa, classe_estimativa = classificar_estimativa(estimativa_h, horas_reais_h)
 
         lead_time_dias = (
             round((dt_fechamento - dt_criacao).total_seconds() / 86400.0, 2)
@@ -249,7 +440,13 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
             "prazo_str": prazo_str or "N/A",
             "data_fechamento": dt_fechamento.strftime("%d/%m/%Y") if dt_fechamento else "-",
             "status_prazo": status_prazo,
-            "lead_time_dias": lead_time_dias
+            "lead_time_dias": lead_time_dias,
+            "desvio_estimativa_pct": desvio_estimativa,
+            "classificacao_estimativa": classe_estimativa,
+            "dt_criacao": dt_criacao,
+            "dt_fechamento": dt_fechamento,
+            "dt_prazo": dt_prazo,
+            "dependencias": dependencias
         })
 
     fases_ordem = ["Fase 1", "Fase 2", "Fase 3", "Fase 4"]
@@ -273,7 +470,7 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
         custo_est = round(h_est * valor_hora, 2)
         custo_real = round(h_real * valor_hora, 2)
 
-        acuracia_pct = round((h_real / h_est) * 100.0, 1) if h_est > 0 else 0.0
+        acuracia_fase = acuracia_pct(lista)
         com_estimativa = sum(1 for i in lista if i["estimativa_preenchida"])
         taxa_governanca_pct = round((com_estimativa / total_issues) * 100.0, 1) if total_issues > 0 else 0.0
 
@@ -293,7 +490,7 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
             "horas_reais": h_real,
             "custo_estimado_brl": custo_est,
             "custo_real_brl": custo_real,
-            "acuracia_estimativa_pct": acuracia_pct,
+            "acuracia_estimativa_pct": acuracia_fase,
             "taxa_preenchimento_estimativa_pct": taxa_governanca_pct,
             "lead_time_medio_dias": lead_time_medio
         })
@@ -406,13 +603,307 @@ def processar_dados(dados_brutos: dict, config: dict) -> dict:
             l["percentual_esforco"] = round((l["horas_reais"] / soma_fase) * 100.0, 2) if soma_fase > 0 else 0.0
         contribuicao_por_fase.extend(linhas_fase)
 
+    # Consolidado por Entrega: Entrega 1 (F1 + F2) e Entrega 2 (F3 + F4)
+    mapa_entregas = [
+        ("Entrega 1", ["Fase 1", "Fase 2"]),
+        ("Entrega 2", ["Fase 3", "Fase 4"]),
+    ]
+    resumo_entregas = []
+    for nome_entrega, fases_ent in mapa_entregas:
+        lista_ent = [i for i in issues_processadas if i["fase"] in fases_ent]
+        tot = len(lista_ent)
+        conc = sum(1 for i in lista_ent if i["estado"] == "closed")
+        abert = tot - conc
+        nprazo = sum(1 for i in lista_ent if i["status_prazo"] in ("Concluida no prazo", "Em andamento (no prazo)"))
+        atraso = tot - nprazo
+        h_est = round(sum(i["estimativa_h"] for i in lista_ent), 2)
+        h_real = round(sum(i["horas_reais_h"] for i in lista_ent), 2)
+        c_est = round(h_est * valor_hora, 2)
+        c_real = round(h_real * valor_hora, 2)
+        acuracia = acuracia_pct(lista_ent)
+        com_est = sum(1 for i in lista_ent if i["estimativa_preenchida"])
+        tx_gov = round((com_est / tot) * 100.0, 1) if tot > 0 else 0.0
+        tempos = [i["lead_time_dias"] for i in lista_ent if i["lead_time_dias"] is not None]
+        lt_medio = round(sum(tempos) / len(tempos), 2) if tempos else 0.0
+
+        resumo_entregas.append({
+            "entrega": nome_entrega,
+            "fases": " + ".join(fases_ent),
+            "total_issues": tot,
+            "issues_concluidas": conc,
+            "issues_abertas": abert,
+            "progresso_pct": round((conc / tot) * 100.0, 1) if tot > 0 else 0.0,
+            "issues_no_prazo": nprazo,
+            "issues_em_atraso": atraso,
+            "aderencia_prazo_pct": round((nprazo / tot) * 100.0, 1) if tot > 0 else 0.0,
+            "horas_estimadas": h_est,
+            "horas_reais": h_real,
+            "custo_estimado_brl": c_est,
+            "custo_real_brl": c_real,
+            "acuracia_estimativa_pct": acuracia,
+            "taxa_preenchimento_estimativa_pct": tx_gov,
+            "lead_time_medio_dias": lt_medio
+        })
+
+    # Contribuicao individual por entrega
+    contribuicao_por_entrega = []
+    for nome_entrega, (fase_a, fase_b) in [("Entrega 1", ("Fase 1", "Fase 2")), ("Entrega 2", ("Fase 3", "Fase 4"))]:
+        linhas_ent = []
+        for login, nome in mapa_equipe.items():
+            issues_fa = [i for i in issues_processadas if i["fase"] == fase_a and login in i["assignees"]]
+            issues_fb = [i for i in issues_processadas if i["fase"] == fase_b and login in i["assignees"]]
+
+            h_est_fa = sum(i["estimativa_h"] / len(i["assignees"]) for i in issues_fa)
+            h_est_fb = sum(i["estimativa_h"] / len(i["assignees"]) for i in issues_fb)
+
+            h_real_fa = sum(i["horas_por_pessoa"].get(login, 0.0) for i in issues_processadas if i["fase"] == fase_a)
+            h_real_fb = sum(i["horas_por_pessoa"].get(login, 0.0) for i in issues_processadas if i["fase"] == fase_b)
+
+            h_est_tot = round(h_est_fa + h_est_fb, 2)
+            h_real_tot = round(h_real_fa + h_real_fb, 2)
+
+            linhas_ent.append({
+                "entrega": nome_entrega,
+                "integrante": nome,
+                "login": login,
+                "issues_fase_a": len(issues_fa),
+                "issues_fase_b": len(issues_fb),
+                "issues_atribuidas": len(issues_fa) + len(issues_fb),
+                "horas_estimadas": h_est_tot,
+                "horas_reais_fase_a": round(h_real_fa, 2),
+                "horas_reais_fase_b": round(h_real_fb, 2),
+                "horas_reais": h_real_tot,
+                "custo_real_brl": round(h_real_tot * valor_hora, 2)
+            })
+        soma_ent = sum(l["horas_reais"] for l in linhas_ent)
+        for l in linhas_ent:
+            l["percentual_esforco"] = round((l["horas_reais"] / soma_ent) * 100.0, 2) if soma_ent > 0 else 0.0
+        contribuicao_por_entrega.extend(linhas_ent)
+
     return {
         "issues": sorted(issues_processadas, key=lambda x: x["numero"]),
         "resumo_fases": resumo_fases,
+        "resumo_entregas": resumo_entregas,
         "contribuicao": contribuicao,
         "contribuicao_por_fase": contribuicao_por_fase,
+        "contribuicao_por_entrega": contribuicao_por_entrega,
         "total_prs": len(prs_processados),
         "total_commits": len(dados_brutos.get("commits", []))
+    }
+
+
+def _pct(parte: float, total: float) -> float:
+    return round(parte / total * 100.0, 1) if total > 0 else 0.0
+
+
+def _media(valores: list[float]) -> float | None:
+    return round(sum(valores) / len(valores), 2) if valores else None
+
+
+def _mediana(valores: list[float]) -> float | None:
+    if not valores:
+        return None
+    ordenados = sorted(valores)
+    meio = len(ordenados) // 2
+    if len(ordenados) % 2:
+        return round(ordenados[meio], 2)
+    return round((ordenados[meio - 1] + ordenados[meio]) / 2, 2)
+
+
+def _data_br(data: datetime | None) -> str:
+    return data.astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M") if data else "-"
+
+
+def calcular_ritmo_fechamento(issues: list, janelas: dict, agora: datetime) -> list[dict]:
+    """
+    Construct 1 (Calendario e Progresso): distribuicao do fechamento das issues
+    ao longo da fase, fechamento na primeira metade e issues bloqueadas por
+    dependencias ainda abertas.
+    """
+    abertas = {i["numero"] for i in issues if i["estado"] == "open"}
+    linhas = []
+    for fase, (inicio, fim) in janelas.items():
+        lista = [i for i in issues if i["fase"] == fase]
+        if not lista:
+            continue
+        meio = inicio + (fim - inicio) / 2
+        fechadas = [i for i in lista if i["dt_fechamento"]]
+        ate_metade = [i for i in fechadas if i["dt_fechamento"] <= meio]
+        ultimos_2_dias = [i for i in fechadas if fim - timedelta(days=2) < i["dt_fechamento"] <= fim]
+        apos_fim = [i for i in fechadas if i["dt_fechamento"] > fim]
+        no_prazo = [i for i in fechadas if i["dt_prazo"] and i["dt_fechamento"] <= i["dt_prazo"]]
+        bloqueadas = [
+            i["numero"] for i in lista
+            if i["estado"] == "open" and any(d in abertas for d in i["dependencias"] if d != i["numero"])
+        ]
+        taxa_metade = _pct(len(ate_metade), len(lista))
+        linhas.append({
+            "fase": fase,
+            "inicio": _data_br(inicio),
+            "data_media": _data_br(meio),
+            "fim": _data_br(fim),
+            "total_issues": len(lista),
+            "issues_fechadas": len(fechadas),
+            "progresso_pct": _pct(len(fechadas), len(lista)),
+            "fechadas_ate_data_media": len(ate_metade),
+            "taxa_fechamento_1a_metade_pct": taxa_metade,
+            "fechadas_ultimos_2_dias": len(ultimos_2_dias),
+            "fechadas_apos_fim": len(apos_fim),
+            "fechadas_no_prazo_pct": _pct(len(no_prazo), len(lista)),
+            "issues_bloqueadas": len(bloqueadas),
+            "issues_bloqueadas_lista": " ".join(f"#{n}" for n in bloqueadas),
+            "alerta_ritmo": "sim" if agora >= meio and taxa_metade < 50.0 else "nao"
+        })
+    return linhas
+
+
+def calcular_acerto_estimativas(issues: list) -> list[dict]:
+    """
+    Construct 2 (Recursos e Custos): quantas issues de cada fase ficaram na
+    faixa de -20% a +20% de desvio, sobre as issues com estimativa e horas reais.
+    O desvio e a classificacao de cada issue ficam em 05_detalhamento_issues.csv.
+    """
+    avaliadas = [i for i in issues if i["classificacao_estimativa"]]
+    por_fase = []
+    for fase in sorted({i["fase"] for i in avaliadas}):
+        lista = [i for i in avaliadas if i["fase"] == fase]
+        acuracia = acuracia_pct(lista)
+        na_faixa = sum(1 for i in lista if i["classificacao_estimativa"] == "na faixa")
+        por_fase.append({
+            "fase": fase,
+            "issues_avaliadas": len(lista),
+            "desvio_fase_pct": round(acuracia - 100.0, 1),
+            "issues_na_faixa": na_faixa,
+            "issues_na_faixa_pct": _pct(na_faixa, len(lista)),
+            "issues_subestimadas": sum(1 for i in lista if i["classificacao_estimativa"] == "subestimada"),
+            "issues_superestimadas": sum(1 for i in lista if i["classificacao_estimativa"] == "superestimada"),
+            "desvio_mediano_pct": _mediana([i["desvio_estimativa_pct"] for i in lista])
+        })
+    return por_fase
+
+
+def _percentil(valores: list[float], p: float) -> float | None:
+    """Percentil pelo metodo do posto mais proximo."""
+    if not valores:
+        return None
+    ordenados = sorted(valores)
+    return round(ordenados[max(math.ceil(p / 100.0 * len(ordenados)) - 1, 0)], 2)
+
+
+def calcular_revisao_prs(dados_brutos: dict, issues: list, janelas: dict, agora: datetime, avisos: list | None) -> dict:
+    """
+    Construct 3 (Desempenho dos Processos): tempo de espera de cada PR ate a
+    primeira revisao de outro integrante, aprovacao formal e quem revisou.
+    """
+    revisoes_prs = dados_brutos.get("revisoes_prs")
+    if revisoes_prs is None:
+        registrar_aviso(avisos, None, "sem revisoes", "snapshot sem revisoes de PR, rode a coleta online")
+        return {"prs": [], "fases": [], "revisores": [], "matriz": []}
+
+    fase_por_issue = {i["numero"]: i["fase"] for i in issues}
+    prs = []
+    for item in dados_brutos.get("issues_e_prs", []):
+        if "pull_request" not in item:
+            continue
+        autor = (item.get("user") or {}).get("login")
+        if autor and autor.endswith("[bot]"):
+            continue
+        criado = para_datetime(item["created_at"])
+        merged = para_datetime((item.get("pull_request") or {}).get("merged_at"))
+        revisoes = [
+            r for r in revisoes_prs.get(str(item["number"]), [])
+            if r["revisor"] and r["revisor"] != autor and not r["revisor"].endswith("[bot]")
+            and r["estado"] != "PENDING" and r["enviada_em"]
+        ]
+        primeira = min((para_datetime(r["enviada_em"]) for r in revisoes), default=None)
+        aprovacao = min((para_datetime(r["enviada_em"]) for r in revisoes if r["estado"] == "APPROVED"), default=None)
+        revisores = sorted({r["revisor"] for r in revisoes})
+        if merged:
+            situacao = "integrado"
+        elif item["state"] == "open":
+            situacao = "aberto"
+        else:
+            situacao = "fechado sem merge"
+
+        espera_h = round((primeira - criado).total_seconds() / 3600.0, 2) if primeira else None
+        if situacao == "aberto" and not primeira:
+            parado_h = (agora - criado).total_seconds() / 3600.0
+            if parado_h > 24:
+                registrar_aviso(
+                    avisos, item["number"], "PR travado",
+                    f"PR aberto ha {parado_h:.0f}h sem revisao (limite do plano: 24h)"
+                )
+
+        fase, origem_fase = fase_do_pr(item, fase_por_issue, janelas)
+        prs.append({
+            "numero": item["number"],
+            "titulo": item["title"],
+            "fase": fase,
+            "origem_fase": origem_fase,
+            "autor": autor,
+            "situacao": situacao,
+            "criado_em": _data_br(criado),
+            "primeira_revisao_em": _data_br(primeira),
+            "aprovado_em": _data_br(aprovacao),
+            "integrado_em": _data_br(merged),
+            "espera_revisao_h": espera_h,
+            "aprovado_formalmente": "sim" if aprovacao else "nao",
+            "revisores": ", ".join(revisores),
+            "_revisores": revisores
+        })
+
+    fases, revisores_fase, matriz = [], [], []
+    for fase in list(janelas) + ["Total"]:
+        lista = [p for p in prs if fase == "Total" or p["fase"] == fase]
+        if not lista:
+            continue
+        integrados = [p for p in lista if p["situacao"] == "integrado"]
+        aprovados = [p for p in integrados if p["aprovado_formalmente"] == "sim"]
+        esperas = [p["espera_revisao_h"] for p in lista if p["espera_revisao_h"] is not None]
+        media_h = _media(esperas)
+        fases.append({
+            "fase": fase,
+            "prs": len(lista),
+            "prs_integrados": len(integrados),
+            "prs_integrados_com_aprovacao": len(aprovados),
+            "taxa_revisao_formal_pct": _pct(len(aprovados), len(integrados)),
+            "prs_com_revisao": len(esperas),
+            "prs_sem_revisao": len(lista) - len(esperas),
+            "espera_media_h": media_h,
+            "espera_media_dias": round(media_h / 24.0, 2) if media_h is not None else None,
+            "espera_mediana_h": _mediana(esperas),
+            "espera_p80_h": _percentil(esperas, 80),
+            "espera_p90_h": _percentil(esperas, 90),
+            "prs_espera_acima_24h": sum(1 for e in esperas if e > 24)
+        })
+
+        contagem: dict[str, int] = {}
+        pares: dict[tuple[str, str], int] = {}
+        for p in lista:
+            for r in p["_revisores"]:
+                contagem[r] = contagem.get(r, 0) + 1
+                pares[(p["autor"], r)] = pares.get((p["autor"], r), 0) + 1
+        total_rev = sum(contagem.values())
+        for r, n in sorted(contagem.items(), key=lambda x: -x[1]):
+            revisores_fase.append({"fase": fase, "revisor": r, "prs_revisados": n, "percentual": _pct(n, total_rev)})
+        for (a, r), n in sorted(pares.items()):
+            matriz.append({"fase": fase, "autor": a, "revisor": r, "prs": n})
+
+    return {"prs": prs, "fases": fases, "revisores": revisores_fase, "matriz": matriz}
+
+
+def calcular_medidas_plano(resultado: dict, dados_brutos: dict, config: dict, avisos: list | None) -> dict:
+    """Calcula as tres medidas do plano de medicao (docs/gestao/plano-medicao-psm.md)."""
+    agora = datetime.now(timezone.utc)
+    if config.get("inicio_fase_1"):
+        inicio_projeto = datetime.fromisoformat(config["inicio_fase_1"]).replace(tzinfo=timezone(timedelta(hours=-3)))
+    else:
+        inicio_projeto = min(para_datetime(i["created_at"]) for i in dados_brutos.get("issues_e_prs", []))
+    janelas = janelas_das_fases(dados_brutos.get("milestones", []), inicio_projeto)
+    return {
+        "ritmo_fechamento": calcular_ritmo_fechamento(resultado["issues"], janelas, agora),
+        "acerto_fases": calcular_acerto_estimativas(resultado["issues"]),
+        "revisao": calcular_revisao_prs(dados_brutos, resultado["issues"], janelas, agora, avisos)
     }
 
 
@@ -561,26 +1052,32 @@ def _desenhar_grafico_barras_agrupadas_pil(
 
 
 def _fontes_pages(escala: int):
-    """Carrega a tipografia Inter (padrao do Pages) com fallback para DejaVu."""
+    """Carrega a tipografia Inter/DejaVu/Liberation com fallback seguro para default."""
     from PIL import ImageFont
-    base = "/usr/share/fonts/truetype/inter-zorin-os/"
-    try:
-        return (
-            ImageFont.truetype(base + "Inter-Bold.ttf", 20 * escala),
-            ImageFont.truetype(base + "Inter-Medium.ttf", 13 * escala),
-            ImageFont.truetype(base + "Inter-Bold.ttf", 13 * escala),
-        )
-    except Exception:
-        dj = "/usr/share/fonts/truetype/dejavu/"
+    candidatos_bold = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Bold.ttf",
+    ]
+    candidatos_regular = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Medium.ttf",
+        "/usr/share/fonts/truetype/inter-zorin-os/Inter-Regular.ttf",
+    ]
+    f_bold_path = next((p for p in candidatos_bold if Path(p).is_file()), None)
+    f_reg_path = next((p for p in candidatos_regular if Path(p).is_file()), None)
+    if f_bold_path and f_reg_path:
         try:
             return (
-                ImageFont.truetype(dj + "DejaVuSans-Bold.ttf", 20 * escala),
-                ImageFont.truetype(dj + "DejaVuSans.ttf", 13 * escala),
-                ImageFont.truetype(dj + "DejaVuSans-Bold.ttf", 13 * escala),
+                ImageFont.truetype(f_bold_path, 20 * escala),
+                ImageFont.truetype(f_reg_path, 13 * escala),
+                ImageFont.truetype(f_bold_path, 13 * escala),
             )
         except Exception:
-            f = ImageFont.load_default()
-            return f, f, f
+            pass
+    f = ImageFont.load_default()
+    return f, f, f
 
 
 def _desenhar_barras_horizontais_pil(
@@ -667,6 +1164,10 @@ def _desenhar_grafico_acuracia_pil(caminho: Path, titulo: str, subtitulo: str,
                            fill="#e0e7ff", outline="#818cf8", width=escala)
     draw.text((lx + 26 * escala, 91 * escala), "Faixa ideal (80% a 120%)", fill="#111827", font=f_bold)
 
+    lx2 = 680 * escala
+    draw.line([(lx2, 99 * escala), (lx2 + 24 * escala, 99 * escala)], fill="#818cf8", width=2 * escala)
+    draw.text((lx2 + 32 * escala, 91 * escala), "100% = planejado", fill="#4338ca", font=f_bold)
+
     x0, y0 = 95 * escala, 140 * escala
     x1, y1 = w - 55 * escala, h - 75 * escala
     max_val = max(160.0, float(((int(max(valores, default=0) * 1.15) // 20) + 1) * 20))
@@ -683,7 +1184,8 @@ def _desenhar_grafico_acuracia_pil(caminho: Path, titulo: str, subtitulo: str,
         bb = draw.textbbox((0, 0), txt, font=f_txt)
         draw.text((x0 - (bb[2] - bb[0]) - 14 * escala, py(v) - 8 * escala), txt, fill="#4b5563", font=f_txt)
     draw.line([(x0, py(100)), (x1, py(100))], fill="#818cf8", width=2 * escala)
-    draw.text((x1 - 150 * escala, py(100) - 22 * escala), "100% = planejado", fill="#4338ca", font=f_txt)
+    if len(fases) == 1:
+        draw.text((x1 - 150 * escala, py(100) - 22 * escala), "100% = planejado", fill="#4338ca", font=f_txt)
 
     n = max(len(fases), 1)
     bloco = (x1 - x0) / n
@@ -781,6 +1283,23 @@ def gerar_graficos_por_fase(resultado: dict, dir_graficos: Path) -> None:
     )
 
 
+def gerar_grafico_entrega_1(resultado: dict, dir_graficos: Path) -> None:
+    """Gera o grafico de barras horizontais de participacao no esforco real da Entrega 1."""
+    linhas_e1 = [l for l in resultado.get("contribuicao_por_entrega", []) if l["entrega"] == "Entrega 1"]
+    if not linhas_e1:
+        return
+    _desenhar_barras_horizontais_pil(
+        caminho=dir_graficos / "05_esforco_integrante_entrega_1.png",
+        titulo="PSM/CID: Participação no Esforço Real da Entrega 1",
+        subtitulo="Percentual do esforço consolidado (Fase 1 + Fase 2) por integrante (soma = 100%)",
+        categorias=[l["integrante"] for l in linhas_e1],
+        valores=[l["percentual_esforco"] for l in linhas_e1],
+        rotulos=[f"{l['percentual_esforco']:.1f}%  ({l['horas_reais']:.1f} h)" for l in linhas_e1],
+        cor="#4f46e5",
+        legenda="% das horas reais da Entrega 1"
+    )
+
+
 def gerar_graficos(resultado: dict, dir_graficos: Path) -> None:
     """
     Gera os 3 graficos PNG das categorias PSM/CID em dados/gestao/graficos/
@@ -843,7 +1362,70 @@ def gerar_graficos(resultado: dict, dir_graficos: Path) -> None:
     )
 
 
-def gerar_relatorio_constructs(resultado: dict, config: dict, caminho_md: Path) -> None:
+def _tabela_md(colunas: list[tuple[str, str]], linhas: list[dict]) -> list[str]:
+    saida = [
+        "| " + " | ".join(titulo for titulo, _ in colunas) + " |",
+        "| :--- |" + " :---: |" * (len(colunas) - 1)
+    ]
+    for l in linhas:
+        valores = ["-" if l.get(chave) in (None, "") else str(l.get(chave)) for _, chave in colunas]
+        saida.append("| " + " | ".join(valores) + " |")
+    return saida
+
+
+def secao_medidas_plano(medidas: dict) -> list[str]:
+    """Tabelas Markdown das tres medidas do plano de medicao e avisos da coleta."""
+    linhas = ["", "---", "", "## 4. Medidas do Plano de Medicao", "", "### Ritmo de fechamento das issues", ""]
+    linhas += _tabela_md([
+        ("Fase", "fase"), ("Inicio", "inicio"), ("Data media", "data_media"), ("Fim", "fim"),
+        ("Fechadas / Total", "_fechadas"), ("Fechadas ate a data media (%)", "taxa_fechamento_1a_metade_pct"),
+        ("Fechadas nos 2 ultimos dias", "fechadas_ultimos_2_dias"), ("Fechadas apos o fim", "fechadas_apos_fim"),
+        ("Fechadas no prazo (%)", "fechadas_no_prazo_pct"), ("Bloqueadas", "issues_bloqueadas_lista"),
+        ("Alerta de ritmo", "alerta_ritmo")
+    ], [dict(r, _fechadas=f"{r['issues_fechadas']} / {r['total_issues']}") for r in medidas["ritmo_fechamento"]])
+
+    linhas += ["", "### Acerto das estimativas por issue", "",
+               "Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio entre -20% e +20%. "
+               "O desvio de cada issue esta em `05_detalhamento_issues.csv`.", ""]
+    linhas += _tabela_md([
+        ("Fase", "fase"), ("Issues avaliadas", "issues_avaliadas"), ("Desvio da fase (%)", "desvio_fase_pct"),
+        ("Desvio mediano (%)", "desvio_mediano_pct"), ("Na faixa (%)", "issues_na_faixa_pct"),
+        ("Subestimadas", "issues_subestimadas"), ("Superestimadas", "issues_superestimadas")
+    ], medidas["acerto_fases"])
+
+    revisao = medidas["revisao"]
+    linhas += ["", "### Tempo de espera dos PRs por revisao", "",
+               "Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.", ""]
+    linhas += _tabela_md([
+        ("Fase", "fase"), ("PRs", "prs"), ("Integrados", "prs_integrados"),
+        ("Integrados com aprovacao", "prs_integrados_com_aprovacao"), ("Revisao formal (%)", "taxa_revisao_formal_pct"),
+        ("Sem revisao", "prs_sem_revisao"), ("Media (h)", "espera_media_h"), ("Mediana (h)", "espera_mediana_h"),
+        ("P80 (h)", "espera_p80_h"), ("P90 (h)", "espera_p90_h"), ("Acima de 24h", "prs_espera_acima_24h")
+    ], revisao["fases"])
+    linhas += ["", "### Quem revisou", ""]
+    linhas += _tabela_md([("Fase", "fase"), ("Revisor", "revisor"), ("PRs revisados", "prs_revisados"),
+                          ("Participacao (%)", "percentual")], revisao["revisores"])
+    linhas += ["", "### Autor por revisor", ""]
+    linhas += _tabela_md([("Fase", "fase"), ("Autor", "autor"), ("Revisor", "revisor"), ("PRs", "prs")],
+                         revisao["matriz"])
+    linhas += ["", "### PRs", ""]
+    linhas += _tabela_md([
+        ("PR", "_pr"), ("Fase", "fase"), ("Origem da fase", "origem_fase"), ("Autor", "autor"),
+        ("Situacao", "situacao"), ("Aberto em", "criado_em"), ("Primeira revisao", "primeira_revisao_em"),
+        ("Espera (h)", "espera_revisao_h"), ("Aprovado", "aprovado_formalmente"), ("Revisores", "revisores")
+    ], [dict(p, _pr=f"#{p['numero']}") for p in revisao["prs"]])
+
+    linhas += ["", "### Avisos da coleta", ""]
+    if medidas.get("avisos"):
+        linhas += _tabela_md([("Tipo", "tipo"), ("Issue/PR", "_ref"), ("Mensagem", "mensagem")],
+                             [dict(a, _ref=f"#{a['issue']}" if a["issue"] != "" else "") for a in medidas["avisos"]])
+    else:
+        linhas.append("Nenhum aviso.")
+    linhas.append("")
+    return linhas
+
+
+def gerar_relatorio_constructs(resultado: dict, config: dict, caminho_md: Path, medidas: dict | None = None) -> None:
     """
     Gera um arquivo Markdown com os 3 Measurement Constructs estruturados,
     tabelas Markdown prontas para o GitPage (#20 e #31) e a tabela LaTeX
@@ -966,6 +1548,8 @@ def gerar_relatorio_constructs(resultado: dict, config: dict, caminho_md: Path) 
         "```",
         ""
     ])
+    if medidas:
+        linhas.extend(secao_medidas_plano(medidas))
 
     caminho_md.parent.mkdir(parents=True, exist_ok=True)
     with open(caminho_md, "w", encoding="utf-8") as f:
@@ -1006,7 +1590,9 @@ def main() -> None:
         usar_offline=args.offline
     )
 
-    resultado = processar_dados(dados_brutos, config)
+    avisos: list[dict] = []
+    resultado = processar_dados(dados_brutos, config, avisos)
+    medidas = calcular_medidas_plano(resultado, dados_brutos, config, avisos)
 
     # 1. Salvar CSVs das 3 categorias + contribuicao individual + detalhamento
     salvar_csv(
@@ -1036,6 +1622,18 @@ def main() -> None:
         resultado["contribuicao_por_fase"]
     )
 
+    salvar_csv(
+        dir_saida / "07_resumo_entregas.csv",
+        ["entrega", "fases", "total_issues", "issues_concluidas", "issues_abertas", "progresso_pct", "issues_no_prazo", "issues_em_atraso", "aderencia_prazo_pct", "horas_estimadas", "horas_reais", "custo_estimado_brl", "custo_real_brl", "acuracia_estimativa_pct", "taxa_preenchimento_estimativa_pct", "lead_time_medio_dias"],
+        resultado["resumo_entregas"]
+    )
+
+    salvar_csv(
+        dir_saida / "08_contribuicao_por_entrega.csv",
+        ["entrega", "integrante", "login", "issues_fase_a", "issues_fase_b", "issues_atribuidas", "horas_estimadas", "horas_reais_fase_a", "horas_reais_fase_b", "horas_reais", "custo_real_brl", "percentual_esforco"],
+        resultado["contribuicao_por_entrega"]
+    )
+
     issues_csv = []
     for i in resultado["issues"]:
         copia = dict(i)
@@ -1045,16 +1643,44 @@ def main() -> None:
 
     salvar_csv(
         dir_saida / "05_detalhamento_issues.csv",
-        ["numero", "fase", "titulo", "estado", "assignees", "estimativa_h", "horas_reais_h", "custo_estimado", "custo_real", "prazo_str", "data_fechamento", "status_prazo", "lead_time_dias"],
+        ["numero", "fase", "titulo", "estado", "assignees", "estimativa_h", "horas_reais_h", "desvio_estimativa_pct", "classificacao_estimativa", "custo_estimado", "custo_real", "prazo_str", "data_fechamento", "status_prazo", "lead_time_dias"],
         issues_csv
     )
+
+    avisos.sort(key=lambda a: (a["tipo"], a["issue"] if isinstance(a["issue"], int) else 0))
+    medidas["avisos"] = avisos
 
     # 2. Gerar graficos PNG
     gerar_graficos(resultado, dir_saida / "graficos")
     gerar_graficos_por_fase(resultado, dir_saida / "graficos")
+    gerar_grafico_entrega_1(resultado, dir_saida / "graficos")
+
+    # Gerar Curva S de desempenho de execucao (esforco planejado vs. realizado)
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from gerar_grafico_desempenho import gerar_grafico_desempenho
+        gerar_grafico_desempenho(
+            dir_saida / "05_detalhamento_issues.csv",
+            [dir_saida / "graficos" / "08_desempenho_execucao_curva_s.png"]
+        )
+    except Exception as e:
+        print(f"[AVISO] Nao foi possivel gerar a Curva S automaticamente: {e}")
+
+    # Sincronizar PNGs gerados com static/img/gestao/
+    dir_static = raiz / "static" / "img" / "gestao"
+    if dir_static.exists():
+        for png in (dir_saida / "graficos").glob("*.png"):
+            shutil.copy2(png, dir_static / png.name)
+        print(f"[SYNC] Graficos sincronizados com: {dir_static}")
 
     # 3. Gerar documento com Measurement Constructs e tabelas Markdown/LaTeX
-    gerar_relatorio_constructs(resultado, config, dir_saida / "constructs_e_tabelas.md")
+    gerar_relatorio_constructs(resultado, config, dir_saida / "constructs_e_tabelas.md", medidas)
+
+    if avisos:
+        print(f"\n[AVISO] {len(avisos)} aviso(s) na leitura das issues e PRs:")
+        for a in avisos:
+            ref = f"#{a['issue']}" if a["issue"] != "" else "-"
+            print(f"  [{a['tipo']}] {ref}: {a['mensagem']}")
 
     print("\n[SUCESSO] Coleta e processamento PSM/CID finalizados!")
 

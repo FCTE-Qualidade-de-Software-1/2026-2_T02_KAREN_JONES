@@ -9,6 +9,8 @@ on:
 
 permissions:
   contents: write
+  issues: read
+  pull-requests: read
 
 jobs:
   coleta-psm:
@@ -40,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dados/gestao/
+          git add dados/gestao/ static/img/gestao/
           if git diff --staged --quiet; then
             echo "[INFO] Nenhuma alteração detectada nas métricas."
           else
