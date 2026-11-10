@@ -58,15 +58,15 @@ yarn test:coverage
 
 ### 2.2 Ambiente limpo
 
-O ambiente limpo segue as convenções de [G3](../fase-02/gqm-flexibilidade.md): contêiner ou máquina virtual sem ferramentas de desenvolvimento além das exigidas pela métrica. Ele é utilizado em M3.1.2, M3.3.1 e M3.3.2, conforme os procedimentos específicos de cada métrica. Para as execuções que utilizam o contêiner Node.js, a imagem de referência é a mesma definida no `Dockerfile` do Excalidraw, fixada pelo digest:
-
+O ambiente limpo segue as [convenções de coleta de G3](../fase-02/gqm-flexibilidade.md#2-convenções-de-coleta): contêiner ou máquina virtual sem ferramentas de desenvolvimento além das exigidas pela métrica. Ele é usado em [M3.1.2](../fase-02/gqm-flexibilidade.md#m312--proporção-de-ambientes-de-integração-com-sucesso), [M3.3.1](../fase-02/gqm-flexibilidade.md#m331--proporção-de-operações-de-pacote-bem-sucedidas) e [M3.3.2](../fase-02/gqm-flexibilidade.md#m332--proporção-de-passos-documentados-reproduzidos-sem-ajuste). Para os passos com Node.js, a imagem é a mesma do `Dockerfile` do Excalidraw, fixada pelo digest:
 
 ```bash
 docker run --rm -it node:24@sha256:8530f76a96d88820d288761f022e318970dda93d01536919fbc16076b7983e63 bash
 ```
 
-Nas execuções realizadas dentro do contêiner, o avaliador utiliza as versões das ferramentas previamente definidas na Seção 5. Em M3.3.2, são verificados separadamente os passos de execução local com Node.js e Yarn e os passos com Docker Compose, conforme o guia oficial. As versões das ferramentas e os requisitos do ambiente devem estar definidos antes da coleta. Durante a execução, o avaliador registra as versões efetivamente utilizadas para comprovar a conformidade com o ambiente planejado e documenta eventuais divergências.
+Dentro do contêiner, o avaliador clona o repositório e segue somente o guia do projeto, sem instalar antes as ferramentas da [seção 5](#5-ferramentas-de-análise-e-suas-versões). Toda ferramenta que faltar e que o guia não declare é registrada como pré-requisito não declarado, como pede M3.3.2. As versões de `node`, `npm`, `yarn` e `pnpm` do contêiner são registradas na primeira coleta e comparadas com as da seção 5.
 
+A imagem `node:24` não traz Docker. Por isso, os passos com Docker Compose de M3.3.2 rodam numa máquina virtual limpa que tem apenas Docker e Docker Compose instalados, o mesmo ambiente de [M3.3.3](../fase-02/gqm-flexibilidade.md#m333--implantação-com-docker). As versões dos dois são registradas na coleta.
 
 ### 2.3 Aplicação em execução (ambiente de teste)
 
@@ -102,8 +102,8 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 | Responsável | Métricas coletadas | Processador | Memória | Sistema operacional e versão | Navegador e versão |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Christopher | Análise estática e histórico: M1.1.1 a M1.5.3 | Intel Core i7-12650H | 32 GB | Windows 11 Pro 25H2 (build 26200.9711), com WSL2 (Ubuntu 24.04.5 LTS) | não se aplica |
-| Luiz Henrique Soares | Histórico de defeitos: M2.1.1 a M2.1.3 | Intel(R) Core(TM) i5-14450HX| 15,6 GB utilizável (16 GB instalados)| Windows 11 Home Single Language (Build 26300)| não se aplica |
-| Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | Intel(R) Core(TM) i5-14450HX| 15,6 GB utilizável (16 GB instalados)| Windows 11 Home Single Language (Build 26300)|  Mozilla Firefox 159.0.1|
+| Luiz Henrique Soares | Histórico de defeitos: M2.1.1 a M2.1.3 | Intel(R) Core(TM) i5-14450HX | 15,6 GB utilizável (16 GB instalados) | Windows 11 Home Single Language (Build 26300) | não se aplica |
+| Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | Intel(R) Core(TM) i5-14450HX | 15,6 GB utilizável (16 GB instalados) | Windows 11 Home Single Language (Build 26300) | Mozilla Firefox 159.0.1 |
 | Maria Eduarda | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
 | Maria Eduarda | Desempenho: M3.2.1 e M3.2.2 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
 
@@ -138,22 +138,22 @@ O aparelho precisa aceitar toque com mais de um dedo (ações 6 e 7: pinça e de
 
 A versão efetiva de cada ferramenta é registrada na primeira coleta, com o comando de versão e a saída. Versões já definidas na Fase 02 não mudam.
 
-| Ferramenta | Versão | Métricas | Comando de versão 
+| Ferramenta | Versão | Métricas | Comando de versão |
 | :--- | :--- | :--- | :--- |
 | Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 | `madge --version` |
-| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint) / 5.62.0 `@typescript-eslint/parser` | M1.3.1 | `npx eslint --version` e `yarn why @typescript-eslint/parser` |
+| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint), _a preencher_ (`@typescript-eslint/parser`) e 5.9.3 (TypeScript) | M1.3.1 | `npx eslint --version` e `npm ls @typescript-eslint/parser typescript`, na instalação da equipe, separada do projeto |
 | cloc | 1.86 | M1.4.2 | `cloc --version` |
-| GitHub CLI (`gh`) | 2.102.0  | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
+| GitHub CLI (`gh`) | 2.102.0 | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
 | Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 | `yarn vitest --version` |
 | `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 | `grep --version` |
-| Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` 1.0.30001701 | M3.1.1 |`npx browserslist --version` e `yarn why caniuse-lite`|
-| Node.js (ambiente Docker) | 24.16.0 | Construção Docker e métricas executadas na imagem Node fixada | `node --version` dentro do contêiner |
-| Node.js (execução nativa) | 24.20.0 (versão de referência) | Métricas que utilizam Node fora do contêiner | `node --version` na máquina responsável |
-| Yarn | 1.22.22 | M1.5.1, M3.3.2 |  `yarn --version`|
-| npm e pnpm | npm 11.13.0 (Maria Eduarda)  | M3.3.1 |`npm --version` e `pnpm --version` |
-| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
-| Vite e Next.js dos projetos mínimos | a preencher na criação dos projetos mínimos | M3.1.2 | `package.json` de cada projeto |
-| Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 |`git rev-parse HEAD` 
+| Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` 1.0.30001701 | M3.1.1 | `npx browserslist --version` e `yarn why caniuse-lite` |
+| Node.js (ambiente Docker) | 24.16.0 | M3.3.1, M3.3.2 e M3.3.3 | `node --version` dentro do contêiner |
+| Node.js (execução nativa) | Referência 24.16.0, a da imagem Docker (seção 1). Registrado: v24.14.1 (Christopher) | M1.1.1, M1.1.2, M1.1.3, M1.2.1, M1.3.1, M1.5.1, M3.1.1 | `node --version` na máquina de quem coleta |
+| Yarn | 1.22.22 | M1.5.1, M3.3.2 | `yarn --version` |
+| npm e pnpm | npm 11.13.0 (Maria Eduarda) / npm 11.11.0 (Christopher). pnpm: _a preencher_ | M3.3.1 | `npm --version` e `pnpm --version` |
+| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) / Docker 29.9.0 (Christopher) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
+| Vite e Next.js dos projetos mínimos | _a preencher na criação dos projetos mínimos_ | M3.1.2 | `package.json` de cada projeto |
+| Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 | `git rev-parse HEAD` |
 
 As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-02/gqm-confiabilidade.md), podem exigir uma versão de Node.js diferente da do commit avaliado. A versão usada em cada construção é registrada.
 
@@ -161,7 +161,7 @@ As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-0
 
 ## 6. Massa de dados
 
-Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilidade (G3) não podem ser calculadas. Todos os arquivos encontram-se versionados no repositório em `dados/fase-03/massa-de-dados/` e podem ser integralmente recriados por script, assegurando repetibilidade e reprodutibilidade independente (critérios F3-C1 e F3-C2).
+Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilidade (G3) não podem ser calculadas. Todos os arquivos encontram-se versionados no repositório em `dados/fase-03/massa-de-dados/` e podem ser integralmente recriados por script, assegurando repetibilidade e reprodutibilidade independente.
 
 | Conjunto | Conteúdo | Origem | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -175,7 +175,7 @@ Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilid
 
 ### 6.1 Justificativa da massa de dados
 
-Desenhar livremente durante as coletas impediria que dois avaliadores obtivessem o mesmo valor de tempo ou taxa de quadros. Por isso, a avaliação usa uma massa de dados fixa salva em `dados/fase-03/massa-de-dados/`, gerada por script (F3-C2 e F3-C8).
+Desenhar livremente durante as coletas impediria que dois avaliadores obtivessem o mesmo valor de tempo ou taxa de quadros. Por isso, a avaliação usa uma massa de dados fixa salva em `dados/fase-03/massa-de-dados/`, gerada por script.
 
 - **Cena de referência:** reúne um elemento de cada um dos 10 tipos definidos na Fase 02 (retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura). Ela é usada em [M2.4.1](../fase-02/gqm-confiabilidade.md) (restauração de sessão após fechar a aba ou matar o processo), [M2.4.2](../fase-02/gqm-confiabilidade.md) (compatibilidade de reabertura entre versões antigas e a atual), [M3.4.2](../fase-02/gqm-flexibilidade.md) (preservação de propriedades na exportação e reimportação em `.excalidraw`, PNG e SVG) e [M3.4.3](../fase-02/gqm-flexibilidade.md) (documentação dos campos do formato). Manter a mesma cena em todas essas métricas permite comparar os resultados diretamente.
 - **Cenas de escala:** quatro arquivos com 100, 1.000, 5.000 e 10.000 elementos, na proporção de 40% retângulos, 20% elipses, 20% setas e 20% textos, dispostos em grade. Essa proporção reflete diagramas típicos, onde caixas e textos predominam sobre conexões. Os quatro volumes permitem traçar a curva de tempo de abertura ([M3.2.1](../fase-02/gqm-flexibilidade.md)), medir a taxa de quadros ao arrastar 50 elementos ([M3.2.2](../fase-02/gqm-flexibilidade.md)) e identificar o tamanho máximo de cena que a aplicação consegue salvar e exportar sem travar o navegador ([M3.2.3](../fase-02/gqm-flexibilidade.md)). A disposição em grade evita que formas fiquem escondidas umas atrás das outras.
@@ -308,8 +308,7 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 
 ## Referências
 
-
-- 2026-2 Trabalho final completo v1. Projeto final da disciplina, 05/10/2026. Página 7: critérios F3-C2 e F3-C8.
+- 2026-2 Trabalho final completo v1. Projeto final da disciplina, 05/10/2026. Página 7.
 - [`package.json` da raiz do Excalidraw no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/package.json).
 - [`Dockerfile` do Excalidraw no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/Dockerfile) e [`docker-compose.yml`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/docker-compose.yml).
 - [Escopo, profundidade e objetos de avaliação](../fase-01/escopo-avaliacao.md), [GQM de Manutenibilidade](../fase-02/gqm-manutenibilidade.md), [GQM de Confiabilidade](../fase-02/gqm-confiabilidade.md), [GQM de Flexibilidade](../fase-02/gqm-flexibilidade.md) e [Níveis de pontuação e critérios de julgamento](../fase-02/pontuacao-julgamento.md).
@@ -323,4 +322,5 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
-| 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | 
+| 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | |
+| 1.4 | 10/11/2026 | Correção do ambiente limpo, das versões de Node.js, npm, Docker e do analisador do ESLint, dos links para as métricas de G3 e da formatação das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) | |
