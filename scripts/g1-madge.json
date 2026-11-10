@@ -1,8 +1,0 @@
-{
-  "fileExtensions": ["ts", "tsx"],
-  "excludeRegExp": ["(^|/)tests/", "(^|/)__snapshots__/", "\\.test\\.tsx?$", "\\.d\\.ts$"],
-  "detectiveOptions": {
-    "ts": { "skipTypeImports": true, "mixedImports": true },
-    "tsx": { "skipTypeImports": true, "mixedImports": true }
-  }
-}
