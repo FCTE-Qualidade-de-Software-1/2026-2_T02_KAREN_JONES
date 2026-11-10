@@ -212,7 +212,7 @@ Modificabilidade  & Baixo acoplamento entre componentes, ausência de funções 
 Testabilidade     & Testes automatizados em múltiplos níveis (unitários e de integração) e execução contínua no CI. & Suíte de testes automatizados no CI & Testes manuais em hardware heterogêneo \\
 \midrule
 \multicolumn{4}{l}{\textit{Confiabilidade}} \\
-Maturidade        & Frequência de lançamentos, rigor na revisão de PRs, checagem de tipos e lint e triagem organizada de defeitos. & Histórico de issues, releases e verificações pré-merge & Taxa real de falhas em produção \\
+Ausência de falhas & Frequência de lançamentos, rigor na revisão de PRs, checagem de tipos e lint e triagem organizada de defeitos. & Histórico de issues, releases e verificações pré-merge & Taxa real de falhas em produção \\
 Disponibilidade   & Operação offline via PWA e independência frente a falhas de serviços externos. & Service Worker, manifesto PWA e rotinas offline & Tempo de atividade e \textit{Service Level Agreement} (SLA) dos servidores \\
 Toler. a falhas   & Isolamento do editor local se a sessão colaborativa cair e tratamento de exceções em arquivos inválidos. & Tratamento de exceções e isolamento de falhas & Testes de estresse com injeção de pacotes \\
 Recuperabilidade  & Salvamento automático local, restauração do último estado e integridade do desfazer e refazer. & Persistência no IndexedDB e desfazer/refazer & Falhas de disco ou danos físicos no cliente \\
@@ -289,8 +289,8 @@ RQ-MAN-11 & O sistema apresenta condições adequadas para testes automatizados?
 RQ-MAN-12 & Os testes cobrem diferentes níveis (unitário, integração, \textit{End-to-End} (E2E))? & Testabilidade & Q1.5 \\
 RQ-MAN-13 & Os testes são executados automaticamente a cada PR? & Testabilidade & Q1.5 \\
 \midrule
-RQ-CONF-01 & Verificações automáticas atuam antes da integração? & Maturidade & Q2.1 \\
-RQ-CONF-02 & Defeitos são registrados e tratados de forma organizada? & Maturidade & Q2.1 \\
+RQ-CONF-01 & Verificações automáticas atuam antes da integração? & Ausência de falhas & Q2.1 \\
+RQ-CONF-02 & Defeitos são registrados e tratados de forma organizada? & Ausência de falhas & Q2.1 \\
 RQ-CONF-03 & O editor continua utilizável sem conexão após primeiro carregamento? & Disponibilidade & Q2.2 \\
 RQ-CONF-04 & O editor local funciona sem depender de sessão colaborativa? & Disponibilidade & Q2.2 \\
 RQ-CONF-05 & Funcionalidades essenciais se mantêm diante de problemas de rede? & Toler. a falhas & Q2.3 \\
@@ -381,7 +381,7 @@ M1.5.3 & (Contribuições verificadas / contribuições integradas com evidênci
 \subsection{Objetivo G2: Confiabilidade}
 \label{subsec:g2-confiabilidade}
 
-Analisar o editor, a aplicação web, os mecanismos de colaboração e de salvamento no navegador e o histórico público de defeitos, com o propósito de entender, com respeito à Confiabilidade, do ponto de vista dos usuários finais, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}), sem acesso aos servidores de produção. A questão Q2.1 corresponde à subcaracterística chamada Maturidade na Fase~1. A Tabela~\ref{tab:g2-metricas} e a Figura~\ref{fig:gqm-g2} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Confiabilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md}}.
+Analisar o editor, a aplicação web, os mecanismos de colaboração e de salvamento no navegador e o histórico público de defeitos, com o propósito de entender, com respeito à Confiabilidade, do ponto de vista dos usuários finais, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}), sem acesso aos servidores de produção. A Tabela~\ref{tab:g2-metricas} e a Figura~\ref{fig:gqm-g2} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Confiabilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md}}.
 
 \begin{table}[!ht]
 \centering

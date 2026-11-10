@@ -91,7 +91,7 @@ O propósito escolhido é **entender**. A equipe não mantém o Excalidraw e nã
 
 O contexto é o mesmo nos três objetivos: o código-fonte público do Excalidraw na versão de 18/10/2026, identificada no [escopo](../fase-01/escopo-avaliacao.md). A equipe analisa esse código, o histórico público do repositório e a aplicação construída a partir dessa versão e executada em ambiente de teste local, sem acesso aos servidores de produção.
 
-A origem de cada objetivo na Fase 01 é dada pela [ênfase](../fase-01/priorizacao-caracteristicas.md#etapa-1--ênfase-de-1-a-5-a-partir-dos-interessados), de 1 a 5, e pela [prioridade](../fase-01/priorizacao-caracteristicas.md#estimativa-de-risco-e-prioridade), que é o produto da ênfase pelo risco.
+A origem de cada objetivo na Fase 01 é dada pela [ênfase](../fase-01/priorizacao-caracteristicas.md#etapa-1-ênfase-de-1-a-5-a-partir-dos-interessados), de 1 a 5, e pela [prioridade](../fase-01/priorizacao-caracteristicas.md#estimativa-de-risco-e-prioridade), que é o produto da ênfase pelo risco.
 
 ### G1: Manutenibilidade
 
@@ -117,7 +117,7 @@ A origem de cada objetivo na Fase 01 é dada pela [ênfase](../fase-01/priorizac
 | :--- | :--- |
 | Analisar | o editor, a aplicação web e os mecanismos de colaboração e de salvamento no navegador, além do histórico público de defeitos relatados |
 | para o propósito de | entender |
-| com respeito a | Confiabilidade: ausência de falhas (Maturidade, na edição de 2011), disponibilidade, tolerância a falhas e recuperabilidade |
+| com respeito a | Confiabilidade: ausência de falhas, disponibilidade, tolerância a falhas e recuperabilidade |
 | do ponto de vista de | usuários finais |
 | no contexto de | código-fonte público na versão de 18/10/2026, avaliado por equipe independente, sem acesso aos servidores de produção |
 
@@ -158,7 +158,7 @@ Cada objetivo tem **uma questão por subcaracterística**, porque as subcaracter
 | G1 | [Q1.3](./gqm-manutenibilidade.md#5-q13-analisabilidade): O código pode ser entendido com facilidade, com apoio de documentação e de verificações automáticas? | Analisabilidade | [RQ-MAN-06 a RQ-MAN-08](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) |
 | G1 | [Q1.4](./gqm-manutenibilidade.md#6-q14-modificabilidade): As alterações no código ficam restritas a poucas partes, ou tendem a se espalhar e a passar por arquivos que concentram responsabilidades demais? | Modificabilidade | [RQ-MAN-09 e RQ-MAN-10](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) |
 | G1 | [Q1.5](./gqm-manutenibilidade.md#7-q15-testabilidade): O código pode ser verificado por testes automatizados, em diferentes níveis, executados a cada alteração? | Testabilidade | [RQ-MAN-11 a RQ-MAN-13](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) |
-| G2 | [Q2.1](./gqm-confiabilidade.md#3-q21-ausência-de-falhas): O projeto evita que falhas cheguem ao usuário e trata de forma organizada os defeitos que chegam? | Ausência de falhas (Maturidade, na edição de 2011) | [RQ-CONF-01 e RQ-CONF-02](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) |
+| G2 | [Q2.1](./gqm-confiabilidade.md#3-q21-ausência-de-falhas): O projeto evita que falhas cheguem ao usuário e trata de forma organizada os defeitos que chegam? | Ausência de falhas | [RQ-CONF-01 e RQ-CONF-02](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) |
 | G2 | [Q2.2](./gqm-confiabilidade.md#4-q22-disponibilidade): O editor continua disponível para o usuário sem conexão e sem depender de serviços externos? | Disponibilidade | [RQ-CONF-03 e RQ-CONF-04](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) |
 | G2 | [Q2.3](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas): O editor continua funcionando quando recebe dados inválidos ou quando a conexão com a colaboração falha? | Tolerância a falhas | [RQ-CONF-05 a RQ-CONF-07](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) |
 | G2 | [Q2.4](./gqm-confiabilidade.md#6-q24-recuperabilidade): O usuário recupera seu trabalho depois de fechar a aplicação, de reabrir arquivos antigos ou de cometer um erro de edição? | Recuperabilidade | [RQ-CONF-08 a RQ-CONF-11](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) |

@@ -43,7 +43,7 @@ As hipóteses podem ser valores individuais ou ideias comparativas, como "os X m
 
 | Objeto | Propósito | Foco da qualidade | Ponto de vista |
 | :--- | :--- | :--- | :--- |
-| Código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), testes, documentação para desenvolvedores e histórico de alterações | Entender | [Manutenibilidade](../fase-01/modelo-de-qualidade.md#manutenabilidade) | Mantenedores e contribuidores do projeto |
+| Código-fonte do Excalidraw (biblioteca, aplicação web e pacotes auxiliares), testes, documentação para desenvolvedores e histórico de alterações | Entender | [Manutenibilidade](../fase-01/modelo-de-qualidade.md#manutenibilidade) | Mantenedores e contribuidores do projeto |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
