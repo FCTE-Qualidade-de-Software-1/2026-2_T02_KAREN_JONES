@@ -30,7 +30,7 @@ A especificação da disciplina exige medidas cobrindo três categorias de infor
 | :--- | :--- | :--- | :--- |
 | **1. Calendário e Progresso** (*Schedule and Progress*) | Progresso das unidades de trabalho (*Work Unit Progress*) | *Committed vs. Completed Work Items* (Linha 1) | **As issues da fase fecham ao longo da fase ou se acumulam na véspera da entrega por bloqueios de dependência?** |
 | **2. Recursos e Custos** (*Resources and Cost*) | Desempenho financeiro e esforço (*Financial Performance*) | *Estimate vs. Actual Effort* (Linha 8) e *Estimation Accuracy* (Linha 9) | **Nossas estimativas de esforço por issue são confiáveis o bastante para planejar a fase seguinte?** |
-| **3. Desempenho dos Processos** (*Process Performance*) | Eficiência e velocidade do processo (*Process Efficiency Speed*) | *Cycle Time* (Linha 32) e *Peer Review Efficiency* | **Quanto tempo um Pull Request espera por revisão até o merge, e quem está revisando?** |
+| **3. Desempenho dos Processos** (*Process Performance*) | Eficiência e velocidade do processo (*Process Efficiency Speed*) | *Cycle Time / Lead Time* (Linha 32), aplicado à etapa de revisão do PR | **Quanto tempo um Pull Request espera por revisão até o merge, e quem está revisando?** |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base no PSM/CID Parte 1 [[1]](#ref-1) e na equipe T01 Mary Jackson [[2]](#ref-2), 2026.</p>
 
@@ -108,20 +108,20 @@ Na Entrega 1, tarefas interdependentes muitas vezes demoravam a ser integradas n
 | :--- | :--- |
 | **Categoria de Informação** | Desempenho dos Processos (*Process Performance*) |
 | **Necessidade de Informação** | Saber quanto tempo um Pull Request aguarda por revisão até o merge, se a revisão por pares está sendo cumprida formalmente e quem está revisando as entregas. |
-| **Conceito Mensurável** | Eficiência e velocidade do processo de revisão (*Peer Review Efficiency & PR Review Lead Time*). |
+| **Conceito Mensurável** | Eficiência e velocidade do processo (*Process Efficiency - Speed*), medida pelo *Cycle Time* da etapa de revisão do PR [[6, p. 24-26]](#ref-6). A distribuição de revisores é uma medida própria da equipe, sem correspondente na CID. |
 | **Entidades Relevantes** | Pull Requests integrados e abertos no repositório GitHub. |
-| **Atributos** | Timestamp de abertura do PR (`created_at`), timestamp da primeira submissão de revisão (`submitted_at`), timestamp de merge (`merged_at`), autor do PR e revisores aprovadores (`reviews`). |
-| **Medidas Básicas** | 1. `T_abertura`: data/hora de abertura do PR.<br/>2. `T_revisao`: data/hora da aprovação formal de revisão.<br/>3. `T_merge`: data/hora do merge na branch `main`.<br/>4. `Revisores`: login dos integrantes que realizaram a aprovação formal via GitHub. |
-| **Método de Medição** | Apuração de Pull Requests e revisores no GitHub. A automação completa via script coletor está em implementação na issue [#135](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/135), sendo realizada atualmente de forma manual e auditável pela equipe. |
+| **Atributos** | Timestamp de abertura do PR (`created_at`), timestamp da primeira revisão de outra pessoa (`submitted_at`), timestamp da primeira aprovação (`APPROVED`), timestamp de merge (`merged_at`), autor do PR e revisores (`reviews`). |
+| **Medidas Básicas** | 1. `T_abertura`: data/hora de abertura do PR.<br/>2. `T_revisao`: data/hora da primeira revisão de outra pessoa, de qualquer tipo (comentário, pedido de mudança ou aprovação). Revisões do próprio autor e de bots não contam.<br/>3. `T_aprovacao`: data/hora da primeira aprovação formal.<br/>4. `T_merge`: data/hora do merge na branch `main`.<br/>5. `Revisores`: login dos integrantes que revisaram o PR. |
+| **Método de Medição** | Leitura diária e automática dos PRs e das revisões pela API REST do GitHub via script `scripts/coleta_psm.py` ([#135](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/135)). A fase do PR é a da issue ligada a ele, ou a fase citada no título ou no corpo, ou a fase da data de abertura. |
 | **Tipo de Método de Medição** | Objetivo. |
 | **Escala** | Datas de calendário e números reais não negativos. |
 | **Tipo de Escala** | Intervalar para timestamps; Razão para tempo decorrido. |
-| **Unidade de Medida** | Horas e dias úteis. |
-| **Medidas Derivadas** | 1. **Tempo de Espera por Revisão (dias):** `Média(T_revisao - T_abertura)`<br/>2. **Taxa de Revisão Formal por Pares (%):** `(PRs com Aprovação Formal / Total de PRs Integrados) × 100`<br/>3. **Distribuição de Revisores:** proporção de revisões feitas por cada integrante da equipe. |
-| **Função de Medição** | Diferença temporal exata entre a abertura do PR e a revisão formal aprovada no GitHub. |
-| **Indicador** | Tabela de tempo de espera e taxa de aprovação por fase, além da matriz de autores vs. revisores. |
-| **Modelo de Análise** | Tempo de espera superior a 1 dia útil (24h) indica sobrecarga dos revisores ou falta de priorização; taxa de revisão formal abaixo de 100% viola a política de contribuição (`CONTRIBUTING.md`). |
-| **Critérios de Decisão** | **1. Alerta de PR Travado:** Todo PR aberto há mais de **24 horas úteis (1 dia)** sem revisão gera notificação direta ao revisor indicado no grupo de comunicação; se atingir 48h, o papel de revisor é reatribuído a qualquer outro integrante disponível.<br/>**2. Conformidade Rigorosa:** Nenhum merge direto por autor é permitido; PRs sem aprovação formal no GitHub bloqueiam o fechamento da issue correspondente. |
+| **Unidade de Medida** | Horas corridas. A CID aceita tempo corrido ou em dias úteis, desde que a escolha seja declarada [[6, p. 24]](#ref-6), e a equipe também trabalha nos fins de semana. |
+| **Medidas Derivadas** | 1. **Tempo de Espera por Revisão (h):** `T_revisao - T_abertura` de cada PR, resumido por fase em média, mediana, P80 e P90 [[6, p. 25]](#ref-6).<br/>2. **Taxa de Revisão Formal por Pares (%):** `(PRs com Aprovação Formal / Total de PRs Integrados) × 100`<br/>3. **Distribuição de Revisores:** proporção dos PRs revisados por cada integrante da equipe. |
+| **Função de Medição** | Diferença em horas entre a abertura do PR e a primeira revisão de outra pessoa no GitHub. |
+| **Indicador** | Tabela de tempo de espera (média, mediana, P80 e P90) e taxa de aprovação por fase, distribuição de revisores e matriz de autores vs. revisores, na seção 4 de `dados/gestao/constructs_e_tabelas.md`. |
+| **Modelo de Análise** | Tempo de espera superior a 24h indica sobrecarga dos revisores ou falta de priorização. Taxa de revisão formal abaixo de 100% viola a política de contribuição (`CONTRIBUTING.md`). |
+| **Critérios de Decisão** | **1. Alerta de PR Travado:** Todo PR aberto há mais de **24 horas** sem revisão gera notificação direta ao revisor indicado no grupo de comunicação. Se atingir 48h, o papel de revisor é reatribuído a qualquer outro integrante disponível.<br/>**2. Conformidade Rigorosa:** Nenhum merge direto por autor é permitido. PRs sem aprovação formal no GitHub bloqueiam o fechamento da issue correspondente. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
@@ -142,7 +142,8 @@ Para apoiar as decisões das Fases 3 e 4, a equipe compilou os dados auditados d
 | **Custo Real Investido (R$)** | R$ 2.605,95 | R$ 2.538,00 | **R$ 5.143,95** | $\le$ R$ 5.220,00 | Executado abaixo do teto financeiro estimado. |
 | **Aderência aos Prazos (%)** | 29,4% | 44,4% | **38,6%** | 100,0% | Não atendido. Concentração de entregas na véspera persistiu. |
 | **Lead Time Médio (dias)** | 1,23 dias | 3,97 dias | **2,91 dias** | $\le$ 3,00 dias | Média ponderada das 44 issues concluídas da Entrega 1. |
-| **Taxa de Revisão por Pares (%)** | 50,0% (5 de 10) | 45,0% (9 de 20) | **46,7% (14 de 30)** | 100,0% | Não atendido. Apenas revisões formais registradas via GitHub. |
+| **Taxa de Revisão por Pares (%)** | 43,8% (7 de 16) | 44,0% (11 de 25) | **43,9% (18 de 41)** | 100,0% | Não atendido. PRs integrados com aprovação formal de outro integrante, calculados pelo `scripts/coleta_psm.py`. |
+| **Tempo de Espera por Revisão (h)** | média 12,45 h, mediana 10,71 h | média 1,91 h, mediana 0,40 h | **média 6,01 h, mediana 0,79 h** | $\le$ 24 h | Atendido. Só 1 dos 18 PRs revisados esperou mais de 24h. Os 25 PRs sem revisão ficam fora do cálculo. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em `dados/gestao/` e no [Painel de Medição PSM](painel-psm.md), 2026.</p>
 
@@ -198,6 +199,8 @@ Toda decisão adotada nessas leituras (redistribuição de tarefa, pareamento, c
 > <Link id="ref-4">4.</Link> RAMOS, Cristiane Soares. **AULA 09 QSW1 PSM resumo**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Slides 6, 7, 19 e 23. Disponível no Moodle da disciplina.
 >
 > <Link id="ref-5">5.</Link> ISO/IEC/IEEE. **ISO/IEC/IEEE 15939:2017: Systems and software engineering — Measurement process**. International Organization for Standardization, Geneva, 2017.
+>
+> <Link id="ref-6">6.</Link> PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT. **PSM Continuous Iterative Development Measurement Framework: Part 2, Measurement Specifications**. Versão 2.1, 15 abr. 2021. Seção 8.5, Cycle Time / Lead Time, p. 24-26. Disponível no Moodle da disciplina.
 
 ---
 
@@ -207,3 +210,4 @@ Toda decisão adotada nessas leituras (redistribuição de tarefa, pareamento, c
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 07/11/2026 | Elaboração do plano de medição PSM/CID com base nas necessidades reais da equipe, constructs da Aula 09, linha de base auditada e critérios de decisão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.1 | 08/11/2026 | Correção de referências, alinhamento do ciclo de 4 leituras, lead time de 2,91 dias, esclarecimento do status do Construct 3 e remoção de termos de premissa | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| 1.2 | 09/11/2026 | Construct 3 alinhado ao *Cycle Time* da CID e à coleta automática, e linha de base da revisão de PRs recalculada pelo script | [Christopher Paraizo](https://github.com/wChrstphr) | |
