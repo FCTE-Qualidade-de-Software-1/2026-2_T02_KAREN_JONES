@@ -95,7 +95,7 @@ O contexto é o mesmo nos três objetivos: o código-fonte público do Excalidra
 
 ### G3 — Flexibilidade (antiga Portabilidade)
 
-Na ISO/IEC 25010:2023, adotada desde a Fase 01, a Portabilidade da edição de 2011 passou a se chamar Flexibilidade e ganhou a subcaracterística Escalabilidade. As demais (adaptabilidade, instalabilidade e substituibilidade) continuam as mesmas.
+Na ISO/IEC 25010:2023, adotada desde a Fase 01, a Flexibilidade da edição de 2011 passou a se chamar Flexibilidade e ganhou a subcaracterística Escalabilidade. As demais (adaptabilidade, instalabilidade e substituibilidade) continuam as mesmas.
 
 | Campo do template | Valor |
 | :--- | :--- |
