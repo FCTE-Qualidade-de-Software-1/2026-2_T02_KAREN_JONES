@@ -1,0 +1,28 @@
+
+> comb5-react18-next@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.15
+
+   Skipping validation of types
+   Linting ...
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Collecting page data ...
+   Generating static pages (0/2) ...
+ ✓ Generating static pages (2/2)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (pages)                             Size     First Load JS
+┌ ƒ /                                     1.83 kB          83 kB
+├   └ css/408c9cdaed88f663.css            29.6 kB
+└ ○ /404                                  182 B          81.3 kB
++ First Load JS shared by all             81.2 kB
+  ├ chunks/framework-840cff9d6bb95703.js  44.8 kB
+  ├ chunks/main-f7216c15f6be6fea.js       32.2 kB
+  └ other shared chunks (total)           4.17 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,20 @@
+npm warn deprecated sliced@1.0.1: Unsupported
+npm warn deprecated next@14.2.15: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/security-update-2025-12-11 for more details.
+
+added 308 packages, and audited 309 packages in 52s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+14 vulnerabilities (2 low, 1 moderate, 10 high, 1 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.

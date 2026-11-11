@@ -1,0 +1,7 @@
+Combinacao_ID,Framework_Empacotador,Versao_React,Status_Build,Codigo_Saida_Build,Erros_Console_Runtime,Desenho_Canvas,Status_Final,Observacoes_Diagnostico
+Comb1,Vite 5.4.11,React 17.0.2,Sucesso,0,Nenhum,Sim,Sucesso,"Build concluido em 12.02s sem erros. Editor carregado com canvas funcional e desenho de retangulo realizado com sucesso."
+Comb2,Vite 5.4.11,React 18.2.0,Sucesso,0,Nenhum,Sim,Sucesso,"Build concluido em 11.94s sem erros. createRoot operando normalmente, canvas e desenho de retangulo validados via automacao."
+Comb3,Vite 5.4.11,React 19.0.0,Sucesso,0,Nenhum,Sim,Sucesso,"Build concluido em 12.38s sem erros. Compatibilidade total com React 19 no Vite com desenho de retangulo confirmado."
+Comb4,Next.js 12.3.4,React 17.0.2,Falha,1,Attempted import error: useId e useDeferredValue inexistem no React 17,Nao,Falha,"Falha critica no Webpack durante next build: Excalidraw compilado importa useId e useDeferredValue diretamente de 'react', hooks inexistentes no React 17."
+Comb5,Next.js 14.2.15,React 18.3.1,Falha,1,Minified React error #31 (SSR element symbol mismatch) e ReferenceError: e is not defined em prerender,Nao,Falha,"Incompatibilidade estrutural no Next.js App/Pages Router: bundle do Excalidraw gerado sob React 19 emite simbolos JSX nao reconhecidos pelo motor de SSR do React 18."
+Comb6,Next.js 14.1.4,React 19.0.0,Sucesso,0,Nenhum,Sim,Sucesso,"Exemplo oficial do monorepo (with-nextjs): build concluido com 0 erros via dynamic import (ssr: false), canvas interativo e retangulo desenhado com sucesso."

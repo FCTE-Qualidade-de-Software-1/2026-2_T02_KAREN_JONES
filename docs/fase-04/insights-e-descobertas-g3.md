@@ -31,11 +31,17 @@ As medições foram conduzidas estritamente sob as condições de contorno fixad
 
 ## 2. Painel Consolidado das Métricas Coletadas
 
-Até o presente momento, **5 métricas de G3** foram integralmente coletadas, auditadas e confrontadas com as hipóteses e réguas da [Fase 02 (Pontuação e julgamento)](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3):
+Até o presente momento, **11 métricas de G3 (91,7% do objetivo)** foram integralmente coletadas, auditadas e confrontadas com as hipóteses e réguas da [Fase 02 (Pontuação e julgamento)](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3):
 
 | Métrica | Nome da Métrica | Questão | Valor Medido | Nível na Régua | Hipótese GQM | Status da Hipótese |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
 | **M3.1.1** | Cobertura de usuários pelos navegadores declarados | Q3.1 | **88,94%** | **Bom** (75 pts) | H3.1.1 ≥ 80% | **Confirmada** ✅ |
+| **M3.1.2** | Proporção de ambientes de integração com sucesso | Q3.1 | **66,7%** (4 de 6) | **Regular** (50 pts) | H3.1.2 = 6 de 6 | **Refutada** ❌ |
+| **M3.2.1** | Tempo de abertura por tamanho de cena | Q3.2 | **0,11 s** (1.000 elem) | **Bom** (87,5 pts) | H3.2.1 ≤ 1,0 s | **Confirmada** ✅ |
+| **M3.2.2** | Taxa de quadros durante a edição por tamanho de cena | Q3.2 | **52 FPS** (1.000 elem) | **Regular** (56,25 pts) | H3.2.2 ≥ 48 FPS | **Confirmada** ✅ |
+| **M3.2.3** | Tamanho máximo de cena salva e exportada | Q3.2 | **10.000 elem** | **Excelente** (100 pts) | H3.2.3 ≥ 5.000 elem | **Confirmada** ✅ |
+| **M3.3.1** | Proporção de operações de pacote bem-sucedidas | Q3.3 | **100,0%** (9 de 9) | **Excelente** (100 pts) | H3.3.1 = 9 de 9 | **Confirmada** ✅ |
+| **M3.3.2** | Proporção de passos documentados reproduzidos | Q3.3 | **85,7%** (6 de 7) | **Bom** (75 pts) | H3.3.2 ≥ 95% | **Refutada** ❌ |
 | **M3.3.3** | Implantação com Docker | Q3.3 | **100,0%** (4 de 4) | **Excelente** (100 pts) | H3.3.3 = 4 de 4 | **Confirmada** ✅ |
 | **M3.4.1** | Formatos de exportação abertos disponíveis | Q3.4 | **3 formatos** | **Excelente** (100 pts) | H3.4.1 ≥ 3 | **Confirmada** ✅ |
 | **M3.4.2** | Proporção de elementos preservados na reimportação | Q3.4 | **100,00%** | **Excelente** (100 pts) | H3.4.2 ≥ 95% | **Confirmada** ✅ |
@@ -142,6 +148,24 @@ A execução das métricas **M3.3.1** e **M3.3.2** complementou os dados da este
    - Contudo, a geração de tarball local a partir do commit de desenvolvimento (`excalidraw-excalidraw-0.18.0.tgz`, 31 MB) expõe um forte acoplamento com subpacotes internos do monorepo (`@excalidraw/common` e `@excalidraw/math`), os quais requerem publicação coordenada para permitir consumo isolado fora do monorepo via npm padrão.
    - Além disso, a execução de `require('@excalidraw/excalidraw')` direto no Node.js confirma que a biblioteca depende estritamente do DOM do navegador (`ReferenceError: document is not defined`), exigindo desativação de renderização no servidor (`ssr: false`) ao ser integrada em frameworks modernos como Next.js.
 
+
+---
+
+### 💡 Insight 7: Desafios de Compatibilidade em Frameworks SSR e Transição React 19 (Adaptabilidade — Q3.1 / M3.1.2)
+
+A avaliação da métrica **M3.1.2** sobre as **6 combinações** de ecossistema (React 17, 18 e 19 cruzados com Vite e Next.js) revelou um contraste marcante entre empacotadores tradicionais e frameworks modernos com renderização no servidor:
+
+1. **Robustez Plena sob Empacotador Vite (3 de 3 Sucessos):**
+   - No Vite 5.4.11, as 3 versões de React (**React 17.0.2**, **React 18.2.0** e **React 19.0.0**) compilaram com código de saída 0 em tempo médio de **~12,1 s**.
+   - Em todas as 3 variantes, o servidor de pré-visualização serviu a aplicação com HTTP 200, o canvas carregou sem exceções não tratadas e foi possível desenhar formas geométricas (retângulos com painel de propriedades) com validação automatizada via Puppeteer-core.
+2. **Fragilidade Estrutural em Frameworks SSR (Next.js — 1 de 3 Sucessos):**
+   - **React 17 + Next.js 12:** Falha crítica na compilação do Webpack (`next build`). Embora o `package.json` do `@excalidraw/excalidraw` declare formalmente compatibilidade com `"react": "^17.0.2 || ^18.2.0 || ^19.0.0"`, os arquivos JavaScript transcompilados do pacote realizam importações nomeadas dos hooks `useId` e `useDeferredValue` diretamente de `'react'`. Como esses hooks só foram criados no React 18, o Webpack acusa `Attempted import error` e encerra a compilação com código de erro 1.
+   - **React 18 + Next.js 14:** Falha durante a etapa de pré-renderização estática (`prerender page /`). A versão do Excalidraw no commit avaliado (`e1b7aac`) foi migrada internamente para compilar seu JSX sob a especificação do React 19 (emissão de metadados de nó com símbolos do React 19). Quando empacotado junto ao React 18 no Next.js, o motor de SSR do React 18 rejeita os elementos com o erro `Minified React error #31 (Objects are not valid as a React child / symbol mismatch)` e acusa `ReferenceError: e is not defined` na invocação de logs estáticos.
+   - **React 19 + Next.js 14:** Sucesso total comprovado no exemplo oficial do monorepo (`examples/with-nextjs`). O build completou em 65s via importação dinâmica com desativação de SSR (`dynamic(..., { ssr: false })`) e injeção de fontes estáticas na pasta pública, permitindo renderização perfeita do canvas e desenho de formas geométricas.
+3. **Julgamento e Hipótese:**
+   - Com **4 de 6 combinações bem-sucedidas (66,7%)**, a métrica atinge o nível **Regular (50 pontos)**.
+   - A hipótese **H3.1.2 (= 6 de 6 combinações) é REFUTADA** ❌, demonstrando que integradores terceiros enfrentam barreiras severas e precisam aplicar adaptações consideráveis caso operem fora do ecossistema React 19 / Vite.
+
 ---
 
 ## 4. Rastreabilidade com os Dados Brutos
@@ -151,6 +175,9 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 | Métrica | Arquivo de Dado Bruto | Finalidade da Evidência |
 | :---: | :--- | :--- |
 | **M3.1.1** | [`M3.1.1_cobertura_browserslist.txt`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.1_cobertura_browserslist.txt) | Saída de terminal com a cobertura populacional e lista de navegadores. |
+| **M3.1.2** | [`M3.1.2_matriz_integracao.csv`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_matriz_integracao.csv) | Tabela detalhada dos 6 ambientes com status de build, runtime, desenho e diagnóstico. |
+| **M3.1.2** | [`M3.1.2_build_logs.zip`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_build_logs.zip) | Arquivo compactado com os logs brutos completos de instalação e compilação dos 6 projetos. |
+| **M3.1.2** | [`M3.1.2_evidencia_ambiente.png`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_evidencia_ambiente.png) | Mosaico comprobatório com capturas de tela do canvas e desenho nos 4 ambientes aprovados. |
 | **M3.2.1** | [`M3.2.1_tempos_abertura.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.1_tempos_abertura.csv) | Tabela com as 20 medições e 4 medianas do tempo de abertura no DevTools. |
 | **M3.2.1** | `Q3.2-escalabilidade/traces_abertura/` | 20 arquivos JSON de perfil DevTools exportados com traces de renderização. |
 | **M3.2.2** | [`M3.2.2_fps_edicao.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv) | Taxas de quadros medidas via Frame Rendering Stats sob as 4 escalas de cena. |
@@ -162,7 +189,7 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 | **M3.3.3** | [`M3.3.3_verificacoes_docker.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.3_verificacoes_docker.csv) | Tabela de conferência das 4 verificações de deploy, container e healthcheck. |
 | **M3.4.1** | [`M3.4.1_catalogo_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.1_catalogo_formatos.csv) | Catálogo formal dos formatos abertos com MIME types e especificações W3C/ECMA. |
 | **M3.4.2** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_preservacao_formatos.csv) | Resumo das taxas de preservação de elementos por formato. |
-| **M3.4.2** | [`M3.4.2_relatorio_preservacao.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_relatorio_preservacao.json) | Relatório técnico JSON elemento a elemento gerado por `scripts/compara_elementos.py`. |
+| **M3.4.2** | [`M3.4.2_relatorio_preservacao.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_relatorio_preservacao.json) | Relatório técnico JSON elemento a elemento gerado por `compara_elementos.py`. |
 | **M3.4.2** | [`M3.4.2_arquivos_reimportados.zip`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_arquivos_reimportados.zip) | Pacote ZIP contendo as 6 cenas (originais exportadas e reimportadas salvas). |
 | **M3.4.3** | [`M3.4.3_campos_encontrados.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_campos_encontrados.json) | Lista das 52 propriedades extraídas da cena real. |
 | **M3.4.3** | [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv) | Auditoria campo a campo classificando cada propriedade como documentada ou omitida. |
@@ -180,18 +207,17 @@ Conforme as diretrizes de rastreabilidade e gestão da qualidade, a tabela a seg
 | **Tarde (10/11)** | 14:30 – 16:30 | **2h00** | • Recepção e importação da imagem Docker do Excalidraw (`excalidraw-avaliacao`).<br />• Instanciação e verificação de integridade do contêiner na porta 3000:80.<br />• Criação da estrutura de pastas em `dados/fase-04/brutos/` e templates de coleta.<br />• Execução dos comandos CLI do Browserslist e auditoria das 4 etapas de implantação Docker. | **M3.1.1** (Browserslist)<br />**M3.3.3** (Docker) |
 | **Noite / Madrugada (10-11/11)** | 21:00 – 00:20 | **3h20** | • Auditoria dos formatos abertos e testes de reimportação com conferência via `compara_elementos.py`.<br />• Extração e auditoria campo a campo do JSON Schema oficial (identificação da lacuna de documentação).<br />• Definição da Ação de Melhoria (F4-C5) para documentação formal do esquema do Excalidraw.<br />• Reorganização completa da pasta de dados brutos por questões GQM (`Q3.1` a `Q3.4`).<br />• Execução das medições de escalabilidade: 20 perfis de rastreamento no DevTools (tempo de abertura), testes de salvamento/exportação até 10.000 elementos e medição empírica de FPS com *Frame Rendering Stats*. | **M3.4.1** (Formatos)<br />**M3.4.2** (Preservação)<br />**M3.4.3** (Esquema)<br />**M3.2.1** (Abertura)<br />**M3.2.2** (FPS)<br />**M3.2.3** (Exportação) |
 | **Manhã (11/11)** | 11:38 – 12:35 | **0h57** | • Compilação local dos pacotes do monorepo (`yarn build:packages`) e geração do tarball `@excalidraw/excalidraw` (31 MB).<br />• Auditoria da execução nativa do servidor Vite (1,09s de inicialização e HTTP 200).<br />• Identificação e diagnóstico do comando legado `docker-compose` gerando código 127 vs `docker compose`.<br />• Teste das 9 operações de pacote nos 3 gerenciadores (`npm`, `yarn`, `pnpm`) e análise de acoplamento de monorepo. | **M3.3.1** (Operações pacote)<br />**M3.3.2** (Passos documentados) |
-| **Total Acumulado** | — | **~10h02** | **10 de 12 métricas concluídas (83,3% do objetivo G3)**, 20 traces DevTools, 5 planilhas CSV e relatórios técnicos versionados. | **G3 — 10 métricas** |
+| **Tarde (11/11)** | 12:40 – 13:51 | **1h11** | • Criação e empacotamento dos subpacotes locais (common, math, element, fractional-indexing).<br />• Configuração dos 6 ambientes de integração cruzando Vite e Next.js com React 17, 18 e 19.<br />• Execução de builds, identificação dos erros estruturais de compilação Webpack (React 17) e prerender SSR (React 18).<br />• Automação de testes de renderização com Puppeteer-core, validação de desenho de retângulos e geração do mosaico comprobatório. | **M3.1.2** (Matriz de integração) |
+| **Total Acumulado** | — | **~11h13** | **11 de 12 métricas concluídas (91,7% do objetivo G3)**, 20 traces DevTools, 6 planilhas CSV, pacote ZIP de logs de build e relatórios técnicos versionados. | **G3 — 11 métricas** |
 
 ---
 
 ## 6. Próximos Passos da Coleta
 
-Com 10 métricas concluídas cobrindo integralmente as questões de **Escalabilidade (Q3.2)**, **Instalabilidade (Q3.3)** e **Substituibilidade (Q3.4)**, além da cobertura de navegadores em **Adaptabilidade (Q3.1)**, restam apenas as 2 últimas medições de interface e integração:
+Com 11 métricas concluídas cobrindo integralmente as questões de **Escalabilidade (Q3.2)**, **Instalabilidade (Q3.3)** e **Substituibilidade (Q3.4)**, além da cobertura de navegadores e integração de bibliotecas em **Adaptabilidade (Q3.1)**, resta apenas a última medição empírica:
 
 1. **Adaptabilidade em Dispositivo Móvel (M3.1.3):**
-   - Execução do roteiro de 10 ações por toque e caneta stylus no iPad (A16) com gravação de tela contínua.
-2. **Matriz de Ambientes de Integração (M3.1.2):**
-   - Teste de montagem da biblioteca em projetos mínimos React 17/18/19 com Vite e Next.js.
+   - Execução do roteiro de 10 ações por toque e caneta stylus no iPad (A16) conectado à instância Docker local, com gravação de tela contínua.
 
 ---
 
@@ -203,3 +229,4 @@ Com 10 métricas concluídas cobrindo integralmente as questões de **Escalabili
 | `1.1` | 11/11/2026 | Inclusão dos resultados e insights de Escalabilidade (M3.2.1, M3.2.2 e M3.2.3), organização das pastas por questão GQM e rastreabilidade dos traces | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.2` | 11/11/2026 | Registro de esforço e detalhamento temporal por turnos (decisão, planejamento e execução empírica) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.3` | 11/11/2026 | Inclusão dos resultados e insights de Instalabilidade (M3.3.1 e M3.3.2) e atualização do esforço acumulado para 10 métricas | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.4` | 11/11/2026 | Inclusão dos resultados e diagnóstico técnico de Adaptabilidade em Integração (M3.1.2), mosaico de evidências e esforço acumulado de 11 métricas (91,7%) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
