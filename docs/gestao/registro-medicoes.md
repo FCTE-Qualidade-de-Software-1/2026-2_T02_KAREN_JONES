@@ -115,17 +115,19 @@ Conforme definido no [Plano de Medição PSM](plano-medicao-psm.md), a equipe av
 
 <p className="tabela-titulo">Tabela 4: Indicadores preliminares apurados na Medição 1</p>
 
-| Indicador | Meta / Esperado | Valor Coletado | Situação |
+| Indicador | Meta / Esperado | Valor Coletado (11/11/2026) | Situação |
 | :--- | :---: | :---: | :---: |
-| Issues Concluídas na Fase 3 | Pelo menos 10 de 19 | *A coletar em 11/11* | — |
-| Progresso da Fase 3 (%) | Pelo menos 50,0% | *A coletar em 11/11* | — |
-| Aderência aos Prazos Intermediários | Pelo menos 70,0% | *A coletar em 11/11* | — |
-| Horas Reais Consumidas (h) | Aprox. 22,0 h | *A coletar em 11/11* | — |
-| Governança de Preenchimento | 100,0% | *A coletar em 11/11* | — |
+| Issues Concluídas na Fase 3 | Pelo menos 10 de 19 | **13 de 23** | **Atingido** ✅ |
+| Progresso da Fase 3 (%) | Pelo menos 50,0% | **56,5%** | **Atingido** ✅ |
+| Aderência aos Prazos Intermediários | Pelo menos 70,0% | **8,7%** (2 de 23) | **Atenção** (Ajuste decorrente do foco antecipado na F4) |
+| Horas Reais Consumidas (h) | Aprox. 22,0 h | **41,0 h** (de 48,0 h orçadas) | **Conforme** (Consumo alinhado à complexidade) |
+| Governança de Preenchimento | 100,0% | **100,0%** | **Excelente** ✅ |
+
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026. Extraído da base oficial `dados/gestao/` via script PSM.</p>
 
 ### 3.2. Análise Crítica e Gatilhos de Ação
-* **Verificação de Gargalos:** Avaliar se as issues de Prioridade Alta da Fase 3 ([#94](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/94) e [#95](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/95)) foram homologadas sem travar a elaboração dos questionários e roteiros.
-* **Gatilho de Decisão:** Caso o progresso em 11/11 esteja abaixo de 50%, convocar reunião extraordinária no Discord para redistribuição imediata de tarefas bloqueadas.
+* **Verificação de Gargalos:** As issues de Prioridade Alta de insumo essencial da Fase 3 ([#96](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/96) Recursos e Ambiente, [#97](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/97) Massa de Dados e [#100](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/100) Instruções G3) foram devidamente finalizadas e homologadas, permitindo o avanço e a conclusão antecipada de 100% da coleta das métricas da Fase 4 para o objetivo G3 (Flexibilidade).
+* **Avaliação do Gatilho de Decisão:** O progresso apurado da Fase 3 atingiu **56,5%** (superando com folga o limite crítico de 50,0%). Portanto, **não foi necessário acionar reunião extraordinária de emergência para redistribuição de tarefas**. A equipe mantém o foco para concluir as instruções restantes de G1/G2 e preparar os slides para o Ponto de Controle 2 em 16/11/2026.
 
 ---
 
@@ -182,3 +184,4 @@ Conforme definido no [Plano de Medição PSM](plano-medicao-psm.md), a equipe av
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 07/11/2026 | Criação do Registro de Medições e Decisões com Medição 0 (Linha de base E1), análise causal de dependência de tarefas, decisões D1-D6 e templates das medições 1 e 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
 | 1.1 | 08/11/2026 | Alinhamento do gatilho de 50%, Medição 3 em 22/11, esclarecimento do progresso da F2, Construct 2 e autoria das fontes | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
+| 1.2 | 11/11/2026 | Apuração e registro dos indicadores quantitativos da Medição 1 (Ponto de Controle Intermediário da Fase 3), análise do gatilho de decisão e status dos bloqueios | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
