@@ -60,6 +60,21 @@ Este registro é da preparação. As condições específicas de cada medição 
 
 Na preparação, a instalação das dependências e o build dos pacotes foram concluídos. Uma verificação adicional de cobertura apresentou 10 testes com falha e 10 erros; as falhas precisam ser investigadas antes de usar esse procedimento na coleta de G1. Essa verificação não é um resultado de coleta.
 
+### Ambiente de Maria Eduarda
+
+| Item | Registro |
+| :--- | :--- |
+| Data da preparação | 10/11/2026 |
+| Métricas | G3: M3.1.1 a M3.4.3 |
+| Commit do Excalidraw conferido | `e1b7aacb356a492aa1e0fc6eb57b8896124027f0` |
+| Sistema operacional e navegador | Zorin OS 18.1 (Linux); Mozilla Firefox 159.0.1 |
+| Ferramentas e versões usadas | Git 2.43.0; Node.js 24.16.0; npm 11.13.0; Docker 29.9.3 (build 5457199); Docker Compose 5.7.0; Python 3.12.3 |
+| Aplicação local e porta, se necessário | Imagem `excalidraw-avaliacao` criada a partir do commit avaliado; contêiner `excalidraw-avaliacao-teste` em execução (`Up`) com verificação de integridade aprovada (`healthy`); aplicação acessível e operacional em `http://localhost:3000`. |
+| Desvios e motivo | Nenhum desvio em relação ao planejado; porta 3000 padrão utilizada com sucesso e versões de Node.js e Docker idênticas às previstas no plano de recursos e ambiente da Fase 03. |
+| Pendências | Sessão de início da coleta com os três responsáveis. |
+
+Na preparação, a imagem Docker foi gerada com sucesso via `docker build -t excalidraw-avaliacao .` e o contêiner inicializado via `docker run -d --name excalidraw-avaliacao-teste -p 3000:80 excalidraw-avaliacao`. O healthcheck respondeu com status `healthy` e a interface gráfica do editor no navegador respondeu com sucesso (código HTTP 200 via Nginx e canvas funcional), validando os pré-requisitos para as coletas de M3.3.2 e M3.3.3.
+
 ## Início da coleta
 
 A sessão de início com os três responsáveis ainda precisa acontecer e ser registrada.
@@ -68,4 +83,5 @@ A sessão de início com os três responsáveis ainda precisa acontecer e ser re
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 10/11/2026 | Organização do repositório de medidas da Fase 04 | Luiz Henrique Soares | |
+| 1.0 | 10/11/2026 | Organização do repositório de medidas da Fase 04 | Luiz Henrique Soares | Maria Eduarda |
+| 1.1 | 10/11/2026 | Registro do ambiente de medição de Maria Eduarda (G3) e validação da preparação do contêiner Docker | Maria Eduarda | Luiz Henrique Soares |
