@@ -58,7 +58,7 @@ yarn test:coverage
 
 ### 2.2 Ambiente limpo
 
-O ambiente limpo segue as [convenções de coleta de G3](../fase-02/gqm-flexibilidade.md#2-convenções-de-coleta): contêiner ou máquina virtual sem ferramentas de desenvolvimento além das exigidas pela métrica. Ele é usado em [M3.1.2](../fase-02/gqm-flexibilidade.md#m312--proporção-de-ambientes-de-integração-com-sucesso), [M3.3.1](../fase-02/gqm-flexibilidade.md#m331--proporção-de-operações-de-pacote-bem-sucedidas) e [M3.3.2](../fase-02/gqm-flexibilidade.md#m332--proporção-de-passos-documentados-reproduzidos-sem-ajuste). Para os passos com Node.js, a imagem é a mesma do `Dockerfile` do Excalidraw, fixada pelo digest:
+O ambiente limpo segue as [convenções de coleta de G3](../fase-02/gqm-flexibilidade.md#2-convenções-de-coleta): contêiner ou máquina virtual sem ferramentas de desenvolvimento além das exigidas pela métrica. Ele é usado em [M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso), [M3.3.1](../fase-02/gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) e [M3.3.2](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste). Para os passos com Node.js, a imagem é a mesma do `Dockerfile` do Excalidraw, fixada pelo digest:
 
 ```bash
 docker run --rm -it node:24@sha256:8530f76a96d88820d288761f022e318970dda93d01536919fbc16076b7983e63 bash
@@ -66,7 +66,7 @@ docker run --rm -it node:24@sha256:8530f76a96d88820d288761f022e318970dda93d01536
 
 Dentro do contêiner, o avaliador clona o repositório e segue somente o guia do projeto, sem instalar antes as ferramentas da [seção 5](#5-ferramentas-de-análise-e-suas-versões). Toda ferramenta que faltar e que o guia não declare é registrada como pré-requisito não declarado, como pede M3.3.2. As versões de `node`, `npm`, `yarn` e `pnpm` do contêiner são registradas na primeira coleta e comparadas com as da seção 5.
 
-A imagem `node:24` não traz Docker. Por isso, os passos com Docker Compose de M3.3.2 rodam numa máquina virtual limpa que tem apenas Docker e Docker Compose instalados, o mesmo ambiente de [M3.3.3](../fase-02/gqm-flexibilidade.md#m333--implantação-com-docker). As versões dos dois são registradas na coleta.
+A imagem `node:24` não traz Docker. Por isso, os passos com Docker Compose de M3.3.2 rodam numa máquina virtual limpa que tem apenas Docker e Docker Compose instalados, o mesmo ambiente de [M3.3.3](../fase-02/gqm-flexibilidade.md#m333-implantação-com-docker). As versões dos dois são registradas na coleta.
 
 ### 2.3 Aplicação em execução (ambiente de teste)
 

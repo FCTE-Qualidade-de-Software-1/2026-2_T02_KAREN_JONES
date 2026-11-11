@@ -81,7 +81,7 @@ rm .madgerc
 
 ### 2.2 M1.1.1: ciclos de dependência entre pacotes
 
-[Ficha M1.1.1](../fase-02/gqm-manutenibilidade.md#m111--ciclos-de-dependência-entre-pacotes)
+[Ficha M1.1.1](../fase-02/gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes)
 
 **Dado bruto:** `M1.1.1_grafo-madge.json`, da seção 2.1.
 
@@ -89,7 +89,7 @@ rm .madgerc
 
 ### 2.3 M1.1.2: importações que violam a direção declarada
 
-[Ficha M1.1.2](../fase-02/gqm-manutenibilidade.md#m112--importações-que-violam-a-direção-declarada)
+[Ficha M1.1.2](../fase-02/gqm-manutenibilidade.md#m112-importações-que-violam-a-direção-declarada)
 
 Copiar a regra de lint do commit:
 
@@ -103,7 +103,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 ### 2.4 M1.1.3: acoplamento e instabilidade de cada pacote
 
-[Ficha M1.1.3](../fase-02/gqm-manutenibilidade.md#m113--acoplamento-e-instabilidade-de-cada-pacote)
+[Ficha M1.1.3](../fase-02/gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote)
 
 **Dado bruto:** `M1.1.1_grafo-madge.json`, agregado por pacote como em M1.1.1.
 
@@ -115,7 +115,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 ### 3.1 M1.2.1: arquivos de pacotes de base com dependência de React ou do navegador
 
-[Ficha M1.2.1](../fase-02/gqm-manutenibilidade.md#m121--arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador)
+[Ficha M1.2.1](../fase-02/gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador)
 
 1. Buscar com `grep`, em todo o código de produção, as importações de `react` e `react-dom` e os usos de `window.` e `document.`:
 
@@ -134,7 +134,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 ### 3.2 M1.2.2: proporção de propriedades públicas documentadas
 
-[Ficha M1.2.2](../fase-02/gqm-manutenibilidade.md#m122--proporção-de-propriedades-públicas-documentadas)
+[Ficha M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas)
 
 1. Copiar a declaração de `ExcalidrawProps`:
 
@@ -157,7 +157,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 ### 4.1 M1.3.1: perfil de risco de complexidade das funções
 
-[Ficha M1.3.1](../fase-02/gqm-manutenibilidade.md#m131--perfil-de-risco-de-complexidade-das-funções) e [faixas de M1.3.1](../fase-02/pontuacao-julgamento.md#31-faixas-de-m131)
+[Ficha M1.3.1](../fase-02/gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) e [faixas de M1.3.1](../fase-02/pontuacao-julgamento.md#31-faixas-de-m131)
 
 1. Executar o ESLint do commit com a regra `complexity` em limite 0, para que todas as funções sejam informadas:
 
@@ -182,7 +182,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 ### 4.2 M1.3.2: cobertura da documentação para desenvolvedores
 
-[Ficha M1.3.2](../fase-02/gqm-manutenibilidade.md#m132--cobertura-da-documentação-para-desenvolvedores)
+[Ficha M1.3.2](../fase-02/gqm-manutenibilidade.md#m132-cobertura-da-documentação-para-desenvolvedores)
 
 1. Inspecionar `README.md`, `CONTRIBUTING.md` e `AGENTS.md` da raiz e as páginas de `dev-docs/docs/` no commit.
 2. Preencher `M1.3.2_lista-verificacao.csv` com as colunas `topico,presente,arquivo-e-secao` e uma linha para cada tópico: guia de contribuição, preparação do ambiente, convenções de código e arquitetura ou organização do código. O tópico só está presente se houver um documento ou uma seção dedicada a ele.
@@ -193,7 +193,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 ### 4.3 M1.3.3: verificações estáticas executadas automaticamente
 
-[Ficha M1.3.3](../fase-02/gqm-manutenibilidade.md#m133--verificações-estáticas-executadas-automaticamente)
+[Ficha M1.3.3](../fase-02/gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente)
 
 1. Listar os fluxos que mencionam `pull_request` e copiar cada um, junto com os scripts do `package.json`:
 
@@ -241,7 +241,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 ### 5.2 M1.4.1: mediana de arquivos de produção alterados por contribuição
 
-[Ficha M1.4.1](../fase-02/gqm-manutenibilidade.md#m141--mediana-de-arquivos-de-produção-alterados-por-contribuição)
+[Ficha M1.4.1](../fase-02/gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição)
 
 **Dados brutos:** os da seção 5.1, `M1.4.1_prs.json`, `M1.4.1_pr-<N>-arquivos.json` e `M1.4.1_exclusoes.csv`.
 
@@ -249,7 +249,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 ### 5.3 M1.4.2: arquivos de produção extensos
 
-[Ficha M1.4.2](../fase-02/gqm-manutenibilidade.md#m142--arquivos-de-produção-extensos)
+[Ficha M1.4.2](../fase-02/gqm-manutenibilidade.md#m142-arquivos-de-produção-extensos)
 
 1. Contar as linhas de cada arquivo de produção:
 
@@ -267,7 +267,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 ### 5.4 M1.4.3: proporção de contribuições que alteram arquivos extensos
 
-[Ficha M1.4.3](../fase-02/gqm-manutenibilidade.md#m143--proporção-de-contribuições-que-alteram-arquivos-extensos)
+[Ficha M1.4.3](../fase-02/gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos)
 
 **Dados brutos:** os de M1.4.1, com as mesmas exclusões, e `M1.4.2_cloc.json`.
 
@@ -283,7 +283,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 ### 6.1 M1.5.1: cobertura de linhas por pacote
 
-[Ficha M1.5.1](../fase-02/gqm-manutenibilidade.md#m151--cobertura-de-linhas-por-pacote)
+[Ficha M1.5.1](../fase-02/gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote)
 
 1. Executar a suíte com o comando do próprio projeto e copiar o relatório:
 
@@ -301,7 +301,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 ### 6.2 M1.5.2: distribuição dos testes por nível
 
-[Ficha M1.5.2](../fase-02/gqm-manutenibilidade.md#m152--distribuição-dos-testes-por-nível)
+[Ficha M1.5.2](../fase-02/gqm-manutenibilidade.md#m152-distribuição-dos-testes-por-nível)
 
 1. Listar as suítes de todos os pacotes, inclusive as de `excalidraw-app/tests/`, e buscar as chamadas que definem cada nível:
 
@@ -325,7 +325,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 ### 6.3 M1.5.3: proporção de contribuições com testes executados antes da integração
 
-[Ficha M1.5.3](../fase-02/gqm-manutenibilidade.md#m153--proporção-de-contribuições-com-testes-executados-antes-da-integração)
+[Ficha M1.5.3](../fase-02/gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração)
 
 1. Para cada *pull request* da seção 5.1, buscar as execuções de `test-coverage-pr.yml` sobre o último commit (`headRefOid`) e os passos de cada execução:
 
