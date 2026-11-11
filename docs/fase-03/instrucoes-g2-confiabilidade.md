@@ -89,30 +89,24 @@ Para cada métrica, conferir: (1) todas as entradas/PRs estão identificados; (2
 
 **Ficha:** [M2.1.1](../fase-02/gqm-confiabilidade.md#m211--proporção-de-correções-entre-as-contribuições-integradas). **Faixa:** [seção 4, M2.1.1](../fase-02/pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2).
 
-1. Com `gh auth status` válido, executar a busca abaixo. A divisão em intervalos mensais evita atingir o limite de 1.000 registros de uma única busca do GitHub. Executar **uma vez para cada intervalo** da tabela e substituir `INICIO`, `FIM` e `ID`:
-
-   | `ID` | `INICIO` | `FIM` |
-   | :--- | :--- | :--- |
-   | `01` | `2026-04-18` | `2026-04-30` |
-   | `02` | `2026-05-01` | `2026-05-31` |
-   | `03` | `2026-06-01` | `2026-06-30` |
-   | `04` | `2026-07-01` | `2026-07-31` |
-   | `05` | `2026-08-01` | `2026-08-31` |
-   | `06` | `2026-09-01` | `2026-09-30` |
-   | `07` | `2026-10-01` | `2026-10-18` |
+1. Com a GitHub CLI (`gh`) autenticada (`gh auth status`), consultar os *pull requests* integrados no ramo `master` do Excalidraw durante a janela histórica de **18/04/2026 a 18/10/2026**. Na raiz do repositório de avaliação, executar:
 
    ```bash
    gh api --method GET search/issues \
-     -f q='repo:excalidraw/excalidraw is:pr is:merged base:master merged:INICIO..FIM' \
+     -f q='repo:excalidraw/excalidraw is:pr is:merged base:master merged:2026-04-18..2026-10-18' \
      -F per_page=100 --paginate --slurp \
-     > dados/fase-04/brutos/M2.1.1_busca_ID.json
+     > dados/fase-04/brutos/M2.1.1_prs_integrados.json
    ```
 
-2. Abrir cada JSON salvo (um vetor de páginas, com campo `items` por página). **Saída esperada:** objetos de PR com `number`, `title`, `user.login` e `pull_request.merged_at`. Confirmar que a soma dos itens por período não supera o teto da busca; se superar, dividir novamente por dias. Não usar apenas o campo `total_count` como lista de PRs.
-3. Transcrever um registro por PR para **`M2.1.1_prs.csv`** com colunas `numero,titulo,autor,merged_at,escopo,automacao_excluida,elegivel,eh_fix,motivo`. Eliminar números duplicados; excluir PRs automáticos de **dependências e traduções** conforme a ficha. Guardar a decisão para cada exclusão na coluna `motivo`. Classificar como `eh_fix=sim` somente títulos que começam com tipo `fix` (por exemplo, `fix(editor): ...`); registrar o escopo `editor`, `app` etc.
-4. **Calcular:** `100 × total de PRs elegíveis fix / total de PRs elegíveis integrados`. Registrar separadamente a quantidade de correções por escopo. **Saída esperada:** percentual de 0 a 100 e uma tabela de distribuição. Se não houver PRs elegíveis, informar impossibilidade de cálculo; não dividir por zero.
+   **Saída esperada:** arquivo `M2.1.1_prs_integrados.json` com as respostas da API, incluindo os PRs integrados na janela. Uma consulta prévia pela interface do GitHub apresentou **150 PRs**; esse total deve ser conferido novamente na coleta. Se a API indicar mais de 1.000 resultados ou `incomplete_results=true`, subdividir a consulta em intervalos menores, salvar os arquivos separadamente e registrar a divisão utilizada. O diretório `dados/fase-04/brutos/` deve existir antes da execução.
 
-**Dados brutos:** `M2.1.1_busca_01.json` a `_07.json` e `M2.1.1_prs.csv`; identificação e resultado em `M2.1.1_coleta.csv`. **Sem vídeo** (coleta via API).
+2. Abrir `M2.1.1_prs_integrados.json`. Como foi utilizado `--slurp`, o conteúdo é uma lista de páginas; em cada página, os PRs ficam no campo `items`. Identificar para cada PR seu número (`number`), título (`title`), autor (`user.login`) e data de integração. Conferir que o total de itens retornados corresponde ao total indicado pela busca; não utilizar apenas `total_count` como se fosse a lista de PRs.
+
+3. Registrar um PR por linha em **`M2.1.1_prs.csv`**, com as colunas `numero,titulo,autor,merged_at,escopo,automacao_excluida,elegivel,eh_fix,motivo`. Remover duplicações pelo número do PR e excluir as contribuições automáticas de **atualização de dependências e traduções**, conforme a ficha da Fase 2. Justificar cada exclusão na coluna `motivo`. Classificar como correção (`eh_fix=sim`) somente a contribuição elegível cujo título começa com `fix` (por exemplo, `fix(editor): ...`). Registrar também o escopo indicado no título, como `editor` ou `app`.
+
+4. **Calcular:** `100 × número de PRs elegíveis classificados como fix / número total de PRs elegíveis integrados`. Registrar separadamente a distribuição das correções por escopo. **Saída esperada:** percentual entre 0 e 100, acompanhado das quantidades utilizadas no numerador e no denominador e da distribuição por escopo. Se não houver PRs elegíveis, informar que o cálculo não é possível.
+
+**Dados brutos:** `dados/fase-04/brutos/M2.1.1_prs_integrados.json` e `dados/fase-04/brutos/M2.1.1_prs.csv`. Registrar identificação do avaliador, data, horário, versão da CLI, janela histórica, resultado e desvios em `dados/fase-04/brutos/M2.1.1_coleta.csv`. **Sem vídeo**, pois a coleta utiliza a API do GitHub.
 
 ### M2.1.2 — Mediana entre abertura do relato e integração da correção
 
