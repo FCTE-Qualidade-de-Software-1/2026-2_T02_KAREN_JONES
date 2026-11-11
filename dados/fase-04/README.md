@@ -20,7 +20,11 @@ Este diretório contém os dados brutos e consolidados da avaliação empírica 
 | `M3.2.1_tempos_abertura.csv` | **M3.2.1** | Modelo de planilha para registro das 5 repetições do tempo de abertura das cenas de escala no DevTools. |
 | `M3.2.2_fps_edicao.csv` | **M3.2.2** | Modelo de planilha para registro das taxas de quadros por segundo (FPS) durante edição contínua. |
 | `M3.2.3_tamanho_maximo_salvamento.csv` | **M3.2.3** | Modelo de planilha para teste de estresse de salvamento e exportação de cenas grandes. |
+| `M3.3.3_verificacoes_docker.csv` | **M3.3.3** | Tabela de conferência das 4 verificações de implantação com Docker (build, run, healthcheck, navegação). |
 | `M3.4.1_catalogo_formatos.csv` | **M3.4.1** | Catálogo dos formatos abertos suportados pelo Excalidraw, tipos MIME e especificações de referência. |
+| `M3.4.2_preservacao_formatos.csv` | **M3.4.2** | Resumo da proporção de preservação de elementos após exportação e reimportação nos 3 formatos. |
+| `M3.4.2_relatorio_preservacao.json` | **M3.4.2** | Relatório técnico detalhado da comparação elemento a elemento realizado por `compara_elementos.py`. |
+| `M3.4.2_arquivos_reimportados.zip` | **M3.4.2** | Pacote ZIP contendo os arquivos exportados e reimportados da cena de referência. |
 | `M3.4.3_campos_encontrados.json` | **M3.4.3** | Lista de todas as 52 propriedades reais extraídas da cena de referência do Excalidraw. |
 | `M3.4.3_conferencia_campos.csv` | **M3.4.3** | Auditoria campo a campo contra o guia oficial de especificação técnica (`json-schema.mdx`). |
 | `M3.4.3_relatorio.txt` | **M3.4.3** | Relatório de auditoria com percentual de campos documentados e lista de campos omitidos. |
