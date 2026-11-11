@@ -24,7 +24,9 @@ Este diretório contém os dados brutos e consolidados da avaliação empírica 
 | `Q3.1-adaptabilidade/M3.1.2_matriz_integracao.csv` | **M3.1.2** | Matriz de avaliação das 6 combinações de integração (React 17, 18, 19 × Vite, Next.js). |
 | `Q3.1-adaptabilidade/M3.1.2_build_logs.zip` | **M3.1.2** | Arquivo compactado contendo todos os logs brutos de compilação e instalação dos 6 ambientes. |
 | `Q3.1-adaptabilidade/M3.1.2_evidencia_ambiente.png` | **M3.1.2** | Mosaico comprobatório com capturas de tela do canvas e desenho de formas nos ambientes validados. |
-| `Q3.1-adaptabilidade/M3.1.3_formulario_toque_caneta.csv` | **M3.1.3** | Modelo de formulário para conferência das 10 ações por toque e caneta stylus no tablet. |
+| `Q3.1-adaptabilidade/M3.1.3_formulario_toque_caneta.csv` | **M3.1.3** | Formulário de auditoria empírica das 10 ações por toque e caneta stylus no tablet iPad A16. |
+| `Q3.1-adaptabilidade/M3.1.3_gravacao_toque.mp4` | **M3.1.3** | Gravação de tela oficial (8,4 MB) da execução das 10 ações de teste por toque direto com o dedo no iPad. |
+| `Q3.1-adaptabilidade/M3.1.3_gravacao_caneta.mp4` | **M3.1.3** | Gravação de tela oficial (4,7 MB) da execução das 10 ações de teste com a caneta capacitiva stylus Goojodoq no iPad. |
 
 ### Q3.2 — Escalabilidade
 | Arquivo | Métrica | Descrição |

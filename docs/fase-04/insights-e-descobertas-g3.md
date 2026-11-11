@@ -198,6 +198,8 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 | **M3.1.2** | [`M3.1.2_build_logs.zip`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_build_logs.zip) | Arquivo compactado com os logs brutos completos de instalação e compilação dos 6 projetos. |
 | **M3.1.2** | [`M3.1.2_evidencia_ambiente.png`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_evidencia_ambiente.png) | Mosaico comprobatório com capturas de tela do canvas e desenho nos 4 ambientes aprovados. |
 | **M3.1.3** | [`M3.1.3_formulario_toque_caneta.csv`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_formulario_toque_caneta.csv) | Formulário empírico preenchido com a auditoria das 10 ações por toque e caneta no iPad. |
+| **M3.1.3** | [`M3.1.3_gravacao_toque.mp4`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_toque.mp4) | Gravação de tela (8,4 MB) da execução das 10 ações por toque com o dedo no iPad. |
+| **M3.1.3** | [`M3.1.3_gravacao_caneta.mp4`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_caneta.mp4) | Gravação de tela (4,7 MB) da execução das 10 ações com a caneta stylus Goojodoq no iPad. |
 | **M3.2.1** | [`M3.2.1_tempos_abertura.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.1_tempos_abertura.csv) | Tabela com as 20 medições e 4 medianas do tempo de abertura no DevTools. |
 | **M3.2.1** | `Q3.2-escalabilidade/traces_abertura/` | 20 arquivos JSON de perfil DevTools exportados com traces de renderização. |
 | **M3.2.2** | [`M3.2.2_fps_edicao.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv) | Taxas de quadros medidas via Frame Rendering Stats sob as 4 escalas de cena. |

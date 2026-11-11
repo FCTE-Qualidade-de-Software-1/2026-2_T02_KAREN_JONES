@@ -212,6 +212,8 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 | **M3.1.2** | Mosaico de capturas de tela do canvas | [`dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_evidencia_ambiente.png`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_evidencia_ambiente.png) |
 | **M3.1.2** | Arquivo compactado com logs de build | [`dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_build_logs.zip`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_build_logs.zip) |
 | **M3.1.3** | Formulário de auditoria iPad + caneta | [`dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_formulario_toque_caneta.csv`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_formulario_toque_caneta.csv) |
+| **M3.1.3** | Gravação de tela por toque (dedo) no iPad | [`dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_toque.mp4`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_toque.mp4) |
+| **M3.1.3** | Gravação de tela com stylus Goojodoq no iPad | [`dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_caneta.mp4`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_caneta.mp4) |
 | **M3.2.1** | Tabela com 20 medições DevTools | [`dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.1_tempos_abertura.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.1_tempos_abertura.csv) |
 | **M3.2.1** | Pasta com 20 traces JSON | `dados/fase-04/brutos/Q3.2-escalabilidade/traces_abertura/` |
 | **M3.2.2** | Tabela de FPS em edição contínua | [`dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv) |
