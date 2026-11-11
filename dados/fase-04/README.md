@@ -75,6 +75,24 @@ Na preparação, a instalação das dependências e o build dos pacotes foram co
 
 Na preparação, a imagem Docker foi gerada com sucesso via `docker build -t excalidraw-avaliacao .` e o contêiner inicializado via `docker run -d --name excalidraw-avaliacao-teste -p 3000:80 excalidraw-avaliacao`. O healthcheck respondeu com status `healthy` e a interface gráfica do editor no navegador respondeu com sucesso (código HTTP 200 via Nginx e canvas funcional), validando os pré-requisitos para as coletas de M3.3.2 e M3.3.3.
 
+### Ambiente de [Christopher Paraizo](https://github.com/wChrstphr)
+
+| Item | Registro |
+| :--- | :--- |
+| Data da preparação | 11/11/2026 |
+| Métricas | G1: M1.1.1 a M1.5.3 |
+| Commit do Excalidraw conferido | `e1b7aacb356a492aa1e0fc6eb57b8896124027f0` |
+| Sistema operacional e navegador | Windows 11 Pro 25H2 build 26200.9711, com WSL2 Ubuntu 24.04.5 LTS. Navegador não se aplica. |
+| Ferramentas e versões usadas | Git 2.43.0, Node.js 24.16.0, npm 11.13.0, Yarn 1.22.22 via Corepack, GitHub CLI 2.102.0, GNU grep 3.11, Madge 8.0.0, cloc 1.86, Vitest 3.0.6 com `@vitest/coverage-v8` 3.0.7, `@typescript-eslint/parser` 5.62.0 e TypeScript 5.9.3. ESLint 8.57.0 executado com `npx eslint@8.57.0`. |
+| Aplicação local e porta, se necessário | Não se aplica. |
+| Desvios e motivo | Nenhum. |
+| CLI GitHub | Autenticação conferida em 11/11/2026. Consultas REST e GraphQL ao repositório do Excalidraw responderam com sucesso. |
+| Pendências | Sessão de início da coleta com os três responsáveis. |
+
+Na preparação, a instalação das dependências, a cobertura e o build dos pacotes foram concluídos com os comandos da [seção 2.1 dos recursos e ambiente](../../docs/fase-03/recursos-ambiente.md#21-preparação-a-partir-do-commit-avaliado). A cobertura executou os 143 arquivos de teste sem falhas com `CI=true` e 8 processos. Essa verificação não é um resultado de coleta.
+
+Três problemas da preparação levaram a correções na seção 2.1. O `yarn` do pacote `cmdtest` do Ubuntu impedia os comandos. As 10 falhas e os 10 erros relatados no ambiente de Luiz vêm de rodar a cobertura depois de `yarn build:packages`. Sem `CI=true`, o Vitest não encerra o comando.
+
 ## Início da coleta
 
 A sessão de início com os três responsáveis ainda precisa acontecer e ser registrada.
@@ -85,3 +103,4 @@ A sessão de início com os três responsáveis ainda precisa acontecer e ser re
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 10/11/2026 | Organização do repositório de medidas da Fase 04 | Luiz Henrique Soares | Maria Eduarda |
 | 1.1 | 10/11/2026 | Registro do ambiente de medição de Maria Eduarda (G3) e validação da preparação do contêiner Docker | Maria Eduarda | Luiz Henrique Soares |
+| 1.2 | 11/11/2026 | Registro do ambiente de medição de Christopher (G1) | [Christopher Paraizo](https://github.com/wChrstphr) | |
