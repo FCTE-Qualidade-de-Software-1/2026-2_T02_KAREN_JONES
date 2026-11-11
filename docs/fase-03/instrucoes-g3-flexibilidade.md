@@ -18,18 +18,18 @@ A tabela abaixo resume as 12 métricas de Flexibilidade divididas pelas quatro q
 
 | Métrica | Nome da métrica | Questão | Tipo de coleta | Ficha na Fase 02 | Níveis de pontuação |
 | :--- | :--- | :---: | :--- | :---: | :---: |
-| **M3.1.1** | Cobertura de usuários pelos navegadores declarados | Q3.1 | Automatizada (CLI) | [Ficha M3.1.1](../fase-02/gqm-flexibilidade.md#m311--cobertura-de-usuários-pelos-navegadores-declarados) | [Pontuação M3.1.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.1.2** | Proporção de ambientes de integração com sucesso | Q3.1 | Mista (Script + Build) | [Ficha M3.1.2](../fase-02/gqm-flexibilidade.md#m312--proporção-de-ambientes-de-integração-com-sucesso) | [Pontuação M3.1.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.1.3** | Proporção de ações de edição por toque e caneta | Q3.1 | Manual roteirizada | [Ficha M3.1.3](../fase-02/gqm-flexibilidade.md#m313--proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) | [Pontuação M3.1.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.2.1** | Tempo de abertura por tamanho de cena | Q3.2 | Ferramenta DevTools | [Ficha M3.2.1](../fase-02/gqm-flexibilidade.md#m321--tempo-de-abertura-por-tamanho-de-cena) | [Pontuação M3.2.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.2.2** | Taxa de quadros durante a edição por tamanho de cena | Q3.2 | Ferramenta DevTools | [Ficha M3.2.2](../fase-02/gqm-flexibilidade.md#m322--taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | [Pontuação M3.2.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.2.3** | Tamanho máximo de cena salva e exportada | Q3.2 | Manual roteirizada | [Ficha M3.2.3](../fase-02/gqm-flexibilidade.md#m323--tamanho-máximo-de-cena-salva-e-exportada) | [Pontuação M3.2.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.3.1** | Proporção de operações de pacote bem-sucedidas | Q3.3 | Automatizada (Script) | [Ficha M3.3.1](../fase-02/gqm-flexibilidade.md#m331--proporção-de-operações-de-pacote-bem-sucedidas) | [Pontuação M3.3.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.3.2** | Proporção de passos documentados reproduzidos sem ajuste | Q3.3 | Manual roteirizada | [Ficha M3.3.2](../fase-02/gqm-flexibilidade.md#m332--proporção-de-passos-documentados-reproduzidos-sem-ajuste) | [Pontuação M3.3.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.3.3** | Implantação com Docker | Q3.3 | Automatizada (CLI) | [Ficha M3.3.3](../fase-02/gqm-flexibilidade.md#m333--implantação-com-docker) | [Pontuação M3.3.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.4.1** | Formatos de exportação abertos disponíveis | Q3.4 | Inspeção de interface | [Ficha M3.4.1](../fase-02/gqm-flexibilidade.md#m341--formatos-de-exportação-abertos-disponíveis) | [Pontuação M3.4.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.4.2** | Proporção de elementos preservados na reimportação | Q3.4 | Mista (UI + Script) | [Ficha M3.4.2](../fase-02/gqm-flexibilidade.md#m342--proporção-de-elementos-preservados-na-exportação-e-reimportação) | [Pontuação M3.4.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
-| **M3.4.3** | Proporção dos campos de `.excalidraw` documentados | Q3.4 | Automatizada (Script) | [Ficha M3.4.3](../fase-02/gqm-flexibilidade.md#m343--proporção-dos-campos-do-formato-excalidraw-documentados) | [Pontuação M3.4.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.1.1** | Cobertura de usuários pelos navegadores declarados | Q3.1 | Automatizada (CLI) | [Ficha M3.1.1](../fase-02/gqm-flexibilidade.md#m311-cobertura-de-usuários-pelos-navegadores-declarados) | [Pontuação M3.1.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.1.2** | Proporção de ambientes de integração com sucesso | Q3.1 | Mista (Script + Build) | [Ficha M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso) | [Pontuação M3.1.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.1.3** | Proporção de ações de edição por toque e caneta | Q3.1 | Manual roteirizada | [Ficha M3.1.3](../fase-02/gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) | [Pontuação M3.1.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.2.1** | Tempo de abertura por tamanho de cena | Q3.2 | Ferramenta DevTools | [Ficha M3.2.1](../fase-02/gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena) | [Pontuação M3.2.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.2.2** | Taxa de quadros durante a edição por tamanho de cena | Q3.2 | Ferramenta DevTools | [Ficha M3.2.2](../fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | [Pontuação M3.2.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.2.3** | Tamanho máximo de cena salva e exportada | Q3.2 | Manual roteirizada | [Ficha M3.2.3](../fase-02/gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada) | [Pontuação M3.2.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.3.1** | Proporção de operações de pacote bem-sucedidas | Q3.3 | Automatizada (Script) | [Ficha M3.3.1](../fase-02/gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | [Pontuação M3.3.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.3.2** | Proporção de passos documentados reproduzidos sem ajuste | Q3.3 | Manual roteirizada | [Ficha M3.3.2](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) | [Pontuação M3.3.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.3.3** | Implantação com Docker | Q3.3 | Automatizada (CLI) | [Ficha M3.3.3](../fase-02/gqm-flexibilidade.md#m333-implantação-com-docker) | [Pontuação M3.3.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.4.1** | Formatos de exportação abertos disponíveis | Q3.4 | Inspeção de interface | [Ficha M3.4.1](../fase-02/gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis) | [Pontuação M3.4.1](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.4.2** | Proporção de elementos preservados na reimportação | Q3.4 | Mista (UI + Script) | [Ficha M3.4.2](../fase-02/gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação) | [Pontuação M3.4.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
+| **M3.4.3** | Proporção dos campos de `.excalidraw` documentados | Q3.4 | Automatizada (Script) | [Ficha M3.4.3](../fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados) | [Pontuação M3.4.3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
 
 ---
 
@@ -89,7 +89,7 @@ Para cada execução, o avaliador deve preencher o cabeçalho de contexto conten
 
 - **Questão respondida:** Q3.1 (Adaptabilidade).
 - **Hipótese:** H3.1.1 (Confirmada se cobertura ≥ 80%).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m311--cobertura-de-usuários-pelos-navegadores-declarados) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m311-cobertura-de-usuários-pelos-navegadores-declarados) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Repositório no commit `e1b7aac`.
@@ -141,7 +141,7 @@ Salve a saída completa dos comandos em:
 
 - **Questão respondida:** Q3.1 (Adaptabilidade).
 - **Hipótese:** H3.1.2 (Confirmada se = 6 de 6 combinações).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m312--proporção-de-ambientes-de-integração-com-sucesso) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Biblioteca `@excalidraw/excalidraw` empacotada localmente via `yarn build:packages` e `npm pack` dentro de `packages/excalidraw`, gerando o arquivo `excalidraw-excalidraw-0.17.6.tgz`.
@@ -224,7 +224,7 @@ Proporção = (combinações com sucesso ÷ 6) × 100.
 
 - **Questão respondida:** Q3.1 (Adaptabilidade).
 - **Hipótese:** H3.1.3 (Confirmada se = 10 de 10 ações por toque).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m313--proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Aplicação Excalidraw de produção em execução (`http://ip-do-servidor:3000`).
@@ -286,7 +286,7 @@ python scripts/gerar_massa_dados.py --so-escala
 
 - **Questão respondida:** Q3.2 (Escalabilidade).
 - **Hipótese:** H3.2.1 (Confirmada se tempo na cena de 1.000 elementos for ≤ 1 s).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m321--tempo-de-abertura-por-tamanho-de-cena) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Aplicação executando localmente em contêiner de produção (`http://localhost:3000`).
@@ -330,7 +330,7 @@ Para cada uma das quatro cenas:
 
 - **Questão respondida:** Q3.2 (Escalabilidade).
 - **Hipótese:** H3.2.2 (Confirmada se taxa na cena de 1.000 elementos for ≥ 48 FPS).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m322--taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Mesmas pré-condições de hardware e ambiente limpo de M3.2.1.
@@ -368,7 +368,7 @@ Para cada uma das 4 cenas (100, 1.000, 5.000 e 10.000 elementos), realize 5 repe
 
 - **Questão respondida:** Q3.2 (Escalabilidade).
 - **Hipótese:** H3.2.3 (Confirmada se maior cena salva e exportada for ≥ 5.000 elementos).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m323--tamanho-máximo-de-cena-salva-e-exportada) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Aplicação em execução no navegador em perfil limpo.
@@ -409,7 +409,7 @@ O valor da métrica é a quantidade de elementos da maior cena em que as três o
 
 - **Questão respondida:** Q3.3 (Instalabilidade).
 - **Hipótese:** H3.3.1 (Confirmada se = 9 de 9 operações).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m331--proporção-de-operações-de-pacote-bem-sucedidas) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Pacote avaliado `.tgz` gerado a partir do commit `e1b7aac`.
@@ -509,7 +509,7 @@ Proporção = (operações com sucesso ÷ 9) × 100.
 
 - **Questão respondida:** Q3.3 (Instalabilidade).
 - **Hipótese:** H3.3.2 (Confirmada se ≥ 95% dos passos forem executados sem ajuste).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m332--proporção-de-passos-documentados-reproduzidos-sem-ajuste) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Ambiente limpo em máquina Linux ou contêiner limpo sem dependências de compilação previamente configuradas.
@@ -550,7 +550,7 @@ Proporção = (passos reproduzidos sem ajuste ÷ total de passos testados) × 10
 
 - **Questão respondida:** Q3.3 (Instalabilidade).
 - **Hipótese:** H3.3.3 (Confirmada se = 4 de 4 verificações aprovadas).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m333--implantação-com-docker) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m333-implantação-com-docker) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Docker Engine e CLI instalados na máquina do avaliador.
@@ -606,7 +606,7 @@ Proporção = (verificações aprovadas ÷ 4) × 100.
 
 - **Questão respondida:** Q3.4 (Substituibilidade).
 - **Hipótese:** H3.4.1 (Confirmada se ≥ 3 formatos abertos).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m341--formatos-de-exportação-abertos-disponíveis) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Aplicação web em execução local ou ambiente de teste.
@@ -637,7 +637,7 @@ Contagem direta da quantidade de formatos abertos oferecidos pelo software (núm
 
 - **Questão respondida:** Q3.4 (Substituibilidade).
 - **Hipótese:** H3.4.2 (Confirmada se ≥ 95% de preservação em cada formato).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m342--proporção-de-elementos-preservados-na-exportação-e-reimportação) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Aplicação web em execução.
@@ -687,7 +687,7 @@ A pontuação final da métrica em [Níveis de pontuação](../fase-02/pontuacao
 
 - **Questão respondida:** Q3.4 (Substituibilidade).
 - **Hipótese:** H3.4.3 (Confirmada se < 60% dos campos estiverem documentados).
-- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m343--proporção-dos-campos-do-formato-excalidraw-documentados) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+- **Links:** [Ficha da métrica](../fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados) | [Faixa de pontuação](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 ##### Pré-condições
 1. Arquivo `cena_referencia.excalidraw` em `dados/fase-03/massa-de-dados/cena_referencia.excalidraw`.

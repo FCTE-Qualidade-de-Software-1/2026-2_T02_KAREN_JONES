@@ -48,10 +48,10 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 90,Fase 2,[GESTAO] Automatizar sincronização de métricas com GitHub Projects,closed,eduarda-ogomes,2.0,2.0,0.0,na faixa,90.0,90.0,28/10,28/10/2026,Concluida no prazo,0.01
 92,Fase 2,"[ARTIGO] fix: ajustar siglas, pontuação e hipóteses GQM",closed,wChrstphr,3.0,2.5,-16.7,na faixa,135.0,112.5,03/11,04/11/2026,Concluida em atraso,4.98
 94,Fase 3,[F3] Estudo do processo de projetar a avaliação e estrutura do plano,open,DaviPierre,2.0,3.0,50.0,subestimada,90.0,135.0,05/11,-,Aberta em atraso,
-95,Fase 3,[F3] Método de avaliação e justificativa por métrica,open,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,06/11,-,Aberta em atraso,
+95,Fase 3,[F3] Método de avaliação e justificativa por métrica,closed,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,06/11,10/11/2026,Concluida em atraso,7.01
 96,Fase 3,[F3] Recursos e ambiente de avaliação,closed,LeticiaSantosss,2.0,7.0,250.0,subestimada,90.0,315.0,05/11,09/11/2026,Concluida em atraso,6.36
 97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",closed,GabrielSMonteiro,3.0,5.0,66.7,subestimada,135.0,225.0,06/11,09/11/2026,Concluida em atraso,5.39
-98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),open,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,-,Aberta em atraso,
+98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),closed,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,10/11/2026,Concluida em atraso,7.01
 99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,07/11,-,Aberta em atraso,
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,closed,wChrstphr,2.0,2.0,0.0,na faixa,90.0,90.0,06/11,09/11/2026,Concluida em atraso,5.53
@@ -63,10 +63,10 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,open,GabrielSMonteiro,3.0,0.0,,,135.0,0.0,08/11,-,Aberta em atraso,
 108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (16/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,,,270.0,0.0,16/11,-,Em andamento (no prazo),
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,open,GabrielSMonteiro,1.0,0.0,,,45.0,0.0,12/11,-,Em andamento (no prazo),
-110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,open,luizh-gsoares,3.0,0.0,,,135.0,0.0,08/11,-,Aberta em atraso,
+110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,open,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,-,Aberta em atraso,
 111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),open,wChrstphr,5.0,0.0,,,225.0,0.0,12/11,-,Em andamento (no prazo),
 112,Fase 4,[F4] Coleta das métricas de G2 (Confiabilidade),open,luizh-gsoares,6.0,0.0,,,270.0,0.0,12/11,-,Em andamento (no prazo),
-113,Fase 4,[F4] Coleta das métricas de G3 (Flexibilidade),open,eduarda-ogomes,6.0,0.0,,,270.0,0.0,12/11,-,Em andamento (no prazo),
+113,Fase 4,[F4] Coleta das métricas de G3 (Flexibilidade),open,eduarda-ogomes,6.0,11.7,95.0,subestimada,270.0,526.5,12/11,-,Em andamento (no prazo),
 114,Fase 4,"[F4] Verificação dos dados brutos e da rastreabilidade dado, métrica",open,DaviPierre,4.0,0.0,,,180.0,0.0,13/11,-,Em andamento (no prazo),
 115,Fase 4,[F4] Análise e respostas GQM de G1 (Manutenibilidade),open,wChrstphr,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
 116,Fase 4,[F4] Análise e respostas GQM de G2 (Confiabilidade),open,luizh-gsoares,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
@@ -91,3 +91,5 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 136,Fase 3,[GESTAO] Atualizar o relatório PSM/CID da Fase 2 e o apêndice de contribuição,closed,wChrstphr,1.5,1.0,-33.3,superestimada,67.5,45.0,05/11,07/11/2026,Concluida em atraso,2.61
 138,Fase 3,[GESTAO] Sincronizar o prazo das issues com o GitHub Projects,closed,wChrstphr,1.0,0.0,,,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.93
 140,Fase 3,[GESTAO] Documentar a priorização e as datas do GitHub Project,closed,wChrstphr,1.0,0.0,,,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.91
+153,Fase 2,[F2] Revisão das páginas da Fase 02 e padronização do formato,closed,wChrstphr,6.0,6.3,5.0,na faixa,270.0,283.5,12/11,11/11/2026,Concluida no prazo,1.1
+155,Fase 1,[F1] Revisar as páginas da Fase 01 e alinhar a terminologia da ISO/IEC 25010:2023,open,wChrstphr,6.0,1.1,-81.7,superestimada,270.0,49.5,12/11,-,Em andamento (no prazo),

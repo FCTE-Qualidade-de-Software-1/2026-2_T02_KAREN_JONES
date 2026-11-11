@@ -119,4 +119,5 @@ Os resultados não serão utilizados para ranqueamento contra outros softwares, 
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação, atendendo aos critérios F1-C1 e F1-C2 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.0 | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 06/11/2026 | Retirada da citação ao critério de avaliação da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -10,7 +10,7 @@ description: Relação entre a avaliação do Excalidraw e os Objetivos de Desen
 
 Os Objetivos de Desenvolvimento Sustentável (ODS) fazem parte da Agenda 2030 da ONU, aprovada em 2015. São 17 objetivos globais que tratam de temas como pobreza, educação, inovação, desigualdade e meio ambiente. Cada objetivo possui metas específicas e indicadores que permitem acompanhar o progresso.
 
-A rubrica da disciplina (critério F1-C7) pede que a equipe identifique quais ODS se relacionam com o software avaliado, justificando essa relação. Neste documento, selecionamos os ODS pertinentes ao Excalidraw e explicamos por que consideramos cada um deles relevante no contexto da avaliação.
+Neste documento, selecionamos os ODS pertinentes ao Excalidraw e explicamos por que consideramos cada um deles relevante no contexto da avaliação.
 
 Fonte oficial: [Agenda 2030 para o Desenvolvimento Sustentável (ONU)](https://brasil.un.org/pt-br/sdgs).
 
@@ -100,4 +100,5 @@ A tabela abaixo resume como cada ODS se conecta às três características de qu
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação do documento de ODS relacionados à avaliação do Excalidraw | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 06/11/2026 | Retirada da citação ao critério de avaliação da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | |
 
