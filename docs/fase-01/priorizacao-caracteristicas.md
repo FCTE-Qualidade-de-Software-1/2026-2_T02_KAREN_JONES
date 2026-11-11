@@ -4,53 +4,59 @@ title: Priorização das Características
 description: Método em duas etapas (ênfase e matriz impacto × risco) para priorização e seleção das características da ISO/IEC 25010:2023
 ---
 
+import Link from '@docusaurus/Link';
+
 # Priorização das Características
 
-## Objetivo e Método
+## Introdução
 
-A seleção das características que serão avaliadas não foi feita por preferência da equipe. Ela adota um método estruturado em duas etapas, para que cada escolha possa ser rastreada até os interessados mapeados na Fase 01 e para que os *trade-offs* fiquem explícitos.
+Na fase de requisitos, o requisitante indica quais aspectos de qualidade pretende avaliar e com que ênfase, numa escala de 1 a 5 [[1, p. 9]](#ref-1). Esta página aplica essa escala às características da ISO/IEC 25010:2023 [[2]](#ref-2) e mostra como a equipe chegou às três características avaliadas, de modo que cada escolha possa ser rastreada até os [interessados](./interessados.md) e os *trade-offs* fiquem explícitos.
 
-1. **Ênfase de 1 a 5:** A equipe, no papel de requisitante, atribui a cada característica uma ênfase calculada a partir da matriz de interessados.
-2. **Matriz impacto×risco:** A ênfase da etapa 1 é usada como impacto e cruzada com o risco de a característica apresentar problemas no Excalidraw. O cruzamento sustenta a seleção final e a discussão dos *trade-offs*.
+## Metodologia
 
-A escala de ênfase segue:
-**1** nenhum interesse, **2** baixo interesse, **3** médio interesse, **4** largo interesse e **5** grande interesse
-
-> **Aviso:** A Capacidade de Interação (denominada Usabilidade na edição de 2011) não entra na priorização por regra da atividade. Por isso, ela não recebe nota nas tabelas abaixo.
+A priorização tem duas etapas. Na primeira, a equipe, no papel de requisitante, calcula a ênfase de cada característica a partir da classificação dos sete grupos de interessados. Na segunda, a ênfase é usada como impacto e cruzada com o risco de a característica apresentar problemas no Excalidraw, numa matriz de impacto e risco que sustenta a seleção final. A escala de ênfase é a da aula: **1** nenhum interesse, **2** baixo interesse, **3** médio interesse, **4** largo interesse e **5** grande interesse [[1, p. 9]](#ref-1). A Capacidade de Interação (Usabilidade na edição de 2011) fica fora da seleção por orientação da disciplina e por isso não recebe nota.
 
 ---
 
-## Etapa 1 — Ênfase de 1 a 5 a partir dos Interessados
+## Etapa 1: Ênfase de 1 a 5 a partir dos interessados
 
 ### Regra de Cálculo
 
-Para cada característica, cada um dos sete grupos de interessados da matriz de prioridades recebe uma classificação, convertida em pontos:
+Para cada característica, cada um dos sete grupos de interessados recebe uma classificação, convertida em pontos conforme a Tabela 1. As classificações das três características selecionadas vêm da [matriz de prioridades](./interessados.md#matriz-de-prioridades), e as das demais foram atribuídas pela equipe com o mesmo critério.
+
+<p className="tabela-titulo">Tabela 1: Conversão da classificação em pontos</p>
 
 | Classificação | Pontos |
 | :--- | :---: |
-| **Principal (P)** — atende diretamente os interesses do grupo | 2 |
-| **Secundário (S)** — relevância indireta | 1 |
-| **Não Aplicável (–)** — periférica ou não aplicável | 0 |
+| **Principal (P)**: atende diretamente os interesses do grupo | 2 |
+| **Secundário (S)**: relevância indireta | 1 |
+| **Não aplicável (-)**: periférica ou não aplicável | 0 |
+
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
 
 A soma varia de 0 a 14 pontos. A ênfase é obtida por interpolação linear e arredondada segundo a fórmula:
 
-**Ênfase = 1 + 4 * (Pontos / 14)**
+**Ênfase = 1 + 4 × (Pontos / 14)**
 
-### Matriz de Interessados × Características
+### Matriz de interessados e características
 
-Legenda dos grupos: **UF** (Usuários Finais) · **DP** (Desenvolvedores do Projeto) · **MA** (Mantenedores) · **CO** (Contribuidores Open Source) · **IN** (Integradores da Biblioteca npm) · **OP** (Equipes de Implantação e Operação) · **QA** (Equipes de Qualidade).
+Legenda dos grupos: **UF** (Usuários Finais), **DP** (Desenvolvedores do Projeto), **MA** (Mantenedores), **CO** (Contribuidores Open Source), **IN** (Integradores da Biblioteca npm), **OP** (Equipes de Implantação e Operação), **QA** (Equipes de Qualidade).
+
+<p className="tabela-titulo">Tabela 2: Ênfase das características a partir dos interessados</p>
 
 | Característica | UF | DP | MA | CO | IN | OP | QA | Pontos | Ênfase |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Confiabilidade** | P | S | P | S | S | S | P | **10** | **4** (Largo) |
-| **Manutenibilidade** | – | P | P | P | S | – | P | **9** | **4** (Largo) |
-| **Flexibilidade** | S | – | S | S | P | P | S | **8** | **3** (Médio) |
-| Adequação Funcional | P | – | – | – | S | – | S | 4 | 2 (Baixo) |
-| Eficiência de Desempenho | P | – | – | – | S | S | – | 4 | 2 (Baixo) |
-| Compatibilidade | S | – | – | – | P | S | – | 4 | 2 (Baixo) |
-| Segurança | S | – | S | – | – | S | – | 3 | 2 (Baixo) |
-| Segurança de Proteção (*Safety*) | – | – | – | – | – | – | – | 0 | 1 (Nenhum) |
-| Capacidade de Interação | — | — | — | — | — | — | — | — | *Fora da seleção* |
+| **Manutenibilidade** | - | P | P | P | S | - | P | **9** | **4** (Largo) |
+| **Flexibilidade** | S | - | S | S | P | P | S | **8** | **3** (Médio) |
+| Adequação Funcional | P | - | - | - | S | - | S | 4 | 2 (Baixo) |
+| Eficiência de Desempenho | P | - | - | - | S | S | - | 4 | 2 (Baixo) |
+| Compatibilidade | S | - | - | - | P | S | - | 4 | 2 (Baixo) |
+| Segurança | S | - | S | - | - | S | - | 3 | 2 (Baixo) |
+| Segurança de Proteção (*Safety*) | - | - | - | - | - | - | - | 0 | 1 (Nenhum) |
+| Capacidade de Interação | - | - | - | - | - | - | - | - | *Fora da seleção* |
+
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
 
 ### Justificativa pelos Interessados
 
@@ -63,15 +69,17 @@ Legenda dos grupos: **UF** (Usuários Finais) · **DP** (Desenvolvedores do Proj
 
 ---
 
-## Etapa 2 — Matriz Impacto × Risco
+## Etapa 2: Matriz de impacto e risco
 
 ### Definições
 
-* **Impacto (1 a 5):** A ênfase obtida na etapa 1 (o quanto importa para os interessados).
-* **Risco (1 a 5):** A probabilidade de a característica apresentar problemas no Excalidraw, estimada a partir do perfil do produto.
-* **Prioridade:** **Impacto × Risco**.
+* **Impacto (1 a 5):** a ênfase obtida na etapa 1 (o quanto importa para os interessados).
+* **Risco (1 a 5):** a probabilidade de a característica apresentar problemas no Excalidraw, estimada a partir do perfil do produto.
+* **Prioridade:** produto do impacto pelo risco.
 
 ### Estimativa de Risco e Prioridade
+
+<p className="tabela-titulo">Tabela 3: Estimativa de risco e prioridade</p>
 
 | Característica | Impacto | Risco | Impacto × Risco | Base da Estimativa de Risco |
 | :--- | :---: | :---: | :---: | :--- |
@@ -84,37 +92,43 @@ Legenda dos grupos: **UF** (Usuários Finais) · **DP** (Desenvolvedores do Proj
 | Compatibilidade | 2 | 2 | 4 | Interoperabilidade focada nos formatos de exportação (.excalidraw, PNG, SVG). |
 | Segurança de Proteção | 1 | 1 | 1 | Não há risco físico associado ao uso da ferramenta. |
 
-### Matriz Impacto × Risco
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
 
-| Risco \ Impacto | Baixo (1–2) | Médio (3) | Alto (4–5) |
+### Matriz de impacto e risco
+
+<p className="tabela-titulo">Tabela 4: Matriz de impacto e risco</p>
+
+| Risco \ Impacto | Baixo (1 a 2) | Médio (3) | Alto (4 a 5) |
 | :--- | :--- | :--- | :--- |
-| **Alto (4–5)** | Eficiência de Desempenho (8) | — | **Confiabilidade (16)** |
+| **Alto (4 a 5)** | Eficiência de Desempenho (8) | - | **Confiabilidade (16)** |
 | **Médio (3)** | Segurança (6) | **Flexibilidade (9)** | **Manutenibilidade (12)** |
-| **Baixo (1–2)** | Adequação Funcional (4), Compatibilidade (4), *Safety* (1) | — | — |
+| **Baixo (1 a 2)** | Adequação Funcional (4), Compatibilidade (4), Segurança de Proteção (1) | - | - |
+
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
 
 ---
 
 ## Seleção Resultante
 
-As três características com maior prioridade nas duas etapas foram selecionadas: **Confiabilidade (16)**, **Manutenibilidade (12)** e **Flexibilidade (9)**. O corte é visível na etapa 1, onde elas são as únicas com ênfase igual ou superior a 3.
+As três características com maior prioridade nas duas etapas foram selecionadas: **Confiabilidade (16)**, **Manutenibilidade (12)** e **Flexibilidade (9)**. O corte já aparece na etapa 1, em que elas são as únicas com ênfase igual ou superior a 3.
 
 ---
 
 ## Trade-offs
 
-1. **Confiabilidade e Manutenibilidade têm a mesma ênfase (4):** Atendem a públicos distintos (usuários finais vs. quem altera o código). O risco coloca Confiabilidade à frente (16 vs. 12), mas a equipe decidiu avaliar ambas com a mesma profundidade.
-2. **Flexibilidade entra apesar da menor ênfase (3):** Atende aos integradores da biblioteca npm e equipes de operação, grupos que as outras duas características atendem pouco.
-3. **Eficiência de Desempenho fica de fora apesar do risco alto:** O risco estimado é alto (4), mas o impacto é baixo (2). A perda é parcialmente compensada porque o desempenho com múltiplos elementos é avaliado dentro de Escalabilidade.
-4. **Segurança não é avaliada:** Sua prioridade (6) é inferior à das três selecionadas, sem ser o foco principal de nenhum grupo.
-5. **Usabilidade fica fora por regra da atividade:** É uma limitação reconhecida da avaliação.
+1. **Confiabilidade e Manutenibilidade têm a mesma ênfase (4):** atendem a públicos distintos (usuários finais e quem altera o código). O risco coloca Confiabilidade à frente (16 vs. 12), mas a equipe decidiu avaliar ambas com a mesma profundidade.
+2. **Flexibilidade entra apesar da menor ênfase (3):** atende aos integradores da biblioteca npm e equipes de operação, grupos que as outras duas características atendem pouco.
+3. **Eficiência de Desempenho fica de fora apesar do risco alto:** o risco estimado é alto (4), mas o impacto é baixo (2). A perda é parcialmente compensada porque o desempenho com múltiplos elementos é avaliado dentro de Escalabilidade.
+4. **Segurança não é avaliada:** sua prioridade (6) é inferior à das três selecionadas, sem ser o foco principal de nenhum grupo.
+5. **Capacidade de Interação fica fora por orientação da disciplina:** é uma limitação reconhecida da avaliação, e conclusões sobre usabilidade não podem ser tiradas deste trabalho.
 
 ---
 
 ## Referências
 
-* AULA A07 QSW1 PROC AVAL PRODUTO. Material da disciplina de Qualidade de Software 1, UnB, slide 9.
-* ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
-* Documento de interessados da Fase 01 deste projeto.
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA A07 QSW1 PROC AVAL PRODUTO**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 9. Disponível no Moodle da disciplina.
+>
+> <Link id="ref-2">2.</Link> ISO/IEC 25010:2023. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model*.
 
 ---
 
@@ -123,3 +137,4 @@ As três características com maior prioridade nas duas etapas foram selecionada
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 0.1 | 18/10/2026 | Criação do documento de priorização das características | [Letícia Santos](https://github.com/LeticiaSantosss) | |
+| 1.0 | 10/11/2026 | Introdução e Metodologia, títulos sem travessão, origem das classificações das demais características explicitada, tabelas com título e fonte e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia Santos](https://github.com/LeticiaSantosss) |

@@ -4,23 +4,31 @@ title: Requisitos de Avaliação
 description: Requisitos do Excalidraw por característica e subcaracterística da ISO/IEC 25010:2023
 ---
 
+import Link from '@docusaurus/Link';
+
 # Requisitos de Avaliação do Excalidraw
 
-## 1. Introdução e papel desta seção
+## Introdução
 
-Esta seção reúne os requisitos de avaliação do Excalidraw, isto é, o que deverá ser avaliado nas fases seguintes.
+A análise de requisitos define os requisitos de qualidade do produto a partir dos objetivos da avaliação, que traduzem o interesse do requisitante [[1, p. 7]](#ref-1). Esta página reúne os requisitos de avaliação do Excalidraw, isto é, as perguntas que as fases seguintes precisam responder, organizadas pelas características e subcaracterísticas da ISO/IEC 25010:2023 [[2]](#ref-2).
 
-Os requisitos de qualidade do produto são perguntas que o produto deve permitir responder, organizadas por característica e subcaracterística.
+## Metodologia
 
-### 1.1 Como ler as tabelas
+Cada requisito foi escrito como pergunta verificável a partir de uma subcaracterística do [modelo de qualidade](./modelo-de-qualidade.md), com a interpretação para o Excalidraw que o modelo registra e as necessidades dos grupos mapeados em [Partes interessadas](./interessados.md). A profundidade e os objetos a que cada requisito se aplica estão em [Escopo e objetos de avaliação](./escopo-avaliacao.md).
 
-Cada requisito tem um identificador (`RQ-MAN`, `RQ-CONF` ou `RQ-FLEX`, seguido de número) e a subcaracterística da ISO/IEC 25010:2023 a que se liga. A relação dos requisitos com os interessados é dada pela seção de interessados do relatório.
+---
+
+## 1. Como ler os requisitos
+
+Cada requisito tem um identificador (`RQ-MAN`, `RQ-CONF` ou `RQ-FLEX`, seguido de número) e a subcaracterística a que se liga. Os interessados principais de cada subcaracterística estão na [rastreabilidade do modelo de qualidade](./modelo-de-qualidade.md#rastreabilidade-entre-subcaracterísticas-interessados-e-artefatos), e as questões e métricas que respondem a cada requisito, na [rastreabilidade do Plano GQM](../fase-02/plano-gqm.md#6-rastreabilidade-com-a-fase-01).
 
 ---
 
 ## 2. Requisitos de Manutenibilidade
 
 Requisitos ligados à Manutenibilidade, organizados pelas subcaracterísticas Modularidade, Reusabilidade, Analisabilidade, Modificabilidade e Testabilidade.
+
+<p className="tabela-titulo">Tabela 1: Requisitos de Manutenibilidade</p>
 
 | ID | Requisito (pergunta a responder) | Subcaracterística |
 | :--- | :--- | :--- |
@@ -38,16 +46,20 @@ Requisitos ligados à Manutenibilidade, organizados pelas subcaracterísticas Mo
 | **RQ-MAN-12** | Os testes cobrem diferentes níveis (unitário, integração e, quando houver, ponta a ponta)? | Testabilidade |
 | **RQ-MAN-13** | Os testes são executados automaticamente a cada alteração proposta? | Testabilidade |
 
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+
 ---
 
 ## 3. Requisitos de Confiabilidade
 
-Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Maturidade, Disponibilidade, Tolerância a falhas e Recuperabilidade.
+Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Ausência de falhas, Disponibilidade, Tolerância a falhas e Recuperabilidade.
+
+<p className="tabela-titulo">Tabela 2: Requisitos de Confiabilidade</p>
 
 | ID | Requisito (pergunta a responder) | Subcaracterística |
 | :--- | :--- | :--- |
-| **RQ-CONF-01** | Verificações automáticas (tipos, lint e testes) e revisão de código atuam antes da integração das alterações, reduzindo falhas e regressões? | Maturidade |
-| **RQ-CONF-02** | Os defeitos relatados são registrados, classificados e tratados de forma organizada? | Maturidade |
+| **RQ-CONF-01** | Verificações automáticas (tipos, lint e testes) e revisão de código atuam antes da integração das alterações, reduzindo falhas e regressões? | Ausência de falhas |
+| **RQ-CONF-02** | Os defeitos relatados são registrados, classificados e tratados de forma organizada? | Ausência de falhas |
 | **RQ-CONF-03** | O editor continua utilizável sem conexão após o primeiro carregamento (PWA)? | Disponibilidade |
 | **RQ-CONF-04** | O editor local funciona sem depender de sessão colaborativa ou de recursos carregados remotamente em tempo de execução? | Disponibilidade |
 | **RQ-CONF-05** | O editor mantém as funcionalidades essenciais diante de problemas de conectividade, com falhas de serviços externos isoladas das funcionalidades locais? | Tolerância a falhas |
@@ -58,11 +70,15 @@ Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Matu
 | **RQ-CONF-10** | Arquivos criados em versões anteriores continuam podendo ser abertos nas versões atuais? | Recuperabilidade |
 | **RQ-CONF-11** | O usuário consegue desfazer e refazer ações? | Recuperabilidade |
 
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+
 ---
 
 ## 4. Requisitos de Flexibilidade
 
-Requisitos ligados à Flexibilidade (denominada Flexibilidade na edição de 2011 da norma), organizados pelas subcaracterísticas Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade.
+Requisitos ligados à Flexibilidade (Portabilidade na edição de 2011 da norma), organizados pelas subcaracterísticas Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade.
+
+<p className="tabela-titulo">Tabela 3: Requisitos de Flexibilidade</p>
 
 | ID | Requisito (pergunta a responder) | Subcaracterística |
 | :--- | :--- | :--- |
@@ -79,11 +95,22 @@ Requisitos ligados à Flexibilidade (denominada Flexibilidade na edição de 201
 | **RQ-FLEX-11** | Os dados produzidos pelo sistema podem ser exportados para formatos utilizáveis fora da aplicação (`.excalidraw`, PNG e SVG)? | Substituibilidade |
 | **RQ-FLEX-12** | Os formatos exportados são abertos, documentados e permitem reimportar o conteúdo sem perda relevante? | Substituibilidade |
 
+<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+
 ---
 
-## Controle de Versão
+## Referências
+
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA A07 QSW1 PROC AVAL PRODUTO**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 7. Disponível no Moodle da disciplina.
+>
+> <Link id="ref-2">2.</Link> ISO/IEC 25010:2023. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model*.
+
+---
+
+## Histórico de Versões
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| `1.1` | 18/10/2026 | Harmonização da terminologia Maturidade e padronização do frontmatter | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.0 | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.1 | 18/10/2026 | Harmonização da terminologia Maturidade e padronização do frontmatter | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.2 | 10/11/2026 | Introdução e Metodologia, subcaracterística Ausência de falhas adotada como na edição de 2023, nome da característica na edição de 2011 corrigido para Portabilidade, links para a rastreabilidade do modelo e do Plano GQM, tabelas com título e fonte e referências | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia Santos](https://github.com/LeticiaSantosss) |
