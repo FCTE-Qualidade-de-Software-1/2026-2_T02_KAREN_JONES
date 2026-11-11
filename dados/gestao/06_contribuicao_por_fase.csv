@@ -1,16 +1,16 @@
 fase,integrante,login,issues_atribuidas,horas_estimadas,horas_reais,custo_real_brl,percentual_esforco
-Fase 1,Christopher,wChrstphr,1,2.5,2.5,112.5,4.32
-Fase 1,Davi Pierre,DaviPierre,4,15.0,18.0,810.0,31.08
-Fase 1,Gabriel Monteiro,GabrielSMonteiro,4,16.0,18.0,810.0,31.08
-Fase 1,Leticia de Carvalho,LeticiaSantosss,5,7.5,5.91,265.95,10.21
-Fase 1,Luiz Henrique Soares,luizh-gsoares,1,1.0,1.0,45.0,1.73
-Fase 1,Maria Eduarda,eduarda-ogomes,3,11.5,12.5,562.5,21.59
-Fase 2,Christopher,wChrstphr,12,22.5,18.5,832.5,31.68
-Fase 2,Davi Pierre,DaviPierre,2,5.0,3.0,135.0,5.14
-Fase 2,Gabriel Monteiro,GabrielSMonteiro,4,11.5,10.5,472.5,17.98
-Fase 2,Leticia de Carvalho,LeticiaSantosss,2,4.5,4.0,180.0,6.85
-Fase 2,Luiz Henrique Soares,luizh-gsoares,6,11.0,11.4,513.0,19.52
-Fase 2,Maria Eduarda,eduarda-ogomes,6,10.0,11.0,495.0,18.84
+Fase 1,Christopher,wChrstphr,2,8.5,3.6,162.0,6.1
+Fase 1,Davi Pierre,DaviPierre,4,15.0,18.0,810.0,30.5
+Fase 1,Gabriel Monteiro,GabrielSMonteiro,4,16.0,18.0,810.0,30.5
+Fase 1,Leticia de Carvalho,LeticiaSantosss,5,7.5,5.91,265.95,10.02
+Fase 1,Luiz Henrique Soares,luizh-gsoares,1,1.0,1.0,45.0,1.69
+Fase 1,Maria Eduarda,eduarda-ogomes,3,11.5,12.5,562.5,21.18
+Fase 2,Christopher,wChrstphr,13,28.5,24.8,1116.0,38.33
+Fase 2,Davi Pierre,DaviPierre,2,5.0,3.0,135.0,4.64
+Fase 2,Gabriel Monteiro,GabrielSMonteiro,4,11.5,10.5,472.5,16.23
+Fase 2,Leticia de Carvalho,LeticiaSantosss,2,4.5,4.0,180.0,6.18
+Fase 2,Luiz Henrique Soares,luizh-gsoares,6,11.0,11.4,513.0,17.62
+Fase 2,Maria Eduarda,eduarda-ogomes,6,10.0,11.0,495.0,17.0
 Fase 3,Christopher,wChrstphr,5,8.5,5.5,247.5,13.41
 Fase 3,Davi Pierre,DaviPierre,5,12.0,13.0,585.0,31.71
 Fase 3,Gabriel Monteiro,GabrielSMonteiro,5,12.0,10.0,450.0,24.39
@@ -21,5 +21,5 @@ Fase 4,Christopher,wChrstphr,5,19.0,0.0,0.0,0.0
 Fase 4,Davi Pierre,DaviPierre,2,5.0,0.0,0.0,0.0
 Fase 4,Gabriel Monteiro,GabrielSMonteiro,3,5.0,0.0,0.0,0.0
 Fase 4,Leticia de Carvalho,LeticiaSantosss,4,9.0,0.0,0.0,0.0
-Fase 4,Luiz Henrique Soares,luizh-gsoares,8,23.0,0.0,0.0,0.0
+Fase 4,Luiz Henrique Soares,luizh-gsoares,8,23.0,3.0,135.0,100.0
 Fase 4,Maria Eduarda,eduarda-ogomes,7,19.0,0.0,0.0,0.0
