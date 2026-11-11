@@ -114,6 +114,21 @@ A execução da métrica **M3.3.3** comprovou a facilidade de implantação do s
 * O contêiner de produção construído a partir do `Dockerfile` oficial executou sem ajustes, subiu com sucesso na porta `3000:80` e atingiu o estado `"healthy"` na checagem nativa de integridade em menos de 15 segundos.
 * A entrega através de servidor Nginx interno garante independência completa de configurações do ambiente hospedeiro, validando o requisito `RQ-FLEX-09`.
 
+### 💡 Insight 5: Desempenho e Degradação Graciosa sob Escala Extrema (Escalabilidade — Q3.2)
+
+A medição empírica das três métricas da questão **Q3.2** revelou o comportamento do motor de renderização do Excalidraw sob estresse progressivo de volume de dados:
+
+1. **Tempo de Abertura (M3.2.1):**
+   - O tempo de carga da cena com 1.000 elementos atingiu mediana de **0,11 s**, confirmando com ampla folga a hipótese **H3.2.1 ≤ 1,0 s** (nível Excelente).
+   - Sob 10.000 elementos (um arquivo massivo de 5,2 MB), o tempo de estabilização completa foi de apenas **1,52 s**, mantendo-se na faixa de conforto cognitivo humano definida por Nielsen (1993) e pelo modelo RAIL (inferior a 2 segundos).
+2. **Taxa de Quadros em Edição Contínua (M3.2.2):**
+   - Com 100 elementos, o editor fixa cravado no limite do monitor a **60 FPS** (100% de fluidez).
+   - Na cena de 1.000 elementos, a taxa oscila entre 46 e 58 FPS, obtendo mediana de **52 FPS** e confirmando a hipótese **H3.2.2 ≥ 48 FPS** (nível Bom).
+   - Sob 5.000 elementos (mediana de **20 FPS**) e 10.000 elementos (**12 FPS**), a aplicação apresenta degradação graciosa: o redesenho sofre redução de taxa de quadros (*dropped frames*), mas não ocorre congelamento da aba (*freeze*), travamento (*hang*) ou fechamento inesperado do navegador (*crash*).
+3. **Persistência e Exportação sob Carga Máxima (M3.2.3):**
+   - Todas as 4 escalas de cena completaram com sucesso as três operações (salvamento no disco em `.excalidraw`, exportação em PNG e exportação em SVG) em tempos inferiores a 2 segundos, muito abaixo do teto de tolerância de 30 segundos.
+   - O tamanho máximo suportado atingiu **10.000 elementos**, confirmando a hipótese **H3.2.3 ≥ 5.000 elementos** e alcançando a pontuação máxima de **100 pontos (Excelente)**.
+
 ---
 
 ## 4. Rastreabilidade com os Dados Brutos
@@ -123,6 +138,10 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 | Métrica | Arquivo de Dado Bruto | Finalidade da Evidência |
 | :---: | :--- | :--- |
 | **M3.1.1** | [`M3.1.1_cobertura_browserslist.txt`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.1_cobertura_browserslist.txt) | Saída de terminal com a cobertura populacional e lista de navegadores. |
+| **M3.2.1** | [`M3.2.1_tempos_abertura.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.1_tempos_abertura.csv) | Tabela com as 20 medições e 4 medianas do tempo de abertura no DevTools. |
+| **M3.2.1** | `Q3.2-escalabilidade/traces_abertura/` | 20 arquivos JSON de perfil DevTools exportados com traces de renderização. |
+| **M3.2.2** | [`M3.2.2_fps_edicao.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv) | Taxas de quadros medidas via Frame Rendering Stats sob as 4 escalas de cena. |
+| **M3.2.3** | [`M3.2.3_tamanho_maximo_salvamento.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.3_tamanho_maximo_salvamento.csv) | Tabela de conferência do teste de estresse de salvamento e exportação até 10.000 elementos. |
 | **M3.3.3** | [`M3.3.3_verificacoes_docker.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.3_verificacoes_docker.csv) | Tabela de conferência das 4 verificações de deploy, container e healthcheck. |
 | **M3.4.1** | [`M3.4.1_catalogo_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.1_catalogo_formatos.csv) | Catálogo formal dos formatos abertos com MIME types e especificações W3C/ECMA. |
 | **M3.4.2** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_preservacao_formatos.csv) | Resumo das taxas de preservação de elementos por formato. |
@@ -136,15 +155,14 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 
 ## 5. Próximos Passos da Coleta
 
-Com as 5 primeiras métricas consolidadas, o plano de ação segue para as medições restantes:
+Com as 8 métricas de Adaptabilidade (M3.1.1), Escalabilidade (M3.2.1, M3.2.2, M3.2.3), Instalabilidade (M3.3.3) e Substituibilidade (M3.4.1, M3.4.2, M3.4.3) concluídas, restam apenas 4 medições para completar a totalidade do objetivo G3:
 
-1. **Escalabilidade (M3.2.1, M3.2.2 e M3.2.3):**
-   - Medição do tempo de abertura (em segundos) e da taxa de quadros (FPS) sob estresse progressivo utilizando as cenas padronizadas de 100, 1.000, 5.000 e 10.000 elementos via Chrome DevTools.
-   - Verificação do tamanho máximo de cena salva e exportada em até 30 segundos.
-2. **Adaptabilidade em Dispositivo Móvel (M3.1.3):**
+1. **Adaptabilidade em Dispositivo Móvel (M3.1.3):**
    - Execução do roteiro de 10 ações por toque e caneta stylus no iPad (A16) com gravação de tela contínua.
-3. **Instalabilidade e Integração (M3.1.2, M3.3.1 e M3.3.2):**
-   - Teste de empacotamento da biblioteca em projetos mínimos e verificação dos passos documentados de compilação local.
+2. **Instalabilidade e Integração (M3.1.2, M3.3.1 e M3.3.2):**
+   - Teste de ciclo de vida de pacotes com múltiplos gerenciadores (`npm`, `yarn`, `pnpm` para M3.3.1).
+   - Verificação dos passos documentados de compilação local (M3.3.2).
+   - Teste de empacotamento da biblioteca em projetos mínimos React 17/18/19 com Vite e Next.js (M3.1.2).
 
 ---
 
@@ -153,3 +171,4 @@ Com as 5 primeiras métricas consolidadas, o plano de ação segue para as medi�
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 10/11/2026 | Consolidação dos dados brutos, diagnósticos técnicos e insights preliminares das métricas M3.1.1, M3.3.3, M3.4.1, M3.4.2 e M3.4.3 de G3 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.1` | 11/11/2026 | Inclusão dos resultados e insights de Escalabilidade (M3.2.1, M3.2.2 e M3.2.3), organização das pastas por questão GQM e rastreabilidade dos traces | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
