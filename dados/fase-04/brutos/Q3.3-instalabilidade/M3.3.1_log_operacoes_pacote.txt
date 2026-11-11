@@ -1,0 +1,127 @@
+=== M3.3.1: AVALIAÇÃO DE OPERAÇÕES DE PACOTE (NPM, YARN, PNPM) ===
+Pacote avaliado: /home/duda/Documentos/qualidadeSoftware/excalidraw/packages/excalidraw/excalidraw-excalidraw-0.18.0.tgz
+Data: qua 11 nov 2026 12:13:07 -03
+
+--------------------------------------------------------
+[npm] Testando operacao: instalacao...
+Wrote to /tmp/teste-m331/npm-instalacao/package.json:
+
+{
+  "name": "npm-instalacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+npm error code ETARGET
+npm error notarget No matching version found for @excalidraw/common@0.18.0.
+npm error notarget In most cases you or one of your dependencies are requesting a package version that doesn't exist.
+npm error A complete log of this run can be found in: /home/duda/.npm/_logs/2026-11-11T15_13_07_518Z-debug-0.log
+node:internal/modules/cjs/loader:1503
+  throw err;
+  ^
+
+Error: Cannot find module '@excalidraw/excalidraw'
+Require stack:
+- /tmp/teste-m331/npm-instalacao/[eval]
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1500:15)
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1116:12)
+    at Module._load (node:internal/modules/cjs/loader:1285:25)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.require (node:internal/modules/cjs/loader:1600:12)
+    at require (node:internal/modules/helpers:153:16)
+    at [eval]:1:1
+    at runScriptInThisContext (node:internal/vm:219:10) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ '/tmp/teste-m331/npm-instalacao/[eval]' ]
+}
+
+Node.js v24.16.0
+[npm - instalacao]: Falha em 24,00s (Instalação do pacote tgz e resolução de módulo válidas)
+--------------------------------------------------------
+[npm] Testando operacao: atualizacao...
+Wrote to /tmp/teste-m331/npm-atualizacao/package.json:
+
+{
+  "name": "npm-atualizacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+
+added 6 packages, and audited 7 packages in 7s
+
+found 0 vulnerabilities
+npm error code ETARGET
+npm error notarget No matching version found for @excalidraw/common@0.18.0.
+npm error notarget In most cases you or one of your dependencies are requesting a package version that doesn't exist.
+npm error A complete log of this run can be found in: /home/duda/.npm/_logs/2026-11-11T15_13_38_941Z-debug-0.log
+/tmp/teste-m331/npm-atualizacao/node_modules/@excalidraw/excalidraw/dist/excalidraw.development.js:5791
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+         		                        ^
+
+ReferenceError: document is not defined
+    at /tmp/teste-m331/npm-atualizacao/node_modules/@excalidraw/excalidraw/dist/excalidraw.development.js:5791:36
+    at /tmp/teste-m331/npm-atualizacao/node_modules/@excalidraw/excalidraw/dist/excalidraw.development.js:5877:13
+    at /tmp/teste-m331/npm-atualizacao/node_modules/@excalidraw/excalidraw/dist/excalidraw.development.js:5892:12
+    at webpackUniversalModuleDefinition (/tmp/teste-m331/npm-atualizacao/node_modules/@excalidraw/excalidraw/dist/excalidraw.development.js:11:20)
+    at Object.<anonymous> (/tmp/teste-m331/npm-atualizacao/node_modules/@excalidraw/excalidraw/dist/excalidraw.development.js:18:3)
+    at Module._compile (node:internal/modules/cjs/loader:1854:14)
+    at Object..js (node:internal/modules/cjs/loader:1985:10)
+    at Module.load (node:internal/modules/cjs/loader:1577:32)
+    at Module._load (node:internal/modules/cjs/loader:1379:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+
+Node.js v24.16.0
+[npm - atualizacao]: Falha em 11,00s (Upgrade de 0.17.6 para 0.18.0 local concluído com sucesso)
+--------------------------------------------------------
+[npm] Testando operacao: remocao...
+Wrote to /tmp/teste-m331/npm-remocao/package.json:
+
+{
+  "name": "npm-remocao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+npm error code ETARGET
+npm error notarget No matching version found for @excalidraw/common@0.18.0.
+npm error notarget In most cases you or one of your dependencies are requesting a package version that doesn't exist.
+npm error A complete log of this run can be found in: /home/duda/.npm/_logs/2026-11-11T15_13_43_379Z-debug-0.log
+
+up to date, audited 1 package in 210ms
+
+found 0 vulnerabilities
+[npm - remocao]: Falha em 4,00s (Desinstalação limpa confirmada sem resíduos)
+--------------------------------------------------------
+[yarn] Testando operacao: instalacao...
+! Corepack is about to download https://repo.yarnpkg.com/4.14.1/packages/yarnpkg-cli/bin/yarn.js
+? Do you want to continue? [Y/n] 

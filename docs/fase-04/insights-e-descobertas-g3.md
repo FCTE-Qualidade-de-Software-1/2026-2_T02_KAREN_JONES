@@ -129,6 +129,19 @@ A medição empírica das três métricas da questão **Q3.2** revelou o comport
    - Todas as 4 escalas de cena completaram com sucesso as três operações (salvamento no disco em `.excalidraw`, exportação em PNG e exportação em SVG) em tempos inferiores a 2 segundos, muito abaixo do teto de tolerância de 30 segundos.
    - O tamanho máximo suportado atingiu **10.000 elementos**, confirmando a hipótese **H3.2.3 ≥ 5.000 elementos** e alcançando a pontuação máxima de **100 pontos (Excelente)**.
 
+### 💡 Insight 6: Auditoria de Instalabilidade, Dependências de Monorepo e Obsolescência Documental (Instalabilidade — Q3.3)
+
+A execução das métricas **M3.3.1** e **M3.3.2** complementou os dados da esteira Docker (M3.3.3), finalizando a avaliação de toda a questão **Q3.3**:
+
+1. **Reprodutibilidade dos Passos Documentados (M3.3.2):**
+   - Na via nativa (Node.js e Yarn), a clonagem, instalação de dependências e inicialização do servidor de desenvolvimento ocorreram de forma impecável: `yarn` instalou todas as dependências e configurou os *git hooks* do Husky com código 0 em 346s, e `yarn start` inicializou o Vite em apenas **1,09 s** respondendo com `HTTP/1.1 200 OK`.
+   - Na via com Docker Compose, detectou-se uma incompatibilidade documental crítica: o guia `development.mdx` documenta a sintaxe legada `docker-compose up --build -d` (com hífen). Em distribuições modernas com Docker Engine v2 (como o Ubuntu/Zorin OS avaliado), o binário Python standalone não existe, gerando `command not found` (código 127) e exigindo ajuste corretivo para o plugin moderno `docker compose up`.
+   - Com 6 de 7 passos bem-sucedidos sem ajuste (**85,7%**), a métrica atinge o **Nível Bom (75 pontos)**, mas **REFUTA a hipótese H3.3.2 (≥ 95%)** devido à defasagem da instrução de compose.
+2. **Ciclo de Vida de Pacotes em Gerenciadores (M3.3.1):**
+   - O teste comparativo nos 3 gerenciadores (`npm`, `yarn` v1 e `pnpm`) revelou que a distribuição estável pública (`@excalidraw/excalidraw@0.17.6`) cumpre 100% das 9 operações de instalação, atualização e desinstalação.
+   - Contudo, a geração de tarball local a partir do commit de desenvolvimento (`excalidraw-excalidraw-0.18.0.tgz`, 31 MB) expõe um forte acoplamento com subpacotes internos do monorepo (`@excalidraw/common` e `@excalidraw/math`), os quais requerem publicação coordenada para permitir consumo isolado fora do monorepo via npm padrão.
+   - Além disso, a execução de `require('@excalidraw/excalidraw')` direto no Node.js confirma que a biblioteca depende estritamente do DOM do navegador (`ReferenceError: document is not defined`), exigindo desativação de renderização no servidor (`ssr: false`) ao ser integrada em frameworks modernos como Next.js.
+
 ---
 
 ## 4. Rastreabilidade com os Dados Brutos
@@ -142,6 +155,10 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 | **M3.2.1** | `Q3.2-escalabilidade/traces_abertura/` | 20 arquivos JSON de perfil DevTools exportados com traces de renderização. |
 | **M3.2.2** | [`M3.2.2_fps_edicao.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv) | Taxas de quadros medidas via Frame Rendering Stats sob as 4 escalas de cena. |
 | **M3.2.3** | [`M3.2.3_tamanho_maximo_salvamento.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.3_tamanho_maximo_salvamento.csv) | Tabela de conferência do teste de estresse de salvamento e exportação até 10.000 elementos. |
+| **M3.3.1** | [`M3.3.1_log_operacoes_pacote.txt`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.1_log_operacoes_pacote.txt) | Log detalhado da execução de instalação, atualização e desinstalação via npm, yarn e pnpm. |
+| **M3.3.1** | [`M3.3.1_resultados_pacote.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.1_resultados_pacote.csv) | Tabela comparativa das 9 operações de pacote por gerenciador (cenário público e local). |
+| **M3.3.2** | [`M3.3.2_log_reproducao_passos.txt`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.2_log_reproducao_passos.txt) | Registro textual da auditoria dos 7 passos documentados de compilação e execução local. |
+| **M3.3.2** | [`M3.3.2_passos_ajustes.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.2_passos_ajustes.csv) | Tabela dos 7 passos documentados com classificação (sem ajuste vs com ajuste) e justificativas. |
 | **M3.3.3** | [`M3.3.3_verificacoes_docker.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.3_verificacoes_docker.csv) | Tabela de conferência das 4 verificações de deploy, container e healthcheck. |
 | **M3.4.1** | [`M3.4.1_catalogo_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.1_catalogo_formatos.csv) | Catálogo formal dos formatos abertos com MIME types e especificações W3C/ECMA. |
 | **M3.4.2** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_preservacao_formatos.csv) | Resumo das taxas de preservação de elementos por formato. |
@@ -155,27 +172,26 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 
 ## 5. Registro de Esforço e Tempo de Execução
 
-Conforme as diretrizes de rastreabilidade e gestão da qualidade, a tabela a seguir consolida o esforço real investido pela avaliadora ao longo do dia 10/11/2026 (estendendo-se até a madrugada de 11/11/2026), cobrindo desde as discussões e tomadas de decisão até a instrumentação e coleta empírica das 8 métricas concluídas:
+Conforme as diretrizes de rastreabilidade e gestão da qualidade, a tabela a seguir consolida o esforço real investido pela avaliadora ao longo do processo de medição empírica:
 
 | Turno / Período | Horário Aprox. | Duração | Atividades Realizadas (Decisão & Execução) | Métricas / Entregas Associadas |
 | :--- | :---: | :---: | :--- | :--- |
-| **Manhã** | 09:00 – 12:45 | **3h45** | • Análise e resolução de conflitos no PR #151 (adaptação do script PSM e dados brutos do GitHub).<br />• Alinhamento do plano de medição da Fase 04 (Issue #113 — G3 Flexibilidade).<br />• Leitura detalhada das instruções de avaliação, critérios de julgamento e faixas de pontuação.<br />• Decisão arquitetural de priorizar a execução via contêiner oficial Docker para garantir reprodutibilidade e ambiente limpo. | PR #151 (Merge main)<br />Setup inicial F4 |
-| **Tarde** | 14:30 – 16:30 | **2h00** | • Recepção e importação da imagem Docker do Excalidraw (`excalidraw-avaliacao`).<br />• Instanciação e verificação de integridade do contêiner na porta 3000:80.<br />• Criação da estrutura de pastas em `dados/fase-04/brutos/` e templates de coleta.<br />• Execução dos comandos CLI do Browserslist e auditoria das 4 etapas de implantação Docker. | **M3.1.1** (Browserslist)<br />**M3.3.3** (Docker) |
-| **Noite / Madrugada** | 21:00 – 00:20 | **3h20** | • Auditoria dos formatos abertos e testes de reimportação com conferência via `compara_elementos.py`.<br />• Extração e auditoria campo a campo do JSON Schema oficial (identificação da lacuna de documentação).<br />• Definição da Ação de Melhoria (F4-C5) para documentação formal do esquema do Excalidraw.<br />• Reorganização completa da pasta de dados brutos por questões GQM (`Q3.1` a `Q3.4`).<br />• Execução das medições de escalabilidade: 20 perfis de rastreamento no DevTools (tempo de abertura), testes de salvamento/exportação até 10.000 elementos e medição empírica de FPS com *Frame Rendering Stats*. | **M3.4.1** (Formatos)<br />**M3.4.2** (Preservação)<br />**M3.4.3** (Esquema)<br />**M3.2.1** (Abertura)<br />**M3.2.2** (FPS)<br />**M3.2.3** (Exportação) |
-| **Total Acumulado** | — | **~9h05** | **8 de 12 métricas concluídas (66,7% do objetivo G3)**, 20 traces DevTools coletados, 3 planilhas CSV e relatórios consolidados. | **G3 — 8 métricas** |
+| **Manhã (10/11)** | 09:00 – 12:45 | **3h45** | • Análise e resolução de conflitos no PR #151 (adaptação do script PSM e dados brutos do GitHub).<br />• Alinhamento do plano de medição da Fase 04 (Issue #113 — G3 Flexibilidade).<br />• Leitura detalhada das instruções de avaliação, critérios de julgamento e faixas de pontuação.<br />• Decisão arquitetural de priorizar a execução via contêiner oficial Docker para garantir reprodutibilidade e ambiente limpo. | PR #151 (Merge main)<br />Setup inicial F4 |
+| **Tarde (10/11)** | 14:30 – 16:30 | **2h00** | • Recepção e importação da imagem Docker do Excalidraw (`excalidraw-avaliacao`).<br />• Instanciação e verificação de integridade do contêiner na porta 3000:80.<br />• Criação da estrutura de pastas em `dados/fase-04/brutos/` e templates de coleta.<br />• Execução dos comandos CLI do Browserslist e auditoria das 4 etapas de implantação Docker. | **M3.1.1** (Browserslist)<br />**M3.3.3** (Docker) |
+| **Noite / Madrugada (10-11/11)** | 21:00 – 00:20 | **3h20** | • Auditoria dos formatos abertos e testes de reimportação com conferência via `compara_elementos.py`.<br />• Extração e auditoria campo a campo do JSON Schema oficial (identificação da lacuna de documentação).<br />• Definição da Ação de Melhoria (F4-C5) para documentação formal do esquema do Excalidraw.<br />• Reorganização completa da pasta de dados brutos por questões GQM (`Q3.1` a `Q3.4`).<br />• Execução das medições de escalabilidade: 20 perfis de rastreamento no DevTools (tempo de abertura), testes de salvamento/exportação até 10.000 elementos e medição empírica de FPS com *Frame Rendering Stats*. | **M3.4.1** (Formatos)<br />**M3.4.2** (Preservação)<br />**M3.4.3** (Esquema)<br />**M3.2.1** (Abertura)<br />**M3.2.2** (FPS)<br />**M3.2.3** (Exportação) |
+| **Manhã (11/11)** | 11:38 – 12:35 | **0h57** | • Compilação local dos pacotes do monorepo (`yarn build:packages`) e geração do tarball `@excalidraw/excalidraw` (31 MB).<br />• Auditoria da execução nativa do servidor Vite (1,09s de inicialização e HTTP 200).<br />• Identificação e diagnóstico do comando legado `docker-compose` gerando código 127 vs `docker compose`.<br />• Teste das 9 operações de pacote nos 3 gerenciadores (`npm`, `yarn`, `pnpm`) e análise de acoplamento de monorepo. | **M3.3.1** (Operações pacote)<br />**M3.3.2** (Passos documentados) |
+| **Total Acumulado** | — | **~10h02** | **10 de 12 métricas concluídas (83,3% do objetivo G3)**, 20 traces DevTools, 5 planilhas CSV e relatórios técnicos versionados. | **G3 — 10 métricas** |
 
 ---
 
 ## 6. Próximos Passos da Coleta
 
-Com as 8 métricas de Adaptabilidade (M3.1.1), Escalabilidade (M3.2.1, M3.2.2, M3.2.3), Instalabilidade (M3.3.3) e Substituibilidade (M3.4.1, M3.4.2, M3.4.3) concluídas, restam apenas 4 medições para completar a totalidade do objetivo G3:
+Com 10 métricas concluídas cobrindo integralmente as questões de **Escalabilidade (Q3.2)**, **Instalabilidade (Q3.3)** e **Substituibilidade (Q3.4)**, além da cobertura de navegadores em **Adaptabilidade (Q3.1)**, restam apenas as 2 últimas medições de interface e integração:
 
 1. **Adaptabilidade em Dispositivo Móvel (M3.1.3):**
    - Execução do roteiro de 10 ações por toque e caneta stylus no iPad (A16) com gravação de tela contínua.
-2. **Instalabilidade e Integração (M3.1.2, M3.3.1 e M3.3.2):**
-   - Teste de ciclo de vida de pacotes com múltiplos gerenciadores (`npm`, `yarn`, `pnpm` para M3.3.1).
-   - Verificação dos passos documentados de compilação local (M3.3.2).
-   - Teste de empacotamento da biblioteca em projetos mínimos React 17/18/19 com Vite e Next.js (M3.1.2).
+2. **Matriz de Ambientes de Integração (M3.1.2):**
+   - Teste de montagem da biblioteca em projetos mínimos React 17/18/19 com Vite e Next.js.
 
 ---
 
@@ -186,3 +202,4 @@ Com as 8 métricas de Adaptabilidade (M3.1.1), Escalabilidade (M3.2.1, M3.2.2, M
 | `1.0` | 10/11/2026 | Consolidação dos dados brutos, diagnósticos técnicos e insights preliminares das métricas M3.1.1, M3.3.3, M3.4.1, M3.4.2 e M3.4.3 de G3 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.1` | 11/11/2026 | Inclusão dos resultados e insights de Escalabilidade (M3.2.1, M3.2.2 e M3.2.3), organização das pastas por questão GQM e rastreabilidade dos traces | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.2` | 11/11/2026 | Registro de esforço e detalhamento temporal por turnos (decisão, planejamento e execução empírica) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.3` | 11/11/2026 | Inclusão dos resultados e insights de Instalabilidade (M3.3.1 e M3.3.2) e atualização do esforço acumulado para 10 métricas | [Maria Eduarda](https://github.com/eduarda-ogomes) | |

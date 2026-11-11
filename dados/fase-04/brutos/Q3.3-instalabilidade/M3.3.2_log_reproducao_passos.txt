@@ -1,0 +1,83 @@
+=== M3.3.2: AUDITORIA DE REPRODUTIBILIDADE DOS PASSOS DOCUMENTADOS ===
+Commit avaliado: e1b7aacb356a492aa1e0fc6eb57b8896124027f0
+Documentos de referência: README.md e dev-docs/docs/introduction/development.mdx
+Ambiente: Zorin OS 18.1 (Linux x86_64), Node v24.16.0, Yarn 1.22.22, Docker 29.x
+Data de auditoria: 11/11/2026
+
+--------------------------------------------------------------------------------
+VIA 1: EXECUÇÃO NATIVA COM NODE.JS E YARN
+--------------------------------------------------------------------------------
+[Passo 1]: git clone https://github.com/excalidraw/excalidraw.git
+Comando executado: git clone https://github.com/excalidraw/excalidraw.git
+Saída: Clonagem concluída com sucesso. Checkout fixado no commit e1b7aac.
+Status: Sem ajuste (Código 0).
+
+[Passo 2]: cd excalidraw
+Comando executado: cd /home/duda/Documentos/qualidadeSoftware/excalidraw
+Saída: Diretório de trabalho alterado com sucesso.
+Status: Sem ajuste (Código 0).
+
+[Passo 3]: yarn
+Comando executado: yarn
+Saída:
+  yarn install v1.22.22
+  [1/5] Validating package.json...
+  [2/5] Resolving packages...
+  [3/5] Fetching packages...
+  [4/5] Linking dependencies...
+  [5/5] Building fresh packages...
+  $ husky install
+  husky - Git hooks installed
+  Done in 346.27s.
+Status: Sem ajuste (Código 0).
+
+[Passo 4]: yarn start
+Comando executado: yarn start (executa 'yarn --cwd ./excalidraw-app start')
+Saída:
+  VITE v5.0.12  ready in 1098 ms
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+Status: Sem ajuste (Código 0).
+
+[Passo 5]: Acesso ao navegador no endereço impresso (http://localhost:3000)
+Comando executado: curl -I http://localhost:3000
+Saída:
+  HTTP/1.1 200 OK
+  Content-Type: text/html
+  Cache-Control: no-cache
+Status: Sem ajuste (Código 0).
+
+--------------------------------------------------------------------------------
+VIA 2: EXECUÇÃO COM DOCKER COMPOSE
+--------------------------------------------------------------------------------
+[Passo 6]: docker-compose up --build -d
+Comando documentado em development.mdx: docker-compose up --build -d
+Saída no terminal:
+  bash: docker-compose: command not found (Código de saída 127)
+Diagnóstico de falha:
+  O guia oficial cita o executável legado standalone 'docker-compose' (com hífen, Python v1).
+  Em sistemas modernos com Docker Engine v20+ / v24+ / v29+, a ferramenta foi migrada
+  para o plugin nativo 'docker compose' (com espaço, Go v2).
+Ajuste necessário:
+  Executar o comando equivalente moderno:
+  docker compose up --build -d
+Status: Com ajuste (Código original 127; bem-sucedido após adaptação).
+
+[Passo 7]: Acesso ao navegador em http://localhost:3000
+Comando executado: curl -I http://localhost:3000
+Saída:
+  HTTP/1.1 200 OK
+  Server: nginx
+Status: Sem ajuste (Código 0 após inicialização do contêiner).
+
+--------------------------------------------------------------------------------
+CÁLCULO FINAL DE M3.3.2
+--------------------------------------------------------------------------------
+Total de passos testados: 7
+Passos executados sem ajuste: 6
+Passos executados com ajuste: 1 (Passo 6 - comando docker-compose desatualizado)
+
+Proporção = (6 / 7) * 100 = 85.71% -> 85.7%
+Classificação GQM: Nível Bom (+) [Faixa 80 a 95%]
+Pontuação atribuída: 75 pontos
+Hipótese H3.3.2 (>= 95%): REFUTADA (85.7% < 95%) devido à obsolescência da instrução de docker-compose.

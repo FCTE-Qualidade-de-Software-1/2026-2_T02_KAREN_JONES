@@ -34,6 +34,10 @@ Este diretório contém os dados brutos e consolidados da avaliação empírica 
 ### Q3.3 — Instalabilidade
 | Arquivo | Métrica | Descrição |
 | :--- | :---: | :--- |
+| `Q3.3-instalabilidade/M3.3.1_log_operacoes_pacote.txt` | **M3.3.1** | Log detalhado da execução de instalação, atualização e desinstalação via npm, yarn e pnpm. |
+| `Q3.3-instalabilidade/M3.3.1_resultados_pacote.csv` | **M3.3.1** | Tabela comparativa das 9 operações de pacote por gerenciador (cenário público e local). |
+| `Q3.3-instalabilidade/M3.3.2_log_reproducao_passos.txt` | **M3.3.2** | Registro textual da auditoria dos 7 passos documentados de compilação e execução local. |
+| `Q3.3-instalabilidade/M3.3.2_passos_ajustes.csv` | **M3.3.2** | Tabela dos 7 passos documentados com classificação (sem ajuste vs com ajuste) e justificativas. |
 | `Q3.3-instalabilidade/M3.3.3_verificacoes_docker.csv` | **M3.3.3** | Tabela de conferência das 4 verificações de implantação com Docker (build, run, healthcheck, navegação). |
 
 ### Q3.4 — Substituibilidade
