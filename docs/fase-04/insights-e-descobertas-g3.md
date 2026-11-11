@@ -122,15 +122,15 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 
 | Métrica | Arquivo de Dado Bruto | Finalidade da Evidência |
 | :---: | :--- | :--- |
-| **M3.1.1** | [`M3.1.1_cobertura_browserslist.txt`](../../dados/fase-04/brutos/M3.1.1_cobertura_browserslist.txt) | Saída de terminal com a cobertura populacional e lista de navegadores. |
-| **M3.3.3** | [`M3.3.3_verificacoes_docker.csv`](../../dados/fase-04/brutos/M3.3.3_verificacoes_docker.csv) | Tabela de conferência das 4 verificações de deploy, container e healthcheck. |
-| **M3.4.1** | [`M3.4.1_catalogo_formatos.csv`](../../dados/fase-04/brutos/M3.4.1_catalogo_formatos.csv) | Catálogo formal dos formatos abertos com MIME types e especificações W3C/ECMA. |
-| **M3.4.2** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/M3.4.2_preservacao_formatos.csv) | Resumo das taxas de preservação de elementos por formato. |
-| **M3.4.2** | [`M3.4.2_relatorio_preservacao.json`](../../dados/fase-04/brutos/M3.4.2_relatorio_preservacao.json) | Relatório técnico JSON elemento a elemento gerado por `scripts/compara_elementos.py`. |
-| **M3.4.2** | [`M3.4.2_arquivos_reimportados.zip`](../../dados/fase-04/brutos/M3.4.2_arquivos_reimportados.zip) | Pacote ZIP contendo as 6 cenas (originais exportadas e reimportadas salvas). |
-| **M3.4.3** | [`M3.4.3_campos_encontrados.json`](../../dados/fase-04/brutos/M3.4.3_campos_encontrados.json) | Lista das 52 propriedades extraídas da cena real. |
-| **M3.4.3** | [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/M3.4.3_conferencia_campos.csv) | Auditoria campo a campo classificando cada propriedade como documentada ou omitida. |
-| **M3.4.3** | [`M3.4.3_relatorio.txt`](../../dados/fase-04/brutos/M3.4.3_relatorio.txt) | Resumo textual com o percentual final e lista de campos pendentes. |
+| **M3.1.1** | [`M3.1.1_cobertura_browserslist.txt`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.1_cobertura_browserslist.txt) | Saída de terminal com a cobertura populacional e lista de navegadores. |
+| **M3.3.3** | [`M3.3.3_verificacoes_docker.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.3_verificacoes_docker.csv) | Tabela de conferência das 4 verificações de deploy, container e healthcheck. |
+| **M3.4.1** | [`M3.4.1_catalogo_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.1_catalogo_formatos.csv) | Catálogo formal dos formatos abertos com MIME types e especificações W3C/ECMA. |
+| **M3.4.2** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_preservacao_formatos.csv) | Resumo das taxas de preservação de elementos por formato. |
+| **M3.4.2** | [`M3.4.2_relatorio_preservacao.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_relatorio_preservacao.json) | Relatório técnico JSON elemento a elemento gerado por `scripts/compara_elementos.py`. |
+| **M3.4.2** | [`M3.4.2_arquivos_reimportados.zip`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_arquivos_reimportados.zip) | Pacote ZIP contendo as 6 cenas (originais exportadas e reimportadas salvas). |
+| **M3.4.3** | [`M3.4.3_campos_encontrados.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_campos_encontrados.json) | Lista das 52 propriedades extraídas da cena real. |
+| **M3.4.3** | [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv) | Auditoria campo a campo classificando cada propriedade como documentada ou omitida. |
+| **M3.4.3** | [`M3.4.3_relatorio.txt`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_relatorio.txt) | Resumo textual com o percentual final e lista de campos pendentes. |
 
 ---
 
