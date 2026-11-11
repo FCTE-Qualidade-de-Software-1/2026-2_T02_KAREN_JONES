@@ -55,7 +55,8 @@ Este registro é da preparação. As condições específicas de cada medição 
 | Ferramentas e versões usadas | OBS Studio 32.1.2; Git 2.54.0; Node.js 24.20.0; npm 11.19.0; Yarn 1.22.22 via Corepack; Docker CLI 29.7.2; Docker Compose 5.4.0; GitHub CLI 2.102.0 |
 | Aplicação local e porta, se necessário | Imagem criada a partir do commit avaliado; aplicação acessível em `http://localhost:3001`, com verificação de saúde aprovada. |
 | Desvios e motivo | Porta 3001 em vez de 3000, que estava ocupada. Node.js nativo 24.20.0 difere da referência 24.16.0 do plano; a imagem de referência informou 24.16.0. |
-| Pendências | Concluir a autenticação da CLI GitHub e conferir as consultas antes da coleta das métricas históricas. |
+| CLI GitHub | Autenticação persistente conferida em 10/11/2026; consultas de teste REST e GraphQL ao repositório do Excalidraw responderam com sucesso. |
+| Pendências | Sessão de início da coleta com os três responsáveis. |
 
 Na preparação, a instalação das dependências e o build dos pacotes foram concluídos. Uma verificação adicional de cobertura apresentou 10 testes com falha e 10 erros; as falhas precisam ser investigadas antes de usar esse procedimento na coleta de G1. Essa verificação não é um resultado de coleta.
 
