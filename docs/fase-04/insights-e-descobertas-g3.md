@@ -153,7 +153,20 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 
 ---
 
-## 5. Próximos Passos da Coleta
+## 5. Registro de Esforço e Tempo de Execução
+
+Conforme as diretrizes de rastreabilidade e gestão da qualidade, a tabela a seguir consolida o esforço real investido pela avaliadora ao longo do dia 10/11/2026 (estendendo-se até a madrugada de 11/11/2026), cobrindo desde as discussões e tomadas de decisão até a instrumentação e coleta empírica das 8 métricas concluídas:
+
+| Turno / Período | Horário Aprox. | Duração | Atividades Realizadas (Decisão & Execução) | Métricas / Entregas Associadas |
+| :--- | :---: | :---: | :--- | :--- |
+| **Manhã** | 09:00 – 12:45 | **3h45** | • Análise e resolução de conflitos no PR #151 (adaptação do script PSM e dados brutos do GitHub).<br />• Alinhamento do plano de medição da Fase 04 (Issue #113 — G3 Flexibilidade).<br />• Leitura detalhada das instruções de avaliação, critérios de julgamento e faixas de pontuação.<br />• Decisão arquitetural de priorizar a execução via contêiner oficial Docker para garantir reprodutibilidade e ambiente limpo. | PR #151 (Merge main)<br />Setup inicial F4 |
+| **Tarde** | 14:30 – 16:30 | **2h00** | • Recepção e importação da imagem Docker do Excalidraw (`excalidraw-avaliacao`).<br />• Instanciação e verificação de integridade do contêiner na porta 3000:80.<br />• Criação da estrutura de pastas em `dados/fase-04/brutos/` e templates de coleta.<br />• Execução dos comandos CLI do Browserslist e auditoria das 4 etapas de implantação Docker. | **M3.1.1** (Browserslist)<br />**M3.3.3** (Docker) |
+| **Noite / Madrugada** | 21:00 – 00:20 | **3h20** | • Auditoria dos formatos abertos e testes de reimportação com conferência via `compara_elementos.py`.<br />• Extração e auditoria campo a campo do JSON Schema oficial (identificação da lacuna de documentação).<br />• Definição da Ação de Melhoria (F4-C5) para documentação formal do esquema do Excalidraw.<br />• Reorganização completa da pasta de dados brutos por questões GQM (`Q3.1` a `Q3.4`).<br />• Execução das medições de escalabilidade: 20 perfis de rastreamento no DevTools (tempo de abertura), testes de salvamento/exportação até 10.000 elementos e medição empírica de FPS com *Frame Rendering Stats*. | **M3.4.1** (Formatos)<br />**M3.4.2** (Preservação)<br />**M3.4.3** (Esquema)<br />**M3.2.1** (Abertura)<br />**M3.2.2** (FPS)<br />**M3.2.3** (Exportação) |
+| **Total Acumulado** | — | **~9h05** | **8 de 12 métricas concluídas (66,7% do objetivo G3)**, 20 traces DevTools coletados, 3 planilhas CSV e relatórios consolidados. | **G3 — 8 métricas** |
+
+---
+
+## 6. Próximos Passos da Coleta
 
 Com as 8 métricas de Adaptabilidade (M3.1.1), Escalabilidade (M3.2.1, M3.2.2, M3.2.3), Instalabilidade (M3.3.3) e Substituibilidade (M3.4.1, M3.4.2, M3.4.3) concluídas, restam apenas 4 medições para completar a totalidade do objetivo G3:
 
@@ -172,3 +185,4 @@ Com as 8 métricas de Adaptabilidade (M3.1.1), Escalabilidade (M3.2.1, M3.2.2, M
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 10/11/2026 | Consolidação dos dados brutos, diagnósticos técnicos e insights preliminares das métricas M3.1.1, M3.3.3, M3.4.1, M3.4.2 e M3.4.3 de G3 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.1` | 11/11/2026 | Inclusão dos resultados e insights de Escalabilidade (M3.2.1, M3.2.2 e M3.2.3), organização das pastas por questão GQM e rastreabilidade dos traces | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.2` | 11/11/2026 | Registro de esforço e detalhamento temporal por turnos (decisão, planejamento e execução empírica) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
