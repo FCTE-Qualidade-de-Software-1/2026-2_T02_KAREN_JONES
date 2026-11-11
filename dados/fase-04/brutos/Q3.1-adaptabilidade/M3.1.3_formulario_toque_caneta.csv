@@ -1,11 +1,11 @@
 Acao,Dedo (Sucesso/Falha),Caneta (Sucesso/Falha),Observacoes
-1. Criar forma,,,
-2. Desenhar livre,,,
-3. Selecionar elemento,,,
-4. Mover elemento,,,
-5. Redimensionar elemento,,,
-6. Zoom com pinca,,,
-7. Deslocar tela (pan),,,
-8. Texto com teclado virtual,,,
-9. Desfazer,,,
-10. Abrir menu,,,
+1. Criar forma,Sucesso,Sucesso,Retangulo desenhado e posicionado com precisao via arrasto
+2. Desenhar livre,Sucesso,Sucesso,Traco continuo fluido tanto com ponta do dedo quanto com a caneta Goojodoq
+3. Selecionar elemento,Sucesso,Sucesso,Toque simples ativa a caixa delimitadora com alcas azuis de selecao
+4. Mover elemento,Sucesso,Sucesso,Arrasto imediato do elemento selecionado para nova posicao no canvas
+5. Redimensionar elemento,Sucesso,Sucesso,Alca de canto responde perfeitamente alterando dimensoes da forma
+6. Zoom com pinca,Sucesso,Sucesso,Pinch-to-zoom com dois dedos suave para aproximar e afastar
+7. Deslocar tela (pan),Sucesso,Sucesso,Dois dedos necessarios com ferramenta de selecao ativa; ferramenta de mao permite pan direto com toque simples
+8. Texto com teclado virtual,Sucesso,Sucesso,Ferramenta texto abre teclado nativo do iPad e permite digitar normalmente
+9. Desfazer,Sucesso,Sucesso,Botao de desfazer na barra inferior esquerda reverte a ultima acao perfeitamente
+10. Abrir menu,Sucesso,Sucesso,Toque no icone hamburguer abre o painel lateral com opcoes e bibliotecas

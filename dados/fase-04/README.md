@@ -54,3 +54,13 @@ Este diretório contém os dados brutos e consolidados da avaliação empírica 
 | `Q3.4-substituibilidade/M3.4.3_campos_encontrados.json` | **M3.4.3** | Lista de todas as 52 propriedades reais extraídas da cena de referência do Excalidraw. |
 | `Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv` | **M3.4.3** | Auditoria campo a campo contra o guia oficial de especificação técnica (`json-schema.mdx`). |
 | `Q3.4-substituibilidade/M3.4.3_relatorio.txt` | **M3.4.3** | Relatório de auditoria com percentual de campos documentados e lista de campos omitidos. |
+
+---
+
+## Catálogo de Arquivos Consolidados
+
+| Arquivo | Finalidade e Conteúdo |
+| :--- | :--- |
+| `consolidados/G3_metricas_consolidadas.csv` | Tabela consolidada com as 12 métricas de G3, incluindo valores medidos, unidades, pontuação atribuída (0 a 100), nível na régua, hipóteses formuladas, status (confirmada/refutada) e apontamento para os arquivos brutos. |
+| `consolidados/G3_questoes_pontuacao.csv` | Resumo executivo das 4 questões GQM (Q3.1 Adaptabilidade, Q3.2 Escalabilidade, Q3.3 Instalabilidade, Q3.4 Substituibilidade) e da pontuação global ponderada do objetivo G3 (78,65 pts — Nível Bom). |
+
