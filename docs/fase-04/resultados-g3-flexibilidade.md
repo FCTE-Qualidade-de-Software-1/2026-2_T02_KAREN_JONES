@@ -268,4 +268,4 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 11/11/2026 | Elaboração do relatório consolidado de resultados e julgamento do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.0` | 11/11/2026 | Elaboração do relatório consolidado de resultados e julgamento do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |

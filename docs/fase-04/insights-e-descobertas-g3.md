@@ -241,4 +241,4 @@ Com **100% das doze métricas de G3 integralmente coletadas**, as próximas etap
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 11/11/2026 | Elaboração dos insights técnicos, diagnósticos empíricos e catálogo de evidências da coleta do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.0` | 11/11/2026 | Elaboração dos insights técnicos, diagnósticos empíricos e catálogo de evidências da coleta do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
