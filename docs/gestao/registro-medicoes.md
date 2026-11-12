@@ -77,12 +77,12 @@ Conforme definido no [Plano de Medição PSM](plano-medicao-psm.md), a equipe av
 
 | Critério de Decisão (Constructs PSM) | Meta Estabelecida | Resultado Observado | Situação | Análise e Encaminhamento |
 | :--- | :---: | :---: | :---: | :--- |
-| **Desvio de Esforço Orçamentário** | Dentro de $\pm 20\%$ | **-1,5%** (114,31h reais vs. 116,00h est.) | **Atendido** | Excelente precisão orçamentária; margem de calibração equilibrou a Entrega 1. |
+| **Desvio de Esforço Orçamentário** | Dentro de $\pm 20\%$ | **-1,5%** (114,31h reais vs. 116,00h est.) | **Atendido** | Excelente precisão orçamentária, margem de calibração equilibrou a Entrega 1. |
 | **Disparidade de Esforço Individual** | Redução da dispersão | De 29,35 p.p. para **27,48 p.p.** | **Atendido** | Todos os membros entre 8,67% e 24,93% do esforço acumulado (faixa ideal: 8% a 30%). |
-| **Ganho de Acurácia de Estimativa** | Ganho positivo ($> 0$) | -1,6 p.p. (F1: 108,2%; F2: 90,2%) | **Não atendido** | Ambas as fases mantiveram-se na faixa ideal (80% a 120%), com o consolidado convergindo para 98,5%. |
-| **Aderência aos Prazos Internos** | 100,0% no prazo | **38,6%** (29,4% na F1; 44,4% na F2) | **Não atendido** | Atrasos causados por bloqueios em cadeia; motivou a política de [Priorização no Project](priorizacao-issues.md). |
-| **Taxa de Revisão por Pares (PRs)** | 100,0% aprovados | **46,7%** (14 de 30 PRs) | **Não atendido** | Revisões informais não deixaram rastro na API; Decisão D5 exige registro formal de aprovação no GitHub. |
-| **Issues Pendentes na Submissão** | Zero issues abertas | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30) abertas | **Não atendido** | Issues fechadas em 05/11; submissão no Moodle realizada via release [`v0.1`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v0.1). Saneado na Decisão D6. |
+| **Ganho de Acurácia de Estimativa** | Ganho positivo ($> 0$) | -1,6 p.p. (F1: 108,2%, F2: 90,2%) | **Não atendido** | Ambas as fases mantiveram-se na faixa ideal (80% a 120%), com o consolidado convergindo para 98,5%. |
+| **Aderência aos Prazos Internos** | 100,0% no prazo | **38,6%** (29,4% na F1, 44,4% na F2) | **Não atendido** | Atrasos causados por bloqueios em cadeia, motivou a política de [Priorização no Project](priorizacao-issues.md). |
+| **Taxa de Revisão por Pares (PRs)** | 100,0% aprovados | **46,7%** (14 de 30 PRs) | **Não atendido** | Revisões informais não deixaram rastro na API, e a Decisão D5 exige registro formal de aprovação no GitHub. |
+| **Issues Pendentes na Submissão** | Zero issues abertas | [#28](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/28) e [#30](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/30) abertas | **Não atendido** | Issues fechadas em 05/11, submissão no Moodle realizada via release [`v0.1`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v0.1), saneado na Decisão D6. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base na coleta de 05/11/2026 e no histórico de fechamento de issues, 2026.</p>
 
@@ -117,17 +117,29 @@ Conforme definido no [Plano de Medição PSM](plano-medicao-psm.md), a equipe av
 
 | Indicador | Meta / Esperado | Valor Coletado (11/11/2026) | Situação |
 | :--- | :---: | :---: | :---: |
-| Issues Concluídas na Fase 3 | Pelo menos 10 de 19 | **13 de 23** | **Atingido** ✅ |
-| Progresso da Fase 3 (%) | Pelo menos 50,0% | **56,5%** | **Atingido** ✅ |
-| Aderência aos Prazos Intermediários | Pelo menos 70,0% | **8,7%** (2 de 23) | **Atenção** (Ajuste decorrente do foco antecipado na F4) |
-| Horas Reais Consumidas (h) | Aprox. 22,0 h | **41,0 h** (de 48,0 h orçadas) | **Conforme** (Consumo alinhado à complexidade) |
-| Governança de Preenchimento | 100,0% | **100,0%** | **Excelente** ✅ |
+| Issues Concluídas na Fase 3 | Pelo menos 10 de 19 | **13 de 23** | **Atingido** |
+| Progresso da Fase 3 (%) | Pelo menos 50,0% | **56,5%** | **Atingido** |
+| Aderência aos Prazos Intermediários | Pelo menos 70,0% | **8,7%** (2 de 23) | **Não conforme (crítico)** |
+| Horas Reais Consumidas (h) | Aprox. 22,0 h | **41,0 h** (de 48,0 h orçadas) | **Atenção (consumo antecipado de 85,4%)** |
+| Governança de Preenchimento | 100,0% | **100,0%** | **Excelente** |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026. Extraído da base oficial `dados/gestao/` via script PSM.</p>
 
-### 3.2. Análise Crítica e Gatilhos de Ação
-* **Verificação de Gargalos:** As issues de Prioridade Alta de insumo essencial da Fase 3 ([#96](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/96) Recursos e Ambiente, [#97](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/97) Massa de Dados e [#100](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/100) Instruções G3) foram devidamente finalizadas e homologadas, permitindo o avanço e a conclusão antecipada de 100% da coleta das métricas da Fase 4 para o objetivo G3 (Flexibilidade).
-* **Avaliação do Gatilho de Decisão:** O progresso apurado da Fase 3 atingiu **56,5%** (superando com folga o limite crítico de 50,0%). Portanto, **não foi necessário acionar reunião extraordinária de emergência para redistribuição de tarefas**. A equipe mantém o foco para concluir as instruções restantes de G1/G2 e preparar os slides para o Ponto de Controle 2 em 16/11/2026.
+> **Nota sobre o denominador de issues:** O total de issues planejadas para a Fase 3 foi reajustado de 19 para 23 issues devido à abertura de quatro novas tarefas técnicas ([#135](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/135), [#137](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/137), [#139](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/139) e [#140](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/140)), necessárias para contemplar a automação do pipeline de dados e a infraestrutura de suporte aos testes.
+
+### 3.2. Análise Crítica e Decisões de Gestão Adotadas
+
+#### Análise Causal dos Desvios Identificados
+
+* **Aderência Crítica aos Prazos Intermediários (8,7%):** Apenas duas das 23 issues foram concluídas estritamente dentro da estimativa de prazo intermediário original. A causa raiz desse desvio foi a concentração deliberada da equipe no desbloqueio da infraestrutura técnica e no avanço antecipado da coleta de dados de Flexibilidade (G3) na Fase 4, o que postergou as datas de conclusão intermediária das issues restantes da Fase 3.
+* **Consumo Acelerado de Esforço Orçamentário (85,4%):** O consumo acumulado atingiu 41,0 horas de um total de 48,0 horas previstas para a Fase 3, correspondendo a 85,4% do orçamento para 56,5% de tarefas concluídas. O desvio decorreu da complexidade não prevista na conteinerização oficial Docker, nos testes de compilação de pacotes locais do monorepo e na automação dos seis ambientes de integração de M3.1.2.
+
+#### Decisões de Gestão Adotadas
+
+Em resposta aos desvios apontados pelos indicadores, foram formalizadas as seguintes decisões gerenciais:
+1. **Priorização de Bloqueios Remanescentes:** Concentrar os esforços imediatos no fechamento das issues de insumos essenciais da Fase 3 ainda abertas ([#98](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/98) e [#99](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/99)), assegurando que os roteiros de G1 e G2 sejam entregues sem comprometer a Fase 4.
+2. **Congelamento de Escopo:** Proibir a abertura de novas issues adicionais para a Fase 3, contendo a expansão do escopo e preservando a governança.
+3. **Remanejamento do Saldo Orçamentário:** Restringir o consumo das 7,0 horas restantes do orçamento da Fase 3 exclusivamente para a homologação das instruções restantes e confecção dos slides de apresentação do Ponto de Controle 2 previsto para 16/11/2026.
 
 ---
 
@@ -184,4 +196,4 @@ Conforme definido no [Plano de Medição PSM](plano-medicao-psm.md), a equipe av
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 07/11/2026 | Criação do Registro de Medições e Decisões com Medição 0 (Linha de base E1), análise causal de dependência de tarefas, decisões D1-D6 e templates das medições 1 e 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
 | 1.1 | 08/11/2026 | Alinhamento do gatilho de 50%, Medição 3 em 22/11, esclarecimento do progresso da F2, Construct 2 e autoria das fontes | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
-| 1.2 | 11/11/2026 | Apuração e registro dos indicadores quantitativos da Medição 1 (Ponto de Controle Intermediário da Fase 3), análise do gatilho de decisão e status dos bloqueios | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
+| 1.2 | 11/11/2026 | Apuração e registro dos indicadores quantitativos da Medição 1 (Ponto de Controle Intermediário da Fase 3), análise causal dos desvios de aderência e esforço, e formalização de decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
