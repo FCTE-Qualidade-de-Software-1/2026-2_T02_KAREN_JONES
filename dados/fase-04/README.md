@@ -70,7 +70,7 @@ Na preparação, a instalação das dependências e o build dos pacotes foram co
 | Sistema operacional e navegador | Zorin OS 18.1 (Linux), Mozilla Firefox 159.0.1 |
 | Ferramentas e versões usadas | Git 2.43.0, Node.js 24.16.0, npm 11.13.0, Docker 29.9.3 (build 5457199), Docker Compose 5.7.0, Python 3.12.3 |
 | Aplicação local e porta, se necessário | Imagem `excalidraw-avaliacao` criada a partir do commit avaliado, contêiner `excalidraw-avaliacao-teste` em execução com verificação de integridade aprovada, e aplicação acessível em `http://localhost:3000`. |
-| Desvios e motivo | Nenhum desvio em relação ao planejado, com porta 3000 padrão utilizada com sucesso e versões de Node.js e Docker idênticas às previstas no plano de recursos e ambiente da Fase 03. |
+| Desvios e motivo | Na preparação, nenhum desvio: porta 3000 e versões de Node.js e Docker iguais às do plano. Na coleta, M3.2.1 e M3.2.2 foram medidas no Chrome DevTools, e não no Firefox 159.0.1 fixado no plano. M3.1.2 e M3.3.1 foram executadas na máquina, e não no contêiner limpo `node:24`. O motivo desses desvios ainda precisa ser registrado pela responsável. |
 | Pendências | Sessão de início da coleta com os três responsáveis. |
 
 Na preparação, a imagem Docker foi gerada com sucesso via `docker build -t excalidraw-avaliacao .` e o contêiner inicializado via `docker run -d --name excalidraw-avaliacao-teste -p 3000:80 excalidraw-avaliacao`. O healthcheck respondeu com status positivo e a interface gráfica do editor no navegador respondeu com sucesso (código HTTP 200 via Nginx e canvas funcional), validando os pré-requisitos para as coletas de M3.3.2 e M3.3.3.
@@ -163,4 +163,5 @@ A sessão de início com os três responsáveis ainda precisa acontecer e ser re
 | 1.0 | 10/11/2026 | Organização do repositório de medidas da Fase 04 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 10/11/2026 | Registro do ambiente de medição de Maria Eduarda (G3) e validação da preparação do contêiner Docker | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.2 | 11/11/2026 | Registro do ambiente de medição de Christopher (G1) | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.3 | 11/11/2026 | Inclusão do catálogo de dados brutos e consolidados coletados para o objetivo G3 (Flexibilidade) | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| 1.3 | 11/11/2026 | Inclusão do catálogo de dados brutos e consolidados coletados para o objetivo G3 (Flexibilidade) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.4 | 11/11/2026 | Registro dos desvios da coleta de G3 em relação ao plano | [Christopher Paraizo](https://github.com/wChrstphr) | |

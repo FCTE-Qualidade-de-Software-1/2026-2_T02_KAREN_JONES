@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Este documento apresenta o relatório formal de avaliação da qualidade para o objetivo G3 (Flexibilidade), executado sobre o software Excalidraw fixado no commit `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`. O propósito deste artefato é sintetizar os resultados empíricos obtidos na coleta de dados, responder fundamentadamente às questões formuladas pelo modelo GQM, confrontar as hipóteses estabelecidas e emitir o julgamento formal da característica com base nas normas de engenharia de software e nos critérios da disciplina.
+Este documento apresenta o relatório formal de avaliação da qualidade para o objetivo G3 (Flexibilidade), executado sobre o software Excalidraw fixado no commit `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`. O propósito deste artefato é sintetizar os resultados empíricos obtidos na coleta de dados, responder às questões formuladas pelo modelo GQM, confrontar as hipóteses estabelecidas e emitir o julgamento da característica.
 
 ## Metodologia
 
@@ -28,14 +28,15 @@ A avaliação seguiu o método Goal-Question-Metric (GQM) estruturado na Fase 02
 | **Avaliadora Responsável** | Maria Eduarda ([@eduarda-ogomes](https://github.com/eduarda-ogomes)) |
 | **Software Avaliado** | Excalidraw (commit exato `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`) |
 | **Período de Execução** | 10 a 11 de Novembro de 2026 |
-| **Sistema Operacional** | Zorin OS 18.1 (Kernel Linux 6.8.0-48-generic x86_64, base Ubuntu 24.04 LTS) |
-| **Hardware do Avaliador** | AMD Ryzen 7 5700U with Radeon Graphics (16 threads), 16 GB RAM DDR4 |
+| **Sistema Operacional** | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic x86_64, base Ubuntu 24.04 LTS) |
+| **Hardware do Avaliador** | AMD Ryzen 7 5700U with Radeon Graphics, 10 GB de RAM utilizáveis (16 GB instalados) |
 | **Dispositivo Móvel** | Apple iPad (A16) e Caneta Stylus Capacitiva Goojodoq |
-| **Ambiente de Testes** | Contêiner Docker oficial (Nginx 1.30.2, porta `3000:80`) e Node.js v20.19.0 com Yarn 1.22.22 |
+| **Ambiente de Testes** | Contêiner Docker oficial (Nginx 1.30.2, porta `3000:80`) e Node.js 24.16.0 com Yarn 1.22.22 |
+| **Navegador** | Chrome DevTools em M3.2.1 e M3.2.2, em vez do Mozilla Firefox 159.0.1 fixado nos [recursos e ambiente](../fase-03/recursos-ambiente.md) |
 | **Repositório de Dados Brutos** | `dados/fase-04/brutos/` |
 | **Tabelas Consolidadas** | `dados/fase-04/consolidados/` |
 
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
@@ -60,7 +61,7 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 | **M3.4.2** | Preservação de elementos na reimportação | Q3.4 | **100,00%** | **Excelente** (`++`) | 5,00 | H3.4.2 ≥ 95% | **Confirmada** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_preservacao_formatos.csv) |
 | **M3.4.3** | Proporção dos campos do formato documentados | Q3.4 | **26,9%** (14 de 52) | **Ruim** (`-`) | 2,00 | H3.4.3 < 60% | **Confirmada** | [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv) |
 
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
@@ -84,7 +85,7 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 
 > **Resposta:** **Sim, de forma satisfatória e com ressalvas conhecidas.** O Excalidraw apresenta excelente suporte a dispositivos táteis e móveis (100% no iPad) e ampla cobertura da base global de navegadores (88,94%). Todavia, a adaptabilidade como componente React em aplicações com renderização híbrida ou SSR (Next.js) requer atenção. Integradores que utilizem React 17 ou React 18 enfrentam incompatibilidades em tempo de compilação ou pré-renderização, demandando a adoção do React 19 ou isolamento completo da biblioteca no lado do cliente (client-only).
 > 
-> **Pontuação de Q3.1:** Média de **4,00 pontos** (Nível **Bom `+`**).
+> **Pontuação de Q3.1:** Média de **4,0 pontos** (Nível **Bom `+`**).
 
 ---
 
@@ -95,16 +96,18 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 #### Análise das Métricas Componentes
 
 - **M3.2.1 (Tempo de abertura por tamanho de cena):** Avaliado por 20 perfis de desempenho DevTools em 4 escalas (100, 1.000, 5.000 e 10.000 elementos, com 5 repetições cada). As medianas registradas foram:
-  - 100 elementos: **0,05 s** (Nível `++`)
-  - 1.000 elementos: **0,11 s** (Nível `++`)
-  - 5.000 elementos: **1,15 s** (Nível `+`)
-  - 10.000 elementos: **1,52 s** (Nível `+`)
+  - 100 elementos: **0,05 s** (Nível `++`).
+  - 1.000 elementos: **0,11 s** (Nível `++`).
+  - 5.000 elementos: **1,15 s** (Nível `+`).
+  - 10.000 elementos: **1,52 s** (Nível `+`).
+
   O tempo cresce de forma aproximadamente linear com o volume de dados. A cena de 1.000 elementos abriu em apenas 0,11 s, amplamente inferior ao limite cognitivo de Nielsen (1,0 s). A pontuação média da métrica é **4,50 pontos (Nível Bom `+`)**.
 - **M3.2.2 (Taxa de quadros durante edição contínua):** Medida via Frame Rendering Stats do DevTools durante arrasto de blocos de elementos:
-  - 100 elementos: **60 FPS** (100% da meta de 60 FPS, Nível `++`)
-  - 1.000 elementos: **52 FPS** (86,7% da meta, Nível `+`)
-  - 5.000 elementos: **20 FPS** (33,3% da meta, Nível `-`)
-  - 10.000 elementos: **12 FPS** (20,0% da meta, Nível `-`)
+  - 100 elementos: **60 FPS** (100% da meta de 60 FPS, Nível `++`).
+  - 1.000 elementos: **52 FPS** (86,7% da meta, Nível `+`).
+  - 5.000 elementos: **20 FPS** (33,3% da meta, Nível `-`).
+  - 10.000 elementos: **12 FPS** (20,0% da meta, Nível `-`).
+
   Em cenas pequenas e médias (até 1.000 elementos), a edição é perfeitamente fluida. Em cenas densas (acima de 5.000 elementos), o redesenho global do canvas HTML5 impõe gargalo de renderização, reduzindo a taxa de quadros e caracterizando um ponto de atenção técnica. Média: **3,25 pontos (Nível Regular `o`)**.
 - **M3.2.3 (Tamanho máximo de cena salva e exportada):** Todas as 4 escalas foram submetidas ao teste de estresse de persistência (`.excalidraw`) e exportação (PNG e SVG). A cena máxima de **10.000 elementos** foi salva em **0,80 s**, exportada em PNG em **1,20 s** e em SVG em **0,70 s**, todas muito abaixo do limite crítico de 30 s e do limiar interativo de 2 s. Nível: **Excelente (`++`, 5,00 pontos)**.
 
@@ -112,7 +115,7 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 
 > **Resposta:** **Sim, para cenas típicas e moderadas, com degradação progressiva de fluidez em cenas extremas.** O Excalidraw escala com agilidade na abertura e persistência de arquivos, suportando volumes maciços de até 10.000 elementos sem perda de dados ou travamento do navegador. Contudo, a taxa de quadros durante o arrasto contínuo em cenas superiores a 5.000 elementos cai para a faixa de 12 a 20 FPS, indicando que a renderização bidimensional síncrona se beneficia de técnicas futuras de particionamento espacial (spatial indexing) ou virtualização de viewport.
 > 
-> **Pontuação de Q3.2:** Média de **4,25 pontos** (Nível **Bom `+`**).
+> **Pontuação de Q3.2:** Média de **4,3 pontos** (Nível **Bom `+`**).
 
 ---
 
@@ -122,15 +125,15 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 
 #### Análise das Métricas Componentes
 
-- **M3.3.1 (Proporção de operações de pacote bem-sucedidas):** Avaliação de 9 operações cruzando 3 gerenciadores (`npm`, `yarn` e `pnpm`) nas etapas de instalação inicial, upgrade e desinstalação a partir do tarball local gerado no monorepo (`@excalidraw/excalidraw-0.18.0.tgz`). A instalação inicial obteve êxito nos três gerenciadores (3 de 3). No entanto, as operações de upgrade falharam devido à dependência interna não publicada `@excalidraw/common` com código `ETARGET`, inviabilizando também a conclusão limpa da desinstalação subsequente. Com 3 operações bem-sucedidas em 9 avaliadas (**33,3%**), a métrica atinge o nível **Ruim (`-`, 2,00 pontos)** e refuta a hipótese H3.3.1.
+- **M3.3.1 (Proporção de operações de pacote bem-sucedidas):** Avaliação de 9 operações cruzando 3 gerenciadores (`npm`, `yarn` e `pnpm`) nas etapas de instalação inicial, upgrade e desinstalação a partir do tarball local gerado no monorepo (`@excalidraw/excalidraw-0.18.0.tgz`). Segundo a tabela de resultados, a instalação e a atualização a partir do tarball falharam nos três gerenciadores, porque o pacote depende de `@excalidraw/common@0.18.0`, subpacote interno não publicado no registro (erro `ETARGET`). Apenas as três remoções foram concluídas. Com 3 operações bem-sucedidas em 9 avaliadas (**33,3%**), a métrica atinge o nível **Ruim (`-`, 2,00 pontos)** e refuta a hipótese H3.3.1.
 - **M3.3.2 (Proporção de passos documentados reproduzidos sem ajuste):** Dos 7 passos descritos na documentação oficial de compilação e execução local, **6 passos foram reproduzidos estritamente sem ajuste (85,7%)**, classificando a métrica no nível **Bom (`+`, 4,00 pontos)**. O único ajuste necessário ocorreu no Passo 6 (`docker-compose up`), que falhou com código de saída 127 (command not found) em sistemas operacionais recentes devido à sintaxe de hífen legada (`docker-compose` em vez de `docker compose`).
 - **M3.3.3 (Implantação com Docker):** Todas as 4 etapas de verificação (construção da imagem multi-stage Nginx, inicialização do contêiner, aprovação do healthcheck interno com `wget -q -O - http://localhost:80/` e carregamento do editor no navegador) foram validadas com sucesso sem nenhuma intervenção manual. Nível: **Excelente (`++`, 5,00 pontos)**.
 
 #### Resposta Formal à Questão Q3.3
 
-> **Resposta:** **Sim, com boa facilidade geral e ressalvas no consumo de pacotes locais.** O Excalidraw demonstra alta maturidade na conteinerização com Docker, permitindo disponibilizar uma instância de produção local em menos de três minutos de forma totalmente automatizada. O ambiente nativo também compila com agilidade. Por outro lado, o empacotamento local do monorepo expõe acoplamento entre subpacotes internos, exigindo publicação sincronizada para evitar inconsistências em gerenciadores de dependências, além de apontar a necessidade de modernização das instruções de Docker Compose na documentação.
+> **Resposta:** **Sim, com boa facilidade geral e ressalvas no consumo de pacotes locais.** O Excalidraw demonstra alta maturidade na conteinerização com Docker, permitindo disponibilizar uma instância de produção local sem intervenção manual. O ambiente nativo também compila com agilidade. Por outro lado, o empacotamento local do monorepo expõe acoplamento entre subpacotes internos, exigindo publicação sincronizada para evitar inconsistências em gerenciadores de dependências, além de apontar a necessidade de modernização das instruções de Docker Compose na documentação.
 > 
-> **Pontuação de Q3.3:** Média de **3,67 pontos** (Nível **Bom `+`**).
+> **Pontuação de Q3.3:** Média de **3,7 pontos** (Nível **Bom `+`**).
 
 ---
 
@@ -148,7 +151,7 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 
 > **Resposta:** **Parcialmente, caracterizando um contraste entre código e documentação.** Sob a ótica de uso e dados, a substituibilidade do Excalidraw é exemplar: o software salva e exporta em múltiplos formatos abertos e reimporta seus próprios arquivos sem perder um único elemento gráfico (100% de fidelidade). Por outro lado, para desenvolvedores terceiros que buscam implementar ferramentas interoperáveis ou conversores independentes, a ausência de um esquema formal legível por máquina e a omissão de mais de 73% das propriedades na documentação técnica criam um obstáculo severo, exigindo engenharia reversa no código-fonte TypeScript.
 > 
-> **Pontuação de Q3.4:** Média de **3,67 pontos** (Nível **Bom `+`**).
+> **Pontuação de Q3.4:** Média de **3,7 pontos** (Nível **Bom `+`**).
 
 ---
 
@@ -173,7 +176,7 @@ Antes da coleta empírica, foram formuladas doze hipóteses no [Plano GQM de Fle
 | **H3.4.2** | A reimportação preservará os elementos do desenho. | ≥ 95% em cada formato | **100,00%** | **Confirmada** | Algoritmo de restauração de metadados sem perda de atributos. |
 | **H3.4.3** | O formato `.excalidraw` terá documentação apenas parcial. | Menor que 60% dos campos | **26,9%** | **Confirmada** | Confirmação empírica da defasagem documental do esquema de dados. |
 
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
@@ -181,31 +184,29 @@ Antes da coleta empírica, foram formuladas doze hipóteses no [Plano GQM de Fle
 
 ### 5.1 Agregação por Subcaracterísticas e Objetivo G3
 
-Conforme a metodologia de agregação de Heitlager, Kuipers e Visser [[1, p. 8]](#ref-1), as pontuações são combinadas por média aritmética simples na escala de 1 a 5 pontos:
+As pontuações seguem a [regra de agregação da Fase 02](../fase-02/pontuacao-julgamento.md#6-agregação-da-métrica-à-característica), baseada em Heitlager, Kuipers e Visser [[1, p. 8]](#ref-1).
 
-1. **Pontuação das Subcaracterísticas (Questões GQM):**
-   - **Q3.1: Adaptabilidade:** (4,00 + 3,00 + 5,00) / 3 = **4,00 pontos** (Nível **Bom `+`**)
-   - **Q3.2: Escalabilidade:** (4,50 + 3,25 + 5,00) / 3 = **4,25 pontos** (Nível **Bom `+`**)
-   - **Q3.3: Instalabilidade:** (2,00 + 4,00 + 5,00) / 3 = **3,67 pontos** (Nível **Bom `+`**)
-   - **Q3.4: Substituibilidade:** (4,00 + 5,00 + 2,00) / 3 = **3,67 pontos** (Nível **Bom `+`**)
+<p className="tabela-titulo">Tabela 4: Pontuação das questões e do objetivo G3</p>
 
-2. **Pontuação Global da Característica (Objetivo G3):**
-   - **Média Global na Escala Heitlager (1 a 5):** (4,00 + 4,25 + 3,67 + 3,67) / 4 = **3,90 estrelas** (arredondado para 4 estrelas, Nível **Bom `+`**)
+| Questão | Pontos das métricas | Média | Nível |
+| :--- | :--- | :---: | :---: |
+| Q3.1: Adaptabilidade | 4,00, 3,00 e 5,00 | 4,0 | `+` |
+| Q3.2: Escalabilidade | 4,50, 3,25 e 5,00 | 4,3 | `+` |
+| Q3.3: Instalabilidade | 2,00, 4,00 e 5,00 | 3,7 | `+` |
+| Q3.4: Substituibilidade | 4,00, 5,00 e 2,00 | 3,7 | `+` |
+| **G3: Flexibilidade** | Média das quatro questões, sem arredondá-las antes | **3,9** | **`+`** |
 
-### 5.2 Julgamento Conforme Regras da Disciplina
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
-Conforme os critérios estabelecidos na [seção 7.1 da Fase 02](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica) (baseados no esquema TÜViT e Baggen et al., 2010):
-- **Critério para resultado "Atende":** A característica global deve obter nível `o` ou superior (média igual ou maior que 3,0), e nenhuma das suas questões pode situar-se no nível `--` (Muito ruim, inferior a 2,0).
-- **Resultado da Avaliação:**
-  - A pontuação global da Flexibilidade é **3,90 pontos** (Nível **Bom `+`**).
-  - Todas as 4 subcaracterísticas situam-se no nível Bom (`+`), com notas entre 3,67 e 4,25 pontos. Nenhuma subcaracterística obteve conceito Crítico ou Muito Ruim (`--`).
-  - **Veredito Oficial:** O software Excalidraw **ATENDE** aos requisitos de qualidade para a característica **Flexibilidade**.
+### 5.2 Julgamento
+
+Pelos [critérios de julgamento da Fase 02](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica), a Flexibilidade **atende**: a característica está no nível `+`, e nenhuma das quatro questões está no nível `--`.
 
 ---
 
 ## 6. Diagnóstico de Fraquezas e Proposta de Ação de Melhoria
 
-A sistemática de avaliação de qualidade determina que todo indicador no nível `-` ou `--` deve ser explicitamente sinalizado como oportunidade de melhoria técnica. Durante a avaliação de G3, foram mapeados os seguintes pontos de atenção:
+Pela [regra de pontos de melhoria da Fase 02](../fase-02/pontuacao-julgamento.md#73-pontos-de-melhoria), toda métrica no nível `-` ou `--` é registrada como ponto de melhoria. Os itens 1 e 2 são esses pontos. Os itens 3 a 5 estão no nível `o` ou acima e foram registrados como pontos de atenção:
 
 1. **M3.4.3 (Déficit de Especificação Técnica do Formato):** Apenas 26,9% dos campos documentados, com pontuação 2,00 (Nível Ruim `-`).
 2. **M3.3.1 (Inconsistência em Instalação Local de Pacotes):** Falha na resolução do subpacote `@excalidraw/common` via tarball isolado, atingindo 33,3% de sucesso e pontuação 2,00 (Nível Ruim `-`).
@@ -228,7 +229,7 @@ A lacuna revelada por **M3.4.3** foi selecionada como objeto direto da interven�
 
 Todos os arquivos que sustentam este relatório estão disponíveis no repositório:
 
-<p className="tabela-titulo">Tabela 4: Rastreabilidade entre métricas e dados brutos auditáveis</p>
+<p className="tabela-titulo">Tabela 5: Rastreabilidade entre métricas e dados brutos auditáveis</p>
 
 | Métrica | Arquivo de Evidência | Caminho Relativo |
 | :---: | :--- | :--- |
@@ -254,13 +255,13 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 | **M3.4.3** | Auditoria dos 52 campos do esquema | [`dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv) |
 | **M3.4.3** | Relatório técnico de campos omitidos | [`dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_relatorio.txt`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_relatorio.txt) |
 
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
 ## 8. Referências Bibliográficas
 
-> <Link id="ref-1">1.</Link> HEITLAGER, Ilja; KUIPERS, Tobias; VISSER, Joost. A practical model for measuring maintainability. In: **6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)**. IEEE, 2007. p. 30–39.
+> <Link id="ref-1">1.</Link> HEITLAGER, Ilja; KUIPERS, Tobias; VISSER, Joost. A practical model for measuring maintainability. In: **6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)**. IEEE, 2007. p. 30-39. Página 8 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 11 nov. 2026.
 
 ---
 
@@ -268,4 +269,5 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 11/11/2026 | Elaboração do relatório consolidado de resultados e julgamento do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| `1.0` | 11/11/2026 | Elaboração do relatório consolidado de resultados e julgamento do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.1` | 11/11/2026 | Correção do ambiente registrado, do texto de M3.3.1 e da apresentação da agregação e do julgamento, conforme a revisão da PR. | [Christopher Paraizo](https://github.com/wChrstphr) | |

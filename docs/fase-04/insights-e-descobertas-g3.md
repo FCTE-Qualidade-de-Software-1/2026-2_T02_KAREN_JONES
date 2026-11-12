@@ -18,7 +18,7 @@ A coleta empírica foi realizada segundo os procedimentos experimentais e de ins
 
 ## 1. Contexto e Ambiente de Execução
 
-As medições foram conduzidas estritamente sob as condições de contorno fixadas na [Fase 03 (Recursos e ambiente)](../fase-03/recursos-ambiente.md):
+As medições seguiram as condições da [Fase 03 (Recursos e ambiente)](../fase-03/recursos-ambiente.md), com os desvios registrados nos [resultados de G3](./resultados-g3-flexibilidade.md#1-identificação-e-contexto-da-avaliação):
 
 <p className="tabela-titulo">Tabela 1: Parâmetros de configuração do ambiente de avaliação</p>
 
@@ -27,38 +27,19 @@ As medições foram conduzidas estritamente sob as condições de contorno fixad
 | **Avaliadora Responsável** | Maria Eduarda ([@eduarda-ogomes](https://github.com/eduarda-ogomes)) |
 | **Data da Coleta** | 10 a 11 de Novembro de 2026 |
 | **Software Avaliado** | Excalidraw (commit exato `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`) |
-| **Sistema Operacional** | Zorin OS 18.1 (Kernel Linux x86_64, base Ubuntu 24.04 LTS) |
+| **Sistema Operacional** | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic x86_64, base Ubuntu 24.04 LTS) |
 | **Processador** | AMD Ryzen 7 5700U with Radeon Graphics |
 | **Memória RAM** | 10 GB utilizáveis (16 GB físicos instalados) |
 | **Ambiente de Execução** | Contêiner Docker oficial (base Nginx 1.30.2) em `http://localhost:3000` |
 | **Repositório de Dados Brutos** | `dados/fase-04/brutos/` |
 
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
-## 2. Painel Consolidado das Métricas Coletadas
+## 2. Valores Medidos
 
-Todas as 12 métricas de G3 (100% do objetivo de Flexibilidade) foram integralmente coletadas, auditadas e confrontadas com as hipóteses e réguas da [Fase 02 (Pontuação e julgamento)](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3):
-
-<p className="tabela-titulo">Tabela 2: Painel consolidado das métricas coletadas de flexibilidade (G3)</p>
-
-| Métrica | Nome da Métrica | Questão | Valor Medido | Nível na Régua | Hipótese GQM | Status da Hipótese |
-| :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **M3.1.1** | Cobertura de usuários pelos navegadores declarados | Q3.1 | **88,94%** | **Bom** (`+`, 4,00 pts) | H3.1.1 ≥ 80% | **Confirmada** |
-| **M3.1.2** | Proporção de ambientes de integração com sucesso | Q3.1 | **66,7%** (4 de 6) | **Regular** (`o`, 3,00 pts) | H3.1.2 = 6 de 6 | **Refutada** |
-| **M3.1.3** | Proporção de ações de edição por toque e caneta | Q3.1 | **100,0%** (10 de 10) | **Excelente** (`++`, 5,00 pts) | H3.1.3 = 10 de 10 | **Confirmada** |
-| **M3.2.1** | Tempo de abertura por tamanho de cena | Q3.2 | **0,11 s** (1.000 elem) | **Bom** (`+`, 4,50 pts) | H3.2.1 ≤ 1,0 s | **Confirmada** |
-| **M3.2.2** | Taxa de quadros durante a edição por tamanho de cena | Q3.2 | **52 FPS** (1.000 elem) | **Regular** (`o`, 3,25 pts) | H3.2.2 ≥ 48 FPS | **Confirmada** |
-| **M3.2.3** | Tamanho máximo de cena salva e exportada | Q3.2 | **10.000 elem** | **Excelente** (`++`, 5,00 pts) | H3.2.3 ≥ 5.000 elem | **Confirmada** |
-| **M3.3.1** | Proporção de operações de pacote bem-sucedidas | Q3.3 | **33,3%** (3 de 9) | **Ruim** (`-`, 2,00 pts) | H3.3.1 = 9 de 9 | **Refutada** |
-| **M3.3.2** | Proporção de passos documentados reproduzidos | Q3.3 | **85,7%** (6 de 7) | **Bom** (`+`, 4,00 pts) | H3.3.2 ≥ 95% | **Refutada** |
-| **M3.3.3** | Implantação com Docker | Q3.3 | **100,0%** (4 de 4) | **Excelente** (`++`, 5,00 pts) | H3.3.3 = 4 de 4 | **Confirmada** |
-| **M3.4.1** | Formatos de exportação abertos disponíveis | Q3.4 | **3 formatos** | **Bom** (`+`, 4,00 pts) | H3.4.1 ≥ 3 | **Confirmada** |
-| **M3.4.2** | Proporção de elementos preservados na reimportação | Q3.4 | **100,00%** | **Excelente** (`++`, 5,00 pts) | H3.4.2 ≥ 95% | **Confirmada** |
-| **M3.4.3** | Proporção dos campos do formato documentados | Q3.4 | **26,9%** (14 de 52) | **Ruim** (`-`, 2,00 pts) | H3.4.3 < 60% | **Confirmada** |
-
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
+O valor, o nível e a hipótese de cada uma das doze métricas estão no [painel consolidado dos resultados de G3](./resultados-g3-flexibilidade.md#2-painel-consolidado-das-medições). As seções a seguir tratam do que esses valores revelam sobre o Excalidraw.
 
 ---
 
@@ -119,7 +100,7 @@ A métrica **M3.1.1** atingiu **88,94% de cobertura global**, garantindo o níve
 
 A execução da métrica **M3.3.3** comprovou a facilidade de implantação do software em infraestrutura isolada:
 
-* O contêiner de produção construído a partir do `Dockerfile` oficial executou sem ajustes, subiu com sucesso na porta `3000:80` e atingiu o estado de integridade aprovada na checagem nativa em menos de 15 segundos.
+* O contêiner de produção construído a partir do `Dockerfile` oficial executou sem ajustes, subiu com sucesso na porta `3000:80` e atingiu o estado de integridade aprovada na checagem nativa.
 * A entrega através de servidor Nginx interno garante independência completa de configurações do ambiente hospedeiro, validando o requisito `RQ-FLEX-09`.
 
 ---
@@ -150,8 +131,8 @@ A execução das métricas **M3.3.1** e **M3.3.2** complementou os dados da este
    - Na via com Docker Compose, detectou-se uma incompatibilidade documental: o guia `development.mdx` documenta a sintaxe legada `docker-compose up --build -d` com hífen. Em distribuições modernas com Docker Engine v2 (como o Zorin OS avaliado), o binário Python standalone não existe nativamente, gerando código de erro 127 (command not found) e exigindo ajuste corretivo para o plugin moderno `docker compose up`.
    - Com 6 de 7 passos bem-sucedidos sem ajuste (**85,7%**), a métrica atinge o **Nível Bom (4,00 pontos)**, mas refuta a hipótese H3.3.2 (≥ 95%) devido à defasagem da instrução de compose.
 2. **Ciclo de Vida de Pacotes em Gerenciadores (M3.3.1):**
-   - No teste comparativo com os 3 gerenciadores (`npm`, `yarn` e `pnpm`) a partir do tarball local gerado no monorepo (`@excalidraw/excalidraw-0.18.0.tgz`), a instalação inicial foi concluída nos três gerenciadores.
-   - No entanto, as operações de upgrade falharam devido a dependências internas de workspace não resolvidas (`@excalidraw/common` com código `ETARGET`), impedindo também a desinstalação subsequente de forma limpa.
+   - No teste com os 3 gerenciadores (`npm`, `yarn` e `pnpm`) a partir do tarball local gerado no monorepo (`@excalidraw/excalidraw-0.18.0.tgz`), a tabela de resultados registra falha na instalação e na atualização nos três gerenciadores, porque o pacote depende de `@excalidraw/common@0.18.0`, subpacote interno não publicado (erro `ETARGET`).
+   - Apenas as três remoções foram concluídas.
    - Com 3 de 9 operações concluídas com êxito (**33,3%**), a métrica atinge o nível **Ruim (2,00 pontos)** e **refuta a hipótese H3.3.1**. Esse comportamento evidencia forte acoplamento entre os subpacotes do monorepo, que demandam publicação sincronizada no registro para consumo externo independente.
    - Adicionalmente, a execução de `require('@excalidraw/excalidraw')` direto no runtime Node.js confirma dependência estrita do DOM do navegador (`ReferenceError: document is not defined`), exigindo desativação de renderização no servidor (`ssr: false`) ao ser integrada em frameworks modernos como Next.js.
 
@@ -193,47 +174,7 @@ A execução da métrica **M3.1.3** encerrou a coleta de dados de Adaptabilidade
 
 ## 4. Rastreabilidade com os Dados Brutos
 
-Todos os dados brutos gerados durante estas coletas estão versionados e auditáveis na pasta `dados/fase-04/brutos/`:
-
-<p className="tabela-titulo">Tabela 3: Mapeamento de rastreabilidade com os dados brutos versionados</p>
-
-| Métrica | Arquivo de Dado Bruto | Finalidade da Evidência |
-| :---: | :--- | :--- |
-| **M3.1.1** | [`M3.1.1_cobertura_browserslist.txt`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.1_cobertura_browserslist.txt) | Saída de terminal com a cobertura populacional e lista de navegadores. |
-| **M3.1.2** | [`M3.1.2_matriz_integracao.csv`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_matriz_integracao.csv) | Tabela detalhada dos 6 ambientes com status de build, runtime, desenho e diagnóstico. |
-| **M3.1.2** | [`M3.1.2_build_logs.zip`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_build_logs.zip) | Arquivo compactado com os logs brutos completos de instalação e compilação dos 6 projetos. |
-| **M3.1.2** | [`M3.1.2_evidencia_ambiente.png`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.2_evidencia_ambiente.png) | Mosaico comprobatório com capturas de tela do canvas e desenho nos 4 ambientes aprovados. |
-| **M3.1.3** | [`M3.1.3_formulario_toque_caneta.csv`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_formulario_toque_caneta.csv) | Formulário empírico preenchido com a auditoria das 10 ações por toque e caneta no iPad. |
-| **M3.1.3** | [`M3.1.3_gravacao_toque.mp4`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_toque.mp4) | Gravação de tela da execução das 10 ações por toque com o dedo no iPad. |
-| **M3.1.3** | [`M3.1.3_gravacao_caneta.mp4`](../../dados/fase-04/brutos/Q3.1-adaptabilidade/M3.1.3_gravacao_caneta.mp4) | Gravação de tela da execução das 10 ações com a caneta stylus Goojodoq no iPad. |
-| **M3.2.1** | [`M3.2.1_tempos_abertura.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.1_tempos_abertura.csv) | Tabela com as 20 medições e 4 medianas do tempo de abertura no DevTools. |
-| **M3.2.1** | `Q3.2-escalabilidade/traces_abertura/` | 20 arquivos JSON de perfil DevTools exportados com traces de renderização. |
-| **M3.2.2** | [`M3.2.2_fps_edicao.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.2_fps_edicao.csv) | Taxas de quadros medidas via Frame Rendering Stats sob as 4 escalas de cena. |
-| **M3.2.3** | [`M3.2.3_tamanho_maximo_salvamento.csv`](../../dados/fase-04/brutos/Q3.2-escalabilidade/M3.2.3_tamanho_maximo_salvamento.csv) | Tabela de conferência do teste de estresse de salvamento e exportação até 10.000 elementos. |
-| **M3.3.1** | [`M3.3.1_log_operacoes_pacote.txt`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.1_log_operacoes_pacote.txt) | Log detalhado da execução de operações de pacote via npm, yarn e pnpm. |
-| **M3.3.1** | [`M3.3.1_resultados_pacote.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.1_resultados_pacote.csv) | Tabela comparativa das 9 operações de pacote por gerenciador. |
-| **M3.3.2** | [`M3.3.2_log_reproducao_passos.txt`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.2_log_reproducao_passos.txt) | Registro textual da auditoria dos 7 passos documentados de compilação e execução local. |
-| **M3.3.2** | [`M3.3.2_passos_ajustes.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.2_passos_ajustes.csv) | Tabela dos 7 passos documentados com classificação e justificativas. |
-| **M3.3.3** | [`M3.3.3_verificacoes_docker.csv`](../../dados/fase-04/brutos/Q3.3-instalabilidade/M3.3.3_verificacoes_docker.csv) | Tabela de conferência das 4 verificações de deploy, container e healthcheck. |
-| **M3.4.1** | [`M3.4.1_catalogo_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.1_catalogo_formatos.csv) | Catálogo formal dos formatos abertos com MIME types e especificações W3C e ECMA. |
-| **M3.4.2** | [`M3.4.2_preservacao_formatos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_preservacao_formatos.csv) | Resumo das taxas de preservação de elementos por formato. |
-| **M3.4.2** | [`M3.4.2_relatorio_preservacao.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_relatorio_preservacao.json) | Relatório técnico JSON elemento a elemento gerado por `compara_elementos.py`. |
-| **M3.4.2** | [`M3.4.2_arquivos_reimportados.zip`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_arquivos_reimportados.zip) | Pacote ZIP contendo as cenas originais exportadas e reimportadas salvas. |
-| **M3.4.3** | [`M3.4.3_campos_encontrados.json`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_campos_encontrados.json) | Lista das 52 propriedades extraídas da cena real. |
-| **M3.4.3** | [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv) | Auditoria campo a campo classificando cada propriedade como documentada ou omitida. |
-| **M3.4.3** | [`M3.4.3_relatorio.txt`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_relatorio.txt) | Resumo textual com o percentual final e lista de campos pendentes. |
-
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
-
----
-
-## 5. Próximos Passos da Avaliação
-
-Com **100% das doze métricas de G3 integralmente coletadas**, as próximas etapas para conclusão da [Issue #113](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/113) são:
-
-1. **Elaboração do Relatório Consolidado:** redigir o documento formal `docs/fase-04/resultados-g3-flexibilidade.md`, consolidando as respostas às 4 questões GQM (Q3.1, Q3.2, Q3.3, Q3.4), a pontuação global do objetivo e o confronto das hipóteses.
-2. **Atualização das Tabelas Consolidadas:** preencher as planilhas consolidadas em `dados/fase-04/consolidados/`.
-3. **Abertura do Pull Request:** submeter as evidências e o relatório da Fase 04 para revisão dos pares e do professor.
+Os arquivos que sustentam cada valor estão listados na [rastreabilidade dos resultados de G3](./resultados-g3-flexibilidade.md#7-registro-de-rastreabilidade-com-os-dados-brutos) e no [catálogo de arquivos brutos](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-04/README.md#catálogo-de-arquivos-brutos-objetivo-g3-flexibilidade).
 
 ---
 
@@ -241,4 +182,5 @@ Com **100% das doze métricas de G3 integralmente coletadas**, as próximas etap
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 11/11/2026 | Elaboração dos insights técnicos, diagnósticos empíricos e catálogo de evidências da coleta do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| `1.0` | 11/11/2026 | Elaboração dos insights técnicos, diagnósticos empíricos e catálogo de evidências da coleta do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.1` | 11/11/2026 | Remoção das tabelas repetidas dos resultados e da seção de próximos passos, correção do ambiente e do texto de M3.3.1, conforme a revisão da PR. | [Christopher Paraizo](https://github.com/wChrstphr) | |
