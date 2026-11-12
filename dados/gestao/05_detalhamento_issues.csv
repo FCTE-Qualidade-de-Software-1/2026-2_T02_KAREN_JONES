@@ -52,7 +52,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 96,Fase 3,[F3] Recursos e ambiente de avaliação,closed,LeticiaSantosss,2.0,7.0,250.0,subestimada,90.0,315.0,05/11,09/11/2026,Concluida em atraso,6.36
 97,Fase 3,"[F3] Massa de dados: cena de referência, cenas de escala e arquivos inválidos",closed,GabrielSMonteiro,3.0,5.0,66.7,subestimada,135.0,225.0,06/11,09/11/2026,Concluida em atraso,5.39
 98,Fase 3,[F3] Instruções para o avaliador de G1 (Manutenibilidade),closed,DaviPierre,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,10/11/2026,Concluida em atraso,7.01
-99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,07/11,-,Aberta em atraso,
+99,Fase 3,[F3] Instruções para o avaliador de G2 (Confiabilidade),closed,LeticiaSantosss,3.0,6.0,100.0,subestimada,135.0,270.0,07/11,12/11/2026,Concluida em atraso,8.43
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,closed,wChrstphr,2.0,2.0,0.0,na faixa,90.0,90.0,06/11,09/11/2026,Concluida em atraso,5.53
 102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,closed,LeticiaSantosss,1.5,1.5,0.0,na faixa,67.5,67.5,06/11,06/11/2026,Concluida no prazo,3.14
@@ -92,4 +92,4 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 138,Fase 3,[GESTAO] Sincronizar o prazo das issues com o GitHub Projects,closed,wChrstphr,1.0,0.0,,,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.93
 140,Fase 3,[GESTAO] Documentar a priorização e as datas do GitHub Project,closed,wChrstphr,1.0,0.0,,,45.0,0.0,06/11,07/11/2026,Concluida em atraso,1.91
 153,Fase 2,[F2] Revisão das páginas da Fase 02 e padronização do formato,closed,wChrstphr,6.0,6.3,5.0,na faixa,270.0,283.5,12/11,11/11/2026,Concluida no prazo,1.1
-155,Fase 1,[F1] Revisar as páginas da Fase 01 e alinhar a terminologia da ISO/IEC 25010:2023,open,wChrstphr,6.0,1.1,-81.7,superestimada,270.0,49.5,12/11,-,Em andamento (no prazo),
+155,Fase 1,[F1] Revisar as páginas da Fase 01 e alinhar a terminologia da ISO/IEC 25010:2023,closed,wChrstphr,6.0,1.1,-81.7,superestimada,270.0,49.5,12/11,11/11/2026,Concluida no prazo,0.95

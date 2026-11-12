@@ -4,60 +4,43 @@ title: Propósito da Avaliação
 description: Propósito, objetivos, requisitante, beneficiários e decisões apoiadas pela avaliação do Excalidraw
 ---
 
+import Link from '@docusaurus/Link';
+
 # Propósito da Avaliação
 
-## 1. Identificação do produto
+## Introdução
 
-A primeira etapa do processo de avaliação da ISO/IEC 25040 consiste em identificar claramente o software a ser avaliado e seu contexto:
+Estabelecer o propósito é a primeira atividade da fase de requisitos da avaliação da ISO/IEC 25040 [[1, p. 4]](#ref-1). O objetivo e os requisitos da avaliação dependem da necessidade de quem a solicita [[1, p. 5]](#ref-1). Esta página declara por que o Excalidraw é avaliado, o objetivo da avaliação, quem a requisita, quem se beneficia dos resultados e que decisões eles apoiam. O produto, no commit `e1b7aac` do repositório oficial, está identificado em [Tipo de produto](./tipo-produto.md#1-identificação-e-versão-analisada).
 
-| Campo | Descrição |
-|---|---|
-| Produto | Excalidraw |
-| Versão avaliada | Código do repositório principal (commit e tag serão fixados no início da Fase 02) |
-| Domínio | Ferramenta web de quadro branco virtual para diagramação e colaboração |
-| Licença | MIT (código aberto) |
-| Repositório | [github.com/excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) |
-| Tecnologias | TypeScript, React, monorepo com aplicação web e pacote npm |
+## Metodologia
 
-## 2. Por que avaliar o Excalidraw
+O objetivo foi escolhido entre as opções do roteiro da aula [[1, p. 8]](#ref-1), e o requisitante foi definido a partir dos tipos de solicitante apresentados na mesma aula [[1, p. 6]](#ref-1). As características avaliadas seguem o modelo da ISO/IEC 25010:2023 [[2]](#ref-2), e as métricas da Fase 02 partem do catálogo da ISO/IEC 25023 [[3]](#ref-3).
 
-O Excalidraw é amplamente utilizado por desenvolvedores, estudantes e equipes de tecnologia para desenhar diagramas e colaborar em tempo real. Apesar de ter uma comunidade muito ativa e milhares de usuários diários, não encontramos avaliações formais de qualidade do projeto baseadas em normas reconhecidas, como a família ISO/IEC 25000 (SQuaRE).
+---
 
-O fato de ser um projeto open source com repositório aberto torna o Excalidraw propício para este estudo. Temos acesso completo ao código-fonte, histórico de commits, pull requests, issues e rotinas de integração contínua (CI).
+## 1. Por que avaliar o Excalidraw
 
-Vale destacar que esta avaliação não busca emitir certificação nem fazer auditoria formal. Trata-se de um diagnóstico acadêmico para identificar o que o projeto tem de positivo e quais pontos merecem atenção na arquitetura e na implementação.
+O Excalidraw é usado por desenvolvedores, estudantes e equipes de tecnologia para desenhar diagramas e colaborar em tempo real. Apesar da comunidade ativa, a equipe não encontrou avaliações formais de qualidade do projeto baseadas na família ISO/IEC 25000 (SQuaRE).
 
-## 3. Objetivo da avaliação
+Por ser um projeto de código aberto, o Excalidraw oferece acesso ao código-fonte, ao histórico de commits, aos pull requests, às issues e às rotinas de integração contínua (CI). A avaliação não busca emitir certificação nem fazer auditoria formal. Trata-se de um diagnóstico acadêmico para identificar os pontos fortes do projeto e os que merecem atenção na arquitetura e na implementação.
 
-Seguindo os tipos de objetivos apresentados na norma ISO/IEC 25040 e na Aula 07 da disciplina, o objetivo principal desta avaliação é:
+## 2. Objetivo da avaliação
 
-**Indicar pontos para melhoria no produto.**
+Entre os objetivos listados no roteiro da aula [[1, p. 8]](#ref-1), o desta avaliação é **indicar pontos para melhoria no produto**. Ele se desdobra em cinco metas:
 
-Para cumprir esse objetivo, definimos as seguintes metas específicas:
-
-1. Diagnosticar a qualidade atual do Excalidraw nas características Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023), utilizando análise estática e inspeção dos artefatos do repositório.
+1. Diagnosticar a qualidade atual do Excalidraw em Manutenibilidade, Confiabilidade e Flexibilidade [[2]](#ref-2), com análise estática e inspeção dos artefatos do repositório.
 2. Identificar boas práticas e pontos fortes já consolidados no código e nos fluxos de desenvolvimento.
 3. Mapear pontos fracos e dívida técnica, como componentes excessivamente complexos, acoplamento indevido ou lacunas em testes.
-4. Propor melhorias práticas para a aplicação ao final do trabalho, incluindo o desenvolvimento de um protótipo de alta fidelidade para demonstrar soluções de usabilidade, interface e fluxo para o site.
-5. Produzir um relatório final rastreável, conectando cada constatação aos requisitos e às métricas da norma.
+4. Executar ao menos uma ação de melhoria na Fase 04: uma modificação no código, para problemas técnicos como os de confiabilidade, ou um protótipo de alta fidelidade, se o problema encontrado for de interface ou fluxo de navegação [[4, p. 3]](#ref-4).
+5. Produzir um relatório final rastreável, que ligue cada constatação aos requisitos e às métricas.
 
-### O que fica fora do escopo
+A escolha das três características está em [Priorização das características](./priorizacao-caracteristicas.md). Ficam fora da avaliação a comparação de desempenho com ferramentas concorrentes, a emissão de certificado de conformidade e a medição das demais características da ISO/IEC 25010:2023. Os limites de cada objeto avaliado estão em [Escopo e objetos de avaliação](./escopo-avaliacao.md).
 
-Para manter o trabalho viável dentro do semestre letivo, delimitamos algumas restrições:
-- Não faremos comparações de desempenho com ferramentas comerciais concorrentes.
-- Não emitiremos certificado de conformidade técnica.
-- As demais características da ISO/IEC 25010:2023 (Adequação Funcional, Desempenho, Compatibilidade, Usabilidade, Segurança e Proteção) não serão medidas, focando o esforço nas três escolhidas.
+## 3. Requisitante da avaliação
 
-## 4. Requisitante da avaliação
+Entre os solicitantes apresentados na aula estão equipes de desenvolvimento, vendedores, compradores, usuários, a comunidade de software e laboratórios de avaliação [[1, p. 6]](#ref-1). Como nenhum cliente externo solicitou este estudo, a equipe Karen Jones se declara a própria requisitante e assume o papel de equipe de garantia da qualidade (QA) independente. A equipe não faz parte dos mantenedores do Excalidraw nem tem relação comercial ou institucional com seus criadores, o que reduz o viés de quem desenvolve a ferramenta.
 
-De acordo com a ISO/IEC 25040, toda avaliação precisa declarar seu requisitante. Como não há um cliente externo solicitando este estudo, a equipe Karen Jones se declara como a própria requisitante da avaliação, assumindo o papel de equipe de QA independente.
-
-Isso significa que:
-- Não fazemos parte do time de mantenedores ou desenvolvedores oficiais do Excalidraw.
-- Não temos relação comercial ou institucional com os criadores do software.
-- A condução do trabalho é autônoma, pautada nos critérios da norma e nas orientações da disciplina de Qualidade de Software 1 (FCTE/UnB).
-
-Essa postura independente é importante porque permite avaliar o projeto de maneira imparcial, sem os vieses de quem desenvolve a ferramenta no dia a dia.
+<p className="tabela-titulo">Tabela 1: Requisitante da avaliação</p>
 
 | Campo | Descrição |
 |---|---|
@@ -66,9 +49,13 @@ Essa postura independente é importante porque permite avaliar o projeto de mane
 | Contexto | Disciplina de Qualidade de Software 1 (FCTE/UnB, 2º semestre de 2026) |
 | Objetivo declarado | Indicar pontos para melhoria no produto |
 
-## 5. Partes interessadas e beneficiários
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-Mesmo sendo uma iniciativa acadêmica sem contratação externa, as conclusões da avaliação podem beneficiar diferentes grupos envolvidos com o ecossistema do Excalidraw:
+## 4. Partes interessadas e beneficiários
+
+Mesmo sem contratação externa, as conclusões podem beneficiar diferentes grupos do ecossistema do Excalidraw. As necessidades de cada grupo e sua relação com as subcaracterísticas estão em [Partes interessadas](./interessados.md).
+
+<p className="tabela-titulo">Tabela 2: Beneficiários dos resultados</p>
 
 | Beneficiário | Como os resultados ajudam |
 |---|---|
@@ -79,39 +66,37 @@ Mesmo sendo uma iniciativa acadêmica sem contratação externa, as conclusões 
 | Equipe avaliadora (Karen Jones) | Aplica os conceitos teóricos e as etapas da ISO/IEC 25040 em um produto real de grande escala. |
 | Docentes da disciplina | Têm um projeto prático e documentado para verificar o domínio das normas SQuaRE pela equipe. |
 
-Para mais detalhes sobre as necessidades de cada grupo e o cruzamento com as subcaracterísticas do projeto, consulte o documento de [Partes Interessadas](./interessados.md).
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-## 6. Decisões apoiadas pela avaliação
+## 5. Decisões apoiadas pela avaliação
 
-Uma avaliação de qualidade é útil quando serve de subsídio para decisões reais. A tabela abaixo relaciona as decisões técnicas e organizacionais que o relatório pretende apoiar, quem é responsável por tomá-las e como os dados levantados contribuem:
+<p className="tabela-titulo">Tabela 3: Decisões apoiadas pela avaliação</p>
 
 | Decisão | Quem decide | Como a avaliação apoia |
 |---|---|---|
 | Priorizar refatorações no código | Mantenedores do projeto | Aponta arquivos e módulos com alto acoplamento, dependências circulares ou baixa cobertura de testes. |
 | Escolher onde contribuir | Contribuidores externos | Identifica partes da base de código que necessitam de mais testes, tipagem ou melhorias de documentação. |
 | Adotar ou manter o uso da ferramenta | Equipes e organizações | Apresenta dados sobre tolerância a falhas, funcionamento offline e independência de serviços externos. |
-| Implementar melhorias no produto e no site | Equipe avaliadora e comunidade | Fornece evidências para guiar a criação de protótipos de alta fidelidade e propostas de redesign de interface. |
+| Escolher a ação de melhoria da Fase 04 | Equipe avaliadora | Indica o problema de maior impacto e se a ação deve ser uma modificação no código ou um protótipo de alta fidelidade. |
 | Avaliar a execução do método SQuaRE | Professores e equipe | Permite checar a conformidade das fases com as normas ISO/IEC 25010, 25023 e 25040. |
 
-## 7. Uso pretendido dos resultados
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-Os resultados obtidos serão utilizados da seguinte forma:
+## 6. Uso pretendido dos resultados
 
-1. Ficarão publicados abertamente neste site de documentação como relatório técnico acadêmico.
-2. Manterão rastreabilidade direta entre os requisitos definidos, as métricas coletadas na Fase 02 e as conclusões finais.
-3. Poderão ser compartilhados com os mantenedores do repositório oficial do Excalidraw como contribuição comunitária.
-4. Servirão de base para a elaboração de propostas concretas de melhoria para o site, incluindo um protótipo de alta fidelidade focado em usabilidade e experiência do usuário, se for viável e necessário.
+Os resultados ficarão publicados neste site como relatório técnico acadêmico, com rastreabilidade entre os requisitos, as métricas da [Fase 02](../fase-02/plano-gqm.md) e as conclusões finais. Poderão ser compartilhados com os mantenedores do Excalidraw como contribuição comunitária e servirão de base para a ação de melhoria da Fase 04. Não serão usados para ranquear o Excalidraw contra outros softwares nem têm valor de auditoria ou certificação.
 
-Os resultados não serão utilizados para ranqueamento contra outros softwares, nem possuem valor de auditoria contábil, contratual ou certificação comercial.
+---
 
-## 8. Normas e referências
+## Referências
 
-| Referência | Aplicação no projeto |
-|---|---|
-| ISO/IEC 25010:2023 | Modelo de qualidade de produto de software (definição das características e subcaracterísticas). |
-| ISO/IEC 25040:2011 | Processo de avaliação de produto de software em quatro fases. |
-| ISO/IEC 25023:2016 | Catálogo de métricas de qualidade interna e externa (aplicado a partir da Fase 02). |
-| Aula A07 (FCTE/UnB) | Processo de avaliação de produto de software: tipos de requisitante, objetivos e roteiro da avaliação. |
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA A07 QSW1 PROC AVAL PRODUTO**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Páginas 4 a 6 e 8. Disponível no Moodle da disciplina.
+>
+> <Link id="ref-2">2.</Link> ISO/IEC 25010:2023. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model*.
+>
+> <Link id="ref-3">3.</Link> ISO/IEC 25023:2016. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Measurement of system and software product quality*.
+>
+> <Link id="ref-4">4.</Link> **2026-2 Trabalho final completo v1**. Especificação do trabalho final de Qualidade de Software 1, FCTE/UnB, 2026. Página 3. Disponível no Moodle da disciplina.
 
 ---
 
@@ -120,4 +105,4 @@ Os resultados não serão utilizados para ranqueamento contra outros softwares, 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-| 1.1 | 06/11/2026 | Retirada da citação ao critério de avaliação da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 10/11/2026 | Introdução e Metodologia, retirada da citação ao critério da disciplina, identificação do produto substituída por link ao tipo de produto com o commit avaliado, meta do protótipo alinhada à ação de melhoria da Fase 04, tabelas com título e fonte e normas convertidas em referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |

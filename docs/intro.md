@@ -41,7 +41,7 @@ Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos gr
 | Característica | O que estamos investigando |
 | :--- | :--- |
 | **Manutenibilidade** | A organização do código, a clareza dos módulos, a facilidade de fazer mudanças sem introduzir problemas e a cobertura de testes. |
-| **Confiabilidade** | O comportamento da aplicação em situações de falha ou perda de conexão, o salvamento automático e a maturidade do processo de desenvolvimento. |
+| **Confiabilidade** | O comportamento da aplicação em situações de falha ou perda de conexão, o salvamento automático e as verificações do processo de desenvolvimento que evitam falhas. |
 | **Flexibilidade** | O funcionamento em diferentes navegadores e dispositivos, a facilidade de instalar a biblioteca e as opções de exportação dos dados. |
 
 ---
