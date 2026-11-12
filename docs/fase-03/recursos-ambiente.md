@@ -41,20 +41,37 @@ Todos os responsáveis partem do mesmo commit:
 git clone https://github.com/excalidraw/excalidraw.git
 cd excalidraw
 git checkout e1b7aacb356a492aa1e0fc6eb57b8896124027f0
-git rev-parse --short HEAD
+git rev-parse HEAD
 ```
 
-O último comando deve imprimir `e1b7aac`. Se imprimir outro valor, a coleta não pode começar.
+O último comando deve imprimir `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`. Se imprimir outro valor, a coleta não pode começar. A comparação usa o hash completo porque `git rev-parse --short HEAD` pode imprimir mais de 7 caracteres, como `e1b7aacb3`, conforme o tamanho do repositório.
+
+O Yarn não vem com o Node.js. Antes de instalar as dependências, ative-o pelo Corepack, que acompanha o Node.js, e confira a versão:
+
+```bash
+corepack enable
+yarn --version
+```
+
+O comando deve imprimir `1.22.22`, a versão do campo `packageManager`. No Ubuntu, o pacote `cmdtest` instala outro programa chamado `yarn`, que imprime `0.32+git`. Nesse caso, remova o pacote com `sudo apt remove cmdtest` ou instale o Yarn com `npm install -g yarn@1.22.22`, e repita a conferência.
 
 Para as métricas que dependem do código (análise estática e testes), as dependências são instaladas com a mesma opção do `Dockerfile` do projeto:
 
 ```bash
 yarn --frozen-lockfile --network-timeout 600000
+CI=true yarn test:coverage --minWorkers=1 --maxWorkers=8
 yarn build:packages
-yarn test:coverage
 ```
 
-`--frozen-lockfile` impede que as versões de dependências mudem em relação ao `yarn.lock` do commit. `yarn test:coverage` é o comando de cobertura do próprio projeto, usado em [M1.5.1](../fase-02/gqm-manutenibilidade.md).
+`--frozen-lockfile` impede que as versões de dependências mudem em relação ao `yarn.lock` do commit. `yarn test:coverage` é o comando de cobertura do próprio projeto, usado em [M1.5.1](../fase-02/gqm-manutenibilidade.md). Três cuidados evitam falhas que não vêm do código avaliado:
+
+| Cuidado | Motivo |
+| :--- | :--- |
+| Rodar a cobertura antes de `yarn build:packages` | Com as pastas `packages/*/dist` presentes, os testes de `Sidebar.test.tsx` e `DefaultSidebar.test.tsx` carregam duas cópias do contexto do editor e falham (10 testes e 10 erros). O fluxo de testes do projeto também não constrói os pacotes antes. Se elas já existirem, remova-as com `rm -rf packages/*/dist` antes da cobertura. |
+| `CI=true` | Sem ele, o Vitest termina os testes e fica aguardando alterações nos arquivos, sem encerrar o comando. |
+| `--minWorkers=1 --maxWorkers=8` | Com todos os núcleos em uso, o teste de exportação com fonte CJK de `export.test.ts` passa do limite de 30 segundos. O número de processos usado é registrado como fator de variação (seção 9). |
+
+Em 11/11/2026, essa sequência executou os 143 arquivos de teste sem falhas e gerou o relatório de cobertura na máquina de Christopher.
 
 ### 2.2 Ambiente limpo
 
@@ -141,16 +158,16 @@ A versão efetiva de cada ferramenta é registrada na primeira coleta, com o com
 | Ferramenta | Versão | Métricas | Comando de versão |
 | :--- | :--- | :--- | :--- |
 | Madge | 8.0.0 | M1.1.1, M1.1.2, M1.1.3, M1.2.1 | `madge --version` |
-| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint), 5.62.0 (`@typescript-eslint/parser`) e 5.9.3 (TypeScript) | M1.3.1 | `npx eslint --version` e `yarn why @typescript-eslint/parser` |
+| ESLint, com `@typescript-eslint/parser` | 8.57.0 (ESLint), 5.62.0 (`@typescript-eslint/parser`) e 5.9.3 (TypeScript) | M1.3.1 | `npx eslint@8.57.0 --version` e `yarn why @typescript-eslint/parser`. Dentro do clone, `npx eslint --version` imprime 7.32.0, a versão do próprio projeto, que não é a usada na métrica |
 | cloc | 1.86 | M1.4.2 | `cloc --version` |
 | GitHub CLI (`gh`) | 2.102.0 | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
 | Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 | `yarn vitest --version` |
 | `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 | `grep --version` |
 | Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` 1.0.30001701 | M3.1.1 | `npx browserslist --version` e `yarn why caniuse-lite` |
 | Node.js (ambiente Docker) | 24.16.0 | M3.3.1, M3.3.2 e M3.3.3 | `node --version` dentro do contêiner |
-| Node.js (execução nativa) | Referência 24.16.0, a da imagem Docker (seção 1). Registrado: v24.14.1 (Christopher) | M1.1.1, M1.1.2, M1.1.3, M1.2.1, M1.3.1, M1.5.1, M3.1.1 | `node --version` na máquina de quem coleta |
+| Node.js (execução nativa) | Referência 24.16.0, a da imagem Docker (seção 1). Registrado: v24.16.0 (Christopher) | M1.1.1, M1.1.2, M1.1.3, M1.2.1, M1.3.1, M1.5.1, M3.1.1 | `node --version` na máquina de quem coleta |
 | Yarn | 1.22.22 | M1.5.1, M3.3.2 | `yarn --version` |
-| npm e pnpm | npm 11.13.0 (Maria Eduarda) / npm 11.11.0 (Christopher). pnpm: _a preencher_ | M3.3.1 | `npm --version` e `pnpm --version` |
+| npm e pnpm | npm 11.13.0 (Maria Eduarda e Christopher). pnpm: _a preencher_ | M3.3.1 | `npm --version` e `pnpm --version` |
 | Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) / Docker 29.9.0 (Christopher) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
 | Vite e Next.js dos projetos mínimos | _a preencher na criação dos projetos mínimos_ | M3.1.2 | `package.json` de cada projeto |
 | Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 | `git rev-parse HEAD` |
@@ -324,3 +341,4 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | |
 | 1.4 | 10/11/2026 | Correção do ambiente limpo, das versões de Node.js, npm, Docker e TypeScript, dos links para as métricas de G3 e da formatação das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 11/11/2026 | Conferência do commit pelo hash completo, ativação do Yarn 1.22.22 antes da instalação das dependências, comando de versão do ESLint 8.57.0, ordem e opções do comando de cobertura e versões de Node.js e npm de Christopher | [Christopher Paraizo](https://github.com/wChrstphr) | |
