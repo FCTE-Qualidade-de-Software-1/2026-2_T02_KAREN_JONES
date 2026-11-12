@@ -227,27 +227,7 @@ Todos os dados brutos gerados durante estas coletas estão versionados e auditá
 
 ---
 
-## 5. Registro de Esforço e Tempo de Execução
-
-Conforme as diretrizes de rastreabilidade e gestão da qualidade, a tabela a seguir consolida o esforço real investido pela avaliadora ao longo do processo de medição empírica:
-
-<p className="tabela-titulo">Tabela 4: Distribuição do esforço real investido por turnos de trabalho</p>
-
-| Turno e Período | Horário Aprox. | Duração | Atividades Realizadas (Decisão e Execução) | Métricas e Entregas Associadas |
-| :--- | :---: | :---: | :--- | :--- |
-| **Manhã (10/11)** | 09:00 às 12:45 | **3h45** | Resolução de conflitos no PR #151, alinhamento do plano de medição da Fase 04 (Issue #113), leitura detalhada das instruções de avaliação e decisão de priorizar a execução via contêiner oficial Docker para garantir reprodutibilidade. | PR #151 e setup inicial da Fase 04 |
-| **Tarde (10/11)** | 14:30 às 16:30 | **2h00** | Recepção e importação da imagem Docker do Excalidraw, instanciação e verificação de integridade do contêiner na porta 3000:80, estruturação de pastas em dados brutos e execução dos comandos CLI do Browserslist e verificações Docker. | **M3.1.1** (Browserslist) e **M3.3.3** (Docker) |
-| **Noite e Madrugada (10-11/11)** | 21:00 às 00:20 | **3h20** | Auditoria dos formatos abertos e testes de reimportação com script comparador, auditoria campo a campo do esquema de dados, planejamento da ação de melhoria de documentação, testes de escalabilidade no DevTools (20 traces), medição de FPS e teste de estresse até 10.000 elementos. | **M3.4.1**, **M3.4.2**, **M3.4.3**, **M3.2.1**, **M3.2.2** e **M3.2.3** |
-| **Manhã (11/11)** | 11:38 às 12:35 | **0h57** | Compilação local dos pacotes do monorepo, teste das operações de pacote a partir do tarball local nos 3 gerenciadores, diagnóstico de resolução de workspace, execução nativa do servidor Vite e diagnóstico do comando legado docker-compose. | **M3.3.1** (Pacote) e **M3.3.2** (Passos documentados) |
-| **Tarde (11/11, Turno 1)** | 12:40 às 13:51 | **1h11** | Empacotamento de subpacotes locais, criação e configuração dos 6 ambientes de integração cruzando Vite e Next.js com React 17, 18 e 19, diagnóstico de falhas de compilação Webpack e pré-renderização SSR, e automação de testes com Puppeteer gerando mosaico comprobatório. | **M3.1.2** (Matriz de integração) |
-| **Tarde (11/11, Turno 2)** | 13:56 às 14:25 | **0h29** | Configuração da rede local Docker, conexão do iPad (A16) e execução manual roteirizada das 10 ações por toque e caneta stylus Goojodoq, preenchimento da planilha de auditoria e encerramento da coleta das 12 métricas de G3. | **M3.1.3** (Toque e caneta) e Consolidação de G3 |
-| **Total Acumulado** | Total | **11h42** | Conclusão de 100% das 12 métricas do objetivo G3, 20 traces DevTools, 7 planilhas CSV, pacote ZIP de logs de build e relatórios técnicos versionados. | Conclusão do Objetivo G3 |
-
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
-
----
-
-## 6. Próximos Passos da Avaliação
+## 5. Próximos Passos da Avaliação
 
 Com **100% das doze métricas de G3 integralmente coletadas**, as próximas etapas para conclusão da [Issue #113](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/113) são:
 
@@ -261,9 +241,4 @@ Com **100% das doze métricas de G3 integralmente coletadas**, as próximas etap
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 10/11/2026 | Consolidação dos dados brutos, diagnósticos técnicos e insights preliminares das métricas M3.1.1, M3.3.3, M3.4.1, M3.4.2 e M3.4.3 de G3. | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| `1.1` | 11/11/2026 | Inclusão dos resultados e insights de Escalabilidade (M3.2.1, M3.2.2 e M3.2.3), organização das pastas por questão GQM e rastreabilidade dos traces. | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| `1.2` | 11/11/2026 | Registro de esforço e detalhamento temporal por turnos de decisão, planejamento e execução empírica. | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| `1.3` | 11/11/2026 | Inclusão dos resultados e insights de Instalabilidade (M3.3.1 e M3.3.2) e atualização do esforço acumulado para 10 métricas. | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| `1.4` | 11/11/2026 | Inclusão dos resultados e diagnóstico técnico de Adaptabilidade em Integração (M3.1.2), mosaico de evidências e esforço acumulado de 11 métricas. | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| `1.5` | 11/11/2026 | Conclusão integral da coleta das 12 métricas de G3, inclusão dos resultados de M3.1.3 (iPad A16 e Goojodoq) e consolidação do esforço final de 11h42. | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| `1.0` | 11/11/2026 | Elaboração dos insights técnicos, diagnósticos empíricos e catálogo de evidências da coleta do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |

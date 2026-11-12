@@ -224,9 +224,7 @@ A lacuna revelada por **M3.4.3** foi selecionada como objeto direto da interven�
 
 ---
 
-## 7. Registro de Rastreabilidade e Esforço Real
-
-### 7.1 Rastreabilidade com os Dados Brutos
+## 7. Registro de Rastreabilidade com os Dados Brutos
 
 Todos os arquivos que sustentam este relatório estão disponíveis no repositório:
 
@@ -255,24 +253,6 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 | **M3.4.2** | Cenas exportadas e reimportadas | [`dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_arquivos_reimportados.zip`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.2_arquivos_reimportados.zip) |
 | **M3.4.3** | Auditoria dos 52 campos do esquema | [`dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv) |
 | **M3.4.3** | Relatório técnico de campos omitidos | [`dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_relatorio.txt`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_relatorio.txt) |
-
-<p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
-
-### 7.2 Esforço Real Investido
-
-O esforço total dedicado à execução da Fase 04 para o objetivo G3 somou aproximadamente 11 horas e 42 minutos de trabalho técnico estruturado, distribuído em 6 turnos de atividade:
-
-<p className="tabela-titulo">Tabela 5: Distribuição do esforço real investido na Fase 04</p>
-
-| Turno e Data | Duração | Atividades Realizadas | Foco Principal |
-| :--- | :---: | :--- | :--- |
-| **Manhã (10/11)** | **3h45** | Resolução de conflitos do PR #151, leitura dos critérios da Fase 04 e decisão pelo setup Docker | Planejamento e alinhamento |
-| **Tarde (10/11)** | **2h00** | Importação e verificação da imagem Docker, medições Browserslist e verificações Docker | M3.1.1 e M3.3.3 |
-| **Noite e Madrugada (10-11/11)** | **3h20** | Auditoria de formatos, script de reimportação, auditoria de campos do esquema e testes de escalabilidade (20 traces DevTools, FPS e estresse de salvamento) | M3.4.1, M3.4.2, M3.4.3, M3.2.1, M3.2.2 e M3.2.3 |
-| **Manhã (11/11)** | **0h57** | Build dos pacotes locais do monorepo, teste das 9 operações de pacote e reprodução dos 7 passos de execução | M3.3.1 e M3.3.2 |
-| **Tarde (11/11, Turno 1)** | **1h11** | Empacotamento de subpacotes locais, criação e automação dos 6 ambientes da matriz de integração (Vite e Next.js) e diagnóstico de SSR | M3.1.2 |
-| **Tarde (11/11, Turno 2)** | **0h29** | Configuração da rede local Docker, conexão do iPad e execução manual das 10 ações por toque e caneta | M3.1.3 e Consolidação Final |
-| **Total Acumulado** | **11h42** | 12 de 12 métricas concluídas (100%), todas as hipóteses confrontadas e dados catalogados | Conclusão do Objetivo G3 |
 
 <p className="tabela-fonte">Fonte: Elaborado pela autora, 2026.</p>
 
