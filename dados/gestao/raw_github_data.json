@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-11T23:06:06.955415+00:00",
+  "coletado_em": "2026-11-12T01:32:31.690390+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -41,7 +41,7 @@
       "milestone": null,
       "comments": 0,
       "created_at": "2026-11-11T17:54:49Z",
-      "updated_at": "2026-11-11T19:46:28Z",
+      "updated_at": "2026-11-12T01:31:59Z",
       "closed_at": null,
       "assignee": null,
       "author_association": "COLLABORATOR",
@@ -107,29 +107,49 @@
         "site_admin": false
       },
       "labels": [],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [],
       "milestone": null,
       "comments": 0,
       "created_at": "2026-11-11T00:55:38Z",
-      "updated_at": "2026-11-11T01:37:59Z",
-      "closed_at": null,
+      "updated_at": "2026-11-12T00:11:51Z",
+      "closed_at": "2026-11-12T00:11:47Z",
       "assignee": null,
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
       "active_lock_reason": null,
-      "draft": true,
+      "draft": false,
       "pull_request": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pulls/157",
         "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/157",
         "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/157.diff",
         "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/157.patch",
-        "merged_at": null
+        "merged_at": "2026-11-12T00:11:46Z"
       },
       "body": "## O que foi feito?\r\n\r\n- Organizada a estrutura de dados brutos e consolidados da Fase 4, com orientações para as coletas.\r\n- Criada a categoria de documentação da Fase 4.\r\n- Preparado o ambiente local do Excalidraw no commit definido pelo plano e registrados as versões e os desvios.\r\n- Incluído um modelo para os demais responsáveis registrarem seus ambientes.\r\n\r\n## Issue\r\n\r\n#110 — PR em rascunho: ainda falta a sessão de início da coleta com os três responsáveis. Os ambientes dos demais responsáveis também precisam ser conferidos.\r\n\r\n## Como verificar\r\n\r\n- Conferir a estrutura em `dados/fase-04/` e o registro de preparação no README.\r\n- `npm run build`: passou localmente.\r\n- `gh auth status`, `gh api repos/excalidraw/excalidraw` e consulta GraphQL: autenticação e consultas verificadas com sucesso.\r\n- Na cópia do Excalidraw, `corepack yarn --frozen-lockfile --network-timeout 600000` e `corepack yarn build:packages`: passaram.\r\n- A imagem Docker foi construída, e a aplicação respondeu localmente na porta 3001, com verificação de saúde aprovada. A porta prevista, 3000, estava ocupada.\r\n- `corepack yarn test:coverage`: falhou em 10 testes e apresentou 10 erros; houve 2.517 testes aprovados, 47 ignorados e 1 pendente. As falhas precisam ser investigadas antes da coleta de cobertura.\r\n\r\n## Critérios da rubrica atendidos\r\n\r\n<!-- Códigos de .github/criterios-avaliacao.md, ex.: F1-C3, F2-C10 -->\r\n\r\nPreparação para F4-C1 e F4-C2. A coleta e o registro das evidências serão realizados nas próximas atividades.\r\n\r\n## Uso de IA\r\n\r\n<!-- Ferramenta + tarefa + como a equipe conferiu/ajustou. Ex.: \"Claude, revisão ortográfica; todas as sugestões foram conferidas pelo autor.\" Escreva \"Não utilizado\" se for o caso. -->\r\n\r\nCopilot foi usado no apoio à preparação do ambiente e à redação do README. O texto foi ajustado para facilitar o preenchimento pelos responsáveis; a revisão da equipe ainda está pendente.\r\n\r\n## Checklist\r\n\r\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\r\n- [x] `npm run build` passou localmente (quando altera o site)\r\n- [ ] Critério de pronto da issue conferido\r\n- [ ] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\r\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\r\n- [x] Horas reais preenchidas na issue\r\n",
-      "closed_by": null,
+      "closed_by": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/157/reactions",
         "total_count": 0,
@@ -1063,11 +1083,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1248,11 +1268,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1442,11 +1462,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1625,11 +1645,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -2394,11 +2414,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -2763,11 +2783,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3053,11 +3073,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3343,11 +3363,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3541,11 +3561,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3748,11 +3768,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -4216,11 +4236,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8657,11 +8677,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -8835,11 +8855,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9013,11 +9033,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9191,11 +9211,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9369,11 +9389,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9558,11 +9578,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9756,11 +9776,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -9954,11 +9974,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10097,7 +10117,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -10152,18 +10172,18 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:19Z",
-      "updated_at": "2026-11-05T01:47:28Z",
-      "closed_at": null,
+      "updated_at": "2026-11-12T01:31:39Z",
+      "closed_at": "2026-11-12T01:31:39Z",
       "assignee": {
         "login": "LeticiaSantosss",
         "id": 196245739,
@@ -10200,8 +10220,28 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nEscrever o passo a passo de obtenção de cada métrica de G2, a partir das fichas do [GQM de Confiabilidade (G2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md): pré-condições, comandos ou ações exatas, saída esperada, como calcular o valor, onde salvar o dado bruto em `dados/fase-04/` e qual nome dar ao arquivo. Para os testes manuais no navegador, incluir o formulário de coleta, que identifica quem coletou e quando. As instruções devem permitir que um avaliador que não escreveu o plano obtenha o mesmo valor. Publicar em `docs/fase-03/instrucoes-g2-confiabilidade.md`.\n\nMétricas cobertas:\n\n- M2.1.1 Proporção de correções entre as contribuições integradas\n- M2.1.2 Mediana do tempo entre o relato e a correção\n- M2.1.3 Proporção de contribuições revisadas antes da integração\n- M2.2.1 Proporção de funções essenciais disponíveis sem conexão\n- M2.2.2 Origens externas necessárias para o editor local\n- M2.3.1 Proporção de arquivos inválidos tratados com mensagem\n- M2.3.2 Continuidade do editor após falha da colaboração\n- M2.4.1 Proporção de cenários de fechamento com restauração do desenho\n- M2.4.2 Proporção de arquivos reabertos sem perda\n- M2.4.3 Cobertura de desfazer e refazer\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Instrução para o avaliador: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Plano que permita ao avaliador executar a avaliação completamente: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: quando coletar, meio de coleta e formulários para coleta manual: AULA 08 QSW1 GQM.pdf, p. 45\n- Coleta manual deve identificar quem coletou o dado: AULA 08 QSW1 GQM.pdf, p. 51\n- Critério F3-C1, instruções claras, precisas, repetíveis e reprodutíveis: 2026-2 Trabalho final completo v1.pdf, p. 7\n- Critério F4-C2, vídeos dos testes: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [ ] Passo a passo para todas as 10 métricas de G2\n- [ ] Cada passo com comando ou ação exata e saída esperada\n- [ ] Local e nome de arquivo do dado bruto de cada métrica definidos\n- [ ] Fatores de variação que o avaliador deve registrar em cada coleta (versão das ferramentas, navegador, rede)\n- [ ] Link de cada métrica para a ficha na Fase 2 e para a faixa de pontuação\n- [ ] Página publicada com histórico de versões\n- [ ] Gravação de tela exigida em todo teste manual no navegador, com o nome do arquivo definido\n\n### Prazo\n\n07/11\n\n### Depende de\n\n#95 (Método de avaliação), #96 (Recursos e ambiente), #97 (Massa de dados)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "body": "### Descrição\n\nEscrever o passo a passo de obtenção de cada métrica de G2, a partir das fichas do [GQM de Confiabilidade (G2)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md): pré-condições, comandos ou ações exatas, saída esperada, como calcular o valor, onde salvar o dado bruto em `dados/fase-04/` e qual nome dar ao arquivo. Para os testes manuais no navegador, incluir o formulário de coleta, que identifica quem coletou e quando. As instruções devem permitir que um avaliador que não escreveu o plano obtenha o mesmo valor. Publicar em `docs/fase-03/instrucoes-g2-confiabilidade.md`.\n\nMétricas cobertas:\n\n- M2.1.1 Proporção de correções entre as contribuições integradas\n- M2.1.2 Mediana do tempo entre o relato e a correção\n- M2.1.3 Proporção de contribuições revisadas antes da integração\n- M2.2.1 Proporção de funções essenciais disponíveis sem conexão\n- M2.2.2 Origens externas necessárias para o editor local\n- M2.3.1 Proporção de arquivos inválidos tratados com mensagem\n- M2.3.2 Continuidade do editor após falha da colaboração\n- M2.4.1 Proporção de cenários de fechamento com restauração do desenho\n- M2.4.2 Proporção de arquivos reabertos sem perda\n- M2.4.3 Cobertura de desfazer e refazer\n\n### Critérios da rubrica atendidos\n\n- F3-C1: Definição do método e repetibilidade das instruções (2026-2 Trabalho final completo v1.pdf, p. 7)\n- F3-C8: Consistência entre as Fases 2 e 3 (2026-2 Trabalho final completo v1.pdf, p. 7)\n\n### Referências\n\n- Instrução para o avaliador: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 19\n- Plano que permita ao avaliador executar a avaliação completamente: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 18\n- Plano de Medição: quando coletar, meio de coleta e formulários para coleta manual: AULA 08 QSW1 GQM.pdf, p. 45\n- Coleta manual deve identificar quem coletou o dado: AULA 08 QSW1 GQM.pdf, p. 51\n- Critério F3-C1, instruções claras, precisas, repetíveis e reprodutíveis: 2026-2 Trabalho final completo v1.pdf, p. 7\n- Critério F4-C2, vídeos dos testes: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [x] Passo a passo para todas as 10 métricas de G2\n- [x] Cada passo com comando ou ação exata e saída esperada\n- [x] Local e nome de arquivo do dado bruto de cada métrica definidos\n- [x] Fatores de variação que o avaliador deve registrar em cada coleta (versão das ferramentas, navegador, rede)\n- [x] Link de cada métrica para a ficha na Fase 2 e para a faixa de pontuação\n- [x] Página publicada com histórico de versões\n- [x] Gravação de tela exigida em todo teste manual no navegador, com o nome do arquivo definido\n\n### Prazo\n\n07/11\n\n### Depende de\n\n#95 (Método de avaliação), #96 (Recursos e ambiente), #97 (Massa de dados)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n6\n\n### Revisor\n\n_No response_\n",
+      "closed_by": {
+        "login": "LeticiaSantosss",
+        "id": 196245739,
+        "node_id": "U_kgDOC7J46w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/196245739?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/LeticiaSantosss",
+        "html_url": "https://github.com/LeticiaSantosss",
+        "followers_url": "https://api.github.com/users/LeticiaSantosss/followers",
+        "following_url": "https://api.github.com/users/LeticiaSantosss/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LeticiaSantosss/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/LeticiaSantosss/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LeticiaSantosss/subscriptions",
+        "organizations_url": "https://api.github.com/users/LeticiaSantosss/orgs",
+        "repos_url": "https://api.github.com/users/LeticiaSantosss/repos",
+        "events_url": "https://api.github.com/users/LeticiaSantosss/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/LeticiaSantosss/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/99/reactions",
         "total_count": 0,
@@ -10216,7 +10256,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/99/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -10330,11 +10370,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10539,11 +10579,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10737,11 +10777,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10935,11 +10975,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -11133,11 +11173,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12310,11 +12350,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12519,11 +12559,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12728,11 +12768,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 8,
-        "closed_issues": 20,
+        "open_issues": 7,
+        "closed_issues": 21,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-10T15:35:39Z",
+        "updated_at": "2026-11-12T01:31:40Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -26146,11 +26186,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 8,
-      "closed_issues": 20,
+      "open_issues": 7,
+      "closed_issues": 21,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-10T15:35:39Z",
+      "updated_at": "2026-11-12T01:31:40Z",
       "due_on": "2026-11-08T00:00:00Z",
       "closed_at": null
     },
@@ -26194,6 +26234,257 @@
     }
   ],
   "commits": [
+    {
+      "sha": "44607952e77c253de51f3142ff2208d9b83a1bec",
+      "node_id": "C_kwDOUJBYZdoAKDQ0NjA3OTUyZTc3YzI1M2RlNTFmMzE0MmZmMjIwOGQ5YjgzYTFiZWM",
+      "commit": {
+        "author": {
+          "name": "Christopher",
+          "email": "105730846+wChrstphr@users.noreply.github.com",
+          "date": "2026-11-12T00:11:46Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2026-11-12T00:11:46Z"
+        },
+        "message": "Merge pull request #157 from FCTE-Qualidade-de-Software-1/fase-04/issue-110-preparar-ambiente\n\n[F4-110] docs: prepara ambiente de medição",
+        "tree": {
+          "sha": "610b7c0d8d0bbd7d90d96070b75f442d4c352100",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/610b7c0d8d0bbd7d90d96070b75f442d4c352100"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/44607952e77c253de51f3142ff2208d9b83a1bec",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq9QRCCRC1aQ7uu5UhlAAAzuQQAENKf8ZnNtNJyVSnd27acEe0\n1s969wDmdmtjv2Rbc9QnTSJwbtzMEJNSOVk4r6rFjHmXxtKQAto8j1W9m4jDHKiB\n32SrcFVhwan+Lahy4VfTQLAWXT9YsItyBKnsgDzX27XZcLnzRcQCGhsNZ2i0eFrP\nHHdZVwAJ7SVBlGFCno64YwPThxlfaDKdmE4Qn2b58/ltqhQsKpsXl9Krbx/atnZZ\nPVFVRMsUlEbasfqelr4vuzwGQfdWmd0FyOAv3o50ZEEIYskvRK9CBRLYrNCAIqsJ\nWEzsz1QHRoNe9zMXokognT4l6Lh22+vK2TZDdKTUs9U20VG3qqAeJCYuHyA69Hd6\nWX0IfvGqE/vgLiSX8YB32i3YjFU8FW/PxmYc8YbHfRemfpuJQdzO264aUmKUY5ki\n7Q15ZYGAlBcE42fNvKntU+YL1kt2FqElsw0tPmXDtCVa5u7V23MEyUFM1vZWZFwS\nvOYGcD4f5FfFtnBxjdOWisakBEO8385EEboIK4t4gXWJWTEU2TAWoNlFxEHxYe+3\nNkrTV0vYo1ZSJ1JcPjXO9fhW60wDwMXVb9uYJNBwDxwQutDwAbddnkEGiHR84d9c\nuMV7BZCA15PuvC71WYL25if1YrDvOvYnpkY84gGJl63eofPyPDmqUNhKD+d4x8ri\nsLJhiprri666kPMAYGJU\n=rDcM\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 610b7c0d8d0bbd7d90d96070b75f442d4c352100\nparent 5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540\nparent 2424490aa7f3b9fce41c2b76d88d54860c434610\nauthor Christopher <105730846+wChrstphr@users.noreply.github.com> 1794442306 -0300\ncommitter GitHub <noreply@github.com> 1794442306 -0300\n\nMerge pull request #157 from FCTE-Qualidade-de-Software-1/fase-04/issue-110-preparar-ambiente\n\n[F4-110] docs: prepara ambiente de medição",
+          "verified_at": "2026-11-12T00:11:46Z"
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/44607952e77c253de51f3142ff2208d9b83a1bec",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/44607952e77c253de51f3142ff2208d9b83a1bec",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/44607952e77c253de51f3142ff2208d9b83a1bec/comments",
+      "author": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540"
+        },
+        {
+          "sha": "2424490aa7f3b9fce41c2b76d88d54860c434610",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/2424490aa7f3b9fce41c2b76d88d54860c434610",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/2424490aa7f3b9fce41c2b76d88d54860c434610"
+        }
+      ]
+    },
+    {
+      "sha": "2424490aa7f3b9fce41c2b76d88d54860c434610",
+      "node_id": "C_kwDOUJBYZdoAKDI0MjQ0OTBhYTdmM2I5ZmNlNDFjMmI3NmQ4OGQ1NDg2MGM0MzQ2MTA",
+      "commit": {
+        "author": {
+          "name": "Christopher Paraizo",
+          "email": "wanjo.christopher@gmail.com",
+          "date": "2026-11-11T23:32:45Z"
+        },
+        "committer": {
+          "name": "Christopher Paraizo",
+          "email": "wanjo.christopher@gmail.com",
+          "date": "2026-11-11T23:56:52Z"
+        },
+        "message": "[F4-110] docs: registra ambiente de G1 e corrige a preparação do Yarn, do commit e da cobertura",
+        "tree": {
+          "sha": "f56566331a70de4b0ce496ec80ac62ba9c88e839",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/f56566331a70de4b0ce496ec80ac62ba9c88e839"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/2424490aa7f3b9fce41c2b76d88d54860c434610",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/2424490aa7f3b9fce41c2b76d88d54860c434610",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/2424490aa7f3b9fce41c2b76d88d54860c434610",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/2424490aa7f3b9fce41c2b76d88d54860c434610/comments",
+      "author": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "wChrstphr",
+        "id": 105730846,
+        "node_id": "U_kgDOBk1THg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105730846?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/wChrstphr",
+        "html_url": "https://github.com/wChrstphr",
+        "followers_url": "https://api.github.com/users/wChrstphr/followers",
+        "following_url": "https://api.github.com/users/wChrstphr/following{/other_user}",
+        "gists_url": "https://api.github.com/users/wChrstphr/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/wChrstphr/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/wChrstphr/subscriptions",
+        "organizations_url": "https://api.github.com/users/wChrstphr/orgs",
+        "repos_url": "https://api.github.com/users/wChrstphr/repos",
+        "events_url": "https://api.github.com/users/wChrstphr/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/wChrstphr/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "f6498e21d528d435946366cf7f0ee7649c4b89f7",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f6498e21d528d435946366cf7f0ee7649c4b89f7",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f6498e21d528d435946366cf7f0ee7649c4b89f7"
+        }
+      ]
+    },
+    {
+      "sha": "5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540",
+      "node_id": "C_kwDOUJBYZdoAKDVlNmFlMWYwMDNjMGVlMjRkZTUwZTEwYTY0ZmNkNzdhNGE4ZjI1NDA",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-11T23:06:08Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-11T23:06:08Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "bf5afb883dc8b876bd7a6e2be2a9093acffd8e3d",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/bf5afb883dc8b876bd7a6e2be2a9093acffd8e3d"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/5e6ae1f003c0ee24de50e10a64fcd77a4a8f2540/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "bb7164efc63d1d371b8c088a8263ce01a33c89a1",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/bb7164efc63d1d371b8c088a8263ce01a33c89a1",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/bb7164efc63d1d371b8c088a8263ce01a33c89a1"
+        }
+      ]
+    },
     {
       "sha": "bb7164efc63d1d371b8c088a8263ce01a33c89a1",
       "node_id": "C_kwDOUJBYZdoAKGJiNzE2NGVmYzYzZDFkMzcxYjhjMDg4YTgyNjNjZTAxYTMzYzg5YTE",
@@ -26521,6 +26812,334 @@
         "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
         "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
         "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "d0f76408c9d47f6f00e491619ff40c0f4578aa9f",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/d0f76408c9d47f6f00e491619ff40c0f4578aa9f",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/d0f76408c9d47f6f00e491619ff40c0f4578aa9f"
+        }
+      ]
+    },
+    {
+      "sha": "f6498e21d528d435946366cf7f0ee7649c4b89f7",
+      "node_id": "C_kwDOUJBYZdoAKGY2NDk4ZTIxZDUyOGQ0MzU5NDYzNjZjZjdmMGVlNzY0OWM0Yjg5Zjc",
+      "commit": {
+        "author": {
+          "name": "eduarda-ogomes",
+          "email": "duda.red35@gmail.com",
+          "date": "2026-11-11T01:32:25Z"
+        },
+        "committer": {
+          "name": "eduarda-ogomes",
+          "email": "duda.red35@gmail.com",
+          "date": "2026-11-11T01:32:25Z"
+        },
+        "message": "[F4-110] docs: registra ambiente de medicao de Maria Eduarda (G3)",
+        "tree": {
+          "sha": "b787b2501e07acf8e66ae56d44635c158cf07579",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/b787b2501e07acf8e66ae56d44635c158cf07579"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/f6498e21d528d435946366cf7f0ee7649c4b89f7",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f6498e21d528d435946366cf7f0ee7649c4b89f7",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f6498e21d528d435946366cf7f0ee7649c4b89f7",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f6498e21d528d435946366cf7f0ee7649c4b89f7/comments",
+      "author": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "32699b701004ecfb64887b6b671ed78e4e56b86c",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/32699b701004ecfb64887b6b671ed78e4e56b86c",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/32699b701004ecfb64887b6b671ed78e4e56b86c"
+        }
+      ]
+    },
+    {
+      "sha": "32699b701004ecfb64887b6b671ed78e4e56b86c",
+      "node_id": "C_kwDOUJBYZdoAKDMyNjk5YjcwMTAwNGVjZmI2NDg4N2I2YjY3MWVkNzhlNGU1NmI4NmM",
+      "commit": {
+        "author": {
+          "name": "Luiz Henrique Soares",
+          "email": "luizhenriquesoares18@hotmail.com",
+          "date": "2026-11-11T01:04:31Z"
+        },
+        "committer": {
+          "name": "Luiz Henrique Soares",
+          "email": "luizhenriquesoares18@hotmail.com",
+          "date": "2026-11-11T01:04:31Z"
+        },
+        "message": "[F4-110] docs: registra autenticação da CLI",
+        "tree": {
+          "sha": "07e402283495ea3ba5079f1615b68719e9a1f99f",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/07e402283495ea3ba5079f1615b68719e9a1f99f"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/32699b701004ecfb64887b6b671ed78e4e56b86c",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/32699b701004ecfb64887b6b671ed78e4e56b86c",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/32699b701004ecfb64887b6b671ed78e4e56b86c",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/32699b701004ecfb64887b6b671ed78e4e56b86c/comments",
+      "author": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "ed5d71584b88173ed74245837eda8f165879732d",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/ed5d71584b88173ed74245837eda8f165879732d",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/ed5d71584b88173ed74245837eda8f165879732d"
+        }
+      ]
+    },
+    {
+      "sha": "ed5d71584b88173ed74245837eda8f165879732d",
+      "node_id": "C_kwDOUJBYZdoAKGVkNWQ3MTU4NGI4ODE3M2VkNzQyNDU4MzdlZGE4ZjE2NTg3OTczMmQ",
+      "commit": {
+        "author": {
+          "name": "Luiz Henrique Soares",
+          "email": "luizhenriquesoares18@hotmail.com",
+          "date": "2026-11-11T00:53:39Z"
+        },
+        "committer": {
+          "name": "Luiz Henrique Soares",
+          "email": "luizhenriquesoares18@hotmail.com",
+          "date": "2026-11-11T00:53:39Z"
+        },
+        "message": "[F4-110] docs: simplifica registro do ambiente",
+        "tree": {
+          "sha": "f3801f26785512e7846f9873fe67b9c6768137db",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/f3801f26785512e7846f9873fe67b9c6768137db"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/ed5d71584b88173ed74245837eda8f165879732d",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/ed5d71584b88173ed74245837eda8f165879732d",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/ed5d71584b88173ed74245837eda8f165879732d",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/ed5d71584b88173ed74245837eda8f165879732d/comments",
+      "author": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "706f11214ca7127454e3b4edef51c9ce538d1ec3",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/706f11214ca7127454e3b4edef51c9ce538d1ec3",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/706f11214ca7127454e3b4edef51c9ce538d1ec3"
+        }
+      ]
+    },
+    {
+      "sha": "706f11214ca7127454e3b4edef51c9ce538d1ec3",
+      "node_id": "C_kwDOUJBYZdoAKDcwNmYxMTIxNGNhNzEyNzQ1NGUzYjRlZGVmNTFjOWNlNTM4ZDFlYzM",
+      "commit": {
+        "author": {
+          "name": "Luiz Henrique Soares",
+          "email": "luizhenriquesoares18@hotmail.com",
+          "date": "2026-11-11T00:45:53Z"
+        },
+        "committer": {
+          "name": "Luiz Henrique Soares",
+          "email": "luizhenriquesoares18@hotmail.com",
+          "date": "2026-11-11T00:45:53Z"
+        },
+        "message": "[F4-110] docs: prepara ambiente de medição",
+        "tree": {
+          "sha": "2453daba46adfe8dbeddf3e327222e852453c842",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/2453daba46adfe8dbeddf3e327222e852453c842"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/706f11214ca7127454e3b4edef51c9ce538d1ec3",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/706f11214ca7127454e3b4edef51c9ce538d1ec3",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/706f11214ca7127454e3b4edef51c9ce538d1ec3",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/706f11214ca7127454e3b4edef51c9ce538d1ec3/comments",
+      "author": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
         "user_view_type": "public",
         "site_admin": false
       },
@@ -50444,6 +51063,11 @@
         "revisor": "eduarda-ogomes",
         "estado": "APPROVED",
         "enviada_em": "2026-11-11T01:37:17Z"
+      },
+      {
+        "revisor": "wChrstphr",
+        "estado": "APPROVED",
+        "enviada_em": "2026-11-12T00:11:34Z"
       }
     ],
     "156": [
