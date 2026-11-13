@@ -1,0 +1,4 @@
+formato,nome,tipo_mime,especificacao,padrao_aberto,suporte_interface,suporte_api
+.excalidraw,Excalidraw Scene JSON,application/vnd.excalidraw+json,ECMA-404 / RFC 8259 (JSON),Sim,Sim (Salvar no disco),Sim (serializeAsJSON)
+.png,Portable Network Graphics,image/png,W3C Recommendation / ISO/IEC 15948,Sim,Sim (Exportar imagem > PNG),Sim (exportScene type: png)
+.svg,Scalable Vector Graphics,image/svg+xml,W3C Recommendation SVG 1.1 / 2.0,Sim,Sim (Exportar imagem > SVG),Sim (exportScene type: svg)

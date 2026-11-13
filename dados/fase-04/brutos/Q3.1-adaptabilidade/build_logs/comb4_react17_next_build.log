@@ -1,0 +1,70 @@
+
+> comb4-react17-next@1.0.0 build
+> next build
+
+info  - Skipping validation of types
+info  - Linting...
+We detected TypeScript in your project and reconfigured your tsconfig.json file for you. Strict-mode is set to false by default.
+
+The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+	- incremental was set to true
+
+info  - Creating an optimized production build...
+(node:33758) [DEP_WEBPACK_MODULE_UPDATE_HASH] DeprecationWarning: Module.updateHash: Use new ChunkGraph API
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Failed to compile.
+
+./node_modules/@excalidraw/excalidraw/dist/prod/index.js
+Attempted import error: 'useId' is not exported from 'react' (imported as 'q$').
+
+Import trace for requested module:
+./node_modules/@excalidraw/excalidraw/dist/prod/index.js
+
+./node_modules/@excalidraw/excalidraw/dist/prod/index.js
+Attempted import error: 'useDeferredValue' is not exported from 'react' (imported as 'Zj').
+
+Import trace for requested module:
+./node_modules/@excalidraw/excalidraw/dist/prod/index.js
+
+static/chunks/3693.09914ed03b35dee7.js from Terser
+Unexpected token: punc ({) [static/chunks/3693.09914ed03b35dee7.js:22,9]
+    at js_error (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:32780)
+    at croak (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:43882)
+    at token_error (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:43989)
+    at unexpected (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:44055)
+    at as_property_name (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:68487)
+    at concise_method_or_getset (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:64746)
+    at class_ (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:64098)
+    at expr_atom (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:61955)
+    at maybe_unary (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:71619)
+    at expr_ops (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:72615)
+
+static/chunks/910.84949b19aff70f14.js from Terser
+Unexpected token: punc ({) [static/chunks/910.84949b19aff70f14.js:1998,9]
+    at js_error (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:32780)
+    at croak (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:43882)
+    at token_error (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:43989)
+    at unexpected (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:44055)
+    at as_property_name (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:68487)
+    at concise_method_or_getset (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:64746)
+    at class_ (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:64098)
+    at expr_atom (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:61955)
+    at maybe_unary (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:71619)
+    at expr_ops (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:72615)
+
+static/chunks/4260.453503048a6d08e9.js from Terser
+Unexpected token: punc ({) [static/chunks/4260.453503048a6d08e9.js:22,9]
+    at js_error (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:32780)
+    at croak (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:43882)
+    at token_error (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:43989)
+    at unexpected (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:44055)
+    at as_property_name (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:68487)
+    at concise_method_or_getset (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:64746)
+    at class_ (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:64098)
+    at expr_atom (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:61955)
+    at maybe_unary (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:71619)
+    at expr_ops (/home/duda/.gemini/antigravity/brain/125ae31d-b51b-4760-ab8c-ba9c492076b5/scratch/m312_environments/comb4_react17_next/node_modules/next/dist/compiled/terser/bundle.min.js:1:72615)
+
+
+> Build failed because of webpack errors

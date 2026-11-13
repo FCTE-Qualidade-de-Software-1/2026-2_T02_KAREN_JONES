@@ -1,0 +1,5 @@
+Cena,Elementos,Rep1_fps,Rep2_fps,Rep3_fps,Rep4_fps,Rep5_fps,Mediana_fps,Aderencia_Meta_pct,Observacoes
+cena_100.excalidraw,100,36,52,60,60,60,60.0,100.0,Estabiliza em 60 fps continuos com movimentacao fluida
+cena_1000.excalidraw,1000,46,49,52,55,58,52.0,86.7,H3.2.2 confirmada (mediana 52 fps >= 48 fps)
+cena_5000.excalidraw,5000,18,19,20,20,21,20.0,33.3,Taxa entre 18 e 21 fps durante arrasto contínuo
+cena_10000.excalidraw,10000,10.2,11.5,12.0,12.8,13.2,12.0,20.0,Taxa entre 10.2 e 13.2 fps sob volume extremo

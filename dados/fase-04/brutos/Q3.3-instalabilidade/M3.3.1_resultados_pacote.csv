@@ -1,0 +1,10 @@
+Gerenciador,Operacao,Status_Registro_Oficial,Status_Tarball_Local,Tempo_Medio_s,Observacoes
+npm,Instalacao,Sucesso,Falha,7.2,Resolucao no registro publico (0.17.6) com sucesso; tarball local acusa ETARGET para @excalidraw/common
+npm,Atualizacao,Sucesso,Falha,6.8,Upgrade normalizado no registro; tarball local bloqueado por subpacote nao publicado
+npm,Remocao,Sucesso,Sucesso,1.2,Remocao limpa executada com sucesso nos dois cenarios
+yarn,Instalacao,Sucesso,Falha,8.1,Instalacao via yarn v1/berry com sucesso via registro publico
+yarn,Atualizacao,Sucesso,Falha,7.5,Atualizacao de versao concluida com sucesso via registro publico
+yarn,Remocao,Sucesso,Sucesso,1.5,Remocao do pacote e atualizacao do yarn.lock concluidas
+pnpm,Instalacao,Sucesso,Falha,5.4,Instalacao rapida com hardlinks no registro publico
+pnpm,Atualizacao,Sucesso,Falha,4.9,Upgrade rapido com hardlinks no registro publico
+pnpm,Remocao,Sucesso,Sucesso,1.1,Desinstalacao limpa sem quebra de referencias virtuais

@@ -1,0 +1,11 @@
+=== M3.4.3 — Proporcao dos campos do formato .excalidraw documentados ===
+Total de campos distintos encontrados na cena real: 52
+Campos documentados em json-schema.mdx: 14
+Campos nao documentados: 38
+Proporcao de campos documentados: 26.9%
+
+Esquema JSON Schema formal validavel por maquina (.json):
+Nao encontrado no repositorio
+
+--- CAMPOS NAO DOCUMENTADOS ---
+angle, autoResize, backgroundColor, boundElements, containerId, endArrowhead, endBinding, fillStyle, fontFamily, fontSize, frameId, groupIds, isDeleted, lastCommittedPoint, lineHeight, link, locked, name, opacity, originalText, points, pressures, roughness, roundness, scale, seed, simulatePressure, startArrowhead, startBinding, status, strokeColor, strokeStyle, strokeWidth, text, textAlign, updated, versionNonce, verticalAlign

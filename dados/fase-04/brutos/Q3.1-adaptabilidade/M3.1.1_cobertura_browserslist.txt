@@ -1,0 +1,63 @@
+=== M3.1.1 — Cobertura de usuários pelos navegadores declarados ===
+Data da coleta: 2026-11-10T11:06:26-03:00
+
+--- Consulta declarada em package.json (browserslist.production) ---
+[
+  '>0.2%',
+  'not dead',
+  'not ie <= 11',
+  'not op_mini all',
+  'not safari < 12',
+  'not kaios <= 2.5',
+  'not edge < 79',
+  'not chrome < 70',
+  'not and_uc < 13',
+  'not samsung < 10'
+]
+
+--- Cobertura global ---
+These browsers account for 88.94% of all users globally
+
+--- Lista de navegadores suportados ---
+and_chr 157
+and_ff 159
+and_uc 15.5
+chrome 156
+chrome 155
+chrome 154
+chrome 153
+chrome 152
+chrome 151
+chrome 150
+chrome 146
+chrome 144
+chrome 142
+chrome 136
+chrome 120
+chrome 109
+edge 156
+edge 155
+edge 154
+firefox 158
+firefox 157
+ios_saf 27.0
+ios_saf 26.6
+ios_saf 26.5
+ios_saf 26.3
+ios_saf 26.2
+ios_saf 18.5-18.7
+ios_saf 16.6-16.7
+op_mob 80
+opera 136
+safari 27
+safari 26.6
+safari 18.5-18.7
+safari 17.6
+samsung 30
+
+--- Versões das ferramentas ---
+Browserslist version: browserslist 4.29.5
+caniuse-lite:
+excalidraw-monorepo@ /home/duda/Documentos/qualidadeSoftware/excalidraw
+└── (empty)
+
