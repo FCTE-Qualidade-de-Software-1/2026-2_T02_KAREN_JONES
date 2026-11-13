@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-13T10:17:30.724656+00:00",
+  "coletado_em": "2026-11-13T16:49:05.065997+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -728,11 +728,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4703,11 +4703,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5171,11 +5171,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5349,11 +5349,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5538,11 +5538,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5727,11 +5727,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5905,11 +5905,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6083,11 +6083,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6261,11 +6261,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6439,11 +6439,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6617,11 +6617,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6795,11 +6795,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6973,11 +6973,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7151,11 +7151,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7329,11 +7329,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7452,7 +7452,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -7507,18 +7507,18 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:17:14Z",
-      "updated_at": "2026-11-05T02:17:25Z",
-      "closed_at": null,
+      "updated_at": "2026-11-13T16:48:00Z",
+      "closed_at": "2026-11-13T16:48:00Z",
       "assignee": {
         "login": "eduarda-ogomes",
         "id": 162516978,
@@ -7556,7 +7556,27 @@
         "total_blocking": 0
       },
       "body": "### Descrição\n\nPartir dos valores calculados na #114, em `dados/fase-04/consolidados/`, e, seguindo o plano de análise da Fase 3, comparar cada valor com a faixa do [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md), confrontar com a hipótese da métrica e responder a cada questão e ao objetivo G3, com gráficos e tabelas. Publicar em `docs/fase-04/resultados-g3-flexibilidade.md`.\n\n### Critérios da rubrica atendidos\n\n- F4-C3: Análise e respostas GQM (2026-2 Trabalho final completo v1.pdf, p. 8)\n\n### Referências\n\n- Comparar com critérios: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 20\n- Interpretação: analisar as medidas e responder às questões e ao objetivo: AULA 08 QSW1 GQM.pdf, p. 54\n- Organizar as métricas por questão e objetivo, com gráficos e tabelas: AULA 08 QSW1 GQM.pdf, p. 56\n- Plano de Análise, hipóteses comparadas com os valores reais: AULA 08 QSW1 GQM.pdf, p. 46\n- Critério F4-C3: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [ ] Valor e nível de pontuação de todas as métricas de G3\n- [ ] Hipótese de cada métrica confirmada ou refutada\n- [ ] Cada questão de G3 respondida explicitamente, e o objetivo G3 também\n- [ ] Gráfico ou tabela por questão, com legenda e texto alternativo\n- [ ] Link de cada valor para o dado bruto e o consolidado\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n15/11\n\n### Depende de\n\n#114 (Verificação dos dados brutos)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "closed_by": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/117/reactions",
         "total_count": 0,
@@ -7571,7 +7591,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/117/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -7685,11 +7705,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7863,11 +7883,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8041,11 +8061,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8219,11 +8239,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8417,11 +8437,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8595,11 +8615,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8773,11 +8793,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8962,11 +8982,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -9256,17 +9276,17 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 23,
-        "closed_issues": 2,
+        "open_issues": 22,
+        "closed_issues": 3,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-13T00:04:31Z",
+        "updated_at": "2026-11-13T16:48:00Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:41Z",
-      "updated_at": "2026-11-05T02:17:19Z",
+      "updated_at": "2026-11-13T16:40:22Z",
       "closed_at": null,
       "assignee": {
         "login": "DaviPierre",
@@ -9304,7 +9324,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nPreparar a apresentação do Ponto de Controle 2, em Google Slides ou Canva, cobrindo a Fase 3 completa e os resultados parciais da Fase 4 (métricas coletadas e primeiros níveis de pontuação). O cronograma tem o PC2 em 16/11 e 18/11, com sorteio, e a equipe se prepara para a primeira data: slides prontos em 15/11. Se o sorteio cair em 18/11, a issue fecha nesse dia. O retorno da professora entra na revisão do artigo (#128).\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Ponto de Controle 2 em 16/11 e 18/11: Cronograma atualizado da disciplina, Moodle (aprender3.unb.br), novembro\n- Pontos de controle nas datas do cronograma: 2026-2 Trabalho final completo v1.pdf, p. 3, seção 4\n\n### Critério de pronto\n\n- [ ] Slides cobrindo o plano de avaliação, a ligação com a Fase 2 e os resultados parciais da Fase 4\n- [ ] Ensaio realizado\n- [ ] Retorno da professora registrado em ata\n- [ ] Retorno levado para a #128 ou para issues de ajuste\n- [ ] Slides prontos em 15/11\n\n### Prazo\n\n16/11\n\n### Depende de\n\n#103 (Piloto das instruções), #104 (Visão geral da Fase 03), #114 (Verificação dos dados brutos)\n\n### Estimativa (h)\n\n6\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nPreparar a apresentação do Ponto de Controle 2, em Google Slides ou Canva, cobrindo a Fase 3 completa e os resultados parciais da Fase 4 (métricas coletadas e primeiros níveis de pontuação). O cronograma tem o PC2 em 16/11 e 18/11, com sorteio, e a equipe se prepara para a primeira data: slides prontos em 15/11. Se o sorteio cair em 18/11, a issue fecha nesse dia. O retorno da professora entra na revisão do artigo (#128).\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Ponto de Controle 2 em 16/11 e 18/11: Cronograma atualizado da disciplina, Moodle (aprender3.unb.br), novembro\n- Pontos de controle nas datas do cronograma: 2026-2 Trabalho final completo v1.pdf, p. 3, seção 4\n- Link do canva: https://www.canva.com/design/DAHaziAhoJE/8WplYlypu6fDYshoVtmhVw/edit\n\n### Critério de pronto\n\n- [ ] Slides cobrindo o plano de avaliação, a ligação com a Fase 2 e os resultados parciais da Fase 4\n- [ ] Ensaio realizado\n- [ ] Retorno da professora registrado em ata\n- [ ] Retorno levado para a #128 ou para issues de ajuste\n- [ ] Slides prontos em 15/11\n\n### Prazo\n\n16/11\n\n### Depende de\n\n#103 (Piloto das instruções), #104 (Visão geral da Fase 03), #114 (Verificação dos dados brutos)\n\n### Estimativa (h)\n\n6\n\n### Horas reais (h)\n\n1.5h (@eduarda-ogomes: 1.5h)\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/108/reactions",
@@ -27021,16 +27041,98 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 23,
-      "closed_issues": 2,
+      "open_issues": 22,
+      "closed_issues": 3,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-13T00:04:31Z",
+      "updated_at": "2026-11-13T16:48:00Z",
       "due_on": "2026-11-21T00:00:00Z",
       "closed_at": null
     }
   ],
   "commits": [
+    {
+      "sha": "f4d6afcf387814c31add0c8048647163bb541261",
+      "node_id": "C_kwDOUJBYZdoAKGY0ZDZhZmNmMzg3ODE0YzMxYWRkMGM4MDQ4NjQ3MTYzYmI1NDEyNjE",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-13T10:17:31Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-13T10:17:31Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "7f6b9ac4710a2bed6325d37a6c81533759da1bbc",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/7f6b9ac4710a2bed6325d37a6c81533759da1bbc"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/f4d6afcf387814c31add0c8048647163bb541261",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f4d6afcf387814c31add0c8048647163bb541261",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f4d6afcf387814c31add0c8048647163bb541261",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f4d6afcf387814c31add0c8048647163bb541261/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "3ac5d2aaa01dc1ed2d9bf7638a7d2357fb0a39fc",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/3ac5d2aaa01dc1ed2d9bf7638a7d2357fb0a39fc",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/3ac5d2aaa01dc1ed2d9bf7638a7d2357fb0a39fc"
+        }
+      ]
+    },
     {
       "sha": "3ac5d2aaa01dc1ed2d9bf7638a7d2357fb0a39fc",
       "node_id": "C_kwDOUJBYZdoAKDNhYzVkMmFhYTAxZGMxZWQyZDliZjc2MzhhN2QyMzU3ZmIwYTM5ZmM",

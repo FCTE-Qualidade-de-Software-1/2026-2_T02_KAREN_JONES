@@ -61,7 +61,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,open,GabrielSMonteiro,2.0,0.0,,,90.0,0.0,08/11,-,Aberta em atraso,
 106,Fase 3,[GESTAO] Atas de reunião da Fase 3,open,LeticiaSantosss,1.0,0.0,,,45.0,0.0,08/11,-,Aberta em atraso,
 107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,open,GabrielSMonteiro,3.0,0.0,,,135.0,0.0,08/11,-,Aberta em atraso,
-108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (16/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,,,270.0,0.0,16/11,-,Em andamento (no prazo),
+108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (16/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,1.5,-75.0,superestimada,270.0,67.5,16/11,-,Em andamento (no prazo),
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,open,GabrielSMonteiro,1.0,0.0,,,45.0,0.0,12/11,-,Aberta em atraso,
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,open,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,-,Aberta em atraso,
 111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),open,wChrstphr,5.0,0.0,,,225.0,0.0,12/11,-,Aberta em atraso,
@@ -70,7 +70,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 114,Fase 4,"[F4] Verificação dos dados brutos e da rastreabilidade dado, métrica",open,DaviPierre,4.0,0.0,,,180.0,0.0,13/11,-,Em andamento (no prazo),
 115,Fase 4,[F4] Análise e respostas GQM de G1 (Manutenibilidade),open,wChrstphr,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
 116,Fase 4,[F4] Análise e respostas GQM de G2 (Confiabilidade),open,luizh-gsoares,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
-117,Fase 4,[F4] Análise e respostas GQM de G3 (Flexibilidade),open,eduarda-ogomes,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
+117,Fase 4,[F4] Análise e respostas GQM de G3 (Flexibilidade),closed,eduarda-ogomes,3.0,0.0,,,135.0,0.0,15/11,13/11/2026,Concluida no prazo,10.06
 118,Fase 4,[F4] Oportunidades de melhoria e escolha da ação,open,wChrstphr,2.0,0.0,,,90.0,0.0,16/11,-,Em andamento (no prazo),
 119,Fase 4,[F4] Executar a ação de melhoria,open,wChrstphr,8.0,0.0,,,360.0,0.0,19/11,-,Em andamento (no prazo),
 120,Fase 4,"[F4] Julgamento final, coerência com o propósito e relações entre as características",open,luizh-gsoares,3.0,0.0,,,135.0,0.0,17/11,-,Em andamento (no prazo),

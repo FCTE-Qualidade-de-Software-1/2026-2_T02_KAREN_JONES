@@ -49,7 +49,7 @@
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
 | Fase 3 | 23 / 18 | 78.3% | 8.7% | 48.0 | 47.0 | R$ 2160.00 | R$ 2115.00 | 138.2% | 5.97 |
-| Fase 4 | 24 / 1 | 4.2% | 75.0% | 80.0 | 14.7 | R$ 3600.00 | R$ 661.50 | 163.3% | 9.37 |
+| Fase 4 | 24 / 2 | 8.3% | 75.0% | 80.0 | 16.2 | R$ 3600.00 | R$ 729.00 | 108.0% | 9.71 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 25 | 64.5 | 33.9 | R$ 1525.50 | 132 | 20 | **18.28%** |
-| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 34.0 | R$ 1530.00 | 11 | 5 | **18.34%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 55 | 12 | **20.76%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 24.4 | R$ 1098.45 | 14 | 9 | **13.17%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 15.4 | R$ 693.00 | 24 | 9 | **8.31%** |
-| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 39.2 | R$ 1764.00 | 64 | 13 | **21.14%** |
+| Christopher | `@wChrstphr` | 25 | 64.5 | 33.9 | R$ 1525.50 | 132 | 20 | **18.14%** |
+| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 34.0 | R$ 1530.00 | 11 | 5 | **18.19%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 55 | 12 | **20.60%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 24.4 | R$ 1098.45 | 14 | 9 | **13.06%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 15.4 | R$ 693.00 | 24 | 9 | **8.24%** |
+| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 40.7 | R$ 1831.50 | 64 | 13 | **21.78%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 25 & 64.5h & 33.9h & 132/20 & 18.28\% \\
-Davi Pierre & 13 & 37.0h & 34.0h & 11/5 & 18.34\% \\
-Gabriel Monteiro & 16 & 44.5h & 38.5h & 55/12 & 20.76\% \\
-Leticia de Carvalho & 16 & 30.5h & 24.4h & 14/9 & 13.17\% \\
-Luiz Henrique Soares & 15 & 35.0h & 15.4h & 24/9 & 8.31\% \\
-Maria Eduarda & 19 & 46.5h & 39.2h & 64/13 & 21.14\% \\
+Christopher & 25 & 64.5h & 33.9h & 132/20 & 18.14\% \\
+Davi Pierre & 13 & 37.0h & 34.0h & 11/5 & 18.19\% \\
+Gabriel Monteiro & 16 & 44.5h & 38.5h & 55/12 & 20.60\% \\
+Leticia de Carvalho & 16 & 30.5h & 24.4h & 14/9 & 13.06\% \\
+Luiz Henrique Soares & 15 & 35.0h & 15.4h & 24/9 & 8.24\% \\
+Maria Eduarda & 19 & 46.5h & 40.7h & 64/13 & 21.78\% \\
 \hline
-\textbf{Total} & \textbf{104} & \textbf{258.0h} & \textbf{185.4h} & \textbf{300/68} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{104} & \textbf{258.0h} & \textbf{186.9h} & \textbf{300/68} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -100,7 +100,7 @@ Maria Eduarda & 19 & 46.5h & 39.2h & 64/13 & 21.14\% \\
 | Fase 1 | 28/09/2026 00:00 | 08/10/2026 11:59 | 18/10/2026 23:59 | 18 / 18 | 0.0 | 13 | 5 | 27.8 | - | sim |
 | Fase 2 | 18/10/2026 23:59 | 22/10/2026 23:59 | 26/10/2026 23:59 | 29 / 29 | 55.2 | 8 | 5 | 44.8 | - | nao |
 | Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 18 / 23 | 0.0 | 7 | 9 | 8.7 | #105 | sim |
-| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 1 / 24 | 4.2 | 0 | 0 | 0.0 | #108 #109 #111 #112 #114 #115 #116 #117 #118 #119 #120 #121 #122 #123 #124 #125 #126 #127 #128 #130 | nao |
+| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 2 / 24 | 8.3 | 0 | 0 | 4.2 | #108 #109 #111 #112 #114 #115 #116 #118 #119 #120 #121 #122 #123 #124 #125 #126 #127 #128 #130 | nao |
 
 ### Acerto das estimativas por issue
 
@@ -111,7 +111,7 @@ Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio en
 | Fase 1 | 18 | -0.8 | 0.0 | 50.0 | 4 | 5 |
 | Fase 2 | 26 | -8.2 | -11.65 | 61.5 | 3 | 7 |
 | Fase 3 | 15 | 38.2 | 0.0 | 46.7 | 7 | 1 |
-| Fase 4 | 2 | 63.3 | 47.5 | 50.0 | 1 | 0 |
+| Fase 4 | 3 | 8.0 | 0.0 | 33.3 | 1 | 1 |
 
 ### Tempo de espera dos PRs por revisao
 
@@ -262,5 +262,6 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | fechada sem horas reais | #27 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA' fechada sem horas reais registradas |
 | fechada sem horas reais | #74 | '[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1' fechada sem horas reais registradas |
 | fechada sem horas reais | #103 | '[F3] Piloto das instruções e revisão do plano de avaliação' fechada sem horas reais registradas |
+| fechada sem horas reais | #117 | '[F4] Análise e respostas GQM de G3 (Flexibilidade)' fechada sem horas reais registradas |
 | fechada sem horas reais | #138 | '[GESTAO] Sincronizar o prazo das issues com o GitHub Projects' fechada sem horas reais registradas |
 | fechada sem horas reais | #140 | '[GESTAO] Documentar a priorização e as datas do GitHub Project' fechada sem horas reais registradas |
