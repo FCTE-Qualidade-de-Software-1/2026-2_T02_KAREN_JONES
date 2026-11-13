@@ -1,3 +1,3 @@
 entrega,fases,total_issues,issues_concluidas,issues_abertas,progresso_pct,issues_no_prazo,issues_em_atraso,aderencia_prazo_pct,horas_estimadas,horas_reais,custo_estimado_brl,custo_real_brl,acuracia_estimativa_pct,taxa_preenchimento_estimativa_pct,lead_time_medio_dias
 Entrega 1,Fase 1 + Fase 2,47,47,0,100.0,20,27,42.6,130.0,123.71,5850.0,5566.95,95.2,93.6,2.77
-Entrega 2,Fase 3 + Fase 4,47,17,30,36.2,24,23,51.1,128.0,61.7,5760.0,2776.5,143.5,100.0,5.77
+Entrega 2,Fase 3 + Fase 4,47,19,28,40.4,20,27,42.6,128.0,61.7,5760.0,2776.5,143.5,100.0,6.15

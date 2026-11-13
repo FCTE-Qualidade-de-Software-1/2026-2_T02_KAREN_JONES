@@ -56,17 +56,17 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,closed,wChrstphr,2.0,2.0,0.0,na faixa,90.0,90.0,06/11,09/11/2026,Concluida em atraso,5.53
 102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,closed,LeticiaSantosss,1.5,1.5,0.0,na faixa,67.5,67.5,06/11,06/11/2026,Concluida no prazo,3.14
-103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,open,eduarda-ogomes,2.0,0.0,,,90.0,0.0,08/11,-,Aberta em atraso,
+103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,closed,eduarda-ogomes,2.0,0.0,,,90.0,0.0,08/11,13/11/2026,Concluida em atraso,9.37
 104,Fase 3,[F3] Visão geral da Fase 03 e rastreabilidade com a Fase 02,open,DaviPierre,2.0,0.0,,,90.0,0.0,08/11,-,Aberta em atraso,
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,open,GabrielSMonteiro,2.0,0.0,,,90.0,0.0,08/11,-,Aberta em atraso,
 106,Fase 3,[GESTAO] Atas de reunião da Fase 3,open,LeticiaSantosss,1.0,0.0,,,45.0,0.0,08/11,-,Aberta em atraso,
 107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,open,GabrielSMonteiro,3.0,0.0,,,135.0,0.0,08/11,-,Aberta em atraso,
 108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (16/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,,,270.0,0.0,16/11,-,Em andamento (no prazo),
-109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,open,GabrielSMonteiro,1.0,0.0,,,45.0,0.0,12/11,-,Em andamento (no prazo),
+109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,open,GabrielSMonteiro,1.0,0.0,,,45.0,0.0,12/11,-,Aberta em atraso,
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,open,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,-,Aberta em atraso,
-111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),open,wChrstphr,5.0,0.0,,,225.0,0.0,12/11,-,Em andamento (no prazo),
-112,Fase 4,[F4] Coleta das métricas de G2 (Confiabilidade),open,luizh-gsoares,6.0,0.0,,,270.0,0.0,12/11,-,Em andamento (no prazo),
-113,Fase 4,[F4] Coleta das métricas de G3 (Flexibilidade),open,eduarda-ogomes,6.0,11.7,95.0,subestimada,270.0,526.5,12/11,-,Em andamento (no prazo),
+111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),open,wChrstphr,5.0,0.0,,,225.0,0.0,12/11,-,Aberta em atraso,
+112,Fase 4,[F4] Coleta das métricas de G2 (Confiabilidade),open,luizh-gsoares,6.0,0.0,,,270.0,0.0,12/11,-,Aberta em atraso,
+113,Fase 4,[F4] Coleta das métricas de G3 (Flexibilidade),closed,eduarda-ogomes,6.0,11.7,95.0,subestimada,270.0,526.5,12/11,13/11/2026,Concluida em atraso,9.37
 114,Fase 4,"[F4] Verificação dos dados brutos e da rastreabilidade dado, métrica",open,DaviPierre,4.0,0.0,,,180.0,0.0,13/11,-,Em andamento (no prazo),
 115,Fase 4,[F4] Análise e respostas GQM de G1 (Manutenibilidade),open,wChrstphr,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
 116,Fase 4,[F4] Análise e respostas GQM de G2 (Confiabilidade),open,luizh-gsoares,3.0,0.0,,,135.0,0.0,15/11,-,Em andamento (no prazo),
