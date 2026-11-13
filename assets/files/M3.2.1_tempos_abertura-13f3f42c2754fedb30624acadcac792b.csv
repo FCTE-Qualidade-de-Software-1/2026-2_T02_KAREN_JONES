@@ -1,0 +1,5 @@
+Cena,Elementos,Rep1_s,Rep2_s,Rep3_s,Rep4_s,Rep5_s,Mediana_s,Observacoes
+cena_100.excalidraw,100,0.05,0.06,0.05,0.06,0.05,0.05,Renderizacao estavel e sem engasgos no Chrome
+cena_1000.excalidraw,1000,0.10,0.11,0.12,0.05,0.92,0.11,H3.2.1 confirmada (mediana 0.11s <= 1.0s)
+cena_5000.excalidraw,5000,1.36,1.26,1.09,1.08,1.15,1.15,Excelente desempenho para 5 mil elementos (mediana 1.15s)
+cena_10000.excalidraw,10000,1.17,1.32,1.52,2.00,1.56,1.52,Abertura estavel de cena extrema (mediana 1.52s)

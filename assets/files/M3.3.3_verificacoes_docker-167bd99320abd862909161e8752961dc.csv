@@ -1,0 +1,5 @@
+verificacao,comando,criterio,resultado_obtido,status
+1. Construcao da imagem,docker build -t excalidraw-avaliacao .,"Codigo 0, imagem presente em docker images",Imagem excalidraw-avaliacao construida com sucesso,Aprovado
+2. Inicializacao do conteiner,docker run -d --name excalidraw-avaliacao-teste -p 3000:80 excalidraw-avaliacao,Conteiner criado e mantido no estado Up,Conteiner 8f77a11ed239 em execucao (Up),Aprovado
+3. Verificacao de saude (healthcheck),"docker inspect --format=""{{json .State.Health.Status}}"" excalidraw-avaliacao-teste","Status exato ""healthy""","""healthy""",Aprovado
+4. Acesso e operacao no editor,Acesso via navegador em http://localhost:3000,Pagina carrega editor completamente e permite desenhar,"HTTP 200 OK via Nginx, canvas disponivel",Aprovado

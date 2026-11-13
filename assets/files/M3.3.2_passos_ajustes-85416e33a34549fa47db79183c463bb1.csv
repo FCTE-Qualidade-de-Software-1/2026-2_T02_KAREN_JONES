@@ -1,0 +1,8 @@
+Via,Passo,Comando_Documentado,Status,Codigo_Saida,Mensagem_Erro,Ajuste_Necessario
+Via 1 (Nativa),Passo 1,git clone https://github.com/excalidraw/excalidraw.git,Sem ajuste,0,Nenhuma,Nenhum ajuste necessário
+Via 1 (Nativa),Passo 2,cd excalidraw,Sem ajuste,0,Nenhuma,Nenhum ajuste necessário
+Via 1 (Nativa),Passo 3,yarn,Sem ajuste,0,Nenhuma,Instalação completa de dependências e hooks do Husky
+Via 1 (Nativa),Passo 4,yarn start,Sem ajuste,0,Nenhuma,Servidor Vite iniciado em 1.09s
+Via 1 (Nativa),Passo 5,Acesso HTTP (http://localhost:3000),Sem ajuste,0,Nenhuma,Página carregada com HTTP 200 OK
+Via 2 (Docker Compose),Passo 6,docker-compose up --build -d,Com ajuste,127,docker-compose: command not found,Substituir pelo comando moderno 'docker compose up --build -d'
+Via 2 (Docker Compose),Passo 7,Acesso HTTP Docker (http://localhost:3000),Sem ajuste,0,Nenhuma,Contêiner saudável e acessível após ajuste do comando
