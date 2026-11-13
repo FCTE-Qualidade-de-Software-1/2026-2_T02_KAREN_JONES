@@ -6,21 +6,19 @@ sidebar_position: 3
 description: Medições quantitativas das três categorias PSM/CID, análise de performance, comparação com as Fases 1 e 2, efeito da mudança do prazo e decisões de gestão da Fase 3.
 ---
 
-import Link from '@docusaurus/Link'
-
 # Relatório de Gestão com Métricas PSM/CID: Fase 3
 
 ## 1. Introdução e Metodologia
 
-Este relatório apresenta o registro das medições, a análise de desempenho do processo, a comparação com as fases anteriores e as decisões de gestão adotadas pela equipe Karen Jones ao longo da Fase 3 do projeto de avaliação de qualidade do software Excalidraw. A Fase 3 concentrou o planejamento detalhado da avaliação, incluindo a especificação do método, os recursos e ambientes computacionais, a preparação da massa de dados, os roteiros de instrução dos avaliadores e o cronograma de execução das coletas em campo [[1, p. 13]](#ref-1).
+Este relatório apresenta o registro das medições, a análise de desempenho do processo, a comparação com as fases anteriores e as decisões de gestão adotadas pela equipe Karen Jones ao longo da Fase 3 do projeto de avaliação de qualidade do software Excalidraw. A Fase 3 concentrou o planejamento detalhado da avaliação, incluindo a especificação do método, os recursos e ambientes computacionais, a preparação da massa de dados, os roteiros de instrução dos avaliadores e o cronograma de execução das coletas em campo.
 
-A coleta dos dados foi realizada de forma automatizada por meio do script `scripts/coleta_psm.py` a partir da API oficial do GitHub, com persistência dos dados brutos em `dados/gestao/raw_github_data.json` e consolidação em arquivos CSV [[2]](#ref-2). As medidas e os conceitos mensuráveis seguem as definições estabelecidas no [Plano de Medição PSM](../plano-medicao-psm.md), em conformidade com as normas ISO/IEC 15939 e ISO/IEC 25040 [[3, p. 4]](#ref-3).
+A coleta dos dados foi realizada de forma automatizada por meio do script `scripts/coleta_psm.py` a partir da API oficial do GitHub, com persistência dos dados brutos em `dados/gestao/raw_github_data.json` e consolidação em arquivos CSV. As medidas e os conceitos mensuráveis seguem as definições estabelecidas no [Plano de Medição PSM](../plano-medicao-psm.md), em conformidade com as normas ISO/IEC 15939 e ISO/IEC 25040.
 
 ---
 
 ## 2. Measurement Constructs da Fase 3
 
-A equipe aplicou os três measurement constructs formais definidos no [Plano de Medição PSM](../plano-medicao-psm.md), estruturados conforme o modelo normativo da ISO/IEC 15939 [[3, p. 19]](#ref-3):
+A equipe aplicou os três modelos de medição (*measurement constructs*) definidos no [Plano de Medição PSM](../plano-medicao-psm.md), estruturados segundo a norma ISO/IEC 15939:
 
 ### 2.1. Construct 1: Calendário e Progresso
 
@@ -73,7 +71,7 @@ A equipe aplicou os três measurement constructs formais definidos no [Plano de 
 
 ### 3.1. Calendário e Progresso
 
-A milestone da Fase 3 cobriu o intervalo de 26/10/2026 a 08/11/2026, totalizando 13 dias de execução após a extensão aprovada pela equipe. Os dados apurados registram 23 issues vinculadas à fase, sendo 18 concluídas até a data de apuração deste relatório e 5 ainda em andamento ou em fase de finalização documental.
+A milestone da Fase 3 cobriu o intervalo de 26/10/2026 a 08/11/2026, totalizando 13 dias de execução após a extensão aprovada pela equipe. Os dados apurados registram 23 issues vinculadas à fase, sendo 18 concluídas até a data de apuração deste relatório e 5 ainda em andamento ou em fase de finalização da documentação.
 
 <p className="tabela-titulo">Tabela 4: Ritmo de fechamento das issues na Fase 3</p>
 
@@ -106,7 +104,7 @@ O orçamento previsto para a Fase 3 foi de 48,0 horas estimadas (equivalente a R
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-Embora o esforço total agregado tenha ficado próximo do total orçado (-2,1%), a avaliação individual das estimativas por issue revelou distorções expressivas nas tarefas técnicas:
+Embora o esforço total agregado tenha ficado próximo do total orçado (-2,1%), a avaliação individual das estimativas por issue revelou variações expressivas nas tarefas técnicas:
 
 <p className="tabela-titulo">Tabela 6: Acerto das estimativas por issue na Fase 3</p>
 
@@ -121,7 +119,7 @@ Embora o esforço total agregado tenha ficado próximo do total orçado (-2,1%),
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-O desvio médio de +38,2% ocorreu porque as tarefas que demandaram preparação de ambientes e testes operacionais consumiram significativamente mais tempo que o previsto. Dentre as tarefas subestimadas destacam-se a issue #96 (recursos e ambiente de avaliação), que consumiu 7,0h reais frente a 2,0h estimadas (+250%), a issue #99 (instruções de G2), com 6,0h reais para 3,0h estimadas (+100%), a issue #97 (massa de dados), com 5,0h reais para 3,0h estimadas (+66,7%), e a issue #94 (estudo do processo), com 3,0h reais para 2,0h estimadas (+50%).
+O desvio médio de +38,2% ocorreu porque as tarefas de preparação de ambientes e testes operacionais demandaram mais tempo do que o previsto. Dentre as tarefas subestimadas destacam-se a issue #96 (recursos e ambiente de avaliação), que consumiu 7,0h reais frente a 2,0h estimadas (+250%), a issue #99 (instruções de G2), com 6,0h reais para 3,0h estimadas (+100%), a issue #97 (massa de dados), com 5,0h reais para 3,0h estimadas (+66,7%), e a issue #94 (estudo do processo), com 3,0h reais para 2,0h estimadas (+50%).
 
 A distribuição do esforço real entre os integrantes na Fase 3 apresentou o seguinte quadro:
 
@@ -145,7 +143,7 @@ Dois desvios em relação à faixa de equilíbrio (8% a 30%) foram registrados:
 
 ### 3.3. Desempenho dos Processos
 
-O processo de governança de código e documentação foi avaliado a partir dos 17 pull requests vinculados à Fase 3:
+O fluxo de revisão de código e documentação foi avaliado a partir dos 17 pull requests vinculados à Fase 3:
 
 <p className="tabela-titulo">Tabela 8: Indicadores de processo e revisão por pares na Fase 3</p>
 
@@ -201,7 +199,7 @@ A análise comparativa entre as três primeiras etapas do projeto permite identi
 | Custo financeiro real equivalente | R$ 2.655,45 | R$ 2.911,50 | R$ 2.115,00 | Custos alinhados com o orçamento |
 | Desvio médio de estimativa por issue | -0,8% | -8,2% | +38,2% | Subestimação acentuada na Fase 3 |
 | Issues com estimativa na faixa ideal | 50,0% | 61,5% | 46,7% | Redução da acurácia por tarefa |
-| Taxa de aprovação formal de PRs | 47,1% | 48,1% | 70,6% | Evolução consistente da governança |
+| Taxa de aprovação formal de PRs | 47,1% | 48,1% | 70,6% | Aumento da taxa de aprovação formal |
 | PRs com espera superior a 24 horas | 1 PR | 1 PR | 4 PRs | Aumento de retenção de PRs complexos |
 | Lead Time médio das tarefas | 1,21 dias | 3,74 dias | 5,97 dias | Ciclo de vida das tarefas mais longo |
 
@@ -220,7 +218,7 @@ A data limite original da milestone da Fase 3 era 03/11/2026. Durante a execuç�
 
 ### 5.1. Motivação da Extensão
 
-A prorrogação foi motivada pela complexidade imprevista na concepção dos instrumentos operacionais de avaliação:
+A prorrogação foi motivada por dificuldades imprevistas na preparação prática dos instrumentos de avaliação:
 - A configuração do contêiner Docker oficial e a validação do monorepo local para viabilizar as métricas de Confiabilidade (G2) e Manutenibilidade (G1).
 - A geração da massa de dados sintética de desenhos no formato JSON do Excalidraw, necessária para submeter o aplicativo a diferentes cargas de elementos gráficos.
 - A elaboração de roteiros passo a passo com critérios de pontuação claros, reduzindo a ambiguidade para os avaliadores que executarão a Fase 4.
@@ -232,13 +230,13 @@ Apesar da ampliação de 5 dias no prazo global da milestone, a taxa de aderênc
 2. Sete issues fecharam na janela final da nova milestone (dias 07/11 e 08/11), demonstrando que o prazo estendido absorveu o trabalho, mas postergou o esforço para o novo limite.
 3. Nove issues ultrapassaram a data limite estendida de 08/11, fechando entre 09/11 e 13/11, incluindo artefatos de apoio como a automação do script PSM (#135) e a homologação do teste piloto (#103).
 
-A extensão de prazo foi necessária para garantir a consistência técnica dos roteiros de teste, evitando que a equipe iniciasse a coleta em campo com instrumentos falhos. Contudo, a medição evidenciou que estender a milestone sem antecipar os nós críticos de dependência reproduziu a concentração de entregas na véspera.
+A extensão de prazo foi necessária para garantir a consistência técnica dos roteiros de teste, evitando que a equipe iniciasse a coleta em campo com instrumentos falhos. Contudo, a medição evidenciou que estender a milestone sem antecipar os gargalos de dependência reproduziu a concentração de entregas na véspera.
 
 ---
 
 ## 6. Interpretação e Decisões de Gestão
 
-Em continuidade às decisões D1 a D6 registradas na Linha de Base da Entrega 1 [[2]](#ref-2), a equipe formalizou quatro novas decisões de gestão (D7 a D10) a partir dos resultados apurados na Fase 3:
+Em continuidade às decisões D1 a D6 registradas na Linha de Base da Entrega 1 no [Registro de Medições e Decisões](../registro-medicoes.md), a equipe formalizou quatro novas decisões de gestão (D7 a D10) a partir dos resultados apurados na Fase 3:
 
 ### Decisão D7: Rebalanceamento de Carga Individual para a Fase 4
 - **Diagnóstico:** Luiz Henrique ficou com 0,0% de esforço registrado na Fase 3, descumprindo o piso de 8% da equipe, enquanto Letícia atingiu 30,85%, ultrapassando o teto de 30%. Davi e Gabriel concentraram cerca de 27% e 21% da fase.
@@ -279,13 +277,10 @@ Os dados quantitativos e indicadores apresentados neste relatório são respalda
 
 ## Referências
 
-> <Link id="ref-1">1.</Link> FCTE. **AULA 09 QSW1 PSM resumo**. Universidade de Brasília, Faculdade de Ciências e Tecnologias em Engenharia, 2026.
->
-> <Link id="ref-2">2.</Link> CARD, David et al. **Practical Software and Systems Measurement (PSM): A Foundation for Objective Project Management**. Version 4.0d. PSM Support Center, 2021. Disponível em: [https://psmsc.com](https://psmsc.com). Acesso em: 18 out. 2026.
->
-> <Link id="ref-3">3.</Link> ISO/IEC. **ISO/IEC 15939: Systems and software engineering: Measurement process**. International Organization for Standardization, Genebra, 2017.
->
-> <Link id="ref-4">4.</Link> ISO/IEC. **ISO/IEC 25040: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process**. International Organization for Standardization, Genebra, 2011.
+1. FCTE. **AULA 09 QSW1 PSM resumo**. Universidade de Brasília, Faculdade de Ciências e Tecnologias em Engenharia, 2026.
+2. CARD, David et al. **Practical Software and Systems Measurement (PSM): A Foundation for Objective Project Management**. Version 4.0d. PSM Support Center, 2021.
+3. ISO/IEC. **ISO/IEC 15939: Systems and software engineering: Measurement process**. International Organization for Standardization, Genebra, 2017.
+4. ISO/IEC. **ISO/IEC 25040: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process**. International Organization for Standardization, Genebra, 2011.
 
 ---
 
