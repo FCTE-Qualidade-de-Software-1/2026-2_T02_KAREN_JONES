@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-13T16:49:05.065997+00:00",
+  "coletado_em": "2026-11-14T09:38:09.774119+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -7517,7 +7517,7 @@
       },
       "comments": 0,
       "created_at": "2026-11-03T15:17:14Z",
-      "updated_at": "2026-11-13T16:48:00Z",
+      "updated_at": "2026-11-13T16:52:12Z",
       "closed_at": "2026-11-13T16:48:00Z",
       "assignee": {
         "login": "eduarda-ogomes",
@@ -7555,7 +7555,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nPartir dos valores calculados na #114, em `dados/fase-04/consolidados/`, e, seguindo o plano de análise da Fase 3, comparar cada valor com a faixa do [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md), confrontar com a hipótese da métrica e responder a cada questão e ao objetivo G3, com gráficos e tabelas. Publicar em `docs/fase-04/resultados-g3-flexibilidade.md`.\n\n### Critérios da rubrica atendidos\n\n- F4-C3: Análise e respostas GQM (2026-2 Trabalho final completo v1.pdf, p. 8)\n\n### Referências\n\n- Comparar com critérios: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 20\n- Interpretação: analisar as medidas e responder às questões e ao objetivo: AULA 08 QSW1 GQM.pdf, p. 54\n- Organizar as métricas por questão e objetivo, com gráficos e tabelas: AULA 08 QSW1 GQM.pdf, p. 56\n- Plano de Análise, hipóteses comparadas com os valores reais: AULA 08 QSW1 GQM.pdf, p. 46\n- Critério F4-C3: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [ ] Valor e nível de pontuação de todas as métricas de G3\n- [ ] Hipótese de cada métrica confirmada ou refutada\n- [ ] Cada questão de G3 respondida explicitamente, e o objetivo G3 também\n- [ ] Gráfico ou tabela por questão, com legenda e texto alternativo\n- [ ] Link de cada valor para o dado bruto e o consolidado\n- [ ] Página publicada com histórico de versões\n\n### Prazo\n\n15/11\n\n### Depende de\n\n#114 (Verificação dos dados brutos)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nPartir dos valores calculados na #114, em `dados/fase-04/consolidados/`, e, seguindo o plano de análise da Fase 3, comparar cada valor com a faixa do [Níveis de pontuação e critérios de julgamento](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/pontuacao-julgamento.md), confrontar com a hipótese da métrica e responder a cada questão e ao objetivo G3, com gráficos e tabelas. Publicar em `docs/fase-04/resultados-g3-flexibilidade.md`.\n\n### Critérios da rubrica atendidos\n\n- F4-C3: Análise e respostas GQM (2026-2 Trabalho final completo v1.pdf, p. 8)\n\n### Referências\n\n- Comparar com critérios: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 20\n- Interpretação: analisar as medidas e responder às questões e ao objetivo: AULA 08 QSW1 GQM.pdf, p. 54\n- Organizar as métricas por questão e objetivo, com gráficos e tabelas: AULA 08 QSW1 GQM.pdf, p. 56\n- Plano de Análise, hipóteses comparadas com os valores reais: AULA 08 QSW1 GQM.pdf, p. 46\n- Critério F4-C3: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [x] Valor e nível de pontuação de todas as métricas de G3\n- [x] Hipótese de cada métrica confirmada ou refutada\n- [x] Cada questão de G3 respondida explicitamente, e o objetivo G3 também\n- [x] Gráfico ou tabela por questão, com legenda e texto alternativo\n- [ ] Link de cada valor para o dado bruto e o consolidado\n- [x] Página publicada com histórico de versões\n\n### Prazo\n\n15/11\n\n### Depende de\n\n#114 (Verificação dos dados brutos)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n@eduarda-ogomes: 3h\n\n### Revisor\n\n_No response_\n",
       "closed_by": {
         "login": "eduarda-ogomes",
         "id": 162516978,
@@ -9464,7 +9464,7 @@
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:39Z",
-      "updated_at": "2026-11-05T19:04:51Z",
+      "updated_at": "2026-11-13T20:37:41Z",
       "closed_at": null,
       "assignee": {
         "login": "GabrielSMonteiro",
@@ -9502,7 +9502,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nRegistrar as medições PSM/CID da Fase 3 usando as medidas do novo plano de medição (#134), a análise de performance em relação ao planejado, a comparação com as Fases 1 e 2, a interpretação e as decisões de gestão. Usar o script de coleta das métricas PSM/CID. Publicar em `docs/gestao/relatorios/relatorio-psm-fase-3.md`.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Premissa 3, registrar medições, interpretação e decisões: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Três categorias exigidas: 2026-2 Trabalho final completo v1.pdf, p. 2, seção 2\n- Tipos de análise: performance: AULA 09 QSW1 PSM resumo.pdf, p. 13\n- Template measurement construct: AULA 09 QSW1 PSM resumo.pdf, p. 19\n\n### Critério de pronto\n\n- [ ] Medidas do novo plano de medição aplicadas\n- [ ] Medições das três categorias registradas\n- [ ] Comparação com as Fases 1 e 2\n- [ ] Efeito da mudança do prazo da milestone (de 03/11 para 08/11) analisado\n- [ ] Interpretação e decisões de gestão registradas\n\n### Prazo\n\n08/11\n\n### Depende de\n\n#134 (Plano de medição PSM), #135 (Script PSM)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nRegistrar as medições PSM/CID da Fase 3 usando as medidas do novo plano de medição (#134), a análise de performance em relação ao planejado, a comparação com as Fases 1 e 2, a interpretação e as decisões de gestão. Usar o script de coleta das métricas PSM/CID. Publicar em `docs/gestao/relatorios/relatorio-psm-fase-3.md`.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Premissa 3, registrar medições, interpretação e decisões: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Três categorias exigidas: 2026-2 Trabalho final completo v1.pdf, p. 2, seção 2\n- Tipos de análise: performance: AULA 09 QSW1 PSM resumo.pdf, p. 13\n- Template measurement construct: AULA 09 QSW1 PSM resumo.pdf, p. 19\n\n### Critério de pronto\n\n- [x] Medidas do novo plano de medição aplicadas\n- [x] Medições das três categorias registradas\n- [x] Comparação com as Fases 1 e 2\n- [x] Efeito da mudança do prazo da milestone (de 03/11 para 08/11) analisado\n- [x] Interpretação e decisões de gestão registradas\n\n### Prazo\n\n08/11\n\n### Depende de\n\n#134 (Plano de medição PSM), #135 (Script PSM)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n5\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/107/reactions",
@@ -27051,6 +27051,88 @@
     }
   ],
   "commits": [
+    {
+      "sha": "53fccd94186a4b77a65cb1af72c03668d39d81b0",
+      "node_id": "C_kwDOUJBYZdoAKDUzZmNjZDk0MTg2YTRiNzdhNjVjYjFhZjcyYzAzNjY4ZDM5ZDgxYjA",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-13T16:49:06Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-13T16:49:06Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "5f5734488b158db1fecf04c1e16b19566b828154",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/5f5734488b158db1fecf04c1e16b19566b828154"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/53fccd94186a4b77a65cb1af72c03668d39d81b0",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/53fccd94186a4b77a65cb1af72c03668d39d81b0",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/53fccd94186a4b77a65cb1af72c03668d39d81b0",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/53fccd94186a4b77a65cb1af72c03668d39d81b0/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "f4d6afcf387814c31add0c8048647163bb541261",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f4d6afcf387814c31add0c8048647163bb541261",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f4d6afcf387814c31add0c8048647163bb541261"
+        }
+      ]
+    },
     {
       "sha": "f4d6afcf387814c31add0c8048647163bb541261",
       "node_id": "C_kwDOUJBYZdoAKGY0ZDZhZmNmMzg3ODE0YzMxYWRkMGM4MDQ4NjQ3MTYzYmI1NDEyNjE",

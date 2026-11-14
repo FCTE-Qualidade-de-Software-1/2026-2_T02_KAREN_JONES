@@ -48,8 +48,8 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
-| Fase 3 | 23 / 18 | 78.3% | 8.7% | 48.0 | 47.0 | R$ 2160.00 | R$ 2115.00 | 138.2% | 5.97 |
-| Fase 4 | 24 / 2 | 8.3% | 75.0% | 80.0 | 16.2 | R$ 3600.00 | R$ 729.00 | 108.0% | 9.71 |
+| Fase 3 | 23 / 18 | 78.3% | 8.7% | 48.0 | 52.0 | R$ 2160.00 | R$ 2340.00 | 140.5% | 5.97 |
+| Fase 4 | 24 / 2 | 8.3% | 66.7% | 80.0 | 19.2 | R$ 3600.00 | R$ 864.00 | 106.7% | 9.71 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 25 | 64.5 | 33.9 | R$ 1525.50 | 132 | 20 | **18.14%** |
-| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 34.0 | R$ 1530.00 | 11 | 5 | **18.19%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 38.5 | R$ 1732.50 | 55 | 12 | **20.60%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 24.4 | R$ 1098.45 | 14 | 9 | **13.06%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 15.4 | R$ 693.00 | 24 | 9 | **8.24%** |
-| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 40.7 | R$ 1831.50 | 64 | 13 | **21.78%** |
+| Christopher | `@wChrstphr` | 25 | 64.5 | 33.9 | R$ 1525.50 | 132 | 20 | **17.39%** |
+| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 34.0 | R$ 1530.00 | 11 | 5 | **17.44%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 43.5 | R$ 1957.50 | 55 | 12 | **22.32%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 24.4 | R$ 1098.45 | 14 | 9 | **12.52%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 15.4 | R$ 693.00 | 24 | 9 | **7.90%** |
+| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 43.7 | R$ 1966.50 | 64 | 13 | **22.42%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 25 & 64.5h & 33.9h & 132/20 & 18.14\% \\
-Davi Pierre & 13 & 37.0h & 34.0h & 11/5 & 18.19\% \\
-Gabriel Monteiro & 16 & 44.5h & 38.5h & 55/12 & 20.60\% \\
-Leticia de Carvalho & 16 & 30.5h & 24.4h & 14/9 & 13.06\% \\
-Luiz Henrique Soares & 15 & 35.0h & 15.4h & 24/9 & 8.24\% \\
-Maria Eduarda & 19 & 46.5h & 40.7h & 64/13 & 21.78\% \\
+Christopher & 25 & 64.5h & 33.9h & 132/20 & 17.39\% \\
+Davi Pierre & 13 & 37.0h & 34.0h & 11/5 & 17.44\% \\
+Gabriel Monteiro & 16 & 44.5h & 43.5h & 55/12 & 22.32\% \\
+Leticia de Carvalho & 16 & 30.5h & 24.4h & 14/9 & 12.52\% \\
+Luiz Henrique Soares & 15 & 35.0h & 15.4h & 24/9 & 7.90\% \\
+Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 22.42\% \\
 \hline
-\textbf{Total} & \textbf{104} & \textbf{258.0h} & \textbf{186.9h} & \textbf{300/68} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{104} & \textbf{258.0h} & \textbf{194.9h} & \textbf{300/68} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -110,8 +110,8 @@ Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio en
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 18 | -0.8 | 0.0 | 50.0 | 4 | 5 |
 | Fase 2 | 26 | -8.2 | -11.65 | 61.5 | 3 | 7 |
-| Fase 3 | 15 | 38.2 | 0.0 | 46.7 | 7 | 1 |
-| Fase 4 | 3 | 8.0 | 0.0 | 33.3 | 1 | 1 |
+| Fase 3 | 16 | 40.5 | 16.65 | 43.8 | 8 | 1 |
+| Fase 4 | 4 | 6.7 | 0.0 | 50.0 | 1 | 1 |
 
 ### Tempo de espera dos PRs por revisao
 
@@ -259,9 +259,9 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | Tipo | Issue/PR | Mensagem |
 | :--- | :---: | :---: |
+| PR travado | #163 | PR aberto ha 31h sem revisao (limite do plano: 24h) |
 | fechada sem horas reais | #27 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA' fechada sem horas reais registradas |
 | fechada sem horas reais | #74 | '[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1' fechada sem horas reais registradas |
 | fechada sem horas reais | #103 | '[F3] Piloto das instruções e revisão do plano de avaliação' fechada sem horas reais registradas |
-| fechada sem horas reais | #117 | '[F4] Análise e respostas GQM de G3 (Flexibilidade)' fechada sem horas reais registradas |
 | fechada sem horas reais | #138 | '[GESTAO] Sincronizar o prazo das issues com o GitHub Projects' fechada sem horas reais registradas |
 | fechada sem horas reais | #140 | '[GESTAO] Documentar a priorização e as datas do GitHub Project' fechada sem horas reais registradas |
