@@ -1,0 +1,151 @@
+numero,titulo,autor,merged_at,escopo,automacao_excluida,elegivel,eh_fix,motivo
+12347,feat(packages/excalidraw): replace the export functions with `exportScene`,dwelle,2026-10-18T18:24:17Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12270,"fix(editor): frame membership, clipping and cut fixes",dwelle,2026-10-12T12:33:19Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12269,feat(app): restyle Excalidraw+ upgrade button as stacked trial CTA,maielo,2026-10-12T11:28:00Z,app,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12264,feat(editor): `w` to wrap/unwrap selection,dwelle,2026-10-12T09:35:45Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12262,fix(editor): resizing text by a corner follows the cursor on the axis it grows most,dwelle,2026-10-11T14:48:35Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12260,"feat(editor): crop editor modifiers as resizing, and double-click a handle to uncrop",dwelle,2026-10-11T14:37:37Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12258,"refactor(editor): app.selection, and the rest of the selection tool out of App",dwelle,2026-10-10T21:34:00Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12246,feat(editor): autoplay Google Drive videos when the embed is activated,dwelle,2026-10-08T09:11:53Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12244,fix(editor): pan once and keep editing on a wheel-button drag over the text editor,dwelle,2026-10-07T18:31:58Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12237,feat(editor): alt-click to cycle the selection through overlapping elements,dwelle,2026-10-06T15:31:23Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12219,feat(editor): alt-drag the text being edited to duplicate it,dwelle,2026-10-01T14:39:40Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12210,fix(editor): reach text containers below transparent ones,dwelle,2026-09-30T21:26:43Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12204,feat(app): label E+ banner Upgrade / Sign in,dwelle,2026-09-29T15:44:41Z,app,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12197,refactor(editor): move the clipboard out of App into AppClipboard (app.clipboard),dwelle,2026-09-28T21:51:36Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12195,refactor(editor): move text editing out of App into AppText (app.text),dwelle,2026-09-28T20:18:14Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12192,feat(editor): wrap text at 800 and keep it clear of the side panels,dwelle,2026-09-28T19:06:42Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12189,feat(editor): auto increment numbers/lists on duplicate,dwelle,2026-10-01T13:08:33Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12188,fix(editor): follow-ups to zen mode polish & delayed tooltips,dwelle,2026-09-28T08:14:30Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12187,feat(editor): add showHints to command palette,neihyud,2026-09-28T09:17:06Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12186,fix(app): correct typo in Mermaid input placeholder,Renan-MouraN,2026-09-28T22:18:03Z,app,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12184,fix(packages/excalidraw): setViewport stops following a collaborator,dwelle,2026-09-27T17:47:29Z,packages/excalidraw,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12183,perf(editor): avoid rebuilding id sets on every drag,dwelle,2026-09-27T16:45:39Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12180,perf(editor): avoid rebuilding id sets on every resize,nicooga,2026-09-27T09:01:38Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12178,fix(editor): embed YouTube live links,kwy404,2026-09-27T07:49:25Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12177,feat(editor): file drop overlay & shift-to-merge imported scene,dwelle,2026-09-26T22:18:02Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12175,fix(editor): pan the canvas to follow the caret instead of shifting the UI,dwelle,2026-09-26T21:00:28Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12174,fix(editor): reduce cursor hint cooldown to 30s,dwelle,2026-09-26T09:19:01Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12173,feat(editor): better library search + display names,dwelle,2026-09-26T09:03:47Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12165,"feat(editor): zen mode polish, hide toolbar hints preference & delayed canvas tooltips",dwelle,2026-09-24T22:43:00Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12163,feat(editor): compact styles panel,dwelle,2026-09-24T20:18:53Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12160,feat(editor): customizable font picker top picks,dwelle,2026-09-24T13:06:18Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12156,fix(editor): Binding follow-ups to #10753,dwelle,2026-09-24T11:06:56Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12143,fix(editor): Tab convert bound arrow update,mtolmacs,2026-09-22T08:26:19Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12125,refactor(editor): split out duplication logic into App.duplicate.ts,dwelle,2026-09-19T09:53:32Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12124,"feat(packages/excalidraw): support onDuplicate replacements, vetoes and lookups",dwelle,2026-09-19T08:00:47Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12110,feat(editor): rightclick to pan canvas,dwelle,2026-09-16T17:50:39Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12100,feat(packages/excalidraw): add renderOverrides to allow overriding of element rendering,dwelle,2026-09-15T12:12:54Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12099,"feat(editor): wheel-button zoom and ""zoom with scroll wheel"" preference",dwelle,2026-09-14T14:17:42Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12082,"feat(editor): text tool edits what you click, shows what a click will do, drags out free text in shapes",dwelle,2026-09-26T10:38:24Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12064,feat(editor): sticky notes,dwelle,2026-09-10T14:45:38Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12063,"feat(editor): snap element bitmaps, scroll and grid to whole device pixels",dwelle,2026-09-09T12:40:00Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12060,feat(editor): track element creation timestamps,dwelle,2026-09-08T13:26:14Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12053,fix(editor): dismiss dropdown menus on outside clicks,dwelle,2026-09-07T15:28:20Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+12050,perf(editor): stop inverting the interactive canvas via CSS filter in dark mode,dwelle,2026-09-07T09:52:23Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+12033,fix(editor): detect line height from the migrated font props on restore,mahirhir,2026-10-14T16:29:26Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11974,feat(packages/excalidraw): support rendering into another document,zsviczian,2026-08-26T13:33:05Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11960,feat(app): d2c streaming,dwelle,2026-08-25T14:08:37Z,app,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11942,chore(editor): Update translations from Crowdin,excalibot,2026-09-07T20:32:06Z,editor,sim,nao,nao,Atualizacao automatica de traducoes (excalibot / Crowdin)
+11922,fix(editor): handle the save-as shortcut while editing text,MITRAKER,2026-09-26T22:38:04Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11908,docs(repo): remove obsolete CodeSandbox contribution workflow,dineshyadav03,2026-09-27T20:53:18Z,repo,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11893,"fix(app): localize hardcoded ""Sign up""/""Sign in"" menu labels",vishrk,2026-08-16T13:20:16Z,app,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11872,feat(editor): customizing color top picks,dwelle,2026-08-11T13:59:36Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11862,fix(editor): respect boxSelectionMode ('contain' vs 'overlap') in lasso tool,JayeshRajbhar,2026-08-10T11:09:44Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11859,feat(editor): eyedropper fixes and improvements,dwelle,2026-08-08T21:17:27Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11849,feat(editor): bucketfill cursor + eyedropper support,dwelle,2026-08-07T12:07:54Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11848,fix(app): remove ViewportStatusFrame debug,dwelle,2026-08-07T10:53:21Z,app,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11841,fix(editor): viewportportStatusFrame UI fixes,dwelle,2026-08-06T20:01:49Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11840,fix(packages/excalidraw): viewportStatusFrame label offset on mobile,dwelle,2026-08-05T18:00:19Z,packages/excalidraw,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11839,feat(packages/excalidraw): add `props.className` ,dwelle,2026-08-05T18:10:18Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11838,feat(packages/excalidraw): support ViewportStatusFrame label onClick,dwelle,2026-08-05T16:28:52Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11835,feat(packages/excalidraw): do not dedupe collaborators,dwelle,2026-08-05T12:20:18Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11834,fix(editor): do not flicker bbox when drag-creating line midpoint,dwelle,2026-08-05T08:52:10Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11827,fix(editor): normalize container + bound text order on restore,dwelle,2026-08-04T21:32:15Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11826,fix(editor): include custom tools in pointer capture,dwelle,2026-08-04T17:39:21Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11822,feat(editor): disable arrowhead toggle via dblclick,dwelle,2026-08-04T14:25:00Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11819,feat(packages/excalidraw): ViewportStatusFrame & factor out user-follow state,dwelle,2026-08-04T22:01:20Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11815,chore(editor): Update translations from Crowdin,excalibot,2026-08-16T15:30:02Z,editor,sim,nao,nao,Atualizacao automatica de traducoes (excalibot / Crowdin)
+11814,fix(editor): prevent crash when editing arrow with bound text,nihaarsirikonda,2026-08-04T14:31:37Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11813,chore(editor): Update translations from Crowdin,excalibot,2026-08-03T19:48:06Z,editor,sim,nao,nao,Atualizacao automatica de traducoes (excalibot / Crowdin)
+11803,fix(editor): initialize selectedLinearElement after pasting arrows,yanrin13,2026-08-04T21:38:15Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11799,feat(editor): bucket fill,dwelle,2026-08-04T14:25:17Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11789,fix(editor): prevent esc from exiting fullscreen on macos when modal open,abobich675,2026-07-30T07:47:42Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11782,feat(editor): Error message for invalid hex color input,cyforkk,2026-07-30T11:30:20Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11777,feat(editor): bind text to hovered arrow endpoint,dwelle,2026-07-28T16:12:34Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11773,fix(editor): increase autoresize handle threshold until it hides,dwelle,2026-07-27T21:04:03Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11752,feat(editor): `autoshape` text + line improvements,dwelle,2026-07-24T14:10:01Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11733,fix(editor): Dangling deleted bound text,mtolmacs,2026-07-22T20:37:36Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11722,fix(editor): prevent eyedropper preview from overflowing viewport ,Sam721166,2026-07-21T22:07:15Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11681,fix(editor): make Help button tooltip consistent with toolbar,Sam721166,2026-07-17T22:17:39Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11680,fix(editor): show scroll-back-to-content button on mobile,dwelle,2026-07-17T14:22:44Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11678,fix(editor): fix AnimationController scheduling race conds,dwelle,2026-07-16T18:52:06Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11677,feat(packages/excalidraw):  add `props.ui.enabled.zoom/scrollBackToContent`,dwelle,2026-07-16T17:50:19Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11674,ci(repo): skip docs & example deployments in CI,dwelle,2026-07-16T14:36:12Z,repo,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11671,fix(editor): improve UX around locked animations,dwelle,2026-07-16T11:30:13Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11665,feat(packages/excalidraw): add `props.activeTool` and related,dwelle,2026-07-15T09:46:09Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11662,fix(editor): make embeddable ignore higher-z-index non-framelike elements,dwelle,2026-07-14T16:18:22Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11660,fix(editor): should not select deleted bound text,mtolmacs,2026-07-14T11:19:20Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11649,feat(editor): toolbar / active tool rewrites,dwelle,2026-07-12T22:30:09Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11637,fix(editor): arrow label rendering fixes and perf improvements,dwelle,2026-07-08T21:13:02Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11636,chore(editor): streamline getSelectedElementsByGroup,cTangonan123,2026-07-13T17:38:52Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11633,fix(editor): Fix binding.test.ts type mismatch,mtolmacs,2026-07-08T18:20:02Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11632,chore(editor): Refactor Actions for clarity,mtolmacs,2026-07-11T15:22:36Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11631,fix(editor): Diamond hit test shortcut,mtolmacs,2026-07-22T20:39:16Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11630,fix(editor): Hit cache soundness,mtolmacs,2026-07-13T15:53:02Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11615,feat(editor): dblclick to toggle arrowhead,dwelle,2026-07-07T12:22:22Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11608,feat(editor): show cursor hint when switching arrow types,dwelle,2026-07-07T10:55:33Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11607,fix(editor): Very small bindables can blow up fixedPoint -> position ratio,mtolmacs,2026-07-08T10:20:31Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11605,feat(packages/excalidraw): interaction and UI control,dwelle,2026-07-14T14:50:53Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11604,fix(editor): optimize UI rendering during animation,dwelle,2026-07-05T16:44:26Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11600,fix(editor): revert viewport animation back to 500ms,dwelle,2026-07-05T07:45:59Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11571,fix(editor): keep eraser shortcut consistent with tool switch rules,anviik,2026-06-29T08:04:08Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11562,fix(editor): improve scroll animation interpolation,dwelle,2026-06-26T07:56:12Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11556,fix(editor): prevent freeze from extremely large line elements,minato32,2026-06-25T18:06:02Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11554,feat(packages/excalidraw): viewport locking,mtolmacs,2026-07-03T20:57:48Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11553,feat(editor): AnimationController for scrollToContent,mtolmacs,2026-06-26T07:35:33Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11552,fix(editor): Modern TS require imports from rootDir,mtolmacs,2026-06-24T10:52:57Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11551,fix(editor): tweak freedraw settings and tablet UI/UX,dwelle,2026-06-24T14:59:10Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11550,fix(editor): Freedraw hit test precision,mtolmacs,2026-09-22T20:02:13Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11532,fix(editor): avoid overlap of flowchart children,minato32,2026-07-13T14:52:20Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11507,feat(editor): constant-width freedraw + reduced stroke width,mtolmacs,2026-06-24T07:16:23Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11505,test(repo): less noisy test output,dwelle,2026-06-15T16:19:21Z,repo,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11492,fix(editor): Arrows with text are rendered blurry in PNG export with larger scale,zsviczian,2026-06-22T16:22:27Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11490,fix(editor): update `element.frameId` on frame change,dwelle,2026-06-13T20:39:04Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11485,fix(editor): elements duplicated when moving frame children,dwelle,2026-06-13T18:32:45Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11480,fix(editor): keep multi-line bound text and container centered during alt resize,cTangonan123,2026-07-09T11:02:20Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11473,fix(editor): recalculate roundness type when switching shape types,augustocbx,2026-06-11T17:17:16Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11470,fix(editor): narrow `NonDeleted` type to `isDeleted: false`,augustocbx,2026-07-07T14:22:31Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11458,fix(editor): ensure canvas is cleared when background color is invalid to prevent ghosting,Danyccsf,2026-06-26T20:59:17Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11453,feat(packages/excalidraw): consolidate theme state handling,dwelle,2026-06-06T16:18:07Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11445,fix(editor): Double history,mtolmacs,2026-06-15T16:19:09Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11441,fix(editor): cardinal direction arrows with label are invisible in exported SVG,krishhna24,2026-06-07T17:19:44Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11429,feat(packages/excalidraw): export applyDarkModeFilter and simplify,dwelle,2026-06-01T13:43:46Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11419,test(editor): add unit tests for BinaryHeap,krishhna24,2026-06-10T15:12:43Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11398,ci(docker): fix docker dep bundling and pin remaining actions,dwelle,2026-05-25T12:39:21Z,docker,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11377,fix(editor): excessive battery usage,mtolmacs,2026-05-24T14:12:17Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11332,feat(packages/excalidraw): expose image size config and optimize resizing,dwelle,2026-05-14T20:45:04Z,packages/excalidraw,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11321,fix(editor): handle invalid points on restore,dwelle,2026-05-12T16:44:50Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11292,ci(repo): enforce scopes,dwelle,2026-05-06T17:54:30Z,repo,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11290,fix(app): resolve app-jotai import path in LocalData,alechulkin,2026-05-06T21:03:10Z,app,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11286,fix(editor): prevent duplicate lasso toolbar item,praneethhere,2026-05-06T21:10:51Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11275,fix(packages/excalidraw): consolidate bounds checks,mtolmacs,2026-06-04T17:27:26Z,packages/excalidraw,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11269,fix: group defragmenting,dwelle,2026-05-02T13:50:59Z,sem_escopo,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11264,chore: Remove startBoundElement from state,mtolmacs,2026-05-02T14:36:42Z,sem_escopo,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11258,fix: Fractional index validation,mtolmacs,2026-05-04T09:37:18Z,sem_escopo,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11257,fix(editor): fix target element index when creating/adding elements to frames,dwelle,2026-05-05T19:35:32Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11251,feat(editor): scale video embeddables based on zoom,dwelle,2026-04-28T19:49:41Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11250,fix: frame selection and membership,dwelle,2026-04-28T16:23:10Z,sem_escopo,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11241,fix: Speculative fixes for arrow invariant failures,mtolmacs,2026-05-06T14:39:45Z,sem_escopo,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11240,fix: LocalStorage is empty object on node@25 which breaks tests,mtolmacs,2026-05-06T15:42:36Z,sem_escopo,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11235,fix(editor): remove extremely large arrows on restore,mtolmacs,2026-04-25T10:03:51Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11234,fix: Group selection,mtolmacs,2026-05-06T13:27:34Z,sem_escopo,nao,sim,sim,PR elegivel com titulo iniciado por fix
+11208,chore(docker): bump node,dwelle,2026-04-20T20:07:00Z,docker,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11181,feat(editor): tweak sidebar promo style,dwelle,2026-07-09T09:41:13Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+11179,fix(editor): enabled ctrl+y redo shortcut on linux and mac,sznmelvin,2026-05-06T20:59:29Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+10972,fix(editor): Dragged arrow endpoint ignore grid and angle locks,mtolmacs,2026-07-10T09:19:45Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+10964,fix(editor): Lost focus point on transition to inside-inside,mtolmacs,2026-07-22T11:03:46Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+10947,feat(editor): allow for dragging bound text along an arrow's path,cTangonan123,2026-09-03T15:21:13Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
+10753,fix(editor): Binding hit test based on distance,mtolmacs,2026-09-23T20:10:02Z,editor,nao,sim,sim,PR elegivel com titulo iniciado por fix
+10731,chore(editor): Update translations from Crowdin,excalibot,2026-07-07T20:37:30Z,editor,sim,nao,nao,Atualizacao automatica de traducoes (excalibot / Crowdin)
+9313,feat(editor): draw to shape (auto-detection),mbkrafft,2026-07-23T16:42:43Z,editor,nao,sim,nao,PR elegivel cujo titulo nao inicia com fix
