@@ -61,44 +61,51 @@ O software analisado neste trabalho é o \textbf{Excalidraw}\footnote{Repositór
 
 O objetivo desta avaliação é diagnosticar a qualidade do produto e identificar pontos de melhoria, gerando insumos para os mantenedores e para os desenvolvedores que integram sua biblioteca. A Equipe Karen Jones conduz a avaliação como grupo independente de QA, seguindo o processo da ISO/IEC 25040 \cite{iso25040} e priorizando três características do modelo ISO/IEC 25010:2023 \cite{iso25010}: \textbf{Manutenibilidade}, \textbf{Confiabilidade} e \textbf{Flexibilidade}. A documentação complementar está no repositório do grupo: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES}.
 
-A Seção~\ref{sec:referencial} apresenta o referencial e o método, a Seção~\ref{sec:fase1} a Fase~1, a Seção~\ref{sec:fase2} a Fase~2 e a Seção~\ref{sec:conclusao} as considerações parciais. As Fases~3 e~4 fazem parte da entrega seguinte.
+A Seção~\ref{sec:referencial} apresenta o referencial teórico. A Seção~\ref{sec:metodologia} descreve a metodologia de desenvolvimento do projeto, contemplando as Fases~1 a~3 da avaliação. A Seção~\ref{sec:resultados} apresenta os resultados da Fase~4 e a Seção~\ref{sec:conclusao} traz a conclusão do trabalho.
 
 % ================================================================
-\section{Referencial Teórico e Método}
+\section{Referencial Teórico}
 \label{sec:referencial}
 
 \subsection{Série de Normas ISO/IEC 25000 (SQuaRE)}
 \label{subsec:normas}
 
-A série SQuaRE \cite{iso25000} organiza as normas de requisitos e de avaliação da qualidade de produto de software. Este trabalho usa três de suas divisões. A ISO/IEC 25010:2023 \cite{iso25010} traz o modelo de qualidade de produto, com características e subcaracterísticas. A ISO/IEC 25023 \cite{iso25023}, divisão de medição, define medidas de qualidade de produto. A ISO/IEC 25040 \cite{iso25040}, que organiza a avaliação em quatro fases: estabelecer os requisitos da avaliação, especificar a avaliação, projetar a avaliação e executá-la, com a emissão do diagnóstico e das recomendações de melhoria.
+A série SQuaRE \cite{iso25000} organiza as normas de requisitos e de avaliação da qualidade de produto de software. Este trabalho usa três de suas divisões: a ISO/IEC 25010:2023 \cite{iso25010}, que define o modelo de qualidade de produto com características e subcaracterísticas, a ISO/IEC 25023 \cite{iso25023}, divisão de medição que define medidas de qualidade de produto, e a ISO/IEC 25040 \cite{iso25040}, que estrutura o processo de avaliação em quatro fases sequenciais.
 
 \subsection{Goal-Question-Metric (GQM)}
 \label{subsec:gqm}
 
 O paradigma \textbf{GQM}, proposto por Basili, Caldiera e Rombach \cite{basili1994gqm}, estrutura a medição em três níveis: os \textbf{objetivos} conceituais, formulados sob a perspectiva das partes interessadas, as \textbf{questões} operacionais, que caracterizam o alcance de cada objetivo e carregam hipóteses prévias, e as \textbf{métricas}, que respondem às questões de forma quantitativa. A vantagem do método é garantir que cada métrica coletada responda a uma necessidade real, mantendo a rastreabilidade entre os requisitos de qualidade e os dados medidos.
 
-\subsection{Construção dos Artefatos da Avaliação}
+% ================================================================
+\section{Metodologia de Desenvolvimento do Projeto}
+\label{sec:metodologia}
 \label{subsec:metodo}
 
-Na Fase~1, a priorização das características seguiu duas etapas. Primeiro, o interesse de cada grupo de interessados por característica foi classificado como Principal (peso 2) ou Secundário (peso 1), e a soma, normalizada de 1 a 5, resultou na nota de ênfase. Depois, a ênfase foi multiplicada pela estimativa de risco técnico de o Excalidraw apresentar falhas ou dívidas naquela área, formando a matriz impacto $\times$ risco. As características selecionadas foram interpretadas no contexto do produto e desdobradas, por subcaracterística, em requisitos de avaliação, que são as perguntas que a avaliação deve responder.
+A metodologia deste trabalho estrutura-se no processo de avaliação da qualidade de produto em quatro fases preconizado pela norma ISO/IEC 25040 \cite{iso25040} (Figura~\ref{fig:metodologia}).
 
-Na Fase~2, cada característica originou um objetivo GQM, com foco e ponto de vista herdados da priorização e dos interessados da Fase~1. As \textit{abstraction sheets} de cada objetivo registraram os fatores de qualidade, as hipóteses e os fatores de variação, e deram origem a uma questão por subcaracterística e às métricas com fórmula e procedimento de coleta, tendo o catálogo de medidas da ISO/IEC 25023 \cite{iso25023} como referência. Por fim, antes de qualquer coleta, definiram-se os níveis de pontuação das métricas, a regra de agregação e os critérios de julgamento (Seção~\ref{subsec:pontuacao-julgamento}).
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.70\textwidth]{figura-metodologia}
+\caption{Processo de avaliação da qualidade de produto segundo a ISO/IEC 25040 (Fonte: Equipe Karen Jones).}
+\label{fig:metodologia}
+\end{figure}
 
-% ================================================================
-\section{Fase 1: Requisitos de Avaliação}
+O fluxo metodológico organiza-se nas quatro fases sequenciais da avaliação do software. Na Fase~1 (Requisitos de Avaliação), definem-se o propósito da avaliação, os interessados no produto, a priorização das características por impacto e risco, os objetos do repositório sob escopo e os requisitos técnicos de qualidade. Na Fase~2 (Especificação da Avaliação), formulam-se os objetivos GQM, as questões investigativas, as métricas de produto com hipóteses prévias, os níveis de pontuação ordinal e os critérios de julgamento. Na Fase~3 (Projeto da Avaliação), definem-se os procedimentos operacionais de medição, os instrumentos automatizados e os ambientes de ensaio para o software. Na Fase~4 (Execução da Avaliação), realizam-se a coleta empírica dos dados, o cômputo das métricas, a agregação das pontuações e a emissão do diagnóstico com recomendações de melhoria técnica para o produto.
+
+\subsection{Fase 1: Requisitos de Avaliação}
 \label{sec:fase1}
+\label{subsec:fase1}
 
-A Fase 1 da ISO/IEC 25040 delimita, antes de qualquer coleta, o propósito do estudo, o produto, os interessados e os atributos de qualidade que justificam a medição \cite{iso25040}.
+A Fase 1 delimita, antes de qualquer coleta, o propósito do estudo, o produto, os interessados e os atributos de qualidade que justificam a medição \cite{iso25040}.
 
-\subsection{Propósito da Avaliação}
+\subsubsection{Propósito e Requisitante da Avaliação}
 
 O propósito definido pela equipe é \textbf{identificar pontos de melhoria no produto Excalidraw}. Para isso, a avaliação diagnostica as características priorizadas por inspeção do código e dos dados do repositório, registra as boas práticas já consolidadas no projeto, mapeia pontos de fragilidade e de acoplamento e sugere ações corretivas, entre elas um protótipo de interface de alta fidelidade, reunindo os resultados em um relatório técnico rastreável. Ficam fora do escopo comparações com ferramentas concorrentes, auditorias para certificação comercial e a medição das outras seis características da ISO/IEC 25010:2023.
 
-\subsection{Requisitante da Avaliação}
-
 A \textbf{Equipe Karen Jones} é a própria requisitante e atua como \textbf{equipe de QA independente}, sem vínculo institucional ou comercial com os mantenedores do Excalidraw. O objetivo é estritamente formativo e acadêmico, com fim de identificar pontos de melhoria no produto.
 
-\subsection{Identificação do Produto}
+\subsubsection{Identificação do Produto}
 
 A Tabela~\ref{tab:produto} resume os dados de identificação do software avaliado e a linha de base adotada.
 
@@ -122,7 +129,7 @@ Commit de referência & \texttt{e1b7aac} (branch \texttt{master}, 18/10/2026) \\
 \end{tabular}
 \end{table}
 
-\subsection{Descrição do Produto e Arquitetura}
+\subsubsection{Descrição do Produto e Arquitetura}
 
 O Excalidraw pode ser classificado, no enquadramento de Pressman \cite{pressman2021}, como uma \textbf{aplicação web (WebApp)} de produtividade e colaboração, que atua também como componente de prateleira, ou \textit{Commercial Off-The-Shelf} (COTS), quando sua biblioteca é integrada em soluções externas. O projeto combina uma WebApp e \textit{Progressive Web App} (PWA) para criação de esboços, com colaboração em tempo real e funcionamento offline, e uma biblioteca React reutilizável (\texttt{@excalidraw/excalidraw}) distribuída via npm.
 
@@ -135,7 +142,7 @@ O repositório adota a estrutura de \textbf{monorepo}. Os principais módulos s�
 \label{fig:arquitetura}
 \end{figure}
 
-\subsection{Partes Interessadas}
+\subsubsection{Partes Interessadas}
 \label{subsec:interessados}
 
 A norma ISO/IEC 25040 orienta o mapeamento dos grupos que utilizam ou são afetados pelo software \cite{iso25040}. Mapeamos sete grupos de interessados com prioridades bem delineadas em relação às características investigadas (Tabela~\ref{tab:interessados}).
@@ -161,7 +168,7 @@ Equipes de qualidade            & Principal & Principal  & Secundário \\
 \end{tabular}
 \end{table}
 
-\subsection{Priorização das Características}
+\subsubsection{Priorização das Características}
 \label{subsec:priorizacao}
 
 A Tabela~\ref{tab:priorizacao} apresenta o resultado da matriz impacto $\times$ risco, construída como descrito na Seção~\ref{subsec:metodo}.
@@ -189,7 +196,7 @@ Adequação Funcional & 2 & 2 & 4 & Não selecionada \\
 
 Embora Confiabilidade tenha alcançado o maior índice absoluto no cruzamento ($16$), definimos Manutenibilidade como nossa prioridade central ($P1$). O motivo reside na abrangência: Manutenibilidade afeta diretamente quatro dos sete grupos de interessados e é a dimensão com maior riqueza de artefatos acessíveis no repositório. Desempenho ficou fora do escopo principal pelo prazo reduzido da disciplina, embora o comportamento com muitos elementos no canvas acabe sendo avaliado na subcaracterística de Escalabilidade.
 
-\subsection{Modelo de Qualidade Adotado}
+\subsubsection{Modelo de Qualidade Adotado}
 
 A partir da priorização, consolidamos o modelo de qualidade em três características e 13 subcaracterísticas (Figura~\ref{fig:modelo}). A Tabela~\ref{tab:subcaracteristicas} interpreta cada subcaracterística no contexto do Excalidraw e indica o que é viável medir sem acesso aos servidores de produção. Disponibilidade, Tolerância a falhas e Recuperabilidade envolvem comportamento em execução, mas são investigadas sobretudo pelo código (manifesto PWA, Service Worker, tratamento de exceções e persistência local) e por ensaios no navegador.
 
@@ -233,7 +240,7 @@ Substituibilidade & Exportação em \texttt{.excalidraw}, \textit{Portable Netwo
 \label{fig:modelo}
 \end{figure}
 
-\subsection{Escopo e Objetos de Avaliação}
+\subsubsection{Escopo e Objetos de Avaliação}
 
 Para orientar a coleta, definimos seis objetos de avaliação concretos que compõem o repositório (Tabela~\ref{tab:objetos}).
 
@@ -259,7 +266,7 @@ O6 & Histórico público de commits, issues e PRs & Manutenib. e Confiab. \\
 
 \textbf{Limites de escopo:} ficam excluídos servidores em nuvem, testes intrusivos de segurança cibernética, testes manuais em dezenas de aparelhos físicos, código interno de dependências terceirizadas. Todas as conclusões são estritamente válidas para o commit fixado (\texttt{e1b7aac}) e têm caráter primordialmente estático.
 
-\subsection{Requisitos de Avaliação}
+\subsubsection{Requisitos de Avaliação}
 \label{subsec:requisitos}
 
 Os requisitos representam as perguntas técnicas que o produto deve permitir responder. A Tabela~\ref{tab:requisitos} os organiza por subcaracterística e indica a questão GQM da Fase~2 que responde a cada um.
@@ -317,20 +324,21 @@ RQ-FLEX-12 & Os formatos exportados são abertos e permitem reimportação? & Su
 \end{tabular}
 \end{table}
 
-\subsection{Relação com os Objetivos de Desenvolvimento Sustentável (ODS)}
+\subsubsection{Relação com os Objetivos de Desenvolvimento Sustentável (ODS)}
 
 Relacionamos o Excalidraw a três ODS da Agenda 2030 \cite{onu2015ods}, cada um com a meta e o indicador global \cite{unsd2025indicadores} a que o software se aplica. No \textbf{ODS 4}, a meta 4.4 prevê aumentar o número de jovens e adultos com habilidades técnicas relevantes, acompanhada pelo indicador 4.4.1 (proporção de jovens e adultos com habilidades em tecnologias de informação e comunicação, TIC). O editor é gratuito, roda no navegador sem cadastro e é usado em aulas para desenhar algoritmos e arquiteturas. No \textbf{ODS 9}, a meta 9.c busca ampliar o acesso às TIC, medida pelo indicador 9.c.1 (população coberta por rede móvel). O funcionamento offline como PWA mantém o editor útil onde essa cobertura é instável, o que liga o ODS à Disponibilidade avaliada no G2. No \textbf{ODS 10}, a meta 10.2 pede a inclusão social e econômica de todos, independentemente da condição econômica, e a licença MIT e a exportação em formatos abertos eliminam custo de licença e aprisionamento tecnológico. Como o indicador 10.2.1 mede renda, a contribuição do software para essa meta é indireta.
 
 % ================================================================
-\section{Fase 2: Especificação da Avaliação}
+\subsection{Fase 2: Especificação da Avaliação}
 \label{sec:fase2}
+\label{subsec:fase2}
 
 A Fase~2 da ISO/IEC 25040 \cite{iso25040} converte os 36 requisitos da Fase~1 em medição reprodutível por meio do GQM \cite{basili1994gqm}. Cada característica originou um objetivo cujo foco e ponto de vista derivam da Fase~1. O objetivo G1 herda a prioridade P1 (ênfase~4, impacto~$\times$~risco~=~12) e adota o ponto de vista dos mantenedores e contribuidores, grupos para os quais Manutenibilidade é prioridade principal. O objetivo G2 corresponde a P2 (ênfase~4, maior índice da seleção com~16) e adota o ponto de vista dos usuários finais. O objetivo G3 deriva de P3 (ênfase~3, índice~9) e adota a perspectiva dos integradores e das equipes de implantação, perfis pouco contemplados pelas demais características. Os três objetivos desdobram-se em 13 questões, uma por subcaracterística, ligadas aos requisitos pela Tabela~\ref{tab:requisitos}. As métricas históricas usam a janela de 18/04/2026 a 18/10/2026, e os ensaios funcionais, uma cena de referência em ambiente de navegador fixo. Cada métrica tem uma hipótese, formulada antes da coleta, com uma única afirmação e uma regra de confirmação. O limite da regra coincide com uma fronteira entre dois níveis de pontuação da métrica (Seção~\ref{subsec:pontuacao-julgamento}) ou vem da própria definição da métrica, e as hipóteses comparativas não usam limite numérico. Nas tabelas a seguir, cada questão é seguida das suas métricas, e os nomes das métricas constam nas figuras.
 
-\subsection{Objetivo G1: Manutenibilidade}
+\subsubsection{Objetivo G1: Manutenibilidade}
 \label{subsec:g1-manutenibilidade}
 
-Analisar o código-fonte do Excalidraw, seus testes, a documentação para desenvolvedores e o histórico público de alterações, com o propósito de entender, com respeito à Manutenibilidade, do ponto de vista dos mantenedores e contribuidores, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}) avaliado por equipe independente. A Tabela~\ref{tab:g1-metricas} e a Figura~\ref{fig:gqm-g1} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Manutenibilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-manutenibilidade.md}}.
+Analisar o código-fonte, testes e histórico de alterações do Excalidraw, com o propósito de avaliar a Manutenibilidade, do ponto de vista dos mantenedores e contribuidores, no contexto do commit de referência \commitref. A Tabela~\ref{tab:g1-metricas} e a Figura~\ref{fig:gqm-g1} detalham o desdobramento do objetivo em questões e métricas.
 
 \begin{table}[!ht]
 \centering
@@ -378,10 +386,10 @@ M1.5.3 & (Contribuições verificadas / contribuições integradas com evidênci
 \label{fig:gqm-g1}
 \end{figure}
 
-\subsection{Objetivo G2: Confiabilidade}
+\subsubsection{Objetivo G2: Confiabilidade}
 \label{subsec:g2-confiabilidade}
 
-Analisar o editor, a aplicação web, os mecanismos de colaboração e de salvamento no navegador e o histórico público de defeitos, com o propósito de entender, com respeito à Confiabilidade, do ponto de vista dos usuários finais, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}), sem acesso aos servidores de produção. A Tabela~\ref{tab:g2-metricas} e a Figura~\ref{fig:gqm-g2} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Confiabilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-confiabilidade.md}}.
+Analisar o editor, rotinas de salvamento local e histórico de defeitos do Excalidraw, com o propósito de avaliar a Confiabilidade, do ponto de vista dos usuários finais, no contexto do commit de referência \commitref. A Tabela~\ref{tab:g2-metricas} e a Figura~\ref{fig:gqm-g2} apresentam suas questões e métricas.
 
 \begin{table}[!ht]
 \centering
@@ -423,10 +431,10 @@ M2.4.3 & (Ações reversíveis / 10) $\times 100$ & Desfazer e refazer cobrirão
 \label{fig:gqm-g2}
 \end{figure}
 
-\subsection{Objetivo G3: Flexibilidade}
+\subsubsection{Objetivo G3: Flexibilidade}
 \label{subsec:g3-flexibilidade}
 
-Analisar a biblioteca \texttt{@excalidraw/excalidraw} e a aplicação web, incluindo a interface pública, as instruções de instalação e os formatos de exportação, com o propósito de entender, com respeito à Flexibilidade, do ponto de vista dos desenvolvedores que integram a biblioteca e das equipes de implantação e operação, no contexto do código público de 18/10/2026 (commit \texttt{e1b7aac}). A Tabela~\ref{tab:g3-metricas} e a Figura~\ref{fig:gqm-g3} detalham o objetivo, e os procedimentos de coleta estão no documento GQM de Flexibilidade\footnote{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/docs/fase-02/gqm-flexibilidade.md}}.
+Analisar a biblioteca e a aplicação web do Excalidraw, considerando interface pública, instalação e exportação, com o propósito de avaliar a Flexibilidade, do ponto de vista de integradores e equipes de operação, no contexto do commit de referência \commitref. A Tabela~\ref{tab:g3-metricas} e a Figura~\ref{fig:gqm-g3} detalham suas questões e métricas.
 
 \begin{table}[!ht]
 \centering
@@ -470,10 +478,10 @@ M3.4.3 & (Campos documentados / campos encontrados) $\times 100$ & O formato \te
 \label{fig:gqm-g3}
 \end{figure}
 
-\subsection{Níveis de Pontuação e Critérios de Julgamento}
+\subsubsection{Níveis de Pontuação e Critérios de Julgamento}
 \label{subsec:pontuacao-julgamento}
 
-A especificação da avaliação na norma ISO/IEC 25040 exige que sejam estabelecidos níveis de pontuação para as métricas e critérios para o julgamento dos resultados antes da coleta prática dos dados. Para transformar os dados brutos em diagnósticos qualitativos comparáveis, a equipe adotou a escala ordinal de cinco níveis concebida no modelo de avaliação de manutenibilidade de Heitlager, Kuipers e Visser \cite{heitlager2007}. A escala distribui os resultados nas graduações Muito Ruim (símbolo \texttt{--}, equivalente a 1 ponto), Ruim (símbolo \texttt{-}, equivalente a 2 pontos), Regular (símbolo \texttt{o}, equivalente a 3 pontos), Bom (símbolo \texttt{+}, equivalente a 4 pontos) e Excelente (símbolo \texttt{++}, equivalente a 5 pontos). A atribuição de valores numéricos de 1 a 5 viabiliza a realização de operações de agregação matemática entre os indicadores de cada subcaracterística.
+Para transformar os dados brutos em diagnósticos qualitativos comparáveis, a equipe adotou a escala ordinal de cinco níveis concebida no modelo de avaliação de manutenibilidade de Heitlager, Kuipers e Visser \cite{heitlager2007}. A escala distribui os resultados nas graduações Muito Ruim (símbolo \texttt{--}, equivalente a 1 ponto), Ruim (símbolo \texttt{-}, equivalente a 2 pontos), Regular (símbolo \texttt{o}, equivalente a 3 pontos), Bom (símbolo \texttt{+}, equivalente a 4 pontos) e Excelente (símbolo \texttt{++}, equivalente a 5 pontos). A atribuição de valores numéricos de 1 a 5 viabiliza a realização de operações de agregação matemática entre os indicadores de cada subcaracterística.
 
 As faixas de cada nível foram fixadas antes da coleta, para que não pudessem ser ajustadas a favor ou contra o produto, e vêm de quatro origens. A primeira são as faixas publicadas por Heitlager, Kuipers e Visser para complexidade ciclomática e cobertura de linhas, aplicadas sem modificação. A segunda são as faixas de cobertura do mesmo modelo, usadas nas métricas de proporção desejável, em que valores maiores são melhores. A terceira são as faixas de duplicação de código, usadas nas métricas de proporção indesejável, em que valores menores são melhores. A quarta são referências de engenharia e usabilidade, como os limiares de tempo de resposta de Nielsen \cite{nielsen1993} e as metas de FPS do modelo \textit{Response, Animation, Idle, Load} (RAIL), ou parâmetros calibrados pela equipe. A Tabela~\ref{tab:escala_pontuacao} consolida a escala e as faixas das métricas de proporção.
 
@@ -496,15 +504,26 @@ Muito Ruim & \texttt{--} & 1 & 0\% a 20\%   & Acima de 20\% & Fragilidade críti
 \end{tabular}
 \end{table}
 
-A consolidação das medições segue um processo de agregação em duas etapas por média aritmética ponderada igualmente, conforme recomendado no modelo do \textit{Software Improvement Group} (SIG) e na norma ISO/IEC 25040. Na primeira etapa, a pontuação de cada questão investigativa do GQM, que corresponde a uma subcaracterística da ISO/IEC 25010, é calculada como a média aritmética simples dos pontos obtidos nas suas métricas constituintes. Na segunda etapa, a pontuação da característica de alto nível (Manutenibilidade, Confiabilidade ou Flexibilidade) é obtida a partir da média aritmética dos valores de suas respectivas questões, preservando as casas decimais antes do arredondamento para o nível ordinal mais próximo. Como convenção conservadora estabelecida pela equipe, em caso de fração exatamente igual a 0,5 o arredondamento é direcionado para baixo, garantindo que nenhum resultado receba classificação superior sem justificativa inequívoca.
+A consolidação das medições segue um processo de agregação em duas etapas por média aritmética ponderada igualmente. Na primeira etapa, a pontuação de cada questão investigativa do GQM, que corresponde a uma subcaracterística da ISO/IEC 25010, é calculada como a média aritmética simples dos pontos obtidos nas suas métricas constituintes. Na segunda etapa, a pontuação da característica de alto nível (Manutenibilidade, Confiabilidade ou Flexibilidade) é obtida a partir da média aritmética dos valores de suas respectivas questões, preservando as casas decimais antes do arredondamento para o nível ordinal mais próximo. Como convenção conservadora estabelecida pela equipe, em caso de fração exatamente igual a 0,5 o arredondamento é direcionado para baixo, garantindo que nenhum resultado receba classificação superior sem justificativa inequívoca.
 
-O julgamento conclusivo sobre a adequação da qualidade de produto de software apoia-se em critérios inspirados nos esquemas formais de certificação de código da TÜV Informationstechnik (TÜViT) \cite{baggen2010}, que exigem conformidade mínima tanto na média global da característica quanto nas subcaracterísticas isoladas. Para cada uma das três características priorizadas, o resultado final da avaliação é classificado em três veredictos mutuamente excludentes. O veredicto Atende é emitido quando a característica obtém nível médio Regular (\texttt{o}) ou superior (pontuação igual ou superior a 3,0) e nenhuma de suas questões ou subcaracterísticas obtém classificação Muito Ruim (\texttt{--}). O veredicto Não Atende é atribuído quando a pontuação média da característica resulta nos níveis Ruim (\texttt{-}) ou Muito Ruim (\texttt{--}), ou quando ao menos uma de suas subcaracterísticas atinge o nível Muito Ruim (\texttt{--}), indicando uma vulnerabilidade localizada inaceitável para o produto. Por fim, o veredicto Inconclusivo é reservado para cenários excepcionais em que mais da metade das métricas planejadas para a característica não puderem ser medidas durante a execução. Todas as métricas que registrarem níveis Ruim ou Muito Ruim na Fase 4 serão formalmente catalogadas no relatório técnico como pontos de melhoria, fornecendo subsídios diretos para a elaboração de intervenções corretivas e protótipos de aperfeiçoamento.
+O julgamento conclusivo sobre a adequação da qualidade de produto de software apoia-se em critérios inspirados nos esquemas formais de certificação de código da TÜV Informationstechnik (TÜViT) \cite{baggen2010}, que exigem conformidade mínima tanto na média global da característica quanto nas subcaracterísticas isoladas. Para cada uma das três características priorizadas, o resultado final da avaliação é classificado em três veredictos mutuamente excludentes. O veredicto Atende é emitido quando a característica obtém nível médio Regular (\texttt{o}) ou superior (pontuação igual ou superior a 3,0) e nenhuma de suas questões ou subcaracterísticas obtém classificação Muito Ruim (\texttt{--}). O veredicto Não Atende é atribuído quando a pontuação média da característica resulta nos níveis Ruim (\texttt{-}) ou Muito Ruim (\texttt{--}), ou quando ao menos uma de suas subcaracterísticas atinge o nível Muito Ruim (\texttt{--}), indicando uma vulnerabilidade localizada inaceitável para o produto. Por fim, o veredicto Inconclusivo é reservado para cenários excepcionais em que mais da metade das métricas planejadas para a característica não pudem ser medidas durante a execução. Todas as métricas que registrarem níveis Ruim ou Muito Ruim na Fase 4 serão formalmente catalogadas no relatório técnico como pontos de melhoria, fornecendo subsídios diretos para a elaboração de intervenções corretivas e protótipos de aperfeiçoamento.
+
+\subsection{Fase 3: Projeto da Avaliação}
+\label{subsec:fase3}
+
+O projeto da avaliação estabelece o planejamento operacional e os instrumentos para a coleta reprodutível das 36 métricas especificadas. Os métodos foram organizados em sete classes de obtenção: análise estática de código com ferramentas automatizadas (como cloc, ESLint e Madge), mineração do histórico de desenvolvimento por consultas à API do GitHub, inspeção documental de diretórios e arquivos de configuração, testes automatizados de unidade e integração com Vitest, ensaios manuais roteirizados no navegador para avaliação de comportamento interativo, medição de desempenho instrumentada e experimentação em contêiner Docker isolado. Para cada métrica, elaborou-se uma instrução de trabalho detalhando o ambiente de ensaio, parâmetros de entrada e formato dos dados primários, garantindo a independência e a auditabilidade da coleta.
 
 % ================================================================
-\section{Considerações Parciais}
+\section{Resultados}
+\label{sec:resultados}
+
+Esta seção destina-se à consolidação e à análise crítica dos dados obtidos na Fase~4 (Execução da Avaliação). Nela serão registrados os valores quantitativos das 36 métricas, as pontuações na escala ordinal de cinco níveis e as agregações por subcaracterística e característica. O confronto entre os dados empíricos e as hipóteses prévias evidenciará a confirmação ou refutação dos comportamentos esperados, subsidiando a aplicação dos critérios de julgamento da TÜViT para emissão dos veredictos finais de Atende, Não Atende ou Inconclusivo em Manutenibilidade, Confiabilidade e Flexibilidade. A seção reunirá também o diagnóstico das fragilidades observadas e as propostas de melhoria, integrando as especificações do protótipo de interface de alta fidelidade.
+
+% ================================================================
+\section{Conclusão}
 \label{sec:conclusao}
 
-Esta entrega cobre as Fases~1 e~2 da ISO/IEC 25040 para o Excalidraw: a priorização de Manutenibilidade, Confiabilidade e Flexibilidade resultou em 13 subcaracterísticas e 36 requisitos de avaliação, desdobrados em três objetivos GQM, 13 questões, 36 métricas com uma hipótese cada e níveis de pontuação e critérios de julgamento definidos antes da coleta. Os próximos passos são projetar e executar as medições (Fases~3 e~4), confrontar os dados com os critérios estabelecidos e propor intervenções de melhoria, acompanhadas de um protótipo de alta fidelidade.
+Este estudo estruturou a avaliação da qualidade de produto do Excalidraw segundo as normas ISO/IEC 25040 e ISO/IEC 25010:2023 e o paradigma GQM. Ao longo das Fases~1, 2 e~3, a equipe delimitou 36 requisitos técnicos orientados pelas prioridades dos interessados, formulou três objetivos conceituais desdobrados em 13 questões e 36 métricas com hipóteses objetivas, e projetou procedimentos reprodutíveis de análise estática, testes automatizados e ensaios empíricos. A execução na Fase~4 permitirá diagnosticar a conformidade do software no commit de referência \commitref, orientando ações corretivas e a elaboração de protótipo de alta fidelidade para os pontos críticos identificados.
 
 \bibliographystyle{sbc}
 \bibliography{bibliography}
@@ -512,11 +531,11 @@ Esta entrega cobre as Fases~1 e~2 da ISO/IEC 25040 para o Excalidraw: a prioriza
 \clearpage
 \appendix
 \section{Tabela de Contribuição dos Membros da Equipe}
-Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes para a entrega do projeto. O percentual de esforço individual foi calculado pela razão entre as horas reais dedicadas por cada integrante e o total de 114,31\,h registradas nas \textit{issues} das \textit{milestones} das Fases~1 e~2, aplicando o rateio individualizado para tarefas com atuação conjunta.
+Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes no projeto. O percentual de esforço individual foi calculado pela razão entre as horas reais dedicadas por cada integrante e o total de 197,9\,h apuradas nas \textit{issues} de desenvolvimento, aplicando o rateio individualizado para tarefas com atuação conjunta.
 
 \begin{table}[!ht]
 \centering
-\caption{Tabela de contribuição individual da equipe (Entrega 1)}
+\caption{Tabela de contribuição individual da equipe}
 \label{tab:contribuicao}
 \vspace{2pt}
 \footnotesize
@@ -525,14 +544,14 @@ Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da discipl
 \toprule
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \midrule
-Christopher          & 13 & 25.0h & 21.0h & 87/15 & 18.37\% \\
-Davi Pierre          & 6  & 20.0h & 21.0h & 5/2   & 18.37\% \\
-Gabriel Monteiro     & 8  & 27.5h & 28.5h & 37/6  & 24.93\% \\
-Letícia de Carvalho  & 7  & 12.0h & 9.9h  & 6/6   & 8.67\%  \\
-Luiz Henrique Soares & 7  & 12.0h & 12.4h & 21/8  & 10.85\% \\
-Maria Eduarda        & 8  & 19.5h & 21.5h & 31/10 & 18.81\% \\
+Christopher          & 25 & 64.5h & 33.9h & 132/20 & 17.13\% \\
+Davi Pierre          & 13 & 37.0h & 37.0h & 12/6   & 18.70\% \\
+Gabriel Monteiro     & 16 & 44.5h & 43.5h & 56/12  & 21.98\% \\
+Letícia de Carvalho  & 16 & 30.5h & 24.4h & 14/9   & 12.33\% \\
+Luiz Henrique Soares & 15 & 35.0h & 15.4h & 24/9   & 7.78\%  \\
+Maria Eduarda        & 19 & 46.5h & 43.7h & 64/13  & 22.08\% \\
 \midrule
-\textbf{Total}       & \textbf{49} & \textbf{116.0h} & \textbf{114.3h} & \textbf{187/47} & \textbf{100.00\%} \\
+\textbf{Total}       & \textbf{104} & \textbf{258.0h} & \textbf{197.9h} & \textbf{302/69} & \textbf{100.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -540,6 +559,6 @@ Maria Eduarda        & 8  & 19.5h & 21.5h & 31/10 & 18.81\% \\
 \section{Declaração de Uso de Inteligência Artificial}
 \label{sec:declaracao_ia}
 
-A equipe utilizou IA generativa como apoio, com revisão humana antes de cada integração. O Claude Code foi usado no rascunho das \textit{abstraction sheets}, questões e fichas GQM. O Antigravity, com Gemini 3.8 e Claude Sonnet 5.5, apoiou o script de coleta das métricas de gestão, a estruturação de seções do artigo e a formatação em LaTeX. O GitHub Copilot apoiou a edição das páginas do GitPages, do workflow de compilação e de trechos do artigo, e o Grammarly, a revisão ortográfica. Os integrantes conferiram citações, páginas e dados com as fontes e o repositório, e o registro por PR está no repositório.
+A equipe utilizou IA generativa como apoio, com revisão humana antes de cada integração. O Claude Code foi usado no rascunho das \textit{abstraction sheets}, questões e fichas GQM. O Antigravity, com Gemini 3.8 e Claude Sonnet 5.5, apoiou a estruturação de seções do artigo e a formatação em LaTeX. O GitHub Copilot apoiou a edição das páginas do GitPages, do workflow de compilação e de trechos do artigo, e o Grammarly, a revisão ortográfica. Os integrantes conferiram citações, páginas e dados com as fontes e o repositório, e o registro por PR está no repositório.
 
 \end{document}
