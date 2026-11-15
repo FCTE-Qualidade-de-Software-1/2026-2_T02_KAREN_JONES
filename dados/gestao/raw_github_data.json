@@ -1,7 +1,79 @@
 {
-  "coletado_em": "2026-11-15T18:17:18.789825+00:00",
+  "coletado_em": "2026-11-15T21:47:12.117252+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
+    {
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170",
+      "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
+      "labels_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170/labels{/name}",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170/comments",
+      "events_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170/events",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/170",
+      "id": 6409716360,
+      "node_id": "PR_kwDOUJBYZc8AAAABPYkacw",
+      "number": 170,
+      "title": "docs(fase-04): coleta das metricas de confiabilidade G2 (#112)",
+      "user": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [],
+      "state": "open",
+      "locked": false,
+      "assignees": [],
+      "milestone": null,
+      "comments": 0,
+      "created_at": "2026-11-15T21:26:11Z",
+      "updated_at": "2026-11-15T21:43:47Z",
+      "closed_at": null,
+      "assignee": null,
+      "author_association": "COLLABORATOR",
+      "issue_field_values": [],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pulls/170",
+        "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/170",
+        "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/170.diff",
+        "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/170.patch",
+        "merged_at": null
+      },
+      "body": "## Resumo\r\n\r\nColeta das métricas de **Confiabilidade (G2)** referente à issue #112, organizada em `dados/fase-04/brutos/` por questão (`Q2.1-ausencia-de-falhas`, `Q2.2-disponibilidade`, `Q2.3-tolerancia-a-falhas`, `Q2.4-recuperabilidade`).\r\n\r\n### Métricas executadas (9 de 10)\r\n\r\n| Métrica | Resultado | Faixa | Observação |\r\n| :--- | :--- | :---: | :--- |\r\n| **M2.1.1** | `75 / 146` (`51,37%`) | `o` | `150` PRs na janela; `4` excluídos (`excalibot` / Crowdin) |\r\n| **M2.1.2** | Mediana `7,255602` dias | `+` | `20 / 75` PRs `fix` com relato vinculado (`26,67%`) |\r\n| **M2.1.3** | `65 / 146` (`44,52%`) | `-` | `65` com aprovação `APPROVED` válida de terceiro; `81` sem |\r\n| **M2.2.1** | `10 / 10` (`100%`) | `++` | Service Worker `sw.js` ativo em `127.0.0.1:3001` |\r\n| **M2.2.2** | `3` externos, `0` indispensáveis | `+` | Confirma H2.2.2; captura em `M2.2.2_abertura.har` |\r\n| **M2.3.1** | `7 / 9` (`77,78%`) | `o` | Falharam `invalido_05` (sem mensagem) e `invalido_06` (sem mensagem + quebra ao inserir elementos) |\r\n| **M2.3.2** | `5 / 5` (`100%`, 3 repetições) | `++` | Confirma H2.3.2 (V1–V4); em V2 elementos offline ficaram transparentes/deslocados; janela B exigiu `F5` para atualizar |\r\n| **M2.4.1** | `3 / 4` (`75%`) | `o` | C1–C3 restaurados (`10/10`); C4 perdeu última edição (mover retângulo) antes do `taskkill` imediato |\r\n| **M2.4.3** | `8 / 10` (`80%`) | `+` | A1–A7 e A10 idênticos; em A8a (`refeito`: `+11,2/+20,0 px`) e A9 (`-0,8 px` em `y`) o desfazer/refazer de `groupIds`/`index` funcionou, mas houve pequena divergência de coordenada |\r\n\r\n### Pendência declarada (`M2.4.2`)\r\n\r\n- **M2.4.2 (`nao_executado`):** não foi possível executar porque `dados/fase-03/massa-de-dados/` contém apenas `cena_referencia.excalidraw` (`c1`). Faltam os 4 arquivos das versões anteriores (`v0.15.0`, `v0.16.4`, `v0.17.6`, `v0.18.0`, produtos previstos da issue #97) e as referências dos 2 PNGs de fixture (`test_embedded_v1.png`, `smiley_embedded_v2.png`). A pendência está registrada em `dados/fase-04/brutos/Q2.4-recuperabilidade/M2.4.2_coleta.csv` e `M2.4.2_arquivos.csv`.\r\n\r\n### Desvios e observações de ambiente\r\n\r\n- **Porta / origem:** aplicação servida na porta `3001` (`localhost:3001` / `127.0.0.1:3001`) em vez de `localhost:3000` (porta `3000` ocupada).\r\n- **Navegador:** `Mozilla Firefox 160.0` em vez de `159.0.1` previsto no plano.\r\n- **Vídeos > 100 MB:** os arquivos `.mp4` acima do limite do GitHub (`M2.2.1_gravacao_offline.mp4`, `M2.2.2_gravacao_bloqueios.mp4`, `M2.3.1_gravacao_menu.mp4`, `M2.3.1_gravacao_arrastar.mp4`, `M2.3.2_gravacao_r1..r3.mp4` e `M2.4.3_gravacao_acoes.mp4`) não foram versionados no Git; seus hashes SHA-256 estão registrados nos respectivos `M2.X.X_coleta.csv` e todos os 13 vídeos da coleta estão armazenados em: https://drive.google.com/drive/folders/1wXbU0MzATtES2GC4-c06XPoyK1heDm6T?usp=sharing\r\n\r\nRefs #112\r\n\r\n",
+      "closed_by": null,
+      "reactions": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null
+    },
     {
       "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/169",
       "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
@@ -216,11 +288,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1726,11 +1798,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -5701,11 +5773,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6189,11 +6261,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6367,11 +6439,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6556,11 +6628,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6745,11 +6817,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6923,11 +6995,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7101,11 +7173,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7279,11 +7351,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7457,11 +7529,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7635,11 +7707,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7813,11 +7885,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -7991,11 +8063,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8169,11 +8241,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8347,11 +8419,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8525,11 +8597,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8723,11 +8795,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -8901,11 +8973,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -9079,11 +9151,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -9257,11 +9329,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -9455,17 +9527,17 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
-      "comments": 0,
+      "comments": 2,
       "created_at": "2026-11-03T15:16:53Z",
-      "updated_at": "2026-11-05T01:47:54Z",
+      "updated_at": "2026-11-15T21:39:40Z",
       "closed_at": null,
       "assignee": {
         "login": "luizh-gsoares",
@@ -9503,7 +9575,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nObter as medidas de G2 seguindo as instruções para o avaliador da Fase 3 (`docs/fase-03/instrucoes-g2-confiabilidade.md`) e salvar cada dado bruto em `dados/fase-04/brutos/` com o nome definido no plano. Os testes manuais usam o formulário de coleta da Fase 3 e têm gravação de tela obrigatória. Registrar junto com cada coleta os fatores de variação pedidos na instrução e qualquer desvio do plano.\n\nMétricas:\n\n- M2.1.1 Proporção de correções entre as contribuições integradas\n- M2.1.2 Mediana do tempo entre o relato e a correção\n- M2.1.3 Proporção de contribuições revisadas antes da integração\n- M2.2.1 Proporção de funções essenciais disponíveis sem conexão\n- M2.2.2 Origens externas necessárias para o editor local\n- M2.3.1 Proporção de arquivos inválidos tratados com mensagem\n- M2.3.2 Continuidade do editor após falha da colaboração\n- M2.4.1 Proporção de cenários de fechamento com restauração do desenho\n- M2.4.2 Proporção de arquivos reabertos sem perda\n- M2.4.3 Cobertura de desfazer e refazer\n\n### Critérios da rubrica atendidos\n\n- F4-C1: Obtenção das medidas (execução) (2026-2 Trabalho final completo v1.pdf, p. 8)\n- F4-C2: Dados brutos (arquivos e vídeos dos testes) (2026-2 Trabalho final completo v1.pdf, p. 8)\n\n### Referências\n\n- Obter as medidas: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 20\n- Coleta de dados: executar o plano de medição e armazenar os resultados: AULA 08 QSW1 GQM.pdf, p. 49\n- Coletar e verificar formulários e armazenar no repositório de medidas: AULA 08 QSW1 GQM.pdf, p. 50\n- Premissa 5, rastreabilidade dos dados: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Critérios F4-C1 e F4-C2: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [ ] Dado bruto de todas as 10 métricas de G2 em `dados/fase-04/brutos/`\n- [ ] Fatores de variação registrados em cada coleta\n- [ ] Gravação de tela de todo teste manual e demais evidências (logs, saídas de ferramentas, formulários) ligadas à métrica\n- [ ] Desvios em relação ao plano registrados e justificados\n\n### Prazo\n\n12/11\n\n### Depende de\n\n#110 (Preparar o ambiente), #99 (Instruções G2)\n\n### Estimativa (h)\n\n6\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nObter as medidas de G2 seguindo as instruções para o avaliador da Fase 3 (`docs/fase-03/instrucoes-g2-confiabilidade.md`) e salvar cada dado bruto em `dados/fase-04/brutos/` com o nome definido no plano. Os testes manuais usam o formulário de coleta da Fase 3 e têm gravação de tela obrigatória. Registrar junto com cada coleta os fatores de variação pedidos na instrução e qualquer desvio do plano.\n\nMétricas:\n\n- M2.1.1 Proporção de correções entre as contribuições integradas\n- M2.1.2 Mediana do tempo entre o relato e a correção\n- M2.1.3 Proporção de contribuições revisadas antes da integração\n- M2.2.1 Proporção de funções essenciais disponíveis sem conexão\n- M2.2.2 Origens externas necessárias para o editor local\n- M2.3.1 Proporção de arquivos inválidos tratados com mensagem\n- M2.3.2 Continuidade do editor após falha da colaboração\n- M2.4.1 Proporção de cenários de fechamento com restauração do desenho\n- M2.4.2 Proporção de arquivos reabertos sem perda\n- M2.4.3 Cobertura de desfazer e refazer\n\n### Critérios da rubrica atendidos\n\n- F4-C1: Obtenção das medidas (execução) (2026-2 Trabalho final completo v1.pdf, p. 8)\n- F4-C2: Dados brutos (arquivos e vídeos dos testes) (2026-2 Trabalho final completo v1.pdf, p. 8)\n\n### Referências\n\n- Obter as medidas: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 20\n- Coleta de dados: executar o plano de medição e armazenar os resultados: AULA 08 QSW1 GQM.pdf, p. 49\n- Coletar e verificar formulários e armazenar no repositório de medidas: AULA 08 QSW1 GQM.pdf, p. 50\n- Premissa 5, rastreabilidade dos dados: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Critérios F4-C1 e F4-C2: 2026-2 Trabalho final completo v1.pdf, p. 8\n\n### Critério de pronto\n\n- [x] Dado bruto de todas as 10 métricas de G2 em `dados/fase-04/brutos/`\n- [x] Fatores de variação registrados em cada coleta\n- [x] Gravação de tela de todo teste manual e demais evidências (logs, saídas de ferramentas, formulários) ligadas à métrica\n- [x] Desvios em relação ao plano registrados e justificados\n\n### Prazo\n\n12/11\n\n### Depende de\n\n#110 (Preparar o ambiente), #99 (Instruções G2)\n\n### Estimativa (h)\n\n6\n\n### Horas reais (h)\n\n9\n\n### Revisor\n\n_No response_\n",
       "closed_by": null,
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/112/reactions",
@@ -9633,11 +9705,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -9756,7 +9828,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -9811,18 +9883,18 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:47Z",
-      "updated_at": "2026-11-12T23:36:50Z",
-      "closed_at": null,
+      "updated_at": "2026-11-15T21:46:21Z",
+      "closed_at": "2026-11-15T21:46:21Z",
       "assignee": {
         "login": "luizh-gsoares",
         "id": 99836497,
@@ -9860,7 +9932,27 @@
         "total_blocking": 0
       },
       "body": "### Descrição\n\nMontar o ambiente definido na página de recursos e ambiente da Fase 3 (commit `e1b7aac`, versões fixas de Node.js, navegador e ferramentas) e criar o repositório de medidas em `dados/fase-04/`, separando `brutos/` e `consolidados/`, com um README que explica a organização e o padrão de nome dos arquivos. Registrar o ambiente efetivamente usado. Fazer uma sessão rápida de início da coleta com os três responsáveis.\n\n### Critérios da rubrica atendidos\n\n- F4-C1: Obtenção das medidas (execução) (2026-2 Trabalho final completo v1.pdf, p. 8)\n- F4-C2: Dados brutos (arquivos e vídeos dos testes) (2026-2 Trabalho final completo v1.pdf, p. 8)\n\n### Referências\n\n- Definir repositório de medidas e realizar sessão de kick-off: AULA 08 QSW1 GQM.pdf, p. 50\n- Fase 4 usa tudo o que foi preparado nas fases anteriores: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 20\n- Premissa 5, dados de coleta e consolidação no repositório: 2026-2 Trabalho final completo v1.pdf, p. 1\n\n### Critério de pronto\n\n- [x] Ambiente montado conforme o plano, com versões registradas\n- [x] Estrutura `dados/fase-04/brutos/` e `dados/fase-04/consolidados/` com README\n- [x] Desvios em relação ao plano registrados, se houver\n- [x] Toda a coleta definida sobre o commit `e1b7aac` do Excalidraw, o mesmo do escopo da Fase 1\n- [x] `docs/fase-04/_category_.json` criado, no formato das fases anteriores\n\n### Prazo\n\n08/11\n\n### Depende de\n\n#96 (Recursos e ambiente), #97 (Massa de dados)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n3\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "closed_by": {
+        "login": "luizh-gsoares",
+        "id": 99836497,
+        "node_id": "U_kgDOBfNiUQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99836497?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/luizh-gsoares",
+        "html_url": "https://github.com/luizh-gsoares",
+        "followers_url": "https://api.github.com/users/luizh-gsoares/followers",
+        "following_url": "https://api.github.com/users/luizh-gsoares/following{/other_user}",
+        "gists_url": "https://api.github.com/users/luizh-gsoares/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/luizh-gsoares/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/luizh-gsoares/subscriptions",
+        "organizations_url": "https://api.github.com/users/luizh-gsoares/orgs",
+        "repos_url": "https://api.github.com/users/luizh-gsoares/repos",
+        "events_url": "https://api.github.com/users/luizh-gsoares/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/luizh-gsoares/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/110/reactions",
         "total_count": 0,
@@ -9875,7 +9967,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/110/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -10000,11 +10092,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -10314,11 +10406,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 21,
-        "closed_issues": 5,
+        "open_issues": 20,
+        "closed_issues": 6,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T18:16:19Z",
+        "updated_at": "2026-11-15T21:46:21Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -28139,16 +28231,98 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 21,
-      "closed_issues": 5,
+      "open_issues": 20,
+      "closed_issues": 6,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-15T18:16:19Z",
+      "updated_at": "2026-11-15T21:46:21Z",
       "due_on": "2026-11-21T00:00:00Z",
       "closed_at": null
     }
   ],
   "commits": [
+    {
+      "sha": "9c6a2b9593d92bfaa519c98c03212845efbe7596",
+      "node_id": "C_kwDOUJBYZdoAKDljNmEyYjk1OTNkOTJiZmFhNTE5Yzk4YzAzMjEyODQ1ZWZiZTc1OTY",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-15T18:17:20Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-15T18:17:20Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "387e81fabb52016515385f7f6a4953a6368635bc",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/387e81fabb52016515385f7f6a4953a6368635bc"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/9c6a2b9593d92bfaa519c98c03212845efbe7596",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/9c6a2b9593d92bfaa519c98c03212845efbe7596",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/9c6a2b9593d92bfaa519c98c03212845efbe7596",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/9c6a2b9593d92bfaa519c98c03212845efbe7596/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "c576ef47929669454b597841539c349f74f260e5",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/c576ef47929669454b597841539c349f74f260e5",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/c576ef47929669454b597841539c349f74f260e5"
+        }
+      ]
+    },
     {
       "sha": "c576ef47929669454b597841539c349f74f260e5",
       "node_id": "C_kwDOUJBYZdoAKGM1NzZlZjQ3OTI5NjY5NDU0YjU5Nzg0MTUzOWMzNDlmNzRmMjYwZTU",
@@ -57536,6 +57710,13 @@
     }
   ],
   "revisoes_prs": {
+    "170": [
+      {
+        "revisor": "copilot-pull-request-reviewer[bot]",
+        "estado": "COMMENTED",
+        "enviada_em": "2026-11-15T21:34:26Z"
+      }
+    ],
     "169": [],
     "168": [],
     "167": [
