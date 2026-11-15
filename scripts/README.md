@@ -122,3 +122,13 @@ EXC=/caminho/do/clone/excalidraw python3 scripts/calcula_metricas.py
 ```
 
 O clone é usado só em M1.3.1, para contar as linhas de cada função, e precisa estar no commit avaliado. As linhas de outros grupos que já estiverem em `metricas.csv` são mantidas.
+
+## Análise das métricas de G1
+
+O script [`analisa_metricas.py`](analisa_metricas.py) lê as linhas de G1 de `dados/fase-04/consolidados/metricas.csv` e aplica as faixas, a agregação e o julgamento de `docs/fase-02/pontuacao-julgamento.md`. Grava `niveis.csv`, `questoes.csv` e `caracteristicas.csv` em `dados/fase-04/consolidados/` e os gráficos em `docs/fase-04/img/`. Precisa do matplotlib, instalado pelo `requirements.txt`. A partir da raiz do repositório:
+
+```bash
+python3 scripts/analisa_metricas.py
+```
+
+As linhas de outros grupos que já estiverem nos três arquivos são mantidas, e `metricas.csv` não é alterado.
