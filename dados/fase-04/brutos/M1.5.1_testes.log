@@ -1,0 +1,1303 @@
+yarn run v1.22.22
+(node:56241) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+$ vitest --coverage --minWorkers=1 --maxWorkers=8
+[33mLoaded [7m[33m vitest@3.0.6 [33m[27m and [7m[33m @vitest/coverage-v8@3.0.7 [33m[27m.
+Running mixed versions is not supported and may lead into bugs
+Update your dependencies and make sure the versions match.[39m
+
+[1m[7m[36m RUN [39m[27m[22m [36mv3.0.6 [39m[90m/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw[39m
+      [2mCoverage enabled with [22m[33mv8[39m
+
+[90mstderr[2m | packages/element/tests/linearElementEditor.test.tsx[2m > [22m[2mTest Linear Elements[2m > [22m[2mshould normalize the element points at creation
+[22m[39mLinear element is not normalized Error: 
+    at new LinearElementEditor (/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/packages/element/src/linearElementEditor.ts:192:57)
+    at /home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/packages/element/tests/linearElementEditor.test.tsx:185:5
+    at file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:174:14
+    at file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:558:28
+    at file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:61:24
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:41:12)
+    at runTest (file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:1137:17)
+    at runSuite (file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:1291:15)
+    at runSuite (file:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/node_modules/@vitest/runner/dist/index.js:1291:15)
+
+ [32m✓[39m packages/element/tests/bucketFill.test.ts [2m([22m[2m57 tests[22m[2m)[22m[33m 712[2mms[22m[39m
+   [33m[2m✓[22m[39m computeBucketFillPolygon[2m > [22mdoes not re-enumerate dense segment pairs in every spatial cell [33m506[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/lasso.test.tsx[2m > [22m[2mSpecial cases[2m > [22m[2mrespects boxSelectionMode ('contain' vs 'overlap') during lasso selection
+[22m[39m[33m<<< WARNING: test "Special cases > respects boxSelectionMode ('contain' vs 'overlap') during lasso selection" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/excalidraw/tests/lasso.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[33m 2889[2mms[22m[39m
+   [33m[2m✓[22m[39m Basic lasso selection tests[2m > [22mNone should be selected [33m378[2mms[22m[39m
+   [33m[2m✓[22m[39m Basic lasso selection tests[2m > [22mIntersects some, does not enclose/intersect the rest [33m359[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/interactivity.test.tsx[2m > [22m[2minteraction={{ enabled: { tools } }}[2m > [22m[2mpointer input stays inert when the active tool is not enabled
+[22m[39m"custom" tool cannot be activated while the editor is non-interactive (see "interaction.enabled.tools")
+
+[90mstderr[2m | packages/excalidraw/tests/interactivity.test.tsx[2m > [22m[2minteraction={{ enabled: { tools } }}[2m > [22m[2msetActiveTool only activates enabled tools while non-interactive
+[22m[39m"rectangle" tool cannot be activated while the editor is non-interactive (see "interaction.enabled.tools")
+"hand" tool cannot be activated while the editor is non-interactive (see "interaction.enabled.tools")
+
+[90mstderr[2m | packages/excalidraw/tests/interactivity.test.tsx[2m > [22m[2minteraction={{ enabled: { tools } }}[2m > [22m[2minteraction={false} refuses tool switching and keeps the laser inert
+[22m[39m"laser" tool cannot be activated while the editor is non-interactive (see "interaction.enabled.tools")
+
+[90mstderr[2m | packages/element/tests/zindex.test.tsx[2m > [22m[2mz-index manipulation[2m > [22m[2msend back
+[22m[39m[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+
+ [32m✓[39m packages/excalidraw/tests/interactivity.test.tsx [2m([22m[2m60 tests[22m[2m)[22m[33m 5449[2mms[22m[39m
+   [33m[2m✓[22m[39m baseline (interactive & ui enabled by default)[2m > [22muser input mechanisms used in this suite actually affect the editor [33m520[2mms[22m[39m
+   [33m[2m✓[22m[39m toggling `interaction` at runtime[2m > [22mclears transient state when disabled and re-enables input when re-enabled [33m323[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/data/restore.test.ts[2m > [22m[2mrestoreElements[2m > [22m[2mshould strip element if restore fails
+[22m[39mError restoring element: Error: FORBIDDEN!
+    at Object.get [as seed] [90m(/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mpackages/excalidraw/tests/data/restore.test.ts:596:15[90m)[39m
+    at restoreElement [90m(/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mpackages/excalidraw/data/restore.ts:548:3[90m)[39m
+    at [90m/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mpackages/excalidraw/data/restore.ts:984:27
+    at Array.reduce (<anonymous>)
+    at Module.restoreElements [90m(/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mpackages/excalidraw/data/restore.ts:976:28[90m)[39m
+    at [90m/home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mpackages/excalidraw/tests/data/restore.test.ts:600:38
+    at [90mfile:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:174:14
+    at [90mfile:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:558:28
+    at [90mfile:///home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw/[39mnode_modules/[4m@vitest/runner[24m/dist/index.js:61:24
+    at new Promise (<anonymous>)
+
+[90mstderr[2m | packages/excalidraw/tests/data/restore.test.ts[2m > [22m[2mrepairing bindings[2m > [22m[2mshould strip arrow binding if repair throws
+[22m[39mCould not repair binding for element "undefined" out of (undefined) elements
+
+ [32m✓[39m packages/excalidraw/tests/data/restore.test.ts [2m([22m[2m69 tests[22m[2m)[22m[90m 130[2mms[22m[39m
+[90mstderr[2m | packages/element/tests/zindex.test.tsx[2m > [22m[2mz-index manipulation[2m > [22m[2mbring forward
+[22m[39m[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+
+[90mstderr[2m | packages/element/tests/zindex.test.tsx[2m > [22m[2mz-index manipulation[2m > [22m[2mgroup-selected duplication should includes deleted elements that weren't selected on account of being deleted
+[22m[39m[NONDELETED][INVARIANT] Element to duplicate should be non-deleted
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+[NONDELETED][INVARIANT] getSelectedElements skipping deleted selected element which should not be in the selection
+
+[90mstderr[2m | packages/excalidraw/wysiwyg/textWysiwyg.test.tsx[2m > [22m[2mtextWysiwyg[2m > [22m[2mTest container-unbound text[2m > [22m[2mshould commit text before saving via 'Cmd/Ctrl+S'
+[22m[39m[33m<<< WARNING: test "textWysiwyg > Test container-unbound text > should commit text before saving via 'Cmd/Ctrl+S'" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/excalidraw/wysiwyg/textWysiwyg.test.tsx[2m > [22m[2mtextWysiwyg[2m > [22m[2mTest container-unbound text[2m > [22m[2mshould commit text before saving via 'Cmd/Ctrl+Shift+S'
+[22m[39m[33m<<< WARNING: test "textWysiwyg > Test container-unbound text > should commit text before saving via 'Cmd/Ctrl+Shift+S'" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/excalidraw/tests/scrollConstraints.test.tsx[2m > [22m[2mrubberband overscroll (integration)[2m > [22m[2mallows simultaneous pinch-zoom and rubberband pan on touch
+[22m[39mAn update (setState, replaceState, or forceUpdate) was scheduled from inside an update function. Update functions should be pure, with zero side-effects. Consider using componentDidUpdate or a callback.
+
+Please update the following component: App
+
+ [32m✓[39m packages/excalidraw/tests/renderOverrides.test.tsx [2m([22m[2m54 tests[22m[2m)[22m[33m 2606[2mms[22m[39m
+   [33m[2m✓[22m[39m setElementRenderOverrides[2m > [22mcopies and replaces the complete snapshot, including omitted fields [33m306[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/selection.test.tsx [2m([22m[2m68 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 11564[2mms[22m[39m
+   [33m[2m✓[22m[39m box-selection[2m > [22mshould allow adding to selection via box-select when holding shift [33m612[2mms[22m[39m
+   [33m[2m✓[22m[39m lasso reselection[2m > [22mshould allow ctrl+alt lasso reselection when starting inside the active common bounds [33m309[2mms[22m[39m
+   [33m[2m✓[22m[39m tool locking & selection[2m > [22mshould not select newly created element while tool is locked [33m537[2mms[22m[39m
+ [32m✓[39m packages/element/tests/zindex.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[33m 7963[2mms[22m[39m
+   [33m[2m✓[22m[39m z-index manipulation[2m > [22msend back [33m1891[2mms[22m[39m
+   [33m[2m✓[22m[39m z-index manipulation[2m > [22mbring forward [33m863[2mms[22m[39m
+   [33m[2m✓[22m[39m z-index manipulation[2m > [22mbring to front [33m524[2mms[22m[39m
+   [33m[2m✓[22m[39m z-index manipulation[2m > [22msend to back [33m640[2mms[22m[39m
+   [33m[2m✓[22m[39m z-index manipulation[2m > [22mduplicating elements should retain zindex integrity [33m945[2mms[22m[39m
+   [33m[2m✓[22m[39m z-index manipulation[2m > [22mtext-container binding should be atomic [33m385[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/scrollConstraints.test.tsx [2m([22m[2m40 tests[22m[2m)[22m[33m 2840[2mms[22m[39m
+   [33m[2m✓[22m[39m setViewport lock (integration)[2m > [22minstalls a scroll lock and prevents keyboard panning out of the box [33m352[2mms[22m[39m
+   [33m[2m✓[22m[39m rubberband overscroll (integration)[2m > [22mcontinues rubberband snap-back while wheel-zooming [33m424[2mms[22m[39m
+[90mstderr[2m | packages/element/tests/resize.test.tsx[2m > [22m[2mline element[2m > [22m[2mresizes
+[22m[39m[33m<<< WARNING: test "line element > resizes" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/element/tests/resize.test.tsx[2m > [22m[2mline element[2m > [22m[2mflips while resizing
+[22m[39m[33m<<< WARNING: test "line element > flips while resizing" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/element/tests/resize.test.tsx[2m > [22m[2mline element[2m > [22m[2mresizes from center
+[22m[39m[33m<<< WARNING: test "line element > resizes from center" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/element/src/__tests__/stickyNote.test.ts [2m([22m[2m47 tests[22m[2m)[22m[90m 185[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/charts.test.ts [2m([22m[2m47 tests[22m[2m)[22m[33m 330[2mms[22m[39m
+ [32m✓[39m packages/element/tests/linearElementEditor.test.tsx [2m([22m[2m59 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 14415[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mshould normalize the element points at creation [33m339[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mshould not drag line and add midpoint until dragged beyond a threshold [33m498[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mInside editor[2m > [22mshould not drag line and add midpoint when dragged irrespective of threshold [33m317[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mInside editor[2m > [22mWhen edges are round[2m > [22mshould allow dragging lines from midpoints in between segments [33m361[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mInside editor[2m > [22mWhen edges are round[2m > [22mshould remove the midpoint when one of the points in the segment is deleted [33m395[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mInside editor[2m > [22mWhen edges are round[2m > [22mshould allow dragging lines from midpoints in between segments [33m331[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mInside editor[2m > [22mWhen edges are round[2m > [22mshould update all the midpoints when its point is dragged [33m324[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mInside editor[2m > [22mWhen edges are round[2m > [22mshould update all the midpoints when a point is deleted [33m368[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mTest bound text element[2m > [22mshould bind text to arrow when double clicked [33m345[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mTest bound text element[2m > [22mshould wrap the bound text when arrow bound container moves [33m527[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mTest bound text element[2m > [22mshould update label coords when a label binded via context menu is unbinded [33m383[2mms[22m[39m
+   [33m[2m✓[22m[39m Test Linear Elements[2m > [22mTest bound text element[2m > [22mshould not update label position when arrow dragged [33m397[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/history.test.tsx [2m([22m[2m70 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 19904[2mms[22m[39m
+   [33m[2m✓[22m[39m image insertion[2m > [22mshould eventually initialize all dropped images [33m490[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould not clear the redo stack on standalone appstate change [33m347[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould not override appstate changes when redo stack is not cleared [33m487[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould iterate through the history when selection changes do not produce visible change [33m334[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support element creation, deletion and appstate element selection change [33m698[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support linear element creation and points manipulation through the editor [33m858[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support duplication of groups, appstate group selection and editing group [33m417[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support changes in elements' order [33m440[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support bidirectional bindings[2m > [22mshould unbind arrow from non deleted bindable elements on undo and rebind on redo [33m508[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support bidirectional bindings[2m > [22mshould unbind arrow from non deleted bindable elements on deletion and rebind on undo [33m412[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support bidirectional bindings[2m > [22mshould unbind everything from non deleted elements when iterating through the whole undo stack and vice versa rebind everything on redo [33m625[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support bidirectional bindings[2m > [22mshould unbind rectangle from arrow on deletion and rebind on undo [33m523[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22msingleplayer undo/redo[2m > [22mshould support bidirectional bindings[2m > [22mshould unbind rectangles from arrow on deletion and rebind on undo [33m496[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould not override remote changes on different elements [33m350[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould not override remote changes on different properties [33m350[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould update history entries after remote changes on the same properties [33m470[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould override remotely added points on undo, but restore them on redo [33m330[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould redistribute deltas when element gets removed locally but is restored remotely [33m335[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould iterate through the history when element changes relate only to remotely deleted elements [33m529[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould iterate through the history when selected elements relate only to remotely deleted elements [33m426[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould iterate through the history when selected groups contain only remotely deleted elements [33m353[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould iterate through the history when selected or editing linear element was remotely deleted [33m309[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould not let remote changes to interfere with in progress resizing [33m317[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mshould not let remote changes to interfere with in progress dragging [33m564[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mconflicts in arrows and their bindable elements[2m > [22mshould rebind bindings when both are updated through the history and there are no conflicting updates in the meantime [33m672[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mconflicts in arrows and their bindable elements[2m > [22mshould rebind bindings when both are updated through the history and the arrow got bound to a different element in the meantime [33m491[2mms[22m[39m
+   [33m[2m✓[22m[39m history[2m > [22mmultiplayer undo/redo[2m > [22mconflicts in arrows and their bindable elements[2m > [22mshould update bound element points when rectangle was remotely moved and arrow is added back through the history [33m335[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/wysiwyg/textWysiwyg.test.tsx[2m > [22m[2mtextWysiwyg[2m > [22m[2mTest container-bound text[2m > [22m[2mshould bind text to container when triggered via context menu
+[22m[39mflushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task.
+
+ [32m✓[39m packages/excalidraw/tests/stickyNotes.test.tsx [2m([22m[2m37 tests[22m[2m)[22m[33m 7896[2mms[22m[39m
+   [33m[2m✓[22m[39m sticky notes[2m > [22mkeeps arrows bound to a note attached while typing grows it [33m623[2mms[22m[39m
+   [33m[2m✓[22m[39m sticky notes[2m > [22mhistory[2m > [22mundoes typing separately from creating the note [33m329[2mms[22m[39m
+   [33m[2m✓[22m[39m sticky notes[2m > [22mStats[2m > [22mkeeps the base height on a width edit and scales the ceiling on a group edit [33m319[2mms[22m[39m
+ [32m✓[39m packages/element/tests/frame.test.tsx [2m([22m[2m57 tests[22m[2m | [22m[33m30 skipped[39m[2m)[22m[33m 5124[2mms[22m[39m
+   [33m[2m✓[22m[39m adding elements to frames[2m > [22mshould treat an element fully containing a frame as overlapping the frame [33m343[2mms[22m[39m
+ [32m✓[39m packages/element/tests/resize.test.tsx [2m([22m[2m66 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m[33m 23190[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes with locked aspect ratio [33m396[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes from center [33m343[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes with a label [33m603[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes from center with multi-line label from 'n' handle, with respect to min height [33m389[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes from center with multi-line label from 's' handle, with respect to min height [33m411[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mkeeps the flipped corner anchored while wrapped text sets the minimum height [33m347[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes[2m > [22mwith handle 'n' [33m671[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes[2m > [22mwith handle 'e' [33m369[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mresizes[2m > [22mwith handle 'ne' [33m316[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mflips while resizing[2m > [22mwith handle 'n' [33m300[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mflips while resizing[2m > [22mwith handle 'ne' [33m303[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mrectangle with a label[2m > [22mflips horizontally while resizing (proportional: false) [33m425[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mrectangle with a label[2m > [22mflips horizontally while resizing (proportional: true) [33m388[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mellipse with a label[2m > [22mflips horizontally while resizing (proportional: false) [33m483[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mellipse with a label[2m > [22mflips horizontally while resizing (proportional: true) [33m418[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mdiamond with a label[2m > [22mflips horizontally while resizing (proportional: false) [33m411[2mms[22m[39m
+   [33m[2m✓[22m[39m generic element[2m > [22mdiamond with a label[2m > [22mflips horizontally while resizing (proportional: true) [33m441[2mms[22m[39m
+   [33m[2m✓[22m[39m line element[2m > [22mresizes from center [33m309[2mms[22m[39m
+   [33m[2m✓[22m[39m line element[2m > [22mflips while resizing [33m305[2mms[22m[39m
+   [33m[2m✓[22m[39m line element[2m > [22mresizes with locked aspect ratio [33m355[2mms[22m[39m
+   [33m[2m✓[22m[39m line element[2m > [22mresizes from center [33m305[2mms[22m[39m
+   [33m[2m✓[22m[39m arrow element[2m > [22mresizes with a label [33m707[2mms[22m[39m
+   [33m[2m✓[22m[39m arrow element[2m > [22mflips the fixed point binding on negative resize for single bindable [33m529[2mms[22m[39m
+   [33m[2m✓[22m[39m arrow element[2m > [22mflips the fixed point binding on negative resize for group selection [33m421[2mms[22m[39m
+   [33m[2m✓[22m[39m text element[2m > [22mcan be resized from e [33m320[2mms[22m[39m
+   [33m[2m✓[22m[39m text element[2m > [22mcan be resized from w [33m311[2mms[22m[39m
+   [33m[2m✓[22m[39m text element[2m > [22mwraps when width is narrower than texts inside [33m405[2mms[22m[39m
+   [33m[2m✓[22m[39m text element[2m > [22mkeeps properties when wrapped [33m340[2mms[22m[39m
+   [33m[2m✓[22m[39m text element[2m > [22mhas a minimum width when wrapped [33m401[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mkeeps a flipped text container anchored when its label requires extra height [33m476[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mresizes with generic elements [33m663[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mresizes with linear elements > 2 points [33m618[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mresizes with 2-point lines [33m431[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mresizes with labeled arrows [33m755[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mresizes with text elements [33m463[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mresizes from center [33m307[2mms[22m[39m
+   [33m[2m✓[22m[39m multiple selection[2m > [22mflips while resizing [33m1027[2mms[22m[39m
+[90mstderr[2m | packages/element/tests/duplicate.test.tsx[2m > [22m[2mduplicating list items[2m > [22m[2madvances the marker of a rectangle label "9. foo"
+[22m[39m[33m<<< WARNING: test "duplicating list items > advances the marker of a rectangle label "9. foo"" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/element/tests/duplicate.test.tsx[2m > [22m[2mduplicating list items[2m > [22m[2madvances the marker of a stickynote label "9. foo"
+[22m[39m[33m<<< WARNING: test "duplicating list items > advances the marker of a stickynote label "9. foo"" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/element/tests/duplicate.test.tsx[2m > [22m[2mduplicating list items[2m > [22m[2madvances the marker of a ellipse label "3"
+[22m[39m[33m<<< WARNING: test "duplicating list items > advances the marker of a ellipse label "3"" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/element/src/__tests__/transform.test.ts[2m > [22m[2mTest Transform[2m > [22m[2mTest arrow bindings[2m > [22m[2mshould bind arrows to existing elements if ids are correct
+[22m[39mNo element for end binding with id rect-11 found
+
+ [32m✓[39m packages/element/src/__tests__/transform.test.ts [2m([22m[2m29 tests[22m[2m)[22m[90m 122[2mms[22m[39m
+[90mstderr[2m | packages/element/tests/binding.test.tsx[2m > [22m[2mbinding to a point-like (sub-pixel) element[2m > [22m[2msimple arrow binds to the center and stays put when the element grows
+[22m[39m[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > simple arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > simple arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > simple arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > simple arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/element/tests/binding.test.tsx[2m > [22m[2mbinding to a point-like (sub-pixel) element[2m > [22m[2melbow arrow binds to the center and stays put when the element grows
+[22m[39m[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > elbow arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > elbow arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > elbow arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "binding to a point-like (sub-pixel) element > elbow arrow binds to the center and stays put when the element grows" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/element/tests/binding.test.tsx [2m([22m[2m33 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 8521[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22mwhen both endpoints are bound inside the same element[2m > [22mshould create an `inside` binding [33m822[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22mself-binding (both ends to the same element) single-click finalize[2m > [22morbit -> orbit finalizes on a single click [33m386[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22mself-binding (both ends to the same element) single-click finalize[2m > [22minside -> orbit finalizes on a single click [33m308[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22mself-binding (both ends to the same element) single-click finalize[2m > [22minside -> inside keep in multi-point mode (no single-click finalize) [33m311[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22madditional binding behavior[2m > [22mediting arrow and moving its head to bind it to element A, finalizing theediting by clicking on element A should end up selecting A [33m436[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22madditional binding behavior[2m > [22mshould unbind on bound element deletion [33m335[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22madditional binding behavior[2m > [22mshould unbind arrow when arrow is resized [33m432[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22madditional binding behavior[2m > [22mshould unbind arrow when arrow is rotated [33m454[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22madditional binding behavior[2m > [22mshould not unbind when duplicating via selection group [33m441[2mms[22m[39m
+   [33m[2m✓[22m[39m binding for simple arrows[2m > [22mto text elements[2m > [22mshould keep binding on text update [33m398[2mms[22m[39m
+ [32m✓[39m packages/element/tests/duplicate.test.tsx [2m([22m[2m74 tests[22m[2m)[22m[33m 11007[2mms[22m[39m
+   [33m[2m✓[22m[39m group-related duplication[2m > [22maction-duplicating within group [33m380[2mms[22m[39m
+   [33m[2m✓[22m[39m duplicating list items[2m > [22malt-drag advances the markers from the start of the drag, undoably [33m448[2mms[22m[39m
+   [33m[2m✓[22m[39m alt-dragging the text being edited[2m > [22mduplicates a labeled arrow when pressed on its label [33m354[2mms[22m[39m
+ [32m✓[39m packages/element/tests/delta.test.tsx [2m([22m[2m28 tests[22m[2m)[22m[90m 53[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/regressionTests.test.tsx[2m > [22m[2mregression tests[2m > [22m[2mpinch-to-zoom works
+[22m[39mAn update (setState, replaceState, or forceUpdate) was scheduled from inside an update function. Update functions should be pure, with zero side-effects. Consider using componentDidUpdate or a callback.
+
+Please update the following component: App
+
+ [32m✓[39m packages/element/tests/collision.test.tsx [2m([22m[2m42 tests[22m[2m)[22m[33m 1170[2mms[22m[39m
+   [33m[2m✓[22m[39m check rotated elements can be hit:[2m > [22marrow [33m565[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/clipboard.test.tsx[2m > [22m[2mclipboard - pasting mermaid definition[2m > [22m[2mshould paste as normal text if invalid mermaid
+[22m[39mparsing pasted text as mermaid definition failed: ERROR
+
+[90mstderr[2m | packages/excalidraw/tests/clipboard.test.tsx[2m > [22m[2mcopy and cut events[2m > [22m[2mshould copy the selection on a copy event, and cut it on a cut event
+[22m[39m[33m<<< WARNING: test "copy and cut events > should copy the selection on a copy event, and cut it on a cut event" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "copy and cut events > should copy the selection on a copy event, and cut it on a cut event" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/excalidraw/tests/clipboard.test.tsx [2m([22m[2m30 tests[22m[2m)[22m[33m 5135[2mms[22m[39m
+   [33m[2m✓[22m[39m general paste behavior[2m > [22mshould randomize seed on paste [33m418[2mms[22m[39m
+   [33m[2m✓[22m[39m paste text as a single element[2m > [22mnext to the stats panel (desktop)[2m > [22mshould keep a pasted text clear of the stats panel only where it lands beside it [33m324[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/flip.test.tsx [2m([22m[2m46 tests[22m[2m | [22m[33m8 skipped[39m[2m)[22m[33m 7077[2mms[22m[39m
+   [33m[2m✓[22m[39m rectangle[2m > [22mflips an unrotated rectangle horizontally correctly [33m435[2mms[22m[39m
+   [33m[2m✓[22m[39m mutliple elements[2m > [22mwith bound text flip correctly [33m711[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx [2m([22m[2m46 tests[22m[2m)[22m[33m 9598[2mms[22m[39m
+   [33m[2m✓[22m[39m binding text to an arrow endpoint[2m > [22mhover affordance[2m > [22mhighlights a free arrow endpoint while the text tool is active [33m393[2mms[22m[39m
+   [33m[2m✓[22m[39m binding text to an arrow endpoint[2m > [22mbinding toggle (ctrl/cmd)[2m > [22mdrops plain text instead of binding the endpoint [33m319[2mms[22m[39m
+   [33m[2m✓[22m[39m binding text to an arrow endpoint[2m > [22mdrag-sizing[2m > [22mdoes not move the arrow when the text is un-wrapped [33m303[2mms[22m[39m
+   [33m[2m✓[22m[39m binding text to an arrow endpoint[2m > [22mhistory[2m > [22mremoves the text and its binding in a single undo [33m366[2mms[22m[39m
+   [33m[2m✓[22m[39m binding text to an arrow endpoint[2m > [22mhistory[2m > [22mrestores the text and its binding on redo [33m326[2mms[22m[39m
+ [32m✓[39m packages/element/tests/align.test.tsx [2m([22m[2m50 tests[22m[2m)[22m[33m 18842[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two objects correctly to the top [33m655[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two objects correctly to the bottom [33m346[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two objects correctly to the left [33m309[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two objects correctly to the right [33m324[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters two objects with different sizes correctly vertically [33m320[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns a group with another element correctly to the top [33m374[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns a group with another element correctly to the bottom [33m384[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns a group with another element correctly to the left [33m382[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns a group with another element correctly to the right [33m386[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters a group with another element correctly vertically [33m353[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters a group with another element correctly horizontally [33m368[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two groups correctly to the top [33m459[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two groups correctly to the bottom [33m472[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two groups correctly to the left [33m470[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns two groups correctly to the right [33m450[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters two groups correctly vertically [33m519[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters two groups correctly horizontally [33m490[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns nested group and other element correctly to the top [33m515[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns nested group and other element correctly to the bottom [33m532[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns nested group and other element correctly to the left [33m501[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns nested group and other element correctly to the right [33m464[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters nested group and other element correctly vertically [33m419[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22mcenters nested group and other element correctly horizontally [33m457[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a group while in group edit mode correctly to the top [33m363[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a group while in group edit mode correctly to the bottom [33m329[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a group while in group edit mode correctly to the left [33m313[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a group while in group edit mode correctly to the right [33m373[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a group while in group edit mode correctly to the vertical center [33m352[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a group while in group edit mode correctly to the horizontal center [33m348[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns element and nested group while in group edit mode correctly to the top [33m381[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns element and nested group while in group edit mode correctly to the bottom [33m391[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns element and nested group while in group edit mode correctly to the left [33m394[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns element and nested group while in group edit mode correctly to the right [33m405[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns element and nested group while in group edit mode correctly to the vertical center [33m437[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements and nested group within a group while in group edit mode correctly to the horizontal center [33m418[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group correctly to the vertical center [33m337[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group containing a nested group correctly to the top [33m349[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group containing a nested group correctly to the bottom [33m319[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group containing a nested group correctly to the left [33m390[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group containing a nested group correctly to the right [33m362[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group containing a nested group correctly to the vertical center [33m361[2mms[22m[39m
+   [33m[2m✓[22m[39m aligning[2m > [22maligns elements within a single-selected group containing a nested group correctly to the horizontal center [33m356[2mms[22m[39m
+ [32m✓[39m packages/element/tests/textWrapping.test.ts [2m([22m[2m51 tests[22m[2m)[22m[90m 33[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/regressionTests.test.tsx [2m([22m[2m51 tests[22m[2m)[22m[33m 14950[2mms[22m[39m
+   [33m[2m✓[22m[39m given element A and group of elements B and given both are selected when user clicks on B, on pointer up only elements from B should be selected [33m448[2mms[22m[39m
+   [33m[2m✓[22m[39m given element A and group of elements B and given both are selected when user shift-clicks on B, on pointer up only element A should be selected [33m400[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mdraw every type of shape [33m1319[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mchange the properties of a shape [33m417[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mclick on an element and drag it [33m313[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mclick-drag to select a group [33m325[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mshift-click to multiselect, then drag [33m360[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mundo/redo drawing an element [33m469[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mnoop interaction after undo shouldn't create history entry [33m313[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mmake a group and duplicate it [33m414[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mshould group elements and ungroup them [33m432[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mdouble click to edit a group [33m391[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22madjusts z order when grouping [33m318[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22msupports nested groups [33m659[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mcan drag element that covers another element, while another elem is selected [33m355[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mswitches from group of selected elements to another element on pointer down [33m340[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mdrags selected elements from point inside common bounding box that doesn't hit any element and keeps elements selected after dragging [33m332[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mgiven a group of selected elements with an element that is not selected inside the group common bounding box when element that is not selected is clicked should switch selection to not selected element on pointer up [33m311[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mgiven a selected element A and a not selected element B with higher z-index than A and given B partially overlaps A when there's a shift-click on the overlapped section B is added to the selection [33m327[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22msingle-clicking on a subgroup of a selected group should not alter selection [33m613[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mdeleting last but one element in editing group should unselect the group [33m386[2mms[22m[39m
+   [33m[2m✓[22m[39m regression tests[2m > [22mCmd/Ctrl-click exclusively select element under pointer [33m648[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/wysiwyg/textWysiwyg.test.tsx[2m > [22m[2mtextWysiwyg[2m > [22m[2mTest container-bound text[2m > [22m[2mshould reset the text element angle to the container's when binding to rotated non-arrow container
+[22m[39m[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to the container's when binding to rotated non-arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to the container's when binding to rotated non-arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to the container's when binding to rotated non-arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to the container's when binding to rotated non-arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to the container's when binding to rotated non-arrow container" does not wrap some state update in act() >>>[0m
+
+[90mstderr[2m | packages/excalidraw/wysiwyg/textWysiwyg.test.tsx[2m > [22m[2mtextWysiwyg[2m > [22m[2mTest container-bound text[2m > [22m[2mshould reset the text element angle to 0 when binding to rotated arrow container
+[22m[39m[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to 0 when binding to rotated arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to 0 when binding to rotated arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to 0 when binding to rotated arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to 0 when binding to rotated arrow container" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "textWysiwyg > Test container-bound text > should reset the text element angle to 0 when binding to rotated arrow container" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/excalidraw/components/Stats/stats.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[33m 4922[2mms[22m[39m
+   [33m[2m✓[22m[39m binding with linear elements[2m > [22mshould remain bound to linear element on small position change [33m662[2mms[22m[39m
+   [33m[2m✓[22m[39m binding with linear elements[2m > [22mshould unbind linear element on large position change [33m370[2mms[22m[39m
+   [33m[2m✓[22m[39m stats for a non-generic element[2m > [22mtext element [33m389[2mms[22m[39m
+   [33m[2m✓[22m[39m stats for multiple elements[2m > [22mshould display MIXED for elements with different values [33m395[2mms[22m[39m
+   [33m[2m✓[22m[39m stats for multiple elements[2m > [22mshould display a property when one of the elements is editable for that property [33m401[2mms[22m[39m
+   [33m[2m✓[22m[39m stats for multiple elements[2m > [22mshould treat groups as single units [33m374[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/onDuplicate.test.tsx [2m([22m[2m25 tests[22m[2m)[22m[33m 3326[2mms[22m[39m
+   [33m[2m✓[22m[39m props.onDuplicate returning new objects for duplicates[2m > [22mduplicate action [33m428[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/bucketFill.test.tsx [2m([22m[2m31 tests[22m[2m)[22m[33m 4736[2mms[22m[39m
+   [33m[2m✓[22m[39m bucket fill tool[2m > [22muses the paint droplet as the bucket fill cursor hotspot [33m307[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/wysiwyg/textWysiwyg.test.tsx [2m([22m[2m145 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[33m 41972[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mstart text editing[2m > [22mshould prefer editing selected text element (non-bindable container present) [33m504[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mstart text editing[2m > [22mshould set a fixed text width when dragging inside a 'rectangle' from 220 to 380 [33m300[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mstart text editing[2m > [22mshould set a fixed text width when dragging inside a 'rectangle' from 350 to 510 [33m313[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mstart text editing[2m > [22mshould set a fixed text width when dragging inside a 'ellipse' from 350 to 510 [33m334[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mstart text editing[2m > [22mshould redraw dashed text bounds while dragging from 'container center' (tool locked: true) [33m303[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest text wrapping[2m > [22mshould keep width when editing a wrapped text [33m380[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest text wrapping[2m > [22mshould restore original text after unwrapping a wrapped text [33m507[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-unbound text[2m > [22mnext to the side panels (desktop)[2m > [22mshould keep a text being edited clear of the full styles panel and the stats panel [33m371[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-unbound text[2m > [22mnext to the side panels (desktop)[2m > [22mshould keep a text being edited clear of the stats panel only beside it [33m415[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-unbound text[2m > [22mnext to the side panels (desktop)[2m > [22mshould pan the canvas while typing only once the caret is under the stats panel [33m458[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-unbound text[2m > [22mnext to the side panels (desktop)[2m > [22mshould find the caret in a bidirectional line where the browser lays it out [33m347[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould bind text to container when double clicked inside filled container [33m334[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould bind text to a shape nested in a transparent one above it on a text tool click at its center [33m331[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould label an arrow below a transparent shape when clicking its midpoint [33m360[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould compute the container height correctly and not throw error when height is updated while editing the text [33m391[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould bind text to container when double clicked inside of the transparent container [33m373[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould bind text to container when double clicked on container stroke [33m334[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould bind text to container when triggered via context menu [33m447[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould update font family correctly on undo/redo by selecting bounded text when font family was updated [33m317[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould wrap text and vertcially center align once text submitted [33m409[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould unbind bound text when unbind action from context menu is triggered [33m523[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshouldn't bind to container if container has bound text [33m382[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould respect text alignment when resizing [33m976[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould always bind to selected container and insert it in correct position [33m353[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould scale font size correctly when resizing using shift [33m343[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould bind text correctly when container duplicated with alt-drag [33m459[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mundo should work [33m386[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould restore original container height and clear cache once text is unbind [33m362[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould reset the container height cache when resizing [33m464[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould reset the container height cache when font properties updated [33m423[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould update line height when font family updated [33m370[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould wrap text in a container when wrap text in container triggered from context menu [33m346[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshouldn't bind to container if container has bound text not centered and text tool is used [33m436[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshouldn't inherit groupIds or angle when creating unbound text inside a grouped/rotated container [33m327[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould edit the existing label only when clicking on the label itself [33m650[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould allow dragging a free text box inside a labeled container with mouse [33m465[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould allow dragging a free text box inside a labeled container with pen [33m397[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould allow dragging a free text box inside a labeled container with touch [33m435[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould edit the arrow label when clicking on the label with the text tool [33m395[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould hit the arrow label at its derived position after the arrow moves (labelPosition: 0.25) [33m319[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould hit the arrow label at its derived position after the arrow moves (labelPosition: 0.75) [33m314[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould highlight the text the text tool would edit on hover [33m300[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould create free text on a ctrl/cmd click at an empty container's center [33m315[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould not advertise a label on an empty arrow's midpoint while ctrl/cmd is held [33m343[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould not edit a host-selected text when the text tool clicks elsewhere [33m311[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould not label a host-selected container when the text tool clicks elsewhere [33m343[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould not revive a pending center click when the text tool is left and picked again mid-press [33m425[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould drop a pending center click when the browser cancels the pointer [33m332[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould not refresh the hover from a lifted finger's position when the viewport moves [33m336[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould keep the text label at the same degrees when used as a non-arrow label [33m310[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen top left [33m484[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen top center [33m445[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen top right [33m461[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen center left [33m380[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen center center [33m416[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen center right [33m451[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen bottom left [33m376[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen bottom center [33m417[2mms[22m[39m
+   [33m[2m✓[22m[39m textWysiwyg[2m > [22mTest container-bound text[2m > [22mshould align correctly[2m > [22mwhen bottom right [33m416[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/drawShape.test.tsx [2m([22m[2m36 tests[22m[2m)[22m[33m 6216[2mms[22m[39m
+   [33m[2m✓[22m[39m autoshape tool[2m > [22mconverts a sketched rectangle into a rectangle element [33m361[2mms[22m[39m
+   [33m[2m✓[22m[39m autoshape compact toolbar placement[2m > [22mgroups autoshape under freedraw on tablet [33m319[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/dragCreate.test.tsx [2m([22m[2m19 tests[22m[2m)[22m[33m 3249[2mms[22m[39m
+   [33m[2m✓[22m[39m Test dragCreate[2m > [22madd element to the scene when pointer dragging long enough[2m > [22mrectangle [33m446[2mms[22m[39m
+ [32m✓[39m packages/element/tests/flowchart.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 5495[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart creation[2m > [22mcreate multiple successor nodes at once [33m538[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart creation[2m > [22mwhen directions are changed, only the last same directions will apply [33m342[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart creation[2m > [22mcreate nodes one at a time [33m336[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart creation[2m > [22mdoes not overlap existing siblings when adding more children (down) [33m366[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart creation[2m > [22mdoes not overlap a previous batch of children (down) [33m343[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart band-search placement[2m > [22mplaces the first child exactly one offset away in every direction [33m407[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart band-search placement[2m > [22mslides into the nearest free gap between obstacles without moving them [33m316[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart band-search placement[2m > [22mrepositions the whole pending cluster when it no longer fits [33m301[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart navigation[2m > [22msingle node at each level [33m448[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart navigation[2m > [22mmultiple nodes at each level [33m761[2mms[22m[39m
+   [33m[2m✓[22m[39m flow chart navigation[2m > [22mtake the most obvious link when possible [33m551[2mms[22m[39m
+ [32m✓[39m packages/element/tests/fractionalIndex.test.ts [2m([22m[2m54 tests[22m[2m)[22m[33m 6144[2mms[22m[39m
+   [33m[2m✓[22m[39m sync invalid indices with array order[2m > [22mshould be able to sync 20K invalid indices[2m > [22mshould sync all empty indices[2m > [22mshould sync invalid indices of moved elements or fallback [33m1037[2mms[22m[39m
+   [33m[2m✓[22m[39m sync invalid indices with array order[2m > [22mshould be able to sync 20K invalid indices[2m > [22mshould sync all empty indices[2m > [22mshould sync invalid indices of all elements [33m1059[2mms[22m[39m
+   [33m[2m✓[22m[39m sync invalid indices with array order[2m > [22mshould be able to sync 20K invalid indices[2m > [22mshould sync all but last index given a growing array of indices[2m > [22mshould sync invalid indices of moved elements or fallback [33m972[2mms[22m[39m
+   [33m[2m✓[22m[39m sync invalid indices with array order[2m > [22mshould be able to sync 20K invalid indices[2m > [22mshould sync all but last index given a growing array of indices[2m > [22mshould sync invalid indices of all elements [33m923[2mms[22m[39m
+   [33m[2m✓[22m[39m sync invalid indices with array order[2m > [22mshould be able to sync 20K invalid indices[2m > [22mshould sync all but first index given a declining array of indices[2m > [22mshould sync invalid indices of moved elements or fallback [33m1061[2mms[22m[39m
+   [33m[2m✓[22m[39m sync invalid indices with array order[2m > [22mshould be able to sync 20K invalid indices[2m > [22mshould sync all but first index given a declining array of indices[2m > [22mshould sync invalid indices of all elements [33m1049[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/scene/export.test.ts [2m([22m[2m27 tests[22m[2m)[22m[33m 20633[2mms[22m[39m
+   [33m[2m✓[22m[39m exportToSvg[2m > [22mwith default arguments [33m824[2mms[22m[39m
+   [33m[2m✓[22m[39m exportToSvg[2m > [22mwith a CJK font [33m17667[2mms[22m[39m
+   [33m[2m✓[22m[39m exportToSvg[2m > [22mwith exportPadding [33m306[2mms[22m[39m
+   [33m[2m✓[22m[39m exportToSvg[2m > [22mwith scale [33m327[2mms[22m[39m
+   [33m[2m✓[22m[39m exportToSvg[2m > [22mwith exportEmbedScene [33m314[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/arrowBinding.test.tsx [2m([22m[2m24 tests[22m[2m)[22m[33m 3642[2mms[22m[39m
+   [33m[2m✓[22m[39m Arrow binding – non-default case (bindingPreference: disabled)[2m > [22mArrow drawing with binding disabled[2m > [22marrow startBinding is set when binding is enabled [33m305[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/TTDDialog/utils/chat.test.ts [2m([22m[2m27 tests[22m[2m)[22m[90m 24[2mms[22m[39m
+ [32m✓[39m packages/element/tests/cropElement.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[33m 3817[2mms[22m[39m
+   [33m[2m✓[22m[39m Enter and leave the crop editor[2m > [22menter the editor by double clicking [33m381[2mms[22m[39m
+   [33m[2m✓[22m[39m Crop an image[2m > [22mIn the crop editor, dragging a handle crops the image, and dragging the image moves it within its crop (along one axis with shift) [33m310[2mms[22m[39m
+   [33m[2m✓[22m[39m Crop an image[2m > [22mIn the crop editor, alt-dragging a handle crops the image from its center [33m396[2mms[22m[39m
+   [33m[2m✓[22m[39m Crop an image[2m > [22mIn the crop editor, double-clicking a handle uncrops its side(s), mirrored with alt [33m366[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts [2m([22m[2m21 tests[22m[2m)[22m[90m 29[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/contextmenu.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[33m 5886[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mshows context menu for canvas [33m334[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mshows context menu for element [33m351[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mshows 'Group selection' in context menu for multiple selected elements [33m433[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mshows 'Ungroup selection' in context menu for group inside selected elements [33m390[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mselecting 'Paste styles' in context menu pastes styles [33m876[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mselecting 'Delete' in context menu deletes element [33m316[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mselecting 'Send backward' in context menu sends element backward [33m383[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mselecting 'Group selection' in context menu groups selected elements [33m366[2mms[22m[39m
+   [33m[2m✓[22m[39m contextMenu element[2m > [22mselecting 'Ungroup selection' in context menu ungroups selected group [33m408[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/excalidraw.test.tsx [2m([22m[2m31 tests[22m[2m)[22m[33m 5348[2mms[22m[39m
+   [33m[2m✓[22m[39m <Excalidraw/>[2m > [22mTest zenModeEnabled prop[2m > [22mshould show exit zen mode button when zen mode is set and zen mode option in context menu when zenModeEnabled is "undefined" [33m353[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/tool.test.tsx[2m > [22m[2mprops.activeTool (forced tool)[2m > [22m[2mignores user & API tool switching without side effects
+[22m[39m"rectangle" tool activation ignored — the active tool is controlled by the host via "props.activeTool"
+"freedraw" tool activation ignored — the active tool is controlled by the host via "props.activeTool"
+
+ [32m✓[39m packages/excalidraw/actions/actionDuplicateSelection.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[33m 3176[2mms[22m[39m
+   [33m[2m✓[22m[39m actionDuplicateSelection[2m > [22mduplicating frames[2m > [22mframe selected only [33m375[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/wheel.test.tsx [2m([22m[2m26 tests[22m[2m)[22m[33m 3096[2mms[22m[39m
+   [33m[2m✓[22m[39m wheel navigation[2m > [22mpans on plain wheel, horizontally with shift, and zooms on ctrl/cmd+wheel [33m318[2mms[22m[39m
+   [33m[2m✓[22m[39m wheel navigation[2m > [22mwheel button held down[2m > [22mwhile moving the pointer between zooms[2m > [22mkeeps drawing from zoom-scaled bitmaps until the gesture is over [33m385[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/tool.test.tsx[2m > [22m[2mprops.activeTool (forced tool)[2m > [22m[2mcomposes with interaction.enabled.tools (presenter → viewer)
+[22m[39m"selection" tool cannot be activated while the editor is non-interactive (see "interaction.enabled.tools")
+
+ [32m✓[39m packages/excalidraw/tests/pixelSnap.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 2618[2mms[22m[39m
+   [33m[2m✓[22m[39m element pixel snap[2m > [22mblits an unrotated text on whole device pixels at any zoom [33m331[2mms[22m[39m
+   [33m[2m✓[22m[39m element pixel snap[2m > [22mplaces overridden bitmaps like translated document geometry (0 rad) [33m344[2mms[22m[39m
+   [33m[2m✓[22m[39m element pixel snap[2m > [22mplaces overridden bitmaps like translated document geometry (1.5707963267948966 rad) [33m301[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/wrap.test.tsx [2m([22m[2m20 tests[22m[2m)[22m[33m 4310[2mms[22m[39m
+   [33m[2m✓[22m[39m wrap (w)[2m > [22mbinds a text to the selected container [33m467[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/tool.test.tsx [2m([22m[2m21 tests[22m[2m)[22m[33m 2755[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/library.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1599[2mms[22m[39m
+   [33m[2m✓[22m[39m library items inserting[2m > [22mshould regenerate ids but retain bindings on library insert [33m467[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/data/reconcile.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 36[2mms[22m[39m
+ [32m✓[39m packages/utils/tests/export.test.ts [2m([22m[2m19 tests[22m[2m)[22m[90m 193[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/Sidebar/Sidebar.test.tsx [2m([22m[2m12 tests[22m[2m)[22m[33m 1494[2mms[22m[39m
+ [32m✓[39m packages/element/tests/textElement.test.ts [2m([22m[2m28 tests[22m[2m)[22m[90m 18[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/colorInput.test.tsx [2m([22m[2m30 tests[22m[2m)[22m[33m 4349[2mms[22m[39m
+   [33m[2m✓[22m[39m ColorInput error handling[2m > [22mshows error for invalid hex length (too short) [33m644[2mms[22m[39m
+   [33m[2m✓[22m[39m ColorInput error handling[2m > [22mshows error for invalid hex length (too long) [33m346[2mms[22m[39m
+   [33m[2m✓[22m[39m ColorInput error handling[2m > [22mshows generic error for non-hex-shaped invalid input [33m399[2mms[22m[39m
+   [33m[2m✓[22m[39m ColorInput error handling[2m > [22mdoes not show an error for valid rgb() input [33m315[2mms[22m[39m
+   [33m[2m✓[22m[39m ColorInput error handling[2m > [22mdoes not show error for valid hex codes [33m305[2mms[22m[39m
+   [33m[2m✓[22m[39m ColorInput error handling[2m > [22mcan delete a valid color down to an empty input [33m413[2mms[22m[39m
+ [32m✓[39m packages/element/tests/recognizeShape.test.ts [2m([22m[2m21 tests[22m[2m)[22m[90m 180[2mms[22m[39m
+ [32m✓[39m packages/common/src/colors.test.ts [2m([22m[2m65 tests[22m[2m)[22m[90m 28[2mms[22m[39m
+ [32m✓[39m packages/element/tests/sortElements.test.ts [2m([22m[2m4 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m[90m 22[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/fileDrop.test.tsx [2m([22m[2m27 tests[22m[2m)[22m[33m 3348[2mms[22m[39m
+ [32m✓[39m packages/element/tests/embeddable.test.ts [2m([22m[2m15 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts [2m([22m[2m31 tests[22m[2m)[22m[90m 14[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/fitToContent.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 2017[2mms[22m[39m
+   [33m[2m✓[22m[39m scale-down[2m > [22mshould zoom to fit the selected element [33m360[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/elementLocking.test.tsx [2m([22m[2m15 tests[22m[2m)[22m[33m 3467[2mms[22m[39m
+   [33m[2m✓[22m[39m element locking[2m > [22mclick-selecting a locked element is disabled [33m420[2mms[22m[39m
+   [33m[2m✓[22m[39m element locking[2m > [22mdragging element that's below a locked element [33m332[2mms[22m[39m
+[90mstderr[2m | packages/element/tests/elbowArrow.test.tsx[2m > [22m[2melbow arrow routing[2m > [22m[2mcan generate proper points for bound elbow arrow
+[22m[39m[33m<<< WARNING: test "elbow arrow routing > can generate proper points for bound elbow arrow" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "elbow arrow routing > can generate proper points for bound elbow arrow" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "elbow arrow routing > can generate proper points for bound elbow arrow" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "elbow arrow routing > can generate proper points for bound elbow arrow" does not wrap some state update in act() >>>[0m
+[33m<<< WARNING: test "elbow arrow routing > can generate proper points for bound elbow arrow" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/excalidraw/tests/laser.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 2163[2mms[22m[39m
+   [33m[2m✓[22m[39m laser tool interactions[2m > [22mopens links while using the laser tool [33m391[2mms[22m[39m
+   [33m[2m✓[22m[39m laser tool interactions[2m > [22mactivates embeddables on center click while using the laser tool [33m390[2mms[22m[39m
+   [33m[2m✓[22m[39m laser tool interactions[2m > [22mactivates embeddables covered by a higher z-index canvas element [33m343[2mms[22m[39m
+ [32m✓[39m packages/element/tests/elbowArrow.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 3755[2mms[22m[39m
+   [33m[2m✓[22m[39m elbow arrow segment move[2m > [22mcan move the second segment of a fully connected elbow arrow [33m1097[2mms[22m[39m
+   [33m[2m✓[22m[39m elbow arrow segment move[2m > [22mcan move the second segment of an unconnected elbow arrow [33m492[2mms[22m[39m
+   [33m[2m✓[22m[39m elbow arrow ui[2m > [22mcan follow bound shapes [33m515[2mms[22m[39m
+   [33m[2m✓[22m[39m elbow arrow ui[2m > [22mcan follow bound rotated shapes [33m553[2mms[22m[39m
+   [33m[2m✓[22m[39m elbow arrow ui[2m > [22mkeeps arrow shape when the whole set of arrow and bindables are duplicated [33m486[2mms[22m[39m
+   [33m[2m✓[22m[39m elbow arrow ui[2m > [22mchanges arrow shape to unbind variant if only the connected elbow arrow is duplicated [33m458[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/actions/actionProperties.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 1922[2mms[22m[39m
+   [33m[2m✓[22m[39m element locking[2m > [22mproperties when tool selected[2m > [22mshould show active background top picks [33m355[2mms[22m[39m
+ [32m✓[39m packages/element/tests/dragElements.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 36[2mms[22m[39m
+ [32m✓[39m excalidraw-app/tests/collab.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 561[2mms[22m[39m
+   [33m[2m✓[22m[39m collaboration[2m > [22mshould emit two ephemeral increments even though updates get batched [33m325[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/move.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1378[2mms[22m[39m
+   [33m[2m✓[22m[39m move element[2m > [22mrectangle [33m515[2mms[22m[39m
+   [33m[2m✓[22m[39m move element[2m > [22mrectangles with binding arrow [33m428[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/pan.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1468[2mms[22m[39m
+   [33m[2m✓[22m[39m secondary-button pan[2m > [22mpans past five pixels with no context menu (viewModeEnabled=false) [33m302[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/multiPointCreate.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1545[2mms[22m[39m
+   [33m[2m✓[22m[39m remove shape in non linear elements[2m > [22mrectangle [33m409[2mms[22m[39m
+ [32m✓[39m packages/common/tests/keys.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 8[2mms[22m[39m
+ [32m✓[39m packages/common/src/utils.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 39[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/export.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 1191[2mms[22m[39m
+   [33m[2m✓[22m[39m export[2m > [22mexport embedded png and reimport [33m327[2mms[22m[39m
+ [32m✓[39m packages/math/tests/pca.test.ts [2m([22m[2m16 tests[22m[2m)[22m[90m 13[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/actions/actionDeleteSelected.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1630[2mms[22m[39m
+   [33m[2m✓[22m[39m deleting selected elements when frame selected should keep children + select them[2m > [22mframe only [33m443[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/actions/actionFlip.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1137[2mms[22m[39m
+   [33m[2m✓[22m[39m flipping re-centers selection[2m > [22melbow arrow touches group selection side yet it remains in place after multiple moves [33m476[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/FontPicker/FontPicker.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 3060[2mms[22m[39m
+   [33m[2m✓[22m[39m FontPicker[2m > [22mshould be able to open font picker [33m417[2mms[22m[39m
+   [33m[2m✓[22m[39m FontPicker[2m > [22mtop picks drag & drop[2m > [22mpins a font dragged from the list, replacing the hovered slot [33m608[2mms[22m[39m
+   [33m[2m✓[22m[39m FontPicker[2m > [22mtop picks drag & drop[2m > [22mrefuses pinning an already pinned font [33m484[2mms[22m[39m
+   [33m[2m✓[22m[39m FontPicker[2m > [22mtop picks drag & drop[2m > [22mreorders picks dragged within the strip [33m508[2mms[22m[39m
+   [33m[2m✓[22m[39m FontPicker[2m > [22mtop picks drag & drop[2m > [22mpads a short customized list with unpicked defaults [33m768[2mms[22m[39m
+ [32m✓[39m packages/math/tests/ellipse.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 10[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/actionStyles.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 2039[2mms[22m[39m
+   [33m[2m✓[22m[39m actionStyles[2m > [22mshould copy & paste styles via keyboard [33m1059[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/toolDrag.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 1145[2mms[22m[39m
+   [33m[2m✓[22m[39m dragging a tool out of the toolbar[2m > [22mpreviews while dragging without touching the scene, and drops one note [33m569[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/search.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 2528[2mms[22m[39m
+   [33m[2m✓[22m[39m search[2m > [22mshould toggle search on cmd+f [33m339[2mms[22m[39m
+   [33m[2m✓[22m[39m search[2m > [22mshould match text and cycle through matches on Enter [33m599[2mms[22m[39m
+   [33m[2m✓[22m[39m search[2m > [22mshould match text split across multiple lines [33m904[2mms[22m[39m
+   [33m[2m✓[22m[39m search[2m > [22mshould match frame names [33m500[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/viewMode.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1316[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/cursorHint.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 3005[2mms[22m[39m
+   [33m[2m✓[22m[39m cursor hint[2m > [22mshows hint when cycling arrow types via shortcut, and auto-hides it [33m1200[2mms[22m[39m
+ [32m✓[39m packages/element/tests/bounds.test.ts [2m([22m[2m10 tests[22m[2m)[22m[90m 22[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/animation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 11[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts [2m([22m[2m19 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/clipboard.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 26[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/scroll.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 580[2mms[22m[39m
+ [32m✓[39m packages/utils/tests/geometry.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 8[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/created.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1218[2mms[22m[39m
+   [33m[2m✓[22m[39m element creation timestamps[2m > [22mpreserves 'rectangle' created=123 through capture, edits, and creation undo/redo [33m391[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/crossDocument.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 365[2mms[22m[39m
+   [33m[2m✓[22m[39m cross-document rendering[2m > [22mscopes listeners, fonts, and portals to ownerDocument [33m363[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/image.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1171[2mms[22m[39m
+   [33m[2m✓[22m[39m image insertion[2m > [22mshould eventually initialize all dropped images [33m425[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/colorPickerHotkeys.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 13[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/charts.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[90m 18[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/DefaultSidebar.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 1274[2mms[22m[39m
+   [33m[2m✓[22m[39m DefaultSidebar[2m > [22mwhen `docked={undefined}` & `onDock={undefined}`, should allow docking [33m399[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/colorTargets.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 9[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/packages/events.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 910[2mms[22m[39m
+   [33m[2m✓[22m[39m event callbacks[2m > [22mshould resolve editor:mount/editor:initialize when subscribed before mount [33m426[2mms[22m[39m
+[90mstderr[2m | packages/excalidraw/tests/MermaidToExcalidraw.test.tsx[2m > [22m[2mTest <MermaidToExcalidraw/>[2m > [22m[2mshould show error in preview when mermaid library throws error
+[22m[39m[33m<<< WARNING: test "Test <MermaidToExcalidraw/> > should show error in preview when mermaid library throws error" does not wrap some state update in act() >>>[0m
+
+ [32m✓[39m packages/math/tests/polygon.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/MermaidToExcalidraw.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 551[2mms[22m[39m
+   [33m[2m✓[22m[39m Test <MermaidToExcalidraw/>[2m > [22mshould open mermaid popup when active tool is mermaid [33m338[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 10[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/data/library.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 11[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/eyeDropper.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 601[2mms[22m[39m
+   [33m[2m✓[22m[39m eye dropper[2m > [22mkeeps the color preview within the editor container [33m312[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/renderer/helpers.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 16[2mms[22m[39m
+ [32m✓[39m packages/element/tests/distribute.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 1864[2mms[22m[39m
+   [33m[2m✓[22m[39m distributing[2m > [22mshould distribute selected elements horizontally [33m714[2mms[22m[39m
+   [33m[2m✓[22m[39m distributing[2m > [22mshould distribute selected elements vertically [33m378[2mms[22m[39m
+   [33m[2m✓[22m[39m distributing[2m > [22mshould distribute selected elements horizontally based on their centers [33m423[2mms[22m[39m
+   [33m[2m✓[22m[39m distributing[2m > [22mshould distribute selected elements vertically with based on their centers [33m346[2mms[22m[39m
+ [32m✓[39m packages/common/tests/binary-heap.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 16[2mms[22m[39m
+ [32m✓[39m packages/element/tests/typeChecks.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 9[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/tooltip.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[90m 75[2mms[22m[39m
+ [32m✓[39m packages/math/tests/curve.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 6[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/appStateHooks.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[90m 43[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/Trans.test.tsx [2m([22m[2m1 test[22m[2m)[22m[90m 52[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/TTDDialog/common.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 9[2mms[22m[39m
+ [32m✓[39m packages/element/tests/sizeHelpers.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/hoc/withInternalFallback.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[33m 882[2mms[22m[39m
+   [33m[2m✓[22m[39m Test internal component fallback rendering[2m > [22mshould render only one menu per excalidraw instance (custom menu first scenario) [33m373[2mms[22m[39m
+ [32m✓[39m packages/utils/tests/utils.unmocked.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[90m 46[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/viewport.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 5[2mms[22m[39m
+ [32m✓[39m packages/common/src/appEventBus.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 7[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/convertElementType.binding.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 1661[2mms[22m[39m
+   [33m[2m✓[22m[39m convert element type keeps bound arrows attached[2m > [22melbowed=false: rectangle -> diamond [33m467[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/appState.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 670[2mms[22m[39m
+   [33m[2m✓[22m[39m appState[2m > [22mdrag&drop file doesn't reset non-persisted appState [33m350[2mms[22m[39m
+   [33m[2m✓[22m[39m appState[2m > [22mchanging fontSize with text tool selected (no element created yet) [33m317[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/UserList.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 444[2mms[22m[39m
+   [33m[2m✓[22m[39m UserList[2m > [22mretains the local dropdown when the same account has multiple clients [33m442[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/rotate.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1324[2mms[22m[39m
+   [33m[2m✓[22m[39m unselected bound arrow updates when rotating its target element [33m653[2mms[22m[39m
+   [33m[2m✓[22m[39m unselected bound arrows update when rotating their target elements [33m668[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/Popover.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[90m 39[2mms[22m[39m
+ [32m✓[39m packages/math/tests/range.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 6[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/freedrawMode.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 650[2mms[22m[39m
+   [33m[2m✓[22m[39m freedraw mode action[2m > [22mapplies currentItemStrokeVariability to newly drawn freedraw elements [33m375[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/actions/actionElementLock.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 536[2mms[22m[39m
+ [32m✓[39m packages/element/src/__tests__/flowchart.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 35[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/embeddable.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 573[2mms[22m[39m
+   [33m[2m✓[22m[39m embeddables[2m > [22mautoplays a Google Drive video on first activation only [33m570[2mms[22m[39m
+ [32m✓[39m packages/common/tests/queue.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 108[2mms[22m[39m
+ [32m✓[39m excalidraw-app/tests/LanguageList.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 622[2mms[22m[39m
+   [33m[2m✓[22m[39m Test LanguageList[2m > [22mrerenders UI on language change [33m619[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/fontTopPicks.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 6[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/positionElementBesideCursor.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/colorTopPicks.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 10[2mms[22m[39m
+ [32m✓[39m packages/element/tests/newElement.test.ts [2m([22m[2m15 tests[22m[2m)[22m[90m 20[2mms[22m[39m
+ [32m✓[39m packages/element/tests/selection.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/components/dropdownMenu/DropdownMenu.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1664[2mms[22m[39m
+   [33m[2m✓[22m[39m Test <DropdownMenu/>[2m > [22mcloses on Escape [33m422[2mms[22m[39m
+   [33m[2m✓[22m[39m Test <DropdownMenu/>[2m > [22mcloses main menu on outside pointer and touch events after reopening [33m694[2mms[22m[39m
+   [33m[2m✓[22m[39m Test <DropdownMenu/>[2m > [22mcloses more tools on outside pointer and touch events after reopening [33m545[2mms[22m[39m
+ [32m✓[39m packages/common/tests/url.test.tsx [2m([22m[2m1 test[22m[2m)[22m[90m 3[2mms[22m[39m
+ [32m✓[39m packages/math/tests/segment.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 5[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/convertElementType.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 349[2mms[22m[39m
+   [33m[2m✓[22m[39m convert element type[2m > [22mrecalculates roundness type when switching between generic shapes [33m347[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/clients.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/App.test.tsx [2m([22m[2m1 test[22m[2m)[22m[90m 229[2mms[22m[39m
+ [32m✓[39m packages/math/tests/line.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m excalidraw-app/tests/MobileMenu.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 318[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/tests/shortcuts.test.tsx [2m([22m[2m1 test[22m[2m)[22m[90m 264[2mms[22m[39m
+ [32m✓[39m packages/excalidraw/mermaid.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m packages/math/tests/point.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 4[2mms[22m[39m
+ [32m✓[39m packages/math/tests/vector.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 3[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m143 passed[39m[22m[90m (143)[39m
+[2m      Tests [22m [1m[32m2527 passed[39m[22m[2m | [22m[33m47 skipped[39m[2m | [22m[90m1 todo[39m[90m (2575)[39m
+[2m   Start at [22m 22:10:00
+[2m   Duration [22m 104.11s[2m (transform 7.68s, setup 84.31s, collect 171.45s, tests 379.25s, environment 62.78s, prepare 13.27s)[22m
+
+[34m % [39m[2mCoverage report from [22m[33mv8[39m
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   73.83 |    84.78 |   71.65 |   73.83 |                   
+ dev-docs          |       0 |        0 |       0 |       0 |                   
+  ...rus.config.js |       0 |        0 |       0 |       0 | 1-178             
+  sidebars.js      |       0 |        0 |       0 |       0 | 1-133             
+ dev-docs/src      |       0 |        0 |       0 |       0 |                   
+  initialData.js   |       0 |        0 |       0 |       0 | 1-1230            
+ ...src/components |       0 |        0 |       0 |       0 |                   
+  Highlight.js     |       0 |        0 |       0 |       0 | 1-15              
+ ...nents/Homepage |       0 |        0 |       0 |       0 |                   
+  index.js         |       0 |        0 |       0 |       0 | 1-63              
+  index.tsx        |       0 |        0 |       0 |       0 | 1-71              
+ ...docs/src/pages |       0 |        0 |       0 |       0 |                   
+  index.tsx        |       0 |        0 |       0 |       0 | 1-36              
+ ...docs/src/theme |       0 |        0 |       0 |       0 |                   
+  MDXComponents.js |       0 |        0 |       0 |       0 | 1-11              
+ ...ReactLiveScope |       0 |        0 |       0 |       0 |                   
+  index.js         |       0 |        0 |       0 |       0 | 1-39              
+ ...es/with-nextjs |       0 |        0 |       0 |       0 |                   
+  next.config.js   |       0 |        0 |       0 |       0 | 1-12              
+ ...ith-nextjs/src |       0 |        0 |       0 |       0 |                   
+  ...awWrapper.tsx |       0 |        0 |       0 |       0 | 1-23              
+ ...nextjs/src/app |       0 |        0 |       0 |       0 |                   
+  layout.tsx       |       0 |        0 |       0 |       0 | 1-11              
+  page.tsx         |       0 |        0 |       0 |       0 | 1-27              
+ ...xtjs/src/pages |       0 |        0 |       0 |       0 |                   
+  ...-in-pages.tsx |       0 |        0 |       0 |       0 | 1-23              
+ ...ipt-in-browser |       0 |        0 |       0 |       0 |                   
+  index.tsx        |       0 |        0 |       0 |       0 | 1-29              
+  initialData.tsx  |       0 |        0 |       0 |       0 | 1-994             
+  utils.ts         |       0 |        0 |       0 |       0 | 1-109             
+ ...ser/components |       0 |        0 |       0 |       0 |                   
+  CustomFooter.tsx |       0 |        0 |       0 |       0 | 1-74              
+  ExampleApp.tsx   |       0 |        0 |       0 |       0 | 1-1017            
+  MobileFooter.tsx |       0 |        0 |       0 |       0 | 1-30              
+ ...onents/sidebar |       0 |        0 |       0 |       0 |                   
+  ...leSidebar.tsx |       0 |        0 |       0 |       0 | 1-32              
+ excalidraw-app    |   48.68 |    56.25 |   17.64 |   48.68 |                   
+  App.tsx          |   53.78 |       55 |   13.51 |   53.78 | ...1297,1308-1309 
+  CustomStats.tsx  |   37.36 |      100 |       0 |   37.36 | 25-28,37-89       
+  ...ameExport.tsx |   20.53 |      100 |       0 |   20.53 | ...90-151,154-224 
+  app-jotai.ts     |   94.59 |    66.66 |     100 |   94.59 | 31-32             
+  app_constants.ts |     100 |      100 |     100 |     100 |                   
+  ...e-template.js |       0 |        0 |       0 |       0 | 1-11              
+  ...laborators.ts |   45.94 |       50 |   33.33 |   45.94 | 23-27,30-47,56-72 
+  index.tsx        |       0 |        0 |       0 |       0 | 1-17              
+  sentry.ts        |       0 |        0 |       0 |       0 | 1-94              
+  ...leAppTheme.ts |   86.27 |    77.77 |   66.66 |   86.27 | 26-27,30-31,42-44 
+ ...p/app-language |   98.55 |       70 |     100 |   98.55 |                   
+  LanguageList.tsx |     100 |      100 |     100 |     100 |                   
+  ...e-detector.ts |      96 |       40 |     100 |      96 | 14                
+  ...uage-state.ts |     100 |      100 |     100 |     100 |                   
+ ...raw-app/collab |   49.89 |    59.09 |   46.55 |   49.89 |                   
+  Collab.tsx       |   48.49 |    58.13 |   45.65 |   48.49 | ...1066,1074-1076 
+  CollabError.tsx  |   45.45 |      100 |       0 |   45.45 | 22-51             
+  Portal.tsx       |    56.8 |    60.86 |   54.54 |    56.8 | ...27-248,251-254 
+ ...app/components |   35.39 |       40 |   21.21 |   35.39 |                   
+  AI.tsx           |   20.57 |      100 |   33.33 |   20.57 | 28-151,156-170    
+  AppFooter.tsx    |     100 |       50 |     100 |     100 | 20                
+  AppMainMenu.tsx  |   83.14 |       25 |       0 |   83.14 | 64-78             
+  AppSidebar.tsx   |   61.06 |    14.28 |      50 |   61.06 | 16-66             
+  ...omeScreen.tsx |   78.04 |       50 |       0 |   78.04 | 17-34             
+  DebugCanvas.tsx  |   15.54 |       50 |    6.66 |   15.54 | ...39-536,545-563 
+  ...yptedIcon.tsx |     100 |      100 |     100 |     100 |                   
+  ...omoBanner.tsx |   97.22 |    33.33 |     100 |   97.22 | 14                
+  ...idrawPlus.tsx |   30.37 |      100 |       0 |   30.37 | 33-88,98-135      
+  ...rBoundary.tsx |    22.6 |    66.66 |   33.33 |    22.6 | ...3,56-73,76-145 
+ ...idraw-app/data |   40.61 |    58.92 |   48.33 |   40.61 |                   
+  FileManager.ts   |   49.66 |    38.46 |   41.66 |   49.66 | ...43-267,273-296 
+  LocalData.ts     |   51.26 |    83.33 |   52.94 |   51.26 | ...66-271,275-276 
+  Locker.ts        |   83.33 |       75 |      75 |   83.33 | 10-12             
+  TTDStorage.ts    |    64.7 |      100 |   33.33 |    64.7 | 27-37,44-50       
+  ...tatusStore.ts |   39.58 |      100 |      20 |   39.58 | ...18,21-35,38-47 
+  firebase.ts      |       0 |        0 |       0 |       0 | 1-319             
+  index.ts         |    55.7 |    66.66 |      70 |    55.7 | ...03-242,249-307 
+  localStorage.ts  |      48 |    33.33 |      60 |      48 | ...2,77-85,88-100 
+  tabSync.ts       |   41.02 |      100 |       0 |   41.02 | 13-15,18-25,28-39 
+ ...draw-app/share |   20.62 |       40 |    12.5 |   20.62 |                   
+  QRCode.tsx       |   14.28 |      100 |       0 |   14.28 | 9-56              
+  ShareDialog.tsx  |   22.18 |       50 |   16.66 |   22.18 | ...77-278,284-293 
+  qrcode.chunk.ts  |       0 |        0 |       0 |       0 | 1-5               
+ packages/common   |   19.54 |      100 |   16.66 |   19.54 |                   
+  debug.ts         |   19.54 |      100 |   16.66 |   19.54 | ...58-180,183-220 
+ ...ges/common/src |   88.98 |    88.05 |   84.83 |   88.98 |                   
+  appEventBus.ts   |   98.52 |     93.1 |     100 |   98.52 | 87-88             
+  binary-heap.ts   |   99.09 |    96.29 |     100 |   99.09 | 96                
+  bounds.ts        |     100 |      100 |     100 |     100 |                   
+  colors.ts        |   98.04 |    88.09 |     100 |   98.04 | ...19-420,428-430 
+  constants.ts     |     100 |      100 |     100 |     100 |                   
+  ...rInterface.ts |   72.52 |    55.88 |      80 |   72.52 | ...04-212,215-222 
+  emitter.ts       |     100 |      100 |     100 |     100 |                   
+  font-metadata.ts |   99.44 |       80 |     100 |   99.44 | 162               
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  keys.ts          |     100 |    93.33 |     100 |     100 | 39                
+  points.ts        |   96.29 |    95.23 |     100 |   96.29 | 51-53             
+  promise-pool.ts  |     100 |      100 |     100 |     100 |                   
+  queue.ts         |     100 |      100 |     100 |     100 |                   
+  random.ts        |     100 |    83.33 |     100 |     100 | 16                
+  url.ts           |   81.08 |       50 |     100 |   81.08 | 8-9,26-27,32-34   
+  utility-types.ts |       0 |        0 |       0 |       0 | 1-79              
+  utils.ts         |   84.11 |    89.44 |   79.56 |   84.11 | ...1210,1218-1233 
+  ...pshotStore.ts |   45.71 |      100 |   16.66 |   45.71 | ...50,53-59,62-69 
+ ...es/element/src |   85.29 |    89.47 |   92.08 |   85.29 |                   
+  Scene.ts         |   91.25 |    89.06 |   88.46 |   91.25 | ...89-390,398-407 
+  align.ts         |     100 |      100 |     100 |     100 |                   
+  ...dpointText.ts |   97.56 |    90.19 |     100 |   97.56 | ...64,190,266-267 
+  arrowheads.ts    |   93.75 |       75 |     100 |   93.75 | 11,15             
+  binding.ts       |    64.1 |    88.74 |      80 |    64.1 | ...3204,3207-3208 
+  bounds.ts        |   87.16 |    87.95 |      90 |   87.16 | ...1510,1522-1527 
+  bucketFill.ts    |   96.81 |    90.95 |     100 |   96.81 | ...1716,1824-1830 
+  collision.ts     |   92.78 |    96.35 |   95.65 |   92.78 | ...39-841,888-943 
+  comparisons.ts   |     100 |      100 |     100 |     100 |                   
+  ...ainerCache.ts |     100 |      100 |     100 |     100 |                   
+  ...ertToShape.ts |   91.35 |    79.61 |     100 |   91.35 | ...98,802,813-814 
+  cropElement.ts   |   94.98 |    83.58 |     100 |   94.98 | ...43-344,347-351 
+  delta.ts         |   92.99 |    89.52 |   94.73 |   92.99 | ...2086,2195-2200 
+  distance.ts      |     100 |    96.87 |     100 |     100 | 36                
+  distribute.ts    |     100 |      100 |     100 |     100 |                   
+  dragElements.ts  |   92.61 |    82.43 |     100 |   92.61 | ...79-383,388-392 
+  duplicate.ts     |      96 |     93.6 |     100 |      96 | ...45-646,661-678 
+  elbowArrow.ts    |   69.61 |    85.88 |    93.1 |   69.61 | ...2138,2180-2182 
+  elementLink.ts   |    67.3 |    73.33 |      80 |    67.3 | ...4-66,87,95-104 
+  embeddable.ts    |   61.68 |    67.08 |   63.63 |   61.68 | ...96-497,510-532 
+  flowchart.ts     |   95.97 |    95.74 |     100 |   95.97 | ...07-608,723-744 
+  ...ionalIndex.ts |   91.33 |    94.64 |     100 |   91.33 | ...65-167,471-473 
+  frame.ts         |   83.28 |    91.44 |   86.11 |   83.28 | ...74,984,986-996 
+  groups.ts        |   86.75 |    95.31 |   94.11 |   86.75 | ...24-135,191-203 
+  heading.ts       |   94.77 |    87.27 |   88.88 |   94.77 | ...08-210,220-222 
+  image.ts         |   60.78 |    72.72 |   57.14 |   60.78 | ...99-102,105-153 
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  ...mentEditor.ts |   81.51 |    83.11 |      92 |   81.51 | ...2754,2832-2834 
+  listMarker.ts    |   99.45 |    98.92 |     100 |   99.45 | 346-347           
+  mutateElement.ts |     100 |      100 |     100 |     100 |                   
+  newElement.ts    |   97.83 |    93.57 |     100 |   97.83 | ...27-438,547-548 
+  ...entsOnGrid.ts |    99.1 |    93.33 |     100 |    99.1 | 22                
+  renderElement.ts |   87.61 |    86.56 |   94.73 |   87.61 | ...1298,1303-1356 
+  ...zeElements.ts |   92.95 |    82.65 |   92.85 |   92.95 | ...1571,1575-1576 
+  resizeTest.ts    |   98.64 |    93.22 |     100 |   98.64 | 85-86,255,263     
+  selection.ts     |     100 |      100 |     100 |     100 |                   
+  shape.ts         |   83.06 |    85.34 |   91.17 |   83.06 | ...1234,1325-1326 
+  ...apeActions.ts |     100 |      100 |     100 |     100 |                   
+  sizeHelpers.ts   |   80.98 |    81.39 |     100 |   80.98 | ...72-275,278-281 
+  sortElements.ts  |   93.27 |    94.73 |     100 |   93.27 | 49-51,106-110     
+  stickyNote.ts    |   98.45 |    91.91 |     100 |   98.45 | ...53-954,968-969 
+  store.ts         |   92.38 |    91.89 |      86 |   92.38 | ...13-914,959-960 
+  textElement.ts   |   95.29 |    95.67 |   94.44 |   95.29 | ...65-366,603-615 
+  ...asurements.ts |   93.83 |    96.77 |   85.71 |   93.83 | ...00-201,211-218 
+  textWrapping.ts  |   96.89 |    95.34 |   93.02 |   96.89 | ...31-534,737-738 
+  transform.ts     |   92.68 |     86.2 |     100 |   92.68 | ...92-893,895-898 
+  ...ormHandles.ts |   98.02 |    93.93 |     100 |   98.02 | ...29-131,167,178 
+  typeChecks.ts    |   82.63 |    96.89 |   82.05 |   82.63 | ...76-388,404-411 
+  types.ts         |       0 |        0 |       0 |       0 | 1-496             
+  utils.ts         |   98.56 |    97.57 |     100 |   98.56 | ...70-171,195-196 
+  visualdebug.ts   |       0 |        0 |       0 |       0 | 1-257             
+  zindex.ts        |   93.67 |    89.87 |     100 |   93.67 | ...94-495,535-536 
+ ...ent/src/arrows |   44.26 |    76.92 |   57.14 |   44.26 |                   
+  focus.ts         |   43.37 |    78.78 |      50 |   43.37 | ...39-540,568-569 
+  helpers.ts       |   55.55 |    66.66 |     100 |   55.55 | 18-28,34-42       
+ ...ges/excalidraw |   54.85 |    80.36 |    58.4 |   54.85 |                   
+  analytics.ts     |      54 |    33.33 |     100 |      54 | 26-46,48-49       
+  animatedTrail.ts |   99.09 |    90.69 |     100 |   99.09 | 73-74             
+  appState.ts      |   98.59 |    84.61 |      75 |   98.59 | ...18-319,326-327 
+  clients.ts       |   62.01 |       55 |     100 |   62.01 | ...72-179,184-253 
+  clipboard.ts     |   67.43 |    73.95 |   78.94 |   67.43 | ...35-636,641-680 
+  deburr.ts        |   98.92 |      100 |     100 |   98.92 | 90                
+  ...ShapeTrail.ts |   96.25 |    86.66 |     100 |   96.25 | 21,65-66          
+  editor-jotai.ts  |     100 |      100 |     100 |     100 |                   
+  env.cjs          |       0 |        0 |       0 |       0 | 1-19              
+  errors.ts        |   68.88 |    66.66 |   33.33 |   68.88 | ...59,68-70,77-78 
+  gesture.ts       |     100 |      100 |     100 |     100 |                   
+  history.ts       |   97.18 |    97.36 |   93.33 |   97.18 | 52-56,241-242     
+  i18n.ts          |   83.13 |    70.37 |   11.11 |   83.13 | ...37,143,145-152 
+  index-node.ts    |       0 |        0 |       0 |       0 | 1-81              
+  index.tsx        |   91.41 |    86.74 |   66.66 |   91.41 | ...61-385,548-554 
+  laserTrails.ts   |   96.29 |     87.5 |     100 |   96.29 | 124-125,129-131   
+  mermaid.ts       |     100 |      100 |     100 |     100 |                   
+  polyfill.ts      |   13.22 |     12.5 |    12.5 |   13.22 | ...01-112,115-119 
+  reactUtils.ts    |   83.87 |       80 |     100 |   83.87 | 42-43,50-57       
+  ...rOverrides.ts |     100 |      100 |     100 |     100 |                   
+  shortcut.ts      |     100 |    33.33 |     100 |     100 | 9-15              
+  snapping.ts      |   42.92 |    57.74 |   73.07 |   42.92 | ...1385,1391,1395 
+  ...sizeHandle.ts |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 | 1-1645            
+  viewport.ts      |   98.45 |    95.23 |     100 |   98.45 | ...75-376,490-494 
+  workers.ts       |   30.51 |      100 |       0 |   30.51 | ...34-139,142-153 
+ ...lidraw/actions |   80.53 |    83.71 |   75.25 |   80.53 |                   
+  ...dToLibrary.ts |   76.92 |    83.33 |     100 |   76.92 | 22-29,55-61       
+  actionAlign.tsx  |    97.8 |    96.66 |      60 |    97.8 | ...53,187,221,251 
+  ...BoundText.tsx |   97.71 |    89.83 |     100 |   97.71 | ...87-188,358-362 
+  actionCanvas.tsx |   84.86 |    80.95 |   69.44 |   84.86 | ...35-438,441,465 
+  ...Clipboard.tsx |   38.06 |    71.42 |   63.63 |   38.06 | ...63-276,280-285 
+  ...ropEditor.tsx |   72.88 |       75 |      50 |   72.88 | 21-34,42-43       
+  ...eSelected.tsx |   82.79 |    84.61 |   85.71 |   82.79 | ...44-260,277,316 
+  ...onDeselect.ts |   88.74 |    85.71 |     100 |   88.74 | ...43-44,53,78-84 
+  ...istribute.tsx |     100 |    93.75 |      80 |     100 | 67                
+  ...Selection.tsx |   87.32 |     87.5 |      80 |   87.32 | 40-41,45-60       
+  ...lementLink.ts |    29.2 |      100 |      25 |    29.2 | ...78-102,104-111 
+  ...lementLock.ts |   88.12 |    61.53 |    87.5 |   88.12 | ...26-129,140,187 
+  actionExport.tsx |   51.08 |    60.71 |   42.85 |   51.08 | ...03-427,445-460 
+  ...nFinalize.tsx |      81 |    88.77 |   66.66 |      81 | ...45-350,426-435 
+  actionFlip.ts    |     100 |    95.65 |     100 |     100 | 77                
+  actionFrame.ts   |   73.92 |    89.74 |   69.23 |   73.92 | ...38-250,280,301 
+  actionGroup.tsx  |   85.18 |    83.33 |   71.42 |   85.18 | ...48,270,274-285 
+  ...onHistory.tsx |     100 |    92.85 |     100 |     100 | 97,137            
+  ...earEditor.tsx |   69.33 |    80.95 |      50 |   69.33 | ...69,184,189-197 
+  actionLink.tsx   |   78.46 |      100 |   66.66 |   78.46 | 25-38             
+  actionMenu.tsx   |   48.57 |      100 |      50 |   48.57 | 16-33             
+  ...nNavigate.tsx |   58.27 |    54.54 |      20 |   58.27 | ...37-138,144-146 
+  ...roperties.tsx |   84.75 |    81.79 |   90.36 |   84.75 | ...2243,2289-2290 
+  ...nSelectAll.ts |   91.42 |       70 |     100 |   91.42 | 29-30,60-63       
+  actionStyles.ts  |   89.17 |    66.66 |     100 |   89.17 | ...82-186,189-193 
+  ...AutoResize.ts |   97.72 |    91.66 |     100 |   97.72 | 48-49             
+  ...owBinding.tsx |     100 |      100 |     100 |     100 |                   
+  ...eGridMode.tsx |     100 |      100 |     100 |     100 |                   
+  ...tSnapping.tsx |   65.21 |      100 |   33.33 |   65.21 | 14-21             
+  ...sSnapMode.tsx |   73.52 |      100 |      60 |   73.52 | 19-27             
+  ...SearchMenu.ts |   75.86 |       50 |      60 |   75.86 | ...32,34-42,55-56 
+  ...apeSwitch.tsx |   74.28 |      100 |       0 |   74.28 | 24-31,34          
+  ...ShowHints.tsx |   71.42 |      100 |       0 |   71.42 | 19-26             
+  ...ggleStats.tsx |     100 |      100 |     100 |     100 |                   
+  ...eViewMode.tsx |     100 |      100 |     100 |     100 |                   
+  ...ToggleWrap.ts |   94.44 |      100 |   66.66 |   94.44 | 10                
+  ...leZenMode.tsx |     100 |      100 |     100 |     100 |                   
+  actionZindex.tsx |   94.87 |    83.33 |      75 |   94.87 | ...11,136-138,149 
+  colorTargets.ts  |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  manager.tsx      |   93.49 |    86.88 |     100 |   93.49 | ...97-198,233-234 
+  register.ts      |     100 |      100 |     100 |     100 |                   
+  shortcuts.ts     |   98.41 |    57.14 |     100 |   98.41 | 84,89             
+  types.ts         |       0 |        0 |       0 |       0 | 1-224             
+ ...alidraw/charts |   92.89 |     83.2 |   97.36 |   92.89 |                   
+  charts.bar.ts    |     100 |    94.11 |     100 |     100 | 55                
+  ....constants.ts |     100 |      100 |     100 |     100 |                   
+  ...ts.helpers.ts |   95.72 |    87.23 |     100 |   95.72 | ...78-679,844-855 
+  charts.line.ts   |     100 |    93.33 |     100 |     100 | 86                
+  charts.parse.ts  |   85.05 |    79.72 |     100 |   85.05 | ...60-161,167-171 
+  charts.radar.ts  |   83.91 |    35.71 |     100 |   83.91 | ...93,107,110-135 
+  charts.types.ts  |       0 |        0 |       0 |       0 | 1-18              
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...raw/components |   83.45 |    86.11 |   75.52 |   83.45 |                   
+  Actions.tsx      |   74.94 |     85.5 |   48.14 |   74.94 | ...91,799,931-941 
+  ...irmDialog.tsx |   91.66 |    83.33 |   66.66 |   91.66 | 34-36             
+  App.arrowText.ts |     100 |      100 |     100 |     100 |                   
+  ...bucketFill.ts |   91.69 |    81.81 |     100 |   91.69 | ...31,234-243,275 
+  App.clipboard.ts |   90.03 |    80.37 |     100 |   90.03 | ...79-405,543-544 
+  App.cursor.ts    |   84.36 |     93.1 |      90 |   84.36 | ...32,144,209-242 
+  App.drawshape.ts |   98.47 |    97.77 |     100 |   98.47 | 60-63             
+  App.duplicate.ts |   99.05 |    94.66 |     100 |   99.05 | ...49-250,379-380 
+  App.flowchart.ts |   99.49 |    94.23 |     100 |   99.49 | 195               
+  App.modifiers.ts |     100 |    92.85 |     100 |     100 | 19                
+  App.pan.ts       |   87.84 |    93.84 |   83.33 |   87.84 | 176-177,179-211   
+  App.selection.ts |   97.35 |    94.15 |     100 |   97.35 | ...16-617,698-700 
+  ...ectionTool.ts |   91.08 |    87.17 |     100 |   91.08 | ...1382,1431-1432 
+  App.text.ts      |   99.55 |    97.81 |     100 |   99.55 | 192-193,408-409   
+  App.textTool.ts  |    98.9 |    98.09 |     100 |    98.9 | 286-287,355-357   
+  App.toolDrag.ts  |   97.56 |    84.37 |    87.5 |   97.56 | ...69-170,223-224 
+  App.tsx          |   79.66 |    84.54 |   81.27 |   79.66 | ...48-11349,11393 
+  App.viewport.ts  |   95.34 |    82.23 |     100 |   95.34 | ...54,811-812,885 
+  App.wheel.ts     |   93.25 |    90.47 |     100 |   93.25 | ...4-50,77-78,152 
+  App.wrap.ts      |   98.48 |     88.4 |     100 |   98.48 | ...95-296,339-340 
+  ...teObserver.ts |   80.76 |    75.86 |   70.58 |   80.76 | ...52-159,168-180 
+  Avatar.tsx       |   83.33 |    33.33 |      50 |   83.33 | 30-36             
+  ...TextError.tsx |     100 |      100 |     100 |     100 |                   
+  Button.tsx       |     100 |      100 |     100 |     100 |                   
+  ...IconCycle.tsx |       0 |        0 |       0 |       0 | 1-30              
+  ...Separator.tsx |     100 |      100 |     100 |     100 |                   
+  Card.tsx         |   65.78 |      100 |       0 |   65.78 | 26-38             
+  CheckboxItem.tsx |   81.08 |      100 |      50 |   81.08 | 18-24             
+  ...irmDialog.tsx |   85.18 |      100 |   66.66 |   85.18 | 47-58             
+  ContextMenu.tsx  |   99.24 |    94.73 |   66.66 |   99.24 | 122               
+  ...TypePopup.tsx |   35.58 |    59.25 |   26.31 |   35.58 | ...44-950,953-959 
+  CursorHint.tsx   |   99.04 |    97.43 |     100 |   99.04 | 128-129           
+  ...odeToggle.tsx |   58.18 |      100 |       0 |   58.18 | 14-36             
+  ...ltSidebar.tsx |   94.48 |      100 |       0 |   94.48 | 47-53             
+  Dialog.tsx       |   75.91 |    88.88 |      50 |   75.91 | ...00-104,123-131 
+  ...ionButton.tsx |   91.83 |       50 |     100 |   91.83 | 37,41-43          
+  ...asButtons.tsx |   27.53 |      100 |       0 |   27.53 | 18-30,33-69       
+  ...inkDialog.tsx |   67.77 |    77.77 |   16.66 |   67.77 | ...40-155,163-164 
+  Ellipsify.tsx    |     100 |      100 |     100 |     100 |                   
+  ErrorDialog.tsx  |   82.92 |      100 |     100 |   82.92 | 19-25             
+  ...idrawLogo.tsx |     100 |      100 |     100 |     100 |                   
+  EyeDropper.tsx   |   95.77 |      100 |     100 |   95.77 | 261-262,264-273   
+  ...opOverlay.tsx |     100 |    96.07 |     100 |     100 | 38,41             
+  FilledButton.tsx |   80.67 |    16.66 |       0 |   80.67 | 59-79,103,106     
+  ...Container.tsx |     100 |      100 |     100 |     100 |                   
+  HelpButton.tsx   |     100 |      100 |     100 |     100 |                   
+  HelpDialog.tsx   |   97.33 |    77.27 |     100 |   97.33 | ...18,426,473-476 
+  HintViewer.tsx   |   94.31 |    93.49 |     100 |   94.31 | ...83-285,301-302 
+  IconButton.tsx   |   87.62 |    81.81 |      75 |   87.62 | ...44-146,152-154 
+  IconPicker.tsx   |   27.32 |    72.72 |   22.22 |   27.32 | ...67-284,319-328 
+  ...ortDialog.tsx |   67.74 |    61.53 |   21.42 |   67.74 | ...25-327,334-351 
+  ...ializeApp.tsx |     100 |    85.71 |     100 |     100 | 26                
+  InlineIcon.tsx   |     100 |      100 |     100 |     100 |                   
+  Island.tsx       |     100 |      100 |     100 |     100 |                   
+  ...ortDialog.tsx |   40.14 |    66.66 |      50 |   40.14 | ...01,121,127-138 
+  ...terButton.tsx |     100 |      100 |      50 |     100 |                   
+  LayerUI.tsx      |   93.27 |    86.84 |   62.96 |   93.27 | ...33-645,693-696 
+  LibraryMenu.tsx  |   78.79 |    79.16 |     100 |   78.79 | ...21-323,328-332 
+  ...wseButton.tsx |     100 |      100 |     100 |     100 |                   
+  ...olButtons.tsx |     100 |      100 |     100 |     100 |                   
+  ...erContent.tsx |   62.46 |       80 |   28.57 |   62.46 | ...04,307-309,319 
+  ...MenuItems.tsx |   75.05 |    75.51 |   42.85 |   75.05 | ...46-347,366-380 
+  ...nuSection.tsx |     100 |    72.72 |     100 |     100 | 81-90             
+  LibraryUnit.tsx  |    82.6 |       50 |   28.57 |    82.6 | ...99,101,104-110 
+  LinkButton.tsx   |      20 |      100 |       0 |      20 | 4-15              
+  ...ngMessage.tsx |   97.72 |      100 |     100 |   97.72 | 23                
+  LockButton.tsx   |     100 |      100 |     100 |     100 |                   
+  MagicButton.tsx  |      25 |      100 |       0 |      25 | 8-28              
+  MobileMenu.tsx   |   91.17 |       56 |      60 |   91.17 | ...69-171,194-196 
+  ...leToolbar.tsx |   88.56 |    85.29 |   17.64 |   88.56 | ...10-214,360-370 
+  Modal.tsx        |   90.27 |    85.71 |      50 |   90.27 | 40-46             
+  Paragraph.tsx    |       0 |        0 |       0 |       0 | 1-10              
+  ...artDialog.tsx |   84.44 |    73.68 |   44.44 |   84.44 | ...32-236,248-249 
+  ...odeButton.tsx |     100 |      100 |      50 |     100 |                   
+  Popover.tsx      |   78.06 |    78.94 |   66.66 |   78.06 | ...81,104,106-107 
+  ProjectName.tsx  |   29.82 |      100 |       0 |   29.82 | 18-57             
+  ...esPopover.tsx |   98.03 |    36.36 |     100 |   98.03 | 69-70             
+  ...shLibrary.tsx |    8.19 |      100 |       0 |    8.19 | ...14-207,210-547 
+  QuickSearch.tsx  |     100 |      100 |       0 |     100 |                   
+  RadioButton.tsx  |     100 |      100 |     100 |     100 |                   
+  RadioGroup.tsx   |     100 |      100 |      50 |     100 |                   
+  ...Selection.tsx |     100 |      100 |     100 |     100 |                   
+  Range.tsx        |    98.3 |       40 |     100 |    98.3 | 41                
+  SVGLayer.tsx     |     100 |      100 |     100 |     100 |                   
+  ...lableList.tsx |     100 |       50 |     100 |     100 | 21                
+  SearchMenu.tsx   |    93.1 |    78.51 |   72.22 |    93.1 | ...99-710,788-790 
+  Section.tsx      |     100 |      100 |     100 |     100 |                   
+  ...inkDialog.tsx |   26.25 |      100 |       0 |   26.25 | 22-80             
+  Spinner.tsx      |     100 |       50 |     100 |     100 | 27                
+  Stack.tsx        |     100 |      100 |     100 |     100 |                   
+  Switch.tsx       |   89.47 |      100 |   33.33 |   89.47 | 31-34             
+  TextField.tsx    |   90.59 |    54.54 |   33.33 |   90.59 | 74-75,90,104-111  
+  Toast.tsx        |   83.75 |    55.55 |   33.33 |   83.75 | ...41-42,48-49,56 
+  ToolPopover.tsx  |   98.24 |    84.61 |     100 |   98.24 | 53-54             
+  Toolbar.tsx      |   99.38 |    95.45 |   46.66 |   99.38 | 107,294           
+  Tools.tsx        |    97.9 |    88.23 |     100 |    97.9 | ...07,348-352,460 
+  Tooltip.tsx      |   93.54 |    69.23 |     100 |   93.54 | ...,51-55,172-173 
+  Trans.tsx        |   91.81 |    69.23 |     100 |   91.81 | ...,92-95,104-105 
+  UnlockPopup.tsx  |   75.82 |    77.77 |      50 |   75.82 | 34-37,51-52,68-83 
+  UserList.tsx     |   80.83 |    81.81 |     100 |   80.83 | ...95-313,330-359 
+  icons.tsx        |   94.17 |    96.29 |     100 |   94.17 | ...1597,1602-1614 
+  ...sideCursor.ts |     100 |      100 |     100 |     100 |                   
+  ...Predicates.ts |     100 |      100 |     100 |     100 |                   
+ ...ts/ColorPicker |   81.04 |     75.1 |   62.74 |   81.04 |                   
+  ColorInput.tsx   |   88.38 |    88.88 |      50 |   88.38 | ...04-110,129-137 
+  ColorPicker.tsx  |   79.15 |     78.2 |   57.14 |   79.15 | ...38-442,454-457 
+  ...ColorList.tsx |   28.57 |      100 |       0 |   28.57 | 23-77             
+  HotkeyLabel.tsx  |     100 |      100 |     100 |     100 |                   
+  Picker.tsx       |   90.12 |    66.66 |     100 |   90.12 | ...35-136,183-194 
+  ...ColorList.tsx |     100 |    86.36 |   66.66 |     100 | 70,111,117        
+  ...erHeading.tsx |     100 |      100 |     100 |     100 |                   
+  ShadeList.tsx    |   97.81 |    76.92 |   33.33 |   97.81 | 88-90             
+  TopPicks.tsx     |   95.45 |    57.89 |   66.66 |   95.45 | 70-72,101,104,110 
+  ...ickerUtils.ts |   91.58 |    93.33 |     100 |   91.58 | 35-36,80-86       
+  ...opPicksDnD.ts |   64.06 |      100 |      50 |   64.06 | 15-20,23-39       
+  ...avHandlers.ts |   63.52 |    58.53 |     100 |   63.52 | ...57,293,300-318 
+ ...CommandPalette |    12.6 |       50 |   11.11 |    12.6 |                   
+  ...ndPalette.tsx |   12.82 |       60 |    12.5 |   12.82 | ...3-985,988-1045 
+  ...letteItems.ts |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 | 1-25              
+ ...amToCodePlugin |     100 |      100 |     100 |     100 |                   
+  ...odePlugin.tsx |     100 |      100 |     100 |     100 |                   
+ ...nts/FontPicker |   84.34 |    83.59 |    82.6 |   84.34 |                   
+  FontPicker.tsx   |    95.7 |    92.15 |      90 |    95.7 | 83-88,175,180-185 
+  ...ickerList.tsx |   82.52 |    78.68 |   71.42 |   82.52 | ...42-344,393-401 
+  ...erTrigger.tsx |     100 |    83.33 |     100 |     100 | 48                
+  ...opPicksDnD.ts |   88.67 |       70 |     100 |   88.67 | 54-65             
+  ...avHandlers.ts |      25 |      100 |       0 |      25 | 18-68             
+ ...erwriteConfirm |   44.44 |       50 |       0 |   44.44 |                   
+  ...teConfirm.tsx |   53.33 |       50 |       0 |   53.33 | 31-65             
+  ...rmActions.tsx |   34.88 |      100 |       0 |   34.88 | ...57,60-74,78-79 
+  ...nfirmState.ts |   47.82 |      100 |       0 |   47.82 | 23-46             
+ ...onents/Sidebar |   93.58 |    89.28 |   85.71 |   93.58 |                   
+  Sidebar.tsx      |   87.98 |    91.89 |   66.66 |   87.98 | ...15-123,130-136 
+  ...barHeader.tsx |     100 |      100 |     100 |     100 |                   
+  SidebarTab.tsx   |     100 |      100 |     100 |     100 |                   
+  ...abTrigger.tsx |     100 |      100 |     100 |     100 |                   
+  ...bTriggers.tsx |     100 |      100 |     100 |     100 |                   
+  SidebarTabs.tsx  |   83.78 |       50 |      50 |   83.78 | 16-17,26-29       
+  ...arTrigger.tsx |     100 |    66.66 |     100 |     100 | 39,48             
+  common.ts        |     100 |      100 |     100 |     100 |                   
+  ...t.helpers.tsx |     100 |      100 |     100 |     100 |                   
+ ...mponents/Stats |   68.61 |    72.69 |   74.46 |   68.61 |                   
+  Angle.tsx        |   84.46 |    22.22 |     100 |   84.46 | ...57,61-70,82-83 
+  CanvasGrid.tsx   |      30 |      100 |       0 |      30 | 20-68             
+  Collapsible.tsx  |     100 |       50 |     100 |     100 | 38                
+  Dimension.tsx    |   46.26 |       60 |      75 |   46.26 | ...30-332,334-344 
+  DragInput.tsx    |   67.39 |     92.3 |   55.55 |   67.39 | ...63,372-382,396 
+  FontSize.tsx     |   87.71 |       80 |     100 |   87.71 | 50-51,58-69       
+  MultiAngle.tsx   |   74.07 |       75 |     100 |   74.07 | ...5,62-63,70-100 
+  ...Dimension.tsx |   68.09 |    81.81 |   83.33 |   68.09 | ...14-427,430-460 
+  ...iFontSize.tsx |   62.27 |    92.85 |   66.66 |   62.27 | 69-131            
+  ...iPosition.tsx |   72.89 |    73.52 |      75 |   72.89 | ...67-196,202-205 
+  Position.tsx     |   53.55 |    45.45 |     100 |   53.55 | ...85-186,188-196 
+  index.tsx        |   89.93 |    65.78 |      60 |   89.93 | ...84,288-293,302 
+  utils.ts         |   64.56 |    84.61 |   83.33 |   64.56 | ...77-187,190-232 
+ ...ents/TTDDialog |   49.04 |    75.45 |   45.83 |   49.04 |                   
+  ...rorEditor.tsx |   45.18 |      100 |       0 |   45.18 | ...16-120,123-237 
+  ...xcalidraw.tsx |    65.6 |    82.14 |   61.53 |    65.6 | ...84-285,292-293 
+  TTDContext.tsx   |     100 |      100 |     100 |     100 |                   
+  TTDDialog.tsx    |   81.48 |       80 |   66.66 |   81.48 | ...98-111,115-123 
+  ...alogInput.tsx |   77.37 |    83.33 |   66.66 |   77.37 | ...02-113,129-134 
+  ...logOutput.tsx |   82.78 |    66.66 |     100 |   82.78 | ...4-76,84,96-101 
+  ...alogPanel.tsx |   71.77 |       40 |   66.66 |   71.77 | ...,85-95,101-104 
+  ...logPanels.tsx |     100 |      100 |     100 |     100 |                   
+  ...tShortcut.tsx |     100 |      100 |     100 |     100 |                   
+  TTDDialogTab.tsx |     100 |      100 |     100 |     100 |                   
+  ...abTrigger.tsx |   19.04 |      100 |       0 |   19.04 | 4-20              
+  ...bTriggers.tsx |   30.76 |      100 |       0 |   30.76 | 4-12              
+  ...ialogTabs.tsx |   58.62 |      100 |      50 |   58.62 | 26-49             
+  ...ogTrigger.tsx |   91.66 |      100 |      50 |   91.66 | 25-27             
+  ...viewPanel.tsx |   36.17 |      100 |       0 |   36.17 | 18-47             
+  ...meMessage.tsx |   27.27 |      100 |       0 |   27.27 | 4-11              
+  ...ToDiagram.tsx |   14.66 |      100 |       0 |   14.66 | 36-238,241-264    
+  common.ts        |    63.9 |    82.35 |      50 |    63.9 | ...22-129,139-169 
+  ...-lang-lite.ts |    8.53 |      100 |       0 |    8.53 | 5-77,81-82        
+  types.ts         |       0 |        0 |       0 |       0 | 1-124             
+  ...hatStorage.ts |    15.1 |      100 |       0 |    15.1 | 23-28,36-192      
+ ...TTDDialog/Chat |   12.61 |      100 |       0 |   12.61 |                   
+  ...storyMenu.tsx |   27.27 |      100 |       0 |   27.27 | 25-88             
+  ...Interface.tsx |     8.9 |      100 |       0 |     8.9 | 18-191            
+  ChatMessage.tsx  |    9.63 |      100 |       0 |    9.63 | 22-218            
+  TTDChatPanel.tsx |   12.42 |      100 |       0 |   12.42 | 21-161            
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  useChatAgent.ts  |   10.52 |      100 |       0 |   10.52 | 9-76              
+ ...TDDialog/hooks |   12.86 |      100 |       0 |   12.86 |                   
+  ...Management.ts |   14.91 |      100 |       0 |   14.91 | 18-114            
+  ...idRenderer.ts |   13.14 |      100 |       0 |   13.14 | 29-213            
+  ...Generation.ts |   11.55 |      100 |       0 |   11.55 | 27-225            
+ ...TDDialog/utils |   94.14 |    88.16 |     100 |   94.14 |                   
+  ...treamFetch.ts |   94.22 |    90.38 |     100 |   94.22 | ...71,173,183-187 
+  chat.ts          |     100 |    94.73 |     100 |     100 | 64                
+  ...aidAutoFix.ts |   95.42 |    86.66 |     100 |   95.42 | ...5-46,74-76,148 
+  mermaidError.ts  |   86.46 |    80.55 |     100 |   86.46 | ...09-112,115-119 
+  ...Validation.ts |     100 |    94.11 |     100 |     100 | 22                
+ ...ts/TopPicksDnD |   84.92 |    70.21 |   84.37 |   84.92 |                   
+  ...ntextMenu.tsx |     100 |      100 |     100 |     100 |                   
+  TopPicksTip.tsx  |      85 |       60 |      50 |      85 | 40-42,48-53       
+  topPicksDnD.tsx  |   83.72 |    69.76 |   88.88 |   83.72 | ...65-566,569-570 
+ ...ortStatusFrame |   20.73 |      100 |       0 |   20.73 |                   
+  ...atusFrame.tsx |   20.73 |      100 |       0 |   20.73 | 15-24,28-82       
+ ...nents/canvases |   96.65 |    87.23 |     100 |   96.65 |                   
+  ...iveCanvas.tsx |   95.76 |     86.2 |     100 |   95.76 | ...25-126,187-188 
+  ...entCanvas.tsx |   96.82 |    66.66 |     100 |   96.82 | 31-32             
+  StaticCanvas.tsx |    98.5 |    93.33 |     100 |    98.5 | 47-48             
+  index.tsx        |     100 |      100 |     100 |     100 |                   
+ ...s/dropdownMenu |   77.58 |    89.47 |      70 |   77.58 |                   
+  DropdownMenu.tsx |   98.57 |       50 |     100 |   98.57 | 40                
+  ...nuContent.tsx |     100 |      100 |     100 |     100 |                   
+  ...MenuGroup.tsx |     100 |      100 |     100 |     100 |                   
+  ...nMenuItem.tsx |   63.02 |      100 |      50 |   63.02 | 71-114            
+  ...mCheckbox.tsx |      60 |      100 |       0 |      60 | 8-13              
+  ...emContent.tsx |     100 |       80 |     100 |     100 | 27                
+  ...tentRadio.tsx |   41.81 |      100 |       0 |   41.81 | 20-51             
+  ...temCustom.tsx |     100 |       50 |     100 |     100 | 17                
+  ...uItemLink.tsx |     100 |      100 |     100 |     100 |                   
+  ...Separator.tsx |     100 |      100 |     100 |     100 |                   
+  ...wnMenuSub.tsx |   65.38 |      100 |       0 |   65.38 | 11-19             
+  ...ubContent.tsx |   23.94 |      100 |       0 |   23.94 | 15-68             
+  ...ubTrigger.tsx |   39.47 |      100 |       0 |   39.47 | 13-35             
+  ...nuTrigger.tsx |     100 |      100 |     100 |     100 |                   
+  common.ts        |     100 |      100 |     100 |     100 |                   
+  ...nMenuUtils.ts |   92.59 |       75 |     100 |   92.59 | 14-15             
+ ...ponents/footer |     100 |      100 |   66.66 |     100 |                   
+  Footer.tsx       |     100 |      100 |      50 |     100 |                   
+  FooterCenter.tsx |     100 |      100 |     100 |     100 |                   
+ ...components/hoc |     100 |      100 |     100 |     100 |                   
+  ...lFallback.tsx |     100 |      100 |     100 |     100 |                   
+ ...ents/hyperlink |   65.83 |     62.5 |    62.5 |   65.83 |                   
+  Hyperlink.tsx    |   58.58 |    55.76 |   53.84 |   58.58 | ...77-490,492-495 
+  helpers.ts       |     100 |    91.66 |     100 |     100 | 35                
+ ...-collaboration |   93.75 |       25 |     100 |   93.75 |                   
+  ...onTrigger.tsx |   93.75 |       25 |     100 |   93.75 | 39-41             
+ ...ents/main-menu |   55.23 |    91.89 |      40 |   55.23 |                   
+  DefaultItems.tsx |   50.49 |     93.1 |   36.36 |   50.49 | ...43-658,661-693 
+  MainMenu.tsx     |   90.52 |     87.5 |     100 |   90.52 | 67-75             
+ ...welcome-screen |   99.27 |       95 |    87.5 |   99.27 |                   
+  ...en.Center.tsx |   98.97 |    92.85 |   83.33 |   98.97 | 155-156           
+  ...een.Hints.tsx |     100 |      100 |     100 |     100 |                   
+  ...omeScreen.tsx |     100 |      100 |     100 |     100 |                   
+ ...lidraw/context |     100 |      100 |     100 |     100 |                   
+  tunnels.ts       |     100 |      100 |     100 |     100 |                   
+  ui-appState.ts   |     100 |      100 |     100 |     100 |                   
+ ...xcalidraw/data |   71.88 |    75.56 |   67.39 |   71.88 |                   
+  ...calStorage.ts |   59.61 |    66.66 |      60 |   59.61 | ...27,38-40,44-51 
+  blob.ts          |   67.14 |    66.31 |   68.57 |   67.14 | ...47-548,554-555 
+  encode.ts        |   51.44 |    57.89 |   43.75 |   51.44 | ...58-372,375-412 
+  encryption.ts    |   34.04 |       50 |      20 |   34.04 | ...48,51-78,81-94 
+  filesystem.ts    |   22.66 |      100 |       0 |   22.66 | 14-47,50-73       
+  image.ts         |   92.95 |    85.71 |     100 |   92.95 | 62-63,66-68       
+  index.ts         |   65.62 |       60 |     100 |   65.62 | ...62-163,167-223 
+  json.ts          |   66.66 |    61.53 |    62.5 |   66.66 | ...03-113,148-159 
+  library.ts       |   72.82 |    69.79 |   71.87 |   72.82 | ...65-978,983-986 
+  reconcile.ts     |     100 |       75 |     100 |     100 | 31-33,52,60       
+  resave.ts        |   24.48 |      100 |       0 |   24.48 | 13-49             
+  restore.ts       |   87.71 |    82.11 |      88 |   87.71 | ...1279-1284,1334 
+  types.ts         |       0 |        0 |       0 |       0 | 1-66              
+ ...lidraw/data/ai |       0 |        0 |       0 |       0 |                   
+  types.ts         |       0 |        0 |       0 |       0 | 1-300             
+ ...alidraw/eraser |   20.72 |      100 |   22.22 |   20.72 |                   
+  index.ts         |   20.72 |      100 |   22.22 |   20.72 | ...89-193,197-304 
+ ...calidraw/fonts |   80.37 |    76.13 |      90 |   80.37 |                   
+  ...awFontFace.ts |   70.81 |    63.33 |      90 |   70.81 | ...87-188,198-202 
+  Fonts.ts         |   84.47 |    82.75 |      90 |   84.47 | ...26,469,476-477 
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...fonts/Cascadia |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...ts/ComicShanns |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...aw/fonts/Emoji |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...nts/Excalifont |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...onts/Helvetica |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...nts/Liberation |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...w/fonts/Lilita |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...w/fonts/Nunito |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...w/fonts/Virgil |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ .../fonts/Xiaolai |     100 |      100 |     100 |     100 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+ ...calidraw/hooks |   79.67 |    67.81 |   66.66 |   79.67 |                   
+  ...StateValue.ts |   84.88 |       60 |     100 |   84.88 | ...10-111,155-156 
+  ...ckRefState.ts |     100 |      100 |     100 |     100 |                   
+  ...dIndicator.ts |   74.07 |      100 |      50 |   74.07 | 10-16             
+  ...lContainer.ts |     100 |    94.11 |     100 |     100 | 22                
+  useEmitter.ts    |     100 |      100 |     100 |     100 |                   
+  ...aryItemSvg.ts |   89.89 |    76.92 |      60 |   89.89 | 57-62,70-71,91-92 
+  ...tsideClick.ts |   87.09 |    46.66 |     100 |   87.09 | ...66,73-74,78-79 
+  ...llPosition.ts |   87.87 |       75 |     100 |   87.87 | 16-17,20-21       
+  useStable.ts     |     100 |      100 |     100 |     100 |                   
+  ...leCallback.ts |   33.33 |      100 |       0 |   33.33 | 7-18              
+  ...ditorFocus.ts |   49.19 |       25 |   33.33 |   49.19 | ...-94,98,111-124 
+  useTransition.ts |   55.55 |        0 |       0 |   55.55 | 4-7               
+ ...calidraw/lasso |   98.51 |     93.8 |     100 |   98.51 |                   
+  index.ts         |   98.05 |       92 |     100 |   98.05 | 100-103           
+  utils.ts         |   98.75 |    94.31 |     100 |   98.75 | ...93-294,305-306 
+ ...idraw/renderer |   77.96 |    83.64 |   89.23 |   77.96 |                   
+  animation.ts     |   97.59 |    95.23 |     100 |   97.59 | 115-116,146-147   
+  helpers.ts       |   97.45 |    89.47 |     100 |   97.45 | 56-57,146-147     
+  ...ctiveScene.ts |   80.37 |    89.13 |      96 |   80.37 | ...1912,2120-2146 
+  ...ementScene.ts |   83.78 |    57.14 |     100 |   83.78 | ...,97-98,106-108 
+  renderSnaps.ts   |   19.24 |    16.66 |   16.66 |   19.24 | ...17-125,128-213 
+  roundRect.ts     |   26.82 |      100 |       0 |   26.82 | 12-41             
+  staticScene.ts   |   93.53 |    82.95 |     100 |   93.53 | ...15-516,532-533 
+  ...icSvgScene.ts |   71.27 |    71.56 |     100 |   71.27 | ...07-908,916-931 
+ ...calidraw/scene |   81.97 |    85.59 |   93.93 |   81.97 |                   
+  Renderer.ts      |   99.52 |    98.46 |     100 |   99.52 | 284-285           
+  export.ts        |   94.16 |    82.73 |     100 |   94.16 | ...1294,1301-1302 
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  normalize.ts     |     100 |      100 |     100 |     100 |                   
+  scrollbars.ts    |   23.22 |    33.33 |      50 |   23.22 | 16-130,147-150    
+  types.ts         |       0 |        0 |       0 |       0 | 1-182             
+ ...alidraw/subset |   53.75 |       60 |    62.5 |   53.75 |                   
+  subset-main.ts   |   50.76 |       75 |      50 |   50.76 | ...,79-84,115-130 
+  ...ared.chunk.ts |   86.41 |       60 |     100 |   86.41 | 33-36,72-78       
+  ...rker.chunk.ts |       0 |        0 |       0 |       0 | 1-42              
+ ...ubset/harfbuzz |   93.67 |    80.95 |     100 |   93.67 |                   
+  ...z-bindings.ts |   91.08 |       40 |     100 |   91.08 | ...61-166,178-185 
+  ...uzz-loader.ts |   96.49 |    83.33 |     100 |   96.49 | 45-46             
+  harfbuzz-wasm.ts |     100 |      100 |     100 |     100 |                   
+ ...w/subset/woff2 |   50.52 |    57.37 |   30.42 |   50.52 |                   
+  ...2-bindings.ts |   49.02 |    55.36 |   29.42 |   49.02 | ...4033,4035-4041 
+  woff2-loader.ts  |   94.73 |    81.81 |     100 |   94.73 | 59-60,64-65       
+  woff2-wasm.ts    |     100 |      100 |     100 |     100 |                   
+ ...lidraw/wysiwyg |   85.88 |    80.88 |   88.88 |   85.88 |                   
+  textWysiwyg.tsx  |   85.88 |    80.88 |   88.88 |   85.88 | ...1262,1290-1293 
+ ...l-indexing/src |   92.23 |    87.85 |     100 |   92.23 |                   
+  index.ts         |   92.23 |    87.85 |     100 |   92.23 | ...41-242,262-263 
+ ...er-pointer/src |   72.29 |    78.94 |   77.77 |   72.29 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  math.ts          |   68.57 |      100 |   73.33 |   68.57 | ...5-63,82,85-105 
+  simplify.ts      |    7.14 |      100 |       0 |    7.14 | 4-42              
+  state.ts         |   80.42 |    73.33 |    90.9 |   80.42 | ...54-355,373-374 
+ packages/math/src |   92.71 |     93.7 |   87.15 |   92.71 |                   
+  angle.ts         |   55.84 |      100 |   57.14 |   55.84 | 22-27,48-62,65-77 
+  constants.ts     |     100 |      100 |     100 |     100 |                   
+  curve.ts         |   89.28 |    90.24 |   88.88 |   89.28 | ...23-524,527-528 
+  ellipse.ts       |   99.18 |    96.66 |     100 |   99.18 | 131-132           
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  line.ts          |     100 |      100 |     100 |     100 |                   
+  pca.ts           |      99 |    91.66 |     100 |      99 | 62-63             
+  point.ts         |   97.34 |    96.77 |   93.33 |   97.34 | 55,150-155        
+  polygon.ts       |   99.05 |    96.22 |     100 |   99.05 | 206-207           
+  range.ts         |   87.95 |     87.5 |      60 |   87.95 | 23-24,45-47,79-83 
+  rectangle.ts     |   43.58 |      100 |      25 |   43.58 | 14-17,20-30,33-39 
+  segment.ts       |   87.74 |    96.55 |      80 |   87.74 | ...,93-94,170-183 
+  triangle.ts      |     100 |    66.66 |     100 |     100 | 25                
+  types.ts         |     100 |      100 |     100 |     100 |                   
+  utils.ts         |   78.78 |      100 |   83.33 |   78.78 | 18-24             
+  vector.ts        |   98.75 |    95.23 |     100 |   98.75 | 151-152           
+ ...ages/utils/src |   76.43 |    84.09 |   66.66 |   76.43 |                   
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  shape.ts         |   76.55 |    89.47 |   72.22 |   76.55 | ...10-515,518-546 
+  test-utils.ts    |   63.63 |       50 |   33.33 |   63.63 | 6-7,17-26         
+ public            |       0 |        0 |       0 |       0 |                   
+  ...ice-worker.js |       0 |        0 |       0 |       0 | 1-20              
+ scripts           |       0 |        0 |       0 |       0 |                   
+  ...s-coverage.js |       0 |        0 |       0 |       0 | 1-37              
+  build-node.js    |       0 |        0 |       0 |       0 | 1-40              
+  build-version.js |       0 |        0 |       0 |       0 | 1-61              
+  buildBase.js     |       0 |        0 |       0 |       0 | 1-54              
+  buildDocs.js     |       0 |        0 |       0 |       0 | 1-21              
+  buildPackage.js  |       0 |        0 |       0 |       0 | 1-129             
+  buildUtils.js    |       0 |        0 |       0 |       0 | 1-66              
+  buildWasm.js     |       0 |        0 |       0 |       0 | 1-75              
+  ...escription.js |       0 |        0 |       0 |       0 | 1-215             
+  release.js       |       0 |        0 |       0 |       0 | 1-245             
+  ...eChangelog.js |       0 |        0 |       0 |       0 | 1-106             
+ scripts/woff2     |       0 |        0 |       0 |       0 |                   
+  ...ld-plugins.js |       0 |        0 |       0 |       0 | 1-252             
+  ...te-plugins.js |       0 |        0 |       0 |       0 | 1-112             
+-------------------|---------|----------|---------|---------|-------------------
+Done in 105.49s.

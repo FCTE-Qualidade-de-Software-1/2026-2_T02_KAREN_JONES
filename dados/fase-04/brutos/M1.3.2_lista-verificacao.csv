@@ -1,0 +1,5 @@
+﻿topico,presente,arquivo-e-secao
+guia de contribuição,sim,"dev-docs/docs/introduction/contributing.mdx (página Contributing, com Setup e Pull Request Guidelines), para onde remetem CONTRIBUTING.md e README.md#Contributing"
+preparação do ambiente,sim,"dev-docs/docs/introduction/development.mdx#Local Installation (Requirements, Clone the repo, Install the dependencies, Start the server)"
+convenções de código,sim,"AGENTS.md#Guidelines (regras de uso de app.ownerDocument e app.ownerWindow e de Merge<Base, Overrides>)"
+arquitetura ou organização do código,não,"Nenhum documento dedicado nas fontes da ficha. dev-docs/docs/codebase/ só tem frames.mdx e json-schema.mdx, sobre temas pontuais. CLAUDE.md#Project Structure e #Architecture Notes descrevem a organização, mas o arquivo não está entre as fontes da ficha"

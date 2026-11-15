@@ -1,0 +1,544 @@
+excalidraw-app/App.tsx:36:import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+excalidraw-app/App.tsx:156:window.EXCALIDRAW_THROTTLE_RENDER = true;
+excalidraw-app/App.tsx:180:window.addEventListener(
+excalidraw-app/App.tsx:192:if (window.self !== window.top) {
+excalidraw-app/App.tsx:194:    const parentUrl = new URL(document.referrer);
+excalidraw-app/App.tsx:195:    const currentUrl = new URL(window.location.href);
+excalidraw-app/App.tsx:226:  const searchParams = new URLSearchParams(window.location.search);
+excalidraw-app/App.tsx:228:  const jsonBackendMatch = window.location.hash.match(
+excalidraw-app/App.tsx:231:  const externalUrlMatch = window.location.hash.match(/^#url=(.*)$/);
+excalidraw-app/App.tsx:250:  let roomLinkData = getCollaborationLinkData(window.location.href);
+excalidraw-app/App.tsx:285:        window.history.replaceState({}, APP_NAME, window.location.origin);
+excalidraw-app/App.tsx:289:      if (document.hidden) {
+excalidraw-app/App.tsx:291:          window.addEventListener(
+excalidraw-app/App.tsx:302:      window.history.replaceState({}, APP_NAME, window.location.origin);
+excalidraw-app/App.tsx:305:    window.history.replaceState({}, APP_NAME, window.location.origin);
+excalidraw-app/App.tsx:309:      const request = await fetch(window.decodeURIComponent(url));
+excalidraw-app/App.tsx:411:    return isCollaborationLink(window.location.href);
+excalidraw-app/App.tsx:459:      if (debugState.enabled && !window.visualDebug) {
+excalidraw-app/App.tsx:460:        window.visualDebug = {
+excalidraw-app/App.tsx:464:        delete window.visualDebug;
+excalidraw-app/App.tsx:576:          !isCollaborationLink(window.location.href)
+excalidraw-app/App.tsx:602:        !document.hidden &&
+excalidraw-app/App.tsx:661:      if (event.type === EVENT.BLUR || document.hidden) {
+excalidraw-app/App.tsx:672:    window.addEventListener(EVENT.HASHCHANGE, onHashChange, false);
+excalidraw-app/App.tsx:673:    window.addEventListener(EVENT.UNLOAD, onUnload, false);
+excalidraw-app/App.tsx:674:    window.addEventListener(EVENT.BLUR, visibilityChange, false);
+excalidraw-app/App.tsx:675:    document.addEventListener(EVENT.VISIBILITY_CHANGE, visibilityChange, false);
+excalidraw-app/App.tsx:676:    window.addEventListener(EVENT.FOCUS, visibilityChange, false);
+excalidraw-app/App.tsx:678:      window.removeEventListener(EVENT.HASHCHANGE, onHashChange, false);
+excalidraw-app/App.tsx:679:      window.removeEventListener(EVENT.UNLOAD, onUnload, false);
+excalidraw-app/App.tsx:680:      window.removeEventListener(EVENT.BLUR, visibilityChange, false);
+excalidraw-app/App.tsx:681:      window.removeEventListener(EVENT.FOCUS, visibilityChange, false);
+excalidraw-app/App.tsx:682:      document.removeEventListener(
+excalidraw-app/App.tsx:709:    window.addEventListener(EVENT.BEFORE_UNLOAD, unloadHandler);
+excalidraw-app/App.tsx:711:      window.removeEventListener(EVENT.BEFORE_UNLOAD, unloadHandler);
+excalidraw-app/App.tsx:762:        window.devicePixelRatio,
+excalidraw-app/App.tsx:804:          devicePixelRatio: window.devicePixelRatio,
+excalidraw-app/App.tsx:909:      window.open(
+excalidraw-app/App.tsx:932:      window.open(
+excalidraw-app/App.tsx:1189:                window.open(
+excalidraw-app/App.tsx:1203:                window.open(
+excalidraw-app/App.tsx:1228:                window.open(
+excalidraw-app/App.tsx:1242:                window.open(
+excalidraw-app/App.tsx:1295:            scale={window.devicePixelRatio}
+excalidraw-app/App.tsx:1306:    window.location.pathname === "/excalidraw-plus-export";
+excalidraw-app/CustomStats.tsx:10:import { useEffect, useState } from "react";
+excalidraw-app/ExcalidrawPlusIframeExport.tsx:3:import { useLayoutEffect, useRef } from "react";
+excalidraw-app/ExcalidrawPlusIframeExport.tsx:205:    window.addEventListener("message", handleMessage);
+excalidraw-app/ExcalidrawPlusIframeExport.tsx:211:      window.parent.postMessage(message, EXCALIDRAW_PLUS_ORIGIN);
+excalidraw-app/ExcalidrawPlusIframeExport.tsx:215:      window.removeEventListener("message", handleMessage);
+excalidraw-app/app-jotai.ts:11:import { useLayoutEffect } from "react";
+excalidraw-app/app-language/LanguageList.tsx:2:import React from "react";
+excalidraw-app/app-language/language-state.ts:1:import { useEffect } from "react";
+excalidraw-app/app_constants.ts:59:export const isExcalidrawPlusSignedUser = document.cookie.includes(
+excalidraw-app/collab/Collab.tsx:30:import { PureComponent } from "react";
+excalidraw-app/collab/Collab.tsx:214:    window.addEventListener(EVENT.BEFORE_UNLOAD, this.beforeUnload);
+excalidraw-app/collab/Collab.tsx:215:    window.addEventListener("online", this.onOfflineStatusToggle);
+excalidraw-app/collab/Collab.tsx:216:    window.addEventListener("offline", this.onOfflineStatusToggle);
+excalidraw-app/collab/Collab.tsx:217:    window.addEventListener(EVENT.UNLOAD, this.onUnload);
+excalidraw-app/collab/Collab.tsx:254:      window.collab = window.collab || ({} as Window["collab"]);
+excalidraw-app/collab/Collab.tsx:265:    appJotaiStore.set(isOfflineAtom, !window.navigator.onLine);
+excalidraw-app/collab/Collab.tsx:269:    window.removeEventListener("online", this.onOfflineStatusToggle);
+excalidraw-app/collab/Collab.tsx:270:    window.removeEventListener("offline", this.onOfflineStatusToggle);
+excalidraw-app/collab/Collab.tsx:271:    window.removeEventListener(EVENT.BEFORE_UNLOAD, this.beforeUnload);
+excalidraw-app/collab/Collab.tsx:272:    window.removeEventListener(EVENT.UNLOAD, this.onUnload);
+excalidraw-app/collab/Collab.tsx:273:    window.removeEventListener(EVENT.POINTER_MOVE, this.onPointerMove);
+excalidraw-app/collab/Collab.tsx:274:    window.removeEventListener(
+excalidraw-app/collab/Collab.tsx:279:      window.clearInterval(this.activeIntervalId);
+excalidraw-app/collab/Collab.tsx:283:      window.clearTimeout(this.idleTimeoutId);
+excalidraw-app/collab/Collab.tsx:387:    } else if (window.confirm(t("alerts.collabStopOverridePrompt"))) {
+excalidraw-app/collab/Collab.tsx:392:      window.history.pushState({}, APP_NAME, window.location.origin);
+excalidraw-app/collab/Collab.tsx:471:      window.alert(t("alerts.decryptFailed"));
+excalidraw-app/collab/Collab.tsx:502:      window.history.pushState(
+excalidraw-app/collab/Collab.tsx:572:    this.socketInitializationTimer = window.setTimeout(
+excalidraw-app/collab/Collab.tsx:709:    this.setActiveRoomLink(window.location.href);
+excalidraw-app/collab/Collab.tsx:823:      window.clearTimeout(this.idleTimeoutId);
+excalidraw-app/collab/Collab.tsx:827:    this.idleTimeoutId = window.setTimeout(this.reportIdle, IDLE_THRESHOLD);
+excalidraw-app/collab/Collab.tsx:830:      this.activeIntervalId = window.setInterval(
+excalidraw-app/collab/Collab.tsx:838:    if (document.hidden) {
+excalidraw-app/collab/Collab.tsx:840:        window.clearTimeout(this.idleTimeoutId);
+excalidraw-app/collab/Collab.tsx:844:        window.clearInterval(this.activeIntervalId);
+excalidraw-app/collab/Collab.tsx:849:      this.idleTimeoutId = window.setTimeout(this.reportIdle, IDLE_THRESHOLD);
+excalidraw-app/collab/Collab.tsx:850:      this.activeIntervalId = window.setInterval(
+excalidraw-app/collab/Collab.tsx:861:      window.clearInterval(this.activeIntervalId);
+excalidraw-app/collab/Collab.tsx:871:    document.addEventListener(EVENT.POINTER_MOVE, this.onPointerMove);
+excalidraw-app/collab/Collab.tsx:872:    document.addEventListener(EVENT.VISIBILITY_CHANGE, this.onVisibilityChange);
+excalidraw-app/collab/Collab.tsx:1090:  window.collab = window.collab || ({} as Window["collab"]);
+excalidraw-app/collab/CollabError.tsx:4:import { useEffect, useRef, useState } from "react";
+excalidraw-app/collab/CollabError.tsx:27:    clearAnimationRef.current = window.setTimeout(() => {
+excalidraw-app/collab/CollabError.tsx:32:      window.clearTimeout(clearAnimationRef.current);
+excalidraw-app/components/AppFooter.tsx:2:import React from "react";
+excalidraw-app/components/AppMainMenu.tsx:8:import React from "react";
+excalidraw-app/components/AppMainMenu.tsx:67:            if (window.visualDebug) {
+excalidraw-app/components/AppMainMenu.tsx:68:              delete window.visualDebug;
+excalidraw-app/components/AppMainMenu.tsx:71:              window.visualDebug = { data: [] };
+excalidraw-app/components/AppWelcomeScreen.tsx:5:import React from "react";
+excalidraw-app/components/DebugCanvas.tsx:12:import { useCallback } from "react";
+excalidraw-app/components/DebugCanvas.tsx:27:import React from "react";
+excalidraw-app/components/DebugCanvas.tsx:363:    window.visualDebug?.currentFrame &&
+excalidraw-app/components/DebugCanvas.tsx:364:    window.visualDebug?.data &&
+excalidraw-app/components/DebugCanvas.tsx:365:    window.visualDebug.data.length > 0
+excalidraw-app/components/DebugCanvas.tsx:370:    render(window.visualDebug.data[idx], context, appState);
+excalidraw-app/components/DebugCanvas.tsx:373:    window.visualDebug?.data.forEach((frame) => {
+excalidraw-app/components/DebugCanvas.tsx:378:  if (window.visualDebug) {
+excalidraw-app/components/DebugCanvas.tsx:379:    window.visualDebug!.data =
+excalidraw-app/components/DebugCanvas.tsx:380:      window.visualDebug?.data.map((frame) =>
+excalidraw-app/components/DebugCanvas.tsx:387:  const currentFrame = window.visualDebug?.currentFrame ?? 0;
+excalidraw-app/components/DebugCanvas.tsx:388:  const frameCount = window.visualDebug?.data.length ?? 0;
+excalidraw-app/components/DebugCanvas.tsx:391:    return [currentFrame % frameCount, window.visualDebug?.currentFrame ?? 0];
+excalidraw-app/components/DebugCanvas.tsx:436:  Array.isArray(window.visualDebug?.data);
+excalidraw-app/components/DebugCanvas.tsx:441:      !window.visualDebug?.currentFrame ||
+excalidraw-app/components/DebugCanvas.tsx:442:      isNaN(window.visualDebug?.currentFrame ?? -1)
+excalidraw-app/components/DebugCanvas.tsx:444:      window.visualDebug!.currentFrame = 0;
+excalidraw-app/components/DebugCanvas.tsx:446:    window.visualDebug!.currentFrame += 1;
+excalidraw-app/components/DebugCanvas.tsx:451:      !window.visualDebug?.currentFrame ||
+excalidraw-app/components/DebugCanvas.tsx:452:      isNaN(window.visualDebug?.currentFrame ?? -1) ||
+excalidraw-app/components/DebugCanvas.tsx:453:      window.visualDebug?.currentFrame < 1
+excalidraw-app/components/DebugCanvas.tsx:455:      window.visualDebug!.currentFrame = 1;
+excalidraw-app/components/DebugCanvas.tsx:457:    window.visualDebug!.currentFrame -= 1;
+excalidraw-app/components/DebugCanvas.tsx:461:    window.visualDebug!.currentFrame = undefined;
+excalidraw-app/components/DebugCanvas.tsx:465:    if (window.visualDebug) {
+excalidraw-app/components/DebugCanvas.tsx:466:      window.visualDebug.currentFrame = undefined;
+excalidraw-app/components/DebugCanvas.tsx:467:      window.visualDebug.data = [];
+excalidraw-app/components/ExportToExcalidrawPlus.tsx:1:import React from "react";
+excalidraw-app/components/ExportToExcalidrawPlus.tsx:83:  window.open(
+excalidraw-app/components/TopErrorBoundary.tsx:4:import React from "react";
+excalidraw-app/components/TopErrorBoundary.tsx:49:    if (event.target !== document.activeElement) {
+excalidraw-app/components/TopErrorBoundary.tsx:68:    window.open(
+excalidraw-app/components/TopErrorBoundary.tsx:83:                <button onClick={() => window.location.reload()}>{el}</button>
+excalidraw-app/components/TopErrorBoundary.tsx:95:                      window.location.reload();
+excalidraw-app/data/LocalData.ts:103:    // Unable to access window.localStorage
+excalidraw-app/data/LocalData.ts:164:    return document.hidden || this.locker.isLocked();
+excalidraw-app/data/index.ts:70:  window.crypto.getRandomValues(buffer);
+excalidraw-app/data/index.ts:142:    window.alert(t("alerts.invalidEncryptionKey"));
+excalidraw-app/data/index.ts:163:  return `${window.location.origin}${window.location.pathname}#room=${data.roomId},${data.roomKey}`;
+excalidraw-app/data/index.ts:191:  const string = new window.TextDecoder("utf-8").decode(
+excalidraw-app/data/index.ts:210:      window.alert(t("alerts.importBackendFailed"));
+excalidraw-app/data/index.ts:238:    window.alert(t("alerts.importBackendFailed"));
+excalidraw-app/data/index.ts:282:      const url = new URL(window.location.href);
+excalidraw-app/data/localStorage.ts:18:    // Unable to access window.localStorage
+excalidraw-app/debugCollaborators.ts:1:import { useEffect } from "react";
+excalidraw-app/debugCollaborators.ts:24:    new URLSearchParams(window.location.search).get("collaborators"),
+excalidraw-app/index.tsx:1:import { StrictMode } from "react";
+excalidraw-app/index.tsx:2:import { createRoot } from "react-dom/client";
+excalidraw-app/index.tsx:9:window.__EXCALIDRAW_SHA__ = import.meta.env.VITE_APP_GIT_SHA;
+excalidraw-app/index.tsx:10:const rootElement = document.getElementById("root")!;
+excalidraw-app/sentry.ts:17:    (item) => window.location.hostname.indexOf(item) >= 0,
+excalidraw-app/sentry.ts:27:    "undefined is not an object (evaluating 'window.__pad.performLoop')", // Only happens on Safari, but spams our servers. Doesn't break anything
+excalidraw-app/share/QRCode.tsx:1:import { useEffect, useState } from "react";
+excalidraw-app/share/ShareDialog.tsx:19:import { useEffect, useRef, useState } from "react";
+excalidraw-app/share/ShareDialog.tsx:37:  const navigator = window.navigator as any;
+excalidraw-app/share/ShareDialog.tsx:83:      window.clearTimeout(timerRef.current);
+excalidraw-app/share/ShareDialog.tsx:86:    timerRef.current = window.setTimeout(() => {
+excalidraw-app/useHandleAppTheme.ts:2:import { useEffect, useLayoutEffect, useState } from "react";
+excalidraw-app/useHandleAppTheme.ts:9:  window.matchMedia?.("(prefers-color-scheme: dark)");
+packages/common/debug.ts:41:      Debug.DEBUG_LOG_INTERVAL_ID = window.setInterval(Debug.debugLogger, 1000);
+packages/common/debug.ts:90:      window.clearInterval(Debug.DEBUG_LOG_INTERVAL_ID);
+packages/common/debug.ts:91:      window.cancelAnimationFrame(Debug.ANIMATION_FRAME_ID!);
+packages/common/src/constants.ts:355:  window.EXCALIDRAW_EXPORT_SOURCE || window.location.origin;
+packages/common/src/editorInterface.ts:192:    const stored = window.localStorage.getItem(DESKTOP_UI_MODE_STORAGE_KEY);
+packages/common/src/editorInterface.ts:208:    window.localStorage.setItem(DESKTOP_UI_MODE_STORAGE_KEY, mode);
+packages/common/src/utils.ts:163:    handle = window.setTimeout(() => {
+packages/common/src/utils.ts:189:    timerId = window.requestAnimationFrame(() => {
+packages/common/src/utils.ts:254:  const selection = window.getSelection();
+packages/common/src/utils.ts:256:    const range = document.createRange();
+packages/common/src/utils.ts:264:  const selection = window.getSelection();
+packages/common/src/utils.ts:310:  document.fullscreenElement?.nodeName === "HTML";
+packages/common/src/utils.ts:313:  document.documentElement.requestFullscreen();
+packages/common/src/utils.ts:315:export const exitFullScreen = () => document.exitFullscreen();
+packages/common/src/utils.ts:361:  getComputedStyle(document.documentElement).getPropertyValue(`--${name}`);
+packages/common/src/utils.ts:489:    document.querySelector<HTMLMetaElement>('meta[name="version"]')?.content ||
+packages/common/src/utils.ts:496:  const canvas = document.createElement("canvas");
+packages/common/src/utils.ts:702:    return window.self === window.top ? "top" : "iframe";
+packages/common/src/utils.ts:965:// FontFaceSet (document.fonts)
+packages/element/src/convertToShape.ts:509:    window.LAST_POINTS = points.map(([x, y]) => pointFrom<GlobalPoint>(x, y));
+packages/element/src/elementLink.ts:17:  const url = window.location.href;
+packages/element/src/elementLink.ts:87:      _url.host === window.location.host
+packages/element/src/renderElement.ts:247:  let width = elementWidth * window.devicePixelRatio + padding * 2;
+packages/element/src/renderElement.ts:248:  let height = elementHeight * window.devicePixelRatio + padding * 2;
+packages/element/src/renderElement.ts:278:  const canvas = document.createElement("canvas");
+packages/element/src/renderElement.ts:303:        ? distance(element.x, x1) * window.devicePixelRatio * scale
+packages/element/src/renderElement.ts:308:        ? distance(element.y, y1) * window.devicePixelRatio * scale
+packages/element/src/renderElement.ts:317:    window.devicePixelRatio * scale,
+packages/element/src/renderElement.ts:318:    window.devicePixelRatio * scale,
+packages/element/src/renderElement.ts:345:    ? document.createElement("img")
+packages/element/src/renderElement.ts:354:    ? document.createElement("img")
+packages/element/src/renderElement.ts:554:          const devicePixelRatio = window.devicePixelRatio || 1;
+packages/element/src/renderElement.ts:555:          const tempCanvas = document.createElement("canvas");
+packages/element/src/renderElement.ts:632:          document.body.appendChild(context.canvas);
+packages/element/src/renderElement.ts:773:  const devicePixelRatio = window.devicePixelRatio;
+packages/element/src/textMeasurements.ts:125:    this.canvas = document.createElement("canvas");
+packages/element/src/visualdebug.ts:242:  window.visualDebug?.data.push([]);
+packages/element/src/visualdebug.ts:246:  if (window.visualDebug?.data) {
+packages/element/src/visualdebug.ts:247:    window.visualDebug.data = [];
+packages/element/src/visualdebug.ts:252:  if (window.visualDebug?.data && window.visualDebug.data.length === 0) {
+packages/element/src/visualdebug.ts:253:    window.visualDebug.data[0] = [];
+packages/element/src/visualdebug.ts:255:  window.visualDebug?.data &&
+packages/element/src/visualdebug.ts:256:    window.visualDebug.data[window.visualDebug.data.length - 1].push(element);
+packages/excalidraw/actions/actionElementLink.ts:25:      if (window.location) {
+packages/excalidraw/actions/actionProperties.tsx:3:import { useEffect, useMemo, useRef, useState } from "react";
+packages/excalidraw/actions/actionProperties.tsx:1263:      // skip `document.font.check` check on hover, if at least one font family has loaded as it's super slow (could result in slightly different bbox, which is fine)
+packages/excalidraw/actions/manager.tsx:1:import React from "react";
+packages/excalidraw/actions/types.ts:15:import type React from "react";
+packages/excalidraw/analytics.ts:40:    if (window.sa_event) {
+packages/excalidraw/analytics.ts:41:      window.sa_event(action, {
+packages/excalidraw/animatedTrail.ts:47:    this.trailElement = document.createElementNS(SVG_NS, "path");
+packages/excalidraw/animatedTrail.ts:49:      this.trailAnimation = document.createElementNS(SVG_NS, "animate");
+packages/excalidraw/clipboard.ts:633:  // (3) if previous fails, use document.execCommand
+packages/excalidraw/clipboard.ts:647:  const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+packages/excalidraw/clipboard.ts:649:  const textarea = document.createElement("textarea");
+packages/excalidraw/clipboard.ts:656:  const yPosition = window.pageYOffset || document.documentElement.scrollTop;
+packages/excalidraw/clipboard.ts:664:  document.body.appendChild(textarea);
+packages/excalidraw/clipboard.ts:672:    success = document.execCommand("copy");
+packages/excalidraw/components/Actions.tsx:2:import { useRef } from "react";
+packages/excalidraw/components/Actions.tsx:92:  const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+packages/excalidraw/components/App.clipboard.ts:1:import { flushSync } from "react-dom";
+packages/excalidraw/components/App.clipboard.ts:47:import type React from "react";
+packages/excalidraw/components/App.cursor.ts:214:      this.eraserCanvasCache = document.createElement("canvas");
+packages/excalidraw/components/App.duplicate.ts:1:import { flushSync } from "react-dom";
+packages/excalidraw/components/App.flowchart.ts:18:import type React from "react";
+packages/excalidraw/components/App.modifiers.ts:1:import { useEffect, useState } from "react";
+packages/excalidraw/components/App.pan.ts:6:import type React from "react";
+packages/excalidraw/components/App.selectionTool.ts:82:import type React from "react";
+packages/excalidraw/components/App.text.ts:1:import { flushSync } from "react-dom";
+packages/excalidraw/components/App.textTool.ts:1:import { flushSync } from "react-dom";
+packages/excalidraw/components/App.textTool.ts:26:import type React from "react";
+packages/excalidraw/components/App.tsx:3:import React, { useContext } from "react";
+packages/excalidraw/components/App.tsx:4:import { flushSync } from "react-dom";
+packages/excalidraw/components/App.tsx:1861:                      // editor streams in during generation by document.write-
+packages/excalidraw/components/App.tsx:1881:                          document.open();
+packages/excalidraw/components/App.tsx:1882:                          // document.open() wipes all listeners from both the
+packages/excalidraw/components/App.tsx:1884:                          window.addEventListener("message", onPartialMessage);
+packages/excalidraw/components/App.tsx:1886:                        document.write(data.html.slice(writtenLength));
+packages/excalidraw/components/App.tsx:1890:                      window.addEventListener("message", onPartialMessage);
+packages/excalidraw/components/App.tsx:3787:      Object.defineProperties(window.h, {
+packages/excalidraw/components/App.tsx:11419:    window.h = window.h || ({} as Window["h"]);
+packages/excalidraw/components/App.tsx:11421:    Object.defineProperties(window.h, {
+packages/excalidraw/components/Avatar.tsx:2:import React, { useState } from "react";
+packages/excalidraw/components/Button.tsx:2:import React from "react";
+packages/excalidraw/components/ButtonIconCycle.tsx:3:import type { JSX } from "react";
+packages/excalidraw/components/CheckboxItem.tsx:2:import React from "react";
+packages/excalidraw/components/ColorPicker/ColorInput.tsx:2:import { useCallback, useEffect, useRef, useState } from "react";
+packages/excalidraw/components/ColorPicker/ColorPicker.tsx:3:import { memo, useRef, useEffect } from "react";
+packages/excalidraw/components/ColorPicker/CustomColorList.tsx:2:import { useEffect, useRef } from "react";
+packages/excalidraw/components/ColorPicker/HotkeyLabel.tsx:1:import React from "react";
+packages/excalidraw/components/ColorPicker/Picker.tsx:1:import React, { useEffect, useImperativeHandle, useState } from "react";
+packages/excalidraw/components/ColorPicker/Picker.tsx:138:      document.addEventListener(EVENT.KEYUP, keyup, { capture: true });
+packages/excalidraw/components/ColorPicker/Picker.tsx:140:        document.removeEventListener(EVENT.KEYUP, keyup, { capture: true });
+packages/excalidraw/components/ColorPicker/PickerColorList.tsx:2:import { useEffect, useRef } from "react";
+packages/excalidraw/components/ColorPicker/PickerHeading.tsx:1:import type { ReactNode } from "react";
+packages/excalidraw/components/ColorPicker/ShadeList.tsx:2:import { useEffect, useRef } from "react";
+packages/excalidraw/components/ColorPicker/colorTopPicksDnD.ts:1:import { createContext, useContext } from "react";
+packages/excalidraw/components/ColorPicker/colorTopPicksDnD.ts:26:  const swatch = document.createElement("div");
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:3:import { useEffect, useRef, useMemo, useState } from "react";
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:180:      window.addEventListener(EVENT.KEYDOWN, commandPaletteShortcut, {
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:184:        window.removeEventListener(EVENT.KEYDOWN, commandPaletteShortcut, {
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:664:      document.body.classList.add("excalidraw-animations-disabled");
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:670:          document.body.classList.remove("excalidraw-animations-disabled");
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:807:    window.addEventListener(EVENT.KEYDOWN, handleKeyDown, {
+packages/excalidraw/components/CommandPalette/CommandPalette.tsx:811:      window.removeEventListener(EVENT.KEYDOWN, handleKeyDown, {
+packages/excalidraw/components/ConfirmDialog.tsx:1:import { flushSync } from "react-dom";
+packages/excalidraw/components/ContextMenu.tsx:2:import React from "react";
+packages/excalidraw/components/ConvertElementTypePopup.tsx:1:import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
+packages/excalidraw/components/CursorHint.tsx:2:import { useLayoutEffect, useEffect, useRef, useState } from "react";
+packages/excalidraw/components/CursorHint.tsx:149:    window.addEventListener(EVENT.POINTER_MOVE, onPointerMove);
+packages/excalidraw/components/CursorHint.tsx:151:      window.removeEventListener(EVENT.POINTER_MOVE, onPointerMove);
+packages/excalidraw/components/CursorHint.tsx:169:    const fadeTimer = window.setTimeout(() => {
+packages/excalidraw/components/CursorHint.tsx:172:    const hideTimer = window.setTimeout(() => {
+packages/excalidraw/components/CursorHint.tsx:181:    window.addEventListener(EVENT.POINTER_DOWN, onPointerDown, {
+packages/excalidraw/components/CursorHint.tsx:186:      window.clearTimeout(fadeTimer);
+packages/excalidraw/components/CursorHint.tsx:187:      window.clearTimeout(hideTimer);
+packages/excalidraw/components/CursorHint.tsx:188:      window.removeEventListener(EVENT.POINTER_DOWN, onPointerDown, {
+packages/excalidraw/components/DiagramToCodePlugin/DiagramToCodePlugin.tsx:1:import { useLayoutEffect } from "react";
+packages/excalidraw/components/Dialog.tsx:2:import React, { useEffect, useState } from "react";
+packages/excalidraw/components/Dialog.tsx:52:  const [lastActiveElement] = useState(document.activeElement);
+packages/excalidraw/components/DialogActionButton.tsx:7:import type { ReactNode } from "react";
+packages/excalidraw/components/ElementLinkDialog.tsx:1:import { useCallback, useEffect, useState } from "react";
+packages/excalidraw/components/ElementLinkDialog.tsx:107:    window.addEventListener("keydown", handleKeyDown);
+packages/excalidraw/components/ElementLinkDialog.tsx:110:      window.removeEventListener("keydown", handleKeyDown);
+packages/excalidraw/components/ErrorDialog.tsx:1:import React, { useState } from "react";
+packages/excalidraw/components/EyeDropper.tsx:1:import { useEffect, useLayoutEffect, useRef } from "react";
+packages/excalidraw/components/EyeDropper.tsx:2:import { createPortal } from "react-dom";
+packages/excalidraw/components/FileDropOverlay.tsx:1:import { useEffect, useState } from "react";
+packages/excalidraw/components/FilledButton.tsx:2:import React, { forwardRef, useState } from "react";
+packages/excalidraw/components/FilledButton.tsx:63:        const timer = window.setTimeout(() => {
+packages/excalidraw/components/FixedSideContainer.tsx:1:import React from "react";
+packages/excalidraw/components/FontPicker/FontPicker.tsx:3:import React, { useCallback } from "react";
+packages/excalidraw/components/FontPicker/FontPickerList.tsx:8:} from "react";
+packages/excalidraw/components/FontPicker/FontPickerList.tsx:50:import type { JSX } from "react";
+packages/excalidraw/components/FontPicker/FontPickerList.tsx:224:          const textEditor = document.querySelector(
+packages/excalidraw/components/FontPicker/FontPickerList.tsx:240:            const textEditor = document.querySelector(
+packages/excalidraw/components/FontPicker/FontPickerList.tsx:394:              const textEditor = document.querySelector(
+packages/excalidraw/components/FontPicker/fontTopPicksDnD.ts:1:import { createContext, useContext } from "react";
+packages/excalidraw/components/FontPicker/fontTopPicksDnD.ts:33:  const tile = document.createElement("div");
+packages/excalidraw/components/HelpDialog.tsx:1:import React from "react";
+packages/excalidraw/components/HelpDialog.tsx:19:import type { JSX } from "react";
+packages/excalidraw/components/IconButton.tsx:2:import React, { useEffect, useRef, useState } from "react";
+packages/excalidraw/components/IconButton.tsx:14:import type { CSSProperties } from "react";
+packages/excalidraw/components/IconPicker.tsx:3:import React, { useEffect, useMemo } from "react";
+packages/excalidraw/components/IconPicker.tsx:15:import type { JSX } from "react";
+packages/excalidraw/components/ImageExportDialog.tsx:1:import React, { useEffect, useRef, useState } from "react";
+packages/excalidraw/components/InitializeApp.tsx:1:import React, { useEffect, useState } from "react";
+packages/excalidraw/components/Island.tsx:1:import React from "react";
+packages/excalidraw/components/JSONExportDialog.tsx:1:import React from "react";
+packages/excalidraw/components/LayerUI.tsx:2:import React from "react";
+packages/excalidraw/components/LibraryMenu.tsx:8:} from "react";
+packages/excalidraw/components/LibraryMenuBrowseButton.tsx:17:    libraryReturnUrl || window.location.origin + window.location.pathname;
+packages/excalidraw/components/LibraryMenuBrowseButton.tsx:22:        window.name || "_blank"
+packages/excalidraw/components/LibraryMenuHeaderContent.tsx:2:import { useCallback, useState } from "react";
+packages/excalidraw/components/LibraryMenuHeaderContent.tsx:263:          onError={(error) => window.alert(error)}
+packages/excalidraw/components/LibraryMenuItems.tsx:7:} from "react";
+packages/excalidraw/components/LibraryMenuSection.tsx:2:import React, { memo, useEffect, useState } from "react";
+packages/excalidraw/components/LibraryMenuSection.tsx:12:import type { ReactNode } from "react";
+packages/excalidraw/components/LibraryUnit.tsx:2:import { memo, useRef, useState } from "react";
+packages/excalidraw/components/LoadingMessage.tsx:2:import { useState, useEffect } from "react";
+packages/excalidraw/components/MagicButton.tsx:5:import type { JSX } from "react";
+packages/excalidraw/components/MobileMenu.tsx:1:import React from "react";
+packages/excalidraw/components/MobileMenu.tsx:21:import type { JSX } from "react";
+packages/excalidraw/components/MobileToolbar.tsx:1:import { useState, useEffect } from "react";
+packages/excalidraw/components/Modal.tsx:2:import { useMemo } from "react";
+packages/excalidraw/components/Modal.tsx:3:import { createPortal } from "react-dom";
+packages/excalidraw/components/OverwriteConfirm/OverwriteConfirm.tsx:1:import React from "react";
+packages/excalidraw/components/OverwriteConfirm/OverwriteConfirmActions.tsx:1:import React from "react";
+packages/excalidraw/components/OverwriteConfirm/OverwriteConfirmState.ts:3:import type React from "react";
+packages/excalidraw/components/PasteChartDialog.tsx:1:import React, { useLayoutEffect, useRef, useState } from "react";
+packages/excalidraw/components/Popover.tsx:1:import React, { useLayoutEffect, useRef, useEffect } from "react";
+packages/excalidraw/components/Popover.tsx:2:import { unstable_batchedUpdates } from "react-dom";
+packages/excalidraw/components/Popover.tsx:31:  viewportWidth = window.innerWidth,
+packages/excalidraw/components/Popover.tsx:32:  viewportHeight = window.innerHeight,
+packages/excalidraw/components/Popover.tsx:48:    if (!container.contains(document.activeElement)) {
+packages/excalidraw/components/Popover.tsx:145:      document.addEventListener("pointerdown", handler, false);
+packages/excalidraw/components/Popover.tsx:146:      return () => document.removeEventListener("pointerdown", handler, false);
+packages/excalidraw/components/ProjectName.tsx:1:import React, { useState } from "react";
+packages/excalidraw/components/PropertiesPopover.tsx:3:import React, { type ReactNode } from "react";
+packages/excalidraw/components/PropertiesPopover.tsx:80:            if (container && !isInteractive(document.activeElement)) {
+packages/excalidraw/components/PublishLibrary.tsx:1:import { useCallback, useEffect, useRef, useState } from "react";
+packages/excalidraw/components/PublishLibrary.tsx:26:import type { ReactNode } from "react";
+packages/excalidraw/components/PublishLibrary.tsx:47:  const canvas = document.createElement("canvas");
+packages/excalidraw/components/QuickSearch.tsx:2:import React from "react";
+packages/excalidraw/components/RadioButton.tsx:2:import { forwardRef } from "react";
+packages/excalidraw/components/RadioButton.tsx:4:import type { JSX } from "react";
+packages/excalidraw/components/RadioSelection.tsx:5:import type { JSX } from "react";
+packages/excalidraw/components/Range.tsx:1:import React from "react";
+packages/excalidraw/components/SVGLayer.tsx:1:import { useEffect, useRef } from "react";
+packages/excalidraw/components/ScrollableList.tsx:2:import { Children } from "react";
+packages/excalidraw/components/SearchMenu.tsx:3:import { Fragment, memo, useEffect, useMemo, useRef, useState } from "react";
+packages/excalidraw/components/Section.tsx:1:import React from "react";
+packages/excalidraw/components/ShareableLinkDialog.tsx:1:import { useRef, useState } from "react";
+packages/excalidraw/components/ShareableLinkDialog.tsx:40:      window.clearTimeout(timerRef.current);
+packages/excalidraw/components/ShareableLinkDialog.tsx:43:    timerRef.current = window.setTimeout(() => {
+packages/excalidraw/components/Sidebar/Sidebar.tsx:10:} from "react";
+packages/excalidraw/components/Sidebar/Sidebar.tsx:102:      const isDialogOpen = !!document.querySelector(".Dialog");
+packages/excalidraw/components/Sidebar/Sidebar.tsx:137:      document.addEventListener(EVENT.KEYDOWN, handleKeyDown);
+packages/excalidraw/components/Sidebar/Sidebar.tsx:139:        document.removeEventListener(EVENT.KEYDOWN, handleKeyDown);
+packages/excalidraw/components/Sidebar/SidebarHeader.tsx:2:import { useContext } from "react";
+packages/excalidraw/components/Sidebar/common.ts:1:import React from "react";
+packages/excalidraw/components/Sidebar/common.ts:4:import type { JSX } from "react";
+packages/excalidraw/components/Sidebar/siderbar.test.helpers.tsx:1:import React from "react";
+packages/excalidraw/components/Spinner.tsx:1:import React from "react";
+packages/excalidraw/components/Stack.tsx:1:import React, { forwardRef } from "react";
+packages/excalidraw/components/Stats/DragInput.tsx:2:import { useEffect, useRef, useState } from "react";
+packages/excalidraw/components/Stats/MultiDimension.tsx:2:import { useMemo } from "react";
+packages/excalidraw/components/Stats/MultiPosition.tsx:2:import { useMemo } from "react";
+packages/excalidraw/components/Stats/index.tsx:4:import { useEffect, useMemo, useState, memo } from "react";
+packages/excalidraw/components/TTDDialog/Chat/ChatInterface.tsx:1:import React, { useRef, useEffect, useLayoutEffect } from "react";
+packages/excalidraw/components/TTDDialog/Chat/ChatInterface.tsx:15:import type { FormEventHandler } from "react";
+packages/excalidraw/components/TTDDialog/Chat/ChatMessage.tsx:2:import React, { useState, useEffect } from "react";
+packages/excalidraw/components/TTDDialog/Chat/ChatMessage.tsx:86:                        window.open(
+packages/excalidraw/components/TTDDialog/CodeMirrorEditor.tsx:1:import { useEffect, useRef } from "react";
+packages/excalidraw/components/TTDDialog/MermaidToExcalidraw.tsx:1:import { useState, useRef, useEffect, useDeferredValue } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialog.tsx:1:import { useEffect, useState } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogInput.tsx:1:import { useEffect, useRef, useState } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogInput.tsx:9:import type { ComponentType } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogPanel.tsx:3:import { Fragment } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogPanel.tsx:8:import type { ReactNode } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogPanels.tsx:1:import type { ReactNode } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogTabs.tsx:2:import { useRef } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogTabs.tsx:8:import type { ReactNode } from "react";
+packages/excalidraw/components/TTDDialog/TTDDialogTrigger.tsx:8:import type { JSX, ReactNode } from "react";
+packages/excalidraw/components/TTDDialog/TextToDiagram.tsx:1:import { useRef } from "react";
+packages/excalidraw/components/TTDDialog/common.ts:113:          window.devicePixelRatio,
+packages/excalidraw/components/TTDDialog/hooks/useChatManagement.ts:1:import { useCallback, useState } from "react";
+packages/excalidraw/components/TTDDialog/hooks/useMermaidRenderer.ts:1:import { useCallback, useEffect, useMemo, useRef } from "react";
+packages/excalidraw/components/TTDDialog/hooks/useTextGeneration.ts:1:import { useRef } from "react";
+packages/excalidraw/components/TTDDialog/useTTDChatStorage.ts:1:import { useCallback, useEffect, useRef } from "react";
+packages/excalidraw/components/TextField.tsx:8:} from "react";
+packages/excalidraw/components/TextField.tsx:15:import type { KeyboardEvent } from "react";
+packages/excalidraw/components/Toast.tsx:1:import { useCallback, useEffect, useRef } from "react";
+packages/excalidraw/components/Toast.tsx:8:import type { CSSProperties, ReactNode } from "react";
+packages/excalidraw/components/Toast.tsx:43:    timerRef.current = window.setTimeout(() => onClose(), duration);
+packages/excalidraw/components/ToolPopover.tsx:1:import React, { useEffect, useState } from "react";
+packages/excalidraw/components/Toolbar.tsx:2:import { useState } from "react";
+packages/excalidraw/components/Tools.tsx:2:import { useEffect, useState } from "react";
+packages/excalidraw/components/Tooltip.tsx:2:import React from "react";
+packages/excalidraw/components/Tooltip.tsx:7:  const existingDiv = document.querySelector<HTMLDivElement>(
+packages/excalidraw/components/Tooltip.tsx:13:  const div = document.createElement("div");
+packages/excalidraw/components/Tooltip.tsx:14:  document.body.appendChild(div);
+packages/excalidraw/components/Tooltip.tsx:31:  const viewportWidth = window.innerWidth;
+packages/excalidraw/components/Tooltip.tsx:32:  const viewportHeight = window.innerHeight;
+packages/excalidraw/components/Tooltip.tsx:84:  const tooltip = document.querySelector<HTMLDivElement>(".excalidraw-tooltip");
+packages/excalidraw/components/Tooltip.tsx:113:  tooltipItemObserver.observe(document.body, {
+packages/excalidraw/components/Tooltip.tsx:145:    showTooltipTimer = window.setTimeout(show, TOOLTIP_DELAY);
+packages/excalidraw/components/TopPicksDnD/TopPicksContextMenu.tsx:5:import type { ReactElement } from "react";
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:1:import { useEffect, useMemo, useRef, useState } from "react";
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:44:  /** the ghost's visual. Rendered into `document.body` — outside the
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:250:      const ghost = document.createElement("div");
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:254:      document.body.appendChild(ghost);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:271:      document.body.classList.add(BODY_CLASS);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:354:      window.setTimeout(() => {
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:357:      window.setTimeout(() => {
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:395:      window.addEventListener("click", suppress, { capture: true, once: true });
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:396:      window.setTimeout(() => {
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:397:        window.removeEventListener("click", suppress, { capture: true });
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:402:      window.removeEventListener("pointermove", onPointerMove, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:403:      window.removeEventListener("pointerup", onPointerUp, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:404:      window.removeEventListener("pointercancel", onPointerCancel, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:405:      window.removeEventListener("keydown", onKeyDown, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:410:      document.body.classList.remove(BODY_CLASS);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:412:        window.clearTimeout(session.activationTimer);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:463:            window.clearTimeout(session.activationTimer);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:474:            session.activationTimer = window.setTimeout(() => {
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:604:      window.addEventListener("pointermove", onPointerMove, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:605:      window.addEventListener("pointerup", onPointerUp, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:606:      window.addEventListener("pointercancel", onPointerCancel, true);
+packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx:607:      window.addEventListener("keydown", onKeyDown, true);
+packages/excalidraw/components/Trans.tsx:1:import React from "react";
+packages/excalidraw/components/UnlockPopup.tsx:9:import { flushSync } from "react-dom";
+packages/excalidraw/components/UserList.tsx:3:import React, { useLayoutEffect } from "react";
+packages/excalidraw/components/ViewportStatusFrame/ViewportStatusFrame.tsx:1:import { useId } from "react";
+packages/excalidraw/components/ViewportStatusFrame/ViewportStatusFrame.tsx:10:import type { CSSProperties } from "react";
+packages/excalidraw/components/canvases/InteractiveCanvas.tsx:1:import React, { useEffect, useRef } from "react";
+packages/excalidraw/components/canvases/InteractiveCanvas.tsx:33:import type { DOMAttributes } from "react";
+packages/excalidraw/components/canvases/InteractiveCanvas.tsx:149:      scale: window.devicePixelRatio,
+packages/excalidraw/components/canvases/NewElementCanvas.tsx:1:import { useEffect, useRef } from "react";
+packages/excalidraw/components/canvases/StaticCanvas.tsx:1:import React, { useEffect, useRef } from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenu.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuContent.tsx:2:import React, { useCallback, useEffect, useMemo } from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuContent.tsx:40:  // node becomes available so they attach to its owner document.
+packages/excalidraw/components/dropdownMenu/DropdownMenuGroup.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuItem.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuItem.tsx:17:import type { JSX } from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuItemContent.tsx:5:import type { JSX } from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuItemCustom.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuItemLink.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuItemLink.tsx:11:import type { JSX } from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuSeparator.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuSubContent.tsx:5:import { useCallback, useState } from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuSubContent.tsx:34:        const viewportWidth = window.innerWidth;
+packages/excalidraw/components/dropdownMenu/DropdownMenuSubTrigger.tsx:1:import React from "react";
+packages/excalidraw/components/dropdownMenu/DropdownMenuSubTrigger.tsx:10:import type { JSX } from "react";
+packages/excalidraw/components/dropdownMenu/common.ts:1:import React, { useContext } from "react";
+packages/excalidraw/components/dropdownMenu/dropdownMenuUtils.ts:1:import React from "react";
+packages/excalidraw/components/hoc/withInternalFallback.tsx:1:import React, { useLayoutEffect, useRef } from "react";
+packages/excalidraw/components/hyperlink/Hyperlink.tsx:9:} from "react";
+packages/excalidraw/components/hyperlink/Hyperlink.tsx:215:        timeoutId = window.setTimeout(() => {
+packages/excalidraw/components/hyperlink/Hyperlink.tsx:220:    window.addEventListener(EVENT.POINTER_MOVE, handlePointerMove, false);
+packages/excalidraw/components/hyperlink/Hyperlink.tsx:222:      window.removeEventListener(EVENT.POINTER_MOVE, handlePointerMove, false);
+packages/excalidraw/components/hyperlink/Hyperlink.tsx:393:  HYPERLINK_TOOLTIP_TIMEOUT_ID = window.setTimeout(
+packages/excalidraw/components/hyperlink/helpers.ts:19:export const EXTERNAL_LINK_IMG = document.createElement("img");
+packages/excalidraw/components/hyperlink/helpers.ts:24:export const ELEMENT_LINK_IMG = document.createElement("img");
+packages/excalidraw/components/icons.tsx:10:import React from "react";
+packages/excalidraw/components/main-menu/MainMenu.tsx:1:import React from "react";
+packages/excalidraw/components/welcome-screen/WelcomeScreen.Center.tsx:10:import type { JSX } from "react";
+packages/excalidraw/context/tunnels.ts:2:import React from "react";
+packages/excalidraw/context/ui-appState.ts:1:import React from "react";
+packages/excalidraw/data/EditorLocalStorage.ts:8:      return !!window.localStorage.getItem(key);
+packages/excalidraw/data/EditorLocalStorage.ts:19:      const value = window.localStorage.getItem(key);
+packages/excalidraw/data/EditorLocalStorage.ts:35:      window.localStorage.setItem(key, JSON.stringify(value));
+packages/excalidraw/data/EditorLocalStorage.ts:47:      window.localStorage.removeItem(name);
+packages/excalidraw/data/blob.ts:263:    const hashBuffer = await window.crypto.subtle.digest(
+packages/excalidraw/data/blob.ts:316:  const browserURL = typeof window !== "undefined" ? window.URL : undefined;
+packages/excalidraw/data/encode.ts:50:  return isByteString ? window.btoa(str) : window.btoa(toByteString(str));
+packages/excalidraw/data/encode.ts:56:    ? window.atob(base64)
+packages/excalidraw/data/encode.ts:57:    : byteStringToString(window.atob(base64));
+packages/excalidraw/data/encode.ts:74:  return window.atob(
+packages/excalidraw/data/encryption.ts:9:  return window.crypto.getRandomValues(arr);
+packages/excalidraw/data/encryption.ts:17:  const key = await window.crypto.subtle.generateKey(
+packages/excalidraw/data/encryption.ts:28:      : (await window.crypto.subtle.exportKey("jwk", key)).k
+packages/excalidraw/data/encryption.ts:33:  window.crypto.subtle.importKey(
+packages/excalidraw/data/encryption.ts:68:  const encryptedBuffer = await window.crypto.subtle.encrypt(
+packages/excalidraw/data/encryption.ts:86:  return window.crypto.subtle.decrypt(
+packages/excalidraw/data/library.ts:1:import { useEffect, useRef } from "react";
+packages/excalidraw/data/library.ts:323:            window.confirm(
+packages/excalidraw/data/library.ts:533:    new URLSearchParams(window.location.hash.slice(1)).get(
+packages/excalidraw/data/library.ts:537:    new URLSearchParams(window.location.search).get(URL_QUERY_KEYS.addLibrary);
+packages/excalidraw/data/library.ts:539:    ? new URLSearchParams(window.location.hash.slice(1)).get("token")
+packages/excalidraw/data/library.ts:745:      await (shouldPrompt && document.hidden
+packages/excalidraw/data/library.ts:747:            window.addEventListener("focus", () => resolve(), {
+packages/excalidraw/data/library.ts:769:        if (window.location.hash.includes(URL_HASH_KEYS.addLibrary)) {
+packages/excalidraw/data/library.ts:770:          const hash = new URLSearchParams(window.location.hash.slice(1));
+packages/excalidraw/data/library.ts:772:          window.history.replaceState({}, APP_NAME, `#${hash.toString()}`);
+packages/excalidraw/data/library.ts:773:        } else if (window.location.search.includes(URL_QUERY_KEYS.addLibrary)) {
+packages/excalidraw/data/library.ts:774:          const query = new URLSearchParams(window.location.search);
+packages/excalidraw/data/library.ts:776:          window.history.replaceState({}, APP_NAME, `?${query.toString()}`);
+packages/excalidraw/data/library.ts:789:        window.history.replaceState({}, "", event.oldURL);
+packages/excalidraw/data/library.ts:922:    window.addEventListener(EVENT.HASHCHANGE, onHashChange);
+packages/excalidraw/data/library.ts:924:      window.removeEventListener(EVENT.HASHCHANGE, onHashChange);
+packages/excalidraw/data/library.ts:988:      window.addEventListener(EVENT.BEFORE_UNLOAD, onUnload);
+packages/excalidraw/data/library.ts:991:        window.removeEventListener(EVENT.BEFORE_UNLOAD, onUnload);
+packages/excalidraw/fonts/ExcalidrawFontFace.ts:153:    if (typeof window.EXCALIDRAW_ASSET_PATH === "string") {
+packages/excalidraw/fonts/ExcalidrawFontFace.ts:155:        window.EXCALIDRAW_ASSET_PATH,
+packages/excalidraw/fonts/ExcalidrawFontFace.ts:159:    } else if (Array.isArray(window.EXCALIDRAW_ASSET_PATH)) {
+packages/excalidraw/fonts/ExcalidrawFontFace.ts:160:      window.EXCALIDRAW_ASSET_PATH.forEach((path) => {
+packages/excalidraw/fonts/Fonts.ts:224:    // add all registered font faces into the `document.fonts` (if not added already)
+packages/excalidraw/hooks/useAppStateValue.ts:1:import { useEffect, useRef, useState } from "react";
+packages/excalidraw/hooks/useCallbackRefState.ts:1:import { useCallback, useState } from "react";
+packages/excalidraw/hooks/useCopiedIndicator.ts:1:import { useCallback, useRef, useState } from "react";
+packages/excalidraw/hooks/useCopiedIndicator.ts:13:    timeoutRef.current = window.setTimeout(() => {
+packages/excalidraw/hooks/useCreatePortalContainer.ts:1:import { useState, useLayoutEffect } from "react";
+packages/excalidraw/hooks/useEmitter.ts:1:import { useEffect, useState } from "react";
+packages/excalidraw/hooks/useLibraryItemSvg.ts:1:import { useEffect, useState } from "react";
+packages/excalidraw/hooks/useOutsideClick.ts:1:import { useEffect } from "react";
+packages/excalidraw/hooks/useScrollPosition.ts:2:import { useEffect } from "react";
+packages/excalidraw/hooks/useStable.ts:1:import { useRef } from "react";
+packages/excalidraw/hooks/useStableCallback.ts:1:import { useRef } from "react";
+packages/excalidraw/hooks/useTextEditorFocus.ts:1:import { useState, useCallback } from "react";
+packages/excalidraw/hooks/useTransition.ts:1:import React, { useCallback } from "react";
+packages/excalidraw/i18n.ts:94:  document.documentElement.dir = currentLang.rtl ? "rtl" : "ltr";
+packages/excalidraw/i18n.ts:95:  document.documentElement.lang = currentLang.code;
+packages/excalidraw/index.tsx:7:} from "react";
+packages/excalidraw/reactUtils.ts:5:import { version as ReactVersion } from "react";
+packages/excalidraw/reactUtils.ts:6:import { unstable_batchedUpdates } from "react-dom";
+packages/excalidraw/reactUtils.ts:48:    if (window.EXCALIDRAW_THROTTLE_RENDER === true) {
+packages/excalidraw/renderer/staticScene.ts:233:      linkCanvas = Object.assign(document.createElement("canvas"), {
+packages/excalidraw/renderer/staticScene.ts:236:      linkCanvas.width = width * window.devicePixelRatio * appState.zoom.value;
+packages/excalidraw/renderer/staticScene.ts:238:        height * window.devicePixelRatio * appState.zoom.value;
+packages/excalidraw/renderer/staticScene.ts:243:        window.devicePixelRatio * appState.zoom.value,
+packages/excalidraw/renderer/staticScene.ts:244:        window.devicePixelRatio * appState.zoom.value,
+packages/excalidraw/renderer/staticSvgScene.ts:746:        const rect = document.createElementNS(SVG_NS, "rect");
+packages/excalidraw/scene/export.ts:99:  const canvas = document.createElement("canvas");
+packages/excalidraw/scene/export.ts:229:   * Defaults to `document.createElement("canvas")`.
+packages/excalidraw/scene/export.ts:788:    : document.createElement("canvas");
+packages/excalidraw/scene/export.ts:881:  return document.createComment(` ${text} `);
+packages/excalidraw/scene/export.ts:917:  const svgRoot = document.createElementNS(SVG_NS, "svg");
+packages/excalidraw/scene/export.ts:1024:    document.createTextNode(`${delimiter}${fontFaces.join(delimiter)}`),
+packages/excalidraw/scene/export.ts:1116:  metadataElement.appendChild(document.createTextNode(base64));
+packages/excalidraw/subset/woff2/woff2-bindings.ts:35:    typeof document !== "undefined" && document.currentScript
+packages/excalidraw/subset/woff2/woff2-bindings.ts:36:      ? document.currentScript.src
+packages/excalidraw/subset/woff2/woff2-bindings.ts:163:      } else if (document.currentScript) {
+packages/excalidraw/subset/woff2/woff2-bindings.ts:164:        scriptDirectory = document.currentScript.src;
+packages/excalidraw/subset/woff2/woff2-bindings.ts:207:        document.title = title;
+packages/excalidraw/types.ts:71:import type React from "react";
+packages/excalidraw/types.ts:72:import type { JSX } from "react";
+packages/excalidraw/types.ts:848:   * executing in a parent window mounts Excalidraw into an iframe document.
