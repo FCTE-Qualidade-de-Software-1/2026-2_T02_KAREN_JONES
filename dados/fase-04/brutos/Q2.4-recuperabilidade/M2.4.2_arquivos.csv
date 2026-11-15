@@ -1,0 +1,8 @@
+caso,versao_origem,arquivo_entrada,arquivo_reaberto,tipos_preservados,posicoes_preservadas,tamanhos_preservados,textos_preservados,resultado,observacao
+c1,e1b7aacb356a492aa1e0fc6eb57b8896124027f0,dados/fase-03/massa-de-dados/cena_referencia.excalidraw,,n/a,n/a,n/a,n/a,nao_executado,"Arquivo disponivel, aguardando os demais arquivos do conjunto de 7 entradas para execucao da rodada"
+c2,v0.15.0,,,n/a,n/a,n/a,n/a,nao_executado,Pendencia #97: arquivo salvo na versao v0.15.0 nao disponibilizado em dados/fase-03/massa-de-dados/
+c3,v0.16.4,,,n/a,n/a,n/a,n/a,nao_executado,Pendencia #97: arquivo salvo na versao v0.16.4 nao disponibilizado em dados/fase-03/massa-de-dados/
+c4,v0.17.6,,,n/a,n/a,n/a,n/a,nao_executado,Pendencia #97: arquivo salvo na versao v0.17.6 nao disponibilizado em dados/fase-03/massa-de-dados/
+c5,v0.18.0,,,n/a,n/a,n/a,n/a,nao_executado,Pendencia #97: arquivo salvo na versao v0.18.0 nao disponibilizado em dados/fase-03/massa-de-dados/
+c6,e1b7aacb (fixture test_embedded_v1.png),,,n/a,n/a,n/a,n/a,nao_executado,Pendencia: PNG e referencia M2.4.2_c6_referencia.excalidraw nao presentes em dados/fase-03/massa-de-dados/
+c7,e1b7aacb (fixture smiley_embedded_v2.png),,,n/a,n/a,n/a,n/a,nao_executado,Pendencia: PNG e referencia M2.4.2_c7_referencia.excalidraw nao presentes em dados/fase-03/massa-de-dados/

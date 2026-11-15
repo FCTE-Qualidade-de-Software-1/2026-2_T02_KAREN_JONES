@@ -1,0 +1,46 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "http://localhost:3001",
+  "elements": [
+    {
+      "id": "FUYYTFi1BFIi51YLKbLhD",
+      "type": "rectangle",
+      "x": 458.3999938964844,
+      "y": 294.3999938964844,
+      "width": 375.1999816894531,
+      "height": 157.60000610351562,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1366868098,
+      "version": 45,
+      "versionNonce": 1850442462,
+      "isDeleted": true,
+      "boundElements": null,
+      "updated": 1794776270896,
+      "created": 1794776244604,
+      "link": null,
+      "locked": false
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff",
+    "lockedMultiSelections": {}
+  },
+  "files": {}
+}
