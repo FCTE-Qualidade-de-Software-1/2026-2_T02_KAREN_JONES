@@ -85,7 +85,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 129,Fase 4,[GESTAO] Atas de reunião da Fase 4,open,luizh-gsoares,1.0,0.0,,,45.0,0.0,21/11,-,Em andamento (no prazo),
 130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,open,eduarda-ogomes,1.0,0.0,,,45.0,0.0,22/11,-,Em andamento (no prazo),
 131,Fase 3,[GESTAO] Automatizar a execução do script de métricas PSM/CID via GitHub Actions,closed,eduarda-ogomes,1.0,1.0,0.0,na faixa,45.0,45.0,04/11,04/11/2026,Concluida no prazo,0.03
-133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,open,GabrielSMonteiro,4.0,6.0,50.0,subestimada,180.0,270.0,08/11,-,Aberta em atraso,
+133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,closed,GabrielSMonteiro,4.0,6.0,50.0,subestimada,180.0,270.0,08/11,15/11/2026,Concluida em atraso,10.69
 134,Fase 3,[GESTAO] Refazer o plano de medição PSM a partir das necessidades de informação da equipe,closed,eduarda-ogomes,3.0,3.0,0.0,na faixa,135.0,135.0,07/11,09/11/2026,Concluida em atraso,4.05
 135,Fase 3,[GESTAO] Adaptar o script de coleta PSM às medidas novas,closed,wChrstphr,3.0,2.5,-16.7,na faixa,135.0,112.5,08/11,10/11/2026,Concluida em atraso,5.42
 136,Fase 3,[GESTAO] Atualizar o relatório PSM/CID da Fase 2 e o apêndice de contribuição,closed,wChrstphr,1.5,1.0,-33.3,superestimada,67.5,45.0,05/11,07/11/2026,Concluida em atraso,2.61
