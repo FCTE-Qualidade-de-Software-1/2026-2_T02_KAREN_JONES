@@ -79,10 +79,10 @@ A milestone da Fase 3 cobriu o intervalo de 26/10/2026 a 08/11/2026, totalizando
 | :--- | :---: | :---: | :---: |
 | Total de issues planejadas | N/A | 23 issues | Conforme |
 | Issues concluídas | 100% | 18 issues (78,3%) | Parcial |
-| Concluídas até a data média (02/11/2026 11:59) | $\ge 50,0\%$ | 0 issues (0,0%) | Não conforme |
-| Concluídas nos 2 últimos dias da fase | $\le 30,0\%$ | 7 issues (38,9%) | Não conforme |
+| Concluídas até a data média (02/11/2026 11:59) | ≥ 50,0% | 0 issues (0,0%) | Não conforme |
+| Concluídas nos 2 últimos dias da fase | ≤ 30,0% | 7 issues (38,9%) | Não conforme |
 | Concluídas após o prazo final da milestone | 0 | 9 issues | Não conforme |
-| Aderência aos prazos programados | $\ge 80,0\%$ | 2 issues no prazo (8,7%) | Crítico |
+| Aderência aos prazos programados | ≥ 80,0% | 2 issues no prazo (8,7%) | Crítico |
 | Issues com bloqueio ativo | 0 | 1 issue (#105) | Atenção |
 | Alerta de ritmo disparado | Não | Sim | Alerta ativo |
 
@@ -111,11 +111,11 @@ Embora o esforço total agregado tenha ficado próximo do total orçado (-2,1%),
 | Indicador de Acurácia | Meta do Plano | Resultado Observado | Situação |
 | :--- | :---: | :---: | :---: |
 | Issues avaliadas com horas registradas | N/A | 15 issues | Conforme |
-| Desvio médio da fase | $\pm 20,0\%$ | +38,2% | Subestimação geral |
-| Desvio mediano por issue | $0,0\%$ | 0,0% | Neutro |
-| Issues na faixa ideal (-20% a +20%) | $\ge 70,0\%$ | 7 de 15 issues (46,7%) | Parcial |
-| Issues subestimadas (desvio > +20%) | $\le 15,0\%$ | 7 issues (46,7%) | Crítico |
-| Issues superestimadas (desvio < -20%) | $\le 15,0\%$ | 1 issue (6,7%) | Conforme |
+| Desvio médio da fase | ± 20,0% | +38,2% | Subestimação geral |
+| Desvio mediano por issue | 0,0% | 0,0% | Neutro |
+| Issues na faixa ideal (-20% a +20%) | ≥ 70,0% | 7 de 15 issues (46,7%) | Parcial |
+| Issues subestimadas (desvio > +20%) | ≤ 15,0% | 7 issues (46,7%) | Crítico |
+| Issues superestimadas (desvio < -20%) | ≤ 15,0% | 1 issue (6,7%) | Conforme |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
@@ -152,12 +152,12 @@ O fluxo de revisão de código e documentação foi avaliado a partir dos 17 pul
 | Total de Pull Requests | N/A | 17 PRs | Conforme |
 | PRs integrados com aprovação formal | 100% | 12 de 17 PRs (70,6%) | Evolução positiva |
 | PRs integrados sem revisão formal | 0 | 5 PRs (29,4%) | Não conforme |
-| Tempo médio de espera da primeira revisão | $\le 24,0$ h | 23,34 h | Conforme |
-| Tempo mediano de espera da primeira revisão | $\le 12,0$ h | 22,19 h | Atenção |
-| Percentil 80 (P80) de espera | $\le 24,0$ h | 45,90 h | Não conforme |
-| Percentil 90 (P90) de espera | $\le 36,0$ h | 46,19 h | Não conforme |
+| Tempo médio de espera da primeira revisão | ≤ 24,0 h | 23,34 h | Conforme |
+| Tempo mediano de espera da primeira revisão | ≤ 12,0 h | 22,19 h | Atenção |
+| Percentil 80 (P80) de espera | ≤ 24,0 h | 45,90 h | Não conforme |
+| Percentil 90 (P90) de espera | ≤ 36,0 h | 46,19 h | Não conforme |
 | PRs com espera superior a 24 horas | 0 | 4 PRs (#137, #139, #141, #144) | Atenção |
-| Lead Time médio das tarefas | $\le 4,0$ dias | 5,97 dias | Atenção |
+| Lead Time médio das tarefas | ≤ 4,0 dias | 5,97 dias | Atenção |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
@@ -290,6 +290,6 @@ Os dados quantitativos e indicadores apresentados neste relatório são respalda
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 12/11/2026 | Registro das medições PSM/CID da Fase 3, comparação com as Fases 1 e 2, análise da extensão de prazo e decisões de gestão D7 a D10 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 1.0 | 12/11/2026 | Registro das medições PSM/CID da Fase 3, comparação com as Fases 1 e 2, análise da extensão de prazo e decisões de gestão D7 a D10 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Christopher Paraizo](https://github.com/wChrstphr) |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
