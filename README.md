@@ -26,10 +26,10 @@ Este projeto tem como objetivo realizar a avaliação de qualidade de software d
 
 O projeto está dividido em 4 fases:
 
-- **Fase 01 — Estabelecer requisitos de avaliação:** propósito, tipo de produto (caracterização do escopo), partes interessadas e modelo de qualidade (características e subcaracterísticas).
-- **Fase 02 — Especificar a avaliação:** definir as métricas (SQuaRE / ISO/IEC 25023) e os critérios de julgamento.
-- **Fase 03 — Projetar a avaliação:** definir o método de avaliação, instruções para o avaliador, recursos e cronograma.
-- **Fase 04 — Executar a avaliação:** obter medidas, comparar com critérios, julgar os resultados e propor oportunidades de melhoria.
+- **Fase 01: Estabelecer requisitos de avaliação.** Propósito, tipo de produto (caracterização do escopo), partes interessadas e modelo de qualidade (características e subcaracterísticas).
+- **Fase 02: Especificar a avaliação.** Definir as métricas (SQuaRE / ISO/IEC 25023) e os critérios de julgamento.
+- **Fase 03: Projetar a avaliação.** Definir o método de avaliação, instruções para o avaliador, recursos e cronograma.
+- **Fase 04: Executar a avaliação.** Obter medidas, comparar com critérios, julgar os resultados e propor oportunidades de melhoria.
 
 ---
 

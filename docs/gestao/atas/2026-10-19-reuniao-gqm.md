@@ -9,7 +9,7 @@ description: Reunião do subgrupo F2/F4 para preencher as abstraction sheets dos
 | :--- | :--- |
 | **Data e horário** | 19/10/2026, 10h00–11h00 |
 | **Local** | Remoto (Microsoft Teams) |
-| **Fase** | Fase 02 — Especificação da Avaliação |
+| **Fase** | Fase 02: Especificação da Avaliação |
 | **Redator(a)** | Christopher Paraizo |
 | **Gravação** | Não houve |
 
