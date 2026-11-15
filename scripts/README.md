@@ -112,3 +112,13 @@ EXC=/caminho/do/clone/excalidraw scripts/coleta_g1.sh historico  # uma etapa
 ```
 
 O clone precisa estar no commit avaliado e sem alterações locais, com as dependências instaladas. As etapas são `preparacao`, `grafo`, `reusabilidade`, `analisabilidade`, `extensos`, `testes` e `historico`. A etapa `preparacao` gera a lista de arquivos de produção usada pelas demais.
+
+## Cálculo das métricas de G1
+
+O script [`calcula_metricas.py`](calcula_metricas.py) lê `dados/fase-04/brutos/` e grava em `dados/fase-04/consolidados/` as linhas de G1 de `metricas.csv`, os valores detalhados em `G1_detalhes.csv` e a lista de verificação em `G1_verificacao.csv`. Usa só a biblioteca padrão do Python. A partir da raiz do repositório:
+
+```bash
+EXC=/caminho/do/clone/excalidraw python3 scripts/calcula_metricas.py
+```
+
+O clone é usado só em M1.3.1, para contar as linhas de cada função, e precisa estar no commit avaliado. As linhas de outros grupos que já estiverem em `metricas.csv` são mantidas.
