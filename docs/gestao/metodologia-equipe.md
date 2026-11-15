@@ -67,4 +67,4 @@ BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. I
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 15/11/2026 | Página da metodologia da equipe, adaptada da seção removida do artigo | [Letícia Santos](https://github.com/LeticiaSantosss) | [definir] |
+| `1.0` | 15/11/2026 | Página da metodologia da equipe, adaptada da seção removida do artigo | [Letícia Santos](https://github.com/LeticiaSantosss) | [Christopher Paraizo](https://github.com/wChrstphr) |
