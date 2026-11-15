@@ -1,7 +1,79 @@
 {
-  "coletado_em": "2026-11-15T21:54:25.623238+00:00",
+  "coletado_em": "2026-11-15T22:31:58.553492+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
+    {
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/171",
+      "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
+      "labels_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/171/labels{/name}",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/171/comments",
+      "events_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/171/events",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/171",
+      "id": 6410017736,
+      "node_id": "PR_kwDOUJBYZc8AAAABPYzWIA",
+      "number": 171,
+      "title": "docs(f3): registrar atas da proposta do plano e da apresentação PSM",
+      "user": {
+        "login": "LeticiaSantosss",
+        "id": 196245739,
+        "node_id": "U_kgDOC7J46w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/196245739?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/LeticiaSantosss",
+        "html_url": "https://github.com/LeticiaSantosss",
+        "followers_url": "https://api.github.com/users/LeticiaSantosss/followers",
+        "following_url": "https://api.github.com/users/LeticiaSantosss/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LeticiaSantosss/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/LeticiaSantosss/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LeticiaSantosss/subscriptions",
+        "organizations_url": "https://api.github.com/users/LeticiaSantosss/orgs",
+        "repos_url": "https://api.github.com/users/LeticiaSantosss/repos",
+        "events_url": "https://api.github.com/users/LeticiaSantosss/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/LeticiaSantosss/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "labels": [],
+      "state": "open",
+      "locked": false,
+      "assignees": [],
+      "milestone": null,
+      "comments": 0,
+      "created_at": "2026-11-15T21:55:21Z",
+      "updated_at": "2026-11-15T21:55:21Z",
+      "closed_at": null,
+      "assignee": null,
+      "author_association": "COLLABORATOR",
+      "issue_field_values": [],
+      "type": null,
+      "active_lock_reason": null,
+      "draft": false,
+      "pull_request": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pulls/171",
+        "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/171",
+        "diff_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/171.diff",
+        "patch_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/pull/171.patch",
+        "merged_at": null
+      },
+      "body": "## O que foi feito?\n\n- Registro da ata da proposta de estrutura do plano da Fase 3 (Issue #94), em `docs/gestao/atas/2026-11-06-proposta-estrutura-plano.md`.\n- Registro da ata da apresentação das métricas PSM de 04/11, com o retorno da professora, em `docs/gestao/atas/2026-11-04-apresentacao-psm.md`.\n- A ata do piloto das instruções (10/11) já foi registrada na PR #160 e não foi alterada.\n\n## Issue\n\nCloses #106 \n\n## Como verificar\n\n- Abrir as duas atas em `docs/gestao/atas/` e conferir que seguem o `_modelo-ata.md`.\n- Conferir que os encaminhamentos têm a issue ligada e que a ata de 04/11 traz o retorno da professora.\n- Rodar `npm run build` e conferir que as atas aparecem no site.\n\n## Critérios da rubrica atendidos\n\n\n\n## Uso de IA\n\nClaude (Anthropic), para montar o rascunho das duas atas no formato do modelo a partir dos slides da proposta, das mensagens do grupo e das informações passadas pela autora. O conteúdo foi conferido e ajustado pela autora, incluindo uma correção sobre a reatribuição de issues, que não foi aplicada.\n\n## Checklist\n\n- [x] Título no formato `[ÁREA-NÚMERO] tipo: descrição`\n- [X] `npm run build` passou localmente (quando altera o site)\n- [X] Critério de pronto da issue conferido\n- [x] Tabela de Histórico de Versões preenchida no final do documento (com autor e revisor)\n- [x] Sem emojis, figurinhas ou ícones no conteúdo\n- [x] Horas reais preenchidas na issue",
+      "closed_by": null,
+      "reactions": {
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/171/reactions",
+        "total_count": 0,
+        "+1": 0,
+        "-1": 0,
+        "laugh": 0,
+        "hooray": 0,
+        "confused": 0,
+        "heart": 0,
+        "rocket": 0,
+        "eyes": 0
+      },
+      "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/171/timeline",
+      "performed_via_github_app": null,
+      "state_reason": null
+    },
     {
       "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/170",
       "repository_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
@@ -451,11 +523,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -634,11 +706,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -817,11 +889,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1103,11 +1175,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -1615,11 +1687,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -2890,11 +2962,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3075,11 +3147,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3269,11 +3341,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -3452,11 +3524,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -4221,11 +4293,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -4590,11 +4662,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -4880,11 +4952,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -5170,11 +5242,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -5368,11 +5440,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -5575,11 +5647,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -6063,11 +6135,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10584,11 +10656,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10782,11 +10854,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -10980,11 +11052,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -11178,11 +11250,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -11376,11 +11448,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -11585,11 +11657,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -11783,11 +11855,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -11981,11 +12053,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12179,11 +12251,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12377,11 +12449,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12586,11 +12658,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12784,11 +12856,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -12982,11 +13054,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -13180,11 +13252,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -14377,11 +14449,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -14586,11 +14658,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
@@ -14740,7 +14812,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -14795,18 +14867,18 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 1,
-        "closed_issues": 32,
+        "open_issues": 0,
+        "closed_issues": 33,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-15T21:53:29Z",
+        "updated_at": "2026-11-15T22:31:12Z",
         "due_on": "2026-11-08T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-10-26T23:19:49Z",
-      "updated_at": "2026-11-05T19:04:52Z",
-      "closed_at": null,
+      "updated_at": "2026-11-15T22:31:12Z",
+      "closed_at": "2026-11-15T22:31:12Z",
       "assignee": {
         "login": "LeticiaSantosss",
         "id": 196245739,
@@ -14843,8 +14915,28 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nA seção \"Metodologia\" saiu do artigo na revisão de enxugamento (branch `fix/relatorio`). O retorno do Ponto de Controle 1 pede no artigo o diagrama da metodologia, com só as caixas explicadas, e o artigo fica sem o PSM: isso é feito na #133. Esta página traz a versão longa. O conteúdo removido foi bem feito e deve ir para o GitPages, em uma página sobre a metodologia da equipe: as quatro fases da ISO/IEC 25040 como a equipe as conduz, a divisão em subgrupos e a governança no GitHub.\n\nO conteúdo completo removido está abaixo, para não precisar ser reescrito. A figura é a `artigo/figura-metodologia.png` (editável em `docs/images/`). Na página, o texto precisa virar Markdown, com links para as páginas das fases, o `CONTRIBUTING.md` e os relatórios PSM/CID, e as tabelas e a figura precisam de legenda e texto alternativo. Na adaptação, tirar da Caixa 4 a menção ao protótipo de alta fidelidade, porque a ação de melhoria é definida na #118.\n\n<details>\n<summary>Seção \"Metodologia\" removida do artigo (LaTeX)</summary>\n\n```latex\n\\section{Metodologia}\n\\label{sec:metodologia}\n\nA condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \\cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \\cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\\ref{fig:metodologia} sintetiza a metodologia adotada pela equipe, articulada nas quatro fases sequenciais da avaliação e na dimensão transversal de governança.\n\n\\begin{figure}[!ht]\n\\centering\n\\includegraphics[width=0.68\\textwidth]{figura-metodologia}\n\\caption{Diagrama metodológico do processo de avaliação da qualidade (Fonte: Equipe Karen Jones).}\n\\label{fig:metodologia}\n\\end{figure}\n\n\\subsection{Caixa 1: Requisitos de Avaliação (Fase 1)}\nEstabelece o escopo e as prioridades do estudo antes da medição empírica. A equipe definiu como propósito identificar pontos de melhoria no Excalidraw, adotando o commit congelado \\texttt{e1b7aac} como linha de base estática. A partir da identificação de sete partes interessadas e de uma matriz de impacto $\\times$ risco técnico, priorizaram-se três características da ISO/IEC 25010:2023: Manutenibilidade ($P1$), Confiabilidade ($P2$) e Flexibilidade ($P3$). Foram delineadas 13 subcaracterísticas e 36 requisitos formais de avaliação (RQ-MAN-01 a RQ-FLEX-12). Esta etapa foi conduzida pelo Subgrupo F1/F3 na Entrega 1.\n\n\\subsection{Caixa 2: Especificação da Avaliação (Fase 2)}\nTraduz os requisitos de qualidade em medição objetiva via GQM. As características foram desdobradas em três objetivos conceituais (G1, G2 e G3), 13 questões com hipóteses técnicas e um catálogo de 36 métricas com fórmulas matemáticas de cálculo. Para garantir imparcialidade prévia à coleta, definiu-se uma escala ordinal de cinco níveis (Heitlager/SIG) e critérios conclusivos de corte inspirados na TÜViT (Atende, Não Atende e Inconclusivo). Esta etapa foi conduzida pelo Subgrupo F2/F4 na Entrega 1.\n\n\\subsection{Caixa 3: Projeto da Avaliação (Fase 3)}\nPlaneja a infraestrutura de medição e automação para inspeção estática e testes no ecossistema TypeScript e React, selecionando ferramentas consagradas (ESLint, API do TypeScript, ts-morph, cloc e Vitest). Formalizam-se o Plano de Medição e o Plano de Análise, preparando o processamento dos dados. A execução está planejada para a Entrega 2 sob a responsabilidade do Subgrupo F1/F3.\n\n\\subsection{Caixa 4: Execução da Avaliação e Julgamento (Fase 4)}\nMaterializa a coleta empírica das 36 métricas sobre a linha de base congelada, confrontando os resultados com as hipóteses formuladas. A consolidação adota agregação matemática em duas etapas (média das métricas por questão e média das questões por característica), aplicando os critérios de corte da TÜViT para emissão do diagnóstico final, recomendação de melhorias e concepção de protótipo de interface de alta fidelidade na Entrega 2 pelo Subgrupo F2/F4.\n\n\\subsection{Caixa 5: Estrutura da Equipe e Governança no GitHub}\nSustentação operacional transversal do projeto. A equipe organizou-se em dois subgrupos estáveis de três integrantes (Tabela~\\ref{tab:subgrupos}) para atuar em paralelo sem sobreposição de escopo. A escrita do artigo e as apresentações ocorrem de maneira compartilhada por todos os membros.\n\n\\begin{table}[!ht]\n\\centering\n\\caption{Estrutura organizacional da equipe e distribuição de responsabilidades}\n\\label{tab:subgrupos}\n\\vspace{4pt}\n\\small\n\\begin{tabular}{p{2.3cm}p{4.2cm}p{2.0cm}p{6.5cm}}\n\\toprule\n\\textbf{Subgrupo} & \\textbf{Integrantes} & \\textbf{Fases} & \\textbf{Escopo Principal} \\\\\n\\midrule\nSubgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Requisitos, interessados, modelo de qualidade e projeto de testes \\\\\nSubgrupo F2/F4 & Christopher Paraizo, Luiz Henrique Soares e Maria Eduarda & Fase 2 e Fase 4 & Objetivos e métricas GQM, pontuação, execução prática e ações de melhoria \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\nO fluxo de trabalho no GitHub é estritamente regido pelo guia de contribuição, vedando envios diretos na branch principal (\\texttt{main}). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão formal por ao menos um membro do grupo.\n\n```\n\n</details>\n\n### Critérios da rubrica atendidos\n\nF2-C10, AG-C4 (GitPage da equipe: narrativa para leitor externo e links entre páginas; *2026-2 Trabalho final completo v1.pdf*, p. 6 e 9)\n\n### Referências\n\nOrientação da professora em sala: metodologia da equipe e PSM fora do artigo. Critérios do GitPage: *CRITERIOS FASE 1.pdf*, p. 3 (F1-C11).\n\n### Critério de pronto\n\n- [ ] Página de metodologia da equipe publicada no GitPages, com o conteúdo acima adaptado para Markdown\n- [ ] Figura com legenda, fonte e texto alternativo\n- [ ] Links para as páginas das Fases 1 e 2, o `CONTRIBUTING.md` e os relatórios PSM/CID\n- [ ] Página no menu lateral e com tabela de histórico de versões\n- [ ] `npm run build` sem erros\n\n### Prazo\n\n08/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "body": "### Descrição\n\nA seção \"Metodologia\" saiu do artigo na revisão de enxugamento (branch `fix/relatorio`). O retorno do Ponto de Controle 1 pede no artigo o diagrama da metodologia, com só as caixas explicadas, e o artigo fica sem o PSM: isso é feito na #133. Esta página traz a versão longa. O conteúdo removido foi bem feito e deve ir para o GitPages, em uma página sobre a metodologia da equipe: as quatro fases da ISO/IEC 25040 como a equipe as conduz, a divisão em subgrupos e a governança no GitHub.\n\nO conteúdo completo removido está abaixo, para não precisar ser reescrito. A figura é a `artigo/figura-metodologia.png` (editável em `docs/images/`). Na página, o texto precisa virar Markdown, com links para as páginas das fases, o `CONTRIBUTING.md` e os relatórios PSM/CID, e as tabelas e a figura precisam de legenda e texto alternativo. Na adaptação, tirar da Caixa 4 a menção ao protótipo de alta fidelidade, porque a ação de melhoria é definida na #118.\n\n<details>\n<summary>Seção \"Metodologia\" removida do artigo (LaTeX)</summary>\n\n```latex\n\\section{Metodologia}\n\\label{sec:metodologia}\n\nA condução deste trabalho combina o processo de avaliação da qualidade da norma ISO/IEC 25040 \\cite{iso25040}, o desdobramento orientado a metas do paradigma GQM \\cite{basili1994gqm} e práticas rigorosas de governança técnica no repositório. A Figura~\\ref{fig:metodologia} sintetiza a metodologia adotada pela equipe, articulada nas quatro fases sequenciais da avaliação e na dimensão transversal de governança.\n\n\\begin{figure}[!ht]\n\\centering\n\\includegraphics[width=0.68\\textwidth]{figura-metodologia}\n\\caption{Diagrama metodológico do processo de avaliação da qualidade (Fonte: Equipe Karen Jones).}\n\\label{fig:metodologia}\n\\end{figure}\n\n\\subsection{Caixa 1: Requisitos de Avaliação (Fase 1)}\nEstabelece o escopo e as prioridades do estudo antes da medição empírica. A equipe definiu como propósito identificar pontos de melhoria no Excalidraw, adotando o commit congelado \\texttt{e1b7aac} como linha de base estática. A partir da identificação de sete partes interessadas e de uma matriz de impacto $\\times$ risco técnico, priorizaram-se três características da ISO/IEC 25010:2023: Manutenibilidade ($P1$), Confiabilidade ($P2$) e Flexibilidade ($P3$). Foram delineadas 13 subcaracterísticas e 36 requisitos formais de avaliação (RQ-MAN-01 a RQ-FLEX-12). Esta etapa foi conduzida pelo Subgrupo F1/F3 na Entrega 1.\n\n\\subsection{Caixa 2: Especificação da Avaliação (Fase 2)}\nTraduz os requisitos de qualidade em medição objetiva via GQM. As características foram desdobradas em três objetivos conceituais (G1, G2 e G3), 13 questões com hipóteses técnicas e um catálogo de 36 métricas com fórmulas matemáticas de cálculo. Para garantir imparcialidade prévia à coleta, definiu-se uma escala ordinal de cinco níveis (Heitlager/SIG) e critérios conclusivos de corte inspirados na TÜViT (Atende, Não Atende e Inconclusivo). Esta etapa foi conduzida pelo Subgrupo F2/F4 na Entrega 1.\n\n\\subsection{Caixa 3: Projeto da Avaliação (Fase 3)}\nPlaneja a infraestrutura de medição e automação para inspeção estática e testes no ecossistema TypeScript e React, selecionando ferramentas consagradas (ESLint, API do TypeScript, ts-morph, cloc e Vitest). Formalizam-se o Plano de Medição e o Plano de Análise, preparando o processamento dos dados. A execução está planejada para a Entrega 2 sob a responsabilidade do Subgrupo F1/F3.\n\n\\subsection{Caixa 4: Execução da Avaliação e Julgamento (Fase 4)}\nMaterializa a coleta empírica das 36 métricas sobre a linha de base congelada, confrontando os resultados com as hipóteses formuladas. A consolidação adota agregação matemática em duas etapas (média das métricas por questão e média das questões por característica), aplicando os critérios de corte da TÜViT para emissão do diagnóstico final, recomendação de melhorias e concepção de protótipo de interface de alta fidelidade na Entrega 2 pelo Subgrupo F2/F4.\n\n\\subsection{Caixa 5: Estrutura da Equipe e Governança no GitHub}\nSustentação operacional transversal do projeto. A equipe organizou-se em dois subgrupos estáveis de três integrantes (Tabela~\\ref{tab:subgrupos}) para atuar em paralelo sem sobreposição de escopo. A escrita do artigo e as apresentações ocorrem de maneira compartilhada por todos os membros.\n\n\\begin{table}[!ht]\n\\centering\n\\caption{Estrutura organizacional da equipe e distribuição de responsabilidades}\n\\label{tab:subgrupos}\n\\vspace{4pt}\n\\small\n\\begin{tabular}{p{2.3cm}p{4.2cm}p{2.0cm}p{6.5cm}}\n\\toprule\n\\textbf{Subgrupo} & \\textbf{Integrantes} & \\textbf{Fases} & \\textbf{Escopo Principal} \\\\\n\\midrule\nSubgrupo F1/F3 & Davi Pierre, Gabriel Monteiro e Letícia de Carvalho & Fase 1 e Fase 3 & Requisitos, interessados, modelo de qualidade e projeto de testes \\\\\nSubgrupo F2/F4 & Christopher Paraizo, Luiz Henrique Soares e Maria Eduarda & Fase 2 e Fase 4 & Objetivos e métricas GQM, pontuação, execução prática e ações de melhoria \\\\\n\\bottomrule\n\\end{tabular}\n\\end{table}\n\nO fluxo de trabalho no GitHub é estritamente regido pelo guia de contribuição, vedando envios diretos na branch principal (\\texttt{main}). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão formal por ao menos um membro do grupo.\n\n```\n\n</details>\n\n### Critérios da rubrica atendidos\n\nF2-C10, AG-C4 (GitPage da equipe: narrativa para leitor externo e links entre páginas; *2026-2 Trabalho final completo v1.pdf*, p. 6 e 9)\n\n### Referências\n\nOrientação da professora em sala: metodologia da equipe e PSM fora do artigo. Critérios do GitPage: *CRITERIOS FASE 1.pdf*, p. 3 (F1-C11).\n\n### Critério de pronto\n\n- [x] Página de metodologia da equipe publicada no GitPages, com o conteúdo acima adaptado para Markdown\n- [x] Figura com legenda, fonte e texto alternativo\n- [x] Links para as páginas das Fases 1 e 2, o `CONTRIBUTING.md` e os relatórios PSM/CID\n- [x] Página no menu lateral e com tabela de histórico de versões\n- [x] `npm run build` sem erros\n\n### Prazo\n\n08/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n2\n\n### Revisor\n\n_No response_\n",
+      "closed_by": {
+        "login": "LeticiaSantosss",
+        "id": 196245739,
+        "node_id": "U_kgDOC7J46w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/196245739?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/LeticiaSantosss",
+        "html_url": "https://github.com/LeticiaSantosss",
+        "followers_url": "https://api.github.com/users/LeticiaSantosss/followers",
+        "following_url": "https://api.github.com/users/LeticiaSantosss/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LeticiaSantosss/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/LeticiaSantosss/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LeticiaSantosss/subscriptions",
+        "organizations_url": "https://api.github.com/users/LeticiaSantosss/orgs",
+        "repos_url": "https://api.github.com/users/LeticiaSantosss/repos",
+        "events_url": "https://api.github.com/users/LeticiaSantosss/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/LeticiaSantosss/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/85/reactions",
         "total_count": 0,
@@ -14859,7 +14951,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/85/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -28213,11 +28305,11 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 1,
-      "closed_issues": 32,
+      "open_issues": 0,
+      "closed_issues": 33,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-15T21:53:29Z",
+      "updated_at": "2026-11-15T22:31:12Z",
       "due_on": "2026-11-08T00:00:00Z",
       "closed_at": null
     },
@@ -28261,6 +28353,88 @@
     }
   ],
   "commits": [
+    {
+      "sha": "42b30e2970ca3a18ed227cdf1faa2de73d80653e",
+      "node_id": "C_kwDOUJBYZdoAKDQyYjMwZTI5NzBjYTNhMThlZDIyN2NkZjFmYWEyZGU3M2Q4MDY1M2U",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-15T21:54:27Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-15T21:54:27Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "13fbfbb03b8bba9dd354a5a3eb59291c0afac6a9",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/13fbfbb03b8bba9dd354a5a3eb59291c0afac6a9"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/42b30e2970ca3a18ed227cdf1faa2de73d80653e",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/42b30e2970ca3a18ed227cdf1faa2de73d80653e",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/42b30e2970ca3a18ed227cdf1faa2de73d80653e",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/42b30e2970ca3a18ed227cdf1faa2de73d80653e/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "5c0ceef450632c194fdfedd76ee6324e6a2b8722",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/5c0ceef450632c194fdfedd76ee6324e6a2b8722",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/5c0ceef450632c194fdfedd76ee6324e6a2b8722"
+        }
+      ]
+    },
     {
       "sha": "5c0ceef450632c194fdfedd76ee6324e6a2b8722",
       "node_id": "C_kwDOUJBYZdoAKDVjMGNlZWY0NTA2MzJjMTk0ZmRmZWRkNzZlZTYzMjRlNmEyYjg3MjI",
@@ -57812,6 +57986,7 @@
     }
   ],
   "revisoes_prs": {
+    "171": [],
     "170": [
       {
         "revisor": "copilot-pull-request-reviewer[bot]",
