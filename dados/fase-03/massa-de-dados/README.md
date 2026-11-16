@@ -11,10 +11,10 @@ Todos os arquivos são gerados a partir do script `scripts/gerar_massa_dados.py`
 Contém um elemento de cada um dos 10 tipos definidos na Fase 02: retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura (*frame*).
 
 Essa cena padronizada é usada em quatro métricas:
-- [M2.4.1](../../docs/fase-02/gqm-confiabilidade.md#m241--proporção-de-cenários-de-fechamento-com-restauração-do-desenho): restauração do desenho após fechamento ou queda do navegador;
-- [M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242--proporção-de-arquivos-reabertos-sem-perda): reabertura de arquivos de versões anteriores;
-- [M3.4.2](../../docs/fase-02/gqm-flexibilidade.md#m342--proporção-de-elementos-preservados-na-exportação-e-reimportação): elementos preservados após exportar e reimportar em `.excalidraw`, PNG e SVG;
-- [M3.4.3](../../docs/fase-02/gqm-flexibilidade.md#m343--proporção-dos-campos-do-formato-excalidraw-documentados): proporção dos campos do arquivo documentados na especificação.
+- [M2.4.1](../../docs/fase-02/gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho): restauração do desenho após fechamento ou queda do navegador.
+- [M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda): reabertura de arquivos de versões anteriores.
+- [M3.4.2](../../docs/fase-02/gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação): elementos preservados após exportar e reimportar em `.excalidraw`, PNG e SVG.
+- [M3.4.3](../../docs/fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados): proporção dos campos do arquivo documentados na especificação.
 
 ### Elementos da cena
 
@@ -36,9 +36,9 @@ Essa cena padronizada é usada em quatro métricas:
 ## 2. Cenas de escala
 
 Quatro arquivos gerados com 100, 1.000, 5.000 e 10.000 elementos para testar a escalabilidade do editor:
-- [M3.2.1](../../docs/fase-02/gqm-flexibilidade.md#m321--tempo-de-abertura-por-tamanho-de-cena): tempo de abertura de cada cena;
-- [M3.2.2](../../docs/fase-02/gqm-flexibilidade.md#m322--taxa-de-quadros-durante-a-edição-por-tamanho-de-cena): taxa de quadros (FPS) ao arrastar uma seleção de 50 elementos;
-- [M3.2.3](../../docs/fase-02/gqm-flexibilidade.md#m323--tamanho-máximo-de-cena-salva-e-exportada): maior cena que salva e exporta em PNG e SVG sem travar o navegador.
+- [M3.2.1](../../docs/fase-02/gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena): tempo de abertura de cada cena.
+- [M3.2.2](../../docs/fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena): taxa de quadros (FPS) ao arrastar uma seleção de 50 elementos.
+- [M3.2.3](../../docs/fase-02/gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada): maior cena que salva e exporta em PNG e SVG sem travar o navegador.
 
 ### Proporção dos elementos
 
@@ -55,7 +55,7 @@ Todas as cenas seguem a proporção definida na Fase 02: **40% retângulos, 20% 
 
 ## 3. Arquivos inválidos (`invalidos/`)
 
-Conjunto de 9 arquivos usados em [M2.3.1](../../docs/fase-02/gqm-confiabilidade.md#m231--proporção-de-arquivos-inválidos-tratados-com-mensagem) para verificar se o editor trata erros de arquivo exibindo mensagem ao usuário e continua funcionando sem travar.
+Conjunto de 9 arquivos usados em [M2.3.1](../../docs/fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem) para verificar se o editor trata erros de arquivo exibindo mensagem ao usuário e continua funcionando sem travar.
 
 | Arquivo | Defeito introduzido | O que a aplicação deve fazer |
 | :--- | :--- | :--- |
@@ -71,7 +71,38 @@ Conjunto de 9 arquivos usados em [M2.3.1](../../docs/fase-02/gqm-confiabilidade.
 
 ---
 
-## 4. Como recriar os arquivos
+## 4. Conjunto de reabertura (`reabertura/`)
+
+Conjunto fixo de 7 entradas da [M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda). O uso de cada entrada na coleta segue a [instrução de G2 para a M2.4.2](../../docs/fase-03/instrucoes-g2-confiabilidade.md#m242--reabertura-dos-sete-arquivos-sem-perda).
+
+Os casos c2 a c5 são a cena de referência aberta e salva pela interface de cada versão antiga, construída a partir da marcação (*tag*) do repositório do Excalidraw. O script só aciona a interface e nunca escreve esses arquivos, e o campo `source` de cada um traz o endereço da versão que o salvou. Os casos c6 e c7 são os PNGs de exemplo do commit avaliado, sem alteração de bytes. A cena incorporada em cada PNG foi extraída para `c6_referencia.excalidraw` e `c7_referencia.excalidraw`, que servem de referência na comparação no lugar dos pixels da prévia.
+
+**Tabela: Casos do conjunto de reabertura**
+
+| Caso | Arquivo | Origem | Versão | Node.js |
+| :-: | :--- | :--- | :-: | :-: |
+| c1 | [`../cena_referencia.excalidraw`](./cena_referencia.excalidraw) | Gerado por `scripts/gerar_massa_dados.py` | `e1b7aacb` | |
+| c2 | `c2_v0.15.0.excalidraw` | Salvo pela interface, com o `Dockerfile` da tag | `v0.15.0` | v14.21.3 |
+| c3 | `c3_v0.16.4.excalidraw` | Salvo pela interface, com `Dockerfile` alternativo `node:18` | `v0.16.4` | v18.20.8 |
+| c4 | `c4_v0.17.6.excalidraw` | Salvo pela interface, com `Dockerfile` alternativo `node:18` | `v0.17.6` | v18.20.8 |
+| c5 | `c5_v0.18.0.excalidraw` | Salvo pela interface, com o `Dockerfile` da tag | `v0.18.0` | v18.20.8 |
+| c6 | `c6_test_embedded_v1.png` | Fixture `test_embedded_v1.png` do commit avaliado | `e1b7aacb` | |
+| c7 | `c7_smiley_embedded_v2.png` | Fixture `smiley_embedded_v2.png` do commit avaliado | `e1b7aacb` | |
+
+Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.
+
+As tags `v0.16.4` e `v0.17.6` não constroem com o próprio `Dockerfile`, porque o `.dockerignore` delas exclui arquivos que a construção exige. Nesses casos o script usa uma imagem `node:18`, que atende ao campo `engines` das duas versões.
+
+O [`manifesto.csv`](./reabertura/manifesto.csv) registra, por caso, o SHA-256 do arquivo, a quantidade de elementos da referência e do arquivo salvo, os identificadores ausentes e as propriedades alteradas. As incompatibilidades encontradas foram:
+
+- `v0.15.0` (c2): não salva a moldura `ref_frame_01`, porque a versão não tem o tipo `frame`, e altera `width` e `height` de `ref_text_solto_01` e `x`, `width` e `height` de `ref_bound_text_01` ao recalcular o texto.
+- `v0.16.4`, `v0.17.6` e `v0.18.0` (c3 a c5): preservam os 10 elementos da referência.
+
+A entrada c2 continua no conjunto com a perda registrada, e o total permanece em 7 entradas.
+
+---
+
+## 5. Como recriar os arquivos
 
 Para recriar todos os arquivos e rodar a checagem automática, execute na raiz do repositório:
 
@@ -81,9 +112,26 @@ python scripts/gerar_massa_dados.py --verificar
 
 Comandos para recriar apenas uma parte:
 
-- Só a cena de referência: `python scripts/gerar_massa_dados.py --so-referencia`
-- Só as cenas de escala: `python scripts/gerar_massa_dados.py --so-escala`
-- Só os arquivos inválidos: `python scripts/gerar_massa_dados.py --so-invalidos`
+- Só a cena de referência: `python scripts/gerar_massa_dados.py --so-referencia`.
+- Só as cenas de escala: `python scripts/gerar_massa_dados.py --so-escala`.
+- Só os arquivos inválidos: `python scripts/gerar_massa_dados.py --so-invalidos`.
+- Só os PNGs de c6 e c7 e as cenas extraídas deles: `python scripts/gerar_massa_dados.py --so-reabertura-png`.
+
+Os arquivos de c2 a c5 e o manifesto são recriados por `scripts/gerar_massa_versoes_antigas.py`, que exige Docker e Playwright com Firefox:
+
+```bash
+pip install -r scripts/requirements.txt
+python -m playwright install firefox
+python scripts/gerar_massa_versoes_antigas.py
+```
+
+Para cada versão, o script clona a tag numa pasta fora do repositório (`--work-dir`, padrão `~/.cache/karen-jones/excalidraw-versoes`), constrói a imagem Docker, serve a aplicação numa porta própria (3011 a 3014), abre a cena de referência pelo menu e salva pelo comando de salvar em arquivo. A construção é lenta, então é possível processar uma versão por vez:
+
+- Uma versão: `python scripts/gerar_massa_versoes_antigas.py --versao v0.18.0`.
+- Manter a versão no ar para inspeção manual: `python scripts/gerar_massa_versoes_antigas.py --versao v0.18.0 --so-servir`.
+- Só regenerar o manifesto a partir dos arquivos já salvos: `python scripts/gerar_massa_versoes_antigas.py --so-manifesto`.
+
+O `--verificar` confere a presença das 7 entradas, das cenas extraídas e do manifesto, e se o SHA-256 de cada arquivo bate com o manifesto, sem regenerar c2 a c5.
 
 ---
 
@@ -92,3 +140,4 @@ Comandos para recriar apenas uma parte:
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Documentação da massa de dados de G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
+| 1.1 | 15/11/2026 | Inclusão do conjunto de reabertura da M2.4.2 e dos comandos para recriá-lo | [Christopher Paraizo](https://github.com/wChrstphr) | |
