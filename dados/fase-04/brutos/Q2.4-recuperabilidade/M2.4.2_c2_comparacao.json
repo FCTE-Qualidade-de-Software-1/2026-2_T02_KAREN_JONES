@@ -1,0 +1,63 @@
+{
+  "M2.4.2_c2_reaberto.excalidraw": {
+    "total_original": 9,
+    "preservados": 9,
+    "proporcao_preservacao": 100.0,
+    "detalhes": [
+      {
+        "id": "ref_text_solto_01",
+        "tipo": "text",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_rect_01",
+        "tipo": "rectangle",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_bound_text_01",
+        "tipo": "text",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_ellipse_01",
+        "tipo": "ellipse",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_diamond_01",
+        "tipo": "diamond",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_arrow_01",
+        "tipo": "arrow",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_line_01",
+        "tipo": "line",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_freedraw_01",
+        "tipo": "freedraw",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "ref_image_01",
+        "tipo": "image",
+        "preservado": true,
+        "motivo": "OK"
+      }
+    ]
+  }
+}
