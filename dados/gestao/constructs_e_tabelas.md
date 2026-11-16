@@ -48,8 +48,8 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
-| Fase 3 | 23 / 19 | 82.6% | 8.7% | 48.0 | 55.0 | R$ 2160.00 | R$ 2475.00 | 141.0% | 6.25 |
-| Fase 4 | 24 / 2 | 8.3% | 66.7% | 80.0 | 19.2 | R$ 3600.00 | R$ 864.00 | 106.7% | 9.71 |
+| Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 60.5 | R$ 2160.00 | R$ 2722.50 | 137.5% | 7.62 |
+| Fase 4 | 25 / 7 | 28.0% | 60.0% | 81.0 | 47.2 | R$ 3645.00 | R$ 2126.25 | 94.5% | 11.36 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 25 | 64.5 | 33.9 | R$ 1525.50 | 132 | 20 | **17.13%** |
-| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 37.0 | R$ 1665.00 | 12 | 6 | **18.70%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 16 | 44.5 | 43.5 | R$ 1957.50 | 56 | 12 | **21.98%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 24.4 | R$ 1098.45 | 14 | 9 | **12.33%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 35.0 | 15.4 | R$ 693.00 | 24 | 9 | **7.78%** |
-| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 43.7 | R$ 1966.50 | 64 | 13 | **22.08%** |
+| Christopher | `@wChrstphr` | 26 | 65.5 | 40.0 | R$ 1797.75 | 143 | 24 | **17.26%** |
+| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 37.0 | R$ 1665.00 | 12 | 6 | **15.99%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 17 | 48.5 | 55.5 | R$ 2497.50 | 63 | 15 | **23.98%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 27.9 | R$ 1255.95 | 16 | 11 | **12.06%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 14 | 31.0 | 27.4 | R$ 1233.00 | 24 | 11 | **11.84%** |
+| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 43.7 | R$ 1966.50 | 64 | 13 | **18.88%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 25 & 64.5h & 33.9h & 132/20 & 17.13\% \\
-Davi Pierre & 13 & 37.0h & 37.0h & 12/6 & 18.70\% \\
-Gabriel Monteiro & 16 & 44.5h & 43.5h & 56/12 & 21.98\% \\
-Leticia de Carvalho & 16 & 30.5h & 24.4h & 14/9 & 12.33\% \\
-Luiz Henrique Soares & 15 & 35.0h & 15.4h & 24/9 & 7.78\% \\
-Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 22.08\% \\
+Christopher & 26 & 65.5h & 40.0h & 143/24 & 17.26\% \\
+Davi Pierre & 13 & 37.0h & 37.0h & 12/6 & 15.99\% \\
+Gabriel Monteiro & 17 & 48.5h & 55.5h & 63/15 & 23.98\% \\
+Leticia de Carvalho & 16 & 30.5h & 27.9h & 16/11 & 12.06\% \\
+Luiz Henrique Soares & 14 & 31.0h & 27.4h & 24/11 & 11.84\% \\
+Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 18.88\% \\
 \hline
-\textbf{Total} & \textbf{104} & \textbf{258.0h} & \textbf{197.9h} & \textbf{302/69} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{105} & \textbf{259.0h} & \textbf{231.5h} & \textbf{322/80} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -99,8 +99,8 @@ Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 22.08\% \\
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 28/09/2026 00:00 | 08/10/2026 11:59 | 18/10/2026 23:59 | 18 / 18 | 0.0 | 13 | 5 | 27.8 | - | sim |
 | Fase 2 | 18/10/2026 23:59 | 22/10/2026 23:59 | 26/10/2026 23:59 | 29 / 29 | 55.2 | 8 | 5 | 44.8 | - | nao |
-| Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 19 / 23 | 0.0 | 7 | 10 | 8.7 | - | sim |
-| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 2 / 24 | 8.3 | 0 | 0 | 4.2 | #108 #109 #111 #112 #114 #115 #116 #118 #119 #120 #121 #122 #123 #124 #125 #126 #127 #128 #130 | nao |
+| Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 23 / 23 | 0.0 | 7 | 14 | 8.7 | - | sim |
+| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 7 / 25 | 8.0 | 0 | 0 | 4.0 | #118 #119 #120 #121 #122 #124 #125 #127 #128 #130 | sim |
 
 ### Acerto das estimativas por issue
 
@@ -110,8 +110,8 @@ Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio en
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 18 | -0.8 | 0.0 | 50.0 | 4 | 5 |
 | Fase 2 | 26 | -8.2 | -11.65 | 61.5 | 3 | 7 |
-| Fase 3 | 17 | 41.0 | 33.3 | 41.2 | 9 | 1 |
-| Fase 4 | 4 | 6.7 | 0.0 | 50.0 | 1 | 1 |
+| Fase 3 | 20 | 37.5 | 16.65 | 45.0 | 10 | 1 |
+| Fase 4 | 14 | -5.5 | 0.0 | 35.7 | 3 | 6 |
 
 ### Tempo de espera dos PRs por revisao
 
@@ -121,9 +121,9 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 17 | 17 | 8 | 47.1 | 9 | 13.68 | 10.82 | 22.28 | 40.59 | 1 |
 | Fase 2 | 29 | 27 | 13 | 48.1 | 16 | 3.66 | 0.4 | 7.53 | 7.57 | 1 |
-| Fase 3 | 20 | 19 | 12 | 63.2 | 8 | 23.34 | 22.19 | 45.9 | 46.19 | 4 |
-| Fase 4 | 3 | 3 | 1 | 33.3 | 1 | 1.27 | 1.27 | 1.84 | 1.84 | 0 |
-| Total | 69 | 66 | 34 | 51.5 | 34 | 12.56 | 2.86 | 23.5 | 40.59 | 6 |
+| Fase 3 | 23 | 23 | 15 | 65.2 | 8 | 24.17 | 20.88 | 45.9 | 61.74 | 5 |
+| Fase 4 | 11 | 7 | 3 | 42.9 | 7 | 9.85 | 10.08 | 18.55 | 18.55 | 0 |
+| Total | 80 | 74 | 39 | 52.7 | 40 | 13.97 | 7.55 | 23.5 | 40.59 | 7 |
 
 ### Quem revisou
 
@@ -135,15 +135,15 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 2 | luizh-gsoares | 7 | 53.8 |
 | Fase 2 | wChrstphr | 5 | 38.5 |
 | Fase 2 | eduarda-ogomes | 1 | 7.7 |
-| Fase 3 | eduarda-ogomes | 7 | 58.3 |
-| Fase 3 | wChrstphr | 4 | 33.3 |
-| Fase 3 | luizh-gsoares | 1 | 8.3 |
-| Fase 4 | wChrstphr | 2 | 66.7 |
-| Fase 4 | eduarda-ogomes | 1 | 33.3 |
-| Total | eduarda-ogomes | 14 | 38.9 |
-| Total | wChrstphr | 11 | 30.6 |
-| Total | luizh-gsoares | 10 | 27.8 |
-| Total | GabrielSMonteiro | 1 | 2.8 |
+| Fase 3 | wChrstphr | 7 | 46.7 |
+| Fase 3 | eduarda-ogomes | 7 | 46.7 |
+| Fase 3 | luizh-gsoares | 1 | 6.7 |
+| Fase 4 | wChrstphr | 4 | 80.0 |
+| Fase 4 | eduarda-ogomes | 1 | 20.0 |
+| Total | wChrstphr | 16 | 39.0 |
+| Total | eduarda-ogomes | 14 | 34.1 |
+| Total | luizh-gsoares | 10 | 24.4 |
+| Total | GabrielSMonteiro | 1 | 2.4 |
 
 ### Autor por revisor
 
@@ -162,19 +162,21 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 2 | wChrstphr | luizh-gsoares | 6 |
 | Fase 3 | DaviPierre | wChrstphr | 2 |
 | Fase 3 | GabrielSMonteiro | eduarda-ogomes | 3 |
-| Fase 3 | LeticiaSantosss | wChrstphr | 1 |
+| Fase 3 | GabrielSMonteiro | wChrstphr | 2 |
+| Fase 3 | LeticiaSantosss | wChrstphr | 2 |
 | Fase 3 | eduarda-ogomes | wChrstphr | 1 |
 | Fase 3 | wChrstphr | eduarda-ogomes | 4 |
 | Fase 3 | wChrstphr | luizh-gsoares | 1 |
+| Fase 4 | GabrielSMonteiro | wChrstphr | 2 |
 | Fase 4 | eduarda-ogomes | wChrstphr | 1 |
 | Fase 4 | luizh-gsoares | eduarda-ogomes | 1 |
 | Fase 4 | luizh-gsoares | wChrstphr | 1 |
 | Total | DaviPierre | eduarda-ogomes | 1 |
 | Total | DaviPierre | wChrstphr | 2 |
 | Total | GabrielSMonteiro | eduarda-ogomes | 5 |
-| Total | GabrielSMonteiro | wChrstphr | 1 |
+| Total | GabrielSMonteiro | wChrstphr | 5 |
 | Total | LeticiaSantosss | GabrielSMonteiro | 1 |
-| Total | LeticiaSantosss | wChrstphr | 1 |
+| Total | LeticiaSantosss | wChrstphr | 2 |
 | Total | eduarda-ogomes | luizh-gsoares | 3 |
 | Total | eduarda-ogomes | wChrstphr | 3 |
 | Total | luizh-gsoares | eduarda-ogomes | 1 |
@@ -186,8 +188,19 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | PR | Fase | Origem da fase | Autor | Situacao | Aberto em | Primeira revisao | Espera (h) | Aprovado | Revisores |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| #176 | Fase 4 | issue #116 | luizh-gsoares | aberto | 16/11/2026 00:10 | - | - | nao | - |
+| #175 | Fase 4 | issue #118 | wChrstphr | aberto | 15/11/2026 21:26 | - | - | nao | - |
+| #173 | Fase 4 | issue #115 | wChrstphr | aberto | 15/11/2026 20:01 | - | - | nao | - |
+| #172 | Fase 3 | issue #85 | LeticiaSantosss | integrado | 15/11/2026 19:37 | 15/11/2026 19:55 | 0.31 | sim | wChrstphr |
+| #171 | Fase 3 | issue #106 | LeticiaSantosss | integrado | 15/11/2026 18:55 | - | - | nao | - |
+| #170 | Fase 4 | issue #112 | luizh-gsoares | aberto | 15/11/2026 18:26 | - | - | nao | - |
+| #169 | Fase 4 | issue #114 | wChrstphr | integrado | 15/11/2026 15:00 | - | - | nao | - |
+| #168 | Fase 4 | issue #111 | wChrstphr | integrado | 15/11/2026 14:39 | - | - | nao | - |
+| #167 | Fase 4 | issue #109 | GabrielSMonteiro | integrado | 14/11/2026 20:56 | 15/11/2026 15:16 | 18.32 | sim | wChrstphr |
+| #166 | Fase 4 | issue #133 | GabrielSMonteiro | integrado | 14/11/2026 20:42 | 15/11/2026 15:14 | 18.55 | sim | wChrstphr |
+| #165 | Fase 3 | issue #105 | GabrielSMonteiro | integrado | 14/11/2026 19:47 | 15/11/2026 15:05 | 19.29 | sim | wChrstphr |
 | #164 | Fase 3 | issue #104 | DaviPierre | integrado | 14/11/2026 11:36 | - | - | nao | - |
-| #163 | Fase 3 | issue #107 | GabrielSMonteiro | aberto | 13/11/2026 00:06 | - | - | nao | - |
+| #163 | Fase 3 | issue #107 | GabrielSMonteiro | integrado | 13/11/2026 00:06 | 15/11/2026 14:55 | 62.83 | sim | wChrstphr |
 | #162 | Fase 4 | data | GabrielSMonteiro | integrado | 12/11/2026 23:01 | - | - | nao | - |
 | #161 | Fase 3 | titulo | GabrielSMonteiro | integrado | 12/11/2026 22:44 | - | - | nao | - |
 | #160 | Fase 3 | issue #103 | eduarda-ogomes | integrado | 12/11/2026 13:57 | - | - | nao | - |
@@ -260,7 +273,6 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | Tipo | Issue/PR | Mensagem |
 | :--- | :---: | :---: |
-| PR travado | #163 | PR aberto ha 43h sem revisao (limite do plano: 24h) |
 | fechada sem horas reais | #27 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA' fechada sem horas reais registradas |
 | fechada sem horas reais | #74 | '[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1' fechada sem horas reais registradas |
 | fechada sem horas reais | #103 | '[F3] Piloto das instruções e revisão do plano de avaliação' fechada sem horas reais registradas |

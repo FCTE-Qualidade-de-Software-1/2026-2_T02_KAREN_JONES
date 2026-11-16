@@ -1,0 +1,333 @@
+excalidraw-app/tests/LanguageList.test.tsx:35:    await render(
+excalidraw-app/tests/MobileMenu.test.tsx:18:    await render(
+excalidraw-app/tests/collab.test.tsx:76:    await render(<ExcalidrawApp />);
+excalidraw-app/tests/collab.test.tsx:146:    await render(<ExcalidrawApp />);
+packages/element/tests/align.test.tsx:69:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:53:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:201:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:278:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:355:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:384:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:535:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:668:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:880:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx:1055:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/collision.test.tsx:46:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/collision.test.tsx:91:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/cropElement.test.tsx:45:  await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/element/tests/distribute.test.tsx:74:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/duplicate.test.tsx:439:    await render(<Excalidraw />);
+packages/element/tests/duplicate.test.tsx:548:    await render(<Excalidraw />);
+packages/element/tests/duplicate.test.tsx:881:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/duplicate.test.tsx:1191:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/elbowArrow.test.tsx:36:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/elbowArrow.test.tsx:137:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/elbowArrow.test.tsx:227:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/flowchart.test.tsx:24:  await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/frame.test.tsx:101:    await render(<Excalidraw />);
+packages/element/tests/frame.test.tsx:618:    await render(<Excalidraw />);
+packages/element/tests/linearElementEditor.test.tsx:70:    const comp = await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/resize.test.tsx:73:  await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/zindex.test.tsx:164:    await render(<Excalidraw />);
+packages/element/tests/zindex.test.tsx:1234:    await render(<Excalidraw />);
+packages/element/tests/zindex.test.tsx:1575:    await render(<Excalidraw />);
+packages/element/tests/zindex.test.tsx:1670:    await render(<Excalidraw />);
+packages/excalidraw/actions/actionDeleteSelected.test.tsx:14:    await render(<Excalidraw />);
+packages/excalidraw/actions/actionDeleteSelected.test.tsx:218:    await render(<Excalidraw />);
+packages/excalidraw/actions/actionDuplicateSelection.test.tsx:18:    await render(<Excalidraw />);
+packages/excalidraw/actions/actionElementLock.test.tsx:14:    await render(<Excalidraw />);
+packages/excalidraw/actions/actionElementLock.test.tsx:23:    await render(
+packages/excalidraw/actions/actionFlip.test.tsx:62:    await render(<Excalidraw initialData={{ elements }} />);
+packages/excalidraw/actions/actionFlip.test.tsx:85:    await render(<Excalidraw />);
+packages/excalidraw/actions/actionProperties.test.tsx:18:    await render(<Excalidraw />);
+packages/excalidraw/components/FontPicker/FontPicker.test.tsx:20:    const { queryByTestId } = await render(
+packages/excalidraw/components/FontPicker/FontPicker.test.tsx:93:      const utils = await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/Popover.test.tsx:32:      const { container } = render(
+packages/excalidraw/components/Popover.test.tsx:54:      const { container } = render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:33:      const { container } = await render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:48:      const { container } = await render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:70:      const { container } = await render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:159:      const { container } = await render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:193:      const { container } = await render(<CustomExcalidraw />);
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:221:      const { container } = await render(<CustomExcalidraw />);
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:279:      await render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:306:      await render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx:333:      const { container } = await render(
+packages/excalidraw/components/Stats/stats.test.tsx:100:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/Stats/stats.test.tsx:164:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/Stats/stats.test.tsx:356:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/Stats/stats.test.tsx:512:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/Stats/stats.test.tsx:743:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/Trans.test.tsx:21:    const { getByTestId } = render(
+packages/excalidraw/components/UserList.test.tsx:18:    const { container } = await render(
+packages/excalidraw/components/dropdownMenu/DropdownMenu.test.tsx:16:    const { container } = await render(<Excalidraw />);
+packages/excalidraw/components/dropdownMenu/DropdownMenu.test.tsx:35:      const { container } = await render(<Excalidraw />);
+packages/excalidraw/components/hoc/withInternalFallback.test.tsx:8:    const { container } = await render(
+packages/excalidraw/components/hoc/withInternalFallback.test.tsx:32:    const { container } = await render(
+packages/excalidraw/components/hoc/withInternalFallback.test.tsx:56:    const { container } = await render(
+packages/excalidraw/components/hoc/withInternalFallback.test.tsx:82:    const { container } = await render(
+packages/excalidraw/tests/App.test.tsx:38:    await render(<Excalidraw />);
+packages/excalidraw/tests/MermaidToExcalidraw.test.tsx:108:    await render(
+packages/excalidraw/tests/actionStyles.test.tsx:30:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/appState.test.tsx:21:    await render(
+packages/excalidraw/tests/appState.test.tsx:66:    const { container } = await render(
+packages/excalidraw/tests/appStateHooks.test.tsx:58:    render(
+packages/excalidraw/tests/appStateHooks.test.tsx:86:    render(
+packages/excalidraw/tests/arrowBinding.test.tsx:72:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx:90:    await render(<Excalidraw handleKeyboardGlobally />);
+packages/excalidraw/tests/bucketFill.test.tsx:50:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/bucketFill.test.tsx:241:    await render(
+packages/excalidraw/tests/clipboard.test.tsx:92:  await render(
+packages/excalidraw/tests/clipboard.test.tsx:234:    await render(
+packages/excalidraw/tests/clipboard.test.tsx:270:      await render(
+packages/excalidraw/tests/clipboard.test.tsx:874:    await render(
+packages/excalidraw/tests/clipboard.test.tsx:903:    await render(
+packages/excalidraw/tests/colorInput.test.tsx:122:    const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/contextmenu.test.tsx:65:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/convertElementType.binding.test.tsx:22:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/convertElementType.test.tsx:13:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/created.test.tsx:19:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/cursorHint.test.tsx:31:    await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:58:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:92:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:127:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:161:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:199:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:243:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:256:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:281:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:305:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:324:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:356:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:386:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:407:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:439:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:467:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:489:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:511:      const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/dragCreate.test.tsx:533:      const { getByToolName, container } = await render(
+packages/excalidraw/tests/dragCreate.test.tsx:567:      const { getByToolName, container } = await render(
+packages/excalidraw/tests/drawShape.test.tsx:117:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/drawShape.test.tsx:388:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/drawShape.test.tsx:525:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/drawShape.test.tsx:594:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/drawShape.test.tsx:774:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/drawShape.test.tsx:814:      const { container } = await render(
+packages/excalidraw/tests/elementLocking.test.tsx:20:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/embeddable.test.tsx:28:    await render(<Excalidraw viewModeEnabled />);
+packages/excalidraw/tests/excalidraw.test.tsx:31:      const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/excalidraw.test.tsx:54:      const { container } = await render(<Excalidraw zenModeEnabled={true} />);
+packages/excalidraw/tests/excalidraw.test.tsx:76:    let { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:84:    ({ container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:106:      const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/excalidraw.test.tsx:123:      const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:145:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:154:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:163:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:172:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:181:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:189:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:200:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:211:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:223:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:239:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:248:        const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:273:      const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/excalidraw.test.tsx:282:      const { container } = await render(<Excalidraw theme={THEME.DARK} />);
+packages/excalidraw/tests/excalidraw.test.tsx:291:      const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:305:      const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:319:      await render(<Excalidraw theme={THEME.DARK} />);
+packages/excalidraw/tests/excalidraw.test.tsx:333:      await render(<Excalidraw theme={THEME.LIGHT} />);
+packages/excalidraw/tests/excalidraw.test.tsx:362:      const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/excalidraw.test.tsx:375:      const { container } = await render(<Excalidraw name={name} />);
+packages/excalidraw/tests/excalidraw.test.tsx:389:      const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/excalidraw.test.tsx:397:      const { container } = await render(<Excalidraw autoFocus={true} />);
+packages/excalidraw/tests/excalidraw.test.tsx:407:      const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:446:      const { container } = await render(<CustomExcalidraw />);
+packages/excalidraw/tests/excalidraw.test.tsx:465:      const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:478:      const { container } = await render(
+packages/excalidraw/tests/excalidraw.test.tsx:492:    const { container } = await render(
+packages/excalidraw/tests/export.test.tsx:56:    await render(<Excalidraw />);
+packages/excalidraw/tests/eyeDropper.test.tsx:14:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/eyeDropper.test.tsx:60:    await render(
+packages/excalidraw/tests/eyeDropper.test.tsx:93:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/fileDrop.test.tsx:67:    await render(<Excalidraw />);
+packages/excalidraw/tests/fileDrop.test.tsx:86:    await render(<Excalidraw />);
+packages/excalidraw/tests/fileDrop.test.tsx:104:      await render(<Excalidraw />);
+packages/excalidraw/tests/fileDrop.test.tsx:134:    await render(<Excalidraw />);
+packages/excalidraw/tests/fileDrop.test.tsx:154:    await render(<Excalidraw />);
+packages/excalidraw/tests/fileDrop.test.tsx:163:    await render(<Excalidraw />);
+packages/excalidraw/tests/fileDrop.test.tsx:184:    await render(<Excalidraw {...props} />);
+packages/excalidraw/tests/fileDrop.test.tsx:192:    await render(
+packages/excalidraw/tests/fileDrop.test.tsx:280:      await render(
+packages/excalidraw/tests/fileDrop.test.tsx:310:  await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:70:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:99:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:135:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:166:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:201:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:240:    await render(
+packages/excalidraw/tests/fitToContent.test.tsx:259:    await render(
+packages/excalidraw/tests/fitToContent.test.tsx:289:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:330:    await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx:369:    await render(<Excalidraw />);
+packages/excalidraw/tests/flip.test.tsx:68:  await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/freedrawMode.test.tsx:16:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:148:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:206:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:225:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:256:      await render(
+packages/excalidraw/tests/history.test.tsx:286:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:340:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:420:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:455:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:504:      await render(
+packages/excalidraw/tests/history.test.tsx:556:      await render(
+packages/excalidraw/tests/history.test.tsx:628:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:765:      await render(
+packages/excalidraw/tests/history.test.tsx:814:      await render(
+packages/excalidraw/tests/history.test.tsx:890:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:1001:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:1250:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:1314:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:1463:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:1556:        await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx:1989:      const { container } = await render(
+packages/excalidraw/tests/history.test.tsx:2039:      const { container } = await render(
+packages/excalidraw/tests/history.test.tsx:2121:      await render(
+packages/excalidraw/tests/image.test.tsx:28:  await render(
+packages/excalidraw/tests/interactivity.test.tsx:92:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:151:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:323:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:337:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:357:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:379:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:438:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:468:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:510:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:550:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:580:    await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:603:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:705:    await render(<Excalidraw ui={{ enabled: { zoom: true } }} />);
+packages/excalidraw/tests/interactivity.test.tsx:721:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:740:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:756:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:775:    const { container } = await render(
+packages/excalidraw/tests/interactivity.test.tsx:812:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:923:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:945:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:975:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:991:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:1019:    await render(<Excalidraw interaction={false} onLinkOpen={onLinkOpen} />);
+packages/excalidraw/tests/interactivity.test.tsx:1030:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:1062:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:1252:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:1285:    await render(<Excalidraw interaction={false} validateEmbeddable={true} />);
+packages/excalidraw/tests/interactivity.test.tsx:1299:    await render(
+packages/excalidraw/tests/interactivity.test.tsx:1332:    await render(
+packages/excalidraw/tests/laser.test.tsx:27:    await render(<Excalidraw onLinkOpen={onLinkOpen} />);
+packages/excalidraw/tests/laser.test.tsx:66:    await render(<Excalidraw />);
+packages/excalidraw/tests/laser.test.tsx:111:    await render(<Excalidraw />);
+packages/excalidraw/tests/laser.test.tsx:154:    await render(<Excalidraw />);
+packages/excalidraw/tests/laser.test.tsx:176:    await render(<Excalidraw />);
+packages/excalidraw/tests/laser.test.tsx:242:      await render(<Excalidraw />);
+packages/excalidraw/tests/laser.test.tsx:269:      await render(<Excalidraw />);
+packages/excalidraw/tests/lasso.test.tsx:43:  await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/library.test.tsx:88:    await render(<Excalidraw initialData={{ libraryItems }} />);
+packages/excalidraw/tests/library.test.tsx:146:    await render(<Excalidraw />);
+packages/excalidraw/tests/library.test.tsx:247:    const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/library.test.tsx:279:    const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/move.test.tsx:40:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/move.test.tsx:78:    await render(<Excalidraw />);
+packages/excalidraw/tests/move.test.tsx:100:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/move.test.tsx:173:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/multiPointCreate.test.tsx:48:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/multiPointCreate.test.tsx:64:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/multiPointCreate.test.tsx:79:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/multiPointCreate.test.tsx:96:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/multiPointCreate.test.tsx:142:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/multiPointCreate.test.tsx:187:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/onDuplicate.test.tsx:89:  await render(
+packages/excalidraw/tests/packages/events.test.tsx:22:    await render(
+packages/excalidraw/tests/packages/events.test.tsx:42:    await render(
+packages/excalidraw/tests/packages/events.test.tsx:95:    await render(
+packages/excalidraw/tests/pan.test.tsx:42:    await render(<Excalidraw />);
+packages/excalidraw/tests/pan.test.tsx:210:    await render(<Excalidraw interaction={false} />);
+packages/excalidraw/tests/pixelSnap.test.tsx:54:    await render(<Excalidraw />);
+packages/excalidraw/tests/pixelSnap.test.tsx:315:    await render(<Excalidraw />);
+packages/excalidraw/tests/pixelSnap.test.tsx:353:    await render(<Excalidraw />);
+packages/excalidraw/tests/regressionTests.test.tsx:68:  await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/renderOverrides.test.tsx:54:    const mounted = await render(
+packages/excalidraw/tests/rotate.test.tsx:19:  await render(<Excalidraw />);
+packages/excalidraw/tests/rotate.test.tsx:43:  await render(<Excalidraw />);
+packages/excalidraw/tests/scroll.test.tsx:30:    await render(
+packages/excalidraw/tests/scroll.test.tsx:63:    await render(
+packages/excalidraw/tests/scroll.test.tsx:115:    await render(<Excalidraw handleKeyboardGlobally={true} />, {});
+packages/excalidraw/tests/scrollConstraints.test.tsx:459:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:490:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:582:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:643:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:680:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:717:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:744:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:797:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:871:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:916:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:954:    await render(<Excalidraw />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:999:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1024:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1066:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1115:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1159:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1206:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1243:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/scrollConstraints.test.tsx:1300:    await render(<Excalidraw />);
+packages/excalidraw/tests/search.test.tsx:35:    await render(<Excalidraw handleKeyboardGlobally />);
+packages/excalidraw/tests/selection.test.tsx:68:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:160:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:210:    await render(<Excalidraw UIOptions={{ getFormFactor: () => "tablet" }} />);
+packages/excalidraw/tests/selection.test.tsx:235:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:469:    await render(
+packages/excalidraw/tests/selection.test.tsx:1044:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1327:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1618:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1644:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1665:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1688:    const { getByToolName, container } = await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1715:    const { getByToolName, container } = await render(
+packages/excalidraw/tests/selection.test.tsx:1748:    const { getByToolName, container } = await render(
+packages/excalidraw/tests/selection.test.tsx:1781:    const { getByToolName, container } = await render(
+packages/excalidraw/tests/selection.test.tsx:1814:    const { getByToolName, container } = await render(
+packages/excalidraw/tests/selection.test.tsx:1859:    const { getByToolName, container } = await render(
+packages/excalidraw/tests/selection.test.tsx:1907:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1936:    await render(<Excalidraw />);
+packages/excalidraw/tests/selection.test.tsx:1980:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/shortcuts.test.tsx:13:    await render(
+packages/excalidraw/tests/stickyNotes.test.tsx:135:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/tool.test.tsx:29:    await render(
+packages/excalidraw/tests/tool.test.tsx:146:    await render(<Excalidraw activeTool={{ type: "rectangle" }} />);
+packages/excalidraw/tests/tool.test.tsx:165:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/tool.test.tsx:188:    await render(
+packages/excalidraw/tests/tool.test.tsx:217:    await render(<Excalidraw activeTool={{ type: "rectangle" }} />);
+packages/excalidraw/tests/tool.test.tsx:242:    await render(<Excalidraw activeTool={{ type: "laser" }} />);
+packages/excalidraw/tests/tool.test.tsx:256:    await render(
+packages/excalidraw/tests/tool.test.tsx:296:    await render(<Excalidraw activeTool={{ type: "image" } as any} />);
+packages/excalidraw/tests/tool.test.tsx:304:    await render(
+packages/excalidraw/tests/tool.test.tsx:335:    await render(
+packages/excalidraw/tests/tool.test.tsx:363:    await render(<Excalidraw />);
+packages/excalidraw/tests/tool.test.tsx:372:    await render(<Excalidraw UIOptions={{ tools: { image: false } }} />);
+packages/excalidraw/tests/tool.test.tsx:379:    await render(<Excalidraw />);
+packages/excalidraw/tests/toolDrag.test.tsx:43:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/viewMode.test.tsx:34:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/wheel.test.tsx:93:    await render(<Excalidraw />);
+packages/excalidraw/tests/wheel.test.tsx:419:    await render(<Excalidraw />);
+packages/excalidraw/tests/wrap.test.tsx:79:    await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:89:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:676:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:806:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:1106:        await render(
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:1405:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:3394:      await render(
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:3443:      await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:3529:      await render(
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx:3557:      await render(<Excalidraw handleKeyboardGlobally={true} />);

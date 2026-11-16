@@ -101,3 +101,24 @@ A coleta emite aviso, com o numero da issue, no fim da execucao e na secao 4 de 
 - uma faixa do campo `Depende de` esta invertida ou cobre 100 issues ou mais (ela e ignorada), ou
 - um PR aberto esta ha mais de 24 horas sem revisao.
 
+
+## Coleta das métricas de G1
+
+O script [`coleta_g1.sh`](coleta_g1.sh) obtém os dados brutos das 14 métricas de Manutenibilidade com os comandos das [instruções de G1](../docs/fase-03/instrucoes-g1-manutenibilidade.md) e grava as saídas em `dados/fase-04/brutos/`. Ele não calcula valores. A partir da raiz do repositório:
+
+```bash
+EXC=/caminho/do/clone/excalidraw scripts/coleta_g1.sh            # todas as etapas
+EXC=/caminho/do/clone/excalidraw scripts/coleta_g1.sh historico  # uma etapa
+```
+
+O clone precisa estar no commit avaliado e sem alterações locais, com as dependências instaladas. As etapas são `preparacao`, `grafo`, `reusabilidade`, `analisabilidade`, `extensos`, `testes` e `historico`. A etapa `preparacao` gera a lista de arquivos de produção usada pelas demais.
+
+## Cálculo das métricas de G1
+
+O script [`calcula_metricas.py`](calcula_metricas.py) lê `dados/fase-04/brutos/` e grava em `dados/fase-04/consolidados/` as linhas de G1 de `metricas.csv`, os valores detalhados em `G1_detalhes.csv` e a lista de verificação em `G1_verificacao.csv`. Usa só a biblioteca padrão do Python. A partir da raiz do repositório:
+
+```bash
+EXC=/caminho/do/clone/excalidraw python3 scripts/calcula_metricas.py
+```
+
+O clone é usado só em M1.3.1, para contar as linhas de cada função, e precisa estar no commit avaliado. As linhas de outros grupos que já estiverem em `metricas.csv` são mantidas.

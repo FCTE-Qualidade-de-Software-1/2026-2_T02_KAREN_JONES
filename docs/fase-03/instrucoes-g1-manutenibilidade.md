@@ -48,6 +48,8 @@ find packages excalidraw-app \
 
 **Saída esperada:** `git rev-parse HEAD` mostra `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`, a instalação termina sem erro e `M1.1.1_arquivos-producao.txt` lista os arquivos de produção de todos os pacotes. Se o commit for outro ou a instalação falhar, a coleta para e o desvio é registrado.
 
+O script [`scripts/coleta_g1.sh`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/coleta_g1.sh) executa os comandos desta página na mesma ordem e confere o commit antes e depois da coleta. O caminho do clone vai na variável `EXC`. Os formulários das métricas que pedem revisão, como M1.2.1 e M1.5.2, continuam manuais.
+
 Cada métrica tem um registro `M<código>_fatores.md`, com os campos da [seção 9 dos recursos](./recursos-ambiente.md#9-fatores-de-variação-registrados-em-cada-coleta). Em G1, as métricas de histórico (M1.4.1, M1.4.3 e M1.5.3) registram também a data e a hora da consulta à API.
 
 ---
@@ -159,11 +161,11 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 [Ficha M1.3.1](../fase-02/gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) e [faixas de M1.3.1](../fase-02/pontuacao-julgamento.md#31-faixas-de-m131)
 
-1. Executar o ESLint do commit com a regra `complexity` em limite 0, para que todas as funções sejam informadas:
+1. Executar o ESLint 8.57.0 dos [recursos](./recursos-ambiente.md#5-ferramentas-de-análise-e-suas-versões), com a configuração do commit e a regra `complexity` em limite 0, para que todas as funções sejam informadas:
 
    ```bash
    cd "$EXC"
-   ./node_modules/.bin/eslint --format json --rule 'complexity: [error, 0]' \
+   npx --yes eslint@8.57.0 --format json --rule 'complexity: [error, 0]' \
      --ext .ts,.tsx packages excalidraw-app \
      > "$BRUTOS/M1.3.1_eslint.json" 2> "$BRUTOS/M1.3.1_eslint-erros.log"
    ```
@@ -285,11 +287,12 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 [Ficha M1.5.1](../fase-02/gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote)
 
-1. Executar a suíte com o comando do próprio projeto e copiar o relatório:
+1. Executar a suíte com o comando do próprio projeto e copiar o relatório. A remoção de `dist`, `CI=true` e o número de processos seguem os [cuidados da preparação](./recursos-ambiente.md#21-preparação-a-partir-do-commit-avaliado):
 
    ```bash
    cd "$EXC"
-   yarn test:coverage --run 2>&1 | tee "$BRUTOS/M1.5.1_testes.log"
+   rm -rf packages/*/dist coverage
+   CI=true yarn test:coverage --minWorkers=1 --maxWorkers=8 2>&1 | tee "$BRUTOS/M1.5.1_testes.log"
    cp coverage/coverage-summary.json "$BRUTOS/M1.5.1_coverage-summary.json"
    ```
 
@@ -368,3 +371,4 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Elaboração do roteiro operacional de coleta e evidências de todas as 14 métricas G1, com auxiliares para processamento | [Davi Pierre](https://github.com/DaviPierre) |  |
 | 1.1 | 10/11/2026 | Ajustes da revisão da PR #149: comandos das próprias ferramentas no lugar dos scripts, nomes dos dados brutos no padrão de G3, M1.2.1 conforme a ficha e correções de M1.3.1, M1.3.3, M1.4.3 e M1.5.2 | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.2 | 11/11/2026 | Script de coleta e comandos de M1.3.1 e M1.5.1 alinhados com os recursos e ambiente | [Christopher Paraizo](https://github.com/wChrstphr) |  |
