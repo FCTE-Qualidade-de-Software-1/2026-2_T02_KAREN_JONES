@@ -344,10 +344,10 @@ Analisar o código-fonte, testes e histórico de alterações do Excalidraw, com
 \centering
 \caption{Métricas, hipóteses formuladas antes da coleta e regra de confirmação do objetivo G1: Manutenibilidade (Fonte: Equipe Karen Jones).}
 \label{tab:g1-metricas}
-\vspace{4pt}
+\vspace{2pt}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{0.95}
+\renewcommand{\arraystretch}{0.90}
 \begin{tabular}{p{1.2cm}p{5.5cm}p{5.0cm}p{3.6cm}}
 \toprule
 \textbf{Métrica} & \textbf{Fórmula} & \textbf{Hipótese} & \textbf{Confirmada se o valor medido for} \\
@@ -395,10 +395,10 @@ Analisar o editor, rotinas de salvamento local e histórico de defeitos do Excal
 \centering
 \caption{Métricas, hipóteses formuladas antes da coleta e regra de confirmação do objetivo G2: Confiabilidade (Fonte: Equipe Karen Jones).}
 \label{tab:g2-metricas}
-\vspace{4pt}
+\vspace{2pt}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{0.95}
+\renewcommand{\arraystretch}{0.90}
 \begin{tabular}{p{1.2cm}p{5.5cm}p{5.0cm}p{3.6cm}}
 \toprule
 \textbf{Métrica} & \textbf{Fórmula} & \textbf{Hipótese} & \textbf{Confirmada se o valor medido for} \\
@@ -440,10 +440,10 @@ Analisar a biblioteca e a aplicação web do Excalidraw, considerando interface 
 \centering
 \caption{Métricas, hipóteses formuladas antes da coleta e regra de confirmação do objetivo G3: Flexibilidade (Fonte: Equipe Karen Jones).}
 \label{tab:g3-metricas}
-\vspace{4pt}
+\vspace{2pt}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{0.95}
+\renewcommand{\arraystretch}{0.90}
 \begin{tabular}{p{1.2cm}p{5.5cm}p{5.0cm}p{3.6cm}}
 \toprule
 \textbf{Métrica} & \textbf{Fórmula} & \textbf{Hipótese} & \textbf{Confirmada se o valor medido for} \\
@@ -481,15 +481,13 @@ M3.4.3 & (Campos documentados / campos encontrados) $\times 100$ & O formato \te
 \subsubsection{Níveis de Pontuação e Critérios de Julgamento}
 \label{subsec:pontuacao-julgamento}
 
-Para transformar os dados brutos em diagnósticos qualitativos comparáveis, a equipe adotou a escala ordinal de cinco níveis concebida no modelo de avaliação de manutenibilidade de Heitlager, Kuipers e Visser \cite{heitlager2007}. A escala distribui os resultados nas graduações Muito Ruim (símbolo \texttt{--}, equivalente a 1 ponto), Ruim (símbolo \texttt{-}, equivalente a 2 pontos), Regular (símbolo \texttt{o}, equivalente a 3 pontos), Bom (símbolo \texttt{+}, equivalente a 4 pontos) e Excelente (símbolo \texttt{++}, equivalente a 5 pontos). A atribuição de valores numéricos de 1 a 5 viabiliza a realização de operações de agregação matemática entre os indicadores de cada subcaracterística.
-
-As faixas de cada nível foram fixadas antes da coleta, para que não pudessem ser ajustadas a favor ou contra o produto, e vêm de quatro origens. A primeira são as faixas publicadas por Heitlager, Kuipers e Visser para complexidade ciclomática e cobertura de linhas, aplicadas sem modificação. A segunda são as faixas de cobertura do mesmo modelo, usadas nas métricas de proporção desejável, em que valores maiores são melhores. A terceira são as faixas de duplicação de código, usadas nas métricas de proporção indesejável, em que valores menores são melhores. A quarta são referências de engenharia e usabilidade, como os limiares de tempo de resposta de Nielsen \cite{nielsen1993} e as metas de FPS do modelo \textit{Response, Animation, Idle, Load} (RAIL), ou parâmetros calibrados pela equipe. A Tabela~\ref{tab:escala_pontuacao} consolida a escala e as faixas das métricas de proporção.
+Para transformar os dados brutos em diagnósticos comparáveis, a equipe adotou a escala ordinal de cinco níveis do modelo de Heitlager, Kuipers e Visser \cite{heitlager2007}: Muito Ruim (\texttt{--}, 1 ponto), Ruim (\texttt{-}, 2), Regular (\texttt{o}, 3), Bom (\texttt{+}, 4) e Excelente (\texttt{++}, 5). As faixas foram fixadas antes da coleta em quatro origens: faixas do mesmo modelo para complexidade e cobertura; referências de engenharia, como os limiares de Nielsen \cite{nielsen1993} e as metas de FPS do RAIL; e parâmetros calibrados pela equipe. A Tabela~\ref{tab:escala_pontuacao} consolida a escala.
 
 \begin{table}[!ht]
 \centering
 \caption{Escala de pontuação e faixas de aceitação para métricas de proporção}
 \label{tab:escala_pontuacao}
-\vspace{4pt}
+\vspace{2pt}
 \footnotesize
 \begin{tabular}{lccllp{3.3cm}}
 \toprule
@@ -504,26 +502,82 @@ Muito Ruim & \texttt{--} & 1 & 0\% a 20\%   & Acima de 20\% & Fragilidade críti
 \end{tabular}
 \end{table}
 
-A consolidação das medições segue um processo de agregação em duas etapas por média aritmética ponderada igualmente. Na primeira etapa, a pontuação de cada questão investigativa do GQM, que corresponde a uma subcaracterística da ISO/IEC 25010, é calculada como a média aritmética simples dos pontos obtidos nas suas métricas constituintes. Na segunda etapa, a pontuação da característica de alto nível (Manutenibilidade, Confiabilidade ou Flexibilidade) é obtida a partir da média aritmética dos valores de suas respectivas questões, preservando as casas decimais antes do arredondamento para o nível ordinal mais próximo. Como convenção conservadora estabelecida pela equipe, em caso de fração exatamente igual a 0,5 o arredondamento é direcionado para baixo, garantindo que nenhum resultado receba classificação superior sem justificativa inequívoca.
-
-O julgamento conclusivo sobre a adequação da qualidade de produto de software apoia-se em critérios inspirados nos esquemas formais de certificação de código da TÜV Informationstechnik (TÜViT) \cite{baggen2010}, que exigem conformidade mínima tanto na média global da característica quanto nas subcaracterísticas isoladas. Para cada uma das três características priorizadas, o resultado final da avaliação é classificado em três veredictos mutuamente excludentes. O veredicto Atende é emitido quando a característica obtém nível médio Regular (\texttt{o}) ou superior (pontuação igual ou superior a 3,0) e nenhuma de suas questões ou subcaracterísticas obtém classificação Muito Ruim (\texttt{--}). O veredicto Não Atende é atribuído quando a pontuação média da característica resulta nos níveis Ruim (\texttt{-}) ou Muito Ruim (\texttt{--}), ou quando ao menos uma de suas subcaracterísticas atinge o nível Muito Ruim (\texttt{--}), indicando uma vulnerabilidade localizada inaceitável para o produto. Por fim, o veredicto Inconclusivo é reservado para cenários excepcionais em que mais da metade das métricas planejadas para a característica não pudem ser medidas durante a execução. Todas as métricas que registrarem níveis Ruim ou Muito Ruim na Fase 4 serão formalmente catalogadas no relatório técnico como pontos de melhoria, fornecendo subsídios diretos para a elaboração de intervenções corretivas e protótipos de aperfeiçoamento.
+A pontuação de cada questão é a média aritmética simples dos pontos das suas métricas, e a da característica é a média das suas questões, com arredondamento conservador (fração exatamente 0,5 vai para baixo). O julgamento final segue critérios inspirados na TÜViT \cite{baggen2010}: veredicto \textit{Atende} quando a média da característica é Regular (\texttt{o}) ou superior e nenhuma questão alcança Muito Ruim; \textit{Não Atende} quando a média é Ruim ou pior, ou alguma questão atinge Muito Ruim; \textit{Inconclusivo} quando mais da metade das métricas não puder ser medida. Métricas com nível Ruim ou Muito Ruim são catalogadas como pontos de melhoria na Fase~4.
 
 \subsection{Fase 3: Projeto da Avaliação}
 \label{subsec:fase3}
 
-O projeto da avaliação estabelece o planejamento operacional e os instrumentos para a coleta reprodutível das 36 métricas especificadas. Os métodos foram organizados em sete classes de obtenção: análise estática de código com ferramentas automatizadas (como cloc, ESLint e Madge), mineração do histórico de desenvolvimento por consultas à API do GitHub, inspeção documental de diretórios e arquivos de configuração, testes automatizados de unidade e integração com Vitest, ensaios manuais roteirizados no navegador para avaliação de comportamento interativo, medição de desempenho instrumentada e experimentação em contêiner Docker isolado. Para cada métrica, elaborou-se uma instrução de trabalho detalhando o ambiente de ensaio, parâmetros de entrada e formato dos dados primários, garantindo a independência e a auditabilidade da coleta.
+O projeto da avaliação define como as 36 métricas das Tabelas~\ref{tab:g1-metricas}, \ref{tab:g2-metricas} e~\ref{tab:g3-metricas} são obtidas, com quais recursos e prazos, no commit \commitref\ e na janela histórica semestral.
+
+\subsubsection{Método de Obtenção e Instruções de Coleta}
+\label{subsubsec:metodo}
+
+As métricas foram agrupadas em sete classes de método conforme a fonte dos dados, listadas na Tabela~\ref{tab:classes-metodo}. Cada métrica usa uma classe ou a combinação de duas. As instruções de trabalho organizam a coleta em quatro passos: (1) preparação do clone no commit \commitref\ com as dependências do projeto, (2) execução dos comandos, testes ou roteiros manuais gravados em vídeo, (3) salvamento das saídas brutas em arquivos \texttt{.csv} ou \texttt{.json} no padrão \texttt{M<código>\_<identificador>} e (4) cálculo do valor da métrica por scripts antes de converter para os níveis de pontuação.\footnote{As instruções completas constam em \url{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_KAREN_JONES/fase-03}.}
+
+\begin{table}[!ht]
+\centering
+\caption{Classes de método de obtenção das métricas (Fonte: Equipe Karen Jones).}
+\label{tab:classes-metodo}
+\vspace{2pt}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.88}
+\begin{tabular}{p{0.5cm}p{2.3cm}p{11.6cm}}
+\toprule
+\textbf{Cód.} & \textbf{Classe} & \textbf{Como funciona} \\
+\midrule
+AE & Análise estática    & Extração automatizada de propriedades do código, dependências e configurações. \\
+MH & Mineração histórica & Consultas à API do GitHub com filtros fixos e respostas brutas salvas em arquivo. \\
+ID & Inspeção documental & Lista de verificação com comprovação por caminho de arquivo e trecho. \\
+TA & Teste automatizado  & Execução de testes ou scripts com saída e ambiente registrados. \\
+TM & Teste manual        & Roteiro fixo e critérios de aprovação prévios, com formulário e gravação de tela. \\
+MD & Medição de desempenho & Instrumentação do navegador na máquina fixa, com repetições e mediana. \\
+EA & Ambiente limpo      & Instalação, compilação e execução em contêiner ou projeto mínimo. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Em G1, AE e MH cobrem dependências (Madge), complexidade (ESLint), linhas (\texttt{cloc}) e histórico da API (M1.4.1 a M1.5.3), enquanto TA mede a cobertura e ID verifica a documentação. Em G2, MH extrai os defeitos da API, e TM avalia disponibilidade offline, tolerância a falhas e recuperação em Docker. Em G3, AE e EA cobrem instalação e integração, MD mede tempos de abertura e taxa de quadros, e TM e ID avaliam formatos e preservação de elementos.
+
+\subsubsection{Recursos, Ambiente e Cronograma}
+\label{subsubsec:recursos}
+
+A Tabela~\ref{tab:ferramentas} lista as ferramentas e versões fixadas. Os avaliadores partem do commit \commitref\ com \texttt{yarn --frozen-lockfile}. Os ensaios no navegador rodam em \texttt{localhost:3000} via Docker com Firefox 159.0.1, e o ambiente limpo usa a imagem \texttt{node:24}. O teste de toque (M3.1.3) usa iPad com iPadOS e caneta. M3.2.1 e M3.2.2 rodam na máquina de referência (AMD Ryzen 7 5700U, Zorin OS, tela a 60\,Hz) para evitar variações de hardware. Os testes manuais usam gravação de tela com hora visível para conferência cruzada. A massa de dados em \texttt{dados/fase-03/massa-de-dados/} é recriada por \texttt{scripts/gerar\_massa\_dados.py}.
+
+\begin{table}[!ht]
+\centering
+\caption{Ferramentas de análise, versões e cronograma de coleta (Fonte: Equipe Karen Jones).}
+\label{tab:ferramentas}
+\vspace{1pt}
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{0.80}
+\begin{tabular}{p{2.2cm}p{2.1cm}p{2.7cm}|p{2.2cm}p{2.1cm}p{2.7cm}}
+\toprule
+\textbf{Ferramenta} & \textbf{Versão} & \textbf{Métricas} & \textbf{Ferramenta} & \textbf{Versão} & \textbf{Métricas} \\
+\midrule
+Node.js / Yarn   & 24.16 / 1.22.22  & Base de código    & Vitest / cov-v8 & 3.0.6 / 3.0.7    & M1.5.1 \\
+Madge            & 8.0.0            & M1.1.1--3, M1.2.1 & Docker Engine   & 29.9.3           & M2.2--2.4, M3.3 \\
+ESLint           & 8.57.0           & M1.3.1            & Firefox / Safari & 159.0.1 / iPadOS & M2.2--2.4, M3.1--4 \\
+cloc             & 1.86             & M1.4.2            & Browserslist    & 4.24.4           & M3.1.1 \\
+GitHub CLI (gh)  & 2.102.0          & M1.4, M1.5, M2.1  & Scripts da eq.  & Commit \commitref & M1--M3 (geração/apoio) \\
+\midrule
+\multicolumn{6}{p{14.6cm}}{\textbf{Coleta (10 a 12/11):} G1 (Christopher), G2 (Luiz Henrique), G3 (Maria Eduarda). Piloto em 10/11, verificação cruzada em 13/11 e análise em 15/11.} \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 % ================================================================
 \section{Resultados}
 \label{sec:resultados}
 
-Esta seção destina-se à consolidação e à análise crítica dos dados obtidos na Fase~4 (Execução da Avaliação). Nela serão registrados os valores quantitativos das 36 métricas, as pontuações na escala ordinal de cinco níveis e as agregações por subcaracterística e característica. O confronto entre os dados empíricos e as hipóteses prévias evidenciará a confirmação ou refutação dos comportamentos esperados, subsidiando a aplicação dos critérios de julgamento da TÜViT para emissão dos veredictos finais de Atende, Não Atende ou Inconclusivo em Manutenibilidade, Confiabilidade e Flexibilidade. A seção reunirá também o diagnóstico das fragilidades observadas e as propostas de melhoria, integrando as especificações do protótipo de interface de alta fidelidade.
+Esta seção reunirá as medições das 36 métricas, notas e agregações por característica. O confronto com as hipóteses definirá os veredictos de qualidade e os pontos de melhoria.
 
 % ================================================================
 \section{Conclusão}
 \label{sec:conclusao}
 
-Este estudo estruturou a avaliação da qualidade de produto do Excalidraw segundo as normas ISO/IEC 25040 e ISO/IEC 25010:2023 e o paradigma GQM. Ao longo das Fases~1, 2 e~3, a equipe delimitou 36 requisitos técnicos orientados pelas prioridades dos interessados, formulou três objetivos conceituais desdobrados em 13 questões e 36 métricas com hipóteses objetivas, e projetou procedimentos reprodutíveis de análise estática, testes automatizados e ensaios empíricos. A execução na Fase~4 permitirá diagnosticar a conformidade do software no commit de referência \commitref, orientando ações corretivas e a elaboração de protótipo de alta fidelidade para os pontos críticos identificados.
+Este estudo estruturou a avaliação do Excalidraw pelas normas ISO/IEC 25040 e ISO/IEC 25010:2023 e pelo GQM, definindo 36 requisitos, três objetivos, 13 questões e 36 métricas com procedimentos reprodutíveis. O diagnóstico no commit \commitref\ aponta as fraquezas do software e orienta a proposta de melhoria com o protótipo de alta fidelidade.
 
 \bibliographystyle{sbc}
 \bibliography{bibliography}
@@ -531,7 +585,7 @@ Este estudo estruturou a avaliação da qualidade de produto do Excalidraw segun
 \clearpage
 \appendix
 \section{Tabela de Contribuição dos Membros da Equipe}
-Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes no projeto. O percentual de esforço individual foi calculado pela razão entre as horas reais dedicadas por cada integrante e o total de 197,9\,h apuradas nas \textit{issues} de desenvolvimento, aplicando o rateio individualizado para tarefas com atuação conjunta.
+Em atendimento à Premissa 13 da especificação, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes. O percentual foi calculado pela razão entre as horas reais de cada integrante e o total de 197,9\,h apuradas nas \textit{issues}.
 
 \begin{table}[!ht]
 \centering
@@ -562,3 +616,4 @@ Maria Eduarda        & 19 & 46.5h & 43.7h & 64/13  & 22.08\% \\
 A equipe utilizou IA generativa como apoio, com revisão humana antes de cada integração. O Claude Code foi usado no rascunho das \textit{abstraction sheets}, questões e fichas GQM. O Antigravity, com Gemini 3.8 e Claude Sonnet 5.5, apoiou a estruturação de seções do artigo e a formatação em LaTeX. O GitHub Copilot apoiou a edição das páginas do GitPages, do workflow de compilação e de trechos do artigo, e o Grammarly, a revisão ortográfica. Os integrantes conferiram citações, páginas e dados com as fontes e o repositório, e o registro por PR está no repositório.
 
 \end{document}
+
