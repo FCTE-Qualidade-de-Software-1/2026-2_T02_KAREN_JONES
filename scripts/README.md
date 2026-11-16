@@ -101,3 +101,14 @@ A coleta emite aviso, com o numero da issue, no fim da execucao e na secao 4 de 
 - uma faixa do campo `Depende de` esta invertida ou cobre 100 issues ou mais (ela e ignorada), ou
 - um PR aberto esta ha mais de 24 horas sem revisao.
 
+
+## Coleta das métricas de G1
+
+O script [`coleta_g1.sh`](coleta_g1.sh) obtém os dados brutos das 14 métricas de Manutenibilidade com os comandos das [instruções de G1](../docs/fase-03/instrucoes-g1-manutenibilidade.md) e grava as saídas em `dados/fase-04/brutos/`. Ele não calcula valores. A partir da raiz do repositório:
+
+```bash
+EXC=/caminho/do/clone/excalidraw scripts/coleta_g1.sh            # todas as etapas
+EXC=/caminho/do/clone/excalidraw scripts/coleta_g1.sh historico  # uma etapa
+```
+
+O clone precisa estar no commit avaliado e sem alterações locais, com as dependências instaladas. As etapas são `preparacao`, `grafo`, `reusabilidade`, `analisabilidade`, `extensos`, `testes` e `historico`. A etapa `preparacao` gera a lista de arquivos de produção usada pelas demais.
