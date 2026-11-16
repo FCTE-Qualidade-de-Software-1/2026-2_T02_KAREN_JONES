@@ -59,7 +59,7 @@
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Christopher | `@wChrstphr` | 26 | 65.5 | 40.0 | R$ 1797.75 | 143 | 24 | **17.26%** |
 | Davi Pierre | `@DaviPierre` | 13 | 37.0 | 37.0 | R$ 1665.00 | 12 | 6 | **15.99%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 17 | 48.5 | 55.5 | R$ 2497.50 | 63 | 15 | **23.98%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 17 | 48.5 | 55.5 | R$ 2497.50 | 63 | 16 | **23.98%** |
 | Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 27.9 | R$ 1255.95 | 16 | 11 | **12.06%** |
 | Luiz Henrique Soares | `@luizh-gsoares` | 14 | 31.0 | 27.4 | R$ 1233.00 | 24 | 11 | **11.84%** |
 | Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 43.7 | R$ 1966.50 | 64 | 13 | **18.88%** |
@@ -77,12 +77,12 @@
 \hline
 Christopher & 26 & 65.5h & 40.0h & 143/24 & 17.26\% \\
 Davi Pierre & 13 & 37.0h & 37.0h & 12/6 & 15.99\% \\
-Gabriel Monteiro & 17 & 48.5h & 55.5h & 63/15 & 23.98\% \\
+Gabriel Monteiro & 17 & 48.5h & 55.5h & 63/16 & 23.98\% \\
 Leticia de Carvalho & 16 & 30.5h & 27.9h & 16/11 & 12.06\% \\
 Luiz Henrique Soares & 14 & 31.0h & 27.4h & 24/11 & 11.84\% \\
 Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 18.88\% \\
 \hline
-\textbf{Total} & \textbf{105} & \textbf{259.0h} & \textbf{231.5h} & \textbf{322/80} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{105} & \textbf{259.0h} & \textbf{231.5h} & \textbf{322/81} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -122,8 +122,8 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 1 | 17 | 17 | 8 | 47.1 | 9 | 13.68 | 10.82 | 22.28 | 40.59 | 1 |
 | Fase 2 | 29 | 27 | 13 | 48.1 | 16 | 3.66 | 0.4 | 7.53 | 7.57 | 1 |
 | Fase 3 | 23 | 23 | 15 | 65.2 | 8 | 24.17 | 20.88 | 45.9 | 61.74 | 5 |
-| Fase 4 | 11 | 7 | 3 | 42.9 | 7 | 9.85 | 10.08 | 18.55 | 18.55 | 0 |
-| Total | 80 | 74 | 39 | 52.7 | 40 | 13.97 | 7.55 | 23.5 | 40.59 | 7 |
+| Fase 4 | 12 | 8 | 3 | 37.5 | 8 | 9.85 | 10.08 | 18.55 | 18.55 | 0 |
+| Total | 81 | 75 | 39 | 52.0 | 41 | 13.97 | 7.55 | 23.5 | 40.59 | 7 |
 
 ### Quem revisou
 
@@ -188,9 +188,10 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | PR | Fase | Origem da fase | Autor | Situacao | Aberto em | Primeira revisao | Espera (h) | Aprovado | Revisores |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| #177 | Fase 4 | issue #123 | GabrielSMonteiro | aberto | 16/11/2026 01:36 | - | - | nao | - |
 | #176 | Fase 4 | issue #116 | luizh-gsoares | aberto | 16/11/2026 00:10 | - | - | nao | - |
 | #175 | Fase 4 | issue #118 | wChrstphr | aberto | 15/11/2026 21:26 | - | - | nao | - |
-| #173 | Fase 4 | issue #115 | wChrstphr | aberto | 15/11/2026 20:01 | - | - | nao | - |
+| #173 | Fase 4 | issue #115 | wChrstphr | integrado | 15/11/2026 20:01 | - | - | nao | - |
 | #172 | Fase 3 | issue #85 | LeticiaSantosss | integrado | 15/11/2026 19:37 | 15/11/2026 19:55 | 0.31 | sim | wChrstphr |
 | #171 | Fase 3 | issue #106 | LeticiaSantosss | integrado | 15/11/2026 18:55 | - | - | nao | - |
 | #170 | Fase 4 | issue #112 | luizh-gsoares | aberto | 15/11/2026 18:26 | - | - | nao | - |
