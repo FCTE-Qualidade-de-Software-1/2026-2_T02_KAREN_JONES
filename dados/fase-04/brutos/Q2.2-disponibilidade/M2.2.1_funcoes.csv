@@ -1,0 +1,11 @@
+item,funcao,resultado,evidencia,observacao
+1,Recarregar a pagina e ver o editor,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_gravacao_offline.mp4,Editor carregado offline via Service Worker sw.js
+2,Criar retangulo e elipse,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.excalidraw; dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_gravacao_offline.mp4,Retangulo e elipse criados no canvas
+3,Escrever texto,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.excalidraw; dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_gravacao_offline.mp4,Texto inserido no canvas
+4,Mover e redimensionar,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_gravacao_offline.mp4,Elementos movidos e redimensionados offline
+5,Desfazer e refazer,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_gravacao_offline.mp4,Desfazer e refazer executados offline
+6,Salvar .excalidraw,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.excalidraw,Arquivo salvo com 8016 bytes
+7,Reabrir o arquivo salvo,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.excalidraw; dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_gravacao_offline.mp4,Arquivo reaberto sem erro no modo offline
+8,Exportar PNG,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.png,PNG exportado com 15064 bytes
+9,Exportar SVG,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.svg,SVG exportado com 11362 bytes
+10,Verificar texto legivel na fonte padrao,aprovado,dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.png; dados/fase-04/brutos/Q2.2-disponibilidade/M2.2.1_desenho.svg,Texto legivel na fonte padrao

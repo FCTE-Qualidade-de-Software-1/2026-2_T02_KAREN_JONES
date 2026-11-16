@@ -5,17 +5,149 @@ Gera a massa de dados para a avaliação do Excalidraw (Fase 03):
 - Cena de referência com os 10 tipos de elemento da Fase 02
 - Cenas de escala com 100, 1.000, 5.000 e 10.000 elementos (40/20/20/20)
 - 9 arquivos inválidos para o teste de tolerância a falhas (M2.3.1)
+- PNGs de fixture do commit avaliado e as cenas incorporadas neles,
+  para o conjunto de reabertura (M2.4.2)
 
 Uso:
   python scripts/gerar_massa_dados.py [--output-dir DIR] [--verificar]
+  python scripts/gerar_massa_dados.py --so-reabertura-png
 """
 
 import argparse
+import csv
+import hashlib
 import json
 import os
 import struct
 import sys
+import urllib.request
 import zlib
+
+COMMIT_AVALIADO = "e1b7aacb356a492aa1e0fc6eb57b8896124027f0"
+URL_FIXTURES = (
+    "https://raw.githubusercontent.com/excalidraw/excalidraw/"
+    f"{COMMIT_AVALIADO}/packages/excalidraw/tests/fixtures/"
+)
+# Caso da M2.4.2, nome no repositório do Excalidraw e nome salvo em reabertura/
+PNGS_REABERTURA = [
+    ("c6", "test_embedded_v1.png", "c6_test_embedded_v1.png"),
+    ("c7", "smiley_embedded_v2.png", "c7_smiley_embedded_v2.png"),
+]
+# Cenas salvas pela interface das versões antigas (scripts/gerar_massa_versoes_antigas.py)
+ARQUIVOS_REABERTURA_SALVOS = [
+    "c2_v0.15.0.excalidraw",
+    "c3_v0.16.4.excalidraw",
+    "c4_v0.17.6.excalidraw",
+    "c5_v0.18.0.excalidraw",
+]
+
+
+def sha256_arquivo(caminho: str) -> str:
+    """Calcula o SHA-256 de um arquivo."""
+    h = hashlib.sha256()
+    with open(caminho, "rb") as f:
+        for bloco in iter(lambda: f.read(65536), b""):
+            h.update(bloco)
+    return h.hexdigest()
+
+
+def baixar_pngs_reabertura(diretorio_reabertura: str) -> dict:
+    """Baixa os PNGs de fixture do commit avaliado sem alterar os bytes."""
+    os.makedirs(diretorio_reabertura, exist_ok=True)
+    baixados = {}
+    for caso, nome_origem, nome_destino in PNGS_REABERTURA:
+        url = URL_FIXTURES + nome_origem
+        try:
+            with urllib.request.urlopen(url, timeout=60) as resposta:
+                conteudo = resposta.read()
+        except OSError as erro:
+            print(f"[ERRO] Falha ao baixar {url}: {erro}")
+            sys.exit(1)
+        if not conteudo.startswith(b"\x89PNG\r\n\x1a\n"):
+            print(f"[ERRO] O arquivo baixado de {url} não é um PNG.")
+            sys.exit(1)
+        caminho = os.path.join(diretorio_reabertura, nome_destino)
+        with open(caminho, "wb") as f:
+            f.write(conteudo)
+        baixados[caso] = caminho
+        print(f"{caso}: {nome_destino} sha256={sha256_arquivo(caminho)}")
+    return baixados
+
+
+def ler_chunk_text(caminho_png: str):
+    """Retorna (palavra-chave, texto) do primeiro chunk tEXt do PNG, ou None.
+
+    Segue getTEXtChunk de packages/excalidraw/data/image.ts: só o primeiro
+    tEXt é lido, e o texto é decodificado byte a byte (latin-1), como em
+    png-chunk-text.
+    """
+    with open(caminho_png, "rb") as f:
+        dados = f.read()
+    if not dados.startswith(b"\x89PNG\r\n\x1a\n"):
+        return None
+    pos = 8
+    while pos + 8 <= len(dados):
+        (tamanho,) = struct.unpack(">I", dados[pos : pos + 4])
+        tipo = dados[pos + 4 : pos + 8]
+        conteudo = dados[pos + 8 : pos + 8 + tamanho]
+        if tipo == b"tEXt":
+            palavra, sep, texto = conteudo.partition(b"\x00")
+            if not sep:
+                return None
+            return palavra.decode("latin-1"), texto.decode("latin-1")
+        if tipo == b"IEND":
+            break
+        pos += 12 + tamanho
+    return None
+
+
+def decodificar_cena_png(caminho_png: str) -> str:
+    """Extrai o JSON da cena incorporada no PNG.
+
+    Segue decodePngMetadata (image.ts) e decode (encode.ts) do commit avaliado:
+    formato legado com o JSON da cena direto no texto e formato com
+    encoded, encoding "bstring" e compressed (zlib).
+    """
+    chunk = ler_chunk_text(caminho_png)
+    if chunk is None or chunk[0] != "application/vnd.excalidraw+json":
+        raise ValueError("chunk tEXt com a palavra-chave application/vnd.excalidraw+json não encontrado")
+    texto = chunk[1]
+    dados = json.loads(texto)
+    if not isinstance(dados, dict):
+        raise ValueError("o texto do chunk não é um objeto JSON")
+    if "encoded" not in dados:
+        if dados.get("type") == "excalidraw":
+            return texto
+        raise ValueError("JSON legado sem \"type\": \"excalidraw\"")
+    if dados.get("encoding") != "bstring":
+        raise ValueError(f"codificação desconhecida: {dados.get('encoding')!r}")
+    bytes_codificados = dados["encoded"].encode("latin-1")
+    if dados.get("compressed"):
+        return zlib.decompress(bytes_codificados).decode("utf-8")
+    return bytes_codificados.decode("utf-8")
+
+
+def extrair_cenas_reabertura(diretorio_reabertura: str) -> dict:
+    """Salva a cena incorporada em cada PNG de reabertura como .excalidraw."""
+    extraidas = {}
+    for caso, _, nome_png in PNGS_REABERTURA:
+        caminho_png = os.path.join(diretorio_reabertura, nome_png)
+        try:
+            texto_cena = decodificar_cena_png(caminho_png)
+            cena = json.loads(texto_cena)
+        except (OSError, ValueError, UnicodeError, zlib.error) as erro:
+            print(f"[ERRO] Não foi possível extrair a cena de {nome_png}: {erro}")
+            sys.exit(1)
+        ativos = [e for e in cena.get("elements", []) if not e.get("isDeleted")]
+        if cena.get("type") != "excalidraw" or not ativos:
+            print(f"[ERRO] A cena extraída de {nome_png} não tem \"type\": \"excalidraw\" ou não tem elementos ativos.")
+            sys.exit(1)
+        caminho = os.path.join(diretorio_reabertura, f"{caso}_referencia.excalidraw")
+        with open(caminho, "w", encoding="utf-8") as f:
+            f.write(texto_cena)
+        extraidas[caso] = caminho
+        print(f"{caso}: {caso}_referencia.excalidraw elementos_ativos={len(ativos)}")
+    return extraidas
 
 
 def criar_png_minimo(caminho_arquivo: str) -> None:
@@ -672,7 +804,7 @@ def gerar_arquivos_invalidos(diretorio_saida: str) -> dict:
     return arquivos_gerados
 
 
-def verificar_massa_dados(diretorio_base: str) -> bool:
+def verificar_massa_dados(diretorio_base: str, incluir_reabertura: bool = True) -> bool:
     """Confere se os arquivos gerados atendem às especificações das Fases 02 e 03."""
     sucesso_total = True
     print("\nVerificando arquivos gerados...")
@@ -762,7 +894,80 @@ def verificar_massa_dados(diretorio_base: str) -> bool:
         else:
             print(f"OK: invalidos/{nome_arq}")
 
+    # 4. Verificar o conjunto de reabertura (M2.4.2)
+    if incluir_reabertura and not verificar_reabertura(os.path.join(diretorio_base, "reabertura")):
+        sucesso_total = False
+
     return sucesso_total
+
+
+def verificar_reabertura(diretorio_reabertura: str) -> bool:
+    """Confere as entradas c2 a c7 de reabertura/ e os SHA-256 registrados no manifesto.
+
+    Só lê os arquivos. Nada em reabertura/ é regenerado ou alterado.
+    """
+    sucesso = True
+    esperados = list(ARQUIVOS_REABERTURA_SALVOS)
+    for caso, _, nome_png in PNGS_REABERTURA:
+        esperados.append(nome_png)
+        esperados.append(f"{caso}_referencia.excalidraw")
+    esperados.append("manifesto.csv")
+
+    for nome in esperados:
+        if not os.path.exists(os.path.join(diretorio_reabertura, nome)):
+            print(f"[ERRO] Entrada de reabertura não encontrada: reabertura/{nome}")
+            sucesso = False
+
+    caminho_manifesto = os.path.join(diretorio_reabertura, "manifesto.csv")
+    if not os.path.exists(caminho_manifesto):
+        return False
+
+    with open(caminho_manifesto, "r", encoding="utf-8", newline="") as f:
+        linhas = {linha["caso"]: linha for linha in csv.DictReader(f)}
+
+    casos_esperados = [f"c{i}" for i in range(1, 8)]
+    faltando_no_manifesto = [c for c in casos_esperados if c not in linhas]
+    if faltando_no_manifesto:
+        print(f"[ERRO] Casos ausentes no manifesto.csv: {', '.join(faltando_no_manifesto)}")
+        sucesso = False
+
+    for caso in casos_esperados:
+        linha = linhas.get(caso)
+        if not linha:
+            continue
+        if not linha["arquivo"] or not linha["sha256"]:
+            print(f"[ERRO] {caso} sem arquivo ou SHA-256 no manifesto.csv: {linha['observacao']}")
+            sucesso = False
+            continue
+        caminho = os.path.normpath(os.path.join(diretorio_reabertura, linha["arquivo"]))
+        if not os.path.exists(caminho):
+            continue  # ausência já relatada acima
+        sha = sha256_arquivo(caminho)
+        if sha != linha["sha256"]:
+            print(f"[ERRO] SHA-256 de {linha['arquivo']} ({caso}) difere do manifesto.csv: {sha}")
+            sucesso = False
+        else:
+            print(f"OK: reabertura {caso} ({linha['arquivo']}, SHA-256 confere)")
+
+    for caso, _, _ in PNGS_REABERTURA:
+        caminho = os.path.join(diretorio_reabertura, f"{caso}_referencia.excalidraw")
+        if not os.path.exists(caminho):
+            continue
+        try:
+            with open(caminho, "r", encoding="utf-8") as f:
+                cena = json.load(f)
+        except (OSError, ValueError) as erro:
+            print(f"[ERRO] reabertura/{caso}_referencia.excalidraw não é JSON válido: {erro}")
+            sucesso = False
+            continue
+        ativos = [e for e in cena.get("elements", []) if not e.get("isDeleted")]
+        if cena.get("type") != "excalidraw" or not ativos:
+            print(f"[ERRO] reabertura/{caso}_referencia.excalidraw sem type excalidraw ou sem elemento ativo")
+            sucesso = False
+        else:
+            print(f"OK: reabertura/{caso}_referencia.excalidraw ({len(ativos)} elemento(s) ativo(s))")
+
+    return sucesso
 
 
 def main():
@@ -775,6 +980,11 @@ def main():
     parser.add_argument("--so-referencia", action="store_true", help="Gera apenas a cena de referência")
     parser.add_argument("--so-escala", action="store_true", help="Gera apenas as cenas de escala")
     parser.add_argument("--so-invalidos", action="store_true", help="Gera apenas os arquivos inválidos")
+    parser.add_argument(
+        "--so-reabertura-png",
+        action="store_true",
+        help="Baixa os PNGs de fixture do commit avaliado para reabertura/ e extrai a cena de cada um (M2.4.2)",
+    )
     parser.add_argument("--verificar", action="store_true", help="Executa a verificação dos arquivos gerados")
 
     args = parser.parse_args()
@@ -782,7 +992,7 @@ def main():
     dir_invalidos = os.path.join(dir_saida, "invalidos")
     os.makedirs(dir_saida, exist_ok=True)
 
-    gerar_tudo = not (args.so_referencia or args.so_escala or args.so_invalidos)
+    gerar_tudo = not (args.so_referencia or args.so_escala or args.so_invalidos or args.so_reabertura_png)
 
     print(f"Diretório de saída: {dir_saida}")
 
@@ -801,8 +1011,15 @@ def main():
         gerar_arquivos_invalidos(dir_invalidos)
         print(f"9 arquivos inválidos salvos em {dir_invalidos}")
 
+    if args.so_reabertura_png:
+        dir_reabertura = os.path.join(dir_saida, "reabertura")
+        baixar_pngs_reabertura(dir_reabertura)
+        extrair_cenas_reabertura(dir_reabertura)
+
     if args.verificar or gerar_tudo:
-        sucesso = verificar_massa_dados(dir_saida)
+        # A geração padrão num diretório novo não tem reabertura/, que vem de outros comandos.
+        incluir_reabertura = args.verificar or os.path.isdir(os.path.join(dir_saida, "reabertura"))
+        sucesso = verificar_massa_dados(dir_saida, incluir_reabertura)
         if not sucesso:
             print("\nA verificação encontrou problemas.")
             sys.exit(1)
