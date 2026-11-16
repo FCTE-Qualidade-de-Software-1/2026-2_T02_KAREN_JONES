@@ -65,7 +65,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,closed,GabrielSMonteiro,1.0,1.0,0.0,na faixa,45.0,45.0,12/11,15/11/2026,Concluida em atraso,12.12
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,15/11/2026,Concluida em atraso,12.27
 111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),closed,wChrstphr,5.0,3.0,-40.0,superestimada,225.0,135.0,12/11,16/11/2026,Concluida em atraso,12.52
-112,Fase 4,[F4] Coleta das métricas de G2 (Confiabilidade),open,luizh-gsoares,6.0,9.0,50.0,subestimada,270.0,405.0,12/11,-,Aberta em atraso,
+112,Fase 4,[F4] Coleta das métricas de G2 (Confiabilidade),closed,luizh-gsoares,6.0,9.0,50.0,subestimada,270.0,405.0,12/11,16/11/2026,Concluida em atraso,13.04
 113,Fase 4,[F4] Coleta das métricas de G3 (Flexibilidade),closed,eduarda-ogomes,6.0,11.7,95.0,subestimada,270.0,526.5,12/11,13/11/2026,Concluida em atraso,9.37
 114,Fase 4,"[F4] Verificação dos dados brutos e da rastreabilidade dado, métrica",closed,DaviPierre,4.0,0.3,-92.5,superestimada,180.0,13.5,13/11,16/11/2026,Concluida em atraso,12.52
 115,Fase 4,[F4] Análise e respostas GQM de G1 (Manutenibilidade),open,wChrstphr,3.0,1.0,-66.7,superestimada,135.0,45.0,15/11,-,Aberta em atraso,
