@@ -73,10 +73,10 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 117,Fase 4,[F4] Análise e respostas GQM de G3 (Flexibilidade),closed,eduarda-ogomes,3.0,3.0,0.0,na faixa,135.0,135.0,15/11,13/11/2026,Concluida no prazo,10.06
 118,Fase 4,[F4] Oportunidades de melhoria e escolha da ação,open,wChrstphr,2.0,1.25,-37.5,superestimada,90.0,56.25,16/11,-,Em andamento (no prazo),
 119,Fase 4,[F4] Executar a ação de melhoria,open,wChrstphr,8.0,0.0,,,360.0,0.0,19/11,-,Em andamento (no prazo),
-120,Fase 4,"[F4] Julgamento final, coerência com o propósito e relações entre as características",open,luizh-gsoares,3.0,0.0,,,135.0,0.0,17/11,-,Em andamento (no prazo),
+120,Fase 4,"[F4] Julgamento final, coerência com o propósito e relações entre as características",closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,17/11,16/11/2026,Concluida no prazo,13.05
 121,Fase 4,[F4] Visão geral da Fase 04,open,eduarda-ogomes,2.0,0.0,,,90.0,0.0,18/11,-,Em andamento (no prazo),
 122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,open,eduarda-ogomes,2.0,0.0,,,90.0,0.0,20/11,-,Em andamento (no prazo),
-123,Fase 4,[ARTIGO] Plano de avaliação (Fase 3) no artigo,open,GabrielSMonteiro,3.0,3.0,0.0,na faixa,135.0,135.0,13/11,-,Aberta em atraso,
+123,Fase 4,[ARTIGO] Plano de avaliação (Fase 3) no artigo,closed,GabrielSMonteiro,3.0,3.0,0.0,na faixa,135.0,135.0,13/11,16/11/2026,Concluida em atraso,13.05
 124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),open,eduarda-ogomes,4.0,0.0,,,180.0,0.0,19/11,-,Em andamento (no prazo),
 125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",open,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,-,Em andamento (no prazo),
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,20/11,-,Em andamento (no prazo),
