@@ -1,0 +1,21 @@
+{
+  "M2.4.3_a9_desfeito.excalidraw": {
+    "total_original": 2,
+    "preservados": 1,
+    "proporcao_preservacao": 50.0,
+    "detalhes": [
+      {
+        "id": "OZdYqQVKC9L25UNLSQWM9",
+        "tipo": "rectangle",
+        "preservado": true,
+        "motivo": "OK"
+      },
+      {
+        "id": "rE5fKVp1qNT_JktMUpqZF",
+        "tipo": "rectangle",
+        "preservado": false,
+        "motivo": "y divergente (311.1999816894531 vs 310.39996337890625)"
+      }
+    ]
+  }
+}

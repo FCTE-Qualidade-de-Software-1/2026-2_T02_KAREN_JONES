@@ -1,0 +1,21 @@
+{
+  "M2.4.3_a8a_refeito.excalidraw": {
+    "total_original": 2,
+    "preservados": 0,
+    "proporcao_preservacao": 0.0,
+    "detalhes": [
+      {
+        "id": "gH4HyiKfGfY-_XrbGD0Wf",
+        "tipo": "rectangle",
+        "preservado": false,
+        "motivo": "x divergente (451.20001220703125 vs 462.39996337890625); y divergente (244.8000030517578 vs 264.8000030517578)"
+      },
+      {
+        "id": "ELZO98_f7buWubuhp5iuC",
+        "tipo": "rectangle",
+        "preservado": false,
+        "motivo": "x divergente (764.7999877929688 vs 775.9999389648438); y divergente (247.19998168945312 vs 267.1999816894531)"
+      }
+    ]
+  }
+}

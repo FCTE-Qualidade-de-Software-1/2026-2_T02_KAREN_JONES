@@ -1,0 +1,144 @@
+﻿suite,nivel,evidencia
+excalidraw-app/tests/LanguageList.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 35: await render(
+excalidraw-app/tests/MobileMenu.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 18: await render(
+excalidraw-app/tests/collab.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 76: await render(<ExcalidrawApp />);
+packages/common/src/appEventBus.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/common/src/colors.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/common/src/utils.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/common/tests/binary-heap.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/common/tests/keys.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/common/tests/queue.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/common/tests/url.test.tsx,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/src/__tests__/flowchart.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/src/__tests__/stickyNote.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/src/__tests__/transform.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/align.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 69: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/binding.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 53: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/bounds.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/bucketFill.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/collision.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 46: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/cropElement.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 45: await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/element/tests/delta.test.tsx,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/distribute.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 74: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/dragElements.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/duplicate.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 439: await render(<Excalidraw />);
+packages/element/tests/elbowArrow.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 36: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/embeddable.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/flowchart.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 24: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/fractionalIndex.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/frame.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 101: await render(<Excalidraw />);
+packages/element/tests/linearElementEditor.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 70: const comp = await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/newElement.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/recognizeShape.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/resize.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 73: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/element/tests/selection.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/sizeHelpers.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/sortElements.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/textElement.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/textWrapping.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/typeChecks.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/element/tests/zindex.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 164: await render(<Excalidraw />);
+packages/excalidraw/actions/actionDeleteSelected.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 14: await render(<Excalidraw />);
+packages/excalidraw/actions/actionDuplicateSelection.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 18: await render(<Excalidraw />);
+packages/excalidraw/actions/actionElementLock.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 14: await render(<Excalidraw />);
+packages/excalidraw/actions/actionFlip.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 62: await render(<Excalidraw initialData={{ elements }} />);
+packages/excalidraw/actions/actionProperties.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 18: await render(<Excalidraw />);
+packages/excalidraw/charts.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/clipboard.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/DefaultSidebar.test.tsx,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/FontPicker/FontPicker.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 20: const { queryByTestId } = await render(
+packages/excalidraw/components/Popover.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 32: const { container } = render(
+packages/excalidraw/components/Sidebar/Sidebar.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 33: const { container } = await render(
+packages/excalidraw/components/Stats/stats.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 100: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/components/TTDDialog/common.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/TTDDialog/utils/TTDstreamFetch.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/TTDDialog/utils/chat.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/TTDDialog/utils/mermaidError.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/TTDDialog/utils/mermaidValidation.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/components/Trans.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 21: const { getByTestId } = render(
+packages/excalidraw/components/UserList.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 18: const { container } = await render(
+packages/excalidraw/components/dropdownMenu/DropdownMenu.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 16: const { container } = await render(<Excalidraw />);
+packages/excalidraw/components/hoc/withInternalFallback.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 8: const { container } = await render(
+packages/excalidraw/components/positionElementBesideCursor.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/data/library.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/mermaid.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/renderer/helpers.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/App.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 38: await render(<Excalidraw />);
+packages/excalidraw/tests/MermaidToExcalidraw.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 108: await render(
+packages/excalidraw/tests/actionStyles.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 30: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/animation.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/appState.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 21: await render(
+packages/excalidraw/tests/appStateHooks.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 58: render(
+packages/excalidraw/tests/arrowBinding.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 72: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/arrowEndpointTextBinding.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 90: await render(<Excalidraw handleKeyboardGlobally />);
+packages/excalidraw/tests/bucketFill.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 50: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/charts.test.tsx,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/clients.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/clipboard.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 92: await render(
+packages/excalidraw/tests/colorInput.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 122: const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/colorPickerHotkeys.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/colorTargets.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/colorTopPicks.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/contextmenu.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 65: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/convertElementType.binding.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 22: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/convertElementType.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 13: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/created.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 19: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/crossDocument.test.tsx,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/cursorHint.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 31: await render(<Excalidraw />);
+packages/excalidraw/tests/data/reconcile.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/data/restore.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/dragCreate.test.tsx,integração,"M1.5.2_ocorrencias-grep.txt linha do arquivo 58: const { getByToolName, container } = await render(<Excalidraw />);"
+packages/excalidraw/tests/drawShape.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 117: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/elementLocking.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 20: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/embeddable.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 28: await render(<Excalidraw viewModeEnabled />);
+packages/excalidraw/tests/excalidraw.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 31: const { container } = await render(<Excalidraw />);
+packages/excalidraw/tests/export.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 56: await render(<Excalidraw />);
+packages/excalidraw/tests/eyeDropper.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 14: await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/fileDrop.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 67: await render(<Excalidraw />);
+packages/excalidraw/tests/fitToContent.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 70: await render(<Excalidraw />);
+packages/excalidraw/tests/flip.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 68: await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/fontTopPicks.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/freedrawMode.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 16: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/history.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 148: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/image.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 28: await render(
+packages/excalidraw/tests/interactivity.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 92: await render(<Excalidraw autoFocus={true} handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/laser.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 27: await render(<Excalidraw onLinkOpen={onLinkOpen} />);
+packages/excalidraw/tests/lasso.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 43: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/library.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 88: await render(<Excalidraw initialData={{ libraryItems }} />);
+packages/excalidraw/tests/move.test.tsx,integração,"M1.5.2_ocorrencias-grep.txt linha do arquivo 40: const { getByToolName, container } = await render(<Excalidraw />);"
+packages/excalidraw/tests/multiPointCreate.test.tsx,integração,"M1.5.2_ocorrencias-grep.txt linha do arquivo 48: const { getByToolName, container } = await render(<Excalidraw />);"
+packages/excalidraw/tests/onDuplicate.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 89: await render(
+packages/excalidraw/tests/packages/events.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 22: await render(
+packages/excalidraw/tests/pan.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 42: await render(<Excalidraw />);
+packages/excalidraw/tests/pixelSnap.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 54: await render(<Excalidraw />);
+packages/excalidraw/tests/regressionTests.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 68: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/renderOverrides.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 54: const mounted = await render(
+packages/excalidraw/tests/rotate.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 19: await render(<Excalidraw />);
+packages/excalidraw/tests/scene/export.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/scroll.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 30: await render(
+packages/excalidraw/tests/scrollConstraints.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 459: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/search.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 35: await render(<Excalidraw handleKeyboardGlobally />);
+packages/excalidraw/tests/selection.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 68: await render(<Excalidraw />);
+packages/excalidraw/tests/shortcuts.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 13: await render(
+packages/excalidraw/tests/stickyNotes.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 135: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/tool.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 29: await render(
+packages/excalidraw/tests/toolDrag.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 43: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/tooltip.test.tsx,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/viewMode.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 34: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/tests/viewport.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/excalidraw/tests/wheel.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 93: await render(<Excalidraw />);
+packages/excalidraw/tests/wrap.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 79: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/excalidraw/wysiwyg/textWysiwyg.test.tsx,integração,M1.5.2_ocorrencias-grep.txt linha do arquivo 89: await render(<Excalidraw handleKeyboardGlobally={true} />);
+packages/math/tests/curve.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/ellipse.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/line.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/pca.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/point.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/polygon.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/range.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/segment.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/math/tests/vector.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/utils/tests/export.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/utils/tests/geometry.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)
+packages/utils/tests/utils.unmocked.test.ts,unitário,sem chamada a render nem ferramenta de navegador (M1.5.2_ferramentas-e2e.txt vazio)

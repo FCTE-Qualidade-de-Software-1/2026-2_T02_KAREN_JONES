@@ -10,7 +10,7 @@ description: O que estamos definindo na segunda fase da avaliação de qualidade
 
 A [Fase 01](../fase-01/visao-geral.md) definiu por que avaliar o Excalidraw, o que avaliar e quais características de qualidade priorizar. A Fase 02 responde à pergunta seguinte: **o que exatamente será medido, e como cada resultado será interpretado?**
 
-Para isso, a equipe usa o [método *Goal–Question–Metric* (GQM)](./estrutura-gqm.md). Cada característica [priorizada](../fase-01/priorizacao-caracteristicas.md) vira um objetivo de medição, desdobrado em questões, hipóteses e métricas, com níveis de pontuação e critérios de julgamento definidos antes da coleta. A coleta em si fica para a Fase 04, depois que a Fase 03 projetar a avaliação.
+Para isso, a equipe usa o [método *Goal–Question–Metric* (GQM)](./estrutura-gqm.md). Cada característica [priorizada](../fase-01/priorizacao-caracteristicas.md) vira um objetivo de medição, desdobrado em questões, hipóteses e métricas, com níveis de pontuação e critérios de julgamento definidos antes da coleta. A coleta em si fica para a Fase 04, após o planejamento operacional detalhado na [Fase 03](../fase-03/visao-geral.md).
 
 ## Metodologia
 
@@ -32,9 +32,9 @@ A fase seguiu as etapas de definição do GQM adaptadas ao contexto da avaliaç�
 
 <p className="tabela-fonte">Fonte: [Luiz Henrique Soares](https://github.com/luizh-gsoares), 2026.</p>
 
-## Relação com a Fase 01
+## Relação com as Fases 01 e 03
 
-Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-qualidade.md) e da [priorização das características](../fase-01/priorizacao-caracteristicas.md). Cada questão reúne os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da mesma subcaracterística. Os objetos medidos são os delimitados no [escopo da avaliação](../fase-01/escopo-avaliacao.md), e o ponto de vista dos objetivos vem das [partes interessadas](../fase-01/interessados.md).
+Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-qualidade.md) e da [priorização das características](../fase-01/priorizacao-caracteristicas.md). Cada questão reúne os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da mesma subcaracterística. Os objetos medidos são os delimitados no [escopo da avaliação](../fase-01/escopo-avaliacao.md), e o ponto de vista dos objetivos vem das [partes interessadas](../fase-01/interessados.md). Na [Fase 03](../fase-03/visao-geral.md), cada métrica definida aqui recebe um método de coleta, instruções operacionais e recursos necessários para execução.
 
 ---
 
@@ -47,3 +47,4 @@ Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-
 | 1.2 | 20/10/2026 | Publicação das páginas de pontuação e do Plano GQM, com referência cruzada | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.3 | 06/11/2026 | Título sem travessão, retirada da coluna de situação, com todas as páginas já publicadas, referências cruzadas resumidas em um parágrafo, links para objetivos e questões, tabela com título e fonte | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.4 | 10/11/2026 | Inclusão da Metodologia | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |

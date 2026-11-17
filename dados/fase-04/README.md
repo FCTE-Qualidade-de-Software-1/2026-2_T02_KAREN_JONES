@@ -147,10 +147,31 @@ A sessão de início com os três responsáveis ainda precisa acontecer e ser re
 
 ---
 
+## Verificação dos dados de G1
+
+O script [`scripts/calcula_metricas.py`](../../scripts/calcula_metricas.py) recalcula as 14 métricas de G1 a partir de `brutos/`, pelo procedimento de cada [ficha](../../docs/fase-02/gqm-manutenibilidade.md), e grava as linhas de G1 em `consolidados/metricas.csv`, no formato da [seção 3 do plano de análise](../../docs/fase-03/plano-analise.md#3-tabela-consolidada-e-script-de-análise). Cada linha guarda o valor pontuado da [tabela 4 dos níveis](../../docs/fase-02/pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1). Os valores da ficha que não são pontuados diretamente, como os por pacote, ficam em `consolidados/G1_detalhes.csv`.
+
+A lista de verificação de cada métrica está em `consolidados/G1_verificacao.csv`: dado bruto no local e com o nome definidos, fatores de variação registrados e valor recalculado pelo script. A coluna `conferido_por` é preenchida por quem não coletou.
+
+| Situação | Métricas | Tratamento |
+| :--- | :--- | :--- |
+| Passos indisponíveis na API do GitHub | M1.5.3 | 32 *pull requests* têm execução de `test-coverage-pr.yml`, mas os jobs vêm sem a lista de passos. Pela ficha, ficam fora do denominador e são informados à parte. |
+| Job encerrado antes do passo `Test Coverage` | M1.5.3 | O #11841 tem os passos disponíveis, mas sem `Test Coverage`. Conta como contribuição com evidência e não verificada. |
+| Nós de assets no grafo do Madge | M1.1.1 a M1.2.1 | Os 314 nós que não são arquivos de produção (`.scss`, `.woff2` etc.) são descartados antes do cálculo. |
+| Contagem de linhas de M1.3.1 | M1.3.1 | As linhas próprias de cada função são lidas do código no commit avaliado, informado em `EXC`. |
+
+---
+
 ## Catálogo de Arquivos Consolidados
 
 | Arquivo | Finalidade e Conteúdo |
 | :--- | :--- |
+| `consolidados/metricas.csv` | Valores pontuados das métricas no formato do plano de análise. Contém as 14 métricas de G1. |
+| `consolidados/G1_detalhes.csv` | Valores das fichas de G1 por pacote, por faixa e por nível, com as contagens usadas nos percentuais. |
+| `consolidados/G1_verificacao.csv` | Lista de verificação das 14 métricas de G1. |
+| `consolidados/niveis.csv` | Valor pontuado, faixa, nível e pontos de cada métrica. Contém as 14 métricas de G1. |
+| `consolidados/questoes.csv` | Média, nível e número de métricas coletadas de cada questão. Contém Q1.1 a Q1.5. |
+| `consolidados/caracteristicas.csv` | Média, nível e julgamento de cada característica, com o motivo. Contém G1. |
 | `consolidados/G3_metricas_consolidadas.csv` | Tabela consolidada com as 12 métricas de G3, incluindo valores medidos, unidades, escala de 1 a 5, nível na régua, hipóteses formuladas, status e apontamento para os arquivos brutos. |
 | `consolidados/G3_questoes_pontuacao.csv` | Resumo executivo das 4 questões GQM (Q3.1 Adaptabilidade, Q3.2 Escalabilidade, Q3.3 Instalabilidade, Q3.4 Substituibilidade) e da pontuação global do objetivo G3 (3,90 estrelas, Nível Bom). |
 
@@ -165,3 +186,5 @@ A sessão de início com os três responsáveis ainda precisa acontecer e ser re
 | 1.2 | 11/11/2026 | Registro do ambiente de medição de Christopher (G1) | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 11/11/2026 | Inclusão do catálogo de dados brutos e consolidados coletados para o objetivo G3 (Flexibilidade) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.4 | 11/11/2026 | Registro dos desvios da coleta de G3 em relação ao plano | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 15/11/2026 | Verificação e cálculo das métricas de G1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 15/11/2026 | Inclusão dos arquivos da análise de G1 no catálogo de consolidados | [Christopher Paraizo](https://github.com/wChrstphr) | |

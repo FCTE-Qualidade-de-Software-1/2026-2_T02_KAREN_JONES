@@ -1,0 +1,19 @@
+arquivo,via,mensagem_exibida,texto_mensagem,retangulo_criado,caso_tratado,observacao
+invalido_01_vazio.excalidraw,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida ao tentar abrir arquivo vazio; retangulo criado sem recarregar
+invalido_02_json_malformado.excalidraw,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida ao tentar abrir JSON malformado; retangulo criado sem recarregar
+invalido_03_sem_campo_type.excalidraw,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para JSON sem campo type; retangulo criado sem recarregar
+invalido_04_type_desconhecido.excalidraw,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para type desconhecido; retangulo criado sem recarregar
+invalido_05_elementos_sem_campos_obrigatorios.excalidraw,menu,nao,Nenhuma mensagem exibida,sim,nao,Abriu sem mensagem de erro; retangulo criado normalmente sem recarregar
+invalido_06_coordenadas_nao_numericas.excalidraw,menu,nao,Nenhuma mensagem exibida,nao,nao,Abriu sem mensagem de erro; ao tentar inserir forma/texto a aplicacao quebrou e sumiu da tela
+invalido_07_binario_renomeado.excalidraw,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para arquivo binario renomeado; retangulo criado sem recarregar
+invalido_08_png_sem_desenho.png,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para PNG sem desenho incorporado; retangulo criado sem recarregar
+invalido_09_truncado_no_meio.excalidraw,menu,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para arquivo truncado; retangulo criado sem recarregar
+invalido_01_vazio.excalidraw,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida ao tentar abrir arquivo vazio; retangulo criado sem recarregar
+invalido_02_json_malformado.excalidraw,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida ao tentar abrir JSON malformado; retangulo criado sem recarregar
+invalido_03_sem_campo_type.excalidraw,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para JSON sem campo type; retangulo criado sem recarregar
+invalido_04_type_desconhecido.excalidraw,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para type desconhecido; retangulo criado sem recarregar
+invalido_05_elementos_sem_campos_obrigatorios.excalidraw,arrastar,nao,Nenhuma mensagem exibida,sim,nao,Abriu sem mensagem de erro; retangulo criado normalmente sem recarregar
+invalido_06_coordenadas_nao_numericas.excalidraw,arrastar,nao,Nenhuma mensagem exibida,nao,nao,Abriu sem mensagem de erro; ao tentar inserir forma/texto a aplicacao quebrou e sumiu da tela
+invalido_07_binario_renomeado.excalidraw,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para arquivo binario renomeado; retangulo criado sem recarregar
+invalido_08_png_sem_desenho.png,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para PNG sem desenho incorporado; retangulo criado sem recarregar
+invalido_09_truncado_no_meio.excalidraw,arrastar,sim,Mensagem de erro exibida pelo editor (ver gravacao),sim,sim,Mensagem de erro exibida para arquivo truncado; retangulo criado sem recarregar

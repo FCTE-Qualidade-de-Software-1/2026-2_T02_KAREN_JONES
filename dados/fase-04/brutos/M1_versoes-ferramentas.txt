@@ -1,0 +1,32 @@
+# Versões das ferramentas, 2026-11-11 22:09:11 -0300
+commit: e1b7aacb356a492aa1e0fc6eb57b8896124027f0
+clone: /home/christopher/git-fcte/2026-2/qs/excalidraw-avaliado/excalidraw
+uname: Linux 6.18.58.1-microsoft-standard-WSL2 x86_64
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+git: git version 2.43.0
+node: v24.16.0
+npm: 11.13.0
+yarn: 1.22.22
+gh: gh version 2.102.0 (2026-09-30)
+grep: grep (GNU grep) 3.11
+madge: 8.0.0
+cloc: 1.86
+eslint: v8.57.0
+eslint do projeto (não usado em M1.3.1): v7.32.0
+vitest: vitest/3.0.6 linux-x64 node-v24.16.0
+typescript: Version 5.9.3
+yarn why @typescript-eslint/parser:
+info => Found "@typescript-eslint/parser@5.62.0"
+info Reasons this module exists
+info Disk size without dependencies: "68KB"
+info Disk size with unique dependencies: "4.33MB"
+info Disk size with transitive dependencies: "6.93MB"
+info Number of shared dependencies: 18
+yarn why @vitest/coverage-v8:
+info => Found "@vitest/coverage-v8@3.0.7"
+info Has been hoisted to "@vitest/coverage-v8"
+info Reasons this module exists
+info Disk size without dependencies: "140KB"
+info Disk size with unique dependencies: "2.87MB"
+info Disk size with transitive dependencies: "13.99MB"
+info Number of shared dependencies: 41

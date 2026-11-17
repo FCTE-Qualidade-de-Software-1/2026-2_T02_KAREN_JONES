@@ -1,0 +1,2504 @@
+
+{"header" : {
+  "cloc_url"           : "github.com/AlDanial/cloc",
+  "cloc_version"       : "1.86",
+  "elapsed_seconds"    : 0.369152069091797,
+  "n_files"            : 498,
+  "n_lines"            : 142746,
+  "files_per_second"   : 1349.03754223889,
+  "lines_per_second"   : 386686.170691633},
+"packages/excalidraw/components/App.tsx" :{
+  "blank": 1013,
+  "comment": 868,
+  "code": 9563,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/woff2/woff2-bindings.ts" :{
+  "blank": 13,
+  "comment": 26,
+  "code": 4012,
+  "language": "TypeScript"},
+"packages/element/src/binding.ts" :{
+  "blank": 278,
+  "comment": 218,
+  "code": 2738,
+  "language": "TypeScript"},
+"packages/element/src/linearElementEditor.ts" :{
+  "blank": 272,
+  "comment": 107,
+  "code": 2477,
+  "language": "TypeScript"},
+"packages/excalidraw/components/icons.tsx" :{
+  "blank": 225,
+  "comment": 59,
+  "code": 2309,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionProperties.tsx" :{
+  "blank": 148,
+  "comment": 73,
+  "code": 2081,
+  "language": "TypeScript"},
+"packages/element/src/elbowArrow.ts" :{
+  "blank": 187,
+  "comment": 156,
+  "code": 1961,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/interactiveScene.ts" :{
+  "blank": 215,
+  "comment": 82,
+  "code": 1869,
+  "language": "TypeScript"},
+"packages/element/src/delta.ts" :{
+  "blank": 291,
+  "comment": 272,
+  "code": 1650,
+  "language": "TypeScript"},
+"packages/element/src/resizeElements.ts" :{
+  "blank": 144,
+  "comment": 53,
+  "code": 1406,
+  "language": "TypeScript"},
+"packages/element/src/bucketFill.ts" :{
+  "blank": 103,
+  "comment": 498,
+  "code": 1317,
+  "language": "TypeScript"},
+"packages/element/src/bounds.ts" :{
+  "blank": 165,
+  "comment": 95,
+  "code": 1314,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Xiaolai/index.ts" :{
+  "blank": 5,
+  "comment": 26,
+  "code": 1293,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.selectionTool.ts" :{
+  "blank": 135,
+  "comment": 177,
+  "code": 1236,
+  "language": "TypeScript"},
+"packages/excalidraw/snapping.ts" :{
+  "blank": 184,
+  "comment": 38,
+  "code": 1192,
+  "language": "TypeScript"},
+"excalidraw-app/App.tsx" :{
+  "blank": 92,
+  "comment": 53,
+  "code": 1177,
+  "language": "TypeScript"},
+"packages/excalidraw/data/restore.ts" :{
+  "blank": 121,
+  "comment": 139,
+  "code": 1165,
+  "language": "TypeScript"},
+"packages/element/src/renderElement.ts" :{
+  "blank": 134,
+  "comment": 107,
+  "code": 1115,
+  "language": "TypeScript"},
+"packages/element/src/shape.ts" :{
+  "blank": 127,
+  "comment": 124,
+  "code": 1095,
+  "language": "TypeScript"},
+"packages/excalidraw/wysiwyg/textWysiwyg.tsx" :{
+  "blank": 124,
+  "comment": 158,
+  "code": 1029,
+  "language": "TypeScript"},
+"packages/common/src/utils.ts" :{
+  "blank": 137,
+  "comment": 94,
+  "code": 1009,
+  "language": "TypeScript"},
+"packages/excalidraw/types.ts" :{
+  "blank": 91,
+  "comment": 593,
+  "code": 961,
+  "language": "TypeScript"},
+"packages/excalidraw/components/CommandPalette/CommandPalette.tsx" :{
+  "blank": 88,
+  "comment": 17,
+  "code": 940,
+  "language": "TypeScript"},
+"excalidraw-app/collab/Collab.tsx" :{
+  "blank": 140,
+  "comment": 43,
+  "code": 912,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Actions.tsx" :{
+  "blank": 73,
+  "comment": 32,
+  "code": 837,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/staticSvgScene.ts" :{
+  "blank": 79,
+  "comment": 32,
+  "code": 822,
+  "language": "TypeScript"},
+"packages/element/src/frame.ts" :{
+  "blank": 144,
+  "comment": 81,
+  "code": 816,
+  "language": "TypeScript"},
+"packages/excalidraw/scene/export.ts" :{
+  "blank": 144,
+  "comment": 352,
+  "code": 807,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ConvertElementTypePopup.tsx" :{
+  "blank": 125,
+  "comment": 35,
+  "code": 801,
+  "language": "TypeScript"},
+"packages/element/src/transform.ts" :{
+  "blank": 71,
+  "comment": 33,
+  "code": 798,
+  "language": "TypeScript"},
+"packages/element/src/stickyNote.ts" :{
+  "blank": 68,
+  "comment": 124,
+  "code": 779,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.helpers.ts" :{
+  "blank": 81,
+  "comment": 6,
+  "code": 778,
+  "language": "TypeScript"},
+"packages/element/src/utils.ts" :{
+  "blank": 94,
+  "comment": 48,
+  "code": 761,
+  "language": "TypeScript"},
+"packages/excalidraw/components/SearchMenu.tsx" :{
+  "blank": 121,
+  "comment": 13,
+  "code": 736,
+  "language": "TypeScript"},
+"packages/element/src/store.ts" :{
+  "blank": 149,
+  "comment": 166,
+  "code": 722,
+  "language": "TypeScript"},
+"packages/element/src/collision.ts" :{
+  "blank": 113,
+  "comment": 114,
+  "code": 716,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.text.ts" :{
+  "blank": 74,
+  "comment": 124,
+  "code": 710,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.viewport.ts" :{
+  "blank": 102,
+  "comment": 118,
+  "code": 703,
+  "language": "TypeScript"},
+"packages/excalidraw/data/library.ts" :{
+  "blank": 127,
+  "comment": 175,
+  "code": 699,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LayerUI.tsx" :{
+  "blank": 40,
+  "comment": 20,
+  "code": 698,
+  "language": "TypeScript"},
+"packages/excalidraw/components/main-menu/DefaultItems.tsx" :{
+  "blank": 56,
+  "comment": 7,
+  "code": 644,
+  "language": "TypeScript"},
+"packages/element/src/flowchart.ts" :{
+  "blank": 86,
+  "comment": 62,
+  "code": 623,
+  "language": "TypeScript"},
+"packages/element/src/convertToShape.ts" :{
+  "blank": 82,
+  "comment": 122,
+  "code": 617,
+  "language": "TypeScript"},
+"packages/element/src/newElement.ts" :{
+  "blank": 48,
+  "comment": 40,
+  "code": 604,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.selection.ts" :{
+  "blank": 54,
+  "comment": 135,
+  "code": 567,
+  "language": "TypeScript"},
+"packages/excalidraw/clipboard.ts" :{
+  "blank": 87,
+  "comment": 48,
+  "code": 556,
+  "language": "TypeScript"},
+"packages/element/src/zindex.ts" :{
+  "blank": 73,
+  "comment": 38,
+  "code": 553,
+  "language": "TypeScript"},
+"packages/element/src/textElement.ts" :{
+  "blank": 60,
+  "comment": 39,
+  "code": 518,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TopPicksDnD/topPicksDnD.tsx" :{
+  "blank": 45,
+  "comment": 70,
+  "code": 518,
+  "language": "TypeScript"},
+"excalidraw-app/components/DebugCanvas.tsx" :{
+  "blank": 49,
+  "comment": 3,
+  "code": 514,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.clipboard.ts" :{
+  "blank": 55,
+  "comment": 49,
+  "code": 508,
+  "language": "TypeScript"},
+"packages/element/src/arrows/focus.ts" :{
+  "blank": 41,
+  "comment": 26,
+  "code": 507,
+  "language": "TypeScript"},
+"packages/excalidraw/components/HelpDialog.tsx" :{
+  "blank": 17,
+  "comment": 1,
+  "code": 507,
+  "language": "TypeScript"},
+"packages/excalidraw/components/PublishLibrary.tsx" :{
+  "blank": 41,
+  "comment": 7,
+  "code": 501,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/staticScene.ts" :{
+  "blank": 55,
+  "comment": 28,
+  "code": 474,
+  "language": "TypeScript"},
+"packages/element/src/duplicate.ts" :{
+  "blank": 96,
+  "comment": 133,
+  "code": 472,
+  "language": "TypeScript"},
+"packages/excalidraw/data/blob.ts" :{
+  "blank": 63,
+  "comment": 32,
+  "code": 465,
+  "language": "TypeScript"},
+"packages/excalidraw/index.tsx" :{
+  "blank": 63,
+  "comment": 34,
+  "code": 462,
+  "language": "TypeScript"},
+"packages/element/src/embeddable.ts" :{
+  "blank": 62,
+  "comment": 16,
+  "code": 457,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/ColorPicker.tsx" :{
+  "blank": 33,
+  "comment": 61,
+  "code": 453,
+  "language": "TypeScript"},
+"packages/common/src/constants.ts" :{
+  "blank": 78,
+  "comment": 96,
+  "code": 452,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/MultiDimension.tsx" :{
+  "blank": 60,
+  "comment": 8,
+  "code": 446,
+  "language": "TypeScript"},
+"packages/excalidraw/components/hyperlink/Hyperlink.tsx" :{
+  "blank": 47,
+  "comment": 4,
+  "code": 444,
+  "language": "TypeScript"},
+"packages/utils/src/shape.ts" :{
+  "blank": 66,
+  "comment": 37,
+  "code": 443,
+  "language": "TypeScript"},
+"packages/element/src/textWrapping.ts" :{
+  "blank": 64,
+  "comment": 244,
+  "code": 432,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionCanvas.tsx" :{
+  "blank": 19,
+  "comment": 23,
+  "code": 427,
+  "language": "TypeScript"},
+"packages/math/src/curve.ts" :{
+  "blank": 73,
+  "comment": 75,
+  "code": 412,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionExport.tsx" :{
+  "blank": 38,
+  "comment": 14,
+  "code": 410,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/index.tsx" :{
+  "blank": 37,
+  "comment": 0,
+  "code": 410,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryMenuItems.tsx" :{
+  "blank": 41,
+  "comment": 15,
+  "code": 405,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ImageExportDialog.tsx" :{
+  "blank": 30,
+  "comment": 7,
+  "code": 394,
+  "language": "TypeScript"},
+"packages/excalidraw/viewport.ts" :{
+  "blank": 60,
+  "comment": 68,
+  "code": 390,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FontPicker/FontPickerList.tsx" :{
+  "blank": 39,
+  "comment": 15,
+  "code": 381,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionBoundText.tsx" :{
+  "blank": 44,
+  "comment": 19,
+  "code": 374,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Tools.tsx" :{
+  "blank": 36,
+  "comment": 70,
+  "code": 372,
+  "language": "TypeScript"},
+"packages/element/src/typeChecks.ts" :{
+  "blank": 46,
+  "comment": 15,
+  "code": 371,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionFinalize.tsx" :{
+  "blank": 41,
+  "comment": 25,
+  "code": 371,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.duplicate.ts" :{
+  "blank": 58,
+  "comment": 100,
+  "code": 371,
+  "language": "TypeScript"},
+"packages/excalidraw/scene/Renderer.ts" :{
+  "blank": 39,
+  "comment": 36,
+  "code": 349,
+  "language": "TypeScript"},
+"packages/excalidraw/components/MobileToolbar.tsx" :{
+  "blank": 33,
+  "comment": 3,
+  "code": 340,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/DragInput.tsx" :{
+  "blank": 47,
+  "comment": 26,
+  "code": 338,
+  "language": "TypeScript"},
+"packages/element/src/Scene.ts" :{
+  "blank": 62,
+  "comment": 49,
+  "code": 335,
+  "language": "TypeScript"},
+"packages/element/src/types.ts" :{
+  "blank": 64,
+  "comment": 97,
+  "code": 335,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Fonts.ts" :{
+  "blank": 73,
+  "comment": 76,
+  "code": 334,
+  "language": "TypeScript"},
+"packages/element/src/dragElements.ts" :{
+  "blank": 37,
+  "comment": 41,
+  "code": 328,
+  "language": "TypeScript"},
+"packages/excalidraw/appState.ts" :{
+  "blank": 12,
+  "comment": 17,
+  "code": 326,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.wrap.ts" :{
+  "blank": 36,
+  "comment": 37,
+  "code": 322,
+  "language": "TypeScript"},
+"packages/excalidraw/lasso/utils.ts" :{
+  "blank": 47,
+  "comment": 33,
+  "code": 320,
+  "language": "TypeScript"},
+"packages/element/src/fractionalIndex.ts" :{
+  "blank": 73,
+  "comment": 81,
+  "code": 319,
+  "language": "TypeScript"},
+"packages/element/src/transformHandles.ts" :{
+  "blank": 30,
+  "comment": 10,
+  "code": 314,
+  "language": "TypeScript"},
+"packages/excalidraw/components/UserList.tsx" :{
+  "blank": 34,
+  "comment": 16,
+  "code": 310,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.textTool.ts" :{
+  "blank": 35,
+  "comment": 112,
+  "code": 308,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Toolbar.tsx" :{
+  "blank": 14,
+  "comment": 6,
+  "code": 306,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/Dimension.tsx" :{
+  "blank": 51,
+  "comment": 5,
+  "code": 305,
+  "language": "TypeScript"},
+"packages/common/src/colors.ts" :{
+  "blank": 70,
+  "comment": 90,
+  "code": 301,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryMenu.tsx" :{
+  "blank": 26,
+  "comment": 24,
+  "code": 299,
+  "language": "TypeScript"},
+"packages/element/src/cropElement.ts" :{
+  "blank": 40,
+  "comment": 21,
+  "code": 298,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryMenuHeaderContent.tsx" :{
+  "blank": 22,
+  "comment": 5,
+  "code": 298,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionDeleteSelected.tsx" :{
+  "blank": 38,
+  "comment": 8,
+  "code": 297,
+  "language": "TypeScript"},
+"packages/excalidraw/components/IconPicker.tsx" :{
+  "blank": 30,
+  "comment": 8,
+  "code": 295,
+  "language": "TypeScript"},
+"packages/laser-pointer/src/state.ts" :{
+  "blank": 86,
+  "comment": 3,
+  "code": 289,
+  "language": "TypeScript"},
+"packages/excalidraw/components/HintViewer.tsx" :{
+  "blank": 41,
+  "comment": 5,
+  "code": 288,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/MermaidToExcalidraw.tsx" :{
+  "blank": 29,
+  "comment": 1,
+  "code": 284,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FontPicker/FontPicker.tsx" :{
+  "blank": 21,
+  "comment": 5,
+  "code": 277,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionGroup.tsx" :{
+  "blank": 38,
+  "comment": 10,
+  "code": 276,
+  "language": "TypeScript"},
+"packages/excalidraw/components/canvases/InteractiveCanvas.tsx" :{
+  "blank": 22,
+  "comment": 15,
+  "code": 270,
+  "language": "TypeScript"},
+"excalidraw-app/data/firebase.ts" :{
+  "blank": 47,
+  "comment": 7,
+  "code": 265,
+  "language": "TypeScript"},
+"packages/element/src/listMarker.ts" :{
+  "blank": 44,
+  "comment": 55,
+  "code": 265,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/keyboardNavHandlers.ts" :{
+  "blank": 38,
+  "comment": 15,
+  "code": 265,
+  "language": "TypeScript"},
+"packages/excalidraw/data/encode.ts" :{
+  "blank": 54,
+  "comment": 97,
+  "code": 263,
+  "language": "TypeScript"},
+"packages/element/src/groups.ts" :{
+  "blank": 39,
+  "comment": 16,
+  "code": 262,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionClipboard.tsx" :{
+  "blank": 23,
+  "comment": 5,
+  "code": 261,
+  "language": "TypeScript"},
+"excalidraw-app/data/index.ts" :{
+  "blank": 38,
+  "comment": 9,
+  "code": 260,
+  "language": "TypeScript"},
+"packages/element/src/heading.ts" :{
+  "blank": 23,
+  "comment": 5,
+  "code": 259,
+  "language": "TypeScript"},
+"excalidraw-app/share/ShareDialog.tsx" :{
+  "blank": 34,
+  "comment": 1,
+  "code": 258,
+  "language": "TypeScript"},
+"packages/element/src/resizeTest.ts" :{
+  "blank": 31,
+  "comment": 7,
+  "code": 258,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionFrame.ts" :{
+  "blank": 35,
+  "comment": 12,
+  "code": 256,
+  "language": "TypeScript"},
+"excalidraw-app/data/FileManager.ts" :{
+  "blank": 31,
+  "comment": 17,
+  "code": 248,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionAlign.tsx" :{
+  "blank": 25,
+  "comment": 1,
+  "code": 247,
+  "language": "TypeScript"},
+"packages/excalidraw/eraser/index.ts" :{
+  "blank": 49,
+  "comment": 16,
+  "code": 239,
+  "language": "TypeScript"},
+"packages/element/src/sizeHelpers.ts" :{
+  "blank": 31,
+  "comment": 15,
+  "code": 238,
+  "language": "TypeScript"},
+"packages/excalidraw/components/PasteChartDialog.tsx" :{
+  "blank": 32,
+  "comment": 0,
+  "code": 238,
+  "language": "TypeScript"},
+"packages/element/src/visualdebug.ts" :{
+  "blank": 20,
+  "comment": 1,
+  "code": 236,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/MultiPosition.tsx" :{
+  "blank": 36,
+  "comment": 2,
+  "code": 235,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TextToDiagram.tsx" :{
+  "blank": 36,
+  "comment": 0,
+  "code": 230,
+  "language": "TypeScript"},
+"packages/excalidraw/components/EyeDropper.tsx" :{
+  "blank": 43,
+  "comment": 15,
+  "code": 226,
+  "language": "TypeScript"},
+"excalidraw-app/collab/Portal.tsx" :{
+  "blank": 28,
+  "comment": 7,
+  "code": 222,
+  "language": "TypeScript"},
+"packages/fractional-indexing/src/index.ts" :{
+  "blank": 19,
+  "comment": 82,
+  "code": 221,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.bucketFill.ts" :{
+  "blank": 31,
+  "comment": 52,
+  "code": 218,
+  "language": "TypeScript"},
+"excalidraw-app/data/LocalData.ts" :{
+  "blank": 35,
+  "comment": 27,
+  "code": 215,
+  "language": "TypeScript"},
+"packages/excalidraw/clients.ts" :{
+  "blank": 31,
+  "comment": 13,
+  "code": 214,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/utils.ts" :{
+  "blank": 29,
+  "comment": 12,
+  "code": 213,
+  "language": "TypeScript"},
+"packages/element/src/selection.ts" :{
+  "blank": 28,
+  "comment": 18,
+  "code": 212,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/Picker.tsx" :{
+  "blank": 24,
+  "comment": 2,
+  "code": 207,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/types.ts" :{
+  "blank": 9,
+  "comment": 9,
+  "code": 206,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/Chat/ChatMessage.tsx" :{
+  "blank": 12,
+  "comment": 0,
+  "code": 206,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/CodeMirrorEditor.tsx" :{
+  "blank": 26,
+  "comment": 9,
+  "code": 204,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionStyles.ts" :{
+  "blank": 20,
+  "comment": 9,
+  "code": 202,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/manager.tsx" :{
+  "blank": 35,
+  "comment": 10,
+  "code": 201,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/utils/TTDStreamFetch.ts" :{
+  "blank": 29,
+  "comment": 0,
+  "code": 196,
+  "language": "TypeScript"},
+"packages/excalidraw/data/index.ts" :{
+  "blank": 23,
+  "comment": 6,
+  "code": 195,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/hooks/useTextGeneration.ts" :{
+  "blank": 31,
+  "comment": 1,
+  "code": 193,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.drawshape.ts" :{
+  "blank": 28,
+  "comment": 43,
+  "code": 192,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.pan.ts" :{
+  "blank": 25,
+  "comment": 74,
+  "code": 189,
+  "language": "TypeScript"},
+"packages/common/debug.ts" :{
+  "blank": 28,
+  "comment": 4,
+  "code": 188,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionElementLock.ts" :{
+  "blank": 29,
+  "comment": 5,
+  "code": 185,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.cursor.ts" :{
+  "blank": 27,
+  "comment": 31,
+  "code": 185,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.toolDrag.ts" :{
+  "blank": 24,
+  "comment": 37,
+  "code": 185,
+  "language": "TypeScript"},
+"packages/element/src/arrowEndpointText.ts" :{
+  "blank": 27,
+  "comment": 77,
+  "code": 184,
+  "language": "TypeScript"},
+"packages/excalidraw/components/AppStateObserver.ts" :{
+  "blank": 24,
+  "comment": 0,
+  "code": 184,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.radar.ts" :{
+  "blank": 17,
+  "comment": 0,
+  "code": 182,
+  "language": "TypeScript"},
+"packages/excalidraw/components/MobileMenu.tsx" :{
+  "blank": 22,
+  "comment": 0,
+  "code": 182,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/Position.tsx" :{
+  "blank": 29,
+  "comment": 0,
+  "code": 182,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionLinearEditor.tsx" :{
+  "blank": 27,
+  "comment": 4,
+  "code": 181,
+  "language": "TypeScript"},
+"packages/excalidraw/animatedTrail.ts" :{
+  "blank": 42,
+  "comment": 2,
+  "code": 178,
+  "language": "TypeScript"},
+"packages/excalidraw/components/welcome-screen/WelcomeScreen.Center.tsx" :{
+  "blank": 17,
+  "comment": 1,
+  "code": 178,
+  "language": "TypeScript"},
+"packages/excalidraw/history.ts" :{
+  "blank": 44,
+  "comment": 29,
+  "code": 176,
+  "language": "TypeScript"},
+"excalidraw-app/ExcalidrawPlusIframeExport.tsx" :{
+  "blank": 36,
+  "comment": 13,
+  "code": 175,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/Sidebar.tsx" :{
+  "blank": 26,
+  "comment": 32,
+  "code": 175,
+  "language": "TypeScript"},
+"packages/excalidraw/components/IconButton.tsx" :{
+  "blank": 19,
+  "comment": 9,
+  "code": 174,
+  "language": "TypeScript"},
+"packages/math/src/ellipse.ts" :{
+  "blank": 29,
+  "comment": 42,
+  "code": 173,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/Chat/ChatInterface.tsx" :{
+  "blank": 19,
+  "comment": 1,
+  "code": 171,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/hooks/useMermaidRenderer.ts" :{
+  "blank": 39,
+  "comment": 3,
+  "code": 171,
+  "language": "TypeScript"},
+"packages/excalidraw/lasso/index.ts" :{
+  "blank": 32,
+  "comment": 3,
+  "code": 171,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionFlip.ts" :{
+  "blank": 20,
+  "comment": 6,
+  "code": 170,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/renderSnaps.ts" :{
+  "blank": 28,
+  "comment": 18,
+  "code": 167,
+  "language": "TypeScript"},
+"packages/common/src/editorInterface.ts" :{
+  "blank": 34,
+  "comment": 22,
+  "code": 166,
+  "language": "TypeScript"},
+"packages/element/src/textMeasurements.ts" :{
+  "blank": 33,
+  "comment": 28,
+  "code": 166,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.flowchart.ts" :{
+  "blank": 28,
+  "comment": 6,
+  "code": 164,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FileDropOverlay.tsx" :{
+  "blank": 17,
+  "comment": 7,
+  "code": 164,
+  "language": "TypeScript"},
+"packages/math/src/polygon.ts" :{
+  "blank": 27,
+  "comment": 24,
+  "code": 161,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.arrowText.ts" :{
+  "blank": 23,
+  "comment": 55,
+  "code": 156,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/useTTDChatStorage.ts" :{
+  "blank": 29,
+  "comment": 8,
+  "code": 155,
+  "language": "TypeScript"},
+"packages/element/src/mutateElement.ts" :{
+  "blank": 21,
+  "comment": 22,
+  "code": 153,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/colorTargets.ts" :{
+  "blank": 18,
+  "comment": 23,
+  "code": 151,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ElementLinkDialog.tsx" :{
+  "blank": 27,
+  "comment": 3,
+  "code": 150,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Tooltip.tsx" :{
+  "blank": 19,
+  "comment": 17,
+  "code": 150,
+  "language": "TypeScript"},
+"excalidraw-app/components/AI.tsx" :{
+  "blank": 25,
+  "comment": 1,
+  "code": 149,
+  "language": "TypeScript"},
+"packages/common/src/font-metadata.ts" :{
+  "blank": 10,
+  "comment": 23,
+  "code": 148,
+  "language": "TypeScript"},
+"packages/excalidraw/scene/types.ts" :{
+  "blank": 17,
+  "comment": 17,
+  "code": 148,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionZindex.tsx" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 147,
+  "language": "TypeScript"},
+"packages/excalidraw/i18n.ts" :{
+  "blank": 19,
+  "comment": 6,
+  "code": 147,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/utils/mermaidAutoFix.ts" :{
+  "blank": 25,
+  "comment": 5,
+  "code": 145,
+  "language": "TypeScript"},
+"packages/excalidraw/components/shapeActionPredicates.ts" :{
+  "blank": 22,
+  "comment": 26,
+  "code": 143,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/ColorInput.tsx" :{
+  "blank": 13,
+  "comment": 0,
+  "code": 142,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/Chat/TTDChatPanel.tsx" :{
+  "blank": 19,
+  "comment": 0,
+  "code": 142,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/common.ts" :{
+  "blank": 24,
+  "comment": 3,
+  "code": 142,
+  "language": "TypeScript"},
+"packages/math/src/segment.ts" :{
+  "blank": 27,
+  "comment": 35,
+  "code": 142,
+  "language": "TypeScript"},
+"packages/excalidraw/components/CursorHint.tsx" :{
+  "blank": 31,
+  "comment": 37,
+  "code": 141,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/MultiFontSize.tsx" :{
+  "blank": 26,
+  "comment": 0,
+  "code": 141,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/ExcalidrawFontFace.ts" :{
+  "blank": 39,
+  "comment": 29,
+  "code": 141,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionNavigate.tsx" :{
+  "blank": 13,
+  "comment": 1,
+  "code": 137,
+  "language": "TypeScript"},
+"packages/excalidraw/data/json.ts" :{
+  "blank": 16,
+  "comment": 6,
+  "code": 137,
+  "language": "TypeScript"},
+"packages/math/src/point.ts" :{
+  "blank": 17,
+  "comment": 110,
+  "code": 137,
+  "language": "TypeScript"},
+"excalidraw-app/components/TopErrorBoundary.tsx" :{
+  "blank": 10,
+  "comment": 0,
+  "code": 136,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionDeselect.ts" :{
+  "blank": 17,
+  "comment": 0,
+  "code": 134,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.parse.ts" :{
+  "blank": 26,
+  "comment": 14,
+  "code": 134,
+  "language": "TypeScript"},
+"packages/excalidraw/components/JSONExportDialog.tsx" :{
+  "blank": 12,
+  "comment": 0,
+  "code": 130,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/animation.ts" :{
+  "blank": 28,
+  "comment": 8,
+  "code": 130,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useAppStateValue.ts" :{
+  "blank": 20,
+  "comment": 25,
+  "code": 127,
+  "language": "TypeScript"},
+"packages/excalidraw/scene/scrollbars.ts" :{
+  "blank": 19,
+  "comment": 10,
+  "code": 126,
+  "language": "TypeScript"},
+"excalidraw-app/components/AppSidebar.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 125,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionHistory.tsx" :{
+  "blank": 17,
+  "comment": 4,
+  "code": 125,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Popover.tsx" :{
+  "blank": 21,
+  "comment": 9,
+  "code": 125,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/ShadeList.tsx" :{
+  "blank": 13,
+  "comment": 0,
+  "code": 124,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryUnit.tsx" :{
+  "blank": 9,
+  "comment": 5,
+  "code": 124,
+  "language": "TypeScript"},
+"excalidraw-app/components/ExportToExcalidrawPlus.tsx" :{
+  "blank": 13,
+  "comment": 0,
+  "code": 122,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/shortcuts.ts" :{
+  "blank": 6,
+  "comment": 1,
+  "code": 119,
+  "language": "TypeScript"},
+"packages/math/src/pca.ts" :{
+  "blank": 18,
+  "comment": 65,
+  "code": 119,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionDuplicateSelection.tsx" :{
+  "blank": 21,
+  "comment": 3,
+  "code": 118,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialog.tsx" :{
+  "blank": 14,
+  "comment": 3,
+  "code": 118,
+  "language": "TypeScript"},
+"packages/element/src/image.ts" :{
+  "blank": 22,
+  "comment": 14,
+  "code": 117,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.line.ts" :{
+  "blank": 13,
+  "comment": 0,
+  "code": 117,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Dialog.tsx" :{
+  "blank": 19,
+  "comment": 1,
+  "code": 117,
+  "language": "TypeScript"},
+"packages/element/src/distance.ts" :{
+  "blank": 19,
+  "comment": 38,
+  "code": 116,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogOutput.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 116,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/TopPicks.tsx" :{
+  "blank": 13,
+  "comment": 4,
+  "code": 115,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogPanel.tsx" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 115,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/helpers.ts" :{
+  "blank": 13,
+  "comment": 29,
+  "code": 115,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ContextMenu.tsx" :{
+  "blank": 15,
+  "comment": 3,
+  "code": 114,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogInput.tsx" :{
+  "blank": 20,
+  "comment": 3,
+  "code": 114,
+  "language": "TypeScript"},
+"packages/common/src/appEventBus.ts" :{
+  "blank": 24,
+  "comment": 0,
+  "code": 112,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.wheel.ts" :{
+  "blank": 20,
+  "comment": 46,
+  "code": 112,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/PickerColorList.tsx" :{
+  "blank": 14,
+  "comment": 6,
+  "code": 112,
+  "language": "TypeScript"},
+"packages/excalidraw/components/DefaultSidebar.tsx" :{
+  "blank": 12,
+  "comment": 3,
+  "code": 112,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/utils/mermaidError.ts" :{
+  "blank": 21,
+  "comment": 0,
+  "code": 112,
+  "language": "TypeScript"},
+"packages/excalidraw/components/canvases/StaticCanvas.tsx" :{
+  "blank": 18,
+  "comment": 5,
+  "code": 111,
+  "language": "TypeScript"},
+"packages/common/src/keys.ts" :{
+  "blank": 14,
+  "comment": 29,
+  "code": 110,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/MultiAngle.tsx" :{
+  "blank": 25,
+  "comment": 0,
+  "code": 110,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionDistribute.tsx" :{
+  "blank": 21,
+  "comment": 1,
+  "code": 109,
+  "language": "TypeScript"},
+"packages/excalidraw/polyfill.ts" :{
+  "blank": 8,
+  "comment": 6,
+  "code": 107,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TextField.tsx" :{
+  "blank": 11,
+  "comment": 1,
+  "code": 105,
+  "language": "TypeScript"},
+"packages/excalidraw/laserTrails.ts" :{
+  "blank": 23,
+  "comment": 7,
+  "code": 105,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FilledButton.tsx" :{
+  "blank": 14,
+  "comment": 1,
+  "code": 104,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuItem.tsx" :{
+  "blank": 15,
+  "comment": 0,
+  "code": 104,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionElementLink.ts" :{
+  "blank": 12,
+  "comment": 0,
+  "code": 101,
+  "language": "TypeScript"},
+"packages/excalidraw/workers.ts" :{
+  "blank": 23,
+  "comment": 30,
+  "code": 101,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useTextEditorFocus.ts" :{
+  "blank": 15,
+  "comment": 9,
+  "code": 100,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/FontSize.tsx" :{
+  "blank": 16,
+  "comment": 0,
+  "code": 98,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ToolPopover.tsx" :{
+  "blank": 14,
+  "comment": 3,
+  "code": 97,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.bar.ts" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 96,
+  "language": "TypeScript"},
+"packages/excalidraw/data/ai/types.ts" :{
+  "blank": 39,
+  "comment": 165,
+  "code": 96,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuContent.tsx" :{
+  "blank": 13,
+  "comment": 9,
+  "code": 95,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/hooks/useChatManagement.ts" :{
+  "blank": 22,
+  "comment": 0,
+  "code": 92,
+  "language": "TypeScript"},
+"packages/excalidraw/components/hyperlink/helpers.ts" :{
+  "blank": 12,
+  "comment": 1,
+  "code": 92,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/colorPickerUtils.ts" :{
+  "blank": 14,
+  "comment": 2,
+  "code": 91,
+  "language": "TypeScript"},
+"packages/excalidraw/data/reconcile.ts" :{
+  "blank": 18,
+  "comment": 9,
+  "code": 91,
+  "language": "TypeScript"},
+"packages/excalidraw/components/PropertiesPopover.tsx" :{
+  "blank": 7,
+  "comment": 5,
+  "code": 90,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Trans.tsx" :{
+  "blank": 18,
+  "comment": 63,
+  "code": 90,
+  "language": "TypeScript"},
+"packages/element/src/index.ts" :{
+  "blank": 9,
+  "comment": 11,
+  "code": 89,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/types.ts" :{
+  "blank": 20,
+  "comment": 15,
+  "code": 89,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryMenuSection.tsx" :{
+  "blank": 10,
+  "comment": 2,
+  "code": 87,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/renderNewElementScene.ts" :{
+  "blank": 18,
+  "comment": 6,
+  "code": 87,
+  "language": "TypeScript"},
+"excalidraw-app/sentry.ts" :{
+  "blank": 7,
+  "comment": 1,
+  "code": 86,
+  "language": "TypeScript"},
+"packages/common/src/binary-heap.ts" :{
+  "blank": 20,
+  "comment": 4,
+  "code": 86,
+  "language": "TypeScript"},
+"packages/excalidraw/components/main-menu/MainMenu.tsx" :{
+  "blank": 6,
+  "comment": 3,
+  "code": 86,
+  "language": "TypeScript"},
+"excalidraw-app/components/AppMainMenu.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 84,
+  "language": "TypeScript"},
+"packages/element/src/distribute.ts" :{
+  "blank": 23,
+  "comment": 7,
+  "code": 84,
+  "language": "TypeScript"},
+"packages/excalidraw/components/footer/Footer.tsx" :{
+  "blank": 6,
+  "comment": 1,
+  "code": 84,
+  "language": "TypeScript"},
+"packages/element/src/elementLink.ts" :{
+  "blank": 18,
+  "comment": 3,
+  "code": 83,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/Chat/ChatHistoryMenu.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 83,
+  "language": "TypeScript"},
+"packages/excalidraw/data/encryption.ts" :{
+  "blank": 9,
+  "comment": 2,
+  "code": 83,
+  "language": "TypeScript"},
+"excalidraw-app/data/localStorage.ts" :{
+  "blank": 13,
+  "comment": 5,
+  "code": 82,
+  "language": "TypeScript"},
+"packages/element/src/sortElements.ts" :{
+  "blank": 17,
+  "comment": 20,
+  "code": 82,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FontPicker/fontTopPicksDnD.ts" :{
+  "blank": 12,
+  "comment": 12,
+  "code": 82,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/Angle.tsx" :{
+  "blank": 21,
+  "comment": 0,
+  "code": 82,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/subset-main.ts" :{
+  "blank": 21,
+  "comment": 27,
+  "code": 82,
+  "language": "TypeScript"},
+"packages/laser-pointer/src/math.ts" :{
+  "blank": 23,
+  "comment": 0,
+  "code": 82,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/index.ts" :{
+  "blank": 15,
+  "comment": 0,
+  "code": 81,
+  "language": "TypeScript"},
+"excalidraw-app/CustomStats.tsx" :{
+  "blank": 12,
+  "comment": 0,
+  "code": 79,
+  "language": "TypeScript"},
+"excalidraw-app/components/AppWelcomeScreen.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 78,
+  "language": "TypeScript"},
+"packages/excalidraw/components/OverwriteConfirm/OverwriteConfirmActions.tsx" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 77,
+  "language": "TypeScript"},
+"packages/excalidraw/components/UnlockPopup.tsx" :{
+  "blank": 13,
+  "comment": 1,
+  "code": 77,
+  "language": "TypeScript"},
+"packages/excalidraw/errors.ts" :{
+  "blank": 9,
+  "comment": 4,
+  "code": 77,
+  "language": "TypeScript"},
+"packages/excalidraw/textAutoResizeHandle.ts" :{
+  "blank": 12,
+  "comment": 0,
+  "code": 77,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useLibraryItemSvg.ts" :{
+  "blank": 19,
+  "comment": 4,
+  "code": 76,
+  "language": "TypeScript"},
+"packages/element/src/positionElementsOnGrid.ts" :{
+  "blank": 17,
+  "comment": 20,
+  "code": 75,
+  "language": "TypeScript"},
+"packages/excalidraw/index-node.ts" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 75,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/utils/chat.ts" :{
+  "blank": 18,
+  "comment": 0,
+  "code": 74,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ViewportStatusFrame/ViewportStatusFrame.tsx" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 74,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ShareableLinkDialog.tsx" :{
+  "blank": 10,
+  "comment": 0,
+  "code": 70,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Toast.tsx" :{
+  "blank": 9,
+  "comment": 1,
+  "code": 70,
+  "language": "TypeScript"},
+"packages/excalidraw/deburr.ts" :{
+  "blank": 5,
+  "comment": 18,
+  "code": 70,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/harfbuzz/harfbuzz-bindings.ts" :{
+  "blank": 20,
+  "comment": 112,
+  "code": 70,
+  "language": "TypeScript"},
+"packages/element/src/align.ts" :{
+  "blank": 11,
+  "comment": 2,
+  "code": 69,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/Chat/useChatAgent.ts" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 69,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/CustomColorList.tsx" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 68,
+  "language": "TypeScript"},
+"packages/common/src/points.ts" :{
+  "blank": 11,
+  "comment": 3,
+  "code": 67,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionTextAutoResize.ts" :{
+  "blank": 15,
+  "comment": 6,
+  "code": 67,
+  "language": "TypeScript"},
+"packages/excalidraw/drawShapeTrail.ts" :{
+  "blank": 14,
+  "comment": 0,
+  "code": 66,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ConfirmDialog.tsx" :{
+  "blank": 8,
+  "comment": 8,
+  "code": 65,
+  "language": "TypeScript"},
+"packages/excalidraw/components/OverwriteConfirm/OverwriteConfirm.tsx" :{
+  "blank": 10,
+  "comment": 0,
+  "code": 65,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Modal.tsx" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 63,
+  "language": "TypeScript"},
+"packages/math/src/vector.ts" :{
+  "blank": 16,
+  "comment": 81,
+  "code": 63,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionSelectAll.ts" :{
+  "blank": 9,
+  "comment": 1,
+  "code": 60,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/CanvasGrid.tsx" :{
+  "blank": 10,
+  "comment": 0,
+  "code": 60,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenu.tsx" :{
+  "blank": 9,
+  "comment": 1,
+  "code": 60,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuSubContent.tsx" :{
+  "blank": 11,
+  "comment": 0,
+  "code": 60,
+  "language": "TypeScript"},
+"packages/excalidraw/data/filesystem.ts" :{
+  "blank": 11,
+  "comment": 4,
+  "code": 60,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionAddToLibrary.ts" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 59,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ExcalidrawLogo.tsx" :{
+  "blank": 5,
+  "comment": 5,
+  "code": 59,
+  "language": "TypeScript"},
+"packages/excalidraw/renderOverrides.ts" :{
+  "blank": 4,
+  "comment": 7,
+  "code": 59,
+  "language": "TypeScript"},
+"packages/common/src/versionedSnapshotStore.ts" :{
+  "blank": 12,
+  "comment": 0,
+  "code": 58,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionLink.tsx" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 58,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ElementCanvasButtons.tsx" :{
+  "blank": 10,
+  "comment": 1,
+  "code": 58,
+  "language": "TypeScript"},
+"packages/excalidraw/data/image.ts" :{
+  "blank": 8,
+  "comment": 5,
+  "code": 58,
+  "language": "TypeScript"},
+"packages/element/src/comparisons.ts" :{
+  "blank": 10,
+  "comment": 1,
+  "code": 57,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stack.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 57,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/mermaid-lang-lite.ts" :{
+  "blank": 13,
+  "comment": 12,
+  "code": 57,
+  "language": "TypeScript"},
+"packages/math/src/types.ts" :{
+  "blank": 24,
+  "comment": 81,
+  "code": 57,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FontPicker/keyboardNavHandlers.ts" :{
+  "blank": 11,
+  "comment": 1,
+  "code": 56,
+  "language": "TypeScript"},
+"packages/excalidraw/components/App.modifiers.ts" :{
+  "blank": 10,
+  "comment": 17,
+  "code": 55,
+  "language": "TypeScript"},
+"packages/excalidraw/components/RadioSelection.tsx" :{
+  "blank": 3,
+  "comment": 1,
+  "code": 55,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Range.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 55,
+  "language": "TypeScript"},
+"packages/excalidraw/components/canvases/NewElementCanvas.tsx" :{
+  "blank": 7,
+  "comment": 1,
+  "code": 55,
+  "language": "TypeScript"},
+"packages/excalidraw/components/hoc/withInternalFallback.tsx" :{
+  "blank": 10,
+  "comment": 11,
+  "code": 55,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.constants.ts" :{
+  "blank": 7,
+  "comment": 2,
+  "code": 54,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/SidebarHeader.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 53,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useOutsideClick.ts" :{
+  "blank": 13,
+  "comment": 27,
+  "code": 53,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionCropEditor.tsx" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 52,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuItemLink.tsx" :{
+  "blank": 6,
+  "comment": 1,
+  "code": 52,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useCreatePortalContainer.ts" :{
+  "blank": 14,
+  "comment": 2,
+  "code": 52,
+  "language": "TypeScript"},
+"packages/math/src/angle.ts" :{
+  "blank": 13,
+  "comment": 12,
+  "code": 52,
+  "language": "TypeScript"},
+"packages/math/src/constants.ts" :{
+  "blank": 1,
+  "comment": 2,
+  "code": 52,
+  "language": "TypeScript"},
+"excalidraw-app/debugCollaborators.ts" :{
+  "blank": 13,
+  "comment": 10,
+  "code": 51,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleSearchMenu.ts" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 51,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FontPicker/FontPickerTrigger.tsx" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 51,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuItemContentRadio.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 50,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/woff2/woff2-loader.ts" :{
+  "blank": 9,
+  "comment": 17,
+  "code": 50,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ProjectName.tsx" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 49,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogTabs.tsx" :{
+  "blank": 8,
+  "comment": 1,
+  "code": 49,
+  "language": "TypeScript"},
+"packages/excalidraw/data/types.ts" :{
+  "blank": 8,
+  "comment": 9,
+  "code": 49,
+  "language": "TypeScript"},
+"excalidraw-app/share/QRCode.tsx" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 48,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/colorTopPicksDnD.ts" :{
+  "blank": 9,
+  "comment": 7,
+  "code": 48,
+  "language": "TypeScript"},
+"packages/excalidraw/components/positionElementBesideCursor.ts" :{
+  "blank": 3,
+  "comment": 14,
+  "code": 48,
+  "language": "TypeScript"},
+"packages/excalidraw/components/welcome-screen/WelcomeScreen.Hints.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 48,
+  "language": "TypeScript"},
+"excalidraw-app/app_constants.ts" :{
+  "blank": 10,
+  "comment": 4,
+  "code": 47,
+  "language": "TypeScript"},
+"packages/common/src/utility-types.ts" :{
+  "blank": 19,
+  "comment": 13,
+  "code": 47,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/SidebarTrigger.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 47,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TopPicksDnD/TopPicksTip.tsx" :{
+  "blank": 3,
+  "comment": 10,
+  "code": 47,
+  "language": "TypeScript"},
+"packages/excalidraw/data/EditorLocalStorage.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 47,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Excalifont/index.ts" :{
+  "blank": 20,
+  "comment": 93,
+  "code": 47,
+  "language": "TypeScript"},
+"packages/excalidraw/components/DarkModeToggle.tsx" :{
+  "blank": 7,
+  "comment": 2,
+  "code": 46,
+  "language": "TypeScript"},
+"packages/excalidraw/reactUtils.ts" :{
+  "blank": 7,
+  "comment": 10,
+  "code": 45,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Stats/Collapsible.tsx" :{
+  "blank": 3,
+  "comment": 3,
+  "code": 44,
+  "language": "TypeScript"},
+"excalidraw-app/collab/CollabError.tsx" :{
+  "blank": 11,
+  "comment": 1,
+  "code": 43,
+  "language": "TypeScript"},
+"packages/excalidraw/components/DialogActionButton.tsx" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 42,
+  "language": "TypeScript"},
+"packages/excalidraw/components/RadioGroup.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 42,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDPreviewPanel.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 42,
+  "language": "TypeScript"},
+"excalidraw-app/data/fileStatusStore.ts" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 41,
+  "language": "TypeScript"},
+"packages/element/src/arrows/helpers.ts" :{
+  "blank": 3,
+  "comment": 1,
+  "code": 41,
+  "language": "TypeScript"},
+"packages/excalidraw/components/BraveMeasureTextError.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 41,
+  "language": "TypeScript"},
+"packages/excalidraw/components/OverwriteConfirm/OverwriteConfirmState.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 41,
+  "language": "TypeScript"},
+"packages/excalidraw/components/live-collaboration/LiveCollaborationTrigger.tsx" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 41,
+  "language": "TypeScript"},
+"excalidraw-app/useHandleAppTheme.ts" :{
+  "blank": 11,
+  "comment": 0,
+  "code": 40,
+  "language": "TypeScript"},
+"packages/excalidraw/analytics.ts" :{
+  "blank": 7,
+  "comment": 3,
+  "code": 40,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/siderbar.test.helpers.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 40,
+  "language": "TypeScript"},
+"packages/common/src/promise-pool.ts" :{
+  "blank": 7,
+  "comment": 4,
+  "code": 39,
+  "language": "TypeScript"},
+"packages/common/src/queue.ts" :{
+  "blank": 9,
+  "comment": 0,
+  "code": 39,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Avatar.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 38,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Spinner.tsx" :{
+  "blank": 4,
+  "comment": 1,
+  "code": 38,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TopPicksDnD/TopPicksContextMenu.tsx" :{
+  "blank": 5,
+  "comment": 7,
+  "code": 38,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuTrigger.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 38,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/subset-shared.chunk.ts" :{
+  "blank": 9,
+  "comment": 34,
+  "code": 38,
+  "language": "TypeScript"},
+"packages/excalidraw/context/tunnels.ts" :{
+  "blank": 6,
+  "comment": 2,
+  "code": 37,
+  "language": "TypeScript"},
+"packages/excalidraw/data/resave.ts" :{
+  "blank": 11,
+  "comment": 1,
+  "code": 37,
+  "language": "TypeScript"},
+"packages/math/src/range.ts" :{
+  "blank": 10,
+  "comment": 36,
+  "code": 37,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Button.tsx" :{
+  "blank": 4,
+  "comment": 6,
+  "code": 36,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LoadingMessage.tsx" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 36,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/utils/mermaidValidation.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 36,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/harfbuzz/harfbuzz-loader.ts" :{
+  "blank": 7,
+  "comment": 14,
+  "code": 36,
+  "language": "TypeScript"},
+"excalidraw-app/components/ExcalidrawPlusPromoBanner.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/common/src/emitter.ts" :{
+  "blank": 11,
+  "comment": 5,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Card.tsx" :{
+  "blank": 2,
+  "comment": 1,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Island.tsx" :{
+  "blank": 4,
+  "comment": 4,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Switch.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Nunito/index.ts" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/laser-pointer/src/simplify.ts" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 35,
+  "language": "TypeScript"},
+"packages/excalidraw/components/CheckboxItem.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 34,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ErrorDialog.tsx" :{
+  "blank": 6,
+  "comment": 1,
+  "code": 34,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/index.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 33,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogTrigger.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 33,
+  "language": "TypeScript"},
+"packages/math/src/rectangle.ts" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 33,
+  "language": "TypeScript"},
+"excalidraw-app/data/tabSync.ts" :{
+  "blank": 5,
+  "comment": 2,
+  "code": 32,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleViewMode.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 32,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleZenMode.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 32,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryMenuControlButtons.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 32,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/SidebarTabs.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 32,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuSubTrigger.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 32,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/ComicShanns/index.ts" :{
+  "blank": 12,
+  "comment": 52,
+  "code": 32,
+  "language": "TypeScript"},
+"excalidraw-app/data/TTDStorage.ts" :{
+  "blank": 6,
+  "comment": 14,
+  "code": 31,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionMenu.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 31,
+  "language": "TypeScript"},
+"packages/excalidraw/components/RadioButton.tsx" :{
+  "blank": 3,
+  "comment": 1,
+  "code": 31,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuItemContent.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 31,
+  "language": "TypeScript"},
+"packages/excalidraw/renderer/roundRect.ts" :{
+  "blank": 0,
+  "comment": 10,
+  "code": 31,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleGridMode.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 30,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleObjectsSnapMode.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 30,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleShapeSwitch.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 30,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ActiveConfirmDialog.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 30,
+  "language": "TypeScript"},
+"packages/excalidraw/mermaid.ts" :{
+  "blank": 2,
+  "comment": 1,
+  "code": 30,
+  "language": "TypeScript"},
+"excalidraw-app/app-jotai.ts" :{
+  "blank": 5,
+  "comment": 3,
+  "code": 29,
+  "language": "TypeScript"},
+"packages/element/src/arrowheads.ts" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 29,
+  "language": "TypeScript"},
+"packages/element/src/containerCache.ts" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 29,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LibraryMenuBrowseButton.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 29,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/common.ts" :{
+  "blank": 5,
+  "comment": 10,
+  "code": 28,
+  "language": "TypeScript"},
+"packages/utils/src/test-utils.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 28,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Section.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 27,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ButtonIconCycle.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 26,
+  "language": "TypeScript"},
+"packages/excalidraw/components/InlineIcon.tsx" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 26,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LaserPointerButton.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 26,
+  "language": "TypeScript"},
+"packages/excalidraw/components/PenModeButton.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 26,
+  "language": "TypeScript"},
+"packages/excalidraw/components/SVGLayer.tsx" :{
+  "blank": 7,
+  "comment": 1,
+  "code": 26,
+  "language": "TypeScript"},
+"packages/math/src/utils.ts" :{
+  "blank": 7,
+  "comment": 0,
+  "code": 26,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/HotkeyLabel.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 25,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LockButton.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 25,
+  "language": "TypeScript"},
+"packages/excalidraw/components/MagicButton.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 25,
+  "language": "TypeScript"},
+"packages/excalidraw/components/QuickSearch.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 25,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/SidebarTabTrigger.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 25,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useScrollPosition.ts" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 25,
+  "language": "TypeScript"},
+"packages/common/src/url.ts" :{
+  "blank": 7,
+  "comment": 6,
+  "code": 24,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleArrowBinding.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 24,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleShowHints.tsx" :{
+  "blank": 3,
+  "comment": 1,
+  "code": 24,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleStats.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 24,
+  "language": "TypeScript"},
+"excalidraw-app/app-language/LanguageList.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 23,
+  "language": "TypeScript"},
+"excalidraw-app/components/AppFooter.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 23,
+  "language": "TypeScript"},
+"packages/excalidraw/components/FixedSideContainer.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 23,
+  "language": "TypeScript"},
+"packages/excalidraw/components/InitializeApp.tsx" :{
+  "blank": 8,
+  "comment": 0,
+  "code": 23,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuItemCustom.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 23,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/subset-worker.chunk.ts" :{
+  "blank": 4,
+  "comment": 15,
+  "code": 23,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/common.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 22,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/dropdownMenuUtils.ts" :{
+  "blank": 2,
+  "comment": 3,
+  "code": 22,
+  "language": "TypeScript"},
+"packages/excalidraw/components/footer/FooterCenter.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 22,
+  "language": "TypeScript"},
+"packages/excalidraw/scene/index.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 22,
+  "language": "TypeScript"},
+"packages/common/src/random.ts" :{
+  "blank": 6,
+  "comment": 6,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleMidpointSnapping.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuGroup.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuSub.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/excalidraw/components/welcome-screen/WelcomeScreen.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useCopiedIndicator.ts" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/math/src/line.ts" :{
+  "blank": 4,
+  "comment": 14,
+  "code": 21,
+  "language": "TypeScript"},
+"packages/excalidraw/components/HelpButton.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 20,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ScrollableList.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 20,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogTabTrigger.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 20,
+  "language": "TypeScript"},
+"excalidraw-app/components/EncryptedIcon.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 19,
+  "language": "TypeScript"},
+"packages/element/src/showSelectedShapeActions.ts" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 19,
+  "language": "TypeScript"},
+"excalidraw-app/app-language/language-detector.ts" :{
+  "blank": 6,
+  "comment": 1,
+  "code": 18,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Ellipsify.tsx" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 18,
+  "language": "TypeScript"},
+"packages/common/src/index.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/components/CommandPalette/types.ts" :{
+  "blank": 1,
+  "comment": 7,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/SidebarTab.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useEmitter.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/shortcut.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/harfbuzz/harfbuzz-wasm.ts" :{
+  "blank": 9,
+  "comment": 31,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/subset/woff2/woff2-wasm.ts" :{
+  "blank": 8,
+  "comment": 30,
+  "code": 17,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/actionToggleWrap.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 16,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogTab.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 16,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Sidebar/SidebarTabTriggers.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 15,
+  "language": "TypeScript"},
+"excalidraw-app/index.tsx" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/excalidraw/charts/charts.types.ts" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/excalidraw/components/DiagramToCodePlugin/DiagramToCodePlugin.tsx" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/excalidraw/components/LinkButton.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/excalidraw/editor-jotai.ts" :{
+  "blank": 3,
+  "comment": 1,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Lilita/index.ts" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/math/src/index.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 14,
+  "language": "TypeScript"},
+"packages/math/src/triangle.ts" :{
+  "blank": 4,
+  "comment": 10,
+  "code": 14,
+  "language": "TypeScript"},
+"excalidraw-app/data/Locker.ts" :{
+  "blank": 3,
+  "comment": 2,
+  "code": 13,
+  "language": "TypeScript"},
+"packages/common/src/bounds.ts" :{
+  "blank": 1,
+  "comment": 3,
+  "code": 13,
+  "language": "TypeScript"},
+"packages/excalidraw/actions/register.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 13,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogSubmitShortcut.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 13,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuSeparator.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 13,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogTabTriggers.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 12,
+  "language": "TypeScript"},
+"packages/excalidraw/gesture.ts" :{
+  "blank": 3,
+  "comment": 0,
+  "code": 12,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useStableCallback.ts" :{
+  "blank": 3,
+  "comment": 3,
+  "code": 12,
+  "language": "TypeScript"},
+"packages/excalidraw/scene/normalize.ts" :{
+  "blank": 5,
+  "comment": 0,
+  "code": 12,
+  "language": "TypeScript"},
+"packages/utils/src/index.ts" :{
+  "blank": 2,
+  "comment": 1,
+  "code": 12,
+  "language": "TypeScript"},
+"excalidraw-app/app-language/language-state.ts" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 11,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDContext.tsx" :{
+  "blank": 6,
+  "comment": 0,
+  "code": 11,
+  "language": "TypeScript"},
+"packages/excalidraw/components/dropdownMenu/DropdownMenuItemCheckbox.tsx" :{
+  "blank": 4,
+  "comment": 0,
+  "code": 11,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ButtonSeparator.tsx" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 10,
+  "language": "TypeScript"},
+"packages/excalidraw/components/Paragraph.tsx" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 10,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDWelcomeMessage.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 10,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Cascadia/index.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 7,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Emoji/index.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 7,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Helvetica/index.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 7,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Liberation/index.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 7,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/Virgil/index.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 7,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useCallbackRefState.ts" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 6,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useStable.ts" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 6,
+  "language": "TypeScript"},
+"packages/excalidraw/hooks/useTransition.ts" :{
+  "blank": 2,
+  "comment": 1,
+  "code": 6,
+  "language": "TypeScript"},
+"packages/excalidraw/components/ColorPicker/PickerHeading.tsx" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 5,
+  "language": "TypeScript"},
+"excalidraw-app/share/qrcode.chunk.ts" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 4,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/TTDDialogPanels.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 4,
+  "language": "TypeScript"},
+"packages/excalidraw/context/ui-appState.ts" :{
+  "blank": 2,
+  "comment": 0,
+  "code": 4,
+  "language": "TypeScript"},
+"packages/excalidraw/components/TTDDialog/Chat/index.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 3,
+  "language": "TypeScript"},
+"packages/excalidraw/components/canvases/index.tsx" :{
+  "blank": 1,
+  "comment": 0,
+  "code": 3,
+  "language": "TypeScript"},
+"packages/laser-pointer/src/index.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 2,
+  "language": "TypeScript"},
+"packages/excalidraw/components/CommandPalette/defaultCommandPaletteItems.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 1,
+  "language": "TypeScript"},
+"packages/excalidraw/fonts/index.ts" :{
+  "blank": 0,
+  "comment": 0,
+  "code": 1,
+  "language": "TypeScript"},
+"SUM": {
+  "blank": 14105,
+  "comment": 11433,
+  "code": 117208,
+  "nFiles": 498} }

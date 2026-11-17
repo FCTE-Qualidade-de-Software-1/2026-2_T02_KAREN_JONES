@@ -1,14 +1,14 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
-const siteVersion = '1.0';
+const siteVersion = '1.3';
 const buildDate = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 const repoUrl = 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Qualidade Excalidraw',
-  tagline: 'Avaliação de Qualidade de Software — Excalidraw',
+  tagline: 'Avaliação de Qualidade de Software: Excalidraw',
   favicon: 'img/logo.svg',
 
   future: {
@@ -80,6 +80,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/docs/fase-03/visao-geral',
+            label: 'Fase 03',
+            position: 'left',
+          },
+          {
             to: '/docs/fase-04/visao-geral',
             label: 'Fase 04',
             position: 'left',
@@ -112,15 +117,19 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Fase 01 — Requisitos',
+                label: 'Fase 01: Requisitos',
                 to: '/docs/fase-01/visao-geral',
               },
               {
-                label: 'Fase 02 — Especificação',
+                label: 'Fase 02: Especificação',
                 to: '/docs/fase-02/visao-geral',
               },
               {
-                label: 'Fase 04 — Execução',
+                label: 'Fase 03: Projeto',
+                to: '/docs/fase-03/visao-geral',
+              },
+              {
+                label: 'Fase 04: Execução',
                 to: '/docs/fase-04/visao-geral',
               },
             ],

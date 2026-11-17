@@ -1,0 +1,5 @@
+.github/workflows/cancel.yml
+.github/workflows/lint.yml
+.github/workflows/semantic-pr-title.yml
+.github/workflows/size-limit.yml
+.github/workflows/test-coverage-pr.yml

@@ -1,0 +1,58 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "http://localhost:3001",
+  "elements": [
+    {
+      "type": "text",
+      "version": 243,
+      "versionNonce": 419351305,
+      "isDeleted": false,
+      "id": "cNkxk0RfgJPpJRdvC2LDL",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 440,
+      "y": 62.5,
+      "strokeColor": "#c92a2a",
+      "backgroundColor": "transparent",
+      "width": 36,
+      "height": 57,
+      "seed": 2081716206,
+      "groupIds": [
+        "OCd6Oh31kuXpQ4XtRa9UE"
+      ],
+      "fontSize": 36,
+      "fontFamily": 1,
+      "text": "😀",
+      "baseline": 41,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "index": "a0",
+      "frameId": null,
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1794797377693,
+      "created": null,
+      "link": null,
+      "locked": false,
+      "containerId": null,
+      "originalText": "😀",
+      "autoResize": true,
+      "lineHeight": 1.5833333333333333,
+      "labelPosition": null,
+      "baseFontSize": null
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff",
+    "lockedMultiSelections": {}
+  },
+  "files": {}
+}

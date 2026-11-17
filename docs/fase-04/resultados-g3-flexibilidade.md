@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "Resultados e Julgamento: Flexibilidade (G3)"
-description: Relatório formal de avaliação e julgamento do objetivo G3 (Flexibilidade) do Excalidraw, consolidando a obtenção das medidas, respostas às questões GQM, confronto de hipóteses e ação de melhoria.
+description: Relatório formal de avaliação e julgamento do objetivo G3 (Flexibilidade) do Excalidraw, consolidando a obtenção das medidas, as descobertas técnicas da coleta, as respostas às questões GQM, o confronto de hipóteses e os pontos de melhoria.
 ---
 
 import Link from '@docusaurus/Link';
@@ -10,11 +10,11 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Este documento apresenta o relatório formal de avaliação da qualidade para o objetivo G3 (Flexibilidade), executado sobre o software Excalidraw fixado no commit `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`. O propósito deste artefato é sintetizar os resultados empíricos obtidos na coleta de dados, responder às questões formuladas pelo modelo GQM, confrontar as hipóteses estabelecidas e emitir o julgamento da característica.
+Este documento apresenta o relatório formal de avaliação da qualidade para o objetivo G3 (Flexibilidade), executado sobre o software Excalidraw fixado no commit `e1b7aacb356a492aa1e0fc6eb57b8896124027f0`. O propósito deste artefato é sintetizar os resultados empíricos e as descobertas técnicas da coleta, responder às questões formuladas pelo modelo GQM, confrontar as hipóteses estabelecidas e emitir o julgamento da característica.
 
 ## Metodologia
 
-A avaliação seguiu o método Goal-Question-Metric (GQM) estruturado na Fase 02, em consonância com o modelo de qualidade de software ISO/IEC 25010:2011 e a sistemática de agregação de Heitlager, Kuipers e Visser [[1, p. 8]](#ref-1). A coleta empírica envolveu doze métricas distribuídas em quatro subcaracterísticas: Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade. Os dados brutos foram obtidos por meio de testes automatizados, perfis de desempenho via Chrome DevTools, execução conteinerizada em Docker e testes manuais de ergonomia em dispositivo móvel. Com base nas fraquezas mapeadas durante o processo, foi delineada uma intervenção de engenharia de software para tratamento de não conformidades.
+A avaliação seguiu o método Goal-Question-Metric (GQM) estruturado na Fase 02, em consonância com o modelo de qualidade de software ISO/IEC 25010:2011 e a sistemática de agregação de Heitlager, Kuipers e Visser [[1, p. 8]](#ref-1). A coleta empírica envolveu doze métricas distribuídas em quatro subcaracterísticas: Adaptabilidade, Escalabilidade, Instalabilidade e Substituibilidade. Os dados brutos foram obtidos por meio de testes automatizados, perfis de desempenho via Chrome DevTools, execução conteinerizada em Docker e testes manuais de ergonomia em dispositivo móvel. As fraquezas mapeadas durante o processo foram registradas como pontos de melhoria e de atenção, que alimentam as [oportunidades de melhoria](./melhorias.md).
 
 ---
 
@@ -73,17 +73,18 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 
 #### Análise das Métricas Componentes
 
-- **M3.1.1 (Cobertura por navegadores declarados):** A execução oficial do comando `browserslist --coverage` na raiz do repositório apontou cobertura de **88,94%** da população global de usuários web. O software suporta navegadores modernos em versões recentes (Chrome, Edge, Firefox, Safari, iOS Safari, Chrome for Android). O percentual situa-se confortavelmente na faixa **Bom (`+`)** (80% a 95%).
+- **M3.1.1 (Cobertura por navegadores declarados):** A execução oficial do comando `browserslist --coverage` na raiz do repositório apontou cobertura de **88,94%** da população global de usuários web. O software suporta navegadores modernos em versões recentes (Chrome, Edge, Firefox, Safari, iOS Safari, Chrome for Android). A regra de produção declarada em `excalidraw-app/package.json` parte de `>0.2%` e `not dead` e exclui de forma explícita navegadores obsoletos, como IE 11 e anteriores, Opera Mini, Safari anterior ao 12, Edge anterior ao 79 e Chrome anterior ao 70. Esse descarte evita polyfills legados no pacote. O percentual situa-se confortavelmente na faixa **Bom (`+`)** (80% a 95%).
 - **M3.1.2 (Proporção de ambientes de integração com sucesso):** A matriz de seis combinações empíricas (React 17, 18 e 19 combinados com Vite e Next.js) alcançou sucesso em **4 das 6 combinações (66,7%)**, resultando em nível **Regular (`o`)**:
-  - No empacotador Vite, todas as três versões do React (17, 18 e 19) compilaram e renderizaram o canvas perfeitamente (cerca de 12 segundos de build), permitindo criar e interagir com elementos gráficos.
-  - No Next.js, apenas a versão React 19 compilou e executou com sucesso, mediante dynamic client-only import.
-  - O React 17 falhou no Next.js devido ao empacotamento com Webpack, pois o pacote `@excalidraw/excalidraw` no commit `e1b7aac` utiliza internamente hooks `useId` e `useDeferredValue` importados diretamente de `react`, que inexistem no React 17.
-  - O React 18 falhou no Next.js durante o pré-render SSR (`react-dom-server`), pois o pacote foi gerado contra o runtime JSX do React 19, gerando símbolos de elementos desconhecidos no motor do React 18 (`Minified React error #31`).
-- **M3.1.3 (Ações de edição por toque e caneta):** A avaliação manual no Apple iPad (A16) registrou **100% de sucesso (10 de 10 ações)** tanto por toque direto com o dedo quanto com a caneta stylus Goojodoq. A aplicação detecta toques com fidelidade, diferencia desenho livre com a caneta e suporta gestos multitoque de pinça (zoom) e deslocamento com dois dedos (pan) de modo ergonômico.
+  - No Vite 5.4.11, as três versões do React (17.0.2, 18.2.0 e 19.0.0) compilaram com código de saída 0 em cerca de 12 segundos. O servidor de pré-visualização respondeu com HTTP 200, o canvas carregou sem exceções não tratadas e foi possível desenhar formas, com validação automatizada via Puppeteer-core.
+  - No Next.js, apenas a versão React 19 (com Next.js 14) compilou e executou com sucesso, no exemplo oficial do monorepo (`examples/with-nextjs`). O build levou 65 s, com importação dinâmica sem SSR (`dynamic(..., { ssr: false })`) e fontes estáticas na pasta pública.
+  - O React 17 falhou no Next.js 12 durante a compilação com Webpack. Embora o `package.json` do `@excalidraw/excalidraw` declare compatibilidade com React 17, 18 e 19, o pacote no commit `e1b7aac` importa os hooks `useId` e `useDeferredValue` diretamente de `react`, e eles inexistem no React 17.
+  - O React 18 falhou no Next.js 14 durante o pré-render SSR (`react-dom-server`), pois o pacote foi gerado contra o runtime JSX do React 19, gerando símbolos de elementos desconhecidos no motor do React 18 (`Minified React error #31`).
+  - A importação direta com `require('@excalidraw/excalidraw')` no Node.js falha com `ReferenceError: document is not defined`. O pacote depende do DOM do navegador, por isso a desativação de SSR é obrigatória em frameworks com renderização no servidor.
+- **M3.1.3 (Ações de edição por toque e caneta):** A avaliação manual no Apple iPad (A16) registrou **100% de sucesso (10 de 10 ações)** tanto por toque direto com o dedo quanto com a caneta stylus Goojodoq. O iPad acessou o contêiner oficial pela rede local. A aplicação detecta toques com fidelidade, diferencia desenho livre com a caneta e suporta gestos multitoque de pinça (zoom) sem travamentos. Com a ferramenta de seleção ativa, o arraste com um dedo é reservado à seleção por caixa, e o deslocamento da tela exige dois dedos. Com a ferramenta Mão, um dedo basta. O uso híbrido, desenhando com a caneta e navegando com os dedos, alterna sem atraso perceptível.
 
 #### Resposta Formal à Questão Q3.1
 
-> **Resposta:** **Sim, de forma satisfatória e com ressalvas conhecidas.** O Excalidraw apresenta excelente suporte a dispositivos táteis e móveis (100% no iPad) e ampla cobertura da base global de navegadores (88,94%). Todavia, a adaptabilidade como componente React em aplicações com renderização híbrida ou SSR (Next.js) requer atenção. Integradores que utilizem React 17 ou React 18 enfrentam incompatibilidades em tempo de compilação ou pré-renderização, demandando a adoção do React 19 ou isolamento completo da biblioteca no lado do cliente (client-only).
+> **Resposta:** **Sim, de forma satisfatória e com ressalvas conhecidas.** O Excalidraw apresenta excelente suporte a dispositivos táteis e móveis (100% no iPad) e ampla cobertura da base global de navegadores (88,94%). Todavia, a adaptabilidade como componente React em aplicações com renderização híbrida ou SSR (Next.js) requer atenção. Integradores que utilizem React 17 ou React 18 enfrentam incompatibilidades em tempo de compilação ou pré-renderização, demandando a adoção do React 19. O isolamento da biblioteca no lado do cliente (`ssr: false`) é necessário pela dependência do DOM, mas não corrige a ausência dos hooks no React 17 nem o runtime JSX do React 19 no React 18.
 > 
 > **Pontuação de Q3.1:** Média de **4,0 pontos** (Nível **Bom `+`**).
 
@@ -101,14 +102,14 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
   - 5.000 elementos: **1,15 s** (Nível `+`).
   - 10.000 elementos: **1,52 s** (Nível `+`).
 
-  O tempo cresce de forma aproximadamente linear com o volume de dados. A cena de 1.000 elementos abriu em apenas 0,11 s, amplamente inferior ao limite cognitivo de Nielsen (1,0 s). A pontuação média da métrica é **4,50 pontos (Nível Bom `+`)**.
+  O tempo cresce de forma aproximadamente linear com o volume de dados. A cena de 1.000 elementos abriu em apenas 0,11 s, amplamente inferior ao limite cognitivo de Nielsen (1,0 s). A cena de 10.000 elementos, um arquivo de 5,2 MB, estabilizou em 1,52 s, abaixo de 2 s. A pontuação média da métrica é **4,50 pontos (Nível Bom `+`)**.
 - **M3.2.2 (Taxa de quadros durante edição contínua):** Medida via Frame Rendering Stats do DevTools durante arrasto de blocos de elementos:
   - 100 elementos: **60 FPS** (100% da meta de 60 FPS, Nível `++`).
-  - 1.000 elementos: **52 FPS** (86,7% da meta, Nível `+`).
+  - 1.000 elementos: **52 FPS** (86,7% da meta, Nível `+`), com oscilação entre 46 e 58 FPS.
   - 5.000 elementos: **20 FPS** (33,3% da meta, Nível `-`).
   - 10.000 elementos: **12 FPS** (20,0% da meta, Nível `-`).
 
-  Em cenas pequenas e médias (até 1.000 elementos), a edição é perfeitamente fluida. Em cenas densas (acima de 5.000 elementos), o redesenho global do canvas HTML5 impõe gargalo de renderização, reduzindo a taxa de quadros e caracterizando um ponto de atenção técnica. Média: **3,25 pontos (Nível Regular `o`)**.
+  Em cenas pequenas e médias (até 1.000 elementos), a edição é perfeitamente fluida. Em cenas densas (acima de 5.000 elementos), o redesenho global do canvas HTML5 impõe gargalo de renderização, reduzindo a taxa de quadros e caracterizando um ponto de atenção técnica. Mesmo nessas cenas, não houve congelamento da aba, travamento do processo ou fechamento do navegador. Média: **3,25 pontos (Nível Regular `o`)**.
 - **M3.2.3 (Tamanho máximo de cena salva e exportada):** Todas as 4 escalas foram submetidas ao teste de estresse de persistência (`.excalidraw`) e exportação (PNG e SVG). A cena máxima de **10.000 elementos** foi salva em **0,80 s**, exportada em PNG em **1,20 s** e em SVG em **0,70 s**, todas muito abaixo do limite crítico de 30 s e do limiar interativo de 2 s. Nível: **Excelente (`++`, 5,00 pontos)**.
 
 #### Resposta Formal à Questão Q3.2
@@ -126,8 +127,8 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 #### Análise das Métricas Componentes
 
 - **M3.3.1 (Proporção de operações de pacote bem-sucedidas):** Avaliação de 9 operações cruzando 3 gerenciadores (`npm`, `yarn` e `pnpm`) nas etapas de instalação inicial, upgrade e desinstalação a partir do tarball local gerado no monorepo (`@excalidraw/excalidraw-0.18.0.tgz`). Segundo a tabela de resultados, a instalação e a atualização a partir do tarball falharam nos três gerenciadores, porque o pacote depende de `@excalidraw/common@0.18.0`, subpacote interno não publicado no registro (erro `ETARGET`). Apenas as três remoções foram concluídas. Com 3 operações bem-sucedidas em 9 avaliadas (**33,3%**), a métrica atinge o nível **Ruim (`-`, 2,00 pontos)** e refuta a hipótese H3.3.1.
-- **M3.3.2 (Proporção de passos documentados reproduzidos sem ajuste):** Dos 7 passos descritos na documentação oficial de compilação e execução local, **6 passos foram reproduzidos estritamente sem ajuste (85,7%)**, classificando a métrica no nível **Bom (`+`, 4,00 pontos)**. O único ajuste necessário ocorreu no Passo 6 (`docker-compose up`), que falhou com código de saída 127 (command not found) em sistemas operacionais recentes devido à sintaxe de hífen legada (`docker-compose` em vez de `docker compose`).
-- **M3.3.3 (Implantação com Docker):** Todas as 4 etapas de verificação (construção da imagem multi-stage Nginx, inicialização do contêiner, aprovação do healthcheck interno com `wget -q -O - http://localhost:80/` e carregamento do editor no navegador) foram validadas com sucesso sem nenhuma intervenção manual. Nível: **Excelente (`++`, 5,00 pontos)**.
+- **M3.3.2 (Proporção de passos documentados reproduzidos sem ajuste):** Dos 7 passos descritos na documentação oficial de compilação e execução local, **6 passos foram reproduzidos estritamente sem ajuste (85,7%)**, classificando a métrica no nível **Bom (`+`, 4,00 pontos)**. Na via nativa, `yarn` instalou as dependências e configurou os githooks do Husky com código 0 em 346 s, e `yarn start` inicializou o Vite em **1,09 s**, respondendo com HTTP 200. O único ajuste ocorreu no Passo 6: o guia `development.mdx` documenta `docker-compose up --build -d`, com a sintaxe de hífen legada. Com o Docker Compose v2, que é um plugin do Docker e não instala o binário `docker-compose`, o comando falhou com código de saída 127 (command not found) e precisou ser trocado por `docker compose up`.
+- **M3.3.3 (Implantação com Docker):** Todas as 4 etapas de verificação (construção da imagem multi-stage Nginx, inicialização do contêiner, aprovação do healthcheck interno com `wget -q -O - http://localhost:80/` e carregamento do editor no navegador) foram validadas com sucesso sem nenhuma intervenção manual. O servidor Nginx interno torna a execução independente das configurações do hospedeiro, o que atende ao requisito [RQ-FLEX-09](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). Nível: **Excelente (`++`, 5,00 pontos)**.
 
 #### Resposta Formal à Questão Q3.3
 
@@ -144,8 +145,8 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 #### Análise das Métricas Componentes
 
 - **M3.4.1 (Formatos de exportação abertos disponíveis):** O Excalidraw disponibiliza nativamente **3 formatos abertos padronizados**: `.excalidraw` (JSON estruturado), `PNG` (raster aberto conforme W3C e ISO/IEC 15948) e `SVG` (vetorial escalável W3C), todos com suporte opcional à incorporação dos metadados da cena. A presença de 3 formatos confere o nível **Bom (`+`, 4,00 pontos)**.
-- **M3.4.2 (Proporção de elementos preservados na reimportação):** A verificação automatizada via script `compara_elementos.py` sobre os 10 tipos de elementos gráficos da `cena_referencia.excalidraw` demonstrou **100,00% de preservação** em todos os formatos testados (.excalidraw, PNG embutido e SVG embutido). Não houve qualquer perda de atributos geométricos, cores, texto ou estilos, conferindo nível **Excelente (`++`, 5,00 pontos)**.
-- **M3.4.3 (Proporção dos campos do formato documentados):** A auditoria das 52 propriedades presentes na cena real contra a especificação técnica oficial (`dev-docs/docs/codebase/json-schema.mdx`) revelou que apenas **14 propriedades estão documentadas (26,9%)**, enquanto **38 propriedades essenciais são omitidas**, tais como `roundness`, `roughness`, `boundElements`, `frameId`, `link`, `locked` e `updated`. A métrica obteve nível **Ruim (`-`, 2,00 pontos)** e revelou a ausência de um arquivo formal JSON Schema (`schema.json`) no repositório.
+- **M3.4.2 (Proporção de elementos preservados na reimportação):** A verificação automatizada via script `compara_elementos.py` sobre os 10 tipos de elementos gráficos da `cena_referencia.excalidraw` demonstrou **100,00% de preservação** em todos os formatos testados (.excalidraw, PNG embutido e SVG embutido). O mecanismo que embute os metadados da cena no PNG e no SVG preservou tipos, coordenadas (`x`, `y`, `width`, `height`), estilos (`strokeColor`, `backgroundColor`, `fillStyle`, `strokeWidth`) e textos sem desvio, conferindo nível **Excelente (`++`, 5,00 pontos)**.
+- **M3.4.3 (Proporção dos campos do formato documentados):** A auditoria das 52 propriedades presentes na cena real contra a especificação técnica oficial (`dev-docs/docs/codebase/json-schema.mdx`) revelou que apenas **14 propriedades estão documentadas (26,9%)**, enquanto **38 propriedades essenciais são omitidas**, tais como `strokeColor`, `roundness`, `roughness`, `fontSize`, `opacity`, `boundElements`, `frameId`, `isDeleted`, `link`, `locked` e `updated`. O exemplo da documentação resume as propriedades dos elementos com o comentário `/* ...other element properties */`. A métrica obteve nível **Ruim (`-`, 2,00 pontos)** e revelou a ausência de um arquivo formal JSON Schema (`schema.json`) no repositório, o que fragiliza o requisito [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade).
 
 #### Resposta Formal à Questão Q3.4
 
@@ -204,7 +205,7 @@ Pelos [critérios de julgamento da Fase 02](../fase-02/pontuacao-julgamento.md#7
 
 ---
 
-## 6. Diagnóstico de Fraquezas e Proposta de Ação de Melhoria
+## 6. Pontos de Melhoria e de Atenção
 
 Pela [regra de pontos de melhoria da Fase 02](../fase-02/pontuacao-julgamento.md#73-pontos-de-melhoria), toda métrica no nível `-` ou `--` é registrada como ponto de melhoria. Os itens 1 e 2 são esses pontos. Os itens 3 a 5 estão no nível `o` ou acima e foram registrados como pontos de atenção:
 
@@ -214,14 +215,7 @@ Pela [regra de pontos de melhoria da Fase 02](../fase-02/pontuacao-julgamento.md
 4. **M3.2.2 (Queda de Taxa de Quadros em Cenas Densas):** Desempenho cai para 20 FPS (5.000 elementos) e 12 FPS (10.000 elementos), atingindo pontuação 3,25 (Nível Regular `o`).
 5. **M3.3.2 (Instruções com Utilitários Legados):** Menção ao comando `docker-compose` em vez do comando `docker compose`.
 
-### Seleção da Ação de Melhoria: Issue #118 e #119
-
-A lacuna revelada por **M3.4.3** foi selecionada como objeto direto da intervenção corretiva, materializada na [Issue #118](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/118):
-- **Diagnóstico:** O Excalidraw armazena 52 propriedades no formato `.excalidraw`, mas apenas 14 constam na documentação textual (`json-schema.mdx`). Não existe no repositório nenhum arquivo JSON Schema (`schema.json`) automatizado que possa ser validado por ferramentas externas ou IDEs.
-- **Intervenção Proposta:**
-  1. Criação de um esquema formal JSON Schema Draft 07 (`packages/excalidraw/schema/excalidraw.schema.json`) contemplando a totalidade das 52 propriedades reais de cena e elementos.
-  2. Implementação de script de validação automática nos testes de CI/CD para assegurar que novos campos adicionados ao TypeScript atualizem o esquema.
-  3. Atualização integral da documentação em `dev-docs/docs/codebase/json-schema.mdx`, elevando a cobertura de M3.4.3 de 26,9% para 100,0% e eliminando a principal fragilidade de interoperabilidade do projeto.
+As ações propostas para esses pontos, com a priorização entre G1 e G3, estão nas [oportunidades de melhoria](./melhorias.md).
 
 ---
 
@@ -271,3 +265,5 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 11/11/2026 | Elaboração do relatório consolidado de resultados e julgamento do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.1` | 11/11/2026 | Correção do ambiente registrado, do texto de M3.3.1 e da apresentação da agregação e do julgamento, conforme a revisão da PR. | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| `1.2` | 15/11/2026 | Fusão com a página Insights e Descobertas de G3, com os detalhes técnicos levados à análise de cada questão, e troca da seleção da ação por um link para as oportunidades de melhoria. | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| `1.3` | 17/11/2026 | Correção da resposta de Q3.1, que tratava o isolamento no cliente como alternativa às falhas de hooks e de runtime JSX, conforme a revisão do PR. | [Christopher Paraizo](https://github.com/wChrstphr) | |

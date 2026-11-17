@@ -1,0 +1,173 @@
+metrica,item,medida,valor,unidade
+M1.1.1,common e math,par em ciclo,1,par
+M1.1.1,element e excalidraw,par em ciclo,1,par
+M1.1.1,element e utils,par em ciclo,1,par
+M1.1.1,excalidraw e utils,par em ciclo,1,par
+M1.1.1,,pares em ciclo,4,pares
+M1.1.2,packages/utils/src/index.ts -> packages/excalidraw/scene/export.ts,importação que viola a direção,1,importação
+M1.1.2,,importações que violam a direção,1,importações
+M1.1.2,,importações de valor entre pacotes diferentes,528,importações
+M1.1.3,common,Ca,5,pacotes
+M1.1.3,common,Ce,1,pacotes
+M1.1.3,common,I,0.1667,adimensional
+M1.1.3,element,Ca,3,pacotes
+M1.1.3,element,Ce,5,pacotes
+M1.1.3,element,I,0.625,adimensional
+M1.1.3,excalidraw,Ca,2,pacotes
+M1.1.3,excalidraw,Ce,5,pacotes
+M1.1.3,excalidraw,I,0.7143,adimensional
+M1.1.3,fractional-indexing,Ca,1,pacotes
+M1.1.3,fractional-indexing,Ce,0,pacotes
+M1.1.3,fractional-indexing,I,0.0,adimensional
+M1.1.3,laser-pointer,Ca,2,pacotes
+M1.1.3,laser-pointer,Ce,0,pacotes
+M1.1.3,laser-pointer,I,0.0,adimensional
+M1.1.3,math,Ca,5,pacotes
+M1.1.3,math,Ce,1,pacotes
+M1.1.3,math,I,0.1667,adimensional
+M1.1.3,utils,Ca,2,pacotes
+M1.1.3,utils,Ce,4,pacotes
+M1.1.3,utils,I,0.6667,adimensional
+M1.1.3,excalidraw-app,Ca,0,pacotes
+M1.1.3,excalidraw-app,Ce,4,pacotes
+M1.1.3,excalidraw-app,I,1.0,adimensional
+M1.1.3,element -> utils,dependência que contraria o princípio,1,dependência
+M1.1.3,utils -> excalidraw,dependência que contraria o princípio,1,dependência
+M1.1.3,,dependências entre pacotes,20,dependências
+M1.2.1,common,arquivos com dependência direta,4,arquivos
+M1.2.1,common,arquivos só com dependência transitiva,9,arquivos
+M1.2.1,common,arquivos de produção,19,arquivos
+M1.2.1,common,proporção,68.42,%
+M1.2.1,element,arquivos com dependência direta,5,arquivos
+M1.2.1,element,arquivos só com dependência transitiva,45,arquivos
+M1.2.1,element,arquivos de produção,54,arquivos
+M1.2.1,element,proporção,92.59,%
+M1.2.1,fractional-indexing,arquivos com dependência direta,0,arquivos
+M1.2.1,fractional-indexing,arquivos só com dependência transitiva,0,arquivos
+M1.2.1,fractional-indexing,arquivos de produção,1,arquivos
+M1.2.1,fractional-indexing,proporção,0.0,%
+M1.2.1,laser-pointer,arquivos com dependência direta,0,arquivos
+M1.2.1,laser-pointer,arquivos só com dependência transitiva,0,arquivos
+M1.2.1,laser-pointer,arquivos de produção,4,arquivos
+M1.2.1,laser-pointer,proporção,0.0,%
+M1.2.1,math,arquivos com dependência direta,0,arquivos
+M1.2.1,math,arquivos só com dependência transitiva,2,arquivos
+M1.2.1,math,arquivos de produção,16,arquivos
+M1.2.1,math,proporção,12.5,%
+M1.2.1,utils,arquivos com dependência direta,0,arquivos
+M1.2.1,utils,arquivos só com dependência transitiva,2,arquivos
+M1.2.1,utils,arquivos de produção,3,arquivos
+M1.2.1,utils,proporção,66.67,%
+M1.2.2,,propriedades documentadas,30,propriedades
+M1.2.2,,propriedades,52,propriedades
+M1.3.1,common,linhas em risco baixo,96.21,%
+M1.3.1,common,linhas em risco moderado,3.79,%
+M1.3.1,common,linhas em risco alto,0.0,%
+M1.3.1,common,linhas em risco muito_alto,0.0,%
+M1.3.1,element,linhas em risco baixo,56.05,%
+M1.3.1,element,linhas em risco moderado,18.26,%
+M1.3.1,element,linhas em risco alto,19.65,%
+M1.3.1,element,linhas em risco muito_alto,6.04,%
+M1.3.1,excalidraw,linhas em risco baixo,69.82,%
+M1.3.1,excalidraw,linhas em risco moderado,12.05,%
+M1.3.1,excalidraw,linhas em risco alto,10.35,%
+M1.3.1,excalidraw,linhas em risco muito_alto,7.77,%
+M1.3.1,fractional-indexing,linhas em risco baixo,60.73,%
+M1.3.1,fractional-indexing,linhas em risco moderado,39.27,%
+M1.3.1,fractional-indexing,linhas em risco alto,0.0,%
+M1.3.1,fractional-indexing,linhas em risco muito_alto,0.0,%
+M1.3.1,laser-pointer,linhas em risco baixo,46.88,%
+M1.3.1,laser-pointer,linhas em risco moderado,0.0,%
+M1.3.1,laser-pointer,linhas em risco alto,53.12,%
+M1.3.1,laser-pointer,linhas em risco muito_alto,0.0,%
+M1.3.1,math,linhas em risco baixo,100.0,%
+M1.3.1,math,linhas em risco moderado,0.0,%
+M1.3.1,math,linhas em risco alto,0.0,%
+M1.3.1,math,linhas em risco muito_alto,0.0,%
+M1.3.1,utils,linhas em risco baixo,100.0,%
+M1.3.1,utils,linhas em risco moderado,0.0,%
+M1.3.1,utils,linhas em risco alto,0.0,%
+M1.3.1,utils,linhas em risco muito_alto,0.0,%
+M1.3.1,excalidraw-app,linhas em risco baixo,85.48,%
+M1.3.1,excalidraw-app,linhas em risco moderado,11.82,%
+M1.3.1,excalidraw-app,linhas em risco alto,2.71,%
+M1.3.1,excalidraw-app,linhas em risco muito_alto,0.0,%
+M1.3.1,total,linhas em risco baixo,67.61,%
+M1.3.1,total,linhas em risco moderado,13.46,%
+M1.3.1,total,linhas em risco alto,12.39,%
+M1.3.1,total,linhas em risco muito_alto,6.54,%
+M1.3.1,total,funções em risco baixo,95.05,%
+M1.3.1,total,funções em risco moderado,3.21,%
+M1.3.1,total,funções em risco alto,1.42,%
+M1.3.1,total,funções em risco muito_alto,0.32,%
+M1.3.1,total,funções analisadas,5864,funções
+M1.3.1,packages/excalidraw/components/App.tsx,linhas em risco alto ou muito alto,3668,linhas
+M1.3.1,packages/element/src/binding.ts,linhas em risco alto ou muito alto,1052,linhas
+M1.3.1,packages/element/src/elbowArrow.ts,linhas em risco alto ou muito alto,1007,linhas
+M1.3.1,packages/element/src/linearElementEditor.ts,linhas em risco alto ou muito alto,844,linhas
+M1.3.1,packages/excalidraw/renderer/interactiveScene.ts,linhas em risco alto ou muito alto,744,linhas
+M1.3.1,packages/excalidraw/components/App.selectionTool.ts,linhas em risco alto ou muito alto,641,linhas
+M1.3.1,packages/excalidraw/renderer/staticSvgScene.ts,linhas em risco alto ou muito alto,602,linhas
+M1.3.1,packages/element/src/resizeElements.ts,linhas em risco alto ou muito alto,502,linhas
+M1.3.1,packages/element/src/transform.ts,linhas em risco alto ou muito alto,487,linhas
+M1.3.1,packages/element/src/renderElement.ts,linhas em risco alto ou muito alto,458,linhas
+M1.3.2,guia de contribuição,presente,sim,
+M1.3.2,preparação do ambiente,presente,sim,
+M1.3.2,convenções de código,presente,sim,
+M1.3.2,arquitetura ou organização do código,presente,não,
+M1.3.3,lint,presente,sim,
+M1.3.3,formatação,presente,sim,
+M1.3.3,verificação de tipos,presente,sim,
+M1.4.1,,pull requests incluídos,146,pull requests
+M1.4.1,,pull requests excluídos,4,pull requests
+M1.4.1,,média de arquivos de produção,5.9,arquivos
+M1.4.1,,máximo de arquivos de produção,60,arquivos
+M1.4.2,common,arquivos extensos,1,arquivos
+M1.4.2,element,arquivos extensos,9,arquivos
+M1.4.2,excalidraw,arquivos extensos,10,arquivos
+M1.4.2,fractional-indexing,arquivos extensos,0,arquivos
+M1.4.2,laser-pointer,arquivos extensos,0,arquivos
+M1.4.2,math,arquivos extensos,0,arquivos
+M1.4.2,utils,arquivos extensos,0,arquivos
+M1.4.2,excalidraw-app,arquivos extensos,1,arquivos
+M1.4.2,packages/excalidraw/components/App.tsx,linhas de código,9563,linhas
+M1.4.2,packages/excalidraw/subset/woff2/woff2-bindings.ts,linhas de código,4012,linhas
+M1.4.2,packages/element/src/binding.ts,linhas de código,2738,linhas
+M1.4.2,packages/element/src/linearElementEditor.ts,linhas de código,2477,linhas
+M1.4.2,packages/excalidraw/components/icons.tsx,linhas de código,2309,linhas
+M1.4.2,packages/excalidraw/actions/actionProperties.tsx,linhas de código,2081,linhas
+M1.4.2,packages/element/src/elbowArrow.ts,linhas de código,1961,linhas
+M1.4.2,packages/excalidraw/renderer/interactiveScene.ts,linhas de código,1869,linhas
+M1.4.2,packages/element/src/delta.ts,linhas de código,1650,linhas
+M1.4.2,packages/element/src/resizeElements.ts,linhas de código,1406,linhas
+M1.4.2,packages/element/src/bucketFill.ts,linhas de código,1317,linhas
+M1.4.2,packages/element/src/bounds.ts,linhas de código,1314,linhas
+M1.4.2,packages/excalidraw/fonts/Xiaolai/index.ts,linhas de código,1293,linhas
+M1.4.2,packages/excalidraw/components/App.selectionTool.ts,linhas de código,1236,linhas
+M1.4.2,packages/excalidraw/snapping.ts,linhas de código,1192,linhas
+M1.4.2,excalidraw-app/App.tsx,linhas de código,1177,linhas
+M1.4.2,packages/excalidraw/data/restore.ts,linhas de código,1165,linhas
+M1.4.2,packages/element/src/renderElement.ts,linhas de código,1115,linhas
+M1.4.2,packages/element/src/shape.ts,linhas de código,1095,linhas
+M1.4.2,packages/excalidraw/wysiwyg/textWysiwyg.tsx,linhas de código,1029,linhas
+M1.4.2,packages/common/src/utils.ts,linhas de código,1009,linhas
+M1.4.2,total,arquivos de produção,498,arquivos
+M1.4.3,,pull requests que alteram arquivo extenso,96,pull requests
+M1.4.3,,pull requests incluídos,146,pull requests
+M1.5.1,common,cobertura de linhas,84.99,%
+M1.5.1,element,cobertura de linhas,84.62,%
+M1.5.1,excalidraw,cobertura de linhas,75.17,%
+M1.5.1,fractional-indexing,cobertura de linhas,92.24,%
+M1.5.1,laser-pointer,cobertura de linhas,72.3,%
+M1.5.1,math,cobertura de linhas,92.72,%
+M1.5.1,utils,cobertura de linhas,76.43,%
+M1.5.1,excalidraw-app,cobertura de linhas,43.48,%
+M1.5.2,unitário,suítes,62,suítes
+M1.5.2,unitário,proporção,43.36,%
+M1.5.2,integração,suítes,81,suítes
+M1.5.2,integração,proporção,56.64,%
+M1.5.2,ponta a ponta,suítes,0,suítes
+M1.5.2,ponta a ponta,proporção,0.0,%
+M1.5.3,,pull requests verificados,113,pull requests
+M1.5.3,,pull requests com evidência,114,pull requests
+M1.5.3,,pull requests sem evidência,32,pull requests
