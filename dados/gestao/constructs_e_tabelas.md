@@ -49,7 +49,7 @@
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
 | Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 60.5 | R$ 2160.00 | R$ 2722.50 | 137.5% | 7.62 |
-| Fase 4 | 25 / 14 | 56.0% | 48.0% | 81.0 | 50.2 | R$ 3645.00 | R$ 2261.25 | 94.8% | 11.59 |
+| Fase 4 | 27 / 15 | 55.6% | 51.9% | 92.0 | 52.8 | R$ 4140.00 | R$ 2373.75 | 97.7% | 11.78 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 26 | 65.5 | 40.0 | R$ 1797.75 | 150 | 24 | **17.04%** |
-| Davi Pierre | `@DaviPierre` | 13 | 37.0 | 37.0 | R$ 1665.00 | 13 | 6 | **15.78%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 17 | 48.5 | 55.5 | R$ 2497.50 | 69 | 16 | **23.67%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 30.5 | 27.9 | R$ 1255.95 | 16 | 11 | **11.90%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 14 | 31.0 | 30.4 | R$ 1368.00 | 36 | 14 | **12.97%** |
-| Maria Eduarda | `@eduarda-ogomes` | 19 | 46.5 | 43.7 | R$ 1966.50 | 64 | 13 | **18.64%** |
+| Christopher | `@wChrstphr` | 28 | 71.5 | 40.0 | R$ 1797.75 | 150 | 24 | **16.86%** |
+| Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **15.61%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **24.05%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 17 | 31.5 | 27.9 | R$ 1255.95 | 16 | 11 | **11.78%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 31.4 | R$ 1413.00 | 37 | 15 | **13.25%** |
+| Maria Eduarda | `@eduarda-ogomes` | 20 | 47.5 | 43.7 | R$ 1966.50 | 65 | 13 | **18.44%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 26 & 65.5h & 40.0h & 150/24 & 17.04\% \\
-Davi Pierre & 13 & 37.0h & 37.0h & 13/6 & 15.78\% \\
-Gabriel Monteiro & 17 & 48.5h & 55.5h & 69/16 & 23.67\% \\
-Leticia de Carvalho & 16 & 30.5h & 27.9h & 16/11 & 11.90\% \\
-Luiz Henrique Soares & 14 & 31.0h & 30.4h & 36/14 & 12.97\% \\
-Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 18.64\% \\
+Christopher & 28 & 71.5h & 40.0h & 150/24 & 16.86\% \\
+Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 15.61\% \\
+Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 24.05\% \\
+Leticia de Carvalho & 17 & 31.5h & 27.9h & 16/11 & 11.78\% \\
+Luiz Henrique Soares & 15 & 32.0h & 31.4h & 37/15 & 13.25\% \\
+Maria Eduarda & 20 & 47.5h & 43.7h & 65/13 & 18.44\% \\
 \hline
-\textbf{Total} & \textbf{105} & \textbf{259.0h} & \textbf{234.5h} & \textbf{348/84} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{112} & \textbf{270.0h} & \textbf{237.0h} & \textbf{350/85} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -100,7 +100,7 @@ Maria Eduarda & 19 & 46.5h & 43.7h & 64/13 & 18.64\% \\
 | Fase 1 | 28/09/2026 00:00 | 08/10/2026 11:59 | 18/10/2026 23:59 | 18 / 18 | 0.0 | 13 | 5 | 27.8 | - | sim |
 | Fase 2 | 18/10/2026 23:59 | 22/10/2026 23:59 | 26/10/2026 23:59 | 29 / 29 | 55.2 | 8 | 5 | 44.8 | - | nao |
 | Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 23 / 23 | 0.0 | 7 | 14 | 8.7 | - | sim |
-| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 14 / 25 | 8.0 | 0 | 0 | 8.0 | #122 #127 #128 #130 | sim |
+| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 15 / 27 | 7.4 | 0 | 0 | 11.1 | #122 #127 #128 #130 #183 | sim |
 
 ### Acerto das estimativas por issue
 
@@ -111,7 +111,7 @@ Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio en
 | Fase 1 | 18 | -0.8 | 0.0 | 50.0 | 4 | 5 |
 | Fase 2 | 26 | -8.2 | -11.65 | 61.5 | 3 | 7 |
 | Fase 3 | 20 | 37.5 | 16.65 | 45.0 | 10 | 1 |
-| Fase 4 | 15 | -5.2 | 0.0 | 40.0 | 3 | 6 |
+| Fase 4 | 16 | -2.3 | 0.0 | 43.8 | 3 | 6 |
 
 ### Tempo de espera dos PRs por revisao
 
@@ -122,8 +122,8 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 1 | 17 | 17 | 8 | 47.1 | 9 | 13.68 | 10.82 | 22.28 | 40.59 | 1 |
 | Fase 2 | 29 | 27 | 13 | 48.1 | 16 | 3.66 | 0.4 | 7.53 | 7.57 | 1 |
 | Fase 3 | 23 | 23 | 15 | 65.2 | 8 | 24.17 | 20.88 | 45.9 | 61.74 | 5 |
-| Fase 4 | 15 | 15 | 5 | 33.3 | 9 | 6.62 | 1.27 | 18.32 | 18.55 | 0 |
-| Total | 84 | 82 | 41 | 50.0 | 42 | 13.31 | 5.2 | 23.5 | 40.59 | 7 |
+| Fase 4 | 16 | 16 | 6 | 37.5 | 9 | 6.85 | 1.84 | 18.32 | 18.55 | 0 |
+| Total | 85 | 83 | 42 | 50.6 | 42 | 13.2 | 7.53 | 23.5 | 40.59 | 7 |
 
 ### Quem revisou
 
@@ -138,11 +138,11 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 3 | wChrstphr | 7 | 46.7 |
 | Fase 3 | eduarda-ogomes | 7 | 46.7 |
 | Fase 3 | luizh-gsoares | 1 | 6.7 |
-| Fase 4 | wChrstphr | 6 | 85.7 |
-| Fase 4 | eduarda-ogomes | 1 | 14.3 |
-| Total | wChrstphr | 18 | 41.9 |
-| Total | eduarda-ogomes | 14 | 32.6 |
-| Total | luizh-gsoares | 10 | 23.3 |
+| Fase 4 | wChrstphr | 6 | 75.0 |
+| Fase 4 | eduarda-ogomes | 2 | 25.0 |
+| Total | wChrstphr | 18 | 40.9 |
+| Total | eduarda-ogomes | 15 | 34.1 |
+| Total | luizh-gsoares | 10 | 22.7 |
 | Total | GabrielSMonteiro | 1 | 2.3 |
 
 ### Autor por revisor
@@ -169,7 +169,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 3 | wChrstphr | luizh-gsoares | 1 |
 | Fase 4 | GabrielSMonteiro | wChrstphr | 2 |
 | Fase 4 | eduarda-ogomes | wChrstphr | 1 |
-| Fase 4 | luizh-gsoares | eduarda-ogomes | 1 |
+| Fase 4 | luizh-gsoares | eduarda-ogomes | 2 |
 | Fase 4 | luizh-gsoares | wChrstphr | 3 |
 | Total | DaviPierre | eduarda-ogomes | 1 |
 | Total | DaviPierre | wChrstphr | 2 |
@@ -179,7 +179,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Total | LeticiaSantosss | wChrstphr | 2 |
 | Total | eduarda-ogomes | luizh-gsoares | 3 |
 | Total | eduarda-ogomes | wChrstphr | 3 |
-| Total | luizh-gsoares | eduarda-ogomes | 1 |
+| Total | luizh-gsoares | eduarda-ogomes | 2 |
 | Total | luizh-gsoares | wChrstphr | 6 |
 | Total | wChrstphr | eduarda-ogomes | 7 |
 | Total | wChrstphr | luizh-gsoares | 7 |
@@ -188,6 +188,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | PR | Fase | Origem da fase | Autor | Situacao | Aberto em | Primeira revisao | Espera (h) | Aprovado | Revisores |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| #182 | Fase 4 | issue #129 | luizh-gsoares | integrado | 17/11/2026 12:34 | 17/11/2026 20:49 | 8.24 | sim | eduarda-ogomes |
 | #180 | Fase 4 | issue #115 | luizh-gsoares | integrado | 17/11/2026 11:53 | 17/11/2026 12:07 | 0.23 | sim | wChrstphr |
 | #179 | Fase 4 | titulo | luizh-gsoares | integrado | 17/11/2026 11:50 | 17/11/2026 11:55 | 0.07 | sim | wChrstphr |
 | #178 | Fase 4 | issue #120 | luizh-gsoares | integrado | 16/11/2026 12:54 | - | - | nao | - |
