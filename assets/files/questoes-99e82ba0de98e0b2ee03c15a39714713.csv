@@ -1,0 +1,6 @@
+questao,subcaracteristica,media,nivel,pontos,metricas_coletadas
+Q1.1,Modularidade,3.3,o,3,3
+Q1.2,Reusabilidade,1.5,--,1,2
+Q1.3,Analisabilidade,3.0,o,3,3
+Q1.4,Modificabilidade,3.0,o,3,3
+Q1.5,Testabilidade,3.7,+,4,3

@@ -1,0 +1,4 @@
+﻿verificacao,presente,fluxo,script
+lint,sim,lint.yml (on: pull_request),"test:code = eslint --max-warnings=0 --ext .js,.ts,.tsx ."
+formatação,sim,lint.yml (on: pull_request),"test:other = prettier --list-different (css, scss, json, md, html, yml) e regra prettier/prettier de @excalidraw/eslint-config dentro de test:code (js, ts, tsx)"
+verificação de tipos,sim,lint.yml (on: pull_request),test:typecheck = tsc
