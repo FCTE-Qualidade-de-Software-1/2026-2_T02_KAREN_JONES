@@ -72,6 +72,19 @@ def pontuar_m212(mediana_dias: float) -> int:
     return 1
 
 
+def pontuar_lista_de_10(aprovados: int) -> int:
+    """Faixas de M2.2.1 e M2.4.3 na Tabela 6: 10, 8 ou 9, 6 ou 7, 2 a 5, 0 ou 1."""
+    if aprovados == 10:
+        return 5
+    if aprovados >= 8:
+        return 4
+    if aprovados >= 6:
+        return 3
+    if aprovados >= 2:
+        return 2
+    return 1
+
+
 def pontuar_m222(total_externos: int, indispensaveis: int) -> int:
     if indispensaveis >= 2:
         return 1
@@ -106,7 +119,7 @@ def calcular_metricas() -> list[dict[str, object]]:
     funcoes = ler_csv(BRUTOS / "Q2.2-disponibilidade/M2.2.1_funcoes.csv")
     funcoes_ok = [r for r in funcoes if r.get("resultado") == "aprovado"]
     m221_val = round(len(funcoes_ok) / len(funcoes) * 100.0, 1)
-    m221_pts = 5 if len(funcoes_ok) == 10 else (4 if len(funcoes_ok) >= 8 else 3)
+    m221_pts = pontuar_lista_de_10(len(funcoes_ok))
 
     # M2.2.2
     dominios = ler_csv(BRUTOS / "Q2.2-disponibilidade/M2.2.2_dominios.csv")
@@ -145,7 +158,7 @@ def calcular_metricas() -> list[dict[str, object]]:
     acoes = ler_csv(BRUTOS / "Q2.4-recuperabilidade/M2.4.3_acoes.csv")
     acoes_ok = [r for r in acoes if r.get("resultado") == "aprovado"]
     m243_val = round(len(acoes_ok) / len(acoes) * 100.0, 1)
-    m243_pts = 5 if len(acoes_ok) == 10 else (4 if len(acoes_ok) >= 8 else (3 if len(acoes_ok) >= 6 else 2))
+    m243_pts = pontuar_lista_de_10(len(acoes_ok))
 
     return [
         {
