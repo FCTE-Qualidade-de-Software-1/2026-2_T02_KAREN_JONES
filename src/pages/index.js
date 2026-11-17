@@ -24,8 +24,13 @@ const docSections = [
   },
   {
     title: 'Fase 03: Projeto da Avaliação',
-    description: 'Método, instruções para os avaliadores, recursos, massa de dados, cronograma e plano de análise.',
+    description: 'Método, instruções do avaliador por objetivo GQM, recursos, massa de dados, cronograma e plano de análise.',
     link: '/docs/fase-03/visao-geral',
+  },
+  {
+    title: 'Fase 04: Execução da Avaliação',
+    description: 'Medições, análise dos resultados, julgamento da qualidade e oportunidades de melhoria.',
+    link: '/docs/category/fase-04-executar-a-avaliação',
     badge: 'Fase atual',
   },
   {

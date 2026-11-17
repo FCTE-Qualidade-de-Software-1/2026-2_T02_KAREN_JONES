@@ -169,6 +169,9 @@ A lista de verificação de cada métrica está em `consolidados/G1_verificacao.
 | `consolidados/metricas.csv` | Valores pontuados das métricas no formato do plano de análise. Contém as 14 métricas de G1. |
 | `consolidados/G1_detalhes.csv` | Valores das fichas de G1 por pacote, por faixa e por nível, com as contagens usadas nos percentuais. |
 | `consolidados/G1_verificacao.csv` | Lista de verificação das 14 métricas de G1. |
+| `consolidados/niveis.csv` | Valor pontuado, faixa, nível e pontos de cada métrica. Contém as 14 métricas de G1. |
+| `consolidados/questoes.csv` | Média, nível e número de métricas coletadas de cada questão. Contém Q1.1 a Q1.5. |
+| `consolidados/caracteristicas.csv` | Média, nível e julgamento de cada característica, com o motivo. Contém G1. |
 | `consolidados/G3_metricas_consolidadas.csv` | Tabela consolidada com as 12 métricas de G3, incluindo valores medidos, unidades, escala de 1 a 5, nível na régua, hipóteses formuladas, status e apontamento para os arquivos brutos. |
 | `consolidados/G3_questoes_pontuacao.csv` | Resumo executivo das 4 questões GQM (Q3.1 Adaptabilidade, Q3.2 Escalabilidade, Q3.3 Instalabilidade, Q3.4 Substituibilidade) e da pontuação global do objetivo G3 (3,90 estrelas, Nível Bom). |
 
@@ -184,3 +187,4 @@ A lista de verificação de cada métrica está em `consolidados/G1_verificacao.
 | 1.3 | 11/11/2026 | Inclusão do catálogo de dados brutos e consolidados coletados para o objetivo G3 (Flexibilidade) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.4 | 11/11/2026 | Registro dos desvios da coleta de G3 em relação ao plano | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 15/11/2026 | Verificação e cálculo das métricas de G1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 15/11/2026 | Inclusão dos arquivos da análise de G1 no catálogo de consolidados | [Christopher Paraizo](https://github.com/wChrstphr) | |
