@@ -9,7 +9,7 @@ description: Reunião de abertura do projeto, organização dos subgrupos e defi
 | :--- | :--- |
 | **Data e horário** | 14/10/2026, 14:00-16:00 hrs |
 | **Local** | Presencial - Sala S6 UAC - FCTE/UnB |
-| **Fase** | Fase 01 — Requisitos de Avaliação |
+| **Fase** | Fase 01: Requisitos de Avaliação |
 | **Redator(a)** | Gabriel Monteiro |
 | **Gravação** | Disponibilizada internamente no repositório com consentimento unânime |
 

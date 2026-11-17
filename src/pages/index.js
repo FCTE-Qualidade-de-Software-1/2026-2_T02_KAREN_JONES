@@ -67,7 +67,7 @@ export default function Home() {
   return (
     <Layout
       title="Início"
-      description="Documentação de Qualidade de Software do Excalidraw — Grupo Karen Jones, FCTE/UnB"
+      description="Documentação de Qualidade de Software do Excalidraw: Grupo Karen Jones, FCTE/UnB"
     >
       <header className="hero-section">
         <div className="hero-inner">
