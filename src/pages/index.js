@@ -24,7 +24,7 @@ const docSections = [
   },
   {
     title: 'Fase 03: Projeto da Avaliação',
-    description: 'Método, instruções do avaliador por objetivo GQM, recursos, cronograma e plano de análise.',
+    description: 'Método, instruções do avaliador por objetivo GQM, recursos, massa de dados, cronograma e plano de análise.',
     link: '/docs/fase-03/visao-geral',
   },
   {

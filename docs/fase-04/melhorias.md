@@ -53,7 +53,7 @@ A [análise de G3](./resultados-g3-flexibilidade.md#6-pontos-de-melhoria-e-de-at
 | Métrica | Valor e nível | Caminho apontado na análise de G3 | Tamanho |
 | :--- | :--- | :--- | :--- |
 | [M3.3.2](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) | 85,7% `+` | Trocar `docker-compose up --build -d` por `docker compose up --build -d` no guia `development.mdx`. Com isso, M3.3.2 chega a 100% `++` e Q3.3 a média 4,0 | Pequeno: uma linha de documentação, ainda presente no ramo principal em 15/11/2026 |
-| [M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso) | 66,7% `o` | Adotar o React 19 ou isolar a biblioteca no cliente (`ssr: false`) no Next.js com React 17 e 18 | Grande: muda o build do pacote ou as versões de React aceitas |
+| [M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso) | 66,7% `o` | Alinhar o pacote às versões de React que ele declara aceitar, 17, 18 e 19: deixar de importar `useId` e `useDeferredValue`, ausentes no React 17, e de gerar o JSX só para o runtime do React 19, ou declarar apenas o React 19. Desativar o SSR (`ssr: false`) trata só a dependência do DOM e não corrige essas falhas | Grande: muda o build do pacote ou as versões de React aceitas |
 | [M3.2.2](../fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | 52 FPS `o` | Particionamento espacial ou virtualização da área visível para cenas acima de 5.000 elementos | Grande: muda o motor de renderização |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
@@ -113,3 +113,4 @@ Ela não é a primeira proposta por dois motivos. G3 já atende, e a mudança co
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/11/2026 | Criação da proposta de oportunidades de G1 e G3, dos pontos de atenção de G3 levantados por Maria Eduarda, da ação proposta, do critério de sucesso e da avaliação do tamanho | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 17/11/2026 | Correção da proposta para M3.1.2, que tratava a desativação do SSR como alternativa às falhas de hooks e de runtime JSX, conforme a revisão do PR | [Christopher Paraizo](https://github.com/wChrstphr) | |

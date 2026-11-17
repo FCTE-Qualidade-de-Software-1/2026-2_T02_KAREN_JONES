@@ -84,7 +84,7 @@ A tabela abaixo sintetiza os valores empíricos medidos para as doze métricas d
 
 #### Resposta Formal à Questão Q3.1
 
-> **Resposta:** **Sim, de forma satisfatória e com ressalvas conhecidas.** O Excalidraw apresenta excelente suporte a dispositivos táteis e móveis (100% no iPad) e ampla cobertura da base global de navegadores (88,94%). Todavia, a adaptabilidade como componente React em aplicações com renderização híbrida ou SSR (Next.js) requer atenção. Integradores que utilizem React 17 ou React 18 enfrentam incompatibilidades em tempo de compilação ou pré-renderização, demandando a adoção do React 19 ou isolamento completo da biblioteca no lado do cliente (client-only).
+> **Resposta:** **Sim, de forma satisfatória e com ressalvas conhecidas.** O Excalidraw apresenta excelente suporte a dispositivos táteis e móveis (100% no iPad) e ampla cobertura da base global de navegadores (88,94%). Todavia, a adaptabilidade como componente React em aplicações com renderização híbrida ou SSR (Next.js) requer atenção. Integradores que utilizem React 17 ou React 18 enfrentam incompatibilidades em tempo de compilação ou pré-renderização, demandando a adoção do React 19. O isolamento da biblioteca no lado do cliente (`ssr: false`) é necessário pela dependência do DOM, mas não corrige a ausência dos hooks no React 17 nem o runtime JSX do React 19 no React 18.
 > 
 > **Pontuação de Q3.1:** Média de **4,0 pontos** (Nível **Bom `+`**).
 
@@ -266,3 +266,4 @@ Todos os arquivos que sustentam este relatório estão disponíveis no repositó
 | `1.0` | 11/11/2026 | Elaboração do relatório consolidado de resultados e julgamento do objetivo G3 (Flexibilidade). | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | `1.1` | 11/11/2026 | Correção do ambiente registrado, do texto de M3.3.1 e da apresentação da agregação e do julgamento, conforme a revisão da PR. | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | `1.2` | 15/11/2026 | Fusão com a página Insights e Descobertas de G3, com os detalhes técnicos levados à análise de cada questão, e troca da seleção da ação por um link para as oportunidades de melhoria. | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| `1.3` | 17/11/2026 | Correção da resposta de Q3.1, que tratava o isolamento no cliente como alternativa às falhas de hooks e de runtime JSX, conforme a revisão do PR. | [Christopher Paraizo](https://github.com/wChrstphr) | |

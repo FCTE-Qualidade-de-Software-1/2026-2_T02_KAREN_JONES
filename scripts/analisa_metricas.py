@@ -206,6 +206,16 @@ def graficos(questoes, por_metrica):
     plt.close(fig)
 
     # Barra empilhada do perfil de risco de M1.3.1.
+    destino = IMG / "G1_M1.3.1_perfil-risco.png"
+    if any(l["status"] != "coletada" for l in por_metrica["M1.3.1"]):
+        # Substitui a imagem anterior, para a página não mostrar um perfil desatualizado.
+        fig, ax = plt.subplots(figsize=(8, 1.8))
+        ax.axis("off")
+        ax.text(0.5, 0.5, "M1.3.1 não coletada: perfil de risco indisponível",
+                ha="center", va="center", fontsize=11)
+        fig.savefig(destino, dpi=150, metadata=metadados, bbox_inches="tight")
+        plt.close(fig)
+        return
     v = {l["item"]: float(l["valor"]) for l in por_metrica["M1.3.1"]}
     partes = [("baixo (1 a 10)", 100 - v["moderado"] - v["alto"] - v["muito_alto"], "#DDDDDD", ""),
               ("moderado (11 a 20)", v["moderado"], "#8DA0CB", "//"),
@@ -233,7 +243,7 @@ def graficos(questoes, por_metrica):
     ax.set_title(titulo.replace(".", ","), fontsize=10, loc="left")
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.45), ncol=2, frameon=False, fontsize=9)
     ax.spines[["top", "right", "left"]].set_visible(False)
-    fig.savefig(IMG / "G1_M1.3.1_perfil-risco.png", dpi=150, metadata=metadados, bbox_inches="tight")
+    fig.savefig(destino, dpi=150, metadata=metadados, bbox_inches="tight")
     plt.close(fig)
 
 
