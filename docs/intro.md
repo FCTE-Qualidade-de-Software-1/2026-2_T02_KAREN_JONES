@@ -8,13 +8,13 @@ description: "Contexto do projeto de avaliação de qualidade do Excalidraw: Gru
 
 Este projeto é desenvolvido no âmbito da disciplina de **Qualidade de Software 1** da **FCTE, Universidade de Brasília (UnB)**, pelo **Grupo Karen Jones** no segundo semestre de 2026.
 
-O objetivo é conduzir uma avaliação de qualidade do software open source [Excalidraw](https://excalidraw.com/), usando como referência as normas da família **ISO/IEC 25000 (SQuaRE)**. Não se trata de um uso superficial da norma: a ideia é percorrer o processo de avaliação da ISO/IEC 25040 de verdade, desde a definição dos requisitos até a execução e interpretação dos resultados.
+O objetivo é conduzir uma avaliação de qualidade do software open source [Excalidraw](https://excalidraw.com/), usando como referência as normas da família **ISO/IEC 25000 (SQuaRE)**. A equipe percorre o processo da ISO/IEC 25040, dos requisitos à interpretação dos resultados.
 
 ---
 
 ## O que é o Excalidraw
 
-O Excalidraw é uma ferramenta de quadro branco virtual voltada para diagramação rápida e colaboração. Ele roda no navegador, tem suporte a edição em tempo real entre múltiplos usuários e gera desenhos no estilo de esboço à mão, o que o diferencia de ferramentas como draw.io ou Miro.
+O Excalidraw é uma ferramenta de quadro branco virtual voltada para diagramação rápida e colaboração. Ele roda no navegador, tem suporte a edição em tempo real entre múltiplos usuários e gera desenhos no estilo de esboço à mão.
 
 O repositório é público, a licença é MIT e o projeto é mantido por uma comunidade ativa no GitHub. Isso nos deu acesso a tudo o que precisamos para fazer uma avaliação baseada no código e nos artefatos reais do projeto.
 
@@ -26,11 +26,10 @@ O repositório é público, a licença é MIT e o projeto é mantido por uma com
 
 ## Por que escolhemos o Excalidraw
 
-Três razões principais guiaram a escolha:
+Duas razões principais guiaram a escolha:
 
 - **Código acessível e bem documentado:** o repositório público, com histórico de commits, issues e pull requests, nos permite ir além da superfície e olhar para o que realmente está acontecendo no desenvolvimento.
 - **Diversidade de contextos de uso:** o Excalidraw é ao mesmo tempo uma aplicação web para usuários finais e uma biblioteca npm para desenvolvedores que querem embedar o editor em outras aplicações. Isso cria perspectivas de avaliação bastante diferentes.
-- **Conexão com a disciplina:** as características que escolhemos avaliar: Manutenibilidade, Confiabilidade e Flexibilidade, aparecem de forma natural no projeto e nos permitem exercitar os conceitos da norma com situações reais.
 
 ---
 
@@ -44,7 +43,7 @@ Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos gr
 | :--- | :--- |
 | **Manutenibilidade** | A organização do código, a clareza dos módulos, a facilidade de fazer mudanças sem introduzir problemas e a cobertura de testes. |
 | **Confiabilidade** | O comportamento da aplicação em situações de falha ou perda de conexão, o salvamento automático e as verificações do processo de desenvolvimento que evitam falhas. |
-| **Flexibilidade** | O funcionamento em diferentes navegadores e dispositivos, a facilidade de instalar a biblioteca e as opções de exportação dos dados. |
+| **Flexibilidade** | O funcionamento em diferentes navegadores e dispositivos, a facilidade de instalar a biblioteca, as opções de exportação dos dados e a Escalabilidade com desenhos grandes. |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
@@ -59,6 +58,8 @@ O trabalho segue as quatro fases do processo de avaliação definido pela norma 
 - **Fase 03: [Projetar a avaliação](./fase-03/visao-geral.md):** planejar o método de avaliação, as instruções para os avaliadores, os recursos necessários, a massa de dados e o cronograma. **Em andamento.**
 - **Fase 04: Executar a avaliação:** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias.
 
+A divisão em subgrupos e a governança do trabalho no GitHub estão descritas na [metodologia da equipe](./gestao/metodologia-equipe.md).
+
 ---
 
 ## Integrantes (Grupo Karen Jones)
@@ -67,7 +68,7 @@ O trabalho segue as quatro fases do processo de avaliação definido pela norma 
 
 | Nome | GitHub |
 | :--- | :--- |
-| Christopher | [@wChrstphr](https://github.com/wChrstphr) |
+| Christopher Paraizo | [@wChrstphr](https://github.com/wChrstphr) |
 | Davi Pierre | [@DaviPierre](https://github.com/DaviPierre) |
 | Gabriel Monteiro | [@GabrielSMonteiro](https://github.com/GabrielSMonteiro) |
 | Letícia de Carvalho | [@LeticiaSantosss](https://github.com/LeticiaSantosss) |
@@ -88,5 +89,6 @@ O trabalho segue as quatro fases do processo de avaliação definido pela norma 
 | 1.1 | 19/10/2026 | Atualização da estrutura com a indicação da Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.2 | 10/11/2026 | Revisão e alinhamento da terminologia da ISO/IEC 25010:2023 | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.3 | 14/11/2026 | Indicação da Fase 02 como concluída e da Fase 03 como fase atual com link para visão geral | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: introdução direta, Escalabilidade em Flexibilidade e link para a metodologia da equipe | [Christopher Paraizo](https://github.com/wChrstphr) | |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>

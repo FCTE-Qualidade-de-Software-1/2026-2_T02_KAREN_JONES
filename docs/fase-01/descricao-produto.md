@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Identificar o produto avaliado é uma das atividades da fase de estabelecer os requisitos da avaliação [[1, p. 4]](#ref-1). Esta página descreve o Excalidraw, sua organização em pacotes, suas interfaces externas e as restrições que limitam o que pode ser medido, para que o [escopo](./escopo-avaliacao.md) e os [requisitos](./requisitos-avaliacao.md) partam de uma visão concreta do produto.
+Identificar o produto avaliado é uma das atividades da fase de estabelecer os requisitos da avaliação [[1, p. 4]](#ref-1). A descrição cobre o Excalidraw, sua organização em pacotes, suas interfaces externas e as restrições que limitam o que pode ser medido, para que o [escopo](./escopo-avaliacao.md) e os [requisitos](./requisitos-avaliacao.md) partam de uma visão concreta do produto.
 
 ## Metodologia
 
@@ -18,17 +18,16 @@ A descrição responde às perguntas de caracterização do produto apresentadas
 
 ---
 
-## 1. Caracterização e Classificação do Produto
+## 1. Caracterização do Produto
 
 O **Excalidraw** é um editor de desenho e diagramação que roda no navegador, com traço que imita esboços feitos à mão. A mesma base de código entrega dois produtos:
 
 1. **Aplicação web e PWA (*Progressive Web App*):** editor para esboços, diagramas e notas visuais, com colaboração em tempo real criptografada de ponta a ponta e funcionamento sem conexão.
 2. **Biblioteca React (`@excalidraw/excalidraw`):** pacote publicado no npm que permite a terceiros incorporar o editor em suas próprias aplicações React.
 
-<p className="tabela-titulo">Tabela 1: Caracterização do Excalidraw</p>
+Licença, repositório, stack e versão avaliada estão na [identificação do produto](./tipo-produto.md#1-identificação-e-versão-analisada). "SPA" (aplicação de página única) e "PWA" descrevem a arquitetura da aplicação web: uma única página carregada no navegador, que atualiza a interface sem recarregar e, depois do primeiro acesso, funciona sem conexão. Não são categorias de tipo de software. A classificação do produto segundo Pressman e a IEEE 1062 está em [tipo de produto](./tipo-produto.md#2-classificação-segundo-pressman).
 
-| Dimensão Técnica | Especificação no Projeto |
-| :--- | :--- |
+--- | :--- |
 | **Nome do Produto** | Excalidraw |
 | **Classificação de Software** | Aplicação web de página única (SPA) e PWA, e biblioteca de componentes React ([tipo de produto](./tipo-produto.md)) |
 | **Linguagem Principal** | TypeScript |
@@ -44,9 +43,9 @@ O **Excalidraw** é um editor de desenho e diagramação que roda no navegador, 
 
 ## 2. Estrutura de Módulos e Pacotes do Monorepo
 
-O monorepo declara três grupos de workspaces: `excalidraw-app`, `packages/*` e `examples/*`. A Tabela 2 resume a responsabilidade de cada parte. Os pacotes de matemática e utilitários são pensados para uso fora do editor, e a [Fase 02](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) verifica se de fato não dependem de React nem do navegador.
+O monorepo declara três grupos de workspaces: `excalidraw-app`, `packages/*` e `examples/*`. A Tabela 1 resume a responsabilidade de cada parte. Os pacotes de matemática e utilitários são pensados para uso fora do editor, e a [Fase 02](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) verifica se de fato não dependem de React nem do navegador.
 
-<p className="tabela-titulo">Tabela 2: Módulos do monorepo e responsabilidades</p>
+<p className="tabela-titulo">Tabela 1: Módulos do monorepo e responsabilidades</p>
 
 | Diretório/componente | Responsabilidade observável | Interfaces ou evidência |
 | :--- | :--- | :--- |
@@ -100,26 +99,29 @@ A arquitetura impõe restrições que a avaliação precisa considerar:
 
 ## 6. Implicações Arquiteturais para a Avaliação de Qualidade
 
-A Tabela 3 separa, para cada subcaracterística do [modelo de qualidade](./modelo-de-qualidade.md), o que é viável medir e o que fica fora do escopo. As métricas finais de cada subcaracterística estão nas páginas de [G1](../fase-02/gqm-manutenibilidade.md), [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md) da Fase 02.
+A Tabela 2 separa, para cada subcaracterística do [modelo de qualidade](./modelo-de-qualidade.md), o que é viável medir e o que fica fora do escopo. As métricas finais de cada subcaracterística estão nas páginas de [G1](../fase-02/gqm-manutenibilidade.md), [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md) da Fase 02.
 
-<p className="tabela-titulo">Tabela 3: Implicações da arquitetura para a avaliação</p>
+<p className="tabela-titulo">Tabela 2: Implicações da arquitetura para a avaliação</p>
 
-| Subcaracterística | O que é viável medir (dentro do escopo) | O que NÃO é viável medir (fora do escopo) | Decisão Metodológica da Equipe |
-| :--- | :--- | :--- | :--- |
-| **Modularidade** | Dependências estáticas entre pacotes (`excalidraw-app` $\rightarrow$ `packages/`), acoplamento eferente/aferente e ciclos via ferramentas de análise de grafos de dependência. | Impacto em tempo de execução de carregamento dinâmico de pacotes em redes corporativas com proxy restrito. | Medição via análise estática do monorepo e verificação de regras de importação do ESLint. |
-| **Reusabilidade** | Isolamento do pacote `@excalidraw/excalidraw`, ausência de referências a módulos privados do app e volume de exports públicos documentados. | Validação em todos os empacotadores legados existentes no mercado (Webpack 4, Rollup antigo, Parcel 1). | Avaliação focada na compatibilidade declarada no `package.json` e nos testes de build com Vite/Next.js. |
-| **Analisabilidade** | Complexidade ciclomática, linhas de código por módulo, aderência a convenções TypeScript e cobertura de documentação técnica. | Compreensibilidade subjetiva por desenvolvedores novatos sem histórico no projeto. | Coleta com ESLint, o compilador TypeScript e cloc. |
-| **Modificabilidade** | Número de arquivos alterados por contribuição e arquivos extensos no código. | Custo real das alterações, em horas, para a equipe do projeto. | Histórico de pull requests pela API do GitHub e contagem de linhas com cloc. |
-| **Testabilidade** | Razão de arquivos de teste para arquivos de produção, isolamento de testes unitários com Vitest e presença de testes nos fluxos de CI. | Execução de testes manuais em hardware proprietário heterogêneo de clientes corporativos. | Verificação do acervo automatizado de testes em `packages/` e `excalidraw-app/` e dos workflows do GitHub Actions. |
-| **Ausência de falhas** | Histórico de issues fechadas, frequência de releases, cobertura de lint e checagem de tipos estáticos pré-merge. | Taxa de falhas observada em milhões de usuários reais em produção (telemetria privada da empresa Excalidraw). | Uso de dados públicos do repositório GitHub como proxy auditável da ausência de falhas. |
-| **Disponibilidade** | Presença e corretude da configuração de Service Worker, manifesto PWA e capacidade do editor de operar sem resposta de rede externa. | Medição contínua de SLA/uptime dos servidores oficiais de infraestrutura em nuvem de excalidraw.com. | Inspeção estática das rotinas de cache offline e teste controlado em ambiente simulado sem rede. |
-| **Tolerância a Falhas** | Tratamento de exceções em parsing de arquivos JSON inválidos, corrupção de dados no IndexedDB e isolamento do Canvas caso o WebSocket caia. | Estresse distribuído contra a infraestrutura de rede externa com injeção de pacotes maliciosos. | Inspeção dos blocos de captura de erro (`try/catch`), error boundaries de React e testes de regressão de importação. |
-| **Recuperabilidade** | Lógica de autosave contínuo no armazenamento local do navegador e idempotência dos mecanismos de undo/redo. | Recuperação de falhas catastróficas de disco físico ou corrupção de hardware no cliente. | Análise estática do ciclo de salvamento e verificação funcional das rotinas de serialização de estado. |
-| **Adaptabilidade e Escalabilidade** | Compatibilidade de viewport responsivo no código, regras CSS flexíveis e tratamento do volume de elementos no canvas. | Teste de carga extrema com dezenas de milhares de elementos simultâneos em dispositivos embarcados de baixíssimo custo. | Avaliação baseada nos limites arquiteturais declarados e testes unitários de escala de cena. |
-| **Instalabilidade** | Aderência aos padrões npm, integridade de dependências (`package.json`), documentação de pré-requisitos e presença de Dockerfile funcional. | Compatibilidade de instalação em sistemas operacionais não homologados (ex.: BSD puro). | Teste automatizado do script de build do pacote e validação da imagem Docker disponibilizada. |
-| **Substituibilidade** | Formatos de exportação, documentação do formato `.excalidraw` e conteúdo preservado ao exportar e reimportar. | Migração para todos os editores de diagramas concorrentes. | Exportação e reimportação de uma cena de referência em ambiente de teste. |
+| Subcaracterística | O que é viável medir (dentro do escopo) | O que fica fora do escopo |
+| :--- | :--- | :--- |
+| **Modularidade** | Dependências entre `excalidraw-app/` e os pacotes de `packages/`, acoplamento entre pacotes e ciclos de importação. | Código interno das bibliotecas de terceiros. |
+| **Reusabilidade** | Isolamento dos pacotes publicados, ausência de importações da aplicação e exports públicos documentados. | Uso da biblioteca em aplicações de terceiros além dos exemplos do repositório. |
+| **Analisabilidade** | Tamanho e complexidade do código, verificações de lint e tipagem e documentação técnica. | Percepção de legibilidade por desenvolvedores, que exigiria um estudo com pessoas. |
+| **Modificabilidade** | Número de arquivos alterados por contribuição e arquivos extensos no código. | Custo real das alterações, em horas, para a equipe do projeto. |
+| **Testabilidade** | Razão entre arquivos de teste e de produção, testes automatizados e sua execução na CI. | Testes manuais em dispositivos físicos variados. |
+| **Ausência de falhas** | Verificações antes da integração (tipos, lint, testes e revisão) e registro e tratamento de defeitos no histórico público. | Taxa de falhas observada pelos usuários em produção, que exigiria telemetria privada. |
+| **Disponibilidade** | Funcionamento sem conexão após o primeiro carregamento (Service Worker e manifesto PWA) e independência do editor local em relação a recursos remotos. | Disponibilidade dos servidores de excalidraw.com e indicadores de SLA. |
+| **Tolerância a Falhas** | Tratamento de arquivos inválidos ou corrompidos e continuidade do editor local quando a rede ou a sessão colaborativa falham. | Falhas da infraestrutura de produção e do servidor de colaboração implantado. |
+| **Recuperabilidade** | Restauração do último estado ao reabrir a aplicação, abertura de arquivos salvos e de versões anteriores, desfazer e refazer. | Recuperação de dados guardados nos servidores de produção. |
+| **Adaptabilidade** | Navegadores e APIs declarados, integração da biblioteca em ambientes React e empacotadores e uso com toque e caneta. | Todas as combinações de navegadores e dispositivos. |
+| **Escalabilidade** | Abertura, edição, salvamento e exportação de desenhos com número crescente de elementos, em ensaios locais. | Usuários simultâneos e latência dos serviços em produção. |
+| **Instalabilidade** | Instalação, atualização e remoção da biblioteca pelo npm, build e implantação da aplicação, inclusive com Docker, e documentação dos pré-requisitos. | Ambientes e sistemas operacionais além dos usados nos ensaios. |
+| **Substituibilidade** | Formatos de exportação, documentação do formato `.excalidraw` e conteúdo preservado ao exportar e reimportar. | Migração para todos os editores de diagramas concorrentes. |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
+
+As exclusões gerais e o que cada uma impede de concluir estão nas [exclusões do escopo](./escopo-avaliacao.md#4-o-que-está-fora-do-escopo-e-por-quê).
 
 ---
 
@@ -148,3 +150,5 @@ A arquitetura descrita aqui fundamenta os [requisitos de avaliação](./requisit
 | 1.0 | 18/10/2026 | Criação da descrição estruturada do produto, mapeamento de módulos, diagrama de contexto e análise de implicações para avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 20/10/2026 | Diagrama de contexto e arquitetura redesenhado no Excalidraw e publicado em PNG, com o arquivo editável | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 10/11/2026 | Introdução e Metodologia, versão avaliada corrigida para o commit `e1b7aac` (biblioteca 0.18.0), pacotes e interfaces conferidos no repositório, linhas de Modificabilidade e Substituibilidade na tabela de implicações, tabela de módulos trazida do tipo de produto, subcaracterística Ausência de falhas adotada, tabelas e figura com título e fonte, requisitos com links, referências numeradas e retirada da citação ao critério da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: tabela de caracterização trocada por link ao tipo de produto, SPA e PWA explicados como arquitetura, coluna de decisão metodológica e exemplos sem fonte retirados das implicações, Adaptabilidade e Escalabilidade separadas e tabelas renumeradas | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Os Objetivos de Desenvolvimento Sustentável (ODS) fazem parte da Agenda 2030 da ONU, aprovada em 2015. São 17 objetivos globais, cada um com metas específicas, que tratam de temas como pobreza, educação, inovação, desigualdade e meio ambiente [[1]](#ref-1). Esta página indica os ODS pertinentes ao Excalidraw e mostra como as características avaliadas se relacionam com eles.
+Os Objetivos de Desenvolvimento Sustentável (ODS) fazem parte da Agenda 2030 da ONU, aprovada em 2015. São 17 objetivos globais, cada um com metas específicas, que tratam de temas como pobreza, educação, inovação, desigualdade e meio ambiente [[1]](#ref-1). O objetivo é indicar os ODS pertinentes ao Excalidraw e relacioná-los às características avaliadas.
 
 ## Metodologia
 
@@ -28,7 +28,7 @@ A Tabela 1 resume os três ODS selecionados.
 |---|---|---|
 | 4 | Educação de Qualidade | Ferramenta gratuita usada em contextos educacionais |
 | 9 | Indústria, Inovação e Infraestrutura | Software livre que promove inovação e acesso a tecnologia |
-| 10 | Redução das Desigualdades | Ferramenta acessível que reduz barreiras de acesso |
+| 10 | Redução das Desigualdades | Ferramenta gratuita e sem instalação, que reduz barreiras financeiras de acesso. Acessibilidade para pessoas com deficiência fica [fora do escopo](./escopo-avaliacao.md#4-o-que-está-fora-do-escopo-e-por-quê) |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
@@ -49,7 +49,7 @@ A funcionalidade de colaboração em tempo real também facilita dinâmicas de s
 | Meta | Descrição | Relação com a avaliação |
 |---|---|---|
 | 4.3 | Assegurar igualdade de acesso para todos à educação técnica, profissional e superior de qualidade, a custos acessíveis | O Excalidraw é gratuito e acessível via navegador, eliminando custos de licença para estudantes e instituições. A avaliação de Flexibilidade (Instalabilidade e Adaptabilidade) verifica se o software funciona em diferentes ambientes e dispositivos, o que afeta diretamente esse acesso. |
-| 4.4 | Aumentar o número de jovens e adultos com competências técnicas e profissionais relevantes | Ferramentas de diagramação como o Excalidraw apoiam o desenvolvimento de habilidades de modelagem, design e comunicação visual. A avaliação de Confiabilidade garante que o uso em contextos educacionais seja estável e sem perda de trabalho. |
+| 4.4 | Aumentar o número de jovens e adultos com competências técnicas e profissionais relevantes | Ferramentas de diagramação como o Excalidraw apoiam o desenvolvimento de habilidades de modelagem, design e comunicação visual. A avaliação de Confiabilidade verifica se o uso em contextos educacionais é estável e sem perda de trabalho. |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
@@ -95,12 +95,12 @@ A capacidade de exportar dados em formatos abertos (.excalidraw, PNG, SVG) tamb�
 
 | Meta | Descrição | Relação com a avaliação |
 |---|---|---|
-| 10.2 | Até 2030, empoderar e promover a inclusão social, econômica e política de todos, independentemente de condição | Ferramentas acessíveis e gratuitas promovem a inclusão digital. A avaliação de Flexibilidade (Adaptabilidade) verifica se o Excalidraw funciona em dispositivos mais simples, telas pequenas e com entrada por toque, o que importa para o acesso de quem não tem equipamentos sofisticados. |
+| 10.2 | Até 2030, empoderar e promover a inclusão social, econômica e política de todos, independentemente de condição | Ferramentas gratuitas e de baixo custo de acesso promovem a inclusão digital. A avaliação de Flexibilidade (Adaptabilidade) verifica se o Excalidraw funciona em dispositivos mais simples, telas pequenas e com entrada por toque, o que importa para o acesso de quem não tem equipamentos sofisticados. |
 | 10.3 | Garantir igualdade de oportunidades e reduzir desigualdades de resultados | A avaliação de Flexibilidade (Substituibilidade) analisa se os formatos de exportação do Excalidraw são abertos e documentados, evitando que os dados dos usuários fiquem presos na ferramenta. |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-**Indicador proposto pela equipe:** acessibilidade da ferramenta em diferentes contextos socioeconômicos. A avaliação de Flexibilidade, ao verificar adaptabilidade a dispositivos variados e formatos abertos de exportação, contribui para entender se o Excalidraw de fato atende a públicos diversos.
+**Indicador proposto pela equipe:** facilidade de acesso à ferramenta em diferentes contextos socioeconômicos. A avaliação de Flexibilidade, ao verificar adaptabilidade a dispositivos variados e formatos abertos de exportação, contribui para entender se o Excalidraw de fato atende a públicos diversos.
 
 ## 5. Relação entre os ODS e as características avaliadas
 
@@ -112,7 +112,7 @@ A Tabela 5 resume como cada ODS se conecta às três características avaliadas.
 |---|---|---|---|
 | 4 (Educação) | Código bem organizado facilita contribuições de desenvolvedores que queiram adaptar o Excalidraw para contextos educacionais | Estabilidade e recuperação de dados são essenciais para uso em sala de aula | Funcionamento em navegadores diversos, dispositivos móveis e ambientes com restrições garante o acesso |
 | 9 (Inovação) | Modularidade e testabilidade determinam a viabilidade de contribuição e inovação pela comunidade | A ausência de falhas, sustentada pelo processo de desenvolvimento, reforça a confiança da comunidade no projeto | Instalabilidade e adaptabilidade permitem que organizações hospedem e customizem suas instâncias |
-| 10 (Desigualdades) | Analisabilidade e documentação baixam a barreira de entrada para novos contribuidores, inclusive de países em desenvolvimento | Disponibilidade offline é relevante para contextos com conectividade limitada | Exportação em formatos abertos e suporte a dispositivos variados garantem acesso sem restrições |
+| 10 (Desigualdades) | Analisabilidade e documentação baixam a barreira de entrada para novos contribuidores | Disponibilidade offline é relevante para contextos com conectividade limitada | Exportação em formatos abertos e suporte a dispositivos variados garantem acesso sem restrições |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
@@ -130,3 +130,4 @@ A Tabela 5 resume como cada ODS se conecta às três características avaliadas.
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação do documento de ODS relacionados à avaliação do Excalidraw | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 10/11/2026 | Introdução e Metodologia, retirada da citação ao critério da disciplina, retirada da meta 4.a, que trata de instalações físicas de ensino, indicadores identificados como propostos pela equipe, subcaracterística Ausência de falhas adotada, tabelas com título e fonte e referência à ONU numerada | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: verbos da avaliação, sentido de "gratuita" separado de acessibilidade e afirmação sem fonte removida | [Christopher Paraizo](https://github.com/wChrstphr) | |

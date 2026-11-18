@@ -20,7 +20,7 @@ A fase segue as três atividades que a aula atribui a ela: estabelecer o propós
 
 ## Documentos desta fase
 
-A Tabela 1 segue a ordem de leitura: do propósito e do produto aos interessados, e destes às características, ao escopo e aos requisitos.
+A Tabela 1 segue a ordem de leitura: do propósito e do produto aos interessados, e destes às características, aos requisitos que as detalham e ao escopo que os aplica aos objetos avaliados.
 
 <p className="tabela-titulo">Tabela 1: Documentos da Fase 01</p>
 
@@ -32,15 +32,15 @@ A Tabela 1 segue a ordem de leitura: do propósito e do produto aos interessados
 | [Partes interessadas](./interessados.md) | Usuários, desenvolvedores, mantenedores, contribuidores, integradores e equipe avaliadora, com matriz de prioridades |
 | [Priorização das características](./priorizacao-caracteristicas.md) | Ênfase de 1 a 5 e matriz de impacto e risco para escolher as características da ISO/IEC 25010:2023 |
 | [Modelo de qualidade](./modelo-de-qualidade.md) | Manutenibilidade, Confiabilidade e Flexibilidade, com as subcaracterísticas interpretadas para o Excalidraw e as adaptações ao contexto |
-| [Escopo e objetos de avaliação](./escopo-avaliacao.md) | Objetos O1 a O6, profundidade, fronteiras e limites de validade da avaliação |
-| [Requisitos de avaliação](./requisitos-avaliacao.md) | Requisitos RQ-MAN, RQ-CONF e RQ-FLEX por subcaracterística |
+| [Requisitos de avaliação](./requisitos-avaliacao.md) | Requisitos RQ-MAN, RQ-CONF e RQ-FLEX por subcaracterística, escritos como perguntas verificáveis |
+| [Escopo e objetos de avaliação](./escopo-avaliacao.md) | Objetos O1 a O6, profundidade, fronteiras e limites de validade da avaliação, ligados aos requisitos |
 | [ODS e a avaliação](./ods.md) | Relação do produto com os ODS 4, 9 e 10 da Agenda 2030 |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
 ## Relação com as Fases 02 e 03
 
-O propósito e os interessados orientam a priorização e o modelo de qualidade. O tipo de produto e a descrição técnica delimitam o escopo e os requisitos. Na [Fase 02](../fase-02/visao-geral.md), cada característica do modelo vira um [objetivo de medição](../fase-02/estrutura-gqm.md#3-objetivos-de-medição), e os requisitos de cada subcaracterística são reunidos numa questão. Na [Fase 03](../fase-03/visao-geral.md), esses requisitos e objetivos recebem métodos de coleta, instruções operacionais e recursos necessários para execução.
+O propósito e os interessados orientam a priorização e o modelo de qualidade. O tipo de produto e a descrição técnica delimitam os requisitos e o escopo. Na [Fase 02](../fase-02/visao-geral.md), cada característica do modelo vira um [objetivo de medição](../fase-02/estrutura-gqm.md#3-objetivos-de-medição), e os requisitos de cada subcaracterística são reunidos numa questão. Na [Fase 03](../fase-03/visao-geral.md), esses requisitos e objetivos recebem métodos de coleta, instruções operacionais e recursos necessários para execução.
 
 ---
 
@@ -57,7 +57,9 @@ O propósito e os interessados orientam a priorização e o modelo de qualidade.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Estruturação da visão geral da Fase 1 e links de navegação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-| 1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 1.2 | 19/10/2026 | Referência cruzada para a Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
+| 1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.2 | 19/10/2026 | Referência cruzada para a Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.3 | 10/11/2026 | Título sem travessão, Introdução e Metodologia com citações à AULA A07, tabela de documentos com título e fonte e descrições alinhadas ao conteúdo revisado das páginas, relação com a Fase 02 em um parágrafo e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.4 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
+| 1.5 | 18/11/2026 | Revisão de coerência, cross-links e redação: requisitos antes do escopo na tabela de documentos e nas frases de ligação | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 18/11/2026 | Revisão de coerência, cross-links e redação: nome completo de Christopher Paraizo e Letícia de Carvalho no histórico | [Christopher Paraizo](https://github.com/wChrstphr) | |

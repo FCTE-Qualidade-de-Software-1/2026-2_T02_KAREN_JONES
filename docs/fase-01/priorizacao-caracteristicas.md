@@ -10,11 +10,11 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Na fase de requisitos, o requisitante indica quais aspectos de qualidade pretende avaliar e com que ênfase, numa escala de 1 a 5 [[1, p. 9]](#ref-1). Esta página aplica essa escala às características da ISO/IEC 25010:2023 [[2]](#ref-2) e mostra como a equipe chegou às três características avaliadas, de modo que cada escolha possa ser rastreada até os [interessados](./interessados.md) e os *trade-offs* fiquem explícitos.
+Na fase de requisitos, o requisitante indica quais aspectos de qualidade pretende avaliar e com que ênfase, numa escala de 1 a 5 [[1, p. 9]](#ref-1). A escala aplicada às características da ISO/IEC 25010:2023 [[2]](#ref-2) leva às três características avaliadas, de modo que cada escolha possa ser rastreada até os [interessados](./interessados.md) e os *trade-offs* fiquem explícitos.
 
 ## Metodologia
 
-A priorização tem duas etapas. Na primeira, a equipe, no papel de requisitante, calcula a ênfase de cada característica a partir da classificação dos sete grupos de interessados. Na segunda, a ênfase é usada como impacto e cruzada com o risco de a característica apresentar problemas no Excalidraw, numa matriz de impacto e risco que sustenta a seleção final. A escala de ênfase é a da aula: **1** nenhum interesse, **2** baixo interesse, **3** médio interesse, **4** largo interesse e **5** grande interesse [[1, p. 9]](#ref-1). A Capacidade de Interação (Usabilidade na edição de 2011) fica fora da seleção por orientação da disciplina e por isso não recebe nota.
+A priorização tem duas etapas. Na primeira, a equipe, no papel de requisitante, calcula a ênfase de cada característica a partir da classificação dos sete grupos de interessados. Na segunda, a ênfase é usada como impacto e cruzada com o risco de a característica apresentar problemas no Excalidraw, numa matriz de impacto e risco que sustenta a seleção final. A escala de ênfase é a da aula: **1** nenhum interesse, **2** baixo interesse, **3** médio interesse, **4** largo interesse e **5** grande interesse [[1, p. 9]](#ref-1). A Capacidade de Interação (Usabilidade na edição de 2011) fica fora da seleção e não recebe nota: a especificação do trabalho pede de três a quatro características [[3, p. 1]](#ref-3), e a equipe adotou o limite inferior.
 
 ---
 
@@ -32,7 +32,7 @@ Para cada característica, cada um dos sete grupos de interessados recebe uma cl
 | **Secundário (S)**: relevância indireta | 1 |
 | **Não aplicável (-)**: periférica ou não aplicável | 0 |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 A soma varia de 0 a 14 pontos. A ênfase é obtida por interpolação linear e arredondada segundo a fórmula:
 
@@ -56,7 +56,7 @@ Legenda dos grupos: **UF** (Usuários Finais), **DP** (Desenvolvedores do Projet
 | Segurança de Proteção (*Safety*) | - | - | - | - | - | - | - | 0 | 1 (Nenhum) |
 | Capacidade de Interação | - | - | - | - | - | - | - | - | *Fora da seleção* |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ### Justificativa pelos Interessados
 
@@ -92,7 +92,7 @@ Legenda dos grupos: **UF** (Usuários Finais), **DP** (Desenvolvedores do Projet
 | Compatibilidade | 2 | 2 | 4 | Interoperabilidade focada nos formatos de exportação (.excalidraw, PNG, SVG). |
 | Segurança de Proteção | 1 | 1 | 1 | Não há risco físico associado ao uso da ferramenta. |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ### Matriz de impacto e risco
 
@@ -104,7 +104,7 @@ Legenda dos grupos: **UF** (Usuários Finais), **DP** (Desenvolvedores do Projet
 | **Médio (3)** | Segurança (6) | **Flexibilidade (9)** | **Manutenibilidade (12)** |
 | **Baixo (1 a 2)** | Adequação Funcional (4), Compatibilidade (4), Segurança de Proteção (1) | - | - |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ---
 
@@ -116,11 +116,11 @@ As três características com maior prioridade nas duas etapas foram selecionada
 
 ## Trade-offs
 
-1. **Confiabilidade e Manutenibilidade têm a mesma ênfase (4):** atendem a públicos distintos (usuários finais e quem altera o código). O risco coloca Confiabilidade à frente (16 vs. 12), mas a equipe decidiu avaliar ambas com a mesma profundidade.
-2. **Flexibilidade entra apesar da menor ênfase (3):** atende aos integradores da biblioteca npm e equipes de operação, grupos que as outras duas características atendem pouco.
+1. **Confiabilidade e Manutenibilidade têm a mesma ênfase (4):** atendem a públicos distintos (usuários finais e quem altera o código). O risco coloca Confiabilidade à frente (16 vs. 12), mas a equipe decidiu avaliar ambas com a mesma profundidade, e todos os requisitos de cada uma são medidos.
+2. **Flexibilidade entra apesar da menor ênfase (3):** atende aos integradores da biblioteca npm e equipes de operação, grupos que as outras duas características atendem pouco. Ela é avaliada com a mesma profundidade das outras duas.
 3. **Eficiência de Desempenho fica de fora apesar do risco alto:** o risco estimado é alto (4), mas o impacto é baixo (2). A perda é parcialmente compensada porque o desempenho com múltiplos elementos é avaliado dentro de Escalabilidade.
 4. **Segurança não é avaliada:** sua prioridade (6) é inferior à das três selecionadas, sem ser o foco principal de nenhum grupo.
-5. **Capacidade de Interação fica fora por orientação da disciplina:** é uma limitação reconhecida da avaliação, e conclusões sobre usabilidade não podem ser tiradas deste trabalho.
+5. **Capacidade de Interação fica fora pelo limite de características:** a especificação do trabalho pede de três a quatro características [[3, p. 1]](#ref-3), e a equipe adotou o limite inferior. É uma limitação reconhecida da avaliação, e conclusões sobre usabilidade não podem ser tiradas deste trabalho.
 
 ---
 
@@ -129,6 +129,8 @@ As três características com maior prioridade nas duas etapas foram selecionada
 > <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA A07 QSW1 PROC AVAL PRODUTO**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 9. Disponível no Moodle da disciplina.
 >
 > <Link id="ref-2">2.</Link> ISO/IEC 25010:2023. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model*.
+>
+> <Link id="ref-3">3.</Link> **2026-2 Trabalho final completo v1**. Especificação do trabalho final de Qualidade de Software 1, FCTE/UnB, 2026. Página 1. Disponível no Moodle da disciplina.
 
 ---
 
@@ -136,5 +138,9 @@ As três características com maior prioridade nas duas etapas foram selecionada
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 0.1 | 18/10/2026 | Criação do documento de priorização das características | [Letícia Santos](https://github.com/LeticiaSantosss) | |
-| 1.0 | 10/11/2026 | Introdução e Metodologia, títulos sem travessão, origem das classificações das demais características explicitada, tabelas com título e fonte e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 0.1 | 18/10/2026 | Criação do documento de priorização das características | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | |
+| 1.0 | 10/11/2026 | Introdução e Metodologia, títulos sem travessão, origem das classificações das demais características explicitada, tabelas com título e fonte e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
+| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: decisão de profundidade estendida a Flexibilidade | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: exclusão da Capacidade de Interação justificada pelo limite de três a quatro características da especificação | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: nome de Letícia de Carvalho corrigido nas fontes e no histórico | [Christopher Paraizo](https://github.com/wChrstphr) | |
