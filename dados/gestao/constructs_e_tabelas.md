@@ -49,7 +49,7 @@
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
 | Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 62.5 | R$ 2160.00 | R$ 2812.50 | 135.9% | 7.62 |
-| Fase 4 | 27 / 18 | 66.7% | 55.6% | 92.0 | 63.8 | R$ 4140.00 | R$ 2868.75 | 102.8% | 12.22 |
+| Fase 4 | 27 / 19 | 70.4% | 55.6% | 92.0 | 63.8 | R$ 4140.00 | R$ 2868.75 | 102.8% | 12.34 |
 
 ---
 
@@ -57,11 +57,11 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 28 | 71.5 | 40.0 | R$ 1797.75 | 152 | 24 | **15.98%** |
+| Christopher | `@wChrstphr` | 28 | 71.5 | 40.0 | R$ 1797.75 | 154 | 24 | **15.98%** |
 | Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **14.80%** |
 | Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **22.80%** |
 | Leticia de Carvalho | `@LeticiaSantosss` | 17 | 31.5 | 27.9 | R$ 1255.95 | 16 | 11 | **11.17%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 37 | 16 | **13.16%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 38 | 16 | **13.16%** |
 | Maria Eduarda | `@eduarda-ogomes` | 20 | 47.5 | 55.2 | R$ 2484.00 | 71 | 15 | **22.08%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 28 & 71.5h & 40.0h & 152/24 & 15.98\% \\
+Christopher & 28 & 71.5h & 40.0h & 154/24 & 15.98\% \\
 Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 14.80\% \\
 Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 22.80\% \\
 Leticia de Carvalho & 17 & 31.5h & 27.9h & 16/11 & 11.17\% \\
-Luiz Henrique Soares & 15 & 32.0h & 32.9h & 37/16 & 13.16\% \\
+Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16 & 13.16\% \\
 Maria Eduarda & 20 & 47.5h & 55.2h & 71/15 & 22.08\% \\
 \hline
-\textbf{Total} & \textbf{112} & \textbf{270.0h} & \textbf{250.0h} & \textbf{358/88} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{112} & \textbf{270.0h} & \textbf{250.0h} & \textbf{361/88} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -100,7 +100,7 @@ Maria Eduarda & 20 & 47.5h & 55.2h & 71/15 & 22.08\% \\
 | Fase 1 | 28/09/2026 00:00 | 08/10/2026 11:59 | 18/10/2026 23:59 | 18 / 18 | 0.0 | 13 | 5 | 27.8 | - | sim |
 | Fase 2 | 18/10/2026 23:59 | 22/10/2026 23:59 | 26/10/2026 23:59 | 29 / 29 | 55.2 | 8 | 5 | 44.8 | - | nao |
 | Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 23 / 23 | 0.0 | 7 | 14 | 8.7 | - | sim |
-| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 18 / 27 | 7.4 | 0 | 0 | 22.2 | #127 #128 #130 #183 | sim |
+| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 19 / 27 | 7.4 | 0 | 0 | 25.9 | #127 #128 #130 #183 | sim |
 
 ### Acerto das estimativas por issue
 
@@ -122,8 +122,8 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 1 | 17 | 17 | 8 | 47.1 | 9 | 13.68 | 10.82 | 22.28 | 40.59 | 1 |
 | Fase 2 | 29 | 27 | 13 | 48.1 | 16 | 3.66 | 0.4 | 7.53 | 7.57 | 1 |
 | Fase 3 | 23 | 23 | 15 | 65.2 | 8 | 24.17 | 20.88 | 45.9 | 61.74 | 5 |
-| Fase 4 | 19 | 18 | 8 | 44.4 | 9 | 5.19 | 1.5 | 8.24 | 18.32 | 0 |
-| Total | 88 | 85 | 44 | 51.8 | 42 | 12.42 | 2.75 | 22.28 | 40.59 | 7 |
+| Fase 4 | 19 | 19 | 9 | 47.4 | 9 | 5.19 | 1.5 | 8.24 | 18.32 | 0 |
+| Total | 88 | 86 | 45 | 52.3 | 42 | 12.42 | 2.75 | 22.28 | 40.59 | 7 |
 
 ### Quem revisou
 
@@ -188,7 +188,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | PR | Fase | Origem da fase | Autor | Situacao | Aberto em | Primeira revisao | Espera (h) | Aprovado | Revisores |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| #186 | Fase 4 | issue #125 | luizh-gsoares | aberto | 17/11/2026 23:27 | 17/11/2026 23:33 | 0.11 | sim | wChrstphr |
+| #186 | Fase 4 | issue #125 | luizh-gsoares | integrado | 17/11/2026 23:27 | 17/11/2026 23:33 | 0.11 | sim | wChrstphr |
 | #185 | Fase 4 | issue #124 | eduarda-ogomes | integrado | 17/11/2026 22:26 | 17/11/2026 23:36 | 1.17 | sim | wChrstphr |
 | #184 | Fase 4 | issue #122 | eduarda-ogomes | integrado | 17/11/2026 20:57 | 17/11/2026 23:36 | 2.65 | sim | wChrstphr |
 | #182 | Fase 4 | issue #129 | luizh-gsoares | integrado | 17/11/2026 12:34 | 17/11/2026 20:49 | 8.24 | sim | eduarda-ogomes |
@@ -283,6 +283,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | :--- | :---: | :---: |
 | fechada sem horas reais | #27 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA' fechada sem horas reais registradas |
 | fechada sem horas reais | #74 | '[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1' fechada sem horas reais registradas |
+| fechada sem horas reais | #125 | '[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros' fechada sem horas reais registradas |
 | fechada sem horas reais | #138 | '[GESTAO] Sincronizar o prazo das issues com o GitHub Projects' fechada sem horas reais registradas |
 | fechada sem horas reais | #140 | '[GESTAO] Documentar a priorização e as datas do GitHub Project' fechada sem horas reais registradas |
 | horas divergentes | #121 | total declarado 2.0h difere da soma por integrante 4.0h |

@@ -78,7 +78,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,closed,eduarda-ogomes,2.0,4.0,100.0,subestimada,90.0,180.0,20/11,18/11/2026,Concluida no prazo,14.47
 123,Fase 4,[ARTIGO] Plano de avaliação (Fase 3) no artigo,closed,GabrielSMonteiro,3.0,3.0,0.0,na faixa,135.0,135.0,13/11,16/11/2026,Concluida em atraso,13.05
 124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),closed,eduarda-ogomes,4.0,1.5,-62.5,superestimada,180.0,67.5,19/11,18/11/2026,Concluida no prazo,14.47
-125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",open,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,-,Em andamento (no prazo),
+125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",closed,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,18/11/2026,Concluida no prazo,14.47
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,20/11,-,Em andamento (no prazo),
 127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,open,LeticiaSantosss,2.0,0.0,,,90.0,0.0,20/11,-,Em andamento (no prazo),
 128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,21/11,-,Em andamento (no prazo),
