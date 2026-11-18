@@ -51,12 +51,12 @@ Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos gr
 
 ## Como o projeto está estruturado
 
-O trabalho segue as quatro fases do processo de avaliação definido pela norma ISO/IEC 25040. **Fase atual: Fase 03.**
+O trabalho segue as quatro fases do processo de avaliação definido pela norma ISO/IEC 25040. **Fase atual: Fase 04.**
 
 - **Fase 01: [Estabelecer requisitos de avaliação](./fase-01/visao-geral.md):** definir o propósito, delimitar o escopo, mapear os interessados e escolher o modelo de qualidade. Concluída.
 - **Fase 02: [Especificar a avaliação](./fase-02/visao-geral.md):** definir os objetivos de medição com o método GQM, as métricas e os critérios para pontuar e julgar os resultados. Concluída.
-- **Fase 03: [Projetar a avaliação](./fase-03/visao-geral.md):** planejar o método de avaliação, as instruções para os avaliadores, os recursos necessários, a massa de dados e o cronograma. **Em andamento.**
-- **Fase 04: Executar a avaliação:** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias.
+- **Fase 03: [Projetar a avaliação](./fase-03/visao-geral.md):** planejar o método de avaliação, as instruções para os avaliadores, os recursos necessários, a massa de dados e o cronograma. Concluída.
+- **Fase 04: [Executar a avaliação](./fase-04/visao-geral.md):** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias. **Em andamento.**
 
 A divisão em subgrupos e a governança do trabalho no GitHub estão descritas na [metodologia da equipe](./gestao/metodologia-equipe.md).
 

@@ -30,7 +30,7 @@ const docSections = [
   {
     title: 'Fase 04: Execução da Avaliação',
     description: 'Medições, análise dos resultados, julgamento da qualidade e oportunidades de melhoria.',
-    link: '/docs/category/fase-04-executar-a-avaliação',
+    link: '/docs/fase-04/visao-geral',
     badge: 'Fase atual',
   },
   {

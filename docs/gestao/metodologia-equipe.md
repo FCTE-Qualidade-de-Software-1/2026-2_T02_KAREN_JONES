@@ -35,6 +35,8 @@ Detalhes em [Recursos e ambiente](../fase-03/recursos-ambiente.md) e nas demais 
 
 Materializa a coleta empírica das 36 métricas sobre a linha de base congelada, confrontando os resultados com as hipóteses formuladas. A consolidação adota agregação matemática em duas etapas (média das métricas por questão e média das questões por característica), aplicando os critérios de corte da TÜViT para emissão do diagnóstico final e recomendação de melhorias na Entrega 2 pelo Subgrupo F2/F4.
 
+Detalhes na [visão geral da Fase 4](../fase-04/visao-geral.md).
+
 
 ## Caixa 5: Estrutura da Equipe e Governança no GitHub
 
@@ -49,17 +51,17 @@ Sustentação operacional transversal do projeto. A equipe organizou-se em dois 
 
 O fluxo de trabalho no GitHub é estritamente regido pelo [guia de contribuição](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/CONTRIBUTING.md), vedando envios diretos na branch principal (`main`). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão formal por ao menos um membro do grupo.
 
-O acompanhamento da gestão usa as métricas PSM/CID, com medições, interpretação e decisões registradas nos relatórios da [Fase 3](../gestao/relatorios/relatorio-psm-fase-3.md) e da Fase 4 (a ser publicado).
+O acompanhamento da gestão usa as métricas PSM/CID, com medições, interpretação e decisões registradas no [relatório da Fase 3](../gestao/relatorios/relatorio-psm-fase-3.md).
 
 ## Referências
 
 #### [1] {/* #ref-1 */}
 
-ISO/IEC. *ISO/IEC 25040: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process.*
+ISO/IEC. *ISO/IEC 25040: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process.*
 
 #### [2] {/* #ref-2 */}
 
-BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994.
+BASILI, V. R., CALDIERA, G. e ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994.
 
 ---
 
@@ -67,4 +69,5 @@ BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. I
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 15/11/2026 | Página da metodologia da equipe, adaptada da seção removida do artigo | [Letícia Santos](https://github.com/LeticiaSantosss) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| `1.0` | 15/11/2026 | Página da metodologia da equipe, adaptada da seção removida do artigo | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| `1.1` | 18/11/2026 | Revisão de coerência, cross-links e redação: link da Caixa 4 à visão geral da Fase 4 e relatório PSM citado só na Fase 3, referências sem travessão e ponto e vírgula | [Christopher Paraizo](https://github.com/wChrstphr) | |

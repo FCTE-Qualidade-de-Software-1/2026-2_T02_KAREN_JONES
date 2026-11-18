@@ -85,6 +85,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/docs/fase-04/visao-geral',
+            label: 'Fase 04',
+            position: 'left',
+          },
+          {
             href: 'https://excalidraw.com/',
             label: 'Excalidraw',
             position: 'left',
@@ -122,6 +127,10 @@ const config = {
               {
                 label: 'Fase 03: Projeto',
                 to: '/docs/fase-03/visao-geral',
+              },
+              {
+                label: 'Fase 04: Execução',
+                to: '/docs/fase-04/visao-geral',
               },
             ],
           },
