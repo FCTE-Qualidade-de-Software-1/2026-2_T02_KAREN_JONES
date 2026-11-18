@@ -5,7 +5,7 @@ sidebar_label: Painel de Medição PSM
 sidebar_position: 2
 toc_min_heading_level: 2
 toc_max_heading_level: 3
-description: Painel executivo com indicadores quantitativos, Curva S de execução, participação individual na Entrega 1, métricas de processo e insights da evolução entre as Fases 1 e 2 (PSM/CID).
+description: Painel executivo com indicadores quantitativos, Curva S de execução, recursos e custos das Entregas 1 e 2, métricas de processo e insights da evolução entre as Fases 1 a 4 (PSM/CID).
 ---
 
 import Link from '@docusaurus/Link';
@@ -65,9 +65,11 @@ A **Curva S** compara o avanço temporal do esforço planejado acumulado (basead
 
 ---
 
-## 3. Recursos e Custos: Contribuição Individual na Entrega 1
+## 3. Recursos e Custos: Contribuição Individual por Entrega e no Projeto
 
-A equipe adotou a consolidação por Entrega (**Entrega 1 = Fase 1 + Fase 2**) como unidade principal para monitorar o equilíbrio de carga de trabalho entre os integrantes, em virtude da divisão funcional em dois subgrupos técnicos (**Subgrupo F1/F3** e **Subgrupo F2/F4**).
+A equipe adotou a consolidação por Entrega (**Entrega 1 = Fase 1 + Fase 2** e **Entrega 2 = Fase 3 + Fase 4**) como unidade principal para monitorar o equilíbrio de carga de trabalho entre os integrantes, em virtude da divisão funcional em dois subgrupos técnicos (**Subgrupo F1/F3** e **Subgrupo F2/F4**).
+
+### 3.1. Contribuição Individual na Entrega 1 (Fases 1 e 2)
 
 A tabela abaixo reproduz os dados apurados no [Apêndice B do Artigo](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/artigo/contribuicao-e-ia.md) e no arquivo [`dados/gestao/08_contribuicao_por_entrega.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/08_contribuicao_por_entrega.csv):
 
@@ -93,13 +95,63 @@ A tabela abaixo reproduz os dados apurados no [Apêndice B do Artigo](https://gi
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/08_contribuicao_por_entrega.csv</code>, 2026.</p>
 
+### 3.2. Contribuição Individual na Entrega 2 (Fases 3 e 4)
+
+A consolidação da **Entrega 2 (Fase 3 + Fase 4)** abrange o planejamento experimental da avaliação (Fase 3) e a execução prática com a apuração dos resultados (Fase 4). Os dados a seguir foram extraídos de [`dados/gestao/08_contribuicao_por_entrega.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/08_contribuicao_por_entrega.csv):
+
+<p className="tabela-titulo">Tabela 4: Distribuição de esforço e custo individual na Entrega 2 (Fases 3 e 4)</p>
+
+| Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Esforço Real (%) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Christopher** | `@wChrstphr` | F2/F4 | 13 | 34,50 | 11,55 | R$ 519,75 | **9,15%** |
+| **Davi Pierre** | `@DaviPierre` | F1/F3 | 8 | 18,00 | 16,00 | R$ 720,00 | **12,67%** |
+| **Gabriel Monteiro** | `@GabrielSMonteiro` | F1/F3 | 10 | 22,00 | 28,50 | R$ 1.282,50 | **22,57%** |
+| **Letícia de Carvalho** | `@LeticiaSantosss` | F1/F3 | 10 | 19,50 | 18,00 | R$ 810,00 | **14,26%** |
+| **Luiz Henrique Soares** | `@luizh-gsoares` | F2/F4 | 8 | 20,00 | 20,50 | R$ 922,50 | **16,24%** |
+| **Maria Eduarda** | `@eduarda-ogomes` | F2/F4 | 11 | 26,00 | 31,70 | R$ 1.426,50 | **25,11%** |
+| **Total da Entrega 2** | Equipe | Todas | **50** | **140,00** | **126,25** | **R$ 5.681,25** | **100,00%** |
+
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/08_contribuicao_por_entrega.csv</code>, 2026.</p>
+
+> **Nota explicativa dos dados:** Na Entrega 2, o total de 50 issues únicas corresponde a 60 atribuições em razão das tarefas compartilhadas entre integrantes. Todos os seis membros mantiveram-se dentro da faixa de equilíbrio de esforço estipulada no Construct 2 (entre 8% e 30% do esforço acumulado da Entrega 2), oscilando entre 9,15% e 25,11%, com média equilibrada entre os subgrupos.
+
+<p className="tabela-titulo">Figura 3: Participação percentual no esforço da Entrega 2 com discriminação por fase</p>
+
+![Participação percentual no esforço real da Entrega 2 com discriminação de Fase 3 e Fase 4](/img/gestao/05_esforco_integrante_entrega_2.png)
+
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/08_contribuicao_por_entrega.csv</code>, 2026.</p>
+
+### 3.3. Balanço Consolidado de Esforço e Custo no Projeto (Fases 1 a 4)
+
+No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 249,96 horas reais executadas frente a 270,00 horas estimadas, totalizando R$ 11.248,20 em custo real apurado à taxa horária de R$ 45,00. A tabela a seguir sintetiza a contribuição individual acumulada em todo o repositório, extraída de [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv):
+
+<p className="tabela-titulo">Tabela 5: Distribuição de esforço acumulado e custo total no projeto (Fases 1 a 4)</p>
+
+| Integrante | Login GitHub | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Commits | PRs Abertos | Esforço Real (%) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Christopher** | `@wChrstphr` | 28 | 71,50 | 39,95 | R$ 1.797,75 | 154 | 24 | **15,98%** |
+| **Davi Pierre** | `@DaviPierre` | 14 | 38,00 | 37,00 | R$ 1.665,00 | 13 | 6 | **14,80%** |
+| **Gabriel Monteiro** | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | R$ 2.565,00 | 69 | 16 | **22,80%** |
+| **Letícia de Carvalho** | `@LeticiaSantosss` | 17 | 31,50 | 27,91 | R$ 1.255,95 | 16 | 11 | **11,17%** |
+| **Luiz Henrique Soares** | `@luizh-gsoares` | 15 | 32,00 | 32,90 | R$ 1.480,50 | 38 | 16 | **13,16%** |
+| **Maria Eduarda** | `@eduarda-ogomes` | 20 | 47,50 | 55,20 | R$ 2.484,00 | 71 | 15 | **22,08%** |
+| **Total do Projeto** | **Equipe** | **97 (112 atrib.)** | **270,00** | **249,96** | **R$ 11.248,20** | **321** | **88** | **100,00%** |
+
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/04_contribuicao_individual.csv</code>, 2026.</p>
+
+<p className="tabela-titulo">Figura 4: Distribuição de tarefas e commits por integrante no projeto</p>
+
+![Volume de issues atribuídas e commits registrados por integrante](/img/gestao/03_contribuicao_individual.png)
+
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/04_contribuicao_individual.csv</code>, 2026.</p>
+
 ---
 
 ## 4. Desempenho dos Processos e Governança
 
 Os indicadores de eficiência do processo avaliam a estabilidade orçamentária, a velocidade de fluxo, a conformidade de preenchimento e o rigor na revisão por pares:
 
-<p className="tabela-titulo">Tabela 4: Indicadores de processo e governança nas Fases 1 e 2</p>
+<p className="tabela-titulo">Tabela 6: Indicadores de processo e governança nas Fases 1 e 2</p>
 
 | Indicador de Processo | Fase 1 | Fase 2 | Consolidado Entrega 1 | Meta do Construct | Diagnóstico |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -111,7 +163,7 @@ Os indicadores de eficiência do processo avaliam a estabilidade orçamentária,
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/03_desempenho_processos_fases.csv</code> e auditoria de PRs via GitHub API, 2026.</p>
 
-<p className="tabela-titulo">Figura 3: Acurácia da estimativa de esforço por fase e na Entrega 1</p>
+<p className="tabela-titulo">Figura 5: Acurácia da estimativa de esforço por fase e na Entrega 1</p>
 
 ![Acurácia da estimativa por fase em relação à faixa ideal de 80% a 120%](/img/gestao/06_acuracia_estimativa_fases.png)
 
@@ -123,7 +175,8 @@ Os indicadores de eficiência do processo avaliam a estabilidade orçamentária,
 
 A análise comparativa das métricas PSM/CID ao longo do projeto mostra como a equipe diagnosticou o gargalo de dependências entre tarefas nas Fases 1 e 2 e como a adoção de **prazos individuais escalonados nas issues** e de **priorização por impacto de bloqueio** nas Fases 3 e 4 elevou a pontualidade das entregas na Fase 4.
 
-<p className="tabela-titulo">Tabela 5: Comparativo das métricas PSM/CID e evolução do fluxo de trabalho entre as Fases 1, 2, 3 e 4</p>
+<p className="tabela-titulo">Tabela 7: Comparativo das métricas PSM/CID e evolução do fluxo de trabalho entre as Fases 1, 2, 3 e 4</p>
+
 
 | Dimensão (PSM/CID) | Métrica Específica | Fase 1 | Fase 2 | Fase 3 | Fase 4 (parcial) | Evolução e Impacto no Fluxo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -166,7 +219,8 @@ Para assegurar auditabilidade completa, todos os dados apresentados neste painel
 
 * **Tabelas de Dados:**
   * [`dados/gestao/07_resumo_entregas.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/07_resumo_entregas.csv): Indicadores consolidados por entrega.
-  * [`dados/gestao/08_contribuicao_por_entrega.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/08_contribuicao_por_entrega.csv): Esforço e custo individual detalhado.
+  * [`dados/gestao/08_contribuicao_por_entrega.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/08_contribuicao_por_entrega.csv): Esforço e custo individual detalhado por entrega.
+  * [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv): Esforço, custo, commits e PRs individuais acumulados no projeto.
   * [`dados/gestao/01_recursos_e_custos_fases.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/01_recursos_e_custos_fases.csv): Horas estimadas e reais por fase.
   * [`dados/gestao/02_calendario_e_progresso_fases.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/02_calendario_e_progresso_fases.csv): Séries temporais de progresso e marcos.
   * [`dados/gestao/03_desempenho_processos_fases.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/03_desempenho_processos_fases.csv): Métricas de acurácia, governança e lead time.
@@ -189,3 +243,5 @@ Para assegurar auditabilidade completa, todos os dados apresentados neste painel
 | 1.0 | 07/11/2026 | Criação do Painel Executivo PSM/CID consolidado por entrega com Curva S, distribuição de esforço e indicadores de processo | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.1 | 09/11/2026 | Taxa de revisão por pares das Fases 1 e 2 recalculada pela coleta automática de PRs | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 18/11/2026 | Atualização dos dados consolidados das Fases 1 a 4 e inclusão da seção de insights sobre prazos individuais por issue e evolução entre as fases | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.3 | 18/11/2026 | Inclusão dos recursos e custos da Entrega 2, balanço acumulado do projeto e gráficos de esforço individual | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+
