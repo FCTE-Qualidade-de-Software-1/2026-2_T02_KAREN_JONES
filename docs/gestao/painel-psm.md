@@ -2,7 +2,7 @@
 id: painel-psm
 title: Painel de Medição PSM/CID
 sidebar_label: Painel de Medição PSM
-sidebar_position: 3
+sidebar_position: 2
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 description: Painel executivo com indicadores quantitativos, Curva S de execução, participação individual na Entrega 1, métricas de processo e insights da evolução entre as Fases 1 e 2 (PSM/CID).
