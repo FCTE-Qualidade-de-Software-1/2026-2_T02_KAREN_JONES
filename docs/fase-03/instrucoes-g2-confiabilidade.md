@@ -330,6 +330,6 @@ Antes de enviar os resultados para a Fase 04, quem executou a coleta confere a l
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 10/11/2026 | Instruções de coleta das dez métricas de G2, com vínculos às Fases 02 e 03, formulários, arquivos brutos e gravações | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |  |
-| 1.1 | 11/11/2026 | Terminal Git Bash; regras de M2.1.2 (faixas em dias, janela, vários relatos), consolidação de M2.3.1, subcasos A8a e A8b em M2.4.3, domínio e arquivo de bloqueios em M2.2.2; `taskkill` em M2.4.1 e comandos do comparador em M2.4.1 a M2.4.3; correção de fórmulas | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |  |
+| 1.0 | 10/11/2026 | Instruções de coleta das dez métricas de G2, com vínculos às Fases 02 e 03, formulários, arquivos brutos e gravações | [Letícia Santos](https://github.com/LeticiaSantosss) | A definir |
+| 1.1 | 11/11/2026 | Terminal Git Bash; regras de M2.1.2 (faixas em dias, janela, vários relatos), consolidação de M2.3.1, subcasos A8a e A8b em M2.4.3, domínio e arquivo de bloqueios em M2.2.2; `taskkill` em M2.4.1 e comandos do comparador em M2.4.1 a M2.4.3; correção de fórmulas | [Letícia Santos](https://github.com/LeticiaSantosss) | A definir |
 | 1.2 | 18/11/2026 | Revisão de coerência e cross-links: estrutura igual à de G1 e faixas e regras linkadas à Fase 02 | [Christopher Paraizo](https://github.com/wChrstphr) | |

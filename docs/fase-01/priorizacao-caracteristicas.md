@@ -138,6 +138,6 @@ As três características com maior prioridade nas duas etapas foram selecionada
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 0.1 | 18/10/2026 | Criação do documento de priorização das características | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | |
+| 0.1 | 18/10/2026 | Criação do documento de priorização das características | [Letícia Santos](https://github.com/LeticiaSantosss) | |
 | 1.0 | 10/11/2026 | Introdução e Metodologia, títulos sem travessão, origem das classificações das demais características explicitada, tabelas com título e fonte e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
 | 1.1 | 18/11/2026 | Revisão de coerência e cross-links: profundidade estendida a Flexibilidade e exclusão da Capacidade de Interação justificada | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -218,7 +218,7 @@ O lead time das issues ficou em 7,62 dias na Fase 3 e 12,34 dias na Fase 4, acim
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 07/11/2026 | Criação do Registro de Medições e Decisões com Medição 0 (Linha de base E1), análise causal de dependência de tarefas, decisões D1-D6 e templates das medições 1 e 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
-| 1.1 | 08/11/2026 | Alinhamento do gatilho de 50%, Medição 3 em 22/11, esclarecimento do progresso da F2, Construct 2 e autoria das fontes | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| 1.0 | 07/11/2026 | Criação do Registro de Medições e Decisões com Medição 0 (Linha de base E1), análise causal de dependência de tarefas, decisões D1-D6 e templates das medições 1 e 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
+| 1.1 | 08/11/2026 | Alinhamento do gatilho de 50%, Medição 3 em 22/11, esclarecimento do progresso da F2, Construct 2 e autoria das fontes | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
 | 1.2 | 11/11/2026 | Apuração e registro dos indicadores quantitativos da Medição 1 (Ponto de Controle Intermediário da Fase 3), análise causal dos desvios de aderência e esforço, e formalização de decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.3 | 18/11/2026 | Revisão de coerência e cross-links: Medição 2 com o retrato de 18/11/2026 e critérios de decisão do plano | [Christopher Paraizo](https://github.com/wChrstphr) | |

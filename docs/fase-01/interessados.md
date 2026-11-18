@@ -224,7 +224,7 @@ A ligação de cada subcaracterística aos interessados principais e aos artefat
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 0.1 | 04/10/2026 | Documento dos possíveis interessados nesse projeto | [Davi Pierre](https://github.com/DaviPierre) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 0.2 | 15/10/2026 | Revisão geral e adição de contexto | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
+| 0.2 | 15/10/2026 | Revisão geral e adição de contexto | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 0.3 | 18/10/2026 | Inclusão de critérios de sucesso por interessado e influência nas escolhas | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.0 | 10/11/2026 | Introdução e Metodologia, grafia de Manutenibilidade restaurada, critérios de sucesso consolidados na Tabela 2 com a linha da equipe avaliadora, retirada da afirmação sobre outras combinações de características, que a matriz não sustenta, edição da ISO/IEC 25010 atualizada, subcaracterística Ausência de falhas adotada, tabela de rastreabilidade substituída por link à do modelo de qualidade, que é mais completa, tabelas com título e fonte e referências | [Christopher Paraizo](https://github.com/wChrstphr) | [Davi Pierre](https://github.com/DaviPierre) |
 | 1.1 | 18/11/2026 | Revisão de coerência e cross-links: Escalabilidade nos integradores e na operação e equipes de QA definidas | [Christopher Paraizo](https://github.com/wChrstphr) | |

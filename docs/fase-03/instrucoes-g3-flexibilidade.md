@@ -733,6 +733,6 @@ Para as medições manuais ou que envolvem interface de usuário (M3.1.2, M3.1.3
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 07/11/2026 | Elaboração do roteiro de instruções das métricas do objetivo G3 (Flexibilidade) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
+| 1.0 | 07/11/2026 | Elaboração do roteiro de instruções das métricas do objetivo G3 (Flexibilidade) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 1.1 | 08/11/2026 | Alinhamento dos caminhos da massa de dados e comandos de geração com scripts/gerar_massa_dados.py | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Gabriel Santos](https://github.com/gabriel-nitro) |
 | 1.2 | 18/11/2026 | Revisão de coerência e cross-links: estrutura igual à de G1 e G2 e ambiente alinhado aos recursos | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -74,5 +74,5 @@ O acompanhamento da gestão usa as métricas PSM/CID. O [plano de medição PSM]
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| `1.0` | 15/11/2026 | Página da metodologia da equipe, adaptada da seção removida do artigo | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| `1.0` | 15/11/2026 | Página da metodologia da equipe, adaptada da seção removida do artigo | [Letícia Santos](https://github.com/LeticiaSantosss) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | `1.1` | 18/11/2026 | Revisão de coerência e cross-links: seções por fase, ferramentas reais da Fase 03 e plano de medição separado do plano PSM | [Christopher Paraizo](https://github.com/wChrstphr) | |

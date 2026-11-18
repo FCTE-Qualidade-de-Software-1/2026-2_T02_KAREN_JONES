@@ -188,3 +188,4 @@ A lista de verificação de cada métrica está em `consolidados/G1_verificacao.
 | 1.4 | 11/11/2026 | Registro dos desvios da coleta de G3 em relação ao plano | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 15/11/2026 | Verificação e cálculo das métricas de G1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.6 | 15/11/2026 | Inclusão dos arquivos da análise de G1 no catálogo de consolidados | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.7 | 18/11/2026 | Revisão de coerência e cross-links: link à gravação de tela nas instruções de G3 | [Christopher Paraizo](https://github.com/wChrstphr) | |

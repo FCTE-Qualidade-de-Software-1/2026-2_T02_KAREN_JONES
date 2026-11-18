@@ -111,7 +111,7 @@ Requisitos ligados à Flexibilidade (Portabilidade na edição de 2011 da norma)
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.0 | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.1 | 18/10/2026 | Harmonização da terminologia Maturidade e padronização do frontmatter | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.2 | 10/11/2026 | Introdução e Metodologia, subcaracterística Ausência de falhas adotada como na edição de 2023, nome da característica na edição de 2011 corrigido para Portabilidade, links para a rastreabilidade do modelo e do Plano GQM, tabelas com título e fonte e referências | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
 | 1.3 | 18/11/2026 | Revisão de coerência e cross-links: página antes do escopo na ordem de leitura | [Christopher Paraizo](https://github.com/wChrstphr) | |

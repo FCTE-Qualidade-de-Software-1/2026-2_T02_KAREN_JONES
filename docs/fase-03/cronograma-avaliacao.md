@@ -70,5 +70,5 @@ A coleta de dados ocorre entre 10/11 e 12/11/2026. A Tabela 2 mostra o responsá
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 06/11/2026 | Criação do cronograma de avaliação da Fase 4 | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.0 | 06/11 | Criação do cronograma de avaliação da Fase 4 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 18/11/2026 | Revisão de coerência e cross-links: Introdução e Metodologia, máquina de cada coleta e datas da ação de melhoria | [Christopher Paraizo](https://github.com/wChrstphr) | |

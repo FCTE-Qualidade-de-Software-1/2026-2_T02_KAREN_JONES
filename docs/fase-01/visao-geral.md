@@ -57,8 +57,8 @@ O propósito e os interessados orientam a priorização e o modelo de qualidade.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Estruturação da visão geral da Fase 1 e links de navegação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-| 1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 1.2 | 19/10/2026 | Referência cruzada para a Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| 1.1 | 19/10/2026 | Adição das referências cruzadas | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.2 | 19/10/2026 | Referência cruzada para a Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
 | 1.3 | 10/11/2026 | Título sem travessão, Introdução e Metodologia com citações à AULA A07, tabela de documentos com título e fonte e descrições alinhadas ao conteúdo revisado das páginas, relação com a Fase 02 em um parágrafo e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.4 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
 | 1.5 | 18/11/2026 | Revisão de coerência e cross-links: requisitos antes do escopo na ordem de leitura | [Christopher Paraizo](https://github.com/wChrstphr) | |

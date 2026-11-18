@@ -42,8 +42,8 @@ Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 19/10/2026 | Criação da visão geral da Fase 02 e das referências cruzadas com a Fase 01 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
-| 1.1 | 19/10/2026 | Publicação dos GQM de G1, G2 e G3 na tabela de documentos | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| 1.0 | 19/10/2026 | Criação da visão geral da Fase 02 e das referências cruzadas com a Fase 01 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
+| 1.1 | 19/10/2026 | Publicação dos GQM de G1, G2 e G3 na tabela de documentos | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
 | 1.2 | 20/10/2026 | Publicação das páginas de pontuação e do Plano GQM, com referência cruzada | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
 | 1.3 | 06/11/2026 | Título sem travessão, retirada da coluna de situação, com todas as páginas já publicadas, referências cruzadas resumidas em um parágrafo, links para objetivos e questões, tabela com título e fonte | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.4 | 10/11/2026 | Inclusão da Metodologia | [Christopher Paraizo](https://github.com/wChrstphr) | |

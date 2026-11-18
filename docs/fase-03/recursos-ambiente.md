@@ -368,10 +368,10 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-| 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher Paraizo e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
-| 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
-| 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | |
+| 1.0 | 05/11/2026 | Primeira versão da especificação de recursos e ambiente da Fase 04 | [Letícia Santos](https://github.com/LeticiaSantosss) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
+| 1.1 | 07/11/2026 | Preenchimento dos dados de hardware de Christopher e Maria Eduarda, especificações do tablet iPad (M3.1.3), ferramentas e gravação de tela | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | |
 | 1.4 | 10/11/2026 | Correção do ambiente limpo, das versões de Node.js, npm, Docker e TypeScript, dos links para as métricas de G3 e da formatação das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 11/11/2026 | Conferência do commit pelo hash completo, ativação do Yarn 1.22.22 antes da instalação das dependências, comando de versão do ESLint 8.57.0, ordem e opções do comando de cobertura e versões de Node.js e npm de Christopher Paraizo | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.6 | 18/11/2026 | Revisão de coerência e cross-links: Introdução e Metodologia, M3.2.3 na máquina de Maria Eduarda e links às fichas | [Christopher Paraizo](https://github.com/wChrstphr) | |
