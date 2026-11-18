@@ -56,12 +56,12 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 100,Fase 3,[F3] Instruções para o avaliador de G3 (Flexibilidade),closed,GabrielSMonteiro,3.0,4.0,33.3,subestimada,135.0,180.0,07/11,09/11/2026,Concluida em atraso,5.38
 101,Fase 3,[F3] Plano de análise: tratamento dos dados e apresentação dos resultados,closed,wChrstphr,2.0,2.0,0.0,na faixa,90.0,90.0,06/11,09/11/2026,Concluida em atraso,5.53
 102,Fase 3,[F3] Cronograma de avaliação e responsáveis pela coleta,closed,LeticiaSantosss,1.5,1.5,0.0,na faixa,67.5,67.5,06/11,06/11/2026,Concluida no prazo,3.14
-103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,closed,eduarda-ogomes,2.0,0.0,,,90.0,0.0,08/11,13/11/2026,Concluida em atraso,9.37
+103,Fase 3,[F3] Piloto das instruções e revisão do plano de avaliação,closed,eduarda-ogomes,2.0,2.0,0.0,na faixa,90.0,90.0,08/11,13/11/2026,Concluida em atraso,9.37
 104,Fase 3,[F3] Visão geral da Fase 03 e rastreabilidade com a Fase 02,closed,DaviPierre,2.0,3.0,50.0,subestimada,90.0,135.0,08/11,14/11/2026,Concluida em atraso,11.3
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,closed,GabrielSMonteiro,2.0,2.0,0.0,na faixa,90.0,90.0,08/11,15/11/2026,Concluida em atraso,12.12
 106,Fase 3,[GESTAO] Atas de reunião da Fase 3,closed,LeticiaSantosss,1.0,1.5,50.0,subestimada,45.0,67.5,08/11,15/11/2026,Concluida em atraso,12.28
 107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,closed,GabrielSMonteiro,3.0,5.0,66.7,subestimada,135.0,225.0,08/11,15/11/2026,Concluida em atraso,12.11
-108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (16/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,3.0,-50.0,superestimada,270.0,135.0,16/11,-,Aberta em atraso,
+108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (18/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,4.5,-25.0,superestimada,270.0,202.5,18/11,-,Em andamento (no prazo),
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,closed,GabrielSMonteiro,1.0,1.0,0.0,na faixa,45.0,45.0,12/11,15/11/2026,Concluida em atraso,12.12
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,15/11/2026,Concluida em atraso,12.27
 111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),closed,wChrstphr,5.0,3.0,-40.0,superestimada,225.0,135.0,12/11,16/11/2026,Concluida em atraso,12.52
@@ -74,10 +74,10 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 118,Fase 4,[F4] Oportunidades de melhoria e escolha da ação,closed,wChrstphr,2.0,1.25,-37.5,superestimada,90.0,56.25,16/11,17/11/2026,Concluida em atraso,13.99
 119,Fase 4,[F4] Executar a ação de melhoria,open,wChrstphr,8.0,0.0,,,360.0,0.0,19/11,-,Em andamento (no prazo),
 120,Fase 4,"[F4] Julgamento final, coerência com o propósito e relações entre as características",closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,17/11,16/11/2026,Concluida no prazo,13.05
-121,Fase 4,[F4] Visão geral da Fase 04,open,eduarda-ogomes,2.0,0.0,,,90.0,0.0,18/11,-,Em andamento (no prazo),
-122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,open,eduarda-ogomes,2.0,0.0,,,90.0,0.0,20/11,-,Em andamento (no prazo),
+121,Fase 4,[F4] Visão geral da Fase 04,closed,eduarda-ogomes,2.0,4.0,100.0,subestimada,90.0,180.0,18/11,18/11/2026,Concluida no prazo,14.47
+122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,closed,eduarda-ogomes,2.0,4.0,100.0,subestimada,90.0,180.0,20/11,18/11/2026,Concluida no prazo,14.47
 123,Fase 4,[ARTIGO] Plano de avaliação (Fase 3) no artigo,closed,GabrielSMonteiro,3.0,3.0,0.0,na faixa,135.0,135.0,13/11,16/11/2026,Concluida em atraso,13.05
-124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),open,eduarda-ogomes,4.0,0.0,,,180.0,0.0,19/11,-,Em andamento (no prazo),
+124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),closed,eduarda-ogomes,4.0,1.5,-62.5,superestimada,180.0,67.5,19/11,18/11/2026,Concluida no prazo,14.47
 125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",open,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,-,Em andamento (no prazo),
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,20/11,-,Em andamento (no prazo),
 127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,open,LeticiaSantosss,2.0,0.0,,,90.0,0.0,20/11,-,Em andamento (no prazo),
