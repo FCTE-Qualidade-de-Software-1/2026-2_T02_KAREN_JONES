@@ -568,10 +568,163 @@ GitHub CLI (gh)  & 2.102.0          & M1.4, M1.5, M2.1  & Scripts da eq.  & Comm
 \end{table}
 
 % ================================================================
-\section{Resultados}
+\section{Resultados da Avaliação}
 \label{sec:resultados}
 
-Esta seção reunirá as medições das 36 métricas, notas e agregações por característica. O confronto com as hipóteses definirá os veredictos de qualidade e os pontos de melhoria.
+Esta seção apresenta os resultados empíricos da avaliação do Excalidraw no commit \commitref, abrangendo a medição das 36 métricas, a atribuição dos níveis de pontuação, o confronto com as hipóteses operacionais, as respostas às treze questões de qualidade e aos três objetivos GQM, o julgamento integrado do produto e a ação de melhoria selecionada. Todas as evidências primárias, tabelas consolidadas e rotinas de cálculo estão auditáveis no repositório de dados do projeto.\footnote{Repositório de dados brutos e consolidados da Fase 4 disponível em: \url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/tree/main/dados/fase-04}.}
+
+\subsection{Manutenibilidade (G1)}
+\label{subsec:resultados-g1}
+
+A característica de Manutenibilidade foi avaliada a partir de 14 métricas distribuídas nas cinco subcaracterísticas da ISO/IEC 25010:2023. A Tabela~\ref{tab:resultados_g1} consolida os valores obtidos, os níveis Heitlager correspondentes e os veredictos das hipóteses de baseline.
+
+\begin{table}[!ht]
+\centering
+\caption{Resultados consolidados das medições de Manutenibilidade (G1) (Fonte: Equipe Karen Jones).}
+\label{tab:resultados_g1}
+\vspace{2pt}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.85}
+\begin{tabular}{llcccl}
+\toprule
+\textbf{Questão / Subcaract.} & \textbf{Métrica} & \textbf{Valor Medido} & \textbf{Nível} & \textbf{Pontos} & \textbf{Hipótese} \\
+\midrule
+Q1.1 Modularidade (3,3, \texttt{o}) & M1.1.1 Ciclos de dependência & 4 pares em ciclo & \texttt{-} & 2 & Refutada (0 pares) \\
+ & M1.1.2 Violação de direção & 0,19\% (1 de 528) & \texttt{++} & 5 & Refutada (0 violações) \\
+ & M1.1.3 Instabilidade de pacotes & 10,00\% (2 de 20) & \texttt{o} & 3 & Refutada (maior Ca) \\
+\midrule
+Q1.2 Reusabilidade (1,5, \texttt{--}) & M1.2.1 Acoplamento com React/DOM & 69,07\% (67 de 97) & \texttt{--} & 1 & Refutada (0 em math/utils) \\
+ & M1.2.2 Propriedades documentadas & 57,69\% (30 de 52) & \texttt{-} & 2 & Refutada (80\% a 100\%) \\
+\midrule
+Q1.3 Analisabilidade (3,0, \texttt{o}) & M1.3.1 Risco de complexidade & 6,54\% muito alto & \texttt{--} & 1 & Confirmada (baixo risco) \\
+ & M1.3.2 Documentação técnica & 83,33\% (5 de 6) & \texttt{+} & 4 & Confirmada (60\% a 100\%) \\
+ & M1.3.3 Verificações em CI & 100,0\% (6 de 6) & \texttt{++} & 5 & Confirmada (100\%) \\
+\midrule
+Q1.4 Modificabilidade (3,0, \texttt{o}) & M1.4.1 Mediana de arquivos/PR & 2 arquivos & \texttt{++} & 5 & Confirmada (ate 5 arquivos) \\
+ & M1.4.2 Arquivos extensos & 4,00\% (4 de 100) & \texttt{o} & 3 & Confirmada (ate 5\%) \\
+ & M1.4.3 PRs em arquivos extensos & 65,75\% (96 de 146) & \texttt{--} & 1 & Confirmada (ate 70\%) \\
+\midrule
+Q1.5 Testabilidade (3,7, \texttt{+}) & M1.5.1 Cobertura de linhas & 76,74\% ponderada & \texttt{o} & 3 & Confirmada (70\% a 80\%) \\
+ & M1.5.2 Distribuição de testes & 56,64\% unitários & \texttt{++} & 5 & Confirmada (unit maior) \\
+ & M1.5.3 Execução de testes em CI & 99,12\% (113 de 114) & \texttt{++} & 5 & Confirmada (95\% a 100\%) \\
+\midrule
+\multicolumn{6}{p{14.6cm}}{\textbf{Síntese G1:} Média da característica igual a 2,9 (\texttt{o}). 9 hipóteses confirmadas e 5 refutadas. Julgamento: \textbf{Não atende}.} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A resposta a Q1.1 indica modularidade regular (\texttt{o}, 3,3 pontos): embora a quase totalidade das importações siga a hierarquia arquitetural, quatro pares de pacotes formam ciclos bidirecionais de dependência. A resposta a Q1.2 diagnostica reusabilidade muito ruim (\texttt{--}, 1,5 ponto), refletindo que 69,07\% dos arquivos dos módulos de base dependem de React ou de APIs nativas do navegador, além de 42,31\% das propriedades públicas da biblioteca não possuírem documentação. Em Q1.3 e Q1.4, a analisabilidade e a modificabilidade situam-se no patamar regular (\texttt{o}, 3,0 pontos cada): a automação de verificações estáticas é total e a dispersão de mudanças por contribuição é baixa, mas 6,54\% das linhas de código concentram-se em funções com complexidade ciclomática acima de 50 e 65,75\% dos PRs tocam em arquivos extensos. A resposta a Q1.5 revela boa testabilidade (\texttt{+}, 3,7 pontos), com testes presentes em 99,12\% das integrações e forte predomínio de suítes unitárias e de integração rápida.
+
+No cômputo agregado, a média aritmética de Manutenibilidade atinge 2,9 pontos, correspondendo ao nível Regular (\texttt{o}). Contudo, pela aplicação dos critérios de corte derivados da TÜViT \cite{baggen2010}, o veredicto da característica é \textbf{Não atende}, em razão da presença de uma questão no nível Muito Ruim (Q1.2 Reusabilidade).
+
+\subsection{Confiabilidade (G2)}
+\label{subsec:resultados-g2}
+
+A Confiabilidade foi investigada por dez métricas abrangendo ausência de falhas, disponibilidade, tolerância a falhas e recuperabilidade. A Tabela~\ref{tab:resultados_g2} reúne os resultados empíricos consolidados de G2.
+
+\begin{table}[!ht]
+\centering
+\caption{Resultados consolidados das medições de Confiabilidade (G2) (Fonte: Equipe Karen Jones).}
+\label{tab:resultados_g2}
+\vspace{2pt}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.85}
+\begin{tabular}{llcccl}
+\toprule
+\textbf{Questão / Subcaract.} & \textbf{Métrica} & \textbf{Valor Medido} & \textbf{Nível} & \textbf{Pontos} & \textbf{Hipótese} \\
+\midrule
+Q2.1 Ausência de falhas (3,0, \texttt{o}) & M2.1.1 Proporção de correções & 51,37\% (75 de 146) & \texttt{o} & 3 & Confirmada (pelo menos 20\%) \\
+ & M2.1.2 Tempo de resolução & 7,26 dias (mediana) & \texttt{+} & 4 & Confirmada (ate 30 dias) \\
+ & M2.1.3 Revisão pré-integração & 44,52\% (65 de 146) & \texttt{-} & 2 & Refutada (pelo menos 95\%) \\
+\midrule
+Q2.2 Disponibilidade (4,5, \texttt{+}) & M2.2.1 Funções sem conexão & 100,0\% (10 de 10) & \texttt{++} & 5 & Confirmada (10 de 10) \\
+ & M2.2.2 Origens indispensáveis & 0 indispensáveis & \texttt{+} & 4 & Confirmada (0 origens) \\
+\midrule
+Q2.3 Tolerância a falhas (4,0, \texttt{+}) & M2.3.1 Arquivos inválidos & 77,78\% (7 de 9) & \texttt{o} & 3 & Refutada (9 de 9) \\
+ & M2.3.2 Queda de colaboração & 100,0\% (5 de 5) & \texttt{++} & 5 & Confirmada (5 verificações) \\
+\midrule
+Q2.4 Recuperabilidade (4,0, \texttt{+}) & M2.4.1 Restauração da sessão & 75,0\% (3 de 4) & \texttt{o} & 3 & Refutada (4 cenários) \\
+ & M2.4.2 Compatibilidade retroativa & 100,0\% (7 de 7) & \texttt{++} & 5 & Confirmada (7 arquivos) \\
+ & M2.4.3 Cobertura de desfazer & 80,0\% (8 de 10) & \texttt{+} & 4 & Refutada (10 ações) \\
+\midrule
+\multicolumn{6}{p{14.6cm}}{\textbf{Síntese G2:} Média da característica igual a 3,9 (\texttt{+}). 6 hipóteses confirmadas e 4 refutadas. Julgamento: \textbf{Atende}.} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A resposta a Q2.1 aponta maturidade regular (\texttt{o}, 3,0 pontos): o tempo mediano de correção é célere (7,26 dias), mas 51,37\% das contribuições na janela histórica consistiram em correções de defeitos e 55,48\% dos PRs foram mesclados sem aprovação formal de um segundo revisor. A resposta a Q2.2 revela disponibilidade excelente (\texttt{+}, 4,5 pontos), com autonomia operacional offline total das dez funções essenciais e ausência de dependência de domínios externos no desenho local. A resposta a Q2.3 atesta boa tolerância a falhas (\texttt{+}, 4,0 pontos), garantindo continuidade do editor em interrupções abruptas de colaboração, com ponto de atenção na validação de arquivos JSON corrompidos. Em Q2.4, a recuperabilidade é boa (\texttt{+}, 4,0 pontos), confirmando integridade perfeita na reabertura de cenas legadas da versão 0.15.0 em diante e suporte a desfazer em 80\% dos fluxos, ressalvada a janela de atraso na persistência em encerramentos forçados.
+
+A média consolidada de Confiabilidade alcança 3,9 pontos, situando-se no nível Bom (\texttt{+}). Como nenhuma das quatro questões obteve nível inferior a Regular, a característica \textbf{Atende} plenamente aos critérios de qualidade da avaliação.
+
+\subsection{Flexibilidade (G3)}
+\label{subsec:resultados-g3}
+
+A Flexibilidade foi mensurada por 12 métricas distribuídas em adaptabilidade, escalabilidade, instalabilidade e substituibilidade. A Tabela~\ref{tab:resultados_g3} sintetiza as medições de G3.
+
+\begin{table}[!ht]
+\centering
+\caption{Resultados consolidados das medições de Flexibilidade (G3) (Fonte: Equipe Karen Jones).}
+\label{tab:resultados_g3}
+\vspace{2pt}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.85}
+\begin{tabular}{llcccl}
+\toprule
+\textbf{Questão / Subcaract.} & \textbf{Métrica} & \textbf{Valor Medido} & \textbf{Nível} & \textbf{Pontos} & \textbf{Hipótese} \\
+\midrule
+Q3.1 Adaptabilidade (4,0, \texttt{+}) & M3.1.1 Cobertura de navegadores & 90,8\% dos usuários & \texttt{+} & 4 & Confirmada (80\% a 95\%) \\
+ & M3.1.2 Ambientes de integração & 66,7\% (4 de 6) & \texttt{o} & 3 & Refutada (6 de 6) \\
+ & M3.1.3 Edição por toque/caneta & 100,0\% (10 de 10) & \texttt{++} & 5 & Confirmada (10 de 10) \\
+\midrule
+Q3.2 Escalabilidade (4,3, \texttt{+}) & M3.2.1 Tempo de abertura & 278 ms (mediana) & \texttt{++} & 5 & Confirmada (ate 500 ms) \\
+ & M3.2.2 Taxa de quadros & 52 FPS (mediana) & \texttt{o} & 3 & Refutada (pelo menos 55 FPS) \\
+ & M3.2.3 Limite de elementos salvos & 5.000 elementos & \texttt{++} & 5 & Confirmada (5.000 elementos) \\
+\midrule
+Q3.3 Instalabilidade (3,7, \texttt{+}) & M3.3.1 Operações de pacote & 33,3\% (2 de 6) & \texttt{-} & 2 & Refutada (100\%) \\
+ & M3.3.2 Passos reproduzidos & 85,7\% (6 de 7) & \texttt{+} & 4 & Confirmada (80\% a 100\%) \\
+ & M3.3.3 Implantação com Docker & Funcional em porta 3000 & \texttt{++} & 5 & Confirmada (sucesso) \\
+\midrule
+Q3.4 Substituibilidade (3,7, \texttt{+}) & M3.4.1 Formatos de exportação & 3 formatos abertos & \texttt{+} & 4 & Confirmada (pelo menos 3) \\
+ & M3.4.2 Preservação de elementos & 100,0\% (46 de 46) & \texttt{++} & 5 & Confirmada (100\%) \\
+ & M3.4.3 Campos documentados & 26,9\% (14 de 52) & \texttt{-} & 2 & Confirmada (ate 30\%) \\
+\midrule
+\multicolumn{6}{p{14.6cm}}{\textbf{Síntese G3:} Média da característica igual a 3,9 (\texttt{+}). 9 hipóteses confirmadas e 3 refutadas. Julgamento: \textbf{Atende}.} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A resposta a Q3.1 comprova boa adaptabilidade (\texttt{+}, 4,0 pontos), destacando suporte tátil e por caneta stylus perfeito em iPadOS e cobertura de 90,8\% dos navegadores globais, com atrito na integração SSR com Next.js decorrente de dependências de hooks do React 18 e runtime do React 19. A resposta a Q3.2 revela excelente escalabilidade (\texttt{+}, 4,3 pontos), com carregamento instantâneo de cenas complexas abaixo de 300 ms e persistência bem-sucedida de cenas densas com 5.000 objetos, sustentando 52 FPS em manipulações intensas. A resposta a Q3.3 indica boa instalabilidade (\texttt{+}, 3,7 pontos), com subida conteinerizada imediata e guias de implantação de alta fidelidade, ressalvada a resolução de subpacotes locais não publicados no empacotamento monorepo. Em Q3.4, a substituibilidade é boa (\texttt{+}, 3,7 pontos), com suporte nativo a múltiplos formatos abertos e preservação vetorial irrestrita, com carência documental na especificação do esquema JSON proprietário.
+
+Com média agregada de 3,9 pontos e todas as quatro questões no nível Bom (\texttt{+}), a característica de Flexibilidade \textbf{Atende} aos requisitos de qualidade.
+
+\subsection{Julgamento Final Integrado e Ação de Melhoria}
+\label{subsec:julgamento-melhoria}
+
+A Tabela~\ref{tab:julgamento_consolidado} sintetiza o julgamento das três características avaliadas segundo os critérios formais da especificação. Conforme o modelo adotado \cite{heitlager2007}, preserva-se o diagnóstico independente por característica, sem reduzir o produto a uma nota escalar única.
+
+\begin{table}[!ht]
+\centering
+\caption{Julgamento consolidado da qualidade do produto Excalidraw (Fonte: Equipe Karen Jones).}
+\label{tab:julgamento_consolidado}
+\vspace{2pt}
+\scriptsize
+\begin{tabular}{lcccl}
+\toprule
+\textbf{Característica (Objetivo GQM)} & \textbf{Média} & \textbf{Nível} & \textbf{Julgamento} & \textbf{Condição Determinante} \\
+\midrule
+Manutenibilidade (G1) & 2,9 & \texttt{o} & \textbf{Não atende} & Presença de questão em nível Muito Ruim (Q1.2) \\
+Confiabilidade (G2)   & 3,9 & \texttt{+} & \textbf{Atende}     & Nível Bom e menor questão em Regular \\
+Flexibilidade (G3)     & 3,9 & \texttt{+} & \textbf{Atende}     & Nível Bom e todas as questões em Bom \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+O diagnóstico global evidencia que o Excalidraw atende com excelência às exigências operacionais de uso final, tolerância e integração no ecossistema web moderno, mas apresenta limitações estruturais internas de manutenibilidade que elevam o custo de reutilização de seus componentes fundamentais.
+
+Em cumprimento ao propósito avaliativo formulado na Fase 1, de orientar intervenções técnicas fundamentadas em evidências empíricas, a equipe mapeou os sete pontos de melhoria situados nos níveis Ruim e Muito Ruim. Entre as oportunidades identificadas, selecionou-se como ação prioritária a documentação formal das propriedades públicas de interface do componente principal da biblioteca (métrica M1.2.2 da subcaracterística de Reusabilidade). As medições revelaram que 42,31\% das propriedades de configuração pública não possuem documentação técnica no repositório. Por se tratar de intervenção cirúrgica de baixo risco em documentação técnica e tipagem, sua regularização é a única ação pontual capaz de elevar a pontuação de Q1.2 de Muito Ruim (\texttt{--}) para Regular (\texttt{o}), viabilizando que a característica de Manutenibilidade atinja o veredicto de atendimento aos critérios de qualidade.
 
 % ================================================================
 \section{Conclusão}
