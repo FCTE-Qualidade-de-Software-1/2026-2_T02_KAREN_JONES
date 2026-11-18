@@ -101,6 +101,4 @@ O escopo, os objetos avaliados e as características de qualidade estão na [Fas
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 12/11/2026 | Criação da visão geral da Fase 03, dos links entre documentos e da matriz de rastreabilidade das 36 métricas | [Davi Pierre](https://github.com/DaviPierre) |  |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: links da Tabela 2 às novas seções das instruções de G2 e nomes das métricas sem travessão | [Christopher Paraizo](https://github.com/wChrstphr) |  |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: âncoras dos procedimentos de G3 atualizadas para os novos títulos das instruções | [Christopher Paraizo](https://github.com/wChrstphr) |  |
-| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: fontes das Tabelas 1 e 2 no formato da equipe e R6 em M3.2.3 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: links da Tabela 2 às novas seções das instruções de G2 e nomes das métricas sem travessão, âncoras dos procedimentos de G3 atualizadas para os novos títulos das instruções, fontes das Tabelas 1 e 2 no formato da equipe e R6 em M3.2.3 | [Christopher Paraizo](https://github.com/wChrstphr) | |

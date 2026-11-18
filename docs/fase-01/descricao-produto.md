@@ -25,9 +25,10 @@ O **Excalidraw** é um editor de desenho e diagramação que roda no navegador, 
 1. **Aplicação web e PWA (*Progressive Web App*):** editor para esboços, diagramas e notas visuais, com colaboração em tempo real criptografada de ponta a ponta e funcionamento sem conexão.
 2. **Biblioteca React (`@excalidraw/excalidraw`):** pacote publicado no npm que permite a terceiros incorporar o editor em suas próprias aplicações React.
 
-Licença, repositório, stack e versão avaliada estão na [identificação do produto](./tipo-produto.md#1-identificação-e-versão-analisada). "SPA" (aplicação de página única) e "PWA" descrevem a arquitetura da aplicação web: uma única página carregada no navegador, que atualiza a interface sem recarregar e, depois do primeiro acesso, funciona sem conexão. Não são categorias de tipo de software. A classificação do produto segundo Pressman e a IEEE 1062 está em [tipo de produto](./tipo-produto.md#2-classificação-segundo-pressman).
+<p className="tabela-titulo">Tabela 1: Caracterização do Excalidraw</p>
 
---- | :--- |
+| Dimensão Técnica | Especificação no Projeto |
+| :--- | :--- |
 | **Nome do Produto** | Excalidraw |
 | **Classificação de Software** | Aplicação web de página única (SPA) e PWA, e biblioteca de componentes React ([tipo de produto](./tipo-produto.md)) |
 | **Linguagem Principal** | TypeScript |
@@ -39,13 +40,15 @@ Licença, repositório, stack e versão avaliada estão na [identificação do p
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
+"SPA" (aplicação de página única) e "PWA" descrevem a arquitetura da aplicação web: uma única página carregada no navegador, que atualiza a interface sem recarregar e, depois do primeiro acesso, funciona sem conexão. Não são categorias de tipo de software. A classificação do produto segundo Pressman e a IEEE 1062 está em [tipo de produto](./tipo-produto.md#2-classificação-segundo-pressman).
+
 ---
 
 ## 2. Estrutura de Módulos e Pacotes do Monorepo
 
-O monorepo declara três grupos de workspaces: `excalidraw-app`, `packages/*` e `examples/*`. A Tabela 1 resume a responsabilidade de cada parte. Os pacotes de matemática e utilitários são pensados para uso fora do editor, e a [Fase 02](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) verifica se de fato não dependem de React nem do navegador.
+O monorepo declara três grupos de workspaces: `excalidraw-app`, `packages/*` e `examples/*`. A Tabela 2 resume a responsabilidade de cada parte. Os pacotes de matemática e utilitários são pensados para uso fora do editor, e a [Fase 02](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) verifica se de fato não dependem de React nem do navegador.
 
-<p className="tabela-titulo">Tabela 1: Módulos do monorepo e responsabilidades</p>
+<p className="tabela-titulo">Tabela 2: Módulos do monorepo e responsabilidades</p>
 
 | Diretório/componente | Responsabilidade observável | Interfaces ou evidência |
 | :--- | :--- | :--- |
@@ -99,9 +102,9 @@ A arquitetura impõe restrições que a avaliação precisa considerar:
 
 ## 6. Implicações Arquiteturais para a Avaliação de Qualidade
 
-A Tabela 2 separa, para cada subcaracterística do [modelo de qualidade](./modelo-de-qualidade.md), o que é viável medir e o que fica fora do escopo. As métricas finais de cada subcaracterística estão nas páginas de [G1](../fase-02/gqm-manutenibilidade.md), [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md) da Fase 02.
+A Tabela 3 separa, para cada subcaracterística do [modelo de qualidade](./modelo-de-qualidade.md), o que é viável medir e o que fica fora do escopo. As métricas finais de cada subcaracterística estão nas páginas de [G1](../fase-02/gqm-manutenibilidade.md), [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md) da Fase 02.
 
-<p className="tabela-titulo">Tabela 2: Implicações da arquitetura para a avaliação</p>
+<p className="tabela-titulo">Tabela 3: Implicações da arquitetura para a avaliação</p>
 
 | Subcaracterística | O que é viável medir (dentro do escopo) | O que fica fora do escopo |
 | :--- | :--- | :--- |
@@ -150,5 +153,4 @@ A arquitetura descrita aqui fundamenta os [requisitos de avaliação](./requisit
 | 1.0 | 18/10/2026 | Criação da descrição estruturada do produto, mapeamento de módulos, diagrama de contexto e análise de implicações para avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 20/10/2026 | Diagrama de contexto e arquitetura redesenhado no Excalidraw e publicado em PNG, com o arquivo editável | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 10/11/2026 | Introdução e Metodologia, versão avaliada corrigida para o commit `e1b7aac` (biblioteca 0.18.0), pacotes e interfaces conferidos no repositório, linhas de Modificabilidade e Substituibilidade na tabela de implicações, tabela de módulos trazida do tipo de produto, subcaracterística Ausência de falhas adotada, tabelas e figura com título e fonte, requisitos com links, referências numeradas e retirada da citação ao critério da disciplina | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: tabela de caracterização trocada por link ao tipo de produto, SPA e PWA explicados como arquitetura, coluna de decisão metodológica e exemplos sem fonte retirados das implicações, Adaptabilidade e Escalabilidade separadas e tabelas renumeradas | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: SPA e PWA explicados como arquitetura abaixo da tabela de caracterização, coluna de decisão metodológica e exemplos sem fonte retirados das implicações, Adaptabilidade e Escalabilidade separadas, introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -159,5 +159,4 @@ A cadeia completa vai da ficha da métrica na Fase 02 ao método desta página, 
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Proposta inicial de métodos, ferramentas, evidências e justificativas para as 36 métricas dos objetivos G1, G2 e G3 | [Davi Pierre](https://github.com/DaviPierre) |  |
 | 1.1 | 10/11/2026 | Ajustes da revisão da PR #149: abertura com Introdução e Metodologia, links no lugar de repetições, M1.5.3 com `<` e formato das citações e das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) |  |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: saídas pontuadas de M1.1.2, M1.1.3, M1.2.1 e M1.5.2 iguais às das instruções de G1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: link às instruções de G2 no lugar da issue #99 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: saídas pontuadas de M1.1.2, M1.1.3, M1.2.1 e M1.5.2 iguais às das instruções de G1, link às instruções de G2 no lugar da issue #99 | [Christopher Paraizo](https://github.com/wChrstphr) | |

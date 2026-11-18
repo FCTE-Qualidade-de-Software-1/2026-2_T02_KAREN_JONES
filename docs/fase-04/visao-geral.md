@@ -40,4 +40,3 @@ A rastreabilidade completa vai do requisito da Fase 01 à métrica da Fase 02, a
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/11/2026 | Criação da visão geral da Fase 04 com os documentos da fase e o caminho dos dados ao julgamento | [Christopher Paraizo](https://github.com/wChrstphr) |  |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: questões Q linkadas às fichas da Fase 02 | [Christopher Paraizo](https://github.com/wChrstphr) | |

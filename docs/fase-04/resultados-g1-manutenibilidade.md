@@ -171,5 +171,4 @@ As métricas nos níveis `-` e `--` são os [pontos de melhoria](../fase-02/pont
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/11/2026 | Criação dos resultados de G1: níveis, hipóteses, respostas às questões e ao objetivo, gráficos e pontos de melhoria | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: posição na barra lateral ajustada à nova visão geral da Fase 04 | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: códigos M, H e Q linkados às fichas da Fase 02 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: posição na barra lateral ajustada à nova visão geral da Fase 04, códigos M, H e Q linkados às fichas da Fase 02 | [Christopher Paraizo](https://github.com/wChrstphr) | |

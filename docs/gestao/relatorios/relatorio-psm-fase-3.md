@@ -237,6 +237,4 @@ Em continuidade às decisões D1 a D6 registradas na Linha de Base da Entrega 1 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 12/11/2026 | Registro das medições PSM/CID da Fase 3, comparação com as Fases 1 e 2, análise da extensão de prazo e decisões de gestão D7 a D10 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Christopher Paraizo](https://github.com/wChrstphr) |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: números da Fase 3 pelo retrato de 18/11, Fases 1 e 2 pela linha de base do plano, limiares alinhados ao plano, Introdução e Metodologia separadas | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: links ao Plano de Medição PSM ajustados à nova numeração das seções | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: nome completo de Letícia de Carvalho no texto | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: números da Fase 3 pelo retrato de 18/11, Fases 1 e 2 pela linha de base do plano, limiares alinhados ao plano, Introdução e Metodologia separadas, links ao Plano de Medição PSM ajustados à nova numeração das seções, nome completo de Letícia de Carvalho no texto | [Christopher Paraizo](https://github.com/wChrstphr) | |
