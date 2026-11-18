@@ -1,0 +1,10 @@
+arquivo,tratado_menu,tratado_arrastar,tratado_consolidado
+invalido_01_vazio.excalidraw,sim,sim,sim
+invalido_02_json_malformado.excalidraw,sim,sim,sim
+invalido_03_sem_campo_type.excalidraw,sim,sim,sim
+invalido_04_type_desconhecido.excalidraw,sim,sim,sim
+invalido_05_elementos_sem_campos_obrigatorios.excalidraw,sim,sim,sim
+invalido_06_coordenadas_nao_numericas.excalidraw,sim,sim,sim
+invalido_07_binario_renomeado.excalidraw,sim,sim,sim
+invalido_08_png_sem_desenho.png,sim,nao,nao
+invalido_09_truncado_no_meio.excalidraw,sim,sim,sim

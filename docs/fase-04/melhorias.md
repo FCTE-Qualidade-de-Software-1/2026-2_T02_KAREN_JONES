@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: Oportunidades de melhoria
-description: Pontos de melhoria e de atenção de G1, G2 e G3, critérios de priorização, ações escolhidas, modelo de documentação de propriedade e critérios de sucesso
+description: Pontos de melhoria e de atenção de G1, G2 e G3, critérios de priorização, ações escolhidas, modelo de documentação de propriedade e resultado das ações
 ---
 
 import Link from '@docusaurus/Link';
@@ -12,7 +12,7 @@ import Link from '@docusaurus/Link';
 
 A avaliação deve terminar com oportunidades de melhoria baseadas nas métricas e nos julgamentos, e com pelo menos uma ação executada, justificada pelas evidências [[1, p. 3]](#ref-1). Na interpretação do GQM, é a equipe que traduz as conclusões em ações [[2, p. 60]](#ref-2). Esta página lista os pontos de melhoria de [G1](./resultados-g1-manutenibilidade.md), [G2](./resultados-g2-confiabilidade.md) e [G3](./resultados-g3-flexibilidade.md) e registra as duas ações escolhidas pela equipe, conforme a [interpretação e revisão](../fase-03/plano-analise.md#6-interpretação-e-revisão) do plano de análise.
 
-A primeira ação documenta as propriedades públicas da biblioteca que estão sem documentação ([M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas)). É a única oportunidade pequena que muda o julgamento de uma característica: com ela, a manutenibilidade passa a atender. A segunda corrige a importação de arquivos `.excalidraw` cujos elementos são todos inválidos ([M2.3.1](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem)), um problema de confiabilidade que chega ao usuário como cena vazia ou tela branca.
+A primeira ação documenta as propriedades públicas da biblioteca que estão sem documentação ([M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas)). É a única oportunidade pequena que muda o julgamento de uma característica: com ela, a manutenibilidade passa a atender. A segunda corrige a importação de arquivos `.excalidraw` cujos elementos são todos inválidos ([M2.3.1](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem)), um problema de confiabilidade que chega ao usuário como cena vazia ou tela branca. As duas ações foram enviadas ao Excalidraw como *pull requests*, e o efeito medido está na [seção 5](#5-resultado-das-ações).
 
 ## Metodologia
 
@@ -81,7 +81,7 @@ A [análise de G3](./resultados-g3-flexibilidade.md#6-pontos-de-melhoria-e-de-at
 
 **Ação:** documentar as propriedades de `ExcalidrawProps`, a interface pública do componente da biblioteca, que não têm documentação. No commit avaliado eram 22 de 52, por exemplo `initialState`, `onMount`, `onExport` e `aiEnabled`, listadas em [`M1.2.2_propriedades.csv`](../../dados/fase-04/brutos/M1.2.2_propriedades.csv). No ramo principal, em 16/11/2026, a interface tem 53 propriedades, com a nova `renderEnvironment`, e as mesmas 30 documentadas (56,6%).
 
-**Tipo:** templates técnicos, que a especificação indica quando o problema é ausência ou fragilidade da documentação [[1, p. 3]](#ref-1). A ação disponibiliza o [modelo de documentação de propriedade](#3-modelo-de-documentação-de-propriedade) e o aplica às propriedades sem documentação em um *pull request* para o Excalidraw, nas páginas de propriedades e nos comentários JSDoc do tipo.
+**Tipo:** templates técnicos, que a especificação indica quando o problema é ausência ou fragilidade da documentação [[1, p. 3]](#ref-1). A ação disponibiliza o [modelo de documentação de propriedade](#3-modelo-de-documentação-de-propriedade) e o aplica às propriedades sem documentação em um *pull request* para o Excalidraw, nas páginas de propriedades e, quando o comportamento não aparece no nome nem no tipo, em comentários JSDoc do tipo.
 
 **Justificativa:** com 80% ou mais, M1.2.2 chega ao nível `+`. Q1.2 passa então para média 2,5, nível `-`, e G1 para média 3,1, nível `o`, sem nenhuma questão em `--`. Pelo [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica), G1 passa a **atender**. Com 95% ou mais, M1.2.2 chega ao nível `++` e Q1.2 ao nível `o`. M1.2.1 teria o mesmo efeito, mas exigiria uma mudança grande na arquitetura dos pacotes.
 
@@ -120,7 +120,7 @@ Cada propriedade de `ExcalidrawProps` é documentada com quatro campos:
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-O modelo é aplicado em dois lugares. Na documentação para desenvolvedores, cada propriedade ganha uma linha na tabela de `dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx`, com nome, tipo, valor padrão e descrição curta, e uma seção própria com a descrição completa. No código, ganha um comentário JSDoc em `packages/excalidraw/types.ts`, que vai para as definições de tipo publicadas no pacote e aparece no editor de quem integra a biblioteca. Para a propriedade `theme`, já documentada, o modelo fica assim:
+O modelo é aplicado em dois lugares. Na documentação para desenvolvedores, cada propriedade ganha uma linha na tabela de `dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx`, com nome, tipo, valor padrão e descrição curta, e uma seção própria com a descrição completa. No código, ganha um comentário JSDoc em `packages/excalidraw/types.ts` só quando tem um comportamento que o nome e o tipo não mostram, para que o comentário não repita a declaração. O JSDoc vai para as definições de tipo publicadas no pacote e aparece no editor de quem integra a biblioteca. Para a propriedade `theme`, já documentada, o modelo fica assim:
 
 ```md
 | [`theme`](#theme) | `"light"` &#124; `"dark"` | `"light"` | The theme of the Excalidraw component |
@@ -142,7 +142,50 @@ theme?: Theme;
 
 A documentação para desenvolvedores do Excalidraw mudou para `plus.excalidraw.com/docs/sdk`. O `README.md` da pasta `dev-docs`, no ramo principal em 17/11/2026, avisa que todas as páginas antigas redirecionam para o endereço novo e que mudanças na pasta não são mais publicadas [[4]](#ref-4). O site novo não indica onde fica o seu código-fonte.
 
-Isso não muda a medição de M1.2.2, cuja ficha conta as páginas da pasta `dev-docs`, mas limita o alcance da documentação escrita ali. Por isso a ação de M1.2.2 também documenta as propriedades no JSDoc, que chega a quem usa o pacote, e o *pull request* pergunta aos mantenedores onde contribuir com o site novo. A mesma limitação vale para as melhorias de M3.4.3 e de M3.3.2, que também mudam páginas da pasta `dev-docs`.
+Isso não muda a medição de M1.2.2, cuja ficha conta as páginas da pasta `dev-docs`, mas limita o alcance da documentação escrita ali. A página de propriedades do site novo, consultada em 18/11/2026, também não lista propriedades como `className`, `initialState` e `onThemeChange` [[5]](#ref-5). Por isso o *pull request* de M1.2.2 se oferece para levar o conteúdo ao site novo, e as propriedades de comportamento menos óbvio ganham JSDoc, que chega a quem usa o pacote. A mesma limitação vale para as melhorias de M3.4.3 e de M3.3.2, que também mudam páginas da pasta `dev-docs`.
+
+---
+
+## 5. Resultado das ações
+
+As duas medições usam como base o commit `9fbeaed` do ramo principal, de 17/11/2026, e não o commit avaliado `e1b7aac`, porque os *pull requests* precisam partir do código atual. Os dados brutos estão em [`acao-melhoria/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/tree/main/dados/fase-04/brutos/acao-melhoria).
+
+### 5.1 M1.2.2
+
+O [*pull request* #12673](https://github.com/excalidraw/excalidraw/pull/12673) documenta as 23 propriedades que faltavam em `props.mdx` e acrescenta JSDoc a seis delas. As propriedades foram contadas de novo pelo procedimento da [ficha](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas), antes e depois da mudança:
+
+<p className="tabela-titulo">Tabela 5: M1.2.2 antes e depois da ação</p>
+
+| Medição | Commit | Documentadas | Valor e nível |
+| :--- | :--- | :---: | :--- |
+| Antes | `9fbeaed` | 30 de 53 | [56,6%](../../dados/fase-04/brutos/acao-melhoria/M1.2.2/M1.2.2_propriedades_antes.csv) `-` |
+| Depois | `23cfe40` | 53 de 53 | [100%](../../dados/fase-04/brutos/acao-melhoria/M1.2.2/M1.2.2_propriedades_depois.csv) `++` |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+`onExcalidrawAPI` e `onPointerUp` continuam contadas como documentadas por páginas com outro nome, o mesmo julgamento da coleta original. Com M1.2.2 no nível `++`, Q1.2 passa para média (1 + 5) ÷ 2 = 3,0, nível `o`, e G1 para (3,3 + 3,0 + 3,0 + 3,0 + 3,7) ÷ 5 = 3,2, nível `o`, sem nenhuma questão em `--`. Pelo [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica), G1 passaria a **atender** com a mudança incorporada. O julgamento publicado em [resultados de G1](./resultados-g1-manutenibilidade.md) continua sendo o do commit avaliado. O critério de sucesso, 80% ou mais, foi atingido.
+
+Na revisão das propriedades, a ação encontrou um defeito: `objectsSnapModeEnabled` está declarada em `ExcalidrawProps`, mas o componente não a repassa ao editor e ela não tem efeito. A documentação registra esse comportamento.
+
+### 5.2 M2.3.1
+
+O [*pull request* #12674](https://github.com/excalidraw/excalidraw/pull/12674) adiciona a regra e um teste com quatro casos. A coleta foi repetida em três versões do editor, todas no fork [`wChrstphr/excalidraw-fork`](https://github.com/wChrstphr/excalidraw-fork), com os mesmos nove arquivos inválidos:
+
+<p className="tabela-titulo">Tabela 6: M2.3.1 nas três versões do editor</p>
+
+| Versão | Commit | Casos tratados | Valor e nível |
+| :--- | :--- | :---: | :--- |
+| Base | `9fbeaed` | 6 de 9 | [66,67%](../../dados/fase-04/brutos/acao-melhoria/M2.3.1/antes/M2.3.1_casos.csv) `o` |
+| Base com a regra | `adfc0f0` | 7 de 9 | [77,78%](../../dados/fase-04/brutos/acao-melhoria/M2.3.1/regra/M2.3.1_casos.csv) `o` |
+| Base com a regra e os *pull requests* #11990 e #11991 | `a176e93` | 8 de 9 | [88,89%](../../dados/fase-04/brutos/acao-melhoria/M2.3.1/medicao/M2.3.1_casos.csv) `+` |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+Só com a regra, `invalido_05` passa a mostrar a mensagem de arquivo inválido. Com os dois *pull requests* de outro contribuidor, `invalido_06` também, em vez de deixar a tela branca ao inserir um texto. Q2.3 passa para média (4 + 5) ÷ 2 = 4,5, arredondada para o nível `+`, e G2 para (3,0 + 4,5 + 4,5 + 4,0) ÷ 4 = 4,0, nível `+`. O julgamento de G2 não muda, porque a característica já atende.
+
+O critério de sucesso foi atingido em parte. `invalido_05` é tratado só com a regra, mas M2.3.1 chega a 8 de 9, e não a 9 de 9, por causa de `invalido_08`. Ao arrastar um PNG sem cena para o editor, o código insere o arquivo como imagem e não mostra mensagem. Esse comportamento é intencional e já existia no commit avaliado. A captura da coleta original, [`M2.3.1_invalido_08_arrastar.png`](../../dados/fase-04/brutos/Q2.3-tolerancia-a-falhas/M2.3.1_prints/M2.3.1_invalido_08_arrastar.png), mostra a mesma imagem inserida, embora a planilha registre uma mensagem. Pela ficha, o caso não é tratado. M2.3.1 no commit avaliado seria então 6 de 9, e não 7 de 9, no mesmo nível `o`, sem mudar Q2.3 nem o julgamento de G2.
+
+A coleta seguiu o procedimento da [ficha](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem), com três desvios. Foi automatizada pelo script [`coleta_m231_playwright.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/coleta_m231_playwright.py), no Firefox 159.0 sem interface, com capturas de cada tentativa. O editor rodou no servidor de desenvolvimento, e não no contêiner Docker, para expor a cena ao script. Depois do retângulo, o script também insere um texto, porque é nesse passo que `invalido_06` deixa a tela branca, como na coleta original.
 
 ---
 
@@ -155,6 +198,8 @@ Isso não muda a medição de M1.2.2, cuja ficha conta as páginas da pasta `dev
 > <Link id="ref-3">3.</Link> EXCALIDRAW. Contributing. *Excalidraw SDK docs*. Disponível em: [https://plus.excalidraw.com/docs/sdk/contributing](https://plus.excalidraw.com/docs/sdk/contributing). Acesso em: 18 nov. 2026.
 >
 > <Link id="ref-4">4.</Link> EXCALIDRAW. dev-docs/README.md. *Repositório excalidraw/excalidraw*, commit `9fbeaed`. Disponível em: [https://github.com/excalidraw/excalidraw/blob/9fbeaed54aaad8dc06d32ba176a9bc20fb827109/dev-docs/README.md](https://github.com/excalidraw/excalidraw/blob/9fbeaed54aaad8dc06d32ba176a9bc20fb827109/dev-docs/README.md). Acesso em: 18 nov. 2026.
+>
+> <Link id="ref-5">5.</Link> EXCALIDRAW. Props. *Excalidraw SDK docs*. Disponível em: [https://plus.excalidraw.com/docs/sdk/excalidraw/api/props](https://plus.excalidraw.com/docs/sdk/excalidraw/api/props). Acesso em: 18 nov. 2026.
 
 ---
 
@@ -165,3 +210,4 @@ Isso não muda a medição de M1.2.2, cuja ficha conta as páginas da pasta `dev
 | 1.0 | 15/11/2026 | Criação da proposta de oportunidades de G1 e G3, dos pontos de atenção de G3 levantados por Maria Eduarda, da ação proposta, do critério de sucesso e da avaliação do tamanho | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.1 | 17/11/2026 | Correção da proposta para M3.1.2, que tratava a desativação do SSR como alternativa às falhas de hooks e de runtime JSX, conforme a revisão do PR | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 18/11/2026 | Inclusão das oportunidades e dos pontos de atenção de G2, registro das duas ações escolhidas (M1.2.2 e M2.3.1) com critérios de sucesso, modelo de documentação de propriedade e nota sobre a mudança da documentação oficial | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 18/11/2026 | Registro do resultado das duas ações, com os *pull requests* enviados ao Excalidraw, as medições antes e depois, o efeito nos julgamentos e a divergência de `invalido_08` na coleta original | [Christopher Paraizo](https://github.com/wChrstphr) | |
