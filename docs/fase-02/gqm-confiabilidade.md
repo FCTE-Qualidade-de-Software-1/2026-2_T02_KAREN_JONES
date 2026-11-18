@@ -14,7 +14,11 @@ Esta página detalha o objetivo [G2](./estrutura-gqm.md#g2-confiabilidade), que 
 
 ## Metodologia
 
-As questões caracterizam o produto em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Confiabilidade](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) da Fase 01. As hipóteses foram formuladas antes da coleta, uma por métrica, e são as mesmas da [abstraction sheet de G2](./abstraction-sheets.md#3-g2-confiabilidade), como a aula permite [[1, p. 34]](#ref-1). Cada hipótese tem uma única afirmação e uma regra que a confirma ou refuta, com limite nas fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) da métrica ou na própria definição dela. As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1), e as métricas foram verificadas na versão avaliada quanto à possibilidade de coleta [[1, p. 42]](#ref-1).
+As questões caracterizam o produto em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Confiabilidade](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) da Fase 01.
+
+As hipóteses seguem a [regra definida no método](./estrutura-gqm.md#1-o-que-é-o-gqm) e são as mesmas da [abstraction sheet de G2](./abstraction-sheets.md#3-g2-confiabilidade), como a aula permite [[1, p. 34]](#ref-1).
+
+As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1).
 
 ---
 
@@ -46,7 +50,7 @@ As definições abaixo valem para todas as métricas de G2 e evitam que pessoas 
 - **Ambiente de teste:** a aplicação web construída a partir da versão avaliada, executada localmente com a configuração de produção do repositório, em um navegador de versão fixa. O ambiente exato (máquina, sistema operacional, navegador e versões) é definido no plano de avaliação da Fase 03 e registrado em cada coleta.
 - **Cena de referência:** desenho padronizado usado nos testes, com ao menos um elemento de cada tipo principal: retângulo, elipse, losango, seta, linha, desenho livre, texto, texto dentro de forma, imagem e moldura (*frame*).
 
-Os fatores que podem influenciar os resultados também são registrados junto com cada coleta [[1, p. 38]](#ref-1): o commit avaliado, a janela histórica, o navegador e sua versão, e o estado da rede durante os testes. Esses fatores foram levantados na [abstraction sheet de G2](./abstraction-sheets.md#3-g2-confiabilidade).
+Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-cada-métrica) de G2, levantados na [abstraction sheet de G2](./abstraction-sheets.md#3-g2-confiabilidade), são registrados junto com cada coleta: o commit avaliado, a janela histórica, o navegador e sua versão, e o estado da rede durante os testes.
 
 ---
 
@@ -94,7 +98,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | API GraphQL do GitHub (`gh api graphql`), campo `closingIssuesReferences` de cada correção, com a data de abertura de cada relato ligado. |
 | Critério de interpretação | Confirma [H2.1.2](#3-q21-ausência-de-falhas) se a mediana for de no máximo 30 dias. Medianas longas indicam que o usuário convive mais tempo com o defeito. Se poucas correções estiverem ligadas a relatos, o resultado vale só para essa parte e isso é registrado. |
 | Questão respondida | Q2.1 |
-| Características desejáveis | Objetiva, porque as datas vêm do registro do GitHub. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para o tratamento dos defeitos (RQ-CONF-02). |
+| Características desejáveis | Objetiva, porque as datas vêm do registro do GitHub. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para o tratamento dos defeitos ([RQ-CONF-02](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade)). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -110,7 +114,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | API GraphQL do GitHub, campo `reviews` com estado `APPROVED` de cada contribuição, comparando o autor da revisão com o autor da contribuição. As verificações automáticas são as mesmas medidas no objetivo de Manutenibilidade, em [M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) e [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração), e não são contadas de novo aqui. |
 | Critério de interpretação | Confirma [H2.1.3](#3-q21-ausência-de-falhas) se o valor for de pelo menos 95%. Contribuições integradas sem revisão dependem só das verificações automáticas para evitar falhas. |
 | Questão respondida | Q2.1 |
-| Características desejáveis | Simples. Objetiva, porque usa o registro de revisões do GitHub. Fácil de coletar automaticamente. Válida para RQ-CONF-01. |
+| Características desejáveis | Simples. Objetiva, porque usa o registro de revisões do GitHub. Fácil de coletar automaticamente. Válida para [RQ-CONF-01](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -159,7 +163,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Abrir o editor com o cache vazio, exportar o registro de rede das ferramentas do navegador e listar os domínios. Repetir a abertura com cada domínio bloqueado pela opção de bloqueio de requisições do navegador. |
 | Critério de interpretação | Confirma [H2.2.2](#4-q22-disponibilidade) se nenhum domínio externo for indispensável. Cada domínio indispensável é um serviço cuja queda deixa o editor indisponível. |
 | Questão respondida | Q2.2 |
-| Características desejáveis | Objetiva, porque os domínios saem do registro do navegador. Fácil de coletar com ferramentas do próprio navegador. Válida para RQ-CONF-04. |
+| Características desejáveis | Objetiva, porque os domínios saem do registro do navegador. Fácil de coletar com ferramentas do próprio navegador. Válida para [RQ-CONF-04](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -189,10 +193,10 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Definição | Percentual de casos de uma lista fixa de arquivos inválidos ou corrompidos em que o editor exibe uma mensagem de erro e continua utilizável. |
 | Procedimento de cálculo | Lista de casos: (1) arquivo vazio com extensão `.excalidraw`, (2) JSON com erro de sintaxe, (3) JSON válido sem o campo `type`, (4) campo `type` com valor desconhecido, (5) lista de elementos com campos obrigatórios ausentes, (6) elemento com coordenadas não numéricas, (7) arquivo binário qualquer renomeado para `.excalidraw`, (8) imagem PNG sem desenho incorporado e (9) arquivo `.excalidraw` truncado no meio. Um caso é tratado se o editor mostra uma mensagem e, em seguida, ainda permite criar formas sem recarregar a página. Calcular (casos tratados ÷ 9) × 100. Unidade: percentual. Escala: 0 a 100. |
 | Fonte dos dados | Aplicação web no ambiente de teste e arquivos de teste preparados pela equipe e guardados no repositório da avaliação. |
-| Procedimento de coleta | Abrir cada arquivo pelo menu de abertura e, em outra rodada, arrastando o arquivo para o editor. Registrar a mensagem exibida (ou a ausência dela) e se o editor continua utilizável, com captura de tela. |
+| Procedimento de coleta | Abrir cada arquivo pelo menu de abertura e, em outra rodada, arrastando o arquivo para o editor. Registrar a mensagem exibida (ou a ausência dela) e se o editor continua utilizável, com captura de tela. Um arquivo só conta como tratado se for tratado nas duas rodadas. |
 | Critério de interpretação | Confirma [H2.3.1](#5-q23-tolerância-a-falhas) se o valor for 100%. Cada caso não tratado é uma forma de o usuário travar o editor ou perder o trabalho em andamento. |
 | Questão respondida | Q2.3 |
-| Características desejáveis | Objetiva e consistente, porque os arquivos são fixos e o critério de tratamento é definido antes do teste. Robusta, porque os mesmos arquivos servem para outras versões. Válida para RQ-CONF-07. |
+| Características desejáveis | Objetiva e consistente, porque os arquivos são fixos e o critério de tratamento é definido antes do teste. Robusta, porque os mesmos arquivos servem para outras versões. Válida para [RQ-CONF-07](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -208,7 +212,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Teste manual roteirizado, repetido três vezes, com o modo *offline* das ferramentas do navegador para interromper a rede. Cada verificação passa se passar nas três repetições. |
 | Critério de interpretação | Confirma [H2.3.2](#5-q23-tolerância-a-falhas) se as verificações 1 a 4 passarem. A verificação 5 mostra se o trabalho feito durante a falha é preservado na sessão compartilhada. |
 | Questão respondida | Q2.3 |
-| Características desejáveis | Objetiva, porque cada verificação tem resultado binário definido antes do teste. Robusta, por exigir três repetições. Válida para RQ-CONF-05 e RQ-CONF-06. |
+| Características desejáveis | Objetiva, porque cada verificação tem resultado binário definido antes do teste. Robusta, por exigir três repetições. Válida para [RQ-CONF-05](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) e [RQ-CONF-06](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -242,7 +246,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Montar a cena de referência, executar cada cenário e comparar a cena reaberta com a original exportando ambas em `.excalidraw` e comparando os elementos com um script. |
 | Critério de interpretação | Confirma [H2.4.1](#6-q24-recuperabilidade) se o valor for 100%. Cada cenário que falha é uma situação em que o usuário perde trabalho sem ter salvo um arquivo. |
 | Questão respondida | Q2.4 |
-| Características desejáveis | Objetiva, porque a comparação entre as cenas é feita por script. Válida para RQ-CONF-08. Robusta, porque os cenários podem ser repetidos em outros navegadores. |
+| Características desejáveis | Objetiva, porque a comparação entre as cenas é feita por script. Válida para [RQ-CONF-08](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). Robusta, porque os cenários podem ser repetidos em outros navegadores. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -258,7 +262,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Gerar os arquivos em cada versão anterior, abri-los na versão avaliada e comparar os elementos com um script. |
 | Critério de interpretação | Confirma [H2.4.2](#6-q24-recuperabilidade) se o valor for 100%. Cada arquivo com perda indica um desenho antigo que o usuário não consegue recuperar como foi salvo. |
 | Questão respondida | Q2.4 |
-| Características desejáveis | Objetiva, porque a comparação é feita por script sobre um conjunto fixo. Robusta, porque o conjunto pode crescer com novas versões. Válida para RQ-CONF-09 e RQ-CONF-10. |
+| Características desejáveis | Objetiva, porque a comparação é feita por script sobre um conjunto fixo. Robusta, porque o conjunto pode crescer com novas versões. Válida para [RQ-CONF-09](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) e [RQ-CONF-10](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -274,7 +278,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Teste manual roteirizado, exportando a cena antes da ação, depois da ação, depois de desfazer e depois de refazer, e comparando as exportações com um script. |
 | Critério de interpretação | Confirma [H2.4.3](#6-q24-recuperabilidade) se o valor for 100%. Cada tipo de ação que não pode ser desfeito é um erro do usuário que não tem volta. |
 | Questão respondida | Q2.4 |
-| Características desejáveis | Simples. Objetiva, porque a comparação é feita por script. Válida para RQ-CONF-11. Robusta, porque a lista pode ser repetida em outras versões. |
+| Características desejáveis | Simples. Objetiva, porque a comparação é feita por script. Válida para [RQ-CONF-11](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). Robusta, porque a lista pode ser repetida em outras versões. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -286,11 +290,11 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 | Requisito | Subcaracterística | Questão | Métricas | Atendimento |
 | :--- | :--- | :--- | :--- | :--- |
-| [RQ-CONF-01](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Ausência de falhas | [Q2.1](#3-q21-ausência-de-falhas) | [M2.1.3](#m213-proporção-de-contribuições-revisadas-antes-da-integração) | Total, junto com [M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) e [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração) de G1, que medem as verificações automáticas. |
+| [RQ-CONF-01](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Ausência de falhas | [Q2.1](#3-q21-ausência-de-falhas) | [M2.1.3](#m213-proporção-de-contribuições-revisadas-antes-da-integração) | Total, junto com [M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) e [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração) de G1, que medem as verificações automáticas. Essas duas métricas entram na nota de G1, e não na de Q2.1. |
 | [RQ-CONF-02](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Ausência de falhas | [Q2.1](#3-q21-ausência-de-falhas) | [M2.1.1](#m211-proporção-de-correções-entre-as-contribuições-integradas), [M2.1.2](#m212-mediana-do-tempo-entre-o-relato-e-a-correção) | Parcial: mede a correção dos defeitos e o tempo até ela, e não a classificação dos relatos, que em geral não recebem rótulo ([seção 2](#2-convenções-de-coleta)). |
 | [RQ-CONF-03](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Disponibilidade | [Q2.2](#4-q22-disponibilidade) | [M2.2.1](#m221-proporção-de-funções-essenciais-disponíveis-sem-conexão) | Total. |
 | [RQ-CONF-04](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Disponibilidade | [Q2.2](#4-q22-disponibilidade) | [M2.2.2](#m222-origens-externas-necessárias-para-o-editor-local) | Total. |
-| [RQ-CONF-05](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Tolerância a falhas | [Q2.3](#5-q23-tolerância-a-falhas) | [M2.2.1](#m221-proporção-de-funções-essenciais-disponíveis-sem-conexão), [M2.2.2](#m222-origens-externas-necessárias-para-o-editor-local), [M2.3.2](#m232-continuidade-do-editor-após-falha-da-colaboração) | Total: M2.2.1 testa o editor sem conexão, M2.2.2 com cada serviço externo bloqueado e M2.3.2 com a colaboração interrompida. |
+| [RQ-CONF-05](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Tolerância a falhas | [Q2.3](#5-q23-tolerância-a-falhas) | [M2.2.1](#m221-proporção-de-funções-essenciais-disponíveis-sem-conexão), [M2.2.2](#m222-origens-externas-necessárias-para-o-editor-local), [M2.3.2](#m232-continuidade-do-editor-após-falha-da-colaboração) | Total: M2.2.1 testa o editor sem conexão, M2.2.2 com cada serviço externo bloqueado e M2.3.2 com a colaboração interrompida. M2.2.1 e M2.2.2 entram na nota de [Q2.2](#4-q22-disponibilidade), e não na de Q2.3. |
 | [RQ-CONF-06](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Tolerância a falhas | [Q2.3](#5-q23-tolerância-a-falhas) | [M2.3.2](#m232-continuidade-do-editor-após-falha-da-colaboração) | Total. |
 | [RQ-CONF-07](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Tolerância a falhas | [Q2.3](#5-q23-tolerância-a-falhas) | [M2.3.1](#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem) | Parcial: verifica se o editor exibe uma mensagem e continua utilizável, e não se a mensagem orienta a próxima ação. |
 | [RQ-CONF-08](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) | Recuperabilidade | [Q2.4](#6-q24-recuperabilidade) | [M2.4.1](#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) | Total. |
@@ -306,7 +310,7 @@ Todos os 11 requisitos de Confiabilidade da Fase 01 são atendidos por pelo meno
 
 ## 8. Verificação das métricas
 
-A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo [[1, p. 42]](#ref-1). A equipe fez essa verificação no código da versão avaliada e no repositório oficial, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+A [verificação das métricas](./estrutura-gqm.md#5-ficha-de-cada-métrica) de G2 foi feita no código da versão avaliada e no repositório oficial.
 
 <p className="tabela-titulo">Tabela 17: Verificação das métricas de G2</p>
 
@@ -342,3 +346,5 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | 1.1 | 27/10/2026 | Troca dos travessões dos títulos das questões e das métricas, links para os requisitos, as questões, as métricas, o escopo, a abstraction sheet, os níveis de pontuação e as métricas de G1 citadas, critérios de interpretação ligados aos níveis de pontuação, coluna de atendimento na rastreabilidade, com dois requisitos atendidos em parte e M2.2.1 e M2.2.2 ligadas a RQ-CONF-05 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 10/11/2026 | Introdução e Metodologia em texto corrido, com a regra das hipóteses dita uma única vez. O template do objetivo passa a ser apontado na página do método. Tabelas com título e fonte, citações numeradas, referências restritas às citadas e listas sem ponto e vírgula | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: regra de combinação das duas vias de M2.3.1 e nota em RQ-CONF-01 e RQ-CONF-05 sobre a questão em que cada métrica entra na nota | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 18/11/2026 | Revisão de coerência, cross-links e redação: metodologia em parágrafos curtos, regra das hipóteses, fatores e verificação trocados por links à estrutura do GQM e requisitos das características desejáveis com link | [Christopher Paraizo](https://github.com/wChrstphr) | |

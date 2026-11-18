@@ -14,7 +14,11 @@ Esta página detalha o objetivo [G1](./estrutura-gqm.md#g1-manutenibilidade), qu
 
 ## Metodologia
 
-As questões caracterizam o código em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Manutenibilidade](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) da Fase 01. As hipóteses foram formuladas antes da coleta, uma por métrica, e são as mesmas da [abstraction sheet de G1](./abstraction-sheets.md#2-g1-manutenibilidade), como a aula permite [[1, p. 34]](#ref-1). Cada hipótese tem uma única afirmação e uma regra que a confirma ou refuta, com limite nas fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) da métrica ou na própria definição dela. As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1), e as métricas foram verificadas na versão avaliada quanto à possibilidade de coleta [[1, p. 42]](#ref-1).
+As questões caracterizam o código em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Manutenibilidade](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) da Fase 01.
+
+As hipóteses seguem a [regra definida no método](./estrutura-gqm.md#1-o-que-é-o-gqm) e são as mesmas da [abstraction sheet de G1](./abstraction-sheets.md#2-g1-manutenibilidade), como a aula permite [[1, p. 34]](#ref-1).
+
+As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1).
 
 ---
 
@@ -48,7 +52,7 @@ As definições abaixo valem para todas as métricas de G1 e evitam que pessoas 
 - **Janela histórica:** contribuições integradas ao ramo principal entre 18/04/2026 e 18/10/2026, os seis meses que antecedem a versão avaliada. A janela delimita os dados de histórico do projeto ([objeto O6 do escopo](../fase-01/escopo-avaliacao.md)).
 - **Contribuição integrada:** *pull request* aceito (*merged*) no ramo principal do repositório.
 
-Os fatores que podem influenciar os resultados também são registrados junto com cada coleta [[1, p. 38]](#ref-1): o commit avaliado, a janela histórica e a versão de cada ferramenta. Esses fatores foram levantados na [abstraction sheet de G1](./abstraction-sheets.md#2-g1-manutenibilidade).
+Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-cada-métrica) de G1, levantados na [abstraction sheet de G1](./abstraction-sheets.md#2-g1-manutenibilidade), são registrados junto com cada coleta: o commit avaliado, a janela histórica e a versão de cada ferramenta.
 
 ---
 
@@ -96,7 +100,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | O grafo de importações de valor de [M1.1.1](#m111-ciclos-de-dependência-entre-pacotes), em que o Madge já resolve os destinos para arquivos. Um script classifica cada aresta pelas duas condições e conta as que as violam. O ESLint do projeto não serve sozinho como coleta, porque a regra não trata de importações da aplicação web e só é aplicada nos pacotes cuja configuração a estende (`common` e `element`). |
 | Critério de interpretação | Confirma [H1.1.2](#3-q11-modularidade) se o valor for 0. Cada importação encontrada é um ponto em que o código não respeita a arquitetura que o próprio projeto declara. |
 | Questão respondida | Q1.1 |
-| Características desejáveis | Simples e objetiva, porque a direção esperada vem de uma regra escrita pelo projeto, e não de opinião da equipe. Fácil de coletar. Válida para os limites entre aplicação, biblioteca e pacotes de base (RQ-MAN-01). |
+| Características desejáveis | Simples e objetiva, porque a direção esperada vem de uma regra escrita pelo projeto, e não de opinião da equipe. Fácil de coletar. Válida para os limites entre aplicação, biblioteca e pacotes de base ([RQ-MAN-01](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade)). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -133,6 +137,8 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
+H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1) usa a proporção sobre todos os pacotes de base. Hipótese e nível são avaliados separadamente, como explica a [seção 7.2 dos critérios de julgamento](./pontuacao-julgamento.md#72-hipóteses).
+
 ### M1.2.1: Arquivos de pacotes de base com dependência de React ou do navegador
 
 <p className="tabela-titulo">Tabela 7: Ficha da métrica M1.2.1</p>
@@ -161,7 +167,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Listar os nomes das propriedades declaradas no tipo e procurar cada nome nas páginas da documentação. Uma propriedade conta como documentada se tiver ao menos uma descrição do seu propósito. |
 | Critério de interpretação | Confirma [H1.2.2](#4-q12-reusabilidade) se o valor for de pelo menos 80% e menor que 100%. Quanto menor o valor, mais quem integra a biblioteca precisa ler o código para usá-la. |
 | Questão respondida | Q1.2 |
-| Características desejáveis | Simples (uma razão). Objetiva, porque a lista de propriedades vem do código. Fácil de coletar, com uma lista finita. Válida para a separação entre interface pública e detalhes internos (RQ-MAN-05). |
+| Características desejáveis | Simples (uma razão). Objetiva, porque a lista de propriedades vem do código. Fácil de coletar, com uma lista finita. Válida para a separação entre interface pública e detalhes internos ([RQ-MAN-05](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade)). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -211,7 +217,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Inspeção dos arquivos, preenchendo uma lista de verificação com o caminho do documento que comprova cada tópico. |
 | Critério de interpretação | Confirma [H1.3.2](#5-q13-analisabilidade) se os tópicos 1 e 2 estiverem presentes. Cada tópico ausente obriga quem chega ao projeto a descobrir a informação pelo código. |
 | Questão respondida | Q1.3 |
-| Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item exige um documento como evidência. Fácil de coletar. Válida para RQ-MAN-07. |
+| Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item exige um documento como evidência. Fácil de coletar. Válida para [RQ-MAN-07](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -227,7 +233,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Inspeção dos fluxos disparados por `pull_request` e dos scripts que eles chamam (por exemplo, `test:code`, `test:other` e `test:typecheck`). |
 | Critério de interpretação | Confirma [H1.3.3](#5-q13-analisabilidade) se o valor for 3. Uma verificação que não roda automaticamente depende da disciplina de cada contribuidor. |
 | Questão respondida | Q1.3 |
-| Características desejáveis | Simples e objetiva, com evidência nos arquivos de configuração. Fácil de coletar. Válida para RQ-MAN-08. |
+| Características desejáveis | Simples e objetiva, com evidência nos arquivos de configuração. Fácil de coletar. Válida para [RQ-MAN-08](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -261,7 +267,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | API do GitHub (`gh api`), listando as contribuições integradas na janela e os arquivos de cada uma (`pulls/{número}/files`). Contribuições automáticas de atualização de dependências e de traduções são excluídas e contadas à parte. |
 | Critério de interpretação | Confirma [H1.4.1](#6-q14-modificabilidade) se a mediana for de no máximo 4 arquivos. Medianas altas indicam que mudanças comuns exigem mexer em muitos lugares. |
 | Questão respondida | Q1.4 |
-| Características desejáveis | Simples. Objetiva, porque os dados vêm do registro do repositório. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para RQ-MAN-09. |
+| Características desejáveis | Simples. Objetiva, porque os dados vêm do registro do repositório. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para [RQ-MAN-09](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -327,7 +333,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Execução do comando do próprio projeto `yarn test:coverage` (Vitest), no ambiente definido no plano de avaliação, lendo o relatório `json` gerado, que traz as linhas cobertas de cada arquivo. Um script soma as linhas executáveis e as cobertas dos arquivos de cada pacote, segundo as [convenções da seção 2](#2-convenções-de-coleta), e calcula o percentual por pacote e no total. |
 | Critério de interpretação | Confirma [H1.5.1](#7-q15-testabilidade) se a cobertura da biblioteca for maior que a da aplicação web. Pacotes com cobertura baixa têm mais código que pode ser alterado sem nenhum teste perceber a mudança. Os limites mínimos já configurados pelo projeto em `vitest.config.mts` servem de referência. |
 | Questão respondida | Q1.5 |
-| Características desejáveis | Objetiva e consistente, porque usa a configuração do próprio projeto. Robusta, porque permite comparar pacotes. Fácil de coletar com um comando. Válida para RQ-MAN-11, com a limitação de que cobertura mede código executado, e não a qualidade das verificações. |
+| Características desejáveis | Objetiva e consistente, porque usa a configuração do próprio projeto. Robusta, porque permite comparar pacotes. Fácil de coletar com um comando. Válida para [RQ-MAN-11](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade), com a limitação de que cobertura mede código executado, e não a qualidade das verificações. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -343,7 +349,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Busca no código de teste (ferramenta `grep`) pelas chamadas e importações que definem cada nível. |
 | Critério de interpretação | Confirma [H1.5.2](#7-q15-testabilidade) se os testes unitários e de integração somarem mais de 50% dos arquivos de teste. Um nível ausente indica um tipo de falha que os testes automatizados não alcançam. |
 | Questão respondida | Q1.5 |
-| Características desejáveis | Objetiva, porque o critério de classificação é mecânico e não depende de julgamento. Fácil de coletar. Válida para RQ-MAN-12. |
+| Características desejáveis | Objetiva, porque o critério de classificação é mecânico e não depende de julgamento. Fácil de coletar. Válida para [RQ-MAN-12](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -359,7 +365,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | API do GitHub (`gh api`): para cada contribuição, as execuções do fluxo sobre o último commit (`actions/workflows/test-coverage-pr.yml/runs?head_sha=...`), os passos de cada job, com conclusão e horário de término (`actions/runs/{id}/jobs`), e o campo `merged_at` da contribuição (`pulls/{número}`). Um script aplica a regra do procedimento de cálculo. A existência de um *check* no commit não basta, porque a execução pode terminar depois da integração ou falhar na instalação das dependências, antes do passo de testes. |
 | Critério de interpretação | Confirma [H1.5.3](#7-q15-testabilidade) se o valor for de pelo menos 95%. Contribuições sem testes executados foram integradas sem verificação automática de comportamento. |
 | Questão respondida | Q1.5 |
-| Características desejáveis | Simples. Objetiva, porque usa os registros do próprio GitHub, e não a configuração declarada. Fácil de coletar automaticamente. Válida para RQ-MAN-13. |
+| Características desejáveis | Simples. Objetiva, porque usa os registros do próprio GitHub, e não a configuração declarada. Fácil de coletar automaticamente. Válida para [RQ-MAN-13](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -393,7 +399,7 @@ Todos os 13 requisitos de Manutenibilidade da Fase 01 são atendidos por pelo me
 
 ## 9. Verificação das métricas
 
-A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo [[1, p. 42]](#ref-1). A equipe fez essa verificação no código da versão avaliada, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+A [verificação das métricas](./estrutura-gqm.md#5-ficha-de-cada-métrica) de G1 foi feita no código da versão avaliada.
 
 <p className="tabela-titulo">Tabela 22: Verificação das métricas de G1</p>
 
@@ -423,7 +429,7 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 >
 > <Link id="ref-3">3.</Link> McCABE, T. J. A Complexity Measure. *IEEE Transactions on Software Engineering*, v. SE-2, n. 4, p. 308-320, 1976. Disponível em: [http://www.literateprogramming.com/mccabe.pdf](http://www.literateprogramming.com/mccabe.pdf). Acesso em: 10 nov. 2026.
 >
-> <Link id="ref-4">4.</Link> HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Página 6 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 10 nov. 2026.
+> <Link id="ref-4">4.</Link> HEITLAGER, I., KUIPERS, T. e VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Página 6 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 10 nov. 2026.
 >
 > <Link id="ref-5">5.</Link> EXCALIDRAW. Repositório oficial, commit `e1b7aac` de 18/10/2026. Disponível em: [https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0](https://github.com/excalidraw/excalidraw/tree/e1b7aacb356a492aa1e0fc6eb57b8896124027f0). Acesso em: 10 nov. 2026.
 
@@ -438,3 +444,5 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | 1.2 | 27/10/2026 | Troca dos travessões dos títulos das questões e das métricas, links para os requisitos, as métricas, o escopo, a abstraction sheet e os níveis de pontuação, critérios de interpretação ligados aos níveis de pontuação, cálculo do Princípio das Dependências Estáveis em M1.1.3 e do número de níveis em M1.5.2, versão do ESLint e soma por pacote em M1.5.1, atendimento parcial de quatro requisitos, citação de Martin (1997) no lugar de Martin (2002) | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.4 | 10/11/2026 | Introdução e Metodologia em texto corrido, com a regra das hipóteses dita uma única vez. O template do objetivo passa a ser apontado na página do método. Tabelas com título e fonte, citações numeradas e referências restritas às citadas | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 18/11/2026 | Revisão de coerência, cross-links e redação: nota de que H1.2.1 testa `math` e `utils`, enquanto a pontuação de M1.2.1 usa todos os pacotes de base, e pontuação da referência de Heitlager | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 18/11/2026 | Revisão de coerência, cross-links e redação: metodologia em parágrafos curtos, regra das hipóteses, fatores e verificação trocados por links à estrutura do GQM e requisitos das características desejáveis com link | [Christopher Paraizo](https://github.com/wChrstphr) | |

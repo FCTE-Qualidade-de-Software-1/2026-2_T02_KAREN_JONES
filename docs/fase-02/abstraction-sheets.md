@@ -14,7 +14,7 @@ Antes de escrever as questões e escolher as métricas, o GQM recomenda capturar
 
 ## Metodologia
 
-A aula recomenda entrevistas individuais com a equipe do projeto avaliado [[1, p. 28]](#ref-1). Como os mantenedores do Excalidraw não estão disponíveis, a própria equipe avaliadora preencheu as três *abstraction sheets*, em conjunto, na [reunião de 19/10/2026](../gestao/atas/2026-10-19-reuniao-gqm.md), assumindo o ponto de vista dos interessados de cada objetivo. A base foi a [descrição do produto](../fase-01/descricao-produto.md) e os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da Fase 01. Cada quadrante foi discutido até ser considerado satisfatoriamente completo [[1, p. 31]](#ref-1). O quadrante 2º foi refeito depois da escolha das métricas, para que cada hipótese tenha uma única afirmação, ligada a uma métrica, e uma regra que diz quando ela é confirmada. As métricas do quadrante 1º são candidatas: a seleção final é feita no detalhamento de cada objetivo, e as métricas que não vieram de uma candidata estão na [seção 6](#6-ajustes-feitos-no-detalhamento-do-gqm).
+A aula recomenda entrevistas individuais com a equipe do projeto avaliado [[1, p. 28]](#ref-1). Como os mantenedores do Excalidraw não estão disponíveis, a própria equipe avaliadora preencheu as três *abstraction sheets*, em conjunto, na [reunião de 19/10/2026](../gestao/atas/2026-10-19-reuniao-gqm.md), assumindo o ponto de vista dos interessados de cada objetivo. A base foi a [descrição do produto](../fase-01/descricao-produto.md) e os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da Fase 01. Cada quadrante foi discutido até ser considerado satisfatoriamente completo [[1, p. 31]](#ref-1). O quadrante 2º foi refeito depois da escolha das métricas, para seguir a [regra das hipóteses](./estrutura-gqm.md#1-o-que-é-o-gqm). As métricas do quadrante 1º são candidatas: a seleção final é feita no detalhamento de cada objetivo, e as métricas que não vieram de uma candidata estão na [seção 6](#6-ajustes-feitos-no-detalhamento-do-gqm).
 
 ---
 
@@ -63,26 +63,26 @@ As hipóteses podem ser valores individuais ou ideias comparativas, como "os X m
 
 ### 2º Hipóteses de baseline
 
-Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1).
+A regra que confirma ou refuta cada hipótese fica na tabela de hipóteses da questão, aberta pelo link do código, e usa os limites das [faixas de pontuação](./pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1).
 
 <p className="tabela-titulo">Tabela 4: Hipóteses de baseline de G1</p>
 
-| Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
-| :--- | :--- | :--- | :--- |
-| Modularidade | [H1.1.1](./gqm-manutenibilidade.md#3-q11-modularidade) | Não haverá ciclos de dependência entre os pacotes. | = 0 pares em ciclo |
-| Modularidade | [H1.1.2](./gqm-manutenibilidade.md#3-q11-modularidade) | As importações entre pacotes seguirão a direção declarada pelo projeto. | = 0 importações em desacordo |
-| Modularidade | [H1.1.3](./gqm-manutenibilidade.md#3-q11-modularidade) | A biblioteca `excalidraw` será o pacote que mais recebe dependências. | *Ca* da biblioteca > *Ca* de cada outro pacote |
-| Reusabilidade | [H1.2.1](./gqm-manutenibilidade.md#4-q12-reusabilidade) | Os pacotes `math` e `utils` não dependerão de React nem do navegador. | = 0 arquivos em `math` e `utils` |
-| Reusabilidade | [H1.2.2](./gqm-manutenibilidade.md#4-q12-reusabilidade) | A documentação cobrirá a maior parte das propriedades públicas, sem cobrir todas. | ≥ 80% e < 100% |
-| Analisabilidade | [H1.3.1](./gqm-manutenibilidade.md#5-q13-analisabilidade) | Haverá funções de complexidade muito alta no código. | > 0% das linhas em funções com complexidade acima de 50 |
-| Analisabilidade | [H1.3.2](./gqm-manutenibilidade.md#5-q13-analisabilidade) | A documentação para desenvolvedores cobrirá a contribuição e a preparação do ambiente. | tópicos (1) e (2) presentes |
-| Analisabilidade | [H1.3.3](./gqm-manutenibilidade.md#5-q13-analisabilidade) | Lint, formatação e tipos serão verificados automaticamente. | = 3 de 3 |
-| Modificabilidade | [H1.4.1](./gqm-manutenibilidade.md#6-q14-modificabilidade) | A maioria das contribuições alterará poucos arquivos de produção. | mediana ≤ 4 arquivos |
-| Modificabilidade | [H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade) | Poucos arquivos de produção serão extensos. | ≤ 5% dos arquivos com mais de 1.000 linhas |
-| Modificabilidade | [H1.4.3](./gqm-manutenibilidade.md#6-q14-modificabilidade) | Os arquivos extensos serão alterados com frequência. | > 10% das contribuições |
-| Testabilidade | [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade) | A biblioteca terá cobertura de testes maior que a da aplicação web. | cobertura da biblioteca > cobertura da aplicação web |
-| Testabilidade | [H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade) | Testes unitários e de integração serão a maior parte dos arquivos de teste. | > 50% dos arquivos de teste, somados |
-| Testabilidade | [H1.5.3](./gqm-manutenibilidade.md#7-q15-testabilidade) | Os testes rodarão em toda contribuição antes da integração. | ≥ 95% |
+| Subcaracterística | Hipótese | Enunciado |
+| :--- | :--- | :--- |
+| Modularidade | [H1.1.1](./gqm-manutenibilidade.md#3-q11-modularidade) | Não haverá ciclos de dependência entre os pacotes. |
+| Modularidade | [H1.1.2](./gqm-manutenibilidade.md#3-q11-modularidade) | As importações entre pacotes seguirão a direção declarada pelo projeto. |
+| Modularidade | [H1.1.3](./gqm-manutenibilidade.md#3-q11-modularidade) | A biblioteca `excalidraw` será o pacote que mais recebe dependências. |
+| Reusabilidade | [H1.2.1](./gqm-manutenibilidade.md#4-q12-reusabilidade) | Os pacotes `math` e `utils` não dependerão de React nem do navegador. |
+| Reusabilidade | [H1.2.2](./gqm-manutenibilidade.md#4-q12-reusabilidade) | A documentação cobrirá a maior parte das propriedades públicas, sem cobrir todas. |
+| Analisabilidade | [H1.3.1](./gqm-manutenibilidade.md#5-q13-analisabilidade) | Haverá funções de complexidade muito alta no código. |
+| Analisabilidade | [H1.3.2](./gqm-manutenibilidade.md#5-q13-analisabilidade) | A documentação para desenvolvedores cobrirá a contribuição e a preparação do ambiente. |
+| Analisabilidade | [H1.3.3](./gqm-manutenibilidade.md#5-q13-analisabilidade) | Lint, formatação e tipos serão verificados automaticamente. |
+| Modificabilidade | [H1.4.1](./gqm-manutenibilidade.md#6-q14-modificabilidade) | A maioria das contribuições alterará poucos arquivos de produção. |
+| Modificabilidade | [H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade) | Poucos arquivos de produção serão extensos. |
+| Modificabilidade | [H1.4.3](./gqm-manutenibilidade.md#6-q14-modificabilidade) | Os arquivos extensos serão alterados com frequência. |
+| Testabilidade | [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade) | A biblioteca terá cobertura de testes maior que a da aplicação web. |
+| Testabilidade | [H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade) | Testes unitários e de integração serão a maior parte dos arquivos de teste. |
+| Testabilidade | [H1.5.3](./gqm-manutenibilidade.md#7-q15-testabilidade) | Os testes rodarão em toda contribuição antes da integração. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -100,7 +100,7 @@ Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.m
 - É mais fácil acrescentar código a um componente existente do que criar um novo, o que faz os arquivos centrais crescerem e concentrarem funções complexas e alterações ([H1.3.1](./gqm-manutenibilidade.md#5-q13-analisabilidade), [H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade) e [H1.4.3](./gqm-manutenibilidade.md#6-q14-modificabilidade)).
 - As ferramentas obrigatórias reduzem a variação de estilo e fazem lint, tipos e testes rodarem em cada contribuição, mas não reduzem a complexidade das funções. O executor de testes do projeto, o Vitest, favorece testes unitários e de integração ([H1.3.3](./gqm-manutenibilidade.md#5-q13-analisabilidade), [H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade) e [H1.5.3](./gqm-manutenibilidade.md#7-q15-testabilidade)).
 - Um ritmo alto de entregas aumenta o número de alterações nos arquivos centrais e faz a documentação da interface pública e os testes da aplicação web ficarem para trás ([H1.2.2](./gqm-manutenibilidade.md#4-q12-reusabilidade), [H1.4.3](./gqm-manutenibilidade.md#6-q14-modificabilidade) e [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade)).
-- Tamanho, complexidade e razão de testes dependem da configuração da ferramenta. Se código gerado, testes e dependências não forem separados, os valores ficam distorcidos, o que afeta a leitura de [H1.3.1](./gqm-manutenibilidade.md#5-q13-analisabilidade), [H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade), [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade) e [H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade). Por isso, a configuração de cada ferramenta será registrada na ficha da métrica.
+- Tamanho, complexidade e distribuição dos testes por nível dependem da configuração da ferramenta. Se código gerado, testes e dependências não forem separados, os valores ficam distorcidos, o que afeta a leitura de [H1.3.1](./gqm-manutenibilidade.md#5-q13-analisabilidade), [H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade), [H1.5.1](./gqm-manutenibilidade.md#7-q15-testabilidade) e [H1.5.2](./gqm-manutenibilidade.md#7-q15-testabilidade). Por isso, a configuração de cada ferramenta será registrada na ficha da métrica.
 
 ---
 
@@ -129,22 +129,22 @@ Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.m
 
 ### 2º Hipóteses de baseline
 
-Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2).
+A regra que confirma ou refuta cada hipótese fica na tabela de hipóteses da questão, aberta pelo link do código, e usa os limites das [faixas de pontuação](./pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2).
 
 <p className="tabela-titulo">Tabela 7: Hipóteses de baseline de G2</p>
 
-| Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
-| :--- | :--- | :--- | :--- |
-| Ausência de falhas | [H2.1.1](./gqm-confiabilidade.md#3-q21-ausência-de-falhas) | As correções serão uma parte relevante das contribuições integradas. | ≥ 20% |
-| Ausência de falhas | [H2.1.2](./gqm-confiabilidade.md#3-q21-ausência-de-falhas) | Os defeitos relatados serão corrigidos em poucas semanas. | mediana ≤ 30 dias |
-| Ausência de falhas | [H2.1.3](./gqm-confiabilidade.md#3-q21-ausência-de-falhas) | Toda contribuição terá revisão aprovada por outra pessoa antes da integração. | ≥ 95% |
-| Disponibilidade | [H2.2.1](./gqm-confiabilidade.md#4-q22-disponibilidade) | O editor funcionará sem conexão depois do primeiro carregamento. | = 10 de 10 funções |
-| Disponibilidade | [H2.2.2](./gqm-confiabilidade.md#4-q22-disponibilidade) | Nenhum serviço externo será indispensável para desenhar. | = 0 domínios indispensáveis |
-| Tolerância a falhas | [H2.3.1](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) | Arquivos inválidos serão recusados com mensagem, sem travar o editor. | = 9 de 9 casos |
-| Tolerância a falhas | [H2.3.2](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) | O desenho local continuará editável se a colaboração cair. | verificações 1 a 4 aprovadas |
-| Recuperabilidade | [H2.4.1](./gqm-confiabilidade.md#6-q24-recuperabilidade) | O último desenho será restaurado ao reabrir a aplicação, mesmo após fechamento inesperado. | = 4 de 4 cenários |
-| Recuperabilidade | [H2.4.2](./gqm-confiabilidade.md#6-q24-recuperabilidade) | Arquivos da versão atual e de versões anteriores reabrirão sem perda. | = 7 de 7 arquivos |
-| Recuperabilidade | [H2.4.3](./gqm-confiabilidade.md#6-q24-recuperabilidade) | Desfazer e refazer cobrirão as ações de edição do usuário. | = 10 de 10 ações |
+| Subcaracterística | Hipótese | Enunciado |
+| :--- | :--- | :--- |
+| Ausência de falhas | [H2.1.1](./gqm-confiabilidade.md#3-q21-ausência-de-falhas) | As correções serão uma parte relevante das contribuições integradas. |
+| Ausência de falhas | [H2.1.2](./gqm-confiabilidade.md#3-q21-ausência-de-falhas) | Os defeitos relatados serão corrigidos em poucas semanas. |
+| Ausência de falhas | [H2.1.3](./gqm-confiabilidade.md#3-q21-ausência-de-falhas) | Toda contribuição terá revisão aprovada por outra pessoa antes da integração. |
+| Disponibilidade | [H2.2.1](./gqm-confiabilidade.md#4-q22-disponibilidade) | O editor funcionará sem conexão depois do primeiro carregamento. |
+| Disponibilidade | [H2.2.2](./gqm-confiabilidade.md#4-q22-disponibilidade) | Nenhum serviço externo será indispensável para desenhar. |
+| Tolerância a falhas | [H2.3.1](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) | Arquivos inválidos serão recusados com mensagem, sem travar o editor. |
+| Tolerância a falhas | [H2.3.2](./gqm-confiabilidade.md#5-q23-tolerância-a-falhas) | O desenho local continuará editável se a colaboração cair. |
+| Recuperabilidade | [H2.4.1](./gqm-confiabilidade.md#6-q24-recuperabilidade) | O último desenho será restaurado ao reabrir a aplicação, mesmo após fechamento inesperado. |
+| Recuperabilidade | [H2.4.2](./gqm-confiabilidade.md#6-q24-recuperabilidade) | Arquivos da versão atual e de versões anteriores reabrirão sem perda. |
+| Recuperabilidade | [H2.4.3](./gqm-confiabilidade.md#6-q24-recuperabilidade) | Desfazer e refazer cobrirão as ações de edição do usuário. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -194,24 +194,24 @@ Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.m
 
 ### 2º Hipóteses de baseline
 
-Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
+A regra que confirma ou refuta cada hipótese fica na tabela de hipóteses da questão, aberta pelo link do código, e usa os limites das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3).
 
 <p className="tabela-titulo">Tabela 10: Hipóteses de baseline de G3</p>
 
-| Subcaracterística | Hipótese | Enunciado | Confirmada se o valor medido for |
-| :--- | :--- | :--- | :--- |
-| Adaptabilidade | [H3.1.1](./gqm-flexibilidade.md#3-q31-adaptabilidade) | Os navegadores declarados cobrirão a maior parte dos usuários. | ≥ 80% |
-| Adaptabilidade | [H3.1.2](./gqm-flexibilidade.md#3-q31-adaptabilidade) | A biblioteca funcionará com React 17, 18 e 19, em Vite e em Next.js. | = 6 de 6 combinações |
-| Adaptabilidade | [H3.1.3](./gqm-flexibilidade.md#3-q31-adaptabilidade) | O editor aceitará toque nas ações de edição. | = 10 de 10 ações |
-| Escalabilidade | [H3.2.1](./gqm-flexibilidade.md#4-q32-escalabilidade) | Um desenho de 1.000 elementos abrirá sem interromper o usuário. | ≤ 1 s na cena de 1.000 elementos |
-| Escalabilidade | [H3.2.2](./gqm-flexibilidade.md#4-q32-escalabilidade) | A edição será fluida com 1.000 elementos. | ≥ 48 quadros por segundo na cena de 1.000 elementos |
-| Escalabilidade | [H3.2.3](./gqm-flexibilidade.md#4-q32-escalabilidade) | Desenhos com milhares de elementos poderão ser salvos e exportados. | maior cena ≥ 5.000 elementos |
-| Instalabilidade | [H3.3.1](./gqm-flexibilidade.md#5-q33-instalabilidade) | A biblioteca será instalada e removida sem erro pelos gerenciadores de pacotes. | = 9 de 9 operações |
-| Instalabilidade | [H3.3.2](./gqm-flexibilidade.md#5-q33-instalabilidade) | As instruções de execução local bastarão, com as versões de ferramentas exigidas. | ≥ 95% dos passos sem ajuste |
-| Instalabilidade | [H3.3.3](./gqm-flexibilidade.md#5-q33-instalabilidade) | A imagem Docker será construída e executada sem passos manuais. | = 4 de 4 verificações |
-| Substituibilidade | [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) | O desenho poderá ser exportado em formatos abertos. | ≥ 3 formatos |
-| Substituibilidade | [H3.4.2](./gqm-flexibilidade.md#6-q34-substituibilidade) | A reimportação preservará os elementos do desenho. | ≥ 95% em cada formato |
-| Substituibilidade | [H3.4.3](./gqm-flexibilidade.md#6-q34-substituibilidade) | O formato `.excalidraw` terá documentação apenas parcial. | < 60% dos campos documentados |
+| Subcaracterística | Hipótese | Enunciado |
+| :--- | :--- | :--- |
+| Adaptabilidade | [H3.1.1](./gqm-flexibilidade.md#3-q31-adaptabilidade) | Os navegadores declarados cobrirão a maior parte dos usuários. |
+| Adaptabilidade | [H3.1.2](./gqm-flexibilidade.md#3-q31-adaptabilidade) | A biblioteca funcionará com React 17, 18 e 19, em Vite e em Next.js. |
+| Adaptabilidade | [H3.1.3](./gqm-flexibilidade.md#3-q31-adaptabilidade) | O editor aceitará toque nas ações de edição. |
+| Escalabilidade | [H3.2.1](./gqm-flexibilidade.md#4-q32-escalabilidade) | Um desenho de 1.000 elementos abrirá sem interromper o usuário. |
+| Escalabilidade | [H3.2.2](./gqm-flexibilidade.md#4-q32-escalabilidade) | A edição será fluida com 1.000 elementos. |
+| Escalabilidade | [H3.2.3](./gqm-flexibilidade.md#4-q32-escalabilidade) | Desenhos com milhares de elementos poderão ser salvos e exportados. |
+| Instalabilidade | [H3.3.1](./gqm-flexibilidade.md#5-q33-instalabilidade) | A biblioteca será instalada e removida sem erro pelos gerenciadores de pacotes. |
+| Instalabilidade | [H3.3.2](./gqm-flexibilidade.md#5-q33-instalabilidade) | As instruções de execução local bastarão, com as versões de ferramentas exigidas. |
+| Instalabilidade | [H3.3.3](./gqm-flexibilidade.md#5-q33-instalabilidade) | A imagem Docker será construída e executada sem passos manuais. |
+| Substituibilidade | [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) | O desenho poderá ser exportado em formatos abertos. |
+| Substituibilidade | [H3.4.2](./gqm-flexibilidade.md#6-q34-substituibilidade) | A reimportação preservará os elementos do desenho. |
+| Substituibilidade | [H3.4.3](./gqm-flexibilidade.md#6-q34-substituibilidade) | O formato `.excalidraw` terá documentação apenas parcial. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -229,6 +229,7 @@ Os limites das regras seguem as [faixas de pontuação](./pontuacao-julgamento.m
 - Mudanças no ecossistema React e na lista de navegadores podem tornar desatualizadas as versões declaradas como compatíveis. A avaliação considera o que está declarado na versão avaliada ([H3.1.1](./gqm-flexibilidade.md#3-q31-adaptabilidade) e [H3.1.2](./gqm-flexibilidade.md#3-q31-adaptabilidade)).
 - Imagens incorporadas aumentam o tamanho do desenho mais do que o número de elementos. Os desenhos de teste terão composição definida, para que o efeito de cada fator possa ser separado ([H3.2.3](./gqm-flexibilidade.md#4-q32-escalabilidade) e [H3.4.2](./gqm-flexibilidade.md#6-q34-substituibilidade)).
 - Os formatos de exportação e a falta de uma especificação publicada do formato `.excalidraw` já são visíveis no repositório no commit `e1b7aac`. Por isso [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) e [H3.4.3](./gqm-flexibilidade.md#6-q34-substituibilidade) se apoiam no que se vê no código, e não em um fator de variação.
+
 ---
 
 ## 5. Uso das abstraction sheets nas próximas etapas
@@ -248,9 +249,8 @@ A aula recomenda preencher a *abstraction sheet* de forma iterativa [[1, p. 31]]
 | :--- | :--- | :--- |
 | [M1.4.3](./gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) | Nenhuma | Responde a [H1.4.3](./gqm-manutenibilidade.md#6-q14-modificabilidade), sobre a frequência com que os arquivos extensos são alterados, que nenhuma candidata media. |
 | [M2.1.3](./gqm-confiabilidade.md#m213-proporção-de-contribuições-revisadas-antes-da-integração) | Verificações automáticas obrigatórias antes da integração | As verificações automáticas já são medidas em G1 ([M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) e [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração)). Em G2, mede-se a outra barreira antes da integração: a revisão por outra pessoa. |
-| [M2.2.2](./gqm-confiabilidade.md#m222-origens-externas-necessárias-para-o-editor-local) | Nenhuma | Responde ao RQ-CONF-04, que nenhuma candidata cobria. |
+| [M2.2.2](./gqm-confiabilidade.md#m222-origens-externas-necessárias-para-o-editor-local) | Nenhuma | Responde ao [RQ-CONF-04](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade), que nenhuma candidata cobria. |
 | [M3.3.1](./gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | Número de passos para instalar a biblioteca | Além de contar se a instalação exige um único comando, mede se instalar, atualizar e remover terminam sem erro. |
-
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -279,3 +279,5 @@ A aula recomenda preencher a *abstraction sheet* de forma iterativa [[1, p. 31]]
 | 1.1 | 27/10/2026 | Troca dos travessões dos títulos, links para os objetivos, o modelo de qualidade e as páginas de cada objetivo, citação literal da p. 31, seção 7 com as diferenças entre as *abstraction sheets* e o GQM detalhado, limitação do preenchimento em conjunto e fator de variação alinhado aos testes em ambiente local | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Hipóteses de baseline refeitas: uma por métrica, com uma única afirmação e regra de confirmação. Impactos passam a citar as hipóteses afetadas, e G2 ganha o fator de regras de integração | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 10/11/2026 | Introdução e Metodologia em texto corrido, com o preenchimento das sheets na Metodologia. Tabelas com título e fonte, citações numeradas e regra das hipóteses dita uma única vez. Seções renumeradas e referências restritas à AULA 08 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: regra das hipóteses trocada por link à estrutura do GQM e RQ-CONF-04 com link ao requisito | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 18/11/2026 | Revisão de coerência, cross-links e redação: Tabelas 4, 7 e 10 só com o enunciado das hipóteses e link à regra das fichas, distribuição dos testes por nível no impacto de G1 e formatação das seções 4 e 6 | [Christopher Paraizo](https://github.com/wChrstphr) | |

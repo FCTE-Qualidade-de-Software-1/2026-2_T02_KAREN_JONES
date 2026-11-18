@@ -14,7 +14,7 @@ A avaliação do Excalidraw segue o processo de avaliação da [ISO/IEC 25040](#
 
 A Fase 02 especifica a avaliação: define o que será medido, com detalhe suficiente para que a avaliação seja repetível e reprodutível [[2, p. 15]](#ref-2). As subcaracterísticas escolhidas na Fase 01 são desdobradas em atributos que possam ser medidos e pontuados [[2, p. 16]](#ref-2), e são definidos os critérios para interpretar as medições [[2, p. 17]](#ref-2).
 
-Para esse desdobramento, a avaliação usa o método *Goal–Question–Metric* (GQM). Esta página resume o método, mostra como ele foi adaptado e apresenta os três objetivos de medição. O detalhamento está nas [abstraction sheets](./abstraction-sheets.md), nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md), nos [níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md) e no [Plano GQM](./plano-gqm.md).
+Para esse desdobramento, a avaliação usa o método *Goal-Question-Metric* (GQM). Esta página resume o método, mostra como ele foi adaptado e apresenta os três objetivos de medição. O detalhamento está nas [abstraction sheets](./abstraction-sheets.md), nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md), nos [níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md) e no [Plano GQM](./plano-gqm.md).
 
 ## Metodologia
 
@@ -38,7 +38,7 @@ O GQM foi definido por Victor Basili [[4]](#ref-4) e parte de um princípio simp
 
 A interpretação percorre o caminho inverso: as métricas respondem às questões, e as respostas às questões dizem se o objetivo foi alcançado [[1, p. 7]](#ref-1).
 
-Nesta avaliação, os objetivos são identificados por G1, G2 e G3 (de *goal*). As questões de cada objetivo recebem o número do objetivo seguido de um número sequencial (Q1.1 é a primeira questão de G1), e as métricas recebem o número da questão seguido de outro número sequencial (M1.1.1 é a primeira métrica de Q1.1).
+Nesta avaliação, os objetivos são identificados por G1, G2 e G3 (de *goal*). As questões de cada objetivo recebem o número do objetivo seguido de um número sequencial (Q1.1 é a primeira questão de G1), e as métricas recebem o número da questão seguido de outro número sequencial (M1.1.1 é a primeira métrica de Q1.1). Cada hipótese recebe o código da métrica que ela testa, com H no lugar de M (H1.1.1 é a hipótese de M1.1.1).
 
 A aula admite que nem sempre é possível definir hipóteses, e elas podem ser valores ou comparações [[1, p. 31]](#ref-1). Nesta avaliação, todas as questões têm hipóteses, uma por métrica, para que cada resultado possa ser comparado com uma expectativa definida antes da medição. Cada hipótese tem uma única afirmação e uma regra de confirmação, cujo limite vem das [faixas de pontuação](./pontuacao-julgamento.md#2-como-as-faixas-foram-definidas) da métrica ou da própria definição da métrica.
 
@@ -57,7 +57,7 @@ A aula apresenta oito etapas para a definição do GQM [[1, p. 21]](#ref-1). A T
 | Conduzir entrevistas GQM [[1, p. 28]](#ref-1) | Os mantenedores do Excalidraw não estão disponíveis para entrevistas. A equipe avaliadora preenche, em reunião, uma *abstraction sheet* por objetivo, assumindo o ponto de vista dos interessados mapeados na Fase 01. A *abstraction sheet* é o quadro que registra as métricas possíveis, as expectativas sobre elas (hipóteses de *baseline*) e os fatores que podem influenciar os resultados [[1, p. 29]](#ref-1). As três estão em [Abstraction sheets dos objetivos](./abstraction-sheets.md), e as limitações dessa adaptação, na [seção 6](#6-limitações-do-método-nesta-avaliação). | 02 |
 | Definir e rever questões e hipóteses [[1, p. 33 a 35]](#ref-1) | Uma questão por subcaracterística, reunindo os requisitos de avaliação da Fase 01 ([seção 4](#4-estrutura-das-questões)). Cada questão recebe uma hipótese por métrica. | 02 |
 | Definir métricas [[1, p. 38]](#ref-1) | Métricas documentadas em uma ficha padronizada ([seção 5](#5-ficha-de-cada-métrica)), escolhidas pelas características desejáveis apresentadas na aula [[1, p. 41]](#ref-1). | 02 |
-| Verificar métricas [[1, p. 42]](#ref-1) | Conferir a consistência e a completude entre objetivos, questões e métricas, e se cada métrica pode ser coletada na versão avaliada do código, com as ferramentas disponíveis. O resultado está nas seções de rastreabilidade e de verificação das métricas de cada página de objetivo. | 02 |
+| Verificar métricas [[1, p. 42]](#ref-1) | Conferir a consistência e a completude entre objetivos, questões e métricas, e se cada métrica pode ser coletada na versão avaliada do código, com as ferramentas disponíveis. O resultado está nas seções de rastreabilidade e de verificação das métricas de [G1](./gqm-manutenibilidade.md#8-rastreabilidade-com-a-fase-01) ([verificação](./gqm-manutenibilidade.md#9-verificação-das-métricas)), [G2](./gqm-confiabilidade.md#7-rastreabilidade-com-a-fase-01) ([verificação](./gqm-confiabilidade.md#8-verificação-das-métricas)) e [G3](./gqm-flexibilidade.md#7-rastreabilidade-com-a-fase-01) ([verificação](./gqm-flexibilidade.md#8-verificação-das-métricas)). | 02 |
 | Produzir planos [[1, p. 43 a 46]](#ref-1) | [Plano GQM](./plano-gqm.md) na Fase 02. Plano de Medição e Plano de Análise na Fase 03, junto com o plano de avaliação [[2, p. 18 e 19]](#ref-2). | 02 e 03 |
 | Rever planos [[1, p. 47]](#ref-1) | A aula prevê avaliar os planos com os membros da equipe do projeto medido e aprová-los. Como não há acesso à equipe do Excalidraw, cada artefato é revisado e aprovado por outro integrante da equipe avaliadora antes de ser publicado. | 02 e 03 |
 
@@ -107,7 +107,7 @@ A origem de cada objetivo na Fase 01 é dada pela [ênfase](../fase-01/priorizac
 
 <p className="tabela-fonte">Fonte: adaptada do template de Ramos [[1, p. 24]](#ref-1).</p>
 
-**Origem na Fase 01:** ênfase 4 e prioridade 12 (impacto × risco). É prioridade principal para desenvolvedores, mantenedores, contribuidores e equipes de qualidade.
+**Origem na Fase 01:** ênfase 4 e prioridade 12 (impacto × risco). É prioridade principal para desenvolvedores, mantenedores, contribuidores e equipes de qualidade. O ponto de vista é o de mantenedores e contribuidores porque são eles que leem, alteram e testam o código a cada contribuição. Os [integradores da biblioteca](../fase-01/interessados.md#5-desenvolvedores-que-integram-a-biblioteca) também se beneficiam da reusabilidade medida em [Q1.2](./gqm-manutenibilidade.md#4-q12-reusabilidade), mas para eles a Manutenibilidade é prioridade secundária na [matriz](../fase-01/interessados.md#matriz-de-prioridades).
 
 ### G2: Confiabilidade
 
@@ -193,6 +193,10 @@ Cada métrica é documentada com os campos abaixo. Os cinco primeiros garantem q
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
+Os fatores que podem influenciar os resultados são registrados junto com cada coleta [[1, p. 38]](#ref-1). Cada objetivo os levanta na sua [*abstraction sheet*](./abstraction-sheets.md) e os lista nas convenções de coleta da sua página.
+
+A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo [[1, p. 42]](#ref-1). A equipe fez essa verificação na versão avaliada, sem registrar valores, porque a medição propriamente dita pertence à Fase 04. O resultado está na seção de verificação de cada objetivo.
+
 Depois das fichas, os níveis de pontuação e os critérios de julgamento de todas as métricas são definidos em [Níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md), para que cada resultado seja interpretado por critérios estabelecidos antes da medição [[2, p. 17]](#ref-2).
 
 ---
@@ -213,11 +217,11 @@ Depois das fichas, os níveis de pontuação e os critérios de julgamento de to
 >
 > <Link id="ref-3">3.</Link> **2026-2 Trabalho final completo v1**. Especificação do trabalho final de Qualidade de Software 1, FCTE/UnB, 2026. Página 1, premissa 2. Disponível no Moodle da disciplina.
 >
-> <Link id="ref-4">4.</Link> BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994. Disponível em: [https://www.cs.umd.edu/~mvz/handouts/gqm.pdf](https://www.cs.umd.edu/~mvz/handouts/gqm.pdf). Acesso em: 08 nov. 2026.
+> <Link id="ref-4">4.</Link> BASILI, V. R., CALDIERA, G. e ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994. Disponível em: [https://www.cs.umd.edu/~mvz/handouts/gqm.pdf](https://www.cs.umd.edu/~mvz/handouts/gqm.pdf). Acesso em: 08 nov. 2026.
 >
-> <Link id="ref-5">5.</Link> ISO/IEC 25010:2023. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Product quality model*.
+> <Link id="ref-5">5.</Link> ISO/IEC 25010:2023. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Product quality model*.
 >
-> <Link id="ref-6">6.</Link> ISO/IEC 25040. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
+> <Link id="ref-6">6.</Link> ISO/IEC 25040. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process*.
 
 ---
 
@@ -229,3 +233,5 @@ Depois das fichas, os níveis de pontuação e os critérios de julgamento de to
 | 1.1 | 26/10/2026 | Troca dos travessões dos títulos dos objetivos, texto das questões e links para as páginas de cada objetivo, para os requisitos da Fase 01 e para as demais páginas da Fase 02, explicação dos códigos G, Q e M e da *abstraction sheet*, adaptação da revisão dos planos, limitações alinhadas aos testes em ambiente local e à janela histórica | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Hipóteses passam a ser uma por métrica, com uma única afirmação e regra de confirmação | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 10/11/2026 | Introdução e metodologia sem numeração, tabelas numeradas, com título e fonte, referências numeradas e ligadas às citações, correção do conteúdo do Plano GQM, que é base para os procedimentos de coleta, e não os contém, critérios de julgamento descritos como definidos antes da medição | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: explicação do código das hipóteses, justificativa do ponto de vista de G1 e links às seções de rastreabilidade e verificação de cada objetivo, pontuação do nome do método e das referências | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 18/11/2026 | Revisão de coerência, cross-links e redação: fatores que influenciam os resultados e verificação das métricas descritos uma vez na seção 5, para as páginas dos objetivos linkarem | [Christopher Paraizo](https://github.com/wChrstphr) | |
