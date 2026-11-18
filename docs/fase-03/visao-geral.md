@@ -92,7 +92,7 @@ A [verificação independente dos dados brutos](https://github.com/FCTE-Qualidad
 
 ## Referências cruzadas
 
-O escopo, os objetos avaliados e as características de qualidade estão na [Fase 01](../fase-01/visao-geral.md). As definições, hipóteses e escalas da avaliação estão no [Plano GQM da Fase 02](../fase-02/plano-gqm.md) e em [Níveis de pontuação e critérios de julgamento](../fase-02/pontuacao-julgamento.md). O planejamento da execução está no [Cronograma da Fase 03](./cronograma-avaliacao.md).
+O escopo, os objetos avaliados e as características de qualidade estão na [Fase 01](../fase-01/visao-geral.md). As definições, hipóteses e escalas da avaliação estão no [Plano GQM da Fase 02](../fase-02/plano-gqm.md) e em [Níveis de pontuação e critérios de julgamento](../fase-02/pontuacao-julgamento.md). O planejamento da execução está no [Cronograma da Fase 03](./cronograma-avaliacao.md). Os resultados empíricos e o julgamento final da qualidade estão na [Fase 04](../fase-04/visao-geral.md).
 
 ---
 
@@ -101,3 +101,4 @@ O escopo, os objetos avaliados e as características de qualidade estão na [Fas
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 12/11/2026 | Criação da visão geral da Fase 03, dos links entre documentos e da matriz de rastreabilidade das 36 métricas | [Davi Pierre](https://github.com/DaviPierre) |  |
+| 1.1 | 17/11/2026 | Inclusão de referências cruzadas com a Fase 04 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
