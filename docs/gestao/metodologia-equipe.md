@@ -55,11 +55,12 @@ O acompanhamento da gestão usa as métricas PSM/CID, com medições periódicas
 
 #### [1] {/* #ref-1 */}
 
-ISO/IEC. *ISO/IEC 25040: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process.*
+ISO/IEC. *ISO/IEC 25040: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process.*
 
 #### [2] {/* #ref-2 */}
 
-BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994.
+BASILI, V. R., CALDIERA, G., ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994.
+
 
 ---
 

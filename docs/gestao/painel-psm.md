@@ -151,23 +151,24 @@ No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 249,96 horas re
 
 Os indicadores de eficiência do processo avaliam a estabilidade orçamentária, a velocidade de fluxo, a conformidade de preenchimento e o rigor na revisão por pares:
 
-<p className="tabela-titulo">Tabela 6: Indicadores de processo e governança nas Fases 1 e 2</p>
+<p className="tabela-titulo">Tabela 6: Indicadores de processo e governança consolidados por entrega e no projeto</p>
 
-| Indicador de Processo | Fase 1 | Fase 2 | Consolidado Entrega 1 | Meta do Construct | Diagnóstico |
+| Indicador de Processo | Entrega 1 (F1 + F2) | Entrega 2 (F3 + F4) | Total do Projeto | Meta do Construct | Diagnóstico |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **Acurácia da Estimativa** | 99,2% | 91,8% | **95,2%** | 80% a 120% | Excelente convergência: 123,71 h reais frente a 130,00 h estimadas (desvio de apenas -4,8% no acumulado). |
-| **Cycle / Lead Time Médio** | 1,21 dias | 3,74 dias | **2,77 dias** | Até 3,00 dias | Dentro do limite estipulado no construct. O aumento na Fase 2 decorre da densidade técnica dos artefatos GQM e do fechamento das tarefas complementares. |
-| **Governança de Estimativa** | 100,0% | 89,7% | **93,6%** | 100,0% | Queda pontual na Fase 2 provocada por tarefas complementares abertas inicialmente sem estimativa. |
-| **Taxa de Revisão por Pares (PRs)** | 47,1% (8 de 17) | 48,1% (13 de 27) | **47,7% (21 de 44)** | 100,0% | Abaixo da meta de 100%. Conta os PRs integrados com aprovação formal (APPROVED) de outro integrante no GitHub, calculados pelo script de coleta. Os 23 PRs restantes foram integrados sem aprovação formal registrada na API. |
-| **Tempo Mediano de Espera por Revisão** | 10,82 h | 0,40 h | **0,79 h** | Até 24,00 h | Queda expressiva de 10,82 h para 0,40 h (24 minutos), demonstrando agilidade na esteira de validação entre os pares. |
+| **Acurácia da Estimativa** | 95,2% | 116,9% | **106,4%** | 80% a 120% | Excelente convergência, mantendo-se dentro da faixa ideal de controle em todas as entregas do projeto. |
+| **Cycle / Lead Time Médio** | 2,77 dias | 9,76 dias | **6,36 dias** | Até 3,00 dias | Dentro do limite na Entrega 1. Na Entrega 2, a duração ampliou-se em decorrência da complexidade de setup do contêiner Docker e da execução dos ensaios práticos. |
+| **Governança de Estimativa** | 93,6% | 100,0% | **96,9%** | 100,0% | Recuperação da conformidade integral na Entrega 2, com 100% das 50 issues abertas com estimativa registrada. |
+| **Taxa de Revisão por Pares (PRs)** | 47,7% (21 de 44) | 57,1% (24 de 42) | **52,3% (45 de 86)** | 100,0% | Evolução positiva de 9,4 p.p. na Entrega 2, embora revisões informais e merges de sincronização ainda tenham deixado PRs sem aprovação formal na API. |
+| **Tempo Mediano de Espera por Revisão** | 0,79 h (47 min) | 3,50 h | **2,75 h** | Até 24,00 h | Resposta ágil nas revisões em todo o projeto, com eliminação de filas acima de 24 horas na Fase 4 (mediana de apenas 1,50 h). |
 
-<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/03_desempenho_processos_fases.csv</code> e auditoria de PRs via GitHub API, 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/07_resumo_entregas.csv</code>, <code>03_desempenho_processos_fases.csv</code> e auditoria de PRs via GitHub API, 2026.</p>
 
-<p className="tabela-titulo">Figura 5: Acurácia da estimativa de esforço por fase e na Entrega 1</p>
+<p className="tabela-titulo">Figura 5: Acurácia da estimativa de esforço por fase em relação à faixa ideal (80% a 120%)</p>
 
 ![Acurácia da estimativa por fase em relação à faixa ideal de 80% a 120%](/img/gestao/06_acuracia_estimativa_fases.png)
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/01_recursos_e_custos_fases.csv</code>, 2026.</p>
+
 
 ---
 
