@@ -130,4 +130,4 @@ A Tabela 5 resume como cada ODS se conecta às três características avaliadas.
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Criação do documento de ODS relacionados à avaliação do Excalidraw | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 10/11/2026 | Introdução e Metodologia, retirada da citação ao critério da disciplina, retirada da meta 4.a, que trata de instalações físicas de ensino, indicadores identificados como propostos pela equipe, subcaracterística Ausência de falhas adotada, tabelas com título e fonte e referência à ONU numerada | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: verbos da avaliação, sentido de "gratuita" separado de acessibilidade e afirmação sem fonte removida | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 18/11/2026 | Revisão de coerência e cross-links: "gratuita" separado de acessibilidade e afirmação sem fonte removida | [Christopher Paraizo](https://github.com/wChrstphr) | |

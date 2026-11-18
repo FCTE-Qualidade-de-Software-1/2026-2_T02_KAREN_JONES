@@ -48,4 +48,4 @@ Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-
 | 1.3 | 06/11/2026 | Título sem travessão, retirada da coluna de situação, com todas as páginas já publicadas, referências cruzadas resumidas em um parágrafo, links para objetivos e questões, tabela com título e fonte | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.4 | 10/11/2026 | Inclusão da Metodologia | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
-| 1.6 | 18/11/2026 | Revisão de coerência, cross-links e redação: registro da revisão das abstraction sheets depois da pontuação, nome completo do revisor nas versões 1.0 e 1.1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 18/11/2026 | Revisão de coerência e cross-links: registro da revisão das abstraction sheets | [Christopher Paraizo](https://github.com/wChrstphr) | |

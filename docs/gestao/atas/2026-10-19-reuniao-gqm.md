@@ -63,4 +63,4 @@ Reunião do Subgrupo F2/F4, responsável pela Fase 02.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Registro da reunião GQM da Fase 02 | [Christopher Paraizo](https://github.com/wChrstphr) | [Luiz Henrique Soares](https://github.com/luizh-gsoares) |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: nomes completos e pontuação | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) | |

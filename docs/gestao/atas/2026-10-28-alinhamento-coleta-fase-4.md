@@ -50,4 +50,4 @@ description: Reunião presencial em aula para alinhamento e divisão da coleta d
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 17/11/2026 | Registro da ata de alinhamento da coleta da Fase 4 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: título com a data no formato da página, nome completo e histórico de versões | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: título com a data e nome completo | [Christopher Paraizo](https://github.com/wChrstphr) | |

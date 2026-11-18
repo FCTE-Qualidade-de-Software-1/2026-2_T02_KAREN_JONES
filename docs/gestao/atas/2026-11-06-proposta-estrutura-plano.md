@@ -83,4 +83,4 @@ Os prazos abaixo são os marcos previstos na proposta.
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/11/2026 | Registro da ata da apresentação da proposta de estrutura do plano da Fase 03 | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |  |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: seção "Decisões detalhadas" com as decisões da proposta de estrutura, removida do site, e nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: decisões da proposta de estrutura trazidas para a ata | [Christopher Paraizo](https://github.com/wChrstphr) |  |

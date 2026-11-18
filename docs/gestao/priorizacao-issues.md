@@ -97,4 +97,4 @@ Os dois campos de data desenham as barras na visualização de roteiro do Projec
 | 1.0 | 05/11/2026 | Criação da página | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.1 | 05/11/2026 | Inclusão de referências e links entre documentos | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 06/11/2026 | Títulos acima das tabelas, fontes abaixo e nome do autor com link | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: Introdução e Metodologia, critério de decisão igual ao do plano, começo da Fase 3 pela milestone e referência à especificação atualizada | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 18/11/2026 | Revisão de coerência e cross-links: Introdução e Metodologia e critério de decisão igual ao do plano | [Christopher Paraizo](https://github.com/wChrstphr) | |

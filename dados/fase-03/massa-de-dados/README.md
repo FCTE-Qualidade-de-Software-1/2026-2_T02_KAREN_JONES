@@ -141,4 +141,4 @@ O `--verificar` confere a presença das 7 entradas, das cenas extraídas e do ma
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Documentação da massa de dados de G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
 | 1.1 | 15/11/2026 | Inclusão do conjunto de reabertura da M2.4.2 e dos comandos para recriá-lo | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: link à seção de M2.4.2 nas instruções de G2 | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.2 | 18/11/2026 | Revisão de coerência e cross-links: link à M2.4.2 nas instruções de G2 | [Christopher Paraizo](https://github.com/wChrstphr) |  |

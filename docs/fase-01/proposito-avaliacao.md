@@ -106,4 +106,4 @@ Os resultados ficarão publicados neste site como relatório técnico acadêmico
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 10/11/2026 | Introdução e Metodologia, retirada da citação ao critério da disciplina, identificação do produto substituída por link ao tipo de produto com o commit avaliado, meta do protótipo alinhada à ação de melhoria da Fase 04, tabelas com título e fonte e normas convertidas em referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
-| 1.2 | 18/11/2026 | Revisão de coerência, cross-links e redação: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 18/11/2026 | Revisão de coerência e cross-links: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -90,4 +90,4 @@ No GitHub, a #4 está atribuída a Christopher Paraizo e Maria Eduarda, a #15 a 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 19/10/2026 | Registro da ata de alinhamento inicial da Fase 1 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: fusão com a ata da Fase 1 registrada por Letícia de Carvalho em 18/10/2026, divergências marcadas para confirmação e nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: fusão com a ata registrada em 18/10/2026 e divergências marcadas para confirmação | [Christopher Paraizo](https://github.com/wChrstphr) | |

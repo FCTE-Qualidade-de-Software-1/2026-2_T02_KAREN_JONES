@@ -89,6 +89,6 @@ A divisão em subgrupos e a governança do trabalho no GitHub estão descritas n
 | 1.1 | 19/10/2026 | Atualização da estrutura com a indicação da Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.2 | 10/11/2026 | Revisão e alinhamento da terminologia da ISO/IEC 25010:2023 | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.3 | 14/11/2026 | Indicação da Fase 02 como concluída e da Fase 03 como fase atual com link para visão geral | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Christopher Paraizo](https://github.com/wChrstphr) |
-| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: introdução direta, Escalabilidade em Flexibilidade e link para a metodologia da equipe | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência e cross-links: Escalabilidade em Flexibilidade e link à metodologia da equipe | [Christopher Paraizo](https://github.com/wChrstphr) | |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>

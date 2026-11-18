@@ -151,4 +151,4 @@ A decisão conjunta da equipe acontece na [escolha da ação de melhoria](https:
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Criação do plano de análise: fluxo, tratamento dos dados, tabela consolidada, apresentação, hipóteses e interpretação | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: âncoras das instruções de G3 atualizadas, instruções do avaliador de G1, G2 e G3 linkadas e data da escolha da ação de melhoria pela issue #118 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: links às instruções de G1, G2 e G3 e data da ação de melhoria | [Christopher Paraizo](https://github.com/wChrstphr) | |

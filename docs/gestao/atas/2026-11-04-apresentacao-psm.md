@@ -56,4 +56,4 @@ description: Apresentação das métricas PSM, retorno da professora e encaminha
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/11/2026 | Registro da ata da apresentação das métricas PSM | [Letícia de Carvalho](https://github.com/LeticiaSantosss) | |
-| 1.1 | 18/11/2026 | Revisão de coerência, cross-links e redação: campo `Prioridade` do Project no lugar de label, nomes completos e histórico de versões | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: campo `Prioridade` do Project e nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) | |

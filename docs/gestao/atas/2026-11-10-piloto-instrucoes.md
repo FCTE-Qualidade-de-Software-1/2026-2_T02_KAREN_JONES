@@ -63,4 +63,4 @@ Sessão técnica do subgrupo F2/F4 para execução e validação do teste piloto
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 10/11/2026 | Registro da ata de reunião do teste piloto das instruções de avaliação da Fase 03 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
-| `1.1` | 18/11/2026 | Revisão de coerência, cross-links e redação: nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| `1.1` | 18/11/2026 | Revisão de coerência e cross-links: nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) | |
