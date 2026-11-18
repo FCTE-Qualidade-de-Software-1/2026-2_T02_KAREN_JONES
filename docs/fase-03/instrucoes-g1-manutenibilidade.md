@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 title: Instruções para o avaliador de Manutenibilidade (G1)
 description: Passo a passo de obtenção das 14 métricas de Manutenibilidade (G1) na Fase 04, com pré-condições, comandos, saídas esperadas, cálculo e nome de cada dado bruto.
 ---
@@ -24,7 +24,7 @@ Para cada métrica, a página traz os comandos com a saída esperada, o nome do 
 
 ## 1. Preparação
 
-Os comandos usam Bash no Linux ou no WSL2, a partir da raiz do repositório da avaliação. Todos os dados brutos ficam em `dados/fase-04/brutos/`, com nomes no formato `M<código>_<identificador>.<extensão>`, como nas [instruções de G3](./instrucoes-g3-flexibilidade.md#22-local-e-padrão-de-nomenclatura-dos-dados-brutos). Um arquivo usado por mais de uma métrica leva o código da primeira que o gera.
+Os comandos usam Bash no Linux ou no WSL2, a partir da raiz do repositório da avaliação. Todos os dados brutos ficam em `dados/fase-04/brutos/`, com nomes no formato `M<código>_<identificador>.<extensão>`, como nas [instruções de G3](./instrucoes-g3-flexibilidade.md#12-local-e-padrão-de-nomenclatura-dos-dados-brutos). Um arquivo usado por mais de uma métrica leva o código da primeira que o gera.
 
 ```bash
 set -o pipefail
@@ -101,7 +101,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 **Dados brutos:** `M1.1.1_grafo-madge.json` e `M1.1.2_eslintrc-base.json`.
 
-**Cálculo:** número de arestas, de arquivo de origem para arquivo de destino, que se enquadram em uma das duas condições: origem em um pacote de base e destino em `packages/excalidraw/`, ou destino em `excalidraw-app/` a partir de qualquer pacote.
+**Cálculo:** número de arestas, de arquivo de origem para arquivo de destino, que se enquadram em uma das duas condições: origem em um pacote de base e destino em `packages/excalidraw/`, ou destino em `excalidraw-app/` a partir de qualquer pacote. O denominador é o número de importações de valor entre pacotes diferentes, isto é, as arestas do grafo cuja origem e cujo destino ficam em pacotes distintos. O valor pontuado é `(importações que violam a direção / importações de valor entre pacotes diferentes) × 100`.
 
 ### 2.4 M1.1.3: acoplamento e instabilidade de cada pacote
 
@@ -109,7 +109,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 **Dado bruto:** `M1.1.1_grafo-madge.json`, agregado por pacote como em M1.1.1.
 
-**Cálculo:** para cada pacote P, Ca é o número de outros pacotes distintos que importam P e Ce é o número de pacotes distintos que P importa. A instabilidade é `I = Ce / (Ca + Ce)`. Quando `Ca + Ce = 0`, o valor é registrado como não aplicável, e não como zero.
+**Cálculo:** para cada pacote P, Ca é o número de outros pacotes distintos que importam P e Ce é o número de pacotes distintos que P importa. A instabilidade é `I = Ce / (Ca + Ce)`. Quando `Ca + Ce = 0`, o valor é registrado como não aplicável, e não como zero. Em seguida, cada dependência distinta entre pacotes, de A para B, é comparada com o Princípio das Dependências Estáveis: ela o contraria quando `I(A) < I(B)`. O valor pontuado é `(dependências que contrariam o princípio / dependências distintas entre pacotes) × 100`.
 
 ---
 
@@ -132,7 +132,7 @@ cp "$EXC/packages/eslintrc.base.json" "$BRUTOS/M1.1.2_eslintrc-base.json"
 
 **Dados brutos:** `M1.2.1_ocorrencias-grep.txt`, `M1.2.1_arquivos-diretos.csv` e `M1.1.1_grafo-madge.json`.
 
-**Cálculo:** para cada pacote de base, o número de arquivos com dependência direta (marcados) e o número de arquivos que só alcançam um arquivo marcado pelo grafo, separados. A proporção é `(diretos + transitivos) / arquivos de produção do pacote × 100`.
+**Cálculo:** para cada pacote de base, o número de arquivos com dependência direta (marcados) e o número de arquivos que só alcançam um arquivo marcado pelo grafo, separados. A proporção de cada pacote é `(diretos + transitivos) / arquivos de produção do pacote × 100` e fica registrada como detalhe. O valor pontuado agrega os pacotes de base: `(soma de diretos e transitivos de todos os pacotes de base / soma dos arquivos de produção dos pacotes de base) × 100`.
 
 ### 3.2 M1.2.2: proporção de propriedades públicas documentadas
 
@@ -271,7 +271,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 [Ficha M1.4.3](../fase-02/gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos)
 
-**Dados brutos:** os de M1.4.1, com as mesmas exclusões, e `M1.4.2_cloc.json`.
+**Dados brutos:** os de M1.4.1, com as mesmas exclusões, e `M1.4.2_cloc.json`. A ficha define o denominador como as contribuições integradas na janela. A coleta usa a população de M1.4.1, sem os *pull requests* automáticos listados em [`M1.4.1_exclusoes.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-04/brutos/M1.4.1_exclusoes.csv).
 
 **Cálculo:**
 
@@ -324,7 +324,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 
 **Dados brutos:** `M1.5.2_suites.txt`, `M1.5.2_ocorrencias-grep.txt`, `M1.5.2_ferramentas-e2e.txt` e `M1.5.2_classificacao.csv`.
 
-**Cálculo:** para cada nível, `(suítes do nível / total de suítes) × 100`. Os três percentuais somam 100%.
+**Cálculo:** para cada nível, `(suítes do nível / total de suítes) × 100`. Os três percentuais somam 100% e ficam registrados como detalhe. O valor pontuado é o número de níveis presentes, de 0 a 3, em que um nível está presente quando tem ao menos uma suíte classificada nele.
 
 ### 6.3 M1.5.3: proporção de contribuições com testes executados antes da integração
 
@@ -372,3 +372,7 @@ Os *pull requests* automáticos de atualização de dependências e de traduçõ
 | 1.0 | 08/11/2026 | Elaboração do roteiro operacional de coleta e evidências de todas as 14 métricas G1, com auxiliares para processamento | [Davi Pierre](https://github.com/DaviPierre) |  |
 | 1.1 | 10/11/2026 | Ajustes da revisão da PR #149: comandos das próprias ferramentas no lugar dos scripts, nomes dos dados brutos no padrão de G3, M1.2.1 conforme a ficha e correções de M1.3.1, M1.3.3, M1.4.3 e M1.5.2 | [Christopher Paraizo](https://github.com/wChrstphr) |  |
 | 1.2 | 11/11/2026 | Script de coleta e comandos de M1.3.1 e M1.5.1 alinhados com os recursos e ambiente | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.3 | 18/11/2026 | Revisão de coerência, cross-links e redação: passo que produz o valor pontuado de M1.1.2, M1.1.3, M1.2.1 e M1.5.2, igual ao `scripts/calcula_metricas.py` | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência, cross-links e redação: população de M1.4.3 sem as automações, com link ao arquivo de exclusões | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.5 | 18/11/2026 | Revisão de coerência, cross-links e redação: âncora da convenção de nomes nas instruções de G3 atualizada | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.6 | 18/11/2026 | Revisão de coerência, cross-links e redação: posição na barra lateral da Fase 03 | [Christopher Paraizo](https://github.com/wChrstphr) | |
