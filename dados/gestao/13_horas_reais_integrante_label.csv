@@ -1,16 +1,16 @@
 recorte,grupo,horas_reais
 integrante,Gabriel Monteiro,57.0
+integrante,Maria Eduarda,54.2
 integrante,Christopher,52.65
-integrante,Maria Eduarda,51.2
 integrante,Davi Pierre,37.0
 integrante,Luiz Henrique Soares,32.9
-integrante,Leticia de Carvalho,29.41
-label,gestao,63.43
+integrante,Leticia de Carvalho,29.91
+label,gestao,65.93
+label,artigo,54.5
 label,documentacao,52.3
-label,artigo,52.0
 label,especificacao,44.4
 label,medicao,38.7
-label,verificacao,18.4
+label,verificacao,19.4
 label,gitpage,14.03
 label,diagrama,8.05
 label,analise,5.5

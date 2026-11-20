@@ -80,10 +80,10 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),closed,eduarda-ogomes,4.0,1.5,-62.5,superestimada,180.0,67.5,19/11,18/11/2026,Concluida no prazo,14.47
 125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",closed,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,18/11/2026,Concluida no prazo,14.47
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,closed,eduarda-ogomes,3.0,0.0,,,135.0,0.0,20/11,20/11/2026,Concluida no prazo,17.32
-127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,closed,LeticiaSantosss,2.0,0.0,,,90.0,0.0,20/11,20/11/2026,Concluida no prazo,17.34
-128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,"eduarda-ogomes, LeticiaSantosss",3.0,0.0,,,135.0,0.0,21/11,-,Em andamento (no prazo),
+127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,closed,LeticiaSantosss,2.0,1.5,-25.0,superestimada,90.0,67.5,20/11,20/11/2026,Concluida no prazo,17.34
+128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,closed,"eduarda-ogomes, LeticiaSantosss",3.0,1.0,-66.7,superestimada,135.0,45.0,21/11,20/11/2026,Concluida no prazo,17.36
 129,Fase 4,[GESTAO] Atas de reunião da Fase 4,closed,luizh-gsoares,1.0,1.0,0.0,na faixa,45.0,45.0,21/11,17/11/2026,Concluida no prazo,14.36
-130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,open,eduarda-ogomes,1.0,0.0,,,45.0,0.0,22/11,-,Em andamento (no prazo),
+130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,closed,eduarda-ogomes,1.0,1.0,0.0,na faixa,45.0,45.0,22/11,20/11/2026,Concluida no prazo,17.36
 131,Fase 3,[GESTAO] Automatizar a execução do script de métricas PSM/CID via GitHub Actions,closed,eduarda-ogomes,1.0,1.0,0.0,na faixa,45.0,45.0,04/11,04/11/2026,Concluida no prazo,0.03
 133,Fase 4,[ARTIGO] Reestruturar o artigo para a v2 e aplicar os retornos pendentes do PC1,closed,GabrielSMonteiro,4.0,6.0,50.0,subestimada,180.0,270.0,08/11,15/11/2026,Concluida em atraso,10.69
 134,Fase 3,[GESTAO] Refazer o plano de medição PSM a partir das necessidades de informação da equipe,closed,eduarda-ogomes,3.0,3.0,0.0,na faixa,135.0,135.0,07/11,09/11/2026,Concluida em atraso,4.05
