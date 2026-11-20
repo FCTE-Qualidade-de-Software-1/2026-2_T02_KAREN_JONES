@@ -81,7 +81,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",closed,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,18/11/2026,Concluida no prazo,14.47
 126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,closed,eduarda-ogomes,3.0,0.0,,,135.0,0.0,20/11,20/11/2026,Concluida no prazo,17.32
 127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,closed,LeticiaSantosss,2.0,0.0,,,90.0,0.0,20/11,20/11/2026,Concluida no prazo,17.34
-128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,21/11,-,Em andamento (no prazo),
+128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,"eduarda-ogomes, LeticiaSantosss",3.0,0.0,,,135.0,0.0,21/11,-,Em andamento (no prazo),
 129,Fase 4,[GESTAO] Atas de reunião da Fase 4,closed,luizh-gsoares,1.0,1.0,0.0,na faixa,45.0,45.0,21/11,17/11/2026,Concluida no prazo,14.36
 130,Fase 4,[GESTAO] Release v2.0-E2 e submissão no Moodle,open,eduarda-ogomes,1.0,0.0,,,45.0,0.0,22/11,-,Em andamento (no prazo),
 131,Fase 3,[GESTAO] Automatizar a execução do script de métricas PSM/CID via GitHub Actions,closed,eduarda-ogomes,1.0,1.0,0.0,na faixa,45.0,45.0,04/11,04/11/2026,Concluida no prazo,0.03
@@ -96,4 +96,4 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 174,Fase 4,[F4] Unir as páginas de resultados e de insights de G3,closed,wChrstphr,1.0,0.5,-50.0,superestimada,45.0,22.5,16/11,17/11/2026,Concluida em atraso,1.62
 181,Fase 4,[GESTAO] Gráficos e análises PSM do projeto para a apresentação final,open,wChrstphr,5.0,3.0,-40.0,superestimada,225.0,135.0,22/11,-,Em andamento (no prazo),
 183,Fase 4,[GESTAO] Apresentação final do trabalho (22/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,,,270.0,0.0,22/11,-,Em andamento (no prazo),
-190,Fase 4,Revisão de coerência e cross-links da documentação,open,wChrstphr,4.0,3.7,-7.5,na faixa,180.0,166.5,20/11,-,Em andamento (no prazo),
+190,Fase 4,Revisão de coerência e cross-links da documentação,closed,wChrstphr,4.0,3.7,-7.5,na faixa,180.0,166.5,20/11,20/11/2026,Concluida no prazo,2.03
