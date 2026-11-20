@@ -61,7 +61,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,closed,GabrielSMonteiro,2.0,2.0,0.0,na faixa,90.0,90.0,08/11,15/11/2026,Concluida em atraso,12.12
 106,Fase 3,[GESTAO] Atas de reunião da Fase 3,closed,LeticiaSantosss,1.0,1.5,50.0,subestimada,45.0,67.5,08/11,15/11/2026,Concluida em atraso,12.28
 107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,closed,GabrielSMonteiro,3.0,5.0,66.7,subestimada,135.0,225.0,08/11,15/11/2026,Concluida em atraso,12.11
-108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (18/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,4.5,-25.0,superestimada,270.0,202.5,18/11,-,Aberta em atraso,
+108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (18/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,6.0,0.0,na faixa,270.0,270.0,18/11,-,Aberta em atraso,
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,closed,GabrielSMonteiro,1.0,1.0,0.0,na faixa,45.0,45.0,12/11,15/11/2026,Concluida em atraso,12.12
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,15/11/2026,Concluida em atraso,12.27
 111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),closed,wChrstphr,5.0,3.0,-40.0,superestimada,225.0,135.0,12/11,16/11/2026,Concluida em atraso,12.52
@@ -72,7 +72,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 116,Fase 4,[F4] Análise e respostas GQM de G2 (Confiabilidade),closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,15/11,17/11/2026,Concluida em atraso,13.98
 117,Fase 4,[F4] Análise e respostas GQM de G3 (Flexibilidade),closed,eduarda-ogomes,3.0,3.0,0.0,na faixa,135.0,135.0,15/11,13/11/2026,Concluida no prazo,10.06
 118,Fase 4,[F4] Oportunidades de melhoria e escolha da ação,closed,wChrstphr,2.0,1.25,-37.5,superestimada,90.0,56.25,16/11,17/11/2026,Concluida em atraso,13.99
-119,Fase 4,[F4] Executar a ação de melhoria,open,wChrstphr,8.0,3.0,-62.5,superestimada,360.0,135.0,20/11,-,Em andamento (no prazo),
+119,Fase 4,[F4] Executar a ação de melhoria,closed,wChrstphr,8.0,3.0,-62.5,superestimada,360.0,135.0,20/11,20/11/2026,Concluida no prazo,17.33
 120,Fase 4,"[F4] Julgamento final, coerência com o propósito e relações entre as características",closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,17/11,16/11/2026,Concluida no prazo,13.05
 121,Fase 4,[F4] Visão geral da Fase 04,closed,eduarda-ogomes,2.0,2.0,0.0,na faixa,90.0,90.0,18/11,18/11/2026,Concluida no prazo,14.47
 122,Fase 4,[SITE] Atualizar o GitPage com a Fase 4 e a Entrega 2,closed,eduarda-ogomes,2.0,2.0,0.0,na faixa,90.0,90.0,20/11,18/11/2026,Concluida no prazo,14.47
