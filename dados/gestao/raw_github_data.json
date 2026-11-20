@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-20T23:10:27.923149+00:00",
+  "coletado_em": "2026-11-20T23:17:38.403804+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -102,17 +102,17 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-20T22:49:17Z",
-      "updated_at": "2026-11-20T22:59:19Z",
+      "updated_at": "2026-11-20T23:12:48Z",
       "closed_at": null,
       "assignee": {
         "login": "wChrstphr",
@@ -276,17 +276,17 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-18T23:03:51Z",
-      "updated_at": "2026-11-18T23:15:11Z",
+      "updated_at": "2026-11-20T23:13:29Z",
       "closed_at": null,
       "assignee": {
         "login": "wChrstphr",
@@ -450,11 +450,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -606,11 +606,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -780,11 +780,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -952,11 +952,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1104,11 +1104,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1278,11 +1278,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1461,11 +1461,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1751,11 +1751,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -1907,11 +1907,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2070,11 +2070,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2268,11 +2268,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2442,11 +2442,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2614,11 +2614,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2788,11 +2788,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -2982,11 +2982,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3198,11 +3198,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3403,11 +3403,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -3601,11 +3601,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4044,11 +4044,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4218,11 +4218,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -4401,11 +4401,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6160,11 +6160,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -6332,11 +6332,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -10745,11 +10745,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -11293,11 +11293,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -11471,11 +11471,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -11680,11 +11680,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -11869,11 +11869,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -12047,17 +12047,17 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:17:49Z",
-      "updated_at": "2026-11-20T22:59:24Z",
+      "updated_at": "2026-11-20T23:16:11Z",
       "closed_at": "2026-11-20T22:59:24Z",
       "assignee": {
         "login": "LeticiaSantosss",
@@ -12095,7 +12095,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nRegistrar as medições PSM/CID da Fase 4 usando as medidas do novo plano de medição (#134), incluindo as leituras das quartas-feiras (11/11 e 18/11), e consolidar a Entrega 2 (Fases 3 e 4) e o projeto inteiro: esforço estimado e real, custo acumulado, progresso das milestones, interpretação e decisões de gestão. As atas das leituras de 11/11 e 18/11 ficam nesta issue. Publicar em `docs/gestao/relatorios/relatorio-psm-fase-4.md`.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Premissa 3, registrar medições, interpretação e decisões: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Três categorias exigidas: 2026-2 Trabalho final completo v1.pdf, p. 2, seção 2\n- Template measurement construct: AULA 09 QSW1 PSM resumo.pdf, p. 19\n\n### Critério de pronto\n\n- [ ] Medidas do novo plano de medição aplicadas\n- [ ] Leituras de 11/11 e 18/11 registradas em ata, com as decisões tomadas\n- [ ] Medições das três categorias registradas\n- [ ] Consolidado da Entrega 2 e do projeto inteiro\n- [ ] Interpretação e decisões de gestão registradas\n\n### Prazo\n\n20/11\n\n### Depende de\n\n#107 (Relatório PSM/CID da Fase 3), #134 (Plano de medição PSM), #135 (Script PSM)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nRegistrar as medições PSM/CID da Fase 4 usando as medidas do novo plano de medição (#134), incluindo as leituras das quartas-feiras (11/11 e 18/11), e consolidar a Entrega 2 (Fases 3 e 4) e o projeto inteiro: esforço estimado e real, custo acumulado, progresso das milestones, interpretação e decisões de gestão. As atas das leituras de 11/11 e 18/11 ficam nesta issue. Publicar em `docs/gestao/relatorios/relatorio-psm-fase-4.md`.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Premissa 3, registrar medições, interpretação e decisões: 2026-2 Trabalho final completo v1.pdf, p. 1\n- Três categorias exigidas: 2026-2 Trabalho final completo v1.pdf, p. 2, seção 2\n- Template measurement construct: AULA 09 QSW1 PSM resumo.pdf, p. 19\n\n### Critério de pronto\n\n- [ ] Medidas do novo plano de medição aplicadas\n- [ ] Leituras de 11/11 e 18/11 registradas em ata, com as decisões tomadas\n- [ ] Medições das três categorias registradas\n- [ ] Consolidado da Entrega 2 e do projeto inteiro\n- [ ] Interpretação e decisões de gestão registradas\n\n### Prazo\n\n20/11\n\n### Depende de\n\n#107 (Relatório PSM/CID da Fase 3), #134 (Plano de medição PSM), #135 (Script PSM)\n\n### Estimativa (h)\n\n3\n\n### Horas reais (h)\n\n3h\n\n### Revisor\n\n_No response_\n",
       "closed_by": {
         "login": "wChrstphr",
         "id": 105730846,
@@ -12245,11 +12245,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -12443,11 +12443,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -12641,11 +12641,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -12839,11 +12839,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -13037,11 +13037,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -13235,11 +13235,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -13433,11 +13433,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -13631,11 +13631,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -13829,11 +13829,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -14027,11 +14027,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -14225,11 +14225,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -14423,11 +14423,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -14621,11 +14621,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -14819,11 +14819,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -15017,11 +15017,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -15215,11 +15215,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -15424,11 +15424,11 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
@@ -15578,7 +15578,7 @@
           "archived_by": null
         }
       ],
-      "state": "open",
+      "state": "closed",
       "locked": false,
       "assignees": [
         {
@@ -15738,18 +15738,18 @@
           "user_view_type": "public",
           "site_admin": false
         },
-        "open_issues": 9,
-        "closed_issues": 40,
+        "open_issues": 8,
+        "closed_issues": 41,
         "state": "open",
         "created_at": "2026-10-17T14:26:28Z",
-        "updated_at": "2026-11-20T23:09:29Z",
+        "updated_at": "2026-11-20T23:16:22Z",
         "due_on": "2026-11-21T00:00:00Z",
         "closed_at": null
       },
       "comments": 0,
       "created_at": "2026-11-03T15:16:41Z",
-      "updated_at": "2026-11-20T23:05:59Z",
-      "closed_at": null,
+      "updated_at": "2026-11-20T23:16:21Z",
+      "closed_at": "2026-11-20T23:16:21Z",
       "assignee": {
         "login": "DaviPierre",
         "id": 73446334,
@@ -15787,7 +15787,27 @@
         "total_blocking": 0
       },
       "body": "### Descrição\n\nPreparar a apresentação do Ponto de Controle 2, em Google Slides ou Canva, cobrindo a Fase 3 completa e os resultados parciais da Fase 4 (métricas coletadas e primeiros níveis de pontuação). O cronograma tem o PC2 em 16/11 e 18/11, com sorteio, e a equipe se prepara para a primeira data: slides prontos em 15/11. Se o sorteio cair em 18/11, a issue fecha nesse dia. O retorno da professora entra na revisão do artigo (#128).\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Ponto de Controle 2 em 16/11 e 18/11: Cronograma atualizado da disciplina, Moodle (aprender3.unb.br), novembro\n- Pontos de controle nas datas do cronograma: 2026-2 Trabalho final completo v1.pdf, p. 3, seção 4\n- Link do canva: https://www.canva.com/design/DAHaziAhoJE/8WplYlypu6fDYshoVtmhVw/edit\n\n### Critério de pronto\n\n- [x] Slides cobrindo o plano de avaliação, a ligação com a Fase 2 e os resultados parciais da Fase 4\n- [ ] Ensaio realizado\n- [ ] Retorno da professora registrado em ata\n- [ ] Retorno levado para a #128 ou para issues de ajuste\n- [x] Slides prontos em 15/11\n\n### Prazo\n\n18/11\n\n### Depende de\n\n#103 (Piloto das instruções), #104 (Visão geral da Fase 03), #114 (Verificação dos dados brutos)\n\n### Estimativa (h)\n\n6\n\n### Horas reais (h)\n\n6h (@eduarda-ogomes: 1.5h @GabrielSMonteiro 1.5h @luizh-gsoares 1.5h @LeticiaSantosss 1.5h)\n\n### Revisor\n\n_No response_\n",
-      "closed_by": null,
+      "closed_by": {
+        "login": "eduarda-ogomes",
+        "id": 162516978,
+        "node_id": "U_kgDOCa_P8g",
+        "avatar_url": "https://avatars.githubusercontent.com/u/162516978?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/eduarda-ogomes",
+        "html_url": "https://github.com/eduarda-ogomes",
+        "followers_url": "https://api.github.com/users/eduarda-ogomes/followers",
+        "following_url": "https://api.github.com/users/eduarda-ogomes/following{/other_user}",
+        "gists_url": "https://api.github.com/users/eduarda-ogomes/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/eduarda-ogomes/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/eduarda-ogomes/subscriptions",
+        "organizations_url": "https://api.github.com/users/eduarda-ogomes/orgs",
+        "repos_url": "https://api.github.com/users/eduarda-ogomes/repos",
+        "events_url": "https://api.github.com/users/eduarda-ogomes/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/eduarda-ogomes/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
       "reactions": {
         "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/108/reactions",
         "total_count": 0,
@@ -15802,7 +15822,7 @@
       },
       "timeline_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/108/timeline",
       "performed_via_github_app": null,
-      "state_reason": null,
+      "state_reason": "completed",
       "pinned_comment": null
     },
     {
@@ -35778,16 +35798,98 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "open_issues": 9,
-      "closed_issues": 40,
+      "open_issues": 8,
+      "closed_issues": 41,
       "state": "open",
       "created_at": "2026-10-17T14:26:28Z",
-      "updated_at": "2026-11-20T23:09:29Z",
+      "updated_at": "2026-11-20T23:16:22Z",
       "due_on": "2026-11-21T00:00:00Z",
       "closed_at": null
     }
   ],
   "commits": [
+    {
+      "sha": "14b921ae55b87bc49e39ef30c99bddce32b8dae7",
+      "node_id": "C_kwDOUJBYZdoAKDE0YjkyMWFlNTViODdiYzQ5ZTM5ZWYzMGM5OWJkZGNlMzJiOGRhZTc",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-20T23:10:29Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-20T23:10:29Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "877ee14cbeb0a591bfb4271208f5c5cdfaf553b9",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/877ee14cbeb0a591bfb4271208f5c5cdfaf553b9"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/14b921ae55b87bc49e39ef30c99bddce32b8dae7",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/14b921ae55b87bc49e39ef30c99bddce32b8dae7",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/14b921ae55b87bc49e39ef30c99bddce32b8dae7",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/14b921ae55b87bc49e39ef30c99bddce32b8dae7/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "a4ea410f725d809cc0e32e99e1a6f090e24044d8",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/a4ea410f725d809cc0e32e99e1a6f090e24044d8",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/a4ea410f725d809cc0e32e99e1a6f090e24044d8"
+        }
+      ]
+    },
     {
       "sha": "a4ea410f725d809cc0e32e99e1a6f090e24044d8",
       "node_id": "C_kwDOUJBYZdoAKGE0ZWE0MTBmNzI1ZDgwOWNjMGUzMmU5OWUxYTZmMDkwZTI0MDQ0ZDg",
@@ -71512,8 +71614,20 @@
     }
   ],
   "revisoes_prs": {
-    "192": [],
-    "191": [],
+    "192": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "CHANGES_REQUESTED",
+        "enviada_em": "2026-11-20T23:12:48Z"
+      }
+    ],
+    "191": [
+      {
+        "revisor": "eduarda-ogomes",
+        "estado": "CHANGES_REQUESTED",
+        "enviada_em": "2026-11-20T23:13:29Z"
+      }
+    ],
     "189": [
       {
         "revisor": "wChrstphr",

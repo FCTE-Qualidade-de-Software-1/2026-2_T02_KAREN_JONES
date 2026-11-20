@@ -61,7 +61,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 105,Fase 3,[SITE] Atualizar o GitPage com a Fase 3,closed,GabrielSMonteiro,2.0,2.0,0.0,na faixa,90.0,90.0,08/11,15/11/2026,Concluida em atraso,12.12
 106,Fase 3,[GESTAO] Atas de reunião da Fase 3,closed,LeticiaSantosss,1.0,1.5,50.0,subestimada,45.0,67.5,08/11,15/11/2026,Concluida em atraso,12.28
 107,Fase 3,[GESTAO] Relatório PSM/CID da Fase 3,closed,GabrielSMonteiro,3.0,5.0,66.7,subestimada,135.0,225.0,08/11,15/11/2026,Concluida em atraso,12.11
-108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (18/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,6.0,0.0,na faixa,270.0,270.0,18/11,-,Aberta em atraso,
+108,Fase 4,[GESTAO] Apresentação do Ponto de Controle 2 (18/11),closed,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,6.0,0.0,na faixa,270.0,270.0,18/11,20/11/2026,Concluida em atraso,17.33
 109,Fase 4,[GESTAO] Registrar e acompanhar as correções indicadas no Ponto de Controle 1,closed,GabrielSMonteiro,1.0,1.0,0.0,na faixa,45.0,45.0,12/11,15/11/2026,Concluida em atraso,12.12
 110,Fase 4,[F4] Preparar o ambiente e o repositório de medidas,closed,luizh-gsoares,3.0,3.0,0.0,na faixa,135.0,135.0,08/11,15/11/2026,Concluida em atraso,12.27
 111,Fase 4,[F4] Coleta das métricas de G1 (Manutenibilidade),closed,wChrstphr,5.0,3.0,-40.0,superestimada,225.0,135.0,12/11,16/11/2026,Concluida em atraso,12.52
@@ -79,7 +79,7 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 123,Fase 4,[ARTIGO] Plano de avaliação (Fase 3) no artigo,closed,GabrielSMonteiro,3.0,3.0,0.0,na faixa,135.0,135.0,13/11,16/11/2026,Concluida em atraso,13.05
 124,Fase 4,[ARTIGO] Resultados da avaliação (Fase 4),closed,eduarda-ogomes,4.0,1.5,-62.5,superestimada,180.0,67.5,19/11,18/11/2026,Concluida no prazo,14.47
 125,Fase 4,"[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros",closed,luizh-gsoares,2.0,0.0,,,90.0,0.0,19/11,18/11/2026,Concluida no prazo,14.47
-126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,closed,LeticiaSantosss,3.0,0.0,,,135.0,0.0,20/11,20/11/2026,Concluida no prazo,17.32
+126,Fase 4,[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2,closed,LeticiaSantosss,3.0,3.0,0.0,na faixa,135.0,135.0,20/11,20/11/2026,Concluida no prazo,17.32
 127,Fase 4,[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2,open,LeticiaSantosss,2.0,0.0,,,90.0,0.0,20/11,-,Em andamento (no prazo),
 128,Fase 4,[ARTIGO] Revisão do artigo v2 e conferência com a rubrica,open,LeticiaSantosss,3.0,0.0,,,135.0,0.0,21/11,-,Em andamento (no prazo),
 129,Fase 4,[GESTAO] Atas de reunião da Fase 4,closed,luizh-gsoares,1.0,1.0,0.0,na faixa,45.0,45.0,21/11,17/11/2026,Concluida no prazo,14.36
