@@ -50,19 +50,19 @@ A equipe identificou na Entrega 1 um gargalo significativo: as tarefas foram dis
 | :--- | :--- |
 | **Categoria de Informação** | Calendário e Progresso (*Schedule and Progress*) |
 | **Necessidade de Informação** | Saber se as issues fecham de maneira cadenciada ao longo do cronograma da fase ou se acumulam na véspera por bloqueios de dependência em cascata. |
-| **Conceito Mensurável** | Ritmo de progresso das unidades de trabalho (*Work Unit Progress — Committed vs. Completed*). |
+| **Conceito Mensurável** | Ritmo de progresso das unidades de trabalho (*Work Unit Progress: Committed vs. Completed*). |
 | **Entidades Relevantes** | Tarefas (*issues*) vinculadas às *milestones* das Fases 1 a 4 no GitHub. |
 | **Atributos** | Estado da issue (`open` ou `closed`), data de criação (`created_at`), data de fechamento (`closed_at`), campo `Prazo`, campo `Depende de` e nível de `Prioridade` no Project. |
 | **Medidas Básicas** | 1. `Total_Issues`: total de issues planejadas para a fase.<br/>2. `Issues_Fechadas`: contagem de issues fechadas.<br/>3. `Data_Fechamento`: timestamp exato de fechamento de cada issue.<br/>4. `Issues_Bloqueadas`: issues abertas cujo `Depende de` possui ao menos uma issue ainda aberta. |
 | **Método de Medição** | Leitura diária e automática da API REST do GitHub via script `scripts/coleta_psm.py` e extração de dependências para o Project. |
 | **Tipo de Método de Medição** | Objetivo. |
 | **Escala** | Inteiros não negativos e timestamps de calendário. |
-| **Tipo de Escala** | Razão (*Ratio*) para contagens; Intervalar para datas. |
+| **Tipo de Escala** | Razão (*Ratio*) para contagens, e intervalar para datas. |
 | **Unidade de Medida** | Unidade de trabalho (issue) e data/hora. |
 | **Medidas Derivadas** | 1. **Progresso da Fase (%):** `(Issues_Fechadas / Total_Issues) × 100`<br/>2. **Taxa de Fechamento na 1ª Metade (%):** percentual de issues fechadas até a data média da fase.<br/>3. **Aderência ao Prazo (%):** percentual de issues fechadas até o dia do campo `Prazo`. |
 | **Função de Medição** | Cálculo aritmético sobre os registros de data extraídos dos metadados das issues. |
 | **Indicador** | Curva S de esforço acumulado planejado vs. realizado (`dados/gestao/graficos/08_desempenho_execucao_curva_s.png`), tabela de aderência e quadro kanban ordenado por `Prioridade` e `Prazo`. |
-| **Modelo de Análise** | Fechamento contínuo apresenta inclinação constante ao longo da fase; fechamento em "degrau" ou "efeito manada" nos últimos 2 dias sinaliza gargalo operacional por dependência ou subestimação. |
+| **Modelo de Análise** | Fechamento contínuo apresenta inclinação constante ao longo da fase. O fechamento em "degrau" ou "efeito manada" nos últimos 2 dias sinaliza gargalo operacional por dependência ou subestimação. |
 | **Critérios de Decisão** | **1. Ritmo de Execução:** Se na metade do tempo da fase o progresso for inferior a 50%, a equipe realiza reunião extraordinária na leitura de quarta-feira para redistribuir escopo.<br/>**2. Desbloqueio de Dependências:** Issue com prioridade `Alta` (trava 15+ issues) ou `Média` (trava 5 a 14 issues) aberta a 48h do prazo aciona pareamento imediato ou divisão de trabalho. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
@@ -71,7 +71,7 @@ A equipe identificou na Entrega 1 um gargalo significativo: as tarefas foram dis
 
 ### 2.2. Construct 2: Recursos e Custos: Acurácia das Estimativas de Esforço
 
-O planejamento das entregas seguintes depende diretamente da fidelidade das estimativas de esforço. Subestimar horas sobrecarrega os membros e gera atrasos; superestimar infla o custo e subutiliza a capacidade técnica.
+O planejamento das entregas seguintes depende diretamente da fidelidade das estimativas de esforço. Subestimar horas sobrecarrega os membros e gera atrasos, enquanto superestimar infla o custo e subutiliza a capacidade técnica.
 
 <p className="tabela-titulo">Tabela 3: Measurement Construct de Recursos e Custos</p>
 
@@ -79,7 +79,7 @@ O planejamento das entregas seguintes depende diretamente da fidelidade das esti
 | :--- | :--- |
 | **Categoria de Informação** | Recursos e Custos (*Resources and Cost*) |
 | **Necessidade de Informação** | Avaliar se as estimativas de esforço da equipe são precisas o suficiente para dimensionar a alocação de tarefas nas fases subsequentes sem sobrecarga. |
-| **Conceito Mensurável** | Desempenho financeiro e acurácia de estimativa de esforço (*Estimation Accuracy — Estimate vs. Actual Effort*). |
+| **Conceito Mensurável** | Desempenho financeiro e acurácia de estimativa de esforço (*Estimation Accuracy: Estimate vs. Actual Effort*). |
 | **Entidades Relevantes** | Tarefas (*issues*) com seções "Estimativa (h)" e "Horas reais (h)" preenchidas. |
 | **Atributos** | Esforço previsto na abertura da issue e esforço real gasto reportado no fechamento. |
 | **Medidas Básicas** | 1. `E` = Horas estimadas da issue (número real em horas).<br/>2. `R` = Horas reais executadas da issue (com suporte a rateio por integrante `@usuario: N`).<br/>3. `Vh` = Valor-hora de referência da equipe (R$ 45,00/h, baseado em salário de Engenheiro de Software Júnior, CBO 2124-05, Novo CAGED/MTE). |
@@ -87,11 +87,11 @@ O planejamento das entregas seguintes depende diretamente da fidelidade das esti
 | **Tipo de Método de Medição** | 1. Subjetivo (estimativa de engenharia do responsável na abertura). 2. Objetivo (apuração das horas gastas no fechamento). |
 | **Escala** | Números reais positivos de zero ao infinito. |
 | **Tipo de Escala** | Razão (*Ratio*). |
-| **Unidade de Medida** | Horas (h) e Moeda corrente (Reais — R$). |
+| **Unidade de Medida** | Horas (h) e moeda corrente em reais (R$). |
 | **Medidas Derivadas** | 1. **Acurácia da Fase (%):** `(Soma(R) / Soma(E)) × 100`<br/>2. **Desvio de Esforço (%):** `((Soma(R) - Soma(E)) / Soma(E)) × 100`<br/>3. **Custo Real da Fase (R$):** `Soma(R) × 45,00` |
 | **Função de Medição** | Razão percentual entre horas reais e horas estimadas acumuladas por fase e entrega. |
 | **Indicador** | Gráfico de acurácia por fase em relação à faixa ideal (`static/img/gestao/06_acuracia_estimativa_fases.png`) e tabela comparativa de esforço e custo. |
-| **Modelo de Análise** | Acurácia ideal situa-se na faixa de **80% a 120%** (desvio de até ±20%). Valores acima de 120% indicam subestimação do esforço; valores abaixo de 80% indicam superestimação. |
+| **Modelo de Análise** | Acurácia ideal situa-se na faixa de **80% a 120%** (desvio de até ±20%). Valores acima de 120% indicam subestimação do esforço, enquanto valores abaixo de 80% indicam superestimação. |
 | **Critérios de Decisão** | **1. Recalibração de Planejamento:** Se a acurácia de uma fase consolidada fechar fora da faixa `[80%, 120%]`, as estimativas da fase seguinte devem ser recalibradas coletivamente na reunião semanal (se subestimada, aplicar fator corretivo de 1,2× no planejamento).<br/>**2. Equilíbrio de Carga:** Integrante que acumular participação inferior a 8% ou superior a 30% do esforço da entrega tem tarefas redistribuídas imediatamente. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
@@ -115,7 +115,7 @@ Na Entrega 1, tarefas interdependentes muitas vezes demoravam a ser integradas n
 | **Método de Medição** | Leitura diária e automática dos PRs e das revisões pela API REST do GitHub via script `scripts/coleta_psm.py` ([#135](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/135)). A fase do PR é a da issue ligada a ele, ou a fase citada no título ou no corpo, ou a fase da data de abertura. |
 | **Tipo de Método de Medição** | Objetivo. |
 | **Escala** | Datas de calendário e números reais não negativos. |
-| **Tipo de Escala** | Intervalar para timestamps; Razão para tempo decorrido. |
+| **Tipo de Escala** | Intervalar para timestamps e razão para tempo decorrido. |
 | **Unidade de Medida** | Horas corridas. A CID aceita tempo corrido ou em dias úteis, desde que a escolha seja declarada [[6, p. 24]](#ref-6), e a equipe também trabalha nos fins de semana. |
 | **Medidas Derivadas** | 1. **Tempo de Espera por Revisão (h):** `T_revisao - T_abertura` de cada PR, resumido por fase em média, mediana, P80 e P90 [[6, p. 25]](#ref-6).<br/>2. **Taxa de Revisão Formal por Pares (%):** `(PRs com Aprovação Formal / Total de PRs Integrados) × 100`<br/>3. **Distribuição de Revisores:** proporção dos PRs revisados por cada integrante da equipe. |
 | **Função de Medição** | Diferença em horas entre a abertura do PR e a primeira revisão de outra pessoa no GitHub. |
@@ -136,8 +136,8 @@ Para apoiar as decisões das Fases 3 e 4, a equipe compilou os dados auditados d
 | Indicador de Gestão | Fase 1 (Requisitos) | Fase 2 (GQM & Artigo E1) | Consolidado Entrega 1 (F1 + F2) | Meta do Construct | Análise da Linha de Base |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Issues Concluídas / Total** | 17 / 17 | 27 / 27 | **44 / 44** | 100% | Escopo da Entrega 1 integralmente concluído. |
-| **Horas Estimadas (h)** | 53,50 h | 62,50 h | **116,00 h** | — | Planejamento acumulado da Entrega 1. |
-| **Horas Reais Executadas (h)** | 57,91 h | 56,40 h | **114,31 h** | — | 100% das horas registradas com rastreabilidade. |
+| **Horas Estimadas (h)** | 53,50 h | 62,50 h | **116,00 h** | N/A | Planejamento acumulado da Entrega 1. |
+| **Horas Reais Executadas (h)** | 57,91 h | 56,40 h | **114,31 h** | N/A | 100% das horas registradas com rastreabilidade. |
 | **Acurácia da Estimativa (%)** | 108,2% | 90,2% | **98,5%** | 80% a 120% | Atendido. Ambas as fases situaram-se na faixa ideal. |
 | **Custo Real Investido (R$)** | R$ 2.605,95 | R$ 2.538,00 | **R$ 5.143,95** | $\le$ R$ 5.220,00 | Executado abaixo do teto financeiro estimado. |
 | **Aderência aos Prazos (%)** | 29,4% | 44,4% | **38,6%** | 100,0% | Não atendido. Concentração de entregas na véspera persistiu. |
@@ -176,7 +176,7 @@ Para garantir que a medição sirva como ferramenta ativa de gestão, as mediç�
 <p className="tabela-titulo">Tabela 6: Cronograma de reuniões e leituras de medição do PSM/CID</p>
 
 | Marco | Data | Momento do Projeto | Pauta Principal da Leitura de Medição |
-| :---: | :---: | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **Leitura 0** | **04/11/2026** *(Quarta-feira)* | Linha de Base / Fechamento da E1 | • Analisar retrospectivamente o aprendizado da E1, acurácia e esforço.<br/>• Identificar bloqueios em cadeia e formular as decisões D1 a D6. |
 | **Leitura 1** | **11/11/2026** *(Quarta-feira)* | Meio da Fase 3 e Coleta da Fase 4 | • Verificar se o ritmo de fechamento da Fase 3 atingiu $\ge 50\%$.<br/>• Auditar se há issues de prioridade `Alta` em risco de atrasar a Fase 4.<br/>• Recalcular `Prioridade` e `Início` no Project.<br/>• Verificar tempo de espera dos PRs de instruções (G1, G2, G3). |
 | **Leitura 2** | **18/11/2026** *(Quarta-feira)* | Reta Final da Fase 4 e Redação Final | • Avaliar se a acurácia da Fase 4 está na faixa de 80% a 120%.<br/>• Cobrar PRs abertos há mais de 24h para destravar a consolidação do artigo e site.<br/>• Conferir o equilíbrio de esforço acumulado na Entrega 2 entre os 6 membros.<br/>• Decidir ações finais antes da Release `v2.0-E2`. |
@@ -198,7 +198,8 @@ Toda decisão adotada nessas leituras (redistribuição de tarefa, pareamento, c
 >
 > <Link id="ref-4">4.</Link> RAMOS, Cristiane Soares. **AULA 09 QSW1 PSM resumo**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Slides 6, 7, 19 e 23. Disponível no Moodle da disciplina.
 >
-> <Link id="ref-5">5.</Link> ISO/IEC/IEEE. **ISO/IEC/IEEE 15939:2017: Systems and software engineering — Measurement process**. International Organization for Standardization, Geneva, 2017.
+> <Link id="ref-5">5.</Link> ISO/IEC/IEEE. **ISO/IEC/IEEE 15939:2017: Systems and software engineering: Measurement process**. International Organization for Standardization, Geneva, 2017.
+
 >
 > <Link id="ref-6">6.</Link> PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT. **PSM Continuous Iterative Development Measurement Framework: Part 2, Measurement Specifications**. Versão 2.1, 15 abr. 2021. Seção 8.5, Cycle Time / Lead Time, p. 24-26. Disponível no Moodle da disciplina.
 

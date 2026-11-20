@@ -2,7 +2,7 @@
 title: Metodologia da equipe
 description: Como a equipe Karen Jones conduz a avaliação do Excalidraw com as quatro fases da ISO/IEC 25040, a divisão em subgrupos e a governança no GitHub.
 sidebar_label: Metodologia da equipe
-sidebar_position: 1
+sidebar_position: 5
 ---
 
 # Metodologia da equipe
@@ -49,17 +49,18 @@ Sustentação operacional transversal do projeto. A equipe organizou-se em dois 
 
 O fluxo de trabalho no GitHub é estritamente regido pelo [guia de contribuição](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/CONTRIBUTING.md), vedando envios diretos na branch principal (`main`). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão formal por ao menos um membro do grupo.
 
-O acompanhamento da gestão usa as métricas PSM/CID, com medições, interpretação e decisões registradas nos relatórios da [Fase 3](../gestao/relatorios/relatorio-psm-fase-3.md) e da Fase 4 (a ser publicado).
+O acompanhamento da gestão usa as métricas PSM/CID, com medições periódicas, interpretação contínua e decisões formais registradas no [Registro de Medições e Decisões](../gestao/registro-medicoes.md) e consolidadas no [Painel de Medição PSM](../gestao/painel-psm.md).
 
 ## Referências
 
 #### [1] {/* #ref-1 */}
 
-ISO/IEC. *ISO/IEC 25040: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process.*
+ISO/IEC. *ISO/IEC 25040: Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process.*
 
 #### [2] {/* #ref-2 */}
 
-BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994.
+BASILI, V. R., CALDIERA, G., ROMBACH, H. D. The Goal Question Metric Approach. In: *Encyclopedia of Software Engineering*. Wiley, 1994.
+
 
 ---
 
