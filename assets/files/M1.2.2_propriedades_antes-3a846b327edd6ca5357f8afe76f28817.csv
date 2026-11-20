@@ -1,0 +1,54 @@
+propriedade,documentada,arquivo-e-secao,trecho
+className,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+ownerDocument,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+renderEnvironment,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+onChange,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onchange (tabela de props e seção onChange),This callback is triggered whenever the component updates due to any change.
+onThemeChange,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+onIncrement,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+initialData,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/initialdata.mdx e tabela de props,The initial data with which app loads.
+initialState,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+onExcalidrawAPI,sim,"dev-docs/docs/@excalidraw/excalidraw/api/props/excalidraw-api.mdx (página excalidrawAPI) e linha excalidrawAPI da tabela de props.mdx. A página usa o nome anterior da prop, com a mesma assinatura (api) => void","Callback triggered with the excalidraw api once rendered. Once the callback is triggered, you will need to store the api in state to access it later."
+onMount,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+onUnmount,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+onInitialize,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+isCollaborating,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#iscollaborating (tabela de props e seção isCollaborating),This indicates if the app is in collaboration mode
+onPointerUpdate,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onpointerupdate (tabela de props e seção onPointerUpdate),Callback triggered when mouse pointer is updated.
+onPaste,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onpaste (tabela de props e seção onPaste),Callback to be triggered if passed when something is pasted into the scene
+onDuplicate,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+renderTopLeftUI,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+renderTopRightUI,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/render-props.mdx#rendertoprightui e tabela de props,Render function that renders custom UI in top right corner
+langCode,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#langcode (tabela de props e seção langCode),Language code string to be used in Excalidraw
+viewModeEnabled,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#viewmodeenabled (tabela de props e seção viewModeEnabled),This indicates if the app is in view mode.
+interaction,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+ui,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+activeTool,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+zenModeEnabled,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#zenmodeenabled (tabela de props e seção zenModeEnabled),This indicates if the zen mode is enabled
+gridModeEnabled,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#gridmodeenabled (tabela de props e seção gridModeEnabled),This indicates if the grid mode is enabled
+objectsSnapModeEnabled,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+libraryReturnUrl,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#libraryreturnurl (tabela de props e seção libraryReturnUrl),What URL should libraries.excalidraw.com be installed to
+theme,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#theme (tabela de props e seção theme),The theme of the Excalidraw component
+name,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#name (tabela de props e seção name),Name of the drawing
+renderCustomStats,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/render-props.mdx#rendercustomstats e tabela de props,Render function that can be used to render custom stats on the stats dialog.
+UIOptions,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/ui-options.mdx e tabela de props,To customise UI options.
+imageOptions,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+detectScroll,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#detectscroll (tabela de props e seção detectScroll),Indicates whether to update the offsets when nearest ancestor is scrolled.
+handleKeyboardGlobally,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#handlekeyboardglobally (tabela de props e seção handleKeyboardGlobally),Indicates whether to bind the keyboard events to document.
+onLibraryChange,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onlibrarychange (tabela de props e seção onLibraryChange),The callback if supplied is triggered when the library is updated and receives the library items.
+autoFocus,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#autofocus (tabela de props e seção autoFocus),Indicates whether to focus the Excalidraw component on page load
+generateIdForFile,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#generateidforfile (tabela de props e seção generateIdForFile),Allows you to override id generation for files added on canvas
+generateLinkForSelection,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#generatelinkforselection (tabela de props e seção generateLinkForSelection),Allows you to override url generation when linking to Excalidraw elements.
+onLinkOpen,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onlinkopen (tabela de props e seção onLinkOpen),The callback if supplied is triggered when any link is opened.
+onPointerDown,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onpointerdown (tabela de props e seção onPointerDown),This prop if passed gets triggered on pointer down events
+onPointerUp,sim,"dev-docs/docs/@excalidraw/excalidraw/api/props/excalidraw-api.mdx#onpointerup, descrito como método de inscrição da API com o mesmo propósito da prop",Subscribes to canvas pointerup events.
+onScrollChange,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#onscrollchange (tabela de props e seção onScrollChange),This prop if passed gets triggered when scrolling the canvas.
+onUserFollow,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+children,sim,dev-docs/docs/@excalidraw/excalidraw/api/children-components/children-components-intro.mdx,We expose several components you can render as children of the <Excalidraw/> component to customize the UI.
+validateEmbeddable,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx#validateembeddable (tabela de props e seção validateEmbeddable),use for custom src url validation
+renderEmbeddable,sim,dev-docs/docs/@excalidraw/excalidraw/api/props/render-props.mdx#renderembeddable e tabela de props,Render function that can override the built-in <iframe>
+aiEnabled,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+showDeprecatedFonts,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+renderScrollbars,sim,"dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx (linha da tabela de props, sem seção própria)",Indicates whether scrollbars will be shown
+viewportStatusFrame,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+currentUserControls,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+userToFollow,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
+onExport,não,sem menção nas páginas de dev-docs/docs/@excalidraw/excalidraw/api/,
