@@ -49,7 +49,7 @@
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
 | Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 65.5 | R$ 2160.00 | R$ 2947.50 | 136.5% | 7.62 |
-| Fase 4 | 28 / 22 | 78.6% | 53.6% | 96.0 | 74.0 | R$ 4320.00 | R$ 3327.75 | 90.2% | 13.02 |
+| Fase 4 | 28 / 23 | 82.1% | 53.6% | 96.0 | 71.0 | R$ 4320.00 | R$ 3192.75 | 89.8% | 13.21 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 29 | 75.5 | 52.6 | R$ 2369.25 | 158 | 28 | **20.01%** |
-| Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **14.06%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **21.66%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 17 | 31.5 | 32.4 | R$ 1458.45 | 16 | 11 | **12.32%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 38 | 16 | **12.50%** |
-| Maria Eduarda | `@eduarda-ogomes` | 20 | 47.5 | 51.2 | R$ 2304.00 | 77 | 16 | **19.46%** |
+| Christopher | `@wChrstphr` | 29 | 75.5 | 52.6 | R$ 2369.25 | 158 | 28 | **20.24%** |
+| Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **14.22%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **21.91%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 16 | 28.5 | 29.4 | R$ 1323.45 | 16 | 11 | **11.30%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 38 | 16 | **12.65%** |
+| Maria Eduarda | `@eduarda-ogomes` | 21 | 50.5 | 51.2 | R$ 2304.00 | 79 | 17 | **19.68%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 29 & 75.5h & 52.6h & 158/28 & 20.01\% \\
-Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 14.06\% \\
-Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 21.66\% \\
-Leticia de Carvalho & 17 & 31.5h & 32.4h & 16/11 & 12.32\% \\
-Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16 & 12.50\% \\
-Maria Eduarda & 20 & 47.5h & 51.2h & 77/16 & 19.46\% \\
+Christopher & 29 & 75.5h & 52.6h & 158/28 & 20.24\% \\
+Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 14.22\% \\
+Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 21.91\% \\
+Leticia de Carvalho & 16 & 28.5h & 29.4h & 16/11 & 11.30\% \\
+Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16 & 12.65\% \\
+Maria Eduarda & 21 & 50.5h & 51.2h & 79/17 & 19.68\% \\
 \hline
-\textbf{Total} & \textbf{113} & \textbf{274.0h} & \textbf{263.2h} & \textbf{371/93} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{113} & \textbf{274.0h} & \textbf{260.2h} & \textbf{373/94} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -100,7 +100,7 @@ Maria Eduarda & 20 & 47.5h & 51.2h & 77/16 & 19.46\% \\
 | Fase 1 | 28/09/2026 00:00 | 08/10/2026 11:59 | 18/10/2026 23:59 | 18 / 18 | 0.0 | 13 | 5 | 27.8 | - | sim |
 | Fase 2 | 18/10/2026 23:59 | 22/10/2026 23:59 | 26/10/2026 23:59 | 29 / 29 | 55.2 | 8 | 5 | 44.8 | - | nao |
 | Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 23 / 23 | 0.0 | 7 | 14 | 8.7 | - | sim |
-| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 22 / 28 | 7.1 | 3 | 0 | 32.1 | #128 #130 #183 | sim |
+| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 23 / 28 | 7.1 | 4 | 0 | 35.7 | #130 #183 | sim |
 
 ### Acerto das estimativas por issue
 
@@ -111,7 +111,7 @@ Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio en
 | Fase 1 | 18 | -0.8 | 0.0 | 50.0 | 4 | 5 |
 | Fase 2 | 26 | -8.2 | -11.65 | 61.5 | 3 | 7 |
 | Fase 3 | 23 | 36.5 | 0.0 | 47.8 | 11 | 1 |
-| Fase 4 | 23 | -9.8 | 0.0 | 52.2 | 3 | 8 |
+| Fase 4 | 22 | -10.2 | 0.0 | 50.0 | 3 | 8 |
 
 ### Tempo de espera dos PRs por revisao
 
@@ -122,8 +122,8 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 1 | 17 | 17 | 8 | 47.1 | 9 | 13.68 | 10.82 | 22.28 | 40.59 | 1 |
 | Fase 2 | 29 | 27 | 13 | 48.1 | 16 | 3.66 | 0.4 | 7.53 | 7.57 | 1 |
 | Fase 3 | 23 | 23 | 15 | 65.2 | 8 | 24.17 | 20.88 | 45.9 | 61.74 | 5 |
-| Fase 4 | 24 | 22 | 12 | 54.5 | 9 | 18.0 | 2.65 | 48.16 | 56.29 | 4 |
-| Total | 93 | 89 | 48 | 53.9 | 42 | 15.48 | 7.53 | 26.16 | 48.16 | 11 |
+| Fase 4 | 25 | 23 | 12 | 52.2 | 10 | 18.0 | 2.65 | 48.16 | 56.29 | 4 |
+| Total | 94 | 90 | 48 | 53.3 | 43 | 15.48 | 7.53 | 26.16 | 48.16 | 11 |
 
 ### Quem revisou
 
@@ -189,6 +189,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | PR | Fase | Origem da fase | Autor | Situacao | Aberto em | Primeira revisao | Espera (h) | Aprovado | Revisores |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| #193 | Fase 4 | issue #130 | eduarda-ogomes | integrado | 20/11/2026 20:31 | - | - | nao | - |
 | #192 | Fase 4 | issue #181 | wChrstphr | aberto | 20/11/2026 19:49 | 20/11/2026 20:12 | 0.39 | nao | eduarda-ogomes |
 | #191 | Fase 4 | issue #190 | wChrstphr | aberto | 18/11/2026 20:03 | 20/11/2026 20:13 | 48.16 | nao | eduarda-ogomes |
 | #189 | Fase 4 | issue #126 | eduarda-ogomes | integrado | 18/11/2026 12:38 | 20/11/2026 19:59 | 55.35 | sim | wChrstphr |
@@ -290,3 +291,8 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | fechada sem horas reais | #27 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA' fechada sem horas reais registradas |
 | fechada sem horas reais | #74 | '[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1' fechada sem horas reais registradas |
 | fechada sem horas reais | #125 | '[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros' fechada sem horas reais registradas |
+| fechada sem horas reais | #126 | '[GESTAO] Relatório PSM/CID da Fase 4 e consolidado da Entrega 2' fechada sem horas reais registradas |
+| fechada sem horas reais | #127 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA da Entrega 2' fechada sem horas reais registradas |
+| horas nao lidas | #126 | valor ilegivel: '### Revisor
+
+_No response_' |

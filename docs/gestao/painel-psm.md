@@ -127,19 +127,19 @@ As 50 issues da Entrega 2 correspondem a 60 atribuições, por causa das tarefas
 
 ### 5.3. Esforço e custo acumulados no projeto (Fases 1 a 4)
 
-No projeto inteiro, a equipe somou 249,96 horas reais frente a 270,00 horas estimadas, com custo real de R$ 11.248,20 ao valor-hora de R$ 45,00.
+No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 260,16 horas reais executadas frente a 274,00 horas estimadas, totalizando R$ 11.707,20 em custo real apurado à taxa horária de R$ 45,00. A tabela a seguir sintetiza a contribuição individual acumulada em todo o repositório, extraída de [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv):
 
 <p className="tabela-titulo">Tabela 5: Esforço acumulado e custo individual no projeto (Fases 1 a 4). Retrato de 18/11/2026</p>
 
 | Integrante | Login GitHub | Issues atribuídas | Horas est. (h) | Horas reais (h) | Custo real (R$) | Commits | PRs abertos | Esforço real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher Paraizo | `@wChrstphr` | 28 | 71,50 | 39,95 | 1.797,75 | 154 | 24 | 15,98 |
-| Davi Pierre | `@DaviPierre` | 14 | 38,00 | 37,00 | 1.665,00 | 13 | 6 | 14,80 |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | 2.565,00 | 69 | 16 | 22,80 |
-| Letícia de Carvalho | `@LeticiaSantosss` | 17 | 31,50 | 27,91 | 1.255,95 | 16 | 11 | 11,17 |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32,00 | 32,90 | 1.480,50 | 38 | 16 | 13,16 |
-| Maria Eduarda | `@eduarda-ogomes` | 20 | 47,50 | 55,20 | 2.484,00 | 71 | 15 | 22,08 |
-| **Total do projeto** | | **112** | **270,00** | **249,96** | **11.248,20** | **321** | **88** | **100** |
+| **Christopher** | `@wChrstphr` | 29 | 75,50 | 52,65 | R$ 2.369,25 | 158 | 28 | **20,24%** |
+| **Davi Pierre** | `@DaviPierre` | 14 | 38,00 | 37,00 | R$ 1.665,00 | 13 | 6 | **14,22%** |
+| **Gabriel Monteiro** | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | R$ 2.565,00 | 69 | 16 | **21,91%** |
+| **Letícia de Carvalho** | `@LeticiaSantosss` | 17 | 31,50 | 29,41 | R$ 1.323,45 | 16 | 11 | **11,30%** |
+| **Luiz Henrique Soares** | `@luizh-gsoares` | 15 | 32,00 | 32,90 | R$ 1.480,50 | 38 | 16 | **12,65%** |
+| **Maria Eduarda** | `@eduarda-ogomes` | 20 | 47,50 | 51,20 | R$ 2.304,00 | 77 | 16 | **19,68%** |
+| **Total do Projeto** | **Equipe** | **97 (113 atrib.)** | **274,00** | **260,16** | **R$ 11.707,20** | **371** | **93** | **100,00%** |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/04_contribuicao_individual.csv</code> do retrato de 18/11/2026.</p>
 
