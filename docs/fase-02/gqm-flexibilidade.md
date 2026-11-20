@@ -14,7 +14,11 @@ Esta página detalha o objetivo [G3](./estrutura-gqm.md#g3-flexibilidade-antiga-
 
 ## Metodologia
 
-As questões caracterizam o produto em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Flexibilidade](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) da Fase 01. As hipóteses foram formuladas antes da coleta, uma por métrica, e são as mesmas da [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade), como a aula permite [[1, p. 34]](#ref-1). Cada hipótese tem uma única afirmação e uma regra que a confirma ou refuta, com limite nas fronteiras das [faixas de pontuação](./pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) da métrica ou na própria definição dela. As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1), e as métricas foram verificadas na versão avaliada quanto à possibilidade de coleta [[1, p. 42]](#ref-1).
+As questões caracterizam o produto em relação a cada subcaracterística [[1, p. 33 e 34]](#ref-1), a partir dos [requisitos de Flexibilidade](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) da Fase 01.
+
+As hipóteses seguem a [regra definida no método](./estrutura-gqm.md#1-o-que-é-o-gqm) e são as mesmas da [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade), como a aula permite [[1, p. 34]](#ref-1).
+
+As métricas respondem às questões de forma quantitativa [[1, p. 38]](#ref-1). Cada ficha justifica a métrica pelas características desejáveis [[1, p. 41]](#ref-1).
 
 ---
 
@@ -46,7 +50,7 @@ As definições abaixo valem para todas as métricas de G3 e evitam que pessoas 
 - **Cena de referência:** desenho padronizado usado nos testes, com ao menos um elemento de cada tipo principal: retângulo, elipse, losango, seta, linha, desenho livre, texto, texto dentro de forma, imagem e moldura (*frame*). É a mesma cena usada no [objetivo de Confiabilidade](./gqm-confiabilidade.md#2-convenções-de-coleta).
 - **Cenas de escala:** cenas geradas por script com 100, 1.000, 5.000 e 10.000 elementos, em proporção fixa: 40% retângulos, 20% elipses, 20% setas e 20% textos, distribuídos em uma grade. O script fica no repositório da avaliação para que as cenas possam ser recriadas.
 
-Os fatores que podem influenciar os resultados também são registrados junto com cada coleta [[1, p. 38]](#ref-1): o hardware, o navegador e sua versão, as versões de Node.js e dos gerenciadores de pacotes, e a composição das cenas de teste. Esses fatores foram levantados na [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade).
+Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-cada-métrica) de G3, levantados na [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade), são registrados junto com cada coleta: o hardware, o navegador e sua versão, as versões de Node.js e dos gerenciadores de pacotes, e a composição das cenas de teste.
 
 ---
 
@@ -73,8 +77,8 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Percentual dos usuários de navegadores no mundo cobertos pela lista de navegadores que a aplicação declara suportar. |
-| Procedimento de cálculo | Aplicar a consulta de navegadores declarada no campo `browserslist` (perfil `production`) do `package.json` da aplicação à base de uso global da ferramenta Browserslist. Unidade: percentual. Escala: 0 a 100. Também é registrada a lista de navegadores excluídos explicitamente. |
-| Fonte dos dados | Campo `browserslist` de `excalidraw-app/package.json` e de `packages/excalidraw/package.json`. |
+| Procedimento de cálculo | Aplicar a consulta de navegadores declarada no campo `browserslist` (perfil `production`) de `excalidraw-app/package.json` à base de uso global da ferramenta Browserslist. Unidade: percentual. Escala: 0 a 100. Também é registrada a lista de navegadores excluídos explicitamente. |
+| Fonte dos dados | Campo `browserslist` (perfil `production`) de `excalidraw-app/package.json`. A biblioteca declara a mesma consulta em `packages/excalidraw/package.json`. |
 | Procedimento de coleta | Comando `npx browserslist --coverage=global "<consulta>"`, registrando a versão da ferramenta e da base de dados de uso (`caniuse-lite`), porque a base muda com o tempo. |
 | Critério de interpretação | Confirma [H3.1.1](#3-q31-adaptabilidade) se a cobertura for de pelo menos 80%. Quanto menor a cobertura, mais usuários ficam sem suporte declarado. A exclusão de navegadores antigos na lista declarada é registrada como observação. |
 | Questão respondida | Q3.1 |
@@ -110,9 +114,11 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Teste manual roteirizado no dispositivo, registrando cada ação como funciona ou não funciona, com gravação de tela. |
 | Critério de interpretação | Confirma [H3.1.3](#3-q31-adaptabilidade) se o valor for 100% com toque. Cada ação que falha é algo que o usuário de dispositivo móvel não consegue fazer. |
 | Questão respondida | Q3.1 |
-| Características desejáveis | Simples. Objetiva, porque cada ação tem resultado binário com evidência gravada. Válida para RQ-FLEX-04. |
+| Características desejáveis | Simples. Objetiva, porque cada ação tem resultado binário com evidência gravada. Válida para [RQ-FLEX-04](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+**Interpretação usada na pontuação.** A hipótese H3.1.3 é verificada com o toque, mas a pontuação da métrica é a média entre o toque com o dedo e a caneta, como fixam as [justificativas dos níveis de G3](./pontuacao-julgamento.md#51-justificativas-específicas). As ações 6, 7 e 8 (pinça, deslocamento com dois dedos e teclado virtual) só se fazem com o dedo, e na sessão com caneta foram feitas no uso combinado de caneta e dedos. Numa leitura estrita, só com a caneta, essas três ações contariam como falha e rebaixariam a caneta. Essa leitura é registrada como limitação da métrica.
 
 ---
 
@@ -144,7 +150,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Gravação no painel de desempenho (*Performance*) das ferramentas do navegador, do momento em que o arquivo é solto no editor até o último quadro desenhado. A página é recarregada e o armazenamento local é limpo entre as repetições. |
 | Critério de interpretação | Confirma [H3.2.1](#4-q32-escalabilidade) se a cena de 1.000 elementos abrir em até 1 segundo. A forma da curva mostra se o tempo cresce na mesma proporção do desenho ou mais rápido que ele. |
 | Questão respondida | Q3.2 |
-| Características desejáveis | Objetiva, porque a medição é feita pela ferramenta do navegador. Robusta, por usar a mediana de repetições. Válida para RQ-FLEX-06. Depende do hardware, que é fixado e registrado. |
+| Características desejáveis | Objetiva, porque a medição é feita pela ferramenta do navegador. Robusta, por usar a mediana de repetições. Válida para [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). Depende do hardware, que é fixado e registrado. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -160,7 +166,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Painel de desempenho das ferramentas do navegador, com roteiro de movimento fixo. |
 | Critério de interpretação | Confirma [H3.2.2](#4-q32-escalabilidade) se a cena de 1.000 elementos for editada com pelo menos 48 quadros por segundo. Taxas baixas significam movimento travado para o usuário. |
 | Questão respondida | Q3.2 |
-| Características desejáveis | Objetiva e robusta, pelos mesmos motivos de M3.2.1. Válida para RQ-FLEX-05, porque mede o que o usuário percebe ao editar. |
+| Características desejáveis | Objetiva e robusta, pelos mesmos motivos de M3.2.1. Válida para [RQ-FLEX-05](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade), porque mede o que o usuário percebe ao editar. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -171,12 +177,12 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Campo | Descrição |
 | :--- | :--- |
 | Definição | Maior cena de escala que pode ser salva em `.excalidraw` e exportada em PNG e em SVG sem que o navegador trave. |
-| Procedimento de cálculo | Para cada cena, em ordem crescente, executar salvar, exportar em PNG e exportar em SVG, registrando o tempo de cada operação. A operação falha se não termina em 30 segundos ou se o navegador avisa que a página não está respondendo. O resultado é o número de elementos da maior cena em que as três operações terminam. Unidade: elementos. Escala: ordinal (100, 1.000, 5.000 ou 10.000). |
+| Procedimento de cálculo | Para cada cena, em ordem crescente, executar salvar, exportar em PNG e exportar em SVG, registrando o tempo de cada operação. A operação falha se não termina em 30 segundos ou se o navegador avisa que a página não está respondendo. O resultado é o número de elementos da maior cena em que as três operações terminam. Unidade: elementos. Escala: ordinal (nenhuma, 100, 1.000, 5.000 ou 10.000). |
 | Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Teste manual roteirizado com cronômetro do painel de desempenho, comparando o tempo de exportar com o tempo de abrir (M3.2.1) na mesma cena. |
 | Critério de interpretação | Confirma [H3.2.3](#4-q32-escalabilidade) se a maior cena salva e exportada tiver pelo menos 5.000 elementos. O valor mostra até onde o usuário pode levar um desenho sem perder a capacidade de salvar e compartilhar. A comparação entre o tempo de exportação e o tempo de abertura de cada cena é registrada como observação. |
 | Questão respondida | Q3.2 |
-| Características desejáveis | Simples. Objetiva, porque o limite de tempo é fixo. Válida para RQ-FLEX-06. |
+| Características desejáveis | Simples. Objetiva, porque o limite de tempo é fixo. Válida para [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -185,6 +191,8 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 ## 5. Q3.3: Instalabilidade
 
 **Questão:** A biblioteca e a aplicação podem ser instaladas, construídas e implantadas seguindo apenas a documentação, em ambientes diferentes?
+
+Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implantação são testadas em um único ambiente limpo, como registra a [rastreabilidade de RQ-FLEX-08](#7-rastreabilidade-com-a-fase-01). A resposta à questão vale para esse ambiente.
 
 **Requisitos:** [RQ-FLEX-07](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (instalar, atualizar e remover a biblioteca), [RQ-FLEX-08](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (construção, implantação e pré-requisitos), [RQ-FLEX-09](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (suporte a Docker) e [RQ-FLEX-10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (instruções documentadas e reproduzíveis).
 
@@ -210,7 +218,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Execução dos comandos em ambiente limpo, registrando a saída de cada um. |
 | Critério de interpretação | Confirma [H3.3.1](#5-q33-instalabilidade) se o valor for 100%. Cada operação que falha é um passo que o integrador precisa resolver por conta própria. O número de comandos necessários para instalar a biblioteca é registrado como observação. |
 | Questão respondida | Q3.3 |
-| Características desejáveis | Simples. Objetiva, porque o sucesso é dado pelo código de saída dos comandos. Fácil de coletar. Válida para RQ-FLEX-07. |
+| Características desejáveis | Simples. Objetiva, porque o sucesso é dado pelo código de saída dos comandos. Fácil de coletar. Válida para [RQ-FLEX-07](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -226,7 +234,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Execução em ambiente limpo, registrando cada ajuste necessário e o motivo. |
 | Critério de interpretação | Confirma [H3.3.2](#5-q33-instalabilidade) se pelo menos 95% dos passos forem reproduzidos sem ajuste, com as versões exigidas de ferramentas. Cada ajuste é algo que a documentação deixou de dizer. |
 | Questão respondida | Q3.3 |
-| Características desejáveis | Objetiva, porque a regra de "sem ajuste" é fixa e cada ajuste é registrado com o motivo. Válida para RQ-FLEX-08 e RQ-FLEX-10. |
+| Características desejáveis | Objetiva, porque a regra de "sem ajuste" é fixa e cada ajuste é registrado com o motivo. Válida para [RQ-FLEX-08](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) e [RQ-FLEX-10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -242,7 +250,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Comandos `docker build` e `docker run` em ambiente limpo com Docker instalado, registrando a saída e a versão do Docker. |
 | Critério de interpretação | Confirma [H3.3.3](#5-q33-instalabilidade) se o valor for 100%. Cada verificação que falha é um obstáculo para quem precisa implantar a aplicação em um servidor próprio. |
 | Questão respondida | Q3.3 |
-| Características desejáveis | Simples. Objetiva, porque cada verificação tem resultado binário. Fácil de coletar. Válida para RQ-FLEX-09. |
+| Características desejáveis | Simples. Objetiva, porque cada verificação tem resultado binário. Fácil de coletar. Válida para [RQ-FLEX-09](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -276,9 +284,11 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Inspeção dos menus de exportação e salvamento, registrando cada formato com captura de tela, e conferência com as funções exportadas pela biblioteca. |
 | Critério de interpretação | Confirma [H3.4.1](#6-q34-substituibilidade) se pelo menos 3 formatos abertos estiverem disponíveis. Quanto mais formatos abertos, mais fácil trocar de ferramenta sem refazer o desenho. |
 | Questão respondida | Q3.4 |
-| Características desejáveis | Simples e fácil de coletar. Objetiva, porque cada formato é registrado com evidência. Válida para RQ-FLEX-11. |
+| Características desejáveis | Simples e fácil de coletar. Objetiva, porque cada formato é registrado com evidência. Válida para [RQ-FLEX-11](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+**Interpretação usada na contagem.** O `.excalidraw` é contado como formato aberto porque é JSON legível por outras ferramentas, embora sua documentação seja parcial. A falta de uma especificação completa é a limitação reconhecida na [abstraction sheet de G3](./abstraction-sheets.md#4-g3-flexibilidade) e é medida por [M3.4.3](#m343-proporção-dos-campos-do-formato-excalidraw-documentados), cuja hipótese [H3.4.3](#6-q34-substituibilidade) espera menos de 60% dos campos documentados.
 
 ### M3.4.2: Proporção de elementos preservados na exportação e reimportação
 
@@ -292,7 +302,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Exportação e reimportação pela interface e comparação dos elementos por script, exportando a cena reimportada em `.excalidraw`. É o mesmo script de comparação usado em [M2.4.1](./gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) e [M2.4.2](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda), do objetivo de Confiabilidade. |
 | Critério de interpretação | Confirma [H3.4.2](#6-q34-substituibilidade) se o valor for de pelo menos 95% em cada formato. Elementos perdidos mostram o que o usuário não recupera ao reabrir uma imagem exportada. |
 | Questão respondida | Q3.4 |
-| Características desejáveis | Objetiva, porque a comparação é feita por script. Robusta, porque a mesma cena serve para outras versões. Válida para RQ-FLEX-12. |
+| Características desejáveis | Objetiva, porque a comparação é feita por script. Robusta, porque a mesma cena serve para outras versões. Válida para [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -308,7 +318,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | Procedimento de coleta | Listagem dos campos por script e busca de cada nome na documentação. |
 | Critério de interpretação | Confirma [H3.4.3](#6-q34-substituibilidade) se menos de 60% dos campos estiverem documentados. Quanto menor a cobertura, mais outra ferramenta precisa adivinhar o significado dos dados. A existência de um esquema formal publicado é registrada como observação. |
 | Questão respondida | Q3.4 |
-| Características desejáveis | Simples (uma razão). Objetiva, porque a lista de campos vem de um arquivo real. Fácil de coletar por script. Válida para RQ-FLEX-12. |
+| Características desejáveis | Simples (uma razão). Objetiva, porque a lista de campos vem de um arquivo real. Fácil de coletar por script. Válida para [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -327,7 +337,7 @@ Os fatores que podem influenciar os resultados também são registrados junto co
 | [RQ-FLEX-05](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Escalabilidade | [Q3.2](#4-q32-escalabilidade) | [M3.2.1](#m321-tempo-de-abertura-por-tamanho-de-cena), [M3.2.2](#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | Total. |
 | [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Escalabilidade | [Q3.2](#4-q32-escalabilidade) | [M3.2.1](#m321-tempo-de-abertura-por-tamanho-de-cena), [M3.2.3](#m323-tamanho-máximo-de-cena-salva-e-exportada) | Total. |
 | [RQ-FLEX-07](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Instalabilidade | [Q3.3](#5-q33-instalabilidade) | [M3.3.1](#m331-proporção-de-operações-de-pacote-bem-sucedidas) | Total. |
-| [RQ-FLEX-08](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Instalabilidade | [Q3.3](#5-q33-instalabilidade) | [M3.3.2](#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste), [M3.3.3](#m333-implantação-com-docker) | Parcial: a construção e a implantação são testadas em um único ambiente limpo, e não em ambientes diferentes. |
+| [RQ-FLEX-08](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Instalabilidade | [Q3.3](#5-q33-instalabilidade) | [M3.3.2](#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste), [M3.3.3](#m333-implantação-com-docker) | Parcial: a construção e a implantação são testadas em um único ambiente limpo, e não em ambientes diferentes, por isso nenhuma métrica compara ambientes. |
 | [RQ-FLEX-09](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Instalabilidade | [Q3.3](#5-q33-instalabilidade) | [M3.3.3](#m333-implantação-com-docker) | Total. |
 | [RQ-FLEX-10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Instalabilidade | [Q3.3](#5-q33-instalabilidade) | [M3.3.2](#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste), [M3.3.3](#m333-implantação-com-docker) | Total. |
 | [RQ-FLEX-11](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) | Substituibilidade | [Q3.4](#6-q34-substituibilidade) | [M3.4.1](#m341-formatos-de-exportação-abertos-disponíveis) | Total. |
@@ -341,7 +351,7 @@ Todos os 12 requisitos de Flexibilidade da Fase 01 são atendidos por pelo menos
 
 ## 8. Verificação das métricas
 
-A aula pede verificar se as métricas podem ser coletadas e se são consistentes com as questões e o objetivo [[1, p. 42]](#ref-1). A equipe fez essa verificação no código da versão avaliada e no repositório oficial, sem registrar valores, porque a medição propriamente dita pertence à Fase 04.
+A [verificação das métricas](./estrutura-gqm.md#5-ficha-de-cada-métrica) de G3 foi feita no código da versão avaliada e no repositório oficial.
 
 <p className="tabela-titulo">Tabela 19: Verificação das métricas de G3</p>
 
@@ -378,3 +388,4 @@ A aula pede verificar se as métricas podem ser coletadas e se são consistentes
 | 1.1 | 30/10/2026 | Troca dos travessões dos títulos das questões e das métricas, links para os requisitos, as questões, as métricas, o escopo, a abstraction sheet, os níveis de pontuação e as fichas de G2 citadas, critérios de interpretação ligados aos níveis de pontuação, fonte de M3.3.2 restrita ao guia de desenvolvimento, coluna de atendimento na rastreabilidade, com três requisitos atendidos em parte e métricas acrescentadas a RQ-FLEX-05, RQ-FLEX-08, RQ-FLEX-10 e RQ-FLEX-12 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 30/10/2026 | Hipóteses refeitas: uma por métrica, com uma única afirmação e regra de confirmação ligada às faixas de pontuação. Afirmações que sobravam viram observação na ficha da métrica | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 10/11/2026 | Introdução e Metodologia em texto corrido, com a regra das hipóteses dita uma única vez. O template do objetivo passa a ser apontado na página do método. Tabelas com título e fonte, citações numeradas, referências restritas às citadas e listas sem ponto e vírgula | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência e cross-links: interpretações de M3.1.3, M3.4.1 e Q3.3 registradas e regras trocadas por links à estrutura do GQM | [Christopher Paraizo](https://github.com/wChrstphr) | |

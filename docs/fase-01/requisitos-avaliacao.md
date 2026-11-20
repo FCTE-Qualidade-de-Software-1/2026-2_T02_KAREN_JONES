@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 8
 title: Requisitos de Avaliação
 description: Requisitos do Excalidraw por característica e subcaracterística da ISO/IEC 25010:2023
 ---
@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-A análise de requisitos define os requisitos de qualidade do produto a partir dos objetivos da avaliação, que traduzem o interesse do requisitante [[1, p. 7]](#ref-1). Esta página reúne os requisitos de avaliação do Excalidraw, isto é, as perguntas que as fases seguintes precisam responder, organizadas pelas características e subcaracterísticas da ISO/IEC 25010:2023 [[2]](#ref-2).
+A análise de requisitos define os requisitos de qualidade do produto a partir dos objetivos da avaliação, que traduzem o interesse do requisitante [[1, p. 7]](#ref-1). Os requisitos de avaliação do Excalidraw são as perguntas que as fases seguintes precisam responder, organizadas pelas características e subcaracterísticas da ISO/IEC 25010:2023 [[2]](#ref-2).
 
 ## Metodologia
 
@@ -46,7 +46,7 @@ Requisitos ligados à Manutenibilidade, organizados pelas subcaracterísticas Mo
 | **RQ-MAN-12** | Os testes cobrem diferentes níveis (unitário, integração e, quando houver, ponta a ponta)? | Testabilidade |
 | **RQ-MAN-13** | Os testes são executados automaticamente a cada alteração proposta? | Testabilidade |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ---
 
@@ -70,7 +70,7 @@ Requisitos ligados à Confiabilidade, organizados pelas subcaracterísticas Aus�
 | **RQ-CONF-10** | Arquivos criados em versões anteriores continuam podendo ser abertos nas versões atuais? | Recuperabilidade |
 | **RQ-CONF-11** | O usuário consegue desfazer e refazer ações? | Recuperabilidade |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ---
 
@@ -95,7 +95,7 @@ Requisitos ligados à Flexibilidade (Portabilidade na edição de 2011 da norma)
 | **RQ-FLEX-11** | Os dados produzidos pelo sistema podem ser exportados para formatos utilizáveis fora da aplicação (`.excalidraw`, PNG e SVG)? | Substituibilidade |
 | **RQ-FLEX-12** | Os formatos exportados são abertos, documentados e permitem reimportar o conteúdo sem perda relevante? | Substituibilidade |
 
-<p className="tabela-fonte">Fonte: [Letícia Santos](https://github.com/LeticiaSantosss), 2026.</p>
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ---
 
@@ -113,4 +113,5 @@ Requisitos ligados à Flexibilidade (Portabilidade na edição de 2011 da norma)
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/10/2026 | Primeira versão dos requisitos de avaliação de Manutenibilidade, Confiabilidade e Flexibilidade (ISO/IEC 25010:2023) | [Letícia Santos](https://github.com/LeticiaSantosss) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.1 | 18/10/2026 | Harmonização da terminologia Maturidade e padronização do frontmatter | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
-| 1.2 | 10/11/2026 | Introdução e Metodologia, subcaracterística Ausência de falhas adotada como na edição de 2023, nome da característica na edição de 2011 corrigido para Portabilidade, links para a rastreabilidade do modelo e do Plano GQM, tabelas com título e fonte e referências | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia Santos](https://github.com/LeticiaSantosss) |
+| 1.2 | 10/11/2026 | Introdução e Metodologia, subcaracterística Ausência de falhas adotada como na edição de 2023, nome da característica na edição de 2011 corrigido para Portabilidade, links para a rastreabilidade do modelo e do Plano GQM, tabelas com título e fonte e referências | [Christopher Paraizo](https://github.com/wChrstphr) | [Letícia de Carvalho](https://github.com/LeticiaSantosss) |
+| 1.3 | 18/11/2026 | Revisão de coerência e cross-links: página antes do escopo na ordem de leitura | [Christopher Paraizo](https://github.com/wChrstphr) | |

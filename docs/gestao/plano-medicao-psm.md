@@ -10,19 +10,27 @@ import Link from '@docusaurus/Link';
 
 # Plano de Medição PSM/CID
 
+## 1. Introdução
+
 Este documento define o **Plano de Medição** da equipe Karen Jones para o projeto de avaliação de qualidade do software **Excalidraw**, fundamentado na norma **ISO/IEC 15939** e no método **Practical Software and Systems Measurement (PSM/CID)** [[1]](#ref-1).
 
-Na apresentação das métricas PSM de 04/11/2026, a professora orientou que as métricas de gestão devem responder a perguntas que ajudem a equipe a monitorar e aprimorar o próprio processo de desenvolvimento de software, indicando como referência o trabalho desenvolvido pela equipe **T01 Mary Jackson** [[2]](#ref-2). 
+Na apresentação das métricas PSM de 04/11/2026, a professora orientou que as métricas de gestão devem responder a perguntas que ajudem a equipe a monitorar e aprimorar o próprio processo de desenvolvimento de software, indicando como referência o trabalho desenvolvido pela equipe **T01 Mary Jackson** [[2]](#ref-2).
 
 Em versões anteriores (Fases 1 e 2), a medição continha *measurement constructs* com necessidades de informação genéricas, e as decisões nem sempre se conectavam a ações operacionais no repositório. Este plano refaz a estrutura de medição do projeto inteiro para as Fases 1 a 4, estabelecendo uma medida por categoria de informação, partindo de perguntas reais da equipe e definindo critérios de decisão vinculados a ações concretas.
 
 O detalhamento analítico do PSM/CID concentra-se no GitPage da equipe, mantendo no artigo acadêmico o apêndice de contribuição e uso de inteligência artificial.
 
+## 2. Metodologia
+
+O plano parte de uma pergunta da equipe para cada categoria de informação do PSM ([seção 3](#3-origem-das-medidas-e-perguntas-da-equipe)) e descreve cada medida num *measurement construct* ([seção 4](#4-instâncias-do-modelo-de-informação-measurement-constructs)). Os dados vêm das issues, dos PRs e das revisões do repositório, lidos pela API do GitHub no `scripts/coleta_psm.py`. O workflow `.github/workflows/coleta-psm.yml` executa o script todo dia e grava os resultados em `dados/gestao/`. As tabelas usadas pelos constructs ficam na [seção 4 de `constructs_e_tabelas.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/constructs_e_tabelas.md#4-medidas-do-plano-de-medicao), na ordem deste plano. A seção 1 desse arquivo é gerada pelo script com outra numeração de constructs e não substitui a deste plano.
+
+A linha de base das Fases 1 e 2 ([seção 5](#5-linha-de-base-das-fases-1-e-2-dados-históricos)) serve de comparação para as Fases 3 e 4. As leituras semanais da [seção 7](#7-rotina-de-governança-e-calendário-das-leituras-semanais) aplicam os critérios de decisão, e os resultados e as decisões de cada leitura ficam no [Registro de Medições](registro-medicoes.md).
+
 ---
 
-## 1. Origem das Medidas e Perguntas da Equipe
+## 3. Origem das Medidas e Perguntas da Equipe
 
-A especificação da disciplina exige medidas cobrindo três categorias de informação do PSM [[3]](#ref-3). Cada medida foi selecionada na **Tabela 5 do PSM/CID Parte 1** [[1, p. 19-24]](#ref-1) e adaptada para responder diretamente aos desafios observados no fluxo de trabalho:
+A especificação da disciplina exige medidas cobrindo três categorias de informação do PSM [[3, p. 2]](#ref-3). Cada medida foi selecionada na **Tabela 5 do PSM/CID Parte 1** [[1, p. 19-24]](#ref-1) e adaptada para responder diretamente aos desafios observados no fluxo de trabalho:
 
 <p className="tabela-titulo">Tabela 1: Categorias de informação, conceitos mensuráveis e perguntas da equipe</p>
 
@@ -36,11 +44,11 @@ A especificação da disciplina exige medidas cobrindo três categorias de infor
 
 ---
 
-## 2. Instâncias do Modelo de Informação (Measurement Constructs)
+## 4. Instâncias do Modelo de Informação (Measurement Constructs)
 
-Os três *Measurement Constructs* seguem rigorosamente o **template oficial de 15 campos da disciplina** (Aula 09, slide 19) [[4, p. 19]](#ref-4), derivado da norma **ISO/IEC 15939**.
+Os três *Measurement Constructs* seguem o template da Aula 09 [[4, p. 19]](#ref-4), derivado da norma **ISO/IEC 15939** [[5]](#ref-5).
 
-### 2.1. Construct 1: Calendário e Progresso: Ritmo de Fechamento e Dependências
+### 4.1. Construct 1: Calendário e Progresso: Ritmo de Fechamento e Dependências
 
 A equipe identificou na Entrega 1 um gargalo significativo: as tarefas foram distribuídas sem atentar para o caminho crítico de dependências entre issues. Integrantes que dependiam de documentos base ficaram com o trabalho travado aguardando colegas com agendas sobrecarregadas, o que empurrou a conclusão das tarefas para a véspera dos marcos. Este construct avalia se o fechamento ocorre de forma contínua ou em lote, integrando-se à [Priorização no Project](priorizacao-issues.md).
 
@@ -50,28 +58,28 @@ A equipe identificou na Entrega 1 um gargalo significativo: as tarefas foram dis
 | :--- | :--- |
 | **Categoria de Informação** | Calendário e Progresso (*Schedule and Progress*) |
 | **Necessidade de Informação** | Saber se as issues fecham de maneira cadenciada ao longo do cronograma da fase ou se acumulam na véspera por bloqueios de dependência em cascata. |
-| **Conceito Mensurável** | Ritmo de progresso das unidades de trabalho (*Work Unit Progress — Committed vs. Completed*). |
+| **Conceito Mensurável** | Ritmo de progresso das unidades de trabalho (*Work Unit Progress: Committed vs. Completed*). |
 | **Entidades Relevantes** | Tarefas (*issues*) vinculadas às *milestones* das Fases 1 a 4 no GitHub. |
 | **Atributos** | Estado da issue (`open` ou `closed`), data de criação (`created_at`), data de fechamento (`closed_at`), campo `Prazo`, campo `Depende de` e nível de `Prioridade` no Project. |
 | **Medidas Básicas** | 1. `Total_Issues`: total de issues planejadas para a fase.<br/>2. `Issues_Fechadas`: contagem de issues fechadas.<br/>3. `Data_Fechamento`: timestamp exato de fechamento de cada issue.<br/>4. `Issues_Bloqueadas`: issues abertas cujo `Depende de` possui ao menos uma issue ainda aberta. |
 | **Método de Medição** | Leitura diária e automática da API REST do GitHub via script `scripts/coleta_psm.py` e extração de dependências para o Project. |
 | **Tipo de Método de Medição** | Objetivo. |
 | **Escala** | Inteiros não negativos e timestamps de calendário. |
-| **Tipo de Escala** | Razão (*Ratio*) para contagens; Intervalar para datas. |
+| **Tipo de Escala** | Razão (*Ratio*) para contagens e intervalar para datas. |
 | **Unidade de Medida** | Unidade de trabalho (issue) e data/hora. |
 | **Medidas Derivadas** | 1. **Progresso da Fase (%):** `(Issues_Fechadas / Total_Issues) × 100`<br/>2. **Taxa de Fechamento na 1ª Metade (%):** percentual de issues fechadas até a data média da fase.<br/>3. **Aderência ao Prazo (%):** percentual de issues fechadas até o dia do campo `Prazo`. |
 | **Função de Medição** | Cálculo aritmético sobre os registros de data extraídos dos metadados das issues. |
 | **Indicador** | Curva S de esforço acumulado planejado vs. realizado (`dados/gestao/graficos/08_desempenho_execucao_curva_s.png`), tabela de aderência e quadro kanban ordenado por `Prioridade` e `Prazo`. |
-| **Modelo de Análise** | Fechamento contínuo apresenta inclinação constante ao longo da fase; fechamento em "degrau" ou "efeito manada" nos últimos 2 dias sinaliza gargalo operacional por dependência ou subestimação. |
+| **Modelo de Análise** | Fechamento contínuo apresenta inclinação constante ao longo da fase. Fechamento em "degrau" ou "efeito manada" nos últimos 2 dias sinaliza gargalo operacional por dependência ou subestimação. |
 | **Critérios de Decisão** | **1. Ritmo de Execução:** Se na metade do tempo da fase o progresso for inferior a 50%, a equipe realiza reunião extraordinária na leitura de quarta-feira para redistribuir escopo.<br/>**2. Desbloqueio de Dependências:** Issue com prioridade `Alta` (trava 15+ issues) ou `Média` (trava 5 a 14 issues) aberta a 48h do prazo aciona pareamento imediato ou divisão de trabalho. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
-### 2.2. Construct 2: Recursos e Custos: Acurácia das Estimativas de Esforço
+### 4.2. Construct 2: Recursos e Custos: Acurácia das Estimativas de Esforço
 
-O planejamento das entregas seguintes depende diretamente da fidelidade das estimativas de esforço. Subestimar horas sobrecarrega os membros e gera atrasos; superestimar infla o custo e subutiliza a capacidade técnica.
+O planejamento das entregas seguintes depende diretamente da fidelidade das estimativas de esforço. Subestimar horas sobrecarrega os membros e gera atrasos. Superestimar infla o custo e subutiliza a capacidade técnica.
 
 <p className="tabela-titulo">Tabela 3: Measurement Construct de Recursos e Custos</p>
 
@@ -79,7 +87,7 @@ O planejamento das entregas seguintes depende diretamente da fidelidade das esti
 | :--- | :--- |
 | **Categoria de Informação** | Recursos e Custos (*Resources and Cost*) |
 | **Necessidade de Informação** | Avaliar se as estimativas de esforço da equipe são precisas o suficiente para dimensionar a alocação de tarefas nas fases subsequentes sem sobrecarga. |
-| **Conceito Mensurável** | Desempenho financeiro e acurácia de estimativa de esforço (*Estimation Accuracy — Estimate vs. Actual Effort*). |
+| **Conceito Mensurável** | Desempenho financeiro e acurácia de estimativa de esforço (*Estimation Accuracy: Estimate vs. Actual Effort*). |
 | **Entidades Relevantes** | Tarefas (*issues*) com seções "Estimativa (h)" e "Horas reais (h)" preenchidas. |
 | **Atributos** | Esforço previsto na abertura da issue e esforço real gasto reportado no fechamento. |
 | **Medidas Básicas** | 1. `E` = Horas estimadas da issue (número real em horas).<br/>2. `R` = Horas reais executadas da issue (com suporte a rateio por integrante `@usuario: N`).<br/>3. `Vh` = Valor-hora de referência da equipe (R$ 45,00/h, baseado em salário de Engenheiro de Software Júnior, CBO 2124-05, Novo CAGED/MTE). |
@@ -87,18 +95,18 @@ O planejamento das entregas seguintes depende diretamente da fidelidade das esti
 | **Tipo de Método de Medição** | 1. Subjetivo (estimativa de engenharia do responsável na abertura). 2. Objetivo (apuração das horas gastas no fechamento). |
 | **Escala** | Números reais positivos de zero ao infinito. |
 | **Tipo de Escala** | Razão (*Ratio*). |
-| **Unidade de Medida** | Horas (h) e Moeda corrente (Reais — R$). |
+| **Unidade de Medida** | Horas (h) e moeda corrente em reais (R$). |
 | **Medidas Derivadas** | 1. **Acurácia da Fase (%):** `(Soma(R) / Soma(E)) × 100`<br/>2. **Desvio de Esforço (%):** `((Soma(R) - Soma(E)) / Soma(E)) × 100`<br/>3. **Custo Real da Fase (R$):** `Soma(R) × 45,00` |
 | **Função de Medição** | Razão percentual entre horas reais e horas estimadas acumuladas por fase e entrega. |
 | **Indicador** | Gráfico de acurácia por fase em relação à faixa ideal (`static/img/gestao/06_acuracia_estimativa_fases.png`) e tabela comparativa de esforço e custo. |
-| **Modelo de Análise** | Acurácia ideal situa-se na faixa de **80% a 120%** (desvio de até ±20%). Valores acima de 120% indicam subestimação do esforço; valores abaixo de 80% indicam superestimação. |
+| **Modelo de Análise** | Acurácia ideal situa-se na faixa de **80% a 120%** (desvio de até ±20%). Valores acima de 120% indicam subestimação do esforço. Valores abaixo de 80% indicam superestimação. |
 | **Critérios de Decisão** | **1. Recalibração de Planejamento:** Se a acurácia de uma fase consolidada fechar fora da faixa `[80%, 120%]`, as estimativas da fase seguinte devem ser recalibradas coletivamente na reunião semanal (se subestimada, aplicar fator corretivo de 1,2× no planejamento).<br/>**2. Equilíbrio de Carga:** Integrante que acumular participação inferior a 8% ou superior a 30% do esforço da entrega tem tarefas redistribuídas imediatamente. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 ---
 
-### 2.3. Construct 3: Desempenho dos Processos: Tempo de Espera por Revisão de PR
+### 4.3. Construct 3: Desempenho dos Processos: Tempo de Espera por Revisão de PR
 
 Na Entrega 1, tarefas interdependentes muitas vezes demoravam a ser integradas não porque o autor não havia produzido o artefato, mas porque o Pull Request aguardava dias pela revisão dos pares na fila do repositório. Este construct monitora a fluidez da esteira de revisão para evitar que a etapa de validação se torne um gargalo silencioso.
 
@@ -115,11 +123,11 @@ Na Entrega 1, tarefas interdependentes muitas vezes demoravam a ser integradas n
 | **Método de Medição** | Leitura diária e automática dos PRs e das revisões pela API REST do GitHub via script `scripts/coleta_psm.py` ([#135](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/135)). A fase do PR é a da issue ligada a ele, ou a fase citada no título ou no corpo, ou a fase da data de abertura. |
 | **Tipo de Método de Medição** | Objetivo. |
 | **Escala** | Datas de calendário e números reais não negativos. |
-| **Tipo de Escala** | Intervalar para timestamps; Razão para tempo decorrido. |
+| **Tipo de Escala** | Intervalar para timestamps e razão para tempo decorrido. |
 | **Unidade de Medida** | Horas corridas. A CID aceita tempo corrido ou em dias úteis, desde que a escolha seja declarada [[6, p. 24]](#ref-6), e a equipe também trabalha nos fins de semana. |
 | **Medidas Derivadas** | 1. **Tempo de Espera por Revisão (h):** `T_revisao - T_abertura` de cada PR, resumido por fase em média, mediana, P80 e P90 [[6, p. 25]](#ref-6).<br/>2. **Taxa de Revisão Formal por Pares (%):** `(PRs com Aprovação Formal / Total de PRs Integrados) × 100`<br/>3. **Distribuição de Revisores:** proporção dos PRs revisados por cada integrante da equipe. |
 | **Função de Medição** | Diferença em horas entre a abertura do PR e a primeira revisão de outra pessoa no GitHub. |
-| **Indicador** | Tabela de tempo de espera (média, mediana, P80 e P90) e taxa de aprovação por fase, distribuição de revisores e matriz de autores vs. revisores, na seção 4 de `dados/gestao/constructs_e_tabelas.md`. |
+| **Indicador** | Tabela de tempo de espera (média, mediana, P80 e P90) e taxa de aprovação por fase, distribuição de revisores e matriz de autores vs. revisores, na [seção 4 de `dados/gestao/constructs_e_tabelas.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/constructs_e_tabelas.md#4-medidas-do-plano-de-medicao). |
 | **Modelo de Análise** | Tempo de espera superior a 24h indica sobrecarga dos revisores ou falta de priorização. Taxa de revisão formal abaixo de 100% viola a política de contribuição (`CONTRIBUTING.md`). |
 | **Critérios de Decisão** | **1. Alerta de PR Travado:** Todo PR aberto há mais de **24 horas** sem revisão gera notificação direta ao revisor indicado no grupo de comunicação. Se atingir 48h, o papel de revisor é reatribuído a qualquer outro integrante disponível.<br/>**2. Conformidade Rigorosa:** Nenhum merge direto por autor é permitido. PRs sem aprovação formal no GitHub bloqueiam o fechamento da issue correspondente. |
 
@@ -127,7 +135,7 @@ Na Entrega 1, tarefas interdependentes muitas vezes demoravam a ser integradas n
 
 ---
 
-## 3. Linha de Base das Fases 1 e 2 (Dados Históricos)
+## 5. Linha de Base das Fases 1 e 2 (Dados Históricos)
 
 Para apoiar as decisões das Fases 3 e 4, a equipe compilou os dados auditados das Fases 1 e 2, consolidados em `dados/gestao/` e apresentados detalhadamente no [Painel de Medição PSM](painel-psm.md) e no [Registro de Medições](registro-medicoes.md):
 
@@ -136,8 +144,8 @@ Para apoiar as decisões das Fases 3 e 4, a equipe compilou os dados auditados d
 | Indicador de Gestão | Fase 1 (Requisitos) | Fase 2 (GQM & Artigo E1) | Consolidado Entrega 1 (F1 + F2) | Meta do Construct | Análise da Linha de Base |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Issues Concluídas / Total** | 17 / 17 | 27 / 27 | **44 / 44** | 100% | Escopo da Entrega 1 integralmente concluído. |
-| **Horas Estimadas (h)** | 53,50 h | 62,50 h | **116,00 h** | — | Planejamento acumulado da Entrega 1. |
-| **Horas Reais Executadas (h)** | 57,91 h | 56,40 h | **114,31 h** | — | 100% das horas registradas com rastreabilidade. |
+| **Horas Estimadas (h)** | 53,50 h | 62,50 h | **116,00 h** | Sem meta | Planejamento acumulado da Entrega 1. |
+| **Horas Reais Executadas (h)** | 57,91 h | 56,40 h | **114,31 h** | Sem meta | 100% das horas registradas com rastreabilidade. |
 | **Acurácia da Estimativa (%)** | 108,2% | 90,2% | **98,5%** | 80% a 120% | Atendido. Ambas as fases situaram-se na faixa ideal. |
 | **Custo Real Investido (R$)** | R$ 2.605,95 | R$ 2.538,00 | **R$ 5.143,95** | $\le$ R$ 5.220,00 | Executado abaixo do teto financeiro estimado. |
 | **Aderência aos Prazos (%)** | 29,4% | 44,4% | **38,6%** | 100,0% | Não atendido. Concentração de entregas na véspera persistiu. |
@@ -147,7 +155,7 @@ Para apoiar as decisões das Fases 3 e 4, a equipe compilou os dados auditados d
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em `dados/gestao/` e no [Painel de Medição PSM](painel-psm.md), 2026.</p>
 
-### 3.1. Diagnóstico da Linha de Base: O Efeito das Dependências
+### 5.1. Diagnóstico da Linha de Base: O Efeito das Dependências
 
 A inspeção detalhada da linha de base confirma a dinâmica observada:
 1. **Fase 1 (Aderência de 29,4%):** As 12 issues fechadas em atraso foram encerradas em lote em 19/10/2026 (véspera da entrega). Tarefas como GitPage (`#18`), Escopo (`#13`) e Padronização (`#16`) dependiam diretamente das definições de Requisitos (`#8`) e Modelo (`#7`).
@@ -156,7 +164,7 @@ A inspeção detalhada da linha de base confirma a dinâmica observada:
 
 ---
 
-## 4. Integração com a Priorização e Datas no GitHub Project
+## 6. Integração com a Priorização e Datas no GitHub Project
 
 Para operacionalizar os critérios de decisão de Calendário e Progresso, o plano de medição conecta-se diretamente à página de [Priorização e datas no GitHub Project](priorizacao-issues.md) (Issue [#140](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/140)):
 
@@ -169,22 +177,22 @@ Para operacionalizar os critérios de decisão de Calendário e Progresso, o pla
 
 ---
 
-## 5. Rotina de Governança e Calendário das Leituras Semanais
+## 7. Rotina de Governança e Calendário das Leituras Semanais
 
-Para garantir que a medição sirva como ferramenta ativa de gestão, as medições são extraídas diariamente pelo GitHub Actions (`.github/workflows/coleta-psm.yml`), e a equipe realiza reuniões de acompanhamento semanais, com interpretação dos indicadores e deliberação registrada em ata:
+Para garantir que a medição sirva como ferramenta ativa de gestão, as medições são extraídas diariamente pelo GitHub Actions (`.github/workflows/coleta-psm.yml`), e a equipe faz leituras semanais para interpretar os indicadores:
 
 <p className="tabela-titulo">Tabela 6: Cronograma de reuniões e leituras de medição do PSM/CID</p>
 
 | Marco | Data | Momento do Projeto | Pauta Principal da Leitura de Medição |
-| :---: | :---: | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **Leitura 0** | **04/11/2026** *(Quarta-feira)* | Linha de Base / Fechamento da E1 | • Analisar retrospectivamente o aprendizado da E1, acurácia e esforço.<br/>• Identificar bloqueios em cadeia e formular as decisões D1 a D6. |
-| **Leitura 1** | **11/11/2026** *(Quarta-feira)* | Meio da Fase 3 e Coleta da Fase 4 | • Verificar se o ritmo de fechamento da Fase 3 atingiu $\ge 50\%$.<br/>• Auditar se há issues de prioridade `Alta` em risco de atrasar a Fase 4.<br/>• Recalcular `Prioridade` e `Início` no Project.<br/>• Verificar tempo de espera dos PRs de instruções (G1, G2, G3). |
-| **Leitura 2** | **18/11/2026** *(Quarta-feira)* | Reta Final da Fase 4 e Redação Final | • Avaliar se a acurácia da Fase 4 está na faixa de 80% a 120%.<br/>• Cobrar PRs abertos há mais de 24h para destravar a consolidação do artigo e site.<br/>• Conferir o equilíbrio de esforço acumulado na Entrega 2 entre os 6 membros.<br/>• Decidir ações finais antes da Release `v2.0-E2`. |
+| **Leitura 1** | **11/11/2026** *(Quarta-feira)* | Início da Fase 4 (coleta), após o fim da Fase 3 em 08/11 | • Conferir o fechamento da Fase 3 (26/10 a 08/11): progresso, aderência ao prazo e acurácia.<br/>• Auditar se há issues de prioridade `Alta` em risco de atrasar a Fase 4.<br/>• Recalcular `Prioridade` e `Início` no Project.<br/>• Verificar tempo de espera dos PRs de instruções (G1, G2, G3). |
+| **Leitura 2** | **18/11/2026** *(Quarta-feira)* | Reta final da Fase 4 (09/11 a 21/11) e redação final | • Verificar se o progresso da Fase 4 passou de 50% depois da metade da fase (15/11).<br/>• Avaliar se a acurácia da Fase 4 está na faixa de 80% a 120%.<br/>• Cobrar PRs abertos há mais de 24h para destravar a consolidação do artigo e site.<br/>• Conferir o equilíbrio de esforço acumulado na Entrega 2 entre os 6 membros.<br/>• Decidir as ações finais antes da Entrega 2 (22/11). |
 | **Leitura 3** | **22/11/2026** *(Domingo)* | Fechamento da Entrega 2 | • Avaliar execução completa dos testes e artefatos da E2.<br/>• Fechamento do artigo SBC e consolidação final do orçamento e esforço individual. |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
-Toda decisão adotada nessas leituras (redistribuição de tarefa, pareamento, cobrança de revisão de PR ou recalibração de estimativa) é documentada na ata da respectiva reunião em `docs/gestao/atas/` e no [Registro de Medições](registro-medicoes.md).
+As decisões de cada leitura (redistribuição de tarefa, pareamento, cobrança de revisão de PR ou recalibração de estimativa) ficam no [Registro de Medições](registro-medicoes.md).
 
 ---
 
@@ -194,11 +202,11 @@ Toda decisão adotada nessas leituras (redistribuição de tarefa, pareamento, c
 >
 > <Link id="ref-2">2.</Link> EQUIPE T01 MARY JACKSON. **Plano de Medição e Registro de Medições**. Repositório 2026-2_T01_MARY_JACKSON, FCTE/UnB, 2026. Disponível em: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T01_MARY_JACKSON/blob/main/docs/gestao/plano-de-medicao.md. Acesso em: 05 nov. 2026.
 >
-> <Link id="ref-3">3.</Link> **2026-2 Trabalho final completo**. Especificação do projeto final de Qualidade de Software 1, FCTE/UnB, 2026. Seção 2: Produtos de trabalho e premissas.
+> <Link id="ref-3">3.</Link> **2026-2 Trabalho final completo**. Especificação do projeto final de Qualidade de Software 1, FCTE/UnB, 2026. Página 2, seção 2: Gestão do Projeto com métricas PSM/CID. Disponível no Moodle da disciplina.
 >
 > <Link id="ref-4">4.</Link> RAMOS, Cristiane Soares. **AULA 09 QSW1 PSM resumo**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Slides 6, 7, 19 e 23. Disponível no Moodle da disciplina.
 >
-> <Link id="ref-5">5.</Link> ISO/IEC/IEEE. **ISO/IEC/IEEE 15939:2017: Systems and software engineering — Measurement process**. International Organization for Standardization, Geneva, 2017.
+> <Link id="ref-5">5.</Link> ISO/IEC/IEEE. **ISO/IEC/IEEE 15939:2017: Systems and software engineering: Measurement process**. International Organization for Standardization, Geneva, 2017.
 >
 > <Link id="ref-6">6.</Link> PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT. **PSM Continuous Iterative Development Measurement Framework: Part 2, Measurement Specifications**. Versão 2.1, 15 abr. 2021. Seção 8.5, Cycle Time / Lead Time, p. 24-26. Disponível no Moodle da disciplina.
 
@@ -211,3 +219,4 @@ Toda decisão adotada nessas leituras (redistribuição de tarefa, pareamento, c
 | 1.0 | 07/11/2026 | Elaboração do plano de medição PSM/CID com base nas necessidades reais da equipe, constructs da Aula 09, linha de base auditada e critérios de decisão | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.1 | 08/11/2026 | Correção de referências, alinhamento do ciclo de 4 leituras, lead time de 2,91 dias, esclarecimento do status do Construct 3 e remoção de termos de premissa | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.2 | 09/11/2026 | Construct 3 alinhado ao *Cycle Time* da CID e à coleta automática, e linha de base da revisão de PRs recalculada pelo script | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 18/11/2026 | Revisão de coerência e cross-links: Introdução e Metodologia e leituras alinhadas às milestones | [Christopher Paraizo](https://github.com/wChrstphr) | |

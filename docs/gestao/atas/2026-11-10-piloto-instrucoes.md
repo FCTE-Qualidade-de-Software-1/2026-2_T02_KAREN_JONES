@@ -35,7 +35,7 @@ Sessão técnica do subgrupo F2/F4 para execução e validação do teste piloto
 - **Execução do Piloto de Procedimentos:** Maria Eduarda, integrante do subgrupo F2/F4 que não redigiu as instruções de G1 e G2, seguiu os passos das instruções de avaliação para verificar se as orientações eram autossuficientes e reproduzíveis sem conhecimento tácito não documentado.
 - **Validação do Ambiente e Docker:** Os comandos de conteinerização oficial da Issue #96 foram executados no Zorin OS (Linux). A imagem Docker de produção `excalidraw-avaliacao` foi gerada via `docker build -t excalidraw-avaliacao .` e o contêiner subiu na porta 3000:80 com verificação de integridade aprovada, validando a infraestrutura de referência para as coletas.
 - **Obstáculo 1 (Sintaxe legada de Docker Compose):** Durante a reprodução do Passo 6 de execução local documentada, a invocação de `docker-compose up` falhou com código 127 (command not found) em distribuições Linux modernas com Docker Engine v2. Foi constatada a necessidade de orientar o uso do comando moderno `docker compose up` sem hífen nas instruções e relatórios.
-- **Obstáculo 2 (Conflitos de Dependências e Cobertura em G1):** Christopher e Luiz relataram que o pacote `cmdtest` do Ubuntu interfere com o utilitário Yarn, e que o comando de cobertura do Vitest exige a variável `CI=true` para encerramento síncrono dos testes sem travar o terminal.
+- **Obstáculo 2 (Conflitos de Dependências e Cobertura em G1):** Christopher Paraizo e Luiz Henrique Soares relataram que o pacote `cmdtest` do Ubuntu interfere com o utilitário Yarn, e que o comando de cobertura do Vitest exige a variável `CI=true` para encerramento síncrono dos testes sem travar o terminal.
 - **Obstáculo 3 (Alocação de Portas):** Luiz Henrique registrou que em seu ambiente de testes a porta padrão 3000 estava em uso por outro processo, sendo necessário parametrizar o mapeamento para a porta 3001, mantendo a documentação do desvio nos fatores de variação.
 
 ## Decisões
@@ -53,7 +53,7 @@ Sessão técnica do subgrupo F2/F4 para execução e validação do teste piloto
 | :--- | :--- | :--- | :--- |
 | Registrar os ambientes no repositório de medidas da Fase 04 | Luiz Henrique e Maria Eduarda | 10/11/2026 | #110 |
 | Iniciar a coleta das métricas de G3 (Flexibilidade) | Maria Eduarda | 10/11/2026 | #113 |
-| Iniciar a coleta das métricas de G1 (Manutenibilidade) | Christopher | 11/11/2026 | #111 |
+| Iniciar a coleta das métricas de G1 (Manutenibilidade) | Christopher Paraizo | 11/11/2026 | #111 |
 | Iniciar a coleta das métricas de G2 (Confiabilidade) | Luiz Henrique | 11/11/2026 | #112 |
 
 ---
@@ -63,3 +63,4 @@ Sessão técnica do subgrupo F2/F4 para execução e validação do teste piloto
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | `1.0` | 10/11/2026 | Registro da ata de reunião do teste piloto das instruções de avaliação da Fase 03 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher Paraizo](https://github.com/wChrstphr) |
+| `1.1` | 18/11/2026 | Revisão de coerência e cross-links: nomes completos | [Christopher Paraizo](https://github.com/wChrstphr) | |

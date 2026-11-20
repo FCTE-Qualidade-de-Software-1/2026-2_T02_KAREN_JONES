@@ -16,7 +16,7 @@ As regras daqui são usadas na [interpretação do Plano GQM](./plano-gqm.md#5-d
 
 ## Metodologia
 
-Todas as regras desta página foram definidas antes da coleta, que acontece na Fase 04. Assim, as faixas não podem ser ajustadas para favorecer ou prejudicar o resultado. A construção partiu do valor de cada métrica e da forma de calculá-lo, nas fichas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md), e adotou a escala de cinco níveis do modelo de Heitlager, Kuipers e Visser [[3, p. 5]](#ref-3). Cada métrica recebe a primeira origem de faixa aplicável da [seção 2](#2-como-as-faixas-foram-definidas), e o que não vem do modelo é justificado nas seções [3.2](#32-justificativas-específicas), [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas). As regras das seções [6](#6-agregação-da-métrica-à-característica) e [7](#7-critérios-de-julgamento) levam da métrica à característica. Cada nível é usado no [Plano GQM](./plano-gqm.md#5-diretrizes-de-interpretação), e cada [hipótese](#72-hipóteses) é avaliada à parte.
+Todas as regras desta página foram definidas antes da coleta, que acontece na Fase 04. Assim, as faixas não podem ser ajustadas para favorecer ou prejudicar o resultado. A construção partiu do valor de cada métrica e da forma de calculá-lo, nas fichas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md), e adotou a escala de cinco níveis do modelo de Heitlager, Kuipers e Visser [[3, p. 5]](#ref-3). Cada métrica recebe a primeira origem de faixa aplicável da [seção 2](#2-como-as-faixas-foram-definidas), e o que não vem do modelo é justificado nas seções [3.2](#32-justificativas-específicas), [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas). As regras das seções [6](#6-agregação-da-métrica-à-característica) e [7](#7-critérios-de-julgamento) levam da métrica à característica. O [Plano GQM](./plano-gqm.md#5-diretrizes-de-interpretação) interpreta os resultados por esses níveis, e as [hipóteses](#72-hipóteses) são verificadas separadamente deles.
 
 ---
 
@@ -79,8 +79,14 @@ Quanto menor o valor, melhor. O reaproveitamento vale para as métricas marcadas
 
 - **Valor no limite:** um valor igual ao limite entre duas faixas fica no nível melhor. Por exemplo, 95% em uma proporção desejável é `++`, e 3% em uma proporção indesejável é `++`.
 - **Sem arredondamento:** os percentuais são comparados com as faixas sem arredondar. Por exemplo, 94,9% é `+`.
-- **Listas fixas:** quando a métrica é uma lista fixa de itens, as tabelas das seções [3](#3-níveis-das-métricas-de-manutenibilidade-g1) a [5](#5-níveis-das-métricas-de-flexibilidade-g3) mostram quantos itens correspondem a cada nível. Em listas curtas, um único item que falha já tira a métrica do nível `++`. Isso é intencional, porque cada item da lista é uma função considerada essencial.
+- **Listas fixas:** quando a métrica é uma lista fixa de itens, as tabelas das seções [3](#3-níveis-das-métricas-de-manutenibilidade-g1) a [5](#5-níveis-das-métricas-de-flexibilidade-g3) mostram quantos itens correspondem a cada nível. Em listas curtas, um único item que falha já tira a métrica do nível `++`. Isso é intencional, porque cada item da lista é considerado essencial.
 - **Métricas com vários valores:** quando a métrica tem um valor por cena, por formato ou por tipo de entrada, cada valor é pontuado e a pontuação da métrica é a média dos pontos, como na agregação da [seção 6](#6-agregação-da-métrica-à-característica).
+
+### 2.4 Leitura das faixas de medianas
+
+As faixas de [M1.4.1](./gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição) e de [M2.1.2](./gqm-confiabilidade.md#m212-mediana-do-tempo-entre-o-relato-e-a-correção) foram escritas com números inteiros, mas uma mediana pode ser fracionária. Por isso, essas faixas são lidas como contínuas: "até 7" equivale a ≤ 7, e "8 a 14" equivale a > 7 e ≤ 14. Da mesma forma, em M1.4.1, "3 ou 4" equivale a > 2 e ≤ 4. A leitura não muda os limites das faixas.
+
+A regra foi registrada depois da coleta, quando duas medianas caíram entre faixas: M1.4.1 = 2,5 arquivos, pontuada como `+` nos [resultados de G1](../fase-04/resultados-g1-manutenibilidade.md#4-q14-modificabilidade), e M2.1.2 = 7,26 dias, pontuada como `+` nos [resultados de G2](../fase-04/resultados-g2-confiabilidade.md#31-q21-ausência-de-falhas). Como não estava escrita antes da coleta, ela é uma limitação da avaliação ([seção 8](#8-limitações)).
 
 ---
 
@@ -92,7 +98,7 @@ Os códigos das métricas são os das fichas do [GQM de Manutenibilidade](./gqm-
 
 | Métrica | Valor pontuado | `++` | `+` | `o` | `-` | `--` | Origem das faixas |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| [M1.1.1](./gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) | Pares de pacotes em ciclo ÷ 28 pares possíveis × 100 (ver [seção 3.2](#32-justificativas-específicas)) | 0 pares | 1 par | 2 pares | 3 a 5 pares | 6 ou mais | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
+| [M1.1.1](./gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) | Pares de pacotes em ciclo (conversão em percentual na [seção 3.2](#32-justificativas-específicas)) | 0 pares | 1 par | 2 pares | 3 a 5 pares | 6 ou mais | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
 | [M1.1.2](./gqm-manutenibilidade.md#m112-importações-que-violam-a-direção-declarada) | Importações que violam a direção ÷ importações de valor entre pacotes diferentes × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
 | [M1.1.3](./gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote) | Dependências entre pacotes que contrariam o Princípio das Dependências Estáveis ÷ dependências entre pacotes × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)), com a regra de Martin [[5, p. 8 e 10]](#ref-5) |
 | [M1.2.1](./gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) | Arquivos dos pacotes de base com dependência de React ou do navegador ÷ arquivos de produção dos pacotes de base × 100 | 0 a 3% | 3 a 5% | 5 a 10% | 10 a 20% | acima de 20% | Proporção indesejável ([seção 2.2](#22-faixas-de-proporção-indesejável)) |
@@ -131,7 +137,7 @@ O nível `--` é atribuído quando qualquer um dos limites do nível `-` é ultr
 
 ### 3.2 Justificativas específicas
 
-Esta seção explica só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da [seção 2](#2-como-as-faixas-foram-definidas). As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
+Esta seção e as seções [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas) explicam só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da [seção 2](#2-como-as-faixas-foram-definidas). As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
 
 - **[M1.1.1](./gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes):** o Excalidraw tem 8 pacotes, como definido nas [convenções de coleta de G1](./gqm-manutenibilidade.md#2-convenções-de-coleta): as sete pastas de `packages/` (`common`, `element`, `excalidraw`, `fractional-indexing`, `laser-pointer`, `math` e `utils`) e a aplicação web (`excalidraw-app/`). A métrica conta os pares de pacotes em ciclo, isto é, dois pacotes em que cada um depende do outro, direta ou indiretamente. Com 8 pacotes, existem 28 pares possíveis (8 × 7 ÷ 2). Para usar as faixas de proporção indesejável, o número de pares em ciclo é dividido por 28. Assim, 1 par em ciclo (3,6%) fica no nível `+`, e 6 ou mais pares (21,4% ou mais) ficam no nível `--`.
 - **[M1.1.2](./gqm-manutenibilidade.md#m112-importações-que-violam-a-direção-declarada), [M1.2.1](./gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) e [M1.4.2](./gqm-manutenibilidade.md#m142-arquivos-de-produção-extensos):** as fichas dessas métricas dão contagens de importações ou de arquivos. Para usar as faixas de proporção indesejável, cada contagem é dividida pelo total indicado na coluna "Valor pontuado", para que o resultado não dependa do tamanho do projeto.
@@ -161,11 +167,9 @@ Os códigos das métricas são os das fichas do [GQM de Confiabilidade](./gqm-co
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-O conjunto de [M2.4.2](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda) tem 7 arquivos: a cena de referência salva pela versão avaliada e pelas versões v0.15.0, v0.16.4, v0.17.6 e v0.18.0, e as duas imagens com desenho incorporado.
+Os 7 arquivos de M2.4.2 estão descritos no procedimento de cálculo da [ficha da métrica](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda).
 
 ### 4.1 Justificativas específicas
-
-Esta seção explica só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da [seção 2](#2-como-as-faixas-foram-definidas). As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
 
 - **[M2.1.1](./gqm-confiabilidade.md#m211-proporção-de-correções-entre-as-contribuições-integradas):** menos correções significam menos falhas encontradas no período, por isso o valor menor é o melhor. Não foi encontrada referência publicada com a proporção esperada de correções. As faixas de proporção indesejável não servem aqui, porque foram feitas para algo raro, como a duplicação de código: qualquer projeto ativo teria mais de 20% de correções e ficaria no nível `--`. Por isso, a equipe divide a escala de 0 a 100% em cinco faixas de mesma largura, sem escolher limites próprios.
 - **[M2.1.2](./gqm-confiabilidade.md#m212-mediana-do-tempo-entre-o-relato-e-a-correção):** não foi encontrada referência publicada com faixas para o tempo de correção. A equipe usa unidades de calendário que um usuário percebe: uma semana, duas semanas, um mês e três meses.
@@ -198,13 +202,11 @@ Os códigos das métricas são os das fichas do [GQM de Flexibilidade](./gqm-fle
 
 ### 5.1 Justificativas específicas
 
-Esta seção explica só as métricas em que o valor pontuado não é o próprio resultado da ficha ou em que as faixas não vêm diretamente da [seção 2](#2-como-as-faixas-foram-definidas). As demais pontuam o percentual ou a lista fixa da ficha, com as faixas indicadas na tabela.
-
-- **[M3.1.3](./gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta):** a pontuação usa o toque com o dedo. Se houver caneta disponível, as duas formas de entrada são pontuadas e a pontuação da métrica é a média das duas.
+- **[M3.1.3](./gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta):** o toque com o dedo e a caneta são pontuados, e a pontuação da métrica é a média das duas formas. As ações que só se fazem com o dedo e a leitura adotada para a caneta estão na [nota da ficha](./gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta).
 - **[M3.2.1](./gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena):** os limites de 1 e de 10 segundos são os de Nielsen [[6]](#ref-6): até 1 segundo, o raciocínio do usuário não é interrompido, e 10 segundos é o limite para manter a atenção dele na tarefa. Os limites intermediários de 2 e de 5 segundos são as metas do modelo RAIL, do Google [[7]](#ref-7), para carregar uma página já visitada e uma página nova. O RAIL trata do carregamento de páginas. A equipe o aplica à abertura de um arquivo por ser a referência publicada mais próxima. Cada uma das quatro cenas de escala é pontuada, e a pontuação da métrica é a média.
 - **[M3.2.2](./gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena):** o RAIL considera fluida a animação com 60 quadros por segundo [[7]](#ref-7). A taxa medida é convertida em percentual dessa meta e pontuada com as faixas de proporção desejável. Cada cena é pontuada, e a pontuação da métrica é a média.
 - **[M3.2.3](./gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada):** a métrica tem cinco resultados possíveis (as quatro cenas de escala ou nenhuma), e cada um corresponde a um nível.
-- **[M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis):** a hipótese [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) espera pelo menos três formatos abertos (`.excalidraw`, PNG e SVG), e três formatos correspondem ao nível `+`. Cada formato a menos desce um nível. Os limites são da equipe.
+- **[M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis):** a hipótese [H3.4.1](./gqm-flexibilidade.md#6-q34-substituibilidade) espera pelo menos três formatos abertos (`.excalidraw`, PNG e SVG), e três formatos correspondem ao nível `+`. Cada formato a menos desce um nível. Os limites são da equipe. A contagem trata o `.excalidraw` como formato aberto, conforme a [nota da ficha](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis).
 - **[M3.4.2](./gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação):** cada um dos três formatos é pontuado, e a pontuação da métrica é a média.
 
 ---
@@ -267,7 +269,7 @@ No exemplo da [seção 6.2](#62-exemplo-de-cálculo), a característica atende: 
 
 ### 7.2 Hipóteses
 
-O nível de pontuação e a hipótese de cada métrica são avaliados separadamente. A hipótese é confirmada ou refutada pela regra de confirmação escrita no critério de interpretação da ficha da métrica, nas páginas de [G1](./gqm-manutenibilidade.md), [G2](./gqm-confiabilidade.md) e [G3](./gqm-flexibilidade.md). Uma métrica pode estar no nível `++` e refutar a hipótese, por exemplo quando a equipe esperava um resultado pior. O relatório registra os dois resultados, porque as hipóteses auxiliam na interpretação dos resultados [[2, p. 34]](#ref-2): uma hipótese refutada mostra onde a expectativa da equipe sobre o Excalidraw estava errada.
+O nível de pontuação e a hipótese de cada métrica são avaliados separadamente. A hipótese segue a [regra das hipóteses](./estrutura-gqm.md#1-o-que-é-o-gqm), com a regra de confirmação escrita no critério de interpretação da ficha da métrica. Uma métrica pode estar no nível `++` e refutar a hipótese, por exemplo quando a equipe esperava um resultado pior. O relatório registra os dois resultados, porque as hipóteses auxiliam na interpretação dos resultados [[2, p. 34]](#ref-2): uma hipótese refutada mostra onde a expectativa da equipe sobre o Excalidraw estava errada.
 
 Sempre que possível, o limite da regra de confirmação é uma fronteira entre duas faixas desta página. Por exemplo, [H1.4.2](./gqm-manutenibilidade.md#6-q14-modificabilidade) é confirmada se no máximo 5% dos arquivos de produção forem extensos, e 5% é a fronteira entre os níveis `+` e `o` de [M1.4.2](./gqm-manutenibilidade.md#m142-arquivos-de-produção-extensos). Assim a hipótese diz só de que lado da fronteira a equipe espera o valor, e não o nível exato, e o valor medido só aparece na Fase 04.
 
@@ -282,6 +284,7 @@ Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de me
 - **Calibração:** as faixas do modelo foram definidas pela experiência dos autores com sistemas industriais [[3, p. 6]](#ref-3). Depois, o modelo passou a ser recalibrado todo ano com uma base de sistemas reais, de forma que 5%, 30%, 30%, 30% e 5% dos sistemas fiquem em cada nível [[4, p. 2]](#ref-4). A equipe não tem acesso a essa base e usa as faixas publicadas em 2007, sem recalibrar para projetos em TypeScript.
 - **Reaproveitamento de faixas:** as faixas de cobertura e de duplicação foram publicadas para essas duas propriedades. Usá-las para outras proporções ([seção 2](#2-como-as-faixas-foram-definidas)) é uma decisão da equipe.
 - **Faixas da equipe:** as métricas [M1.4.1](./gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição), [M2.1.1](./gqm-confiabilidade.md#m211-proporção-de-correções-entre-as-contribuições-integradas), [M2.1.2](./gqm-confiabilidade.md#m212-mediana-do-tempo-entre-o-relato-e-a-correção), [M2.2.2](./gqm-confiabilidade.md#m222-origens-externas-necessárias-para-o-editor-local), [M3.2.3](./gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada) e [M3.4.1](./gqm-flexibilidade.md#m341-formatos-de-exportação-abertos-disponíveis) têm faixas definidas pela equipe, com as justificativas das seções [3.2](#32-justificativas-específicas), [4.1](#41-justificativas-específicas) e [5.1](#51-justificativas-específicas).
+- **Leitura das medianas:** a leitura contínua das faixas de M1.4.1 e M2.1.2 ([seção 2.4](#24-leitura-das-faixas-de-medianas)) foi registrada depois da coleta.
 - **Norma de origem:** o modelo foi feito para a ISO/IEC 9126. A equipe aplica a mesma escala e a mesma agregação às subcaracterísticas da ISO/IEC 25010 [escolhidas na Fase 01](../fase-01/modelo-de-qualidade.md#justificativa-da-seleção).
 
 ---
@@ -292,9 +295,9 @@ Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de me
 >
 > <Link id="ref-2">2.</Link> RAMOS, Cristiane Soares. **AULA 08 QSW1 GQM**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 34. Disponível no Moodle da disciplina.
 >
-> <Link id="ref-3">3.</Link> HEITLAGER, I.; KUIPERS, T.; VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Páginas 5 a 8 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 06 nov. 2026.
+> <Link id="ref-3">3.</Link> HEITLAGER, I., KUIPERS, T. e VISSER, J. A Practical Model for Measuring Maintainability. In: *6th International Conference on the Quality of Information and Communications Technology (QUATIC 2007)*. IEEE, 2007. p. 30-39. Páginas 5 a 8 da versão dos autores. Disponível em: [https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf](https://www.di.uminho.pt/~joost/publications/HeitlagerKuipersVisser-Quatic2007.pdf). Acesso em: 06 nov. 2026.
 >
-> <Link id="ref-4">4.</Link> BAGGEN, R.; SCHILL, K.; VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Páginas 2 e 3. Disponível em: [https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf](https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf). Acesso em: 06 nov. 2026.
+> <Link id="ref-4">4.</Link> BAGGEN, R., SCHILL, K. e VISSER, J. Standardized Code Quality Benchmarking for Improving Software Maintainability. In: *4th International Workshop on Software Quality and Maintainability (SQM 2010)*, 2010. Páginas 2 e 3. Disponível em: [https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf](https://webarchive.di.uminho.pt/wiki.di.uminho.pt/twiki/pub/Personal/Joost/PublicationList/SQM2010-StandardizedCodeQuality.pdf). Acesso em: 06 nov. 2026.
 >
 > <Link id="ref-5">5.</Link> MARTIN, R. C. Stability. *The C++ Report*, 1997. Páginas 8 e 10. Disponível em: [https://objectmentor.com/resources/articles/stability.pdf](https://objectmentor.com/resources/articles/stability.pdf). Acesso em: 06 nov. 2026.
 >
@@ -312,3 +315,4 @@ Toda métrica no nível `-` ou `--` é registrada no relatório como ponto de me
 | 1.1 | 30/10/2026 | Seção 7.2 explica a ligação entre as regras de confirmação das hipóteses e as fronteiras das faixas. Menções a hipóteses passam a citar os códigos H1.1.3 e H3.4.1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 06/11/2026 | Inclusão de introdução e metodologia, tabelas numeradas, com legenda e fonte, referências numeradas e ligadas às citações, com data de acesso, links para a norma, os objetivos e o Plano GQM ([#56](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/56)) | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 10/11/2026 | Metodologia em texto corrido e frases sem ponto e vírgula | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 18/11/2026 | Revisão de coerência e cross-links: leitura contínua das faixas de medianas e justificativas de M3.1.3 e M3.4.1 | [Christopher Paraizo](https://github.com/wChrstphr) | |

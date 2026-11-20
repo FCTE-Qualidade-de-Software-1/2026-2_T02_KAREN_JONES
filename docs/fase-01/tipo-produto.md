@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Identificar o tipo de produto é uma das três atividades da fase de estabelecer os requisitos da avaliação [[1, p. 4]](#ref-1). Esta página identifica a versão do Excalidraw avaliada e classifica o produto pelas duas classificações apresentadas na aula, a de Pressman e a da IEEE 1062 [[1, p. 11]](#ref-1). A organização interna do produto, as interfaces e o diagrama de arquitetura estão em [Descrição e arquitetura do produto](./descricao-produto.md).
+Identificar o tipo de produto é uma das três atividades da fase de estabelecer os requisitos da avaliação [[1, p. 4]](#ref-1). A versão do Excalidraw avaliada é identificada e o produto é classificado pelas duas classificações apresentadas na aula, a de Pressman e a da IEEE 1062 [[1, p. 11]](#ref-1). A organização interna do produto, as interfaces e o diagrama de arquitetura estão em [Descrição e arquitetura do produto](./descricao-produto.md).
 
 ## Metodologia
 
@@ -91,3 +91,4 @@ Nenhuma dessas respostas é resultado medido. A seleção dos objetos e a profun
 | 1.0 | 18/10/2026 | Caracterização do produto, classificação Pressman/IEEE 1062 e arquitetura de referência | [Davi Pierre](https://github.com/DaviPierre) | |
 | 1.1 | 20/10/2026 | Diagrama de arquitetura redesenhado no Excalidraw e publicado em PNG ([arquivo editável](../images/arquitetura-excalidraw.excalidraw)) | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 10/11/2026 | Introdução e Metodologia, classificação de Pressman alinhada à tabela da aula, que não tem categoria para aplicações web, tabelas com título e fonte, referências numeradas e estrutura, interfaces, diagrama e restrições movidos para a descrição do produto, que já os trazia | [Christopher Paraizo](https://github.com/wChrstphr) | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.3 | 18/11/2026 | Revisão de coerência e cross-links: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |

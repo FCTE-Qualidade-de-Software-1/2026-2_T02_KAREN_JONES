@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 title: Plano de análise
 description: Tratamento dos dados coletados na Fase 04, tabela consolidada das medições, apresentação dos resultados e comparação com as hipóteses e os fatores de variação
 ---
@@ -16,7 +16,7 @@ O objetivo desta página é descrever o caminho dos dados coletados até a respo
 
 ## Metodologia
 
-A maior parte das regras de análise já foi definida na Fase 02: o cálculo e o critério de interpretação de cada métrica estão nas fichas do GQM, e a pontuação, a agregação e o julgamento estão nos [níveis de pontuação](../fase-02/pontuacao-julgamento.md). Esta página liga essas regras às [instruções do avaliador](./instrucoes-g3-flexibilidade.md) e aos [recursos de avaliação](./recursos-ambiente.md) da Fase 03 e acrescenta só o que faltava: o tratamento dos dados, o formato da tabela consolidada, as formas de apresentação, a comparação das hipóteses e a revisão da interpretação, seguindo a orientação de organizar os dados por questão e objetivo, com gráficos e tabelas [[1, p. 56]](#ref-1).
+A maior parte das regras de análise já foi definida na Fase 02: o cálculo e o critério de interpretação de cada métrica estão nas fichas do GQM, e a pontuação, a agregação e o julgamento estão nos [níveis de pontuação](../fase-02/pontuacao-julgamento.md). Esta página liga essas regras às instruções do avaliador de [G1](./instrucoes-g1-manutenibilidade.md), [G2](./instrucoes-g2-confiabilidade.md) e [G3](./instrucoes-g3-flexibilidade.md) e aos [recursos de avaliação](./recursos-ambiente.md) da Fase 03 e acrescenta só o que faltava: o tratamento dos dados, o formato da tabela consolidada, as formas de apresentação, a comparação das hipóteses e a revisão da interpretação, seguindo a orientação de organizar os dados por questão e objetivo, com gráficos e tabelas [[1, p. 56]](#ref-1).
 
 ---
 
@@ -28,7 +28,7 @@ A análise segue seis etapas, da medição ao julgamento. A conversão do valor 
 
 | Etapa | Entrada | Saída | Regra |
 | :--- | :--- | :--- | :--- |
-| 1. Coleta | Comandos, formulários e gravações das instruções do avaliador | Arquivos em `dados/fase-04/brutos/` | Procedimento de coleta das fichas de [G1](../fase-02/gqm-manutenibilidade.md), [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md), [instruções de G3](./instrucoes-g3-flexibilidade.md#3-instruções-detalhadas-por-métrica) e [seção 2](#2-tratamento-dos-dados) |
+| 1. Coleta | Comandos, formulários e gravações das instruções do avaliador | Arquivos em `dados/fase-04/brutos/` | Procedimento de coleta das fichas de [G1](../fase-02/gqm-manutenibilidade.md), [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md), instruções do avaliador de [G1](./instrucoes-g1-manutenibilidade.md), [G2](./instrucoes-g2-confiabilidade.md) e [G3](./instrucoes-g3-flexibilidade.md) e [seção 2](#2-tratamento-dos-dados) |
 | 2. Consolidação | Arquivos brutos | Valor medido de cada métrica, em `dados/fase-04/consolidados/metricas.csv` | Procedimento de cálculo de cada ficha e [seção 3](#3-tabela-consolidada-e-script-de-análise) |
 | 3. Conversão | `metricas.csv` | Valor pontuado de cada métrica | Coluna "Valor pontuado" das faixas de [G1](../fase-02/pontuacao-julgamento.md#3-níveis-das-métricas-de-manutenibilidade-g1), [G2](../fase-02/pontuacao-julgamento.md#4-níveis-das-métricas-de-confiabilidade-g2) e [G3](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3) |
 | 4. Pontuação e julgamento | Valores das métricas | Nível de cada métrica, média de cada questão e julgamento de cada característica | [Faixas](../fase-02/pontuacao-julgamento.md#2-como-as-faixas-foram-definidas), [agregação](../fase-02/pontuacao-julgamento.md#6-agregação-da-métrica-à-característica) e [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica) |
@@ -45,11 +45,11 @@ A etapa 2 é feita por um script de cálculo, na verificação dos dados brutos,
 
 As regras abaixo cobrem situações que as fichas e os níveis de pontuação não tratam. Elas existem para que nenhuma decisão sobre os dados seja tomada depois de conhecer o resultado.
 
-**Valores extremos.** Nenhum valor é descartado nas medições repetidas, como as cinco repetições de tempo de abertura e de taxa de quadros. O valor da métrica é a mediana prevista na ficha ou nas [instruções do avaliador](./instrucoes-g3-flexibilidade.md#3-instruções-detalhadas-por-métrica), que já reduz o efeito de uma repetição muito diferente das outras.
+**Valores extremos.** Nenhum valor é descartado nas medições repetidas, como as cinco repetições de tempo de abertura e de taxa de quadros. O valor da métrica é a mediana prevista na ficha ou nas instruções do avaliador de [G1](./instrucoes-g1-manutenibilidade.md), [G2](./instrucoes-g2-confiabilidade.md) e [G3](./instrucoes-g3-flexibilidade.md#3-q32-escalabilidade), que já reduz o efeito de uma repetição muito diferente das outras.
 
 **Falha do ambiente.** Quando a medição falha por causa do ambiente (rede, máquina, ferramenta de medição) e não do Excalidraw, a coleta é repetida uma vez, com o motivo registrado na tabela consolidada. Se a falha se repetir, a métrica é tratada como [não coletada](../fase-02/pontuacao-julgamento.md#61-métricas-não-coletadas). As [condições de controle das coletas](./recursos-ambiente.md#3-máquinas-dos-responsáveis-pela-coleta) ajudam a separar uma falha do ambiente de uma falha do produto.
 
-**Nome dos arquivos brutos.** Os arquivos de G1, G2 e G3 ficam em `dados/fase-04/brutos/` e seguem a convenção `M<código>_<identificador-curto>.<extensão>` das [instruções de G3](./instrucoes-g3-flexibilidade.md#22-local-e-padrão-de-nomenclatura-dos-dados-brutos), por exemplo `M1.4.2_cloc_por_arquivo.csv`. Com um padrão único, o script de cálculo encontra o arquivo de qualquer métrica pelo código.
+**Nome dos arquivos brutos.** Os arquivos de G1, G2 e G3 ficam em `dados/fase-04/brutos/` e seguem a convenção `M<código>_<identificador-curto>.<extensão>` das instruções do avaliador de [G1](./instrucoes-g1-manutenibilidade.md#1-preparação), [G2](./instrucoes-g2-confiabilidade.md) e [G3](./instrucoes-g3-flexibilidade.md#12-local-e-padrão-de-nomenclatura-dos-dados-brutos), por exemplo `M1.4.2_cloc_por_arquivo.csv`. Com um padrão único, o script de cálculo encontra o arquivo de qualquer métrica pelo código.
 
 ---
 
@@ -136,7 +136,7 @@ Na interpretação, a equipe GQM organiza os dados e os apresenta em uma sessão
 - **Revisor independente:** quem revisa o relatório de uma característica não pode ter coletado as métricas dela.
 - **Revisão da interpretação:** o revisor confere se cada conclusão decorre do valor medido e da regra correspondente, e se toda explicação por um fator de variação tem registro na coleta que a sustente.
 
-A decisão conjunta da equipe acontece na [escolha da ação de melhoria](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/118), em 16/11/2026, a partir dos pontos de melhoria aprovados na revisão.
+A decisão conjunta da equipe acontece na [escolha da ação de melhoria](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/118), em 17/11/2026, a partir dos pontos de melhoria aprovados na revisão.
 
 ---
 
@@ -151,3 +151,4 @@ A decisão conjunta da equipe acontece na [escolha da ação de melhoria](https:
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Criação do plano de análise: fluxo, tratamento dos dados, tabela consolidada, apresentação, hipóteses e interpretação | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: links às instruções de G1, G2 e G3 e data da ação de melhoria | [Christopher Paraizo](https://github.com/wChrstphr) | |

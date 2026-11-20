@@ -1,31 +1,41 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 title: Recursos e ambiente de avaliação
 description: Hardware, software, ambiente limpo, ferramentas com versões, massa de dados e conhecimento exigido do avaliador para a coleta da Fase 04
 ---
 
+import Link from '@docusaurus/Link';
+
 # Recursos e ambiente de avaliação
 
-Esta página especifica os recursos e o ambiente que a Fase 04 vai usar: as máquinas dos responsáveis pela coleta, o sistema operacional, o navegador, o Node.js, o gerenciador de pacotes, o Docker, as ferramentas de análise com suas versões, o commit avaliado, a massa de dados e o conhecimento exigido do avaliador. A Fase 03 deve conter a especificação dos recursos necessários, e o plano deve permitir que o avaliador execute a avaliação completamente.
+## Introdução
 
-Ela fecha o que as convenções de coleta da Fase 02 deixaram em aberto: nos objetivos [G2](../fase-02/gqm-confiabilidade.md) e [G3](../fase-02/gqm-flexibilidade.md), o ambiente exato "é definido no plano de avaliação da Fase 03 e registrado em cada coleta". Os campos marcados como _a preencher_ dependem de dados que cada responsável informa antes da coleta.
+O plano de avaliação da Fase 03 inclui a especificação dos recursos necessários para executar a avaliação [[1, p. 18]](#ref-1). As convenções de coleta de [G2](../fase-02/gqm-confiabilidade.md#2-convenções-de-coleta) e [G3](../fase-02/gqm-flexibilidade.md#2-convenções-de-coleta) deixaram o ambiente exato para esta fase, que o define e o registra em cada coleta.
 
-O método de avaliação, as instruções ao avaliador e o cronograma são tratados em páginas próprias da Fase 03.
+O objetivo desta página é especificar os recursos e o ambiente da coleta da Fase 04: o commit avaliado, as máquinas dos responsáveis, o sistema operacional, o navegador, as ferramentas com suas versões, a massa de dados e o conhecimento exigido do avaliador.
+
+## Metodologia
+
+As versões do produto vêm do `package.json` [[2]](#ref-2) e do `Dockerfile` [[3]](#ref-3) do Excalidraw no commit avaliado. As máquinas, o dispositivo de toque e as versões efetivas das ferramentas foram informados por cada responsável antes da coleta, e os campos marcados como _a preencher_ dependem desses dados. A seção 8 liga cada recurso às métricas que dependem dele, e a seção 9 lista os fatores de variação que cada coleta registra. O método e os passos de coleta estão no [método de avaliação](./metodo-avaliacao.md) e nas instruções de [G1](./instrucoes-g1-manutenibilidade.md), [G2](./instrucoes-g2-confiabilidade.md) e [G3](./instrucoes-g3-flexibilidade.md), e as datas no [cronograma](./cronograma-avaliacao.md).
 
 ---
 
 ## 1. Linha de base
 
+<p className="tabela-titulo">Tabela 1: Linha de base da avaliação</p>
+
 | Item | Valor | Fonte |
 | :--- | :--- | :--- |
 | Produto | Excalidraw: aplicação web e biblioteca `@excalidraw/excalidraw` | [Escopo](../fase-01/escopo-avaliacao.md) |
 | Commit avaliado | `e1b7aacb356a492aa1e0fc6eb57b8896124027f0` (`e1b7aac`), de 18/10/2026, ramo `master` | [Escopo](../fase-01/escopo-avaliacao.md) |
-| Janela histórica | 18/04/2026 a 18/10/2026 | Convenções de coleta de [G1](../fase-02/gqm-manutenibilidade.md) e [G2](../fase-02/gqm-confiabilidade.md) |
+| Janela histórica | 18/04/2026 a 18/10/2026 | Convenções de coleta de [G1](../fase-02/gqm-manutenibilidade.md#2-convenções-de-coleta) e [G2](../fase-02/gqm-confiabilidade.md#2-convenções-de-coleta) |
 | Gerenciador de pacotes do projeto | Yarn 1.22.22 | Campo `packageManager` do `package.json` da raiz, no commit |
 | Node.js exigido pelo projeto | `>=18.0.0` | Campo `engines` do `package.json` da raiz, no commit |
 | Node.js da imagem Docker do projeto | 24, fixado pelo digest `sha256:8530f76a96d88820d288761f022e318970dda93d01536919fbc16076b7983e63` | `Dockerfile`, no commit |
 | Servidor da imagem Docker do projeto | `nginx:stable-alpine-slim`, fixado pelo digest `sha256:2c605dbeab79a6b2a63340474fe58119d0ef95bdc4b1f41df0aa689659b3d13b` | `Dockerfile`, no commit |
 | TypeScript, Vite, Vitest | 5.9.3, 5.0.12 e 3.0.6 (com `@vitest/coverage-v8` 3.0.7) | `package.json` da raiz, no commit |
+
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 O projeto exige Node.js 18 ou mais recente, mas a imagem Docker oficial usa a versão 24. A coleta usa a versão do `Dockerfile` (seção 2). Qualquer teste feito com outra versão de Node.js é registrado como fator de variação (seção 9).
 
@@ -63,7 +73,9 @@ CI=true yarn test:coverage --minWorkers=1 --maxWorkers=8
 yarn build:packages
 ```
 
-`--frozen-lockfile` impede que as versões de dependências mudem em relação ao `yarn.lock` do commit. `yarn test:coverage` é o comando de cobertura do próprio projeto, usado em [M1.5.1](../fase-02/gqm-manutenibilidade.md). Três cuidados evitam falhas que não vêm do código avaliado:
+`--frozen-lockfile` impede que as versões de dependências mudem em relação ao `yarn.lock` do commit. `yarn test:coverage` é o comando de cobertura do próprio projeto, usado em [M1.5.1](../fase-02/gqm-manutenibilidade.md#m151-cobertura-de-linhas-por-pacote). Três cuidados evitam falhas que não vêm do código avaliado:
+
+<p className="tabela-titulo">Tabela 2: Cuidados na execução da cobertura</p>
 
 | Cuidado | Motivo |
 | :--- | :--- |
@@ -71,7 +83,9 @@ yarn build:packages
 | `CI=true` | Sem ele, o Vitest termina os testes e fica aguardando alterações nos arquivos, sem encerrar o comando. |
 | `--minWorkers=1 --maxWorkers=8` | Com todos os núcleos em uso, o teste de exportação com fonte CJK de `export.test.ts` passa do limite de 30 segundos. O número de processos usado é registrado como fator de variação (seção 9). |
 
-Em 11/11/2026, essa sequência executou os 143 arquivos de teste sem falhas e gerou o relatório de cobertura na máquina de Christopher.
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+Em 11/11/2026, essa sequência executou a suíte de testes sem falhas e gerou o relatório de cobertura na máquina de Christopher Paraizo.
 
 ### 2.2 Ambiente limpo
 
@@ -94,21 +108,25 @@ docker build -t excalidraw-avaliacao .
 docker run -d --name excalidraw-avaliacao -p 3000:80 excalidraw-avaliacao
 ```
 
-A aplicação abre no navegador em `http://localhost:3000`. Navegadores tratam `localhost` como origem segura, o que permite registrar o _service worker_ exigido por [M2.2.1](../fase-02/gqm-confiabilidade.md).
+A aplicação abre no navegador em `http://localhost:3000`. Navegadores tratam `localhost` como origem segura, o que permite registrar o _service worker_ exigido por [M2.2.1](../fase-02/gqm-confiabilidade.md#m221-proporção-de-funções-essenciais-disponíveis-sem-conexão).
 
 Duas regras evitam erros de configuração:
 
-- O `docker-compose.yml` do projeto passa `NODE_ENV=development` na construção e desativa a verificação de saúde. Por isso ele **não** é usado para o ambiente de teste de G2 e G3 nem para a verificação 3 de [M3.3.3](../fase-02/gqm-flexibilidade.md), que depende da verificação de saúde do `Dockerfile`. Para M3.3.3 usam-se `docker build` e `docker run`, e o estado da verificação é lido com `docker inspect --format '{{.State.Health.Status}}' excalidraw-avaliacao`.
-- O `docker-compose.yml` é usado só em [M3.3.2](../fase-02/gqm-flexibilidade.md), porque o guia de desenvolvimento do projeto traz passos com Docker Compose e a métrica mede se eles funcionam como escritos.
+- O `docker-compose.yml` do projeto passa `NODE_ENV=development` na construção e desativa a verificação de saúde. Por isso ele **não** é usado para o ambiente de teste de G2 e G3 nem para a verificação 3 de [M3.3.3](../fase-02/gqm-flexibilidade.md#m333-implantação-com-docker), que depende da verificação de saúde do `Dockerfile`. Para M3.3.3 usam-se `docker build` e `docker run`, e o estado da verificação é lido com `docker inspect --format '{{.State.Health.Status}}' excalidraw-avaliacao`.
+- O `docker-compose.yml` é usado só em [M3.3.2](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste), porque o guia de desenvolvimento do projeto traz passos com Docker Compose e a métrica mede se eles funcionam como escritos.
 
 ### 2.4 Rede e serviços externos
 
+<p className="tabela-titulo">Tabela 3: Rede e serviços externos</p>
+
 | Recurso | Métricas que dependem | Observação |
 | :--- | :--- | :--- |
-| Internet aberta durante a coleta | [M2.3.2](../fase-02/gqm-confiabilidade.md), [M3.1.1](../fase-02/gqm-flexibilidade.md), [M3.1.2](../fase-02/gqm-flexibilidade.md), [M3.3.1](../fase-02/gqm-flexibilidade.md) | M2.3.2 usa o servidor de colaboração configurado na versão avaliada. Ele é infraestrutura de produção operada pelo projeto, coberta pela exclusão de servidores gerenciados de produção ([Escopo, seção 4](../fase-01/escopo-avaliacao.md)), e o objeto O3 limita a análise ao código do cliente ([Escopo, seção 2](../fase-01/escopo-avaliacao.md)). O resultado vale para o comportamento do cliente, não para o serviço. |
-| Registro npm | [M3.1.2](../fase-02/gqm-flexibilidade.md), [M3.3.1](../fase-02/gqm-flexibilidade.md) | M3.3.1 também instala a versão publicada 0.17.6. |
-| API do GitHub, com a CLI `gh` autenticada | [M1.4.1](../fase-02/gqm-manutenibilidade.md), [M1.4.3](../fase-02/gqm-manutenibilidade.md), [M1.5.3](../fase-02/gqm-manutenibilidade.md), [M2.1.1](../fase-02/gqm-confiabilidade.md), [M2.1.2](../fase-02/gqm-confiabilidade.md), [M2.1.3](../fase-02/gqm-confiabilidade.md) | A autenticação evita o limite de requisições de usuários anônimos. As respostas brutas são salvas no repositório da avaliação. |
-| Base de uso de navegadores (`caniuse-lite`) | [M3.1.1](../fase-02/gqm-flexibilidade.md) | A base muda com o tempo. A versão usada e a data da coleta são registradas. |
+| Internet aberta durante a coleta | [M2.3.2](../fase-02/gqm-confiabilidade.md#m232-continuidade-do-editor-após-falha-da-colaboração), [M3.1.1](../fase-02/gqm-flexibilidade.md#m311-cobertura-de-usuários-pelos-navegadores-declarados), [M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso), [M3.3.1](../fase-02/gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | M2.3.2 usa o servidor de colaboração configurado na versão avaliada. Ele é infraestrutura de produção operada pelo projeto, coberta pela exclusão de servidores gerenciados de produção ([Escopo, seção 4](../fase-01/escopo-avaliacao.md)), e o objeto O3 limita a análise ao código do cliente ([Escopo, seção 2](../fase-01/escopo-avaliacao.md)). O resultado vale para o comportamento do cliente, não para o serviço. |
+| Registro npm | [M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso), [M3.3.1](../fase-02/gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | M3.3.1 também instala a versão publicada 0.17.6. |
+| API do GitHub, com a CLI `gh` autenticada | [M1.4.1](../fase-02/gqm-manutenibilidade.md#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição), [M1.4.3](../fase-02/gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos), [M1.5.3](../fase-02/gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração), [M2.1.1](../fase-02/gqm-confiabilidade.md#m211-proporção-de-correções-entre-as-contribuições-integradas), [M2.1.2](../fase-02/gqm-confiabilidade.md#m212-mediana-do-tempo-entre-o-relato-e-a-correção), [M2.1.3](../fase-02/gqm-confiabilidade.md#m213-proporção-de-contribuições-revisadas-antes-da-integração) | A autenticação evita o limite de requisições de usuários anônimos. As respostas brutas são salvas no repositório da avaliação. |
+| Base de uso de navegadores (`caniuse-lite`) | [M3.1.1](../fase-02/gqm-flexibilidade.md#m311-cobertura-de-usuários-pelos-navegadores-declarados) | A base muda com o tempo. A versão usada e a data da coleta são registradas. |
+
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
 
 ---
 
@@ -116,27 +134,33 @@ Duas regras evitam erros de configuração:
 
 Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é preenchida uma vez, e cada coleta aponta para a linha usada (seção 9).
 
+<p className="tabela-titulo">Tabela 4: Máquinas dos responsáveis pela coleta</p>
+
 | Responsável | Métricas coletadas | Processador | Memória | Sistema operacional e versão | Navegador e versão |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Christopher | Análise estática e histórico: M1.1.1 a M1.5.3 | Intel Core i7-12650H | 32 GB | Windows 11 Pro 25H2 (build 26200.9711), com WSL2 (Ubuntu 24.04.5 LTS) | não se aplica |
+| Christopher Paraizo | Análise estática e histórico: M1.1.1 a M1.5.3 | Intel Core i7-12650H | 32 GB | Windows 11 Pro 25H2 (build 26200.9711), com WSL2 (Ubuntu 24.04.5 LTS) | não se aplica |
 | Luiz Henrique Soares | Histórico de defeitos: M2.1.1 a M2.1.3 | Intel(R) Core(TM) i5-14450HX | 15,6 GB utilizável (16 GB instalados) | Windows 11 Home Single Language (Build 26300) | não se aplica |
 | Luiz Henrique Soares | Testes no navegador de G2: M2.2.1 a M2.4.3 | Intel(R) Core(TM) i5-14450HX | 15,6 GB utilizável (16 GB instalados) | Windows 11 Home Single Language (Build 26300) | Mozilla Firefox 159.0.1 |
 | Maria Eduarda | Adaptabilidade, instalabilidade e substituibilidade: M3.1.1, M3.1.2, M3.3.1 a M3.4.3 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
-| Maria Eduarda | Desempenho: M3.2.1 e M3.2.2 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
+| Maria Eduarda | Escalabilidade: M3.2.1 a M3.2.3 | AMD Ryzen 7 5700U with Radeon Graphics | 10 GB utilizável (16 GB instalados) | Zorin OS 18.1 (Kernel Linux 7.0.0-34-generic) | Mozilla Firefox 159.0.1 |
 
-**Máquina de desempenho.** [M3.2.1](../fase-02/gqm-flexibilidade.md) e [M3.2.2](../fase-02/gqm-flexibilidade.md) dependem do hardware, porque o tempo de abertura e a taxa de quadros mudam com o processador, a memória, a placa gráfica e a tela. Por isso elas são coletadas somente na máquina da Maria Eduarda, e resultados dessas duas métricas obtidos em outra máquina não são usados. Na máquina da Maria Eduarda, a placa gráfica é a **AMD Radeon Graphics (integrada, Lucienne)** e a tela opera em **Full HD (1920 × 1080) a 60 Hz**, atendendo à meta de [M3.2.2](../fase-02/pontuacao-julgamento.md) que converte os quadros por segundo em percentual da meta de 60 quadros.
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
+**Máquina de desempenho.** [M3.2.1](../fase-02/gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena) e [M3.2.2](../fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) dependem do hardware, porque o tempo de abertura e a taxa de quadros mudam com o processador, a memória, a placa gráfica e a tela. Por isso elas são coletadas somente na máquina da Maria Eduarda, e resultados dessas duas métricas obtidos em outra máquina não são usados. [M3.2.3](../fase-02/gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada) é coletada na mesma máquina, porque compara o salvamento e a exportação com o tempo de abertura de M3.2.1 na mesma cena. Na máquina da Maria Eduarda, a placa gráfica é a **AMD Radeon Graphics (integrada, Lucienne)** e a tela opera em **Full HD (1920 × 1080) a 60 Hz**, atendendo à [faixa de M3.2.2](../fase-02/pontuacao-julgamento.md#5-níveis-das-métricas-de-flexibilidade-g3), que converte os quadros por segundo em percentual da meta de 60 quadros.
 
 **Condições de controle nas coletas de desempenho.** Carregador conectado, mesmo modo de energia em todas as repetições, navegador com perfil novo e sem extensões, uma única aba aberta, zoom de 100% e nenhum outro programa pesado em execução.
 
 **Navegador.** Todos os testes no navegador usam o mesmo navegador e a mesma versão, fixados antes da Fase 04: Mozilla Firefox 159.0.1. Os testes de G2 e G3 exigem do navegador as funções de: modo _offline_, bloqueio de requisições por domínio, exportação do registro de rede (HAR), painel de desempenho (_Performance_) e limpeza do armazenamento local. A atualização automática do navegador fica desligada durante a coleta.
 
-**Sistema operacional.** O cenário 4 de [M2.4.1](../fase-02/gqm-confiabilidade.md) exige encerrar o processo do navegador pelo sistema operacional. O comando ou o procedimento usado é registrado junto com o sistema operacional de quem coleta.
+**Sistema operacional.** O cenário 4 de [M2.4.1](../fase-02/gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) exige encerrar o processo do navegador pelo sistema operacional. O comando ou o procedimento usado é registrado junto com o sistema operacional de quem coleta.
 
 ---
 
 ## 4. Dispositivo com toque e caneta (M3.1.3)
 
-[M3.1.3](../fase-02/gqm-flexibilidade.md) é um teste manual roteirizado em um _tablet_ ou celular com navegador de versão fixa, com gravação de tela.
+[M3.1.3](../fase-02/gqm-flexibilidade.md#m313-proporção-de-ações-de-edição-que-funcionam-por-toque-e-caneta) é um teste manual roteirizado em um _tablet_ ou celular com navegador de versão fixa, com gravação de tela.
+
+<p className="tabela-titulo">Tabela 5: Dispositivo com toque e caneta</p>
 
 | Campo | Valor |
 | :--- | :--- |
@@ -147,13 +171,17 @@ Cada responsável registra a sua máquina antes de coletar. A tabela abaixo é p
 | Caneta (modelo, ou "não disponível") | Caneta Goojodoq |
 | Responsável | Maria Eduarda |
 
-O aparelho precisa aceitar toque com mais de um dedo (ações 6 e 7: pinça e deslocamento com dois dedos) e ter teclado virtual (ação 8). Quando há caneta, as duas formas de entrada são testadas e pontuadas, e a pontuação da métrica é a média das duas ([Pontuação, seção 5.1](../fase-02/pontuacao-julgamento.md)).
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
+O aparelho precisa aceitar toque com mais de um dedo (ações 6 e 7: pinça e deslocamento com dois dedos) e ter teclado virtual (ação 8). Quando há caneta, as duas formas de entrada são testadas e pontuadas, e a pontuação da métrica é a média das duas ([Pontuação, seção 5.1](../fase-02/pontuacao-julgamento.md#51-justificativas-específicas)).
 
 ---
 
 ## 5. Ferramentas de análise e suas versões
 
 A versão efetiva de cada ferramenta é registrada na primeira coleta, com o comando de versão e a saída. Versões já definidas na Fase 02 não mudam.
+
+<p className="tabela-titulo">Tabela 6: Ferramentas de análise e suas versões</p>
 
 | Ferramenta | Versão | Métricas | Comando de versão |
 | :--- | :--- | :--- | :--- |
@@ -162,23 +190,27 @@ A versão efetiva de cada ferramenta é registrada na primeira coleta, com o com
 | cloc | 1.86 | M1.4.2 | `cloc --version` |
 | GitHub CLI (`gh`) | 2.102.0 | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 | `gh --version` |
 | Vitest com `@vitest/coverage-v8` | 3.0.6 (Vitest) e 3.0.7 (coverage-v8) | M1.5.1 | `yarn vitest --version` |
-| `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher) | M1.2.1, M1.5.2 | `grep --version` |
+| `grep` | GNU grep 3.11 (Ubuntu/WSL2, Christopher Paraizo) | M1.2.1, M1.5.2 | `grep --version` |
 | Browserslist e `caniuse-lite` | 4.24.4 (Browserslist) / `caniuse-lite` 1.0.30001701 | M3.1.1 | `npx browserslist --version` e `yarn why caniuse-lite` |
 | Node.js (ambiente Docker) | 24.16.0 | M3.3.1, M3.3.2 e M3.3.3 | `node --version` dentro do contêiner |
-| Node.js (execução nativa) | Referência 24.16.0, a da imagem Docker (seção 1). Registrado: v24.16.0 (Christopher) | M1.1.1, M1.1.2, M1.1.3, M1.2.1, M1.3.1, M1.5.1, M3.1.1 | `node --version` na máquina de quem coleta |
+| Node.js (execução nativa) | Referência 24.16.0, a da imagem Docker (seção 1). Registrado: v24.16.0 (Christopher Paraizo) | M1.1.1, M1.1.2, M1.1.3, M1.2.1, M1.3.1, M1.5.1, M3.1.1 | `node --version` na máquina de quem coleta |
 | Yarn | 1.22.22 | M1.5.1, M3.3.2 | `yarn --version` |
-| npm e pnpm | npm 11.13.0 (Maria Eduarda e Christopher). pnpm: _a preencher_ | M3.3.1 | `npm --version` e `pnpm --version` |
-| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) / Docker 29.9.0 (Christopher) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
+| npm e pnpm | npm 11.13.0 (Maria Eduarda e Christopher Paraizo). pnpm: _a preencher_ | M3.3.1 | `npm --version` e `pnpm --version` |
+| Docker e Docker Compose | Docker 29.9.3 (Maria Eduarda) / Docker 29.9.0 (Christopher Paraizo) | M3.3.2, M3.3.3 | `docker --version` e `docker compose version` |
 | Vite e Next.js dos projetos mínimos | _a preencher na criação dos projetos mínimos_ | M3.1.2 | `package.json` de cada projeto |
 | Scripts e geradores de cenas da avaliação | Commit exato do repositório da avaliação | M1.1.1 a M1.5.3, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 | `git rev-parse HEAD` |
 
-As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-02/gqm-confiabilidade.md), podem exigir uma versão de Node.js diferente da do commit avaliado. A versão usada em cada construção é registrada.
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
+As marcações v0.15.0, v0.16.4, v0.17.6 e v0.18.0, usadas em [M2.4.2](../fase-02/gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda), podem exigir uma versão de Node.js diferente da do commit avaliado. A versão usada em cada construção é registrada.
 
 ---
 
 ## 6. Massa de dados
 
 Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilidade (G3) não podem ser calculadas. Todos os arquivos encontram-se versionados no repositório em `dados/fase-03/massa-de-dados/` e podem ser integralmente recriados por script, assegurando repetibilidade e reprodutibilidade independente.
+
+<p className="tabela-titulo">Tabela 7: Massa de dados</p>
 
 | Conjunto | Conteúdo | Origem | Métricas |
 | :--- | :--- | :--- | :--- |
@@ -190,13 +222,15 @@ Sem os dados de entrada abaixo, as métricas de Confiabilidade (G2) e Flexibilid
 | Dados do GitHub | Respostas brutas da API para a janela de 18/04/2026 a 18/10/2026 | Coletadas com `gh`, salvas em JSON | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
 | Projetos mínimos | Um projeto para cada combinação de React 17, 18 e 19 com Vite e com Next.js (6 projetos) | Criados pela equipe a partir do guia de integração | M3.1.2 |
 
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
 ### 6.1 Justificativa da massa de dados
 
 Desenhar livremente durante as coletas impediria que dois avaliadores obtivessem o mesmo valor de tempo ou taxa de quadros. Por isso, a avaliação usa uma massa de dados fixa salva em `dados/fase-03/massa-de-dados/`, gerada por script.
 
-- **Cena de referência:** reúne um elemento de cada um dos 10 tipos definidos na Fase 02 (retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura). Ela é usada em [M2.4.1](../fase-02/gqm-confiabilidade.md) (restauração de sessão após fechar a aba ou matar o processo), [M2.4.2](../fase-02/gqm-confiabilidade.md) (compatibilidade de reabertura entre versões antigas e a atual), [M3.4.2](../fase-02/gqm-flexibilidade.md) (preservação de propriedades na exportação e reimportação em `.excalidraw`, PNG e SVG) e [M3.4.3](../fase-02/gqm-flexibilidade.md) (documentação dos campos do formato). Manter a mesma cena em todas essas métricas permite comparar os resultados diretamente.
-- **Cenas de escala:** quatro arquivos com 100, 1.000, 5.000 e 10.000 elementos, na proporção de 40% retângulos, 20% elipses, 20% setas e 20% textos, dispostos em grade. Essa proporção reflete diagramas típicos, onde caixas e textos predominam sobre conexões. Os quatro volumes permitem traçar a curva de tempo de abertura ([M3.2.1](../fase-02/gqm-flexibilidade.md)), medir a taxa de quadros ao arrastar 50 elementos ([M3.2.2](../fase-02/gqm-flexibilidade.md)) e identificar o tamanho máximo de cena que a aplicação consegue salvar e exportar sem travar o navegador ([M3.2.3](../fase-02/gqm-flexibilidade.md)). A disposição em grade evita que formas fiquem escondidas umas atrás das outras.
-- **Arquivos inválidos:** os 9 casos cobrem os erros de entrada mais comuns para avaliar a tolerância a falhas em [M2.3.1](../fase-02/gqm-confiabilidade.md): arquivo vazio, JSON com sintaxe quebrada, JSON sem o campo `type`, tipo desconhecido, elementos sem campos obrigatórios, coordenadas com texto ou `null`, arquivo binário renomeado para `.excalidraw`, imagem PNG comum sem desenho embutido e arquivo cortado pela metade. O teste verifica se o editor exibe mensagem de erro e continua utilizável em vez de travar o navegador.
+- **Cena de referência:** reúne um elemento de cada um dos 10 tipos definidos na Fase 02 (retângulo, elipse, losango, seta, linha, desenho livre, texto solto, texto dentro de forma, imagem e moldura). Ela é usada em [M2.4.1](../fase-02/gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) (restauração de sessão após fechar a aba ou matar o processo), [M2.4.2](../fase-02/gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda) (compatibilidade de reabertura entre versões antigas e a atual), [M3.4.2](../fase-02/gqm-flexibilidade.md#m342-proporção-de-elementos-preservados-na-exportação-e-reimportação) (preservação de propriedades na exportação e reimportação em `.excalidraw`, PNG e SVG) e [M3.4.3](../fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados) (documentação dos campos do formato). Manter a mesma cena em todas essas métricas permite comparar os resultados diretamente.
+- **Cenas de escala:** quatro arquivos com 100, 1.000, 5.000 e 10.000 elementos, na proporção de 40% retângulos, 20% elipses, 20% setas e 20% textos, dispostos em grade. Essa proporção reflete diagramas típicos, onde caixas e textos predominam sobre conexões. Os quatro volumes permitem traçar a curva de tempo de abertura ([M3.2.1](../fase-02/gqm-flexibilidade.md#m321-tempo-de-abertura-por-tamanho-de-cena)), medir a taxa de quadros ao arrastar 50 elementos ([M3.2.2](../fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena)) e identificar o tamanho máximo de cena que a aplicação consegue salvar e exportar sem travar o navegador ([M3.2.3](../fase-02/gqm-flexibilidade.md#m323-tamanho-máximo-de-cena-salva-e-exportada)). A disposição em grade evita que formas fiquem escondidas umas atrás das outras.
+- **Arquivos inválidos:** os 9 casos cobrem os erros de entrada mais comuns para avaliar a tolerância a falhas em [M2.3.1](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem): arquivo vazio, JSON com sintaxe quebrada, JSON sem o campo `type`, tipo desconhecido, elementos sem campos obrigatórios, coordenadas com texto ou `null`, arquivo binário renomeado para `.excalidraw`, imagem PNG comum sem desenho embutido e arquivo cortado pela metade. O teste verifica se o editor exibe mensagem de erro e continua utilizável em vez de travar o navegador.
 
 O script [`scripts/gerar_massa_dados.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/gerar_massa_dados.py) recria toda a massa de dados com o comando:
 
@@ -214,27 +248,29 @@ O detalhamento de cada arquivo está no [README da pasta de massa de dados](http
 
 O avaliador precisa saber:
 
-- usar Git e a linha de comando (clonar, trocar de commit, executar scripts);
-- instalar e usar Node.js, npm, Yarn e pnpm;
-- construir e executar imagens Docker (`build`, `run`, `inspect`);
-- usar as ferramentas do navegador para rede, desempenho, modo _offline_ e bloqueio de requisições;
-- consultar a API do GitHub com `gh api`, incluindo consultas GraphQL;
-- ler TypeScript e React o suficiente para localizar arquivos, importações e funções citados nas métricas;
-- executar os scripts da avaliação e interpretar a saída.
+- Usar Git e a linha de comando (clonar, trocar de commit, executar scripts).
+- Instalar e usar Node.js, npm, Yarn e pnpm.
+- Construir e executar imagens Docker (`build`, `run`, `inspect`).
+- Usar as ferramentas do navegador para rede, desempenho, modo _offline_ e bloqueio de requisições.
+- Consultar a API do GitHub com `gh api`, incluindo consultas GraphQL.
+- Ler TypeScript e React o suficiente para localizar arquivos, importações e funções citados nas métricas.
+- Executar os scripts da avaliação e interpretar a saída.
 
 ### 7.2 Domínio da aplicação
 
-O avaliador precisa ter usado o Excalidraw e saber: criar formas, setas ligadas a formas, texto, molduras e imagens; agrupar elementos e mudar a ordem de sobreposição; desfazer e refazer; salvar e abrir arquivos `.excalidraw`; exportar em PNG e SVG com os dados do desenho incorporados; e abrir uma sessão de colaboração entre duas janelas.
+O avaliador precisa ter usado o Excalidraw e saber criar formas, setas ligadas a formas, texto, molduras e imagens. Também precisa saber agrupar elementos, mudar a ordem de sobreposição, desfazer e refazer, salvar e abrir arquivos `.excalidraw`, exportar em PNG e SVG com os dados do desenho incorporados e abrir uma sessão de colaboração entre duas janelas.
 
 ### 7.3 Domínio da avaliação
 
-O avaliador precisa conhecer o método GQM, as convenções de coleta de G1, G2 e G3, a escala de pontuação de `++` a `--` e as regras de agregação da [página de pontuação](../fase-02/pontuacao-julgamento.md), para registrar cada medida na unidade e na forma previstas.
+O avaliador precisa conhecer o método GQM, as convenções de coleta de G1, G2 e G3, a escala de pontuação de `++` a `--` e as [regras de agregação](../fase-02/pontuacao-julgamento.md#6-agregação-da-métrica-à-característica), para registrar cada medida na unidade e na forma previstas.
 
 ---
 
 ## 8. Rastreabilidade: recursos e métricas
 
 ### 8.1 Recursos
+
+<p className="tabela-titulo">Tabela 8: Recursos da avaliação</p>
 
 | Código | Recurso | Seção | Métricas que dependem dele |
 | :---: | :--- | :---: | :--- |
@@ -243,14 +279,18 @@ O avaliador precisa conhecer o método GQM, as convenções de coleta de G1, G2 
 | R3 | Ferramentas de análise estática e scripts | 5 | M1.1.1, M1.1.2, M1.1.3, M1.2.1, M1.3.1, M1.4.2, M1.4.3, M1.5.2 |
 | R4 | `gh` autenticado e acesso à API do GitHub | 2.4 | M1.4.1, M1.4.3, M1.5.3, M2.1.1, M2.1.2, M2.1.3 |
 | R5 | Aplicação de produção (imagem Docker) e navegador de versão fixa | 2.3 e 3 | M2.2.1 a M2.4.3, M3.2.3, M3.4.1 a M3.4.3 |
-| R6 | Máquina da Maria Eduarda | 3 | M3.2.1, M3.2.2 |
+| R6 | Máquina da Maria Eduarda | 3 | M3.2.1, M3.2.2, M3.2.3 |
 | R7 | Dispositivo com toque e caneta | 4 | M3.1.3 |
 | R8 | Massa de dados | 6 | M2.2.1, M2.3.1, M2.4.1 a M2.4.3, M3.2.1 a M3.2.3, M3.4.2, M3.4.3 |
 | R9 | Ambiente limpo, com npm, Yarn, pnpm e Docker | 2.2 | M3.1.2, M3.3.1, M3.3.2, M3.3.3 |
 | R10 | Gravação e captura de tela | 9 | M2.2.1, M2.3.1, M2.3.2, M3.1.3, M3.4.1 |
 | R11 | Acesso à internet (servidor de colaboração, npm, base de navegadores) | 2.4 | M2.3.2, M3.1.1, M3.1.2, M3.3.1 |
 
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
 ### 8.2 Métricas
+
+<p className="tabela-titulo">Tabela 9: Recursos usados por métrica</p>
 
 | Métrica | Recursos | Observação |
 | :--- | :--- | :--- |
@@ -276,18 +316,22 @@ O avaliador precisa conhecer o método GQM, as convenções de coleta de G1, G2 
 | M3.1.2 | R9, R11 | 6 projetos mínimos. |
 | M3.1.3 | R7, R10 | Teste manual no dispositivo. |
 | M3.2.1, M3.2.2 | R6, R8 | Somente na máquina da Maria Eduarda. |
-| M3.2.3 | R5, R8 | Compara com o tempo de abertura de M3.2.1 na mesma cena. |
+| M3.2.3 | R5, R6, R8 | Na máquina da Maria Eduarda, compara com o tempo de abertura de M3.2.1 na mesma cena. |
 | M3.3.1 | R9, R11 | npm, Yarn e pnpm. |
 | M3.3.2 | R9 | Passos do guia de desenvolvimento, com Node.js, Yarn e Docker Compose. |
 | M3.3.3 | R9 | `docker build` e `docker run`, sem Docker Compose. |
 | M3.4.1 | R5, R10 | Inspeção dos menus de exportação. |
 | M3.4.2, M3.4.3 | R5, R8 | Usam a cena de referência. |
 
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
 ---
 
 ## 9. Fatores de variação registrados em cada coleta
 
 Os fatores que podem influenciar os resultados são registrados junto com cada coleta. Cada coleta preenche os campos abaixo e guarda o registro ao lado dos dados brutos.
+
+<p className="tabela-titulo">Tabela 10: Fatores de variação registrados em cada coleta</p>
 
 | Campo | O que registrar |
 | :--- | :--- |
@@ -304,31 +348,19 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | Evidências | Caminho dos arquivos de gravação de tela, capturas, HAR e dados brutos |
 | Desvios | Qualquer diferença em relação ao método e o motivo |
 
+<p className="tabela-fonte">Fonte: [Letícia de Carvalho](https://github.com/LeticiaSantosss), 2026.</p>
+
 **Gravação de tela.** Os testes manuais no computador usam o software OBS Studio. A ferramenta grava a tela inteira com a hora visível, e os arquivos são salvos no repositório da avaliação com o código da métrica no nome. No aparelho de toque (iPad), usa-se a gravação de tela nativa do próprio iPadOS.
-
----
-
-## 10. Consistência com a Fase 02
-
-| Exigência da Fase 02 | Onde esta página atende |
-| :--- | :--- |
-| Ambiente de teste: aplicação construída do commit avaliado, executada localmente com a configuração de produção, em navegador de versão fixa | Seções 2.3 e 3 |
-| Ambiente limpo (contêiner ou máquina virtual) para as métricas de instalação | Seção 2.2 |
-| Versão de cada ferramenta registrada junto com cada coleta | Seções 5 e 9 |
-| Máquina, sistema operacional, navegador, Node.js e gerenciadores de pacotes definidos na Fase 03 | Seções 1, 3 e 5 |
-| Cenas de escala geradas por script, com 100, 1.000, 5.000 e 10.000 elementos | Seção 6 |
-| Desempenho (M3.2.1 e M3.2.2) dependente do hardware | Seção 3 |
-| Aparelho de toque e caneta, de versão fixa, para M3.1.3 | Seção 4 |
-| Janela histórica e commit fixos | Seção 1 |
 
 ---
 
 ## Referências
 
-- 2026-2 Trabalho final completo v1. Projeto final da disciplina, 05/10/2026. Página 7.
-- [`package.json` da raiz do Excalidraw no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/package.json).
-- [`Dockerfile` do Excalidraw no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/Dockerfile) e [`docker-compose.yml`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/docker-compose.yml).
-- [Escopo, profundidade e objetos de avaliação](../fase-01/escopo-avaliacao.md), [GQM de Manutenibilidade](../fase-02/gqm-manutenibilidade.md), [GQM de Confiabilidade](../fase-02/gqm-confiabilidade.md), [GQM de Flexibilidade](../fase-02/gqm-flexibilidade.md) e [Níveis de pontuação e critérios de julgamento](../fase-02/pontuacao-julgamento.md).
+> <Link id="ref-1">1.</Link> RAMOS, Cristiane Soares. **AULA A07 QSW1 PROC AVAL PRODUTO**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 18. Disponível no Moodle da disciplina.
+>
+> <Link id="ref-2">2.</Link> EXCALIDRAW. [`package.json` da raiz do repositório no commit `e1b7aac`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/package.json). GitHub, 2026.
+>
+> <Link id="ref-3">3.</Link> EXCALIDRAW. [`Dockerfile`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/Dockerfile) e [`docker-compose.yml`](https://github.com/excalidraw/excalidraw/blob/e1b7aacb356a492aa1e0fc6eb57b8896124027f0/docker-compose.yml) no commit `e1b7aac`. GitHub, 2026.
 
 ---
 
@@ -341,4 +373,5 @@ Os fatores que podem influenciar os resultados são registrados junto com cada c
 | 1.2 | 08/11/2026 | Detalhamento e justificativa da massa de dados para G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 1.3 | 09/11/2026 | Preenchimento dos dados de hardware de Luiz e das versões de ferramentas faltantes | [Letícia Santos](https://github.com/LeticiaSantosss) | |
 | 1.4 | 10/11/2026 | Correção do ambiente limpo, das versões de Node.js, npm, Docker e TypeScript, dos links para as métricas de G3 e da formatação das tabelas | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.5 | 11/11/2026 | Conferência do commit pelo hash completo, ativação do Yarn 1.22.22 antes da instalação das dependências, comando de versão do ESLint 8.57.0, ordem e opções do comando de cobertura e versões de Node.js e npm de Christopher | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 11/11/2026 | Conferência do commit pelo hash completo, ativação do Yarn 1.22.22 antes da instalação das dependências, comando de versão do ESLint 8.57.0, ordem e opções do comando de cobertura e versões de Node.js e npm de Christopher Paraizo | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 18/11/2026 | Revisão de coerência e cross-links: Introdução e Metodologia, M3.2.3 na máquina de Maria Eduarda e links às fichas | [Christopher Paraizo](https://github.com/wChrstphr) | |

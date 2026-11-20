@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 title: "Resultados: Manutenibilidade (G1)"
 description: Nível de cada métrica de G1, confronto com as hipóteses, respostas às questões Q1.1 a Q1.5 e ao objetivo G1, e pontos de melhoria
 ---
@@ -35,11 +35,11 @@ Cada hipótese foi confirmada ou refutada pela regra do critério de interpreta�
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-Os quatro pares em ciclo são `common` e `math`, `element` e `excalidraw`, `element` e `utils`, e `excalidraw` e `utils`. A única importação contra a direção declarada é a de `packages/utils/src/index.ts` para `packages/excalidraw/scene/export.ts`. A dependência de `utils` para a biblioteca também é uma das duas que contrariam o Princípio das Dependências Estáveis. A outra é a de `element` para `utils`. Em M1.1.3, o valor de 10% está no limite entre `o` e `-` e fica no nível melhor. Os pacotes que mais recebem dependências são `common` e `math`, com *Ca* 5 cada, enquanto a biblioteca tem *Ca* 2. Por isso, H1.1.3 é refutada.
+Os quatro pares em ciclo são `common` e `math`, `element` e `excalidraw`, `element` e `utils`, e `excalidraw` e `utils`. A única importação contra a direção declarada é a de `packages/utils/src/index.ts` para `packages/excalidraw/scene/export.ts`. A dependência de `utils` para a biblioteca também é uma das duas que contrariam o Princípio das Dependências Estáveis. A outra é a de `element` para `utils`. Em [M1.1.3](../fase-02/gqm-manutenibilidade.md#m113-acoplamento-e-instabilidade-de-cada-pacote), o valor de 10% está no limite entre `o` e `-` e fica no nível melhor. Os pacotes que mais recebem dependências são `common` e `math`, com *Ca* 5 cada, enquanto a biblioteca tem *Ca* 2. Por isso, [H1.1.3](../fase-02/gqm-manutenibilidade.md#3-q11-modularidade) é refutada.
 
 As três refutações não são explicadas por fatores registrados. O único desvio da coleta é o caminho do clone, que não altera o grafo. O quadrante de impacto previa que a revisão concentrada em poucos mantenedores preservaria a direção das dependências, e os dados mostram que isso não impediu os ciclos.
 
-**Resposta a Q1.1:** a modularidade é regular (`o`). As importações entre pacotes quase sempre seguem a direção declarada, mas 4 dos 28 pares de pacotes estão em ciclo e não podem ser alterados ou reutilizados separadamente.
+**Resposta a [Q1.1](../fase-02/gqm-manutenibilidade.md#3-q11-modularidade):** a modularidade é regular (`o`). As importações entre pacotes quase sempre seguem a direção declarada, mas 4 dos 28 pares de pacotes estão em ciclo e não podem ser alterados ou reutilizados separadamente.
 
 ---
 
@@ -57,9 +57,9 @@ As três refutações não são explicadas por fatores registrados. O único des
 
 Nos pacotes de base, 67 dos 97 arquivos de produção dependem de React ou do navegador. A maior parte está em `element` (50 de 54) e em `common` (13 de 19). Em `math` (2 de 16) e `utils` (2 de 3), nenhum arquivo usa React ou o navegador diretamente. A dependência é sempre transitiva: `math/src/range.ts` e `utils/src/shape.ts` importam o índice de `common`, que alcança `common/debug.ts`, e `utils/src/index.ts` importa a biblioteca. Das 52 propriedades públicas de `ExcalidrawProps`, 22 não estão documentadas.
 
-A média de 1,5 é arredondada para baixo, pela [regra da agregação](../fase-02/pontuacao-julgamento.md#6-agregação-da-métrica-à-característica), e a questão fica no nível `--`. As refutações também não são explicadas por fatores registrados. Na revisão dos formulários, as 43 ocorrências dos pacotes de base foram conferidas linha a linha. Duas propriedades foram aceitas como documentadas por descrições com outro nome, o que só melhora o resultado de M1.2.2.
+A média de 1,5 é arredondada para baixo, pela [regra da agregação](../fase-02/pontuacao-julgamento.md#6-agregação-da-métrica-à-característica), e a questão fica no nível `--`. As refutações também não são explicadas por fatores registrados. Na revisão dos formulários, as 43 ocorrências dos pacotes de base foram conferidas linha a linha. Duas propriedades foram aceitas como documentadas por descrições com outro nome, o que só melhora o resultado de [M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas).
 
-**Resposta a Q1.2:** a reusabilidade é muito ruim (`--`). Mais de dois terços dos arquivos dos pacotes de base só funcionam junto com React ou dentro de um navegador. Além disso, quem integra a biblioteca não encontra documentação para 42% das propriedades públicas.
+**Resposta a [Q1.2](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade):** a reusabilidade é muito ruim (`--`). Mais de dois terços dos arquivos dos pacotes de base só funcionam junto com React ou dentro de um navegador. Além disso, quem integra a biblioteca não encontra documentação para 42% das propriedades públicas.
 
 ---
 
@@ -76,7 +76,7 @@ A média de 1,5 é arredondada para baixo, pela [regra da agregação](../fase-0
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-Os valores de M1.3.1 são as linhas em risco moderado, alto e muito alto. O nível `--` vem do risco muito alto, que passa do máximo de 5% do nível `-` na [tabela 5](../fase-02/pontuacao-julgamento.md#31-faixas-de-m131). O risco alto, de 12,39%, ficaria no nível `-`. Somadas, as linhas em funções de risco alto e muito alto chegam a 18,93%. Na documentação para desenvolvedores, falta só o tópico de arquitetura ou organização do código. Lint, formatação e tipos rodam automaticamente em cada contribuição.
+Os valores de [M1.3.1](../fase-02/gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) são as linhas em risco moderado, alto e muito alto. O nível `--` vem do risco muito alto, que passa do máximo de 5% do nível `-` na [tabela 5](../fase-02/pontuacao-julgamento.md#31-faixas-de-m131). O risco alto, de 12,39%, ficaria no nível `-`. Somadas, as linhas em funções de risco alto e muito alto chegam a 18,93%. Na documentação para desenvolvedores, falta só o tópico de arquitetura ou organização do código. Lint, formatação e tipos rodam automaticamente em cada contribuição.
 
 <p className="tabela-titulo">Figura 1: Perfil de risco de complexidade das funções (M1.3.1)</p>
 
@@ -84,7 +84,7 @@ Os valores de M1.3.1 são as linhas em risco moderado, alto e muito alto. O nív
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026, a partir de M1.3.1_eslint.json.</p>
 
-**Resposta a Q1.3:** a analisabilidade é regular (`o`). As verificações automáticas e a documentação de contribuição facilitam a entrada no projeto, mas quase um quinto das linhas está em funções complexas demais para entender e testar com segurança.
+**Resposta a [Q1.3](../fase-02/gqm-manutenibilidade.md#5-q13-analisabilidade):** a analisabilidade é regular (`o`). As verificações automáticas e a documentação de contribuição facilitam a entrada no projeto, mas quase um quinto das linhas está em funções complexas demais para entender e testar com segurança.
 
 ---
 
@@ -103,7 +103,7 @@ Os valores de M1.3.1 são as linhas em risco moderado, alto e muito alto. O nív
 
 A mediana de 2,5 arquivos vem das 146 contribuições integradas, um número par. Ela cai entre as faixas "até 2" e "3 ou 4", que foram escritas para valores inteiros. As faixas foram lidas como contínuas, seguindo a lógica de dobrar a cada nível da [justificativa de M1.4.1](../fase-02/pontuacao-julgamento.md#32-justificativas-específicas). Assim, `+` vai de mais de 2 até 4 arquivos. Nenhuma leitura alternativa muda o nível da questão. A média é de 5,9 arquivos, e a maior contribuição alterou 60. Dos 21 arquivos extensos, o maior é `packages/excalidraw/components/App.tsx`, com 9.563 linhas de código.
 
-**Resposta a Q1.4:** a modificabilidade é regular (`o`). As contribuições costumam ser pequenas, e poucos arquivos são extensos. Mesmo assim, quase dois terços das contribuições passam por algum desses 21 arquivos, que concentram o trabalho de manutenção nos pontos mais difíceis de alterar.
+**Resposta a [Q1.4](../fase-02/gqm-manutenibilidade.md#6-q14-modificabilidade):** a modificabilidade é regular (`o`). As contribuições costumam ser pequenas, e poucos arquivos são extensos. Mesmo assim, quase dois terços das contribuições passam por algum desses 21 arquivos, que concentram o trabalho de manutenção nos pontos mais difíceis de alterar.
 
 ---
 
@@ -120,9 +120,9 @@ A mediana de 2,5 arquivos vem das 146 contribuições integradas, um número par
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-A biblioteca tem 75,17% de cobertura de linhas, e a aplicação web 43,48%. Das 143 suítes de teste, 62 são unitárias e 81 de integração, e nenhuma é de ponta a ponta. Em M1.5.3, 32 das 146 contribuições ficaram fora do denominador, como pede a ficha, porque a API do GitHub devolve os jobs do fluxo de cobertura sem a lista de passos. O tratamento está na [verificação dos dados de G1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-04/README.md#verificação-dos-dados-de-g1). Se essas 32 contassem como não verificadas, o valor seria 77,40% (113 de 146), no nível `o`, e a hipótese seria refutada.
+A biblioteca tem 75,17% de cobertura de linhas, e a aplicação web 43,48%. Das 143 suítes de teste, 62 são unitárias e 81 de integração, e nenhuma é de ponta a ponta. Em [M1.5.3](../fase-02/gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração), 32 das 146 contribuições ficaram fora do denominador, como pede a ficha, porque a API do GitHub devolve os jobs do fluxo de cobertura sem a lista de passos. O tratamento está na [verificação dos dados de G1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-04/README.md#verificação-dos-dados-de-g1). Se essas 32 contassem como não verificadas, o valor seria 77,40% (113 de 146), no nível `o`, e a hipótese seria refutada.
 
-**Resposta a Q1.5:** a testabilidade é boa (`+`). Os testes rodam em quase toda contribuição antes da integração e cobrem três quartos das linhas. As lacunas são a aplicação web, com menos da metade das linhas cobertas, e a falta de testes de ponta a ponta.
+**Resposta a [Q1.5](../fase-02/gqm-manutenibilidade.md#7-q15-testabilidade):** a testabilidade é boa (`+`). Os testes rodam em quase toda contribuição antes da integração e cobrem três quartos das linhas. As lacunas são a aplicação web, com menos da metade das linhas cobertas, e a falta de testes de ponta a ponta.
 
 ---
 
@@ -134,7 +134,7 @@ A biblioteca tem 75,17% de cobertura de linhas, e a aplicação web 43,48%. Das 
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026, a partir de questoes.csv.</p>
 
-A média de G1 é (3,3 + 1,5 + 3,0 + 3,0 + 3,7) ÷ 5 = 2,9, calculada sem arredondar as médias das questões, e corresponde ao nível `o`. O [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica) também exige que nenhuma questão esteja no nível `--`, e Q1.2 está. Das 14 hipóteses, 9 foram confirmadas e 5 refutadas, todas em Q1.1 e Q1.2. A equipe esperava pacotes mais independentes do que os dados mostram.
+A média de G1 é (3,3 + 1,5 + 3,0 + 3,0 + 3,7) ÷ 5 = 2,9, calculada sem arredondar as médias das questões, e corresponde ao nível `o`. O [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica) também exige que nenhuma questão esteja no nível `--`, e [Q1.2](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) está. Das 14 hipóteses, 9 foram confirmadas e 5 refutadas, todas em [Q1.1](../fase-02/gqm-manutenibilidade.md#3-q11-modularidade) e [Q1.2](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade). A equipe esperava pacotes mais independentes do que os dados mostram.
 
 **Resposta a G1:** a manutenibilidade do Excalidraw **não atende**. O código é regular para analisar e modificar e bom para testar. Ele falha na reusabilidade: os pacotes de base, que deveriam poder ser usados fora do editor, dependem quase todos de React ou do navegador, e estão ligados entre si e à biblioteca por ciclos de dependência.
 
@@ -148,11 +148,11 @@ As métricas nos níveis `-` e `--` são os [pontos de melhoria](../fase-02/pont
 
 | Métrica | Nível | Questão | Subcaracterística | Causa |
 | :--- | :---: | :--- | :--- | :--- |
-| [M1.2.1](../fase-02/gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) | `--` | Q1.2 | Reusabilidade | 67 de 97 arquivos dos pacotes de base dependem de React ou do navegador |
-| [M1.3.1](../fase-02/gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) | `--` | Q1.3 | Analisabilidade | 6,54% das linhas em funções com complexidade acima de 50 |
-| [M1.4.3](../fase-02/gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) | `--` | Q1.4 | Modificabilidade | 96 de 146 contribuições alteram arquivos extensos |
-| [M1.1.1](../fase-02/gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) | `-` | Q1.1 | Modularidade | 4 pares de pacotes em ciclo |
-| [M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas) | `-` | Q1.2 | Reusabilidade | 22 de 52 propriedades públicas sem documentação |
+| [M1.2.1](../fase-02/gqm-manutenibilidade.md#m121-arquivos-de-pacotes-de-base-com-dependência-de-react-ou-do-navegador) | `--` | [Q1.2](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) | Reusabilidade | 67 de 97 arquivos dos pacotes de base dependem de React ou do navegador |
+| [M1.3.1](../fase-02/gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) | `--` | [Q1.3](../fase-02/gqm-manutenibilidade.md#5-q13-analisabilidade) | Analisabilidade | 6,54% das linhas em funções com complexidade acima de 50 |
+| [M1.4.3](../fase-02/gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) | `--` | [Q1.4](../fase-02/gqm-manutenibilidade.md#6-q14-modificabilidade) | Modificabilidade | 96 de 146 contribuições alteram arquivos extensos |
+| [M1.1.1](../fase-02/gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) | `-` | [Q1.1](../fase-02/gqm-manutenibilidade.md#3-q11-modularidade) | Modularidade | 4 pares de pacotes em ciclo |
+| [M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas) | `-` | [Q1.2](../fase-02/gqm-manutenibilidade.md#4-q12-reusabilidade) | Reusabilidade | 22 de 52 propriedades públicas sem documentação |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
@@ -171,3 +171,4 @@ As métricas nos níveis `-` e `--` são os [pontos de melhoria](../fase-02/pont
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/11/2026 | Criação dos resultados de G1: níveis, hipóteses, respostas às questões e ao objetivo, gráficos e pontos de melhoria | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: códigos M, H e Q linkados às fichas | [Christopher Paraizo](https://github.com/wChrstphr) | |
