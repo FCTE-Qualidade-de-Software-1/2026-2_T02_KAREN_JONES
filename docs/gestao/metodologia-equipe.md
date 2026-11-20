@@ -2,7 +2,7 @@
 title: Metodologia da equipe
 description: Como a equipe Karen Jones conduz a avaliação do Excalidraw com as quatro fases da ISO/IEC 25040, a divisão em subgrupos e a governança no GitHub.
 sidebar_label: Metodologia da equipe
-sidebar_position: 0
+sidebar_position: 5
 ---
 
 import Link from '@docusaurus/Link';
@@ -60,7 +60,7 @@ Eixo transversal às quatro fases. A equipe organizou-se em dois subgrupos está
 
 O fluxo de trabalho no GitHub segue o [guia de contribuição](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/CONTRIBUTING.md), que proíbe envios diretos na branch principal (`main`). Toda atividade nasce vinculada a uma issue padronizada com estimativa de horas, é desenvolvida em branch temática individual e integrada via pull request com fechamento automático da issue, declaração obrigatória de uso de IA generativa e revisão por ao menos um membro do grupo.
 
-O acompanhamento da gestão usa as métricas PSM/CID. O [plano de medição PSM](./plano-medicao-psm.md) define os constructs e os critérios de decisão, distinto do plano de medição da avaliação da Fase 03, e as medições, a interpretação e as decisões ficam no [registro de medições](./registro-medicoes.md) e no [relatório da Fase 3](./relatorios/relatorio-psm-fase-3.md).
+O acompanhamento da gestão usa as métricas PSM/CID. O [plano de medição PSM](./plano-medicao-psm.md) define os constructs e os critérios de decisão, distinto do plano de medição da avaliação da Fase 03, e as medições, a interpretação e as decisões ficam no [registro de medições](./registro-medicoes.md) e no [painel de medição PSM](./painel-psm.md).
 
 ## Referências
 

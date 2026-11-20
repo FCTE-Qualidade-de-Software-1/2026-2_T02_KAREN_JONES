@@ -2,7 +2,7 @@
 id: registro-medicoes
 title: Registro de Medições e Decisões
 sidebar_label: Registro de Medições
-sidebar_position: 4
+sidebar_position: 3
 toc_min_heading_level: 2
 toc_max_heading_level: 3
 description: Registro contínuo de medições periódicas, diagnóstico causal de atrasos por dependências de tarefas e decisões formais de gestão (PSM/CID).
@@ -153,20 +153,117 @@ Em resposta aos desvios apontados pelos indicadores, foram formalizadas as segui
 ## 5. Medição 2: Conclusão da Fase 3 e Validação da Fase 4 (18/11/2026)
 
 > **Data da Coleta:** 18/11/2026  
-> **Responsável pela Coleta:** [Maria Eduarda](https://github.com/eduarda-ogomes)  
-> **Revisor Designado:** [Christopher Paraizo](https://github.com/wChrstphr)
+> **Responsáveis pela Apuração e Análise:** [Gabriel Monteiro](https://github.com/GabrielSMonteiro) e [Maria Eduarda](https://github.com/eduarda-ogomes)
 
-### 5.1. Dados Quantitativos da Coleta
+Esta medição registra o encerramento formal da Fase 3 (Projeto da Avaliação), a apuração dos indicadores quantitativos de ritmo e esforço, a análise causal da extensão de prazo da milestone e a formalização das decisões de gestão D7 a D10 que viabilizaram a execução em campo da Fase 4.
+
+### 5.1. Dados Quantitativos e Fechamento da Fase 3
+
+A milestone da Fase 3 cobriu o intervalo de 26/10/2026 a 08/11/2026, totalizando 13 dias de execução após a extensão de 5 dias aprovada pela equipe. Os dados apurados registram 23 issues vinculadas à fase, todas concluídas no fechamento consolidado.
+
+<p className="tabela-titulo">Tabela 5: Ritmo de fechamento das issues na Fase 3</p>
+
+| Indicador | Meta do Plano | Valor Observado | Situação |
+| :--- | :---: | :---: | :---: |
+| Total de issues planejadas | N/A | 23 issues | Conforme |
+| Issues concluídas | 100% | 23 issues (100,0%) | Concluído |
+| Concluídas até a data média (02/11/2026) | ≥ 50,0% | 0 issues (0,0%) | Não conforme |
+| Concluídas nos 2 últimos dias da fase | ≤ 30,0% | 7 issues (30,4%) | Atenção |
+| Concluídas após o prazo final da milestone | 0 | 14 issues | Não conforme |
+| Aderência aos prazos programados | ≥ 80,0% | 2 issues no prazo (8,7%) | Crítico |
+| Alerta de ritmo disparado | Não | Sim | Alerta ativo |
+
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
+
+O ritmo de entregas da Fase 3 sofreu forte retenção no início do ciclo. Nenhuma issue foi fechada durante a primeira metade da fase (até 02/11). As entregas concentraram-se entre os dias 06/11 e 12/11, gerando o fechamento tardio de tarefas após a data limite da milestone (08/11), em virtude da dependência sequencial entre a infraestrutura de contêineres e a validação dos roteiros no teste piloto.
+
+<p className="tabela-titulo">Tabela 6: Recursos, custos e acurácia de estimativa da Fase 3</p>
+
+| Métrica Orçamentária | Valor Estimado | Valor Real | Variação |
+| :--- | :---: | :---: | :---: |
+| Esforço Total da Fase | 48,00 h | 62,50 h | +30,2% |
+| Custo Financeiro Equivalente (R$ 45,00/h) | R$ 2.160,00 | R$ 2.812,50 | +R$ 652,50 |
+| Desvio Médio por Tarefa | ± 20,0% | +38,2% | Subestimação geral |
+| Issues na Faixa Ideal (-20% a +20%) | ≥ 70,0% | 10 de 21 issues (47,6%) | Parcial |
+| Issues Subestimadas (desvio > +20%) | ≤ 15,0% | 10 issues (47,6%) | Crítico |
+| Issues Superestimadas (desvio < -20%) | ≤ 15,0% | 1 issue (4,8%) | Conforme |
+
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
+
+O desvio médio de esforço (+38,2%) decorreu da complexidade não prevista na preparação prática dos ambientes e dos ensaios preliminares. Dentre as tarefas com maior estouro destacam-se a issue #96 (recursos e ambiente de avaliação), que consumiu 7,0 h reais frente a 2,0 h estimadas (+250%), a issue #99 (instruções de G2), com 6,0 h reais para 3,0 h estimadas (+100%), e a issue #97 (massa de dados), com 5,0 h reais para 3,0 h estimadas (+66,7%).
+
+<p className="tabela-titulo">Tabela 7: Contribuição individual no esforço real da Fase 3</p>
+
+| Integrante | Login GitHub | Issues Atribuídas | Horas Estimadas (h) | Horas Reais (h) | Custo Real (R$) | Participação na Fase (%) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| Christopher | `@wChrstphr` | 5 | 8,50 | 5,50 | R$ 247,50 | 8,80% |
+| Davi Pierre | `@DaviPierre` | 5 | 12,00 | 16,00 | R$ 720,00 | 25,60% |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 5 | 12,00 | 17,00 | R$ 765,00 | 27,20% |
+| Letícia de Carvalho | `@LeticiaSantosss` | 5 | 9,50 | 18,00 | R$ 810,00 | 28,80% |
+| Luiz Henrique Soares | `@luizh-gsoares` | 0 | 0,00 | 0,00 | R$ 0,00 | 0,00% |
+| Maria Eduarda | `@eduarda-ogomes` | 3 | 6,00 | 6,00 | R$ 270,00 | 9,60% |
+| **Total** | Equipe | **23** | **48,00** | **62,50** | **R$ 2.812,50** | **100,00%** |
+
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
+
+Dois fatores de assimetria individual marcaram a Fase 3:
+1. Luiz Henrique obteve 0,0% de participação direta nesta etapa, pois a divisão de trabalho da equipe alocou seus esforços na revisão das páginas e na finalização de artefatos da Fase 2, além de concentrar suas atribuições técnicas na execução da Fase 4.
+2. Letícia, Davi e Gabriel concentraram a maior parte do esforço técnico (28,80%, 25,60% e 27,20%), em virtude da sobrecarga na conteinerização Docker, geração da massa de dados e estruturação dos roteiros de teste.
+
+<p className="tabela-titulo">Tabela 8: Indicadores de processo e revisão por pares na Fase 3</p>
+
+| Indicador de Processo | Meta do Plano | Resultado Observado | Situação |
+| :--- | :---: | :---: | :---: |
+| Total de Pull Requests da Fase 3 | N/A | 23 PRs | Conforme |
+| PRs integrados com aprovação formal | 100% | 15 de 23 PRs (65,2%) | Evolução positiva |
+| PRs integrados sem aprovação formal na API | 0 | 8 PRs (34,8%) | Atenção |
+| Tempo médio de espera da primeira revisão | ≤ 24,0 h | 24,17 h | No limite |
+| Tempo mediano de espera da primeira revisão | ≤ 12,0 h | 20,88 h | Atenção |
+| Percentil 80 (P80) de espera | ≤ 24,0 h | 45,90 h | Não conforme |
+| PRs com espera superior a 24 horas | 0 | 5 PRs | Atenção |
+| Lead Time médio das tarefas | ≤ 4,0 dias | 7,62 dias | Ciclo longo |
+
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
+
+A taxa de revisão formal atingiu 65,2% (15 PRs aprovados formalmente via GitHub), demonstrando avanço frente às Fases 1 e 2. Entretanto, 8 PRs foram integrados sem registro formal de aprovação na API, decorrentes de validações verbais síncronas. As revisões concentraram-se fortemente em Christopher e Maria Eduarda (7 revisões cada, perfazendo 93,4% do total da fase), o que gerou retenções pontuais com 5 PRs aguardando mais de 24 horas.
+
+### 5.2. Análise Causal da Extensão do Prazo da Milestone da Fase 3
+
+A data limite original da milestone da Fase 3 era 03/11/2026. Durante a execução, a equipe estendeu o prazo em 5 dias, fixando o término em 08/11/2026.
+
+1. **Motivação Técnica da Extensão:** A prorrogação foi motivada pela complexidade na configuração do contêiner Docker oficial do Excalidraw, pela compilação de pacotes locais do monorepo, pela geração de dados sintéticos JSON e pela necessidade de detalhar os roteiros de avaliação para evitar ambiguidades na Fase 4.
+2. **Impacto no Cronograma e Dependências:** A extensão absorveu o esforço necessário para garantir a qualidade dos instrumentos, mas a aderência ao prazo estrito permaneceu baixa (8,7%). A causa raiz foi que as tarefas da Fase 3 já haviam sido criadas sem prazos individuais escalonados, repetindo o padrão de represamento da Fase 1. Esse diagnóstico consolidou a decisão de implementar prazos individuais obrigatórios em cada issue da Fase 4.
+
+### 5.3. Registro Consolidado de Decisões de Gestão da Fase 3 (D7 a D10)
+
+Para responder aos desvios apontados pelas medições da Fase 3, a equipe formalizou quatro decisões de gestão, dando continuidade às decisões D1 a D6 da Entrega 1:
+
+<p className="tabela-titulo">Tabela 9: Registro histórico de decisões de gestão adotadas na Fase 3</p>
+
+| ID | Marco / Fase | Problema Detectado | Decisão de Gestão Adotada | Impacto Observado na Fase 4 |
+| :---: | :---: | :--- | :--- | :--- |
+| **D7** | Fase 3 | Desequilíbrio na distribuição de esforço da Fase 3 (Luiz Henrique com 0,0% e Letícia com 28,8%). | Atribuir a Luiz Henrique o papel principal em 8 tarefas da Fase 4 (23,0 h estimadas), abrangendo ambiente (#110), confiabilidade (#112), análise de G2 (#116), síntese de julgamento (#120) e conclusões do artigo (#125), aliviando Letícia. | Rebalanceamento efetivo: Luiz Henrique atingiu 13,16% do esforço acumulado do projeto e todos os membros mantiveram-se na faixa de 8% a 30%. |
+| **D8** | Fase 3 | Subestimação sistemática (+38,2%) em tarefas que envolveram ferramentas e contêineres Docker. | Aplicar fator de calibração de 1,3x nas estimativas de esforço das tarefas da Fase 4 que manipulem ferramentas de teste e código prático. | Acurácia da estimativa na Fase 4 convergiu para 102,8%, retornando ao centro da faixa ideal de 80% a 120%. |
+| **D9** | Fase 3 | Retenção de PRs acima de 24 horas (5 PRs) e concentração de revisões em apenas dois membros (93,4%). | Instituir acordo de checagem diária obrigatória de PRs antes de iniciar nova issue, com teto de 24 horas corridas para o primeiro parecer. | Fila crítica zerada na Fase 4: nenhum PR aguardou mais de 24 horas e a mediana de revisão caiu para 1,50 horas. |
+| **D10** | Fase 3 | Bloqueio de tarefas e baixa aderência ao prazo (8,7%) decorrentes de acoplamento sequencial. | Abrir todas as issues da Fase 4 desde o primeiro dia da milestone, desacoplando tarefas de infraestrutura e viabilizando coletas paralelas. | Salto na aderência ao prazo da Fase 4 para 55,6% do total (15 de 27 issues no prazo: 7 concluídas no prazo e 8 abertas antes do prazo). |
+
+<p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro) e [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
+
+### 5.4. Validação da Transição para a Execução da Fase 4
+
+A homologação dos instrumentos da Fase 3 cumpriu os critérios de prontidão estabelecidos no plano de medição:
+* O contêiner oficial do Excalidraw e a massa de dados sintética foram validados e testados no ensaio piloto registrado na issue #103.
+* Os roteiros de instrução de Manutenibilidade (G1), Confiabilidade (G2) e Flexibilidade (G3) foram publicados e aprovados pelos respectivos responsáveis.
+* A infraestrutura de testes da Fase 4 pôde iniciar sem bloqueios conceituais, permitindo a execução paralela das coletas em campo.
+
+### 5.5. Indicadores da Fase 4 e da Entrega 2
 
 A Medição 2 usa o retrato de 18/11/2026 do [Painel de Medição PSM](painel-psm.md), com a Fase 3 encerrada e a Fase 4 em andamento.
 
-<p className="tabela-titulo">Tabela 5: Indicadores apurados no fechamento da Fase 3</p>
+<p className="tabela-titulo">Tabela 10: Indicadores da Fase 4 e da Entrega 2 no retrato de 18/11/2026</p>
 
 | Indicador | Meta do plano | Valor Coletado (18/11/2026) | Situação |
 | :--- | :---: | :---: | :---: |
-| Conclusão da Fase 3 | 23 de 23 issues | **23 de 23** (100,0%) | **Atingido** |
-| Aderência ao prazo da Fase 3 | 100,0% | **8,7%** (2 de 23) | **Não atingido** |
-| Esforço da Fase 3 | 48,00 h estimadas, acurácia de 80% a 120% | **62,50 h** (acurácia de 135,9%) | **Fora da faixa** |
 | Progresso da Fase 4 | Pelo menos 50,0% | **70,4%** (19 de 27) | **Atingido** |
 | Acurácia da Fase 4 | 80% a 120% | **102,8%** | **Atingido** |
 | Equilíbrio individual na Entrega 2 | 8% a 30% por membro | **9,15% a 25,11%** | **Atingido** |
@@ -177,9 +274,9 @@ A Medição 2 usa o retrato de 18/11/2026 do [Painel de Medição PSM](painel-ps
 
 No mesmo retrato, a revisão formal da Entrega 1 aparece como 47,7% (21 de 44 PRs), e não como os 43,9% da [linha de base](plano-medicao-psm.md#5-linha-de-base-das-fases-1-e-2-dados-históricos), porque PRs e issues mudaram de milestone depois de 09/11.
 
-### 5.2. Critérios de Decisão Acionados
+### 5.6. Critérios de decisão acionados
 
-* **[Recalibração de Planejamento](plano-medicao-psm.md#42-construct-2-recursos-e-custos-acurácia-das-estimativas-de-esforço):** a Fase 3 fechou com acurácia de 135,9%, acima da faixa ideal. As estimativas da Fase 4 foram tratadas na [interpretação do relatório da Fase 3](relatorios/relatorio-psm-fase-3.md#6-interpretação-e-decisões-de-gestão), e a Fase 4 está em 102,8% neste retrato.
+* **[Recalibração de Planejamento](plano-medicao-psm.md#42-construct-2-recursos-e-custos-acurácia-das-estimativas-de-esforço):** a Fase 3 fechou com acurácia de 135,9%, acima da faixa ideal. As estimativas da Fase 4 foram recalibradas pela [decisão D8](#53-registro-consolidado-de-decisões-de-gestão-da-fase-3-d7-a-d10), e a Fase 4 está em 102,8% neste retrato.
 * **[Conformidade Rigorosa](plano-medicao-psm.md#43-construct-3-desempenho-dos-processos-tempo-de-espera-por-revisão-de-pr):** 18 dos 42 PRs integrados na Entrega 2 não têm aprovação formal de outro integrante. A taxa subiu frente à Entrega 1, mas segue abaixo da meta de 100%.
 * **[Alerta de PR Travado](plano-medicao-psm.md#43-construct-3-desempenho-dos-processos-tempo-de-espera-por-revisão-de-pr):** os 5 PRs com espera acima de 24 h são da Fase 3. Na Fase 4, a mediana de espera caiu para 1,50 h e nenhum PR passou de 24 h.
 
@@ -195,7 +292,7 @@ O lead time das issues ficou em 7,62 dias na Fase 3 e 12,34 dias na Fase 4, acim
 
 ### 6.1. Dados Quantitativos da Coleta
 
-<p className="tabela-titulo">Tabela 6: Indicadores finais apurados no fechamento da Entrega 2</p>
+<p className="tabela-titulo">Tabela 11: Indicadores finais apurados no fechamento da Entrega 2</p>
 
 | Indicador | Meta / Esperado | Valor Coletado | Situação |
 | :--- | :---: | :---: | :---: |
@@ -218,7 +315,8 @@ O lead time das issues ficou em 7,62 dias na Fase 3 e 12,34 dias na Fase 4, acim
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 07/11/2026 | Criação do Registro de Medições e Decisões com Medição 0 (Linha de base E1), análise causal de dependência de tarefas, decisões D1-D6 e templates das medições 1 e 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
-| 1.1 | 08/11/2026 | Alinhamento do gatilho de 50%, Medição 3 em 22/11, esclarecimento do progresso da F2, Construct 2 e autoria das fontes | [Maria Eduarda](https://github.com/eduarda-ogomes) | [Christopher](https://github.com/wChrstphr) |
+| 1.0 | 07/11/2026 | Criação do Registro de Medições e Decisões com Medição 0 (Linha de base E1), análise causal de dependência de tarefas, decisões D1-D6 e templates das medições 1 e 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.1 | 08/11/2026 | Alinhamento do gatilho de 50%, Medição 3 em 22/11, esclarecimento do progresso da F2, Construct 2 e autoria das fontes | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.2 | 11/11/2026 | Apuração e registro dos indicadores quantitativos da Medição 1 (Ponto de Controle Intermediário da Fase 3), análise causal dos desvios de aderência e esforço, e formalização de decisões de gestão | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| 1.3 | 18/11/2026 | Revisão de coerência e cross-links: Medição 2 com o retrato de 18/11/2026 e critérios de decisão do plano | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.3 | 18/11/2026 | Registro quantitativo da Medição 2 com fechamento da Fase 3, análise da extensão de prazo, integração das decisões D7 a D10 e prontidão da Fase 4 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) e [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.4 | 18/11/2026 | Revisão de coerência e cross-links: Medição 2 com o retrato de 18/11/2026 e critérios de decisão do plano | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -1300,6 +1300,24 @@ def gerar_grafico_entrega_1(resultado: dict, dir_graficos: Path) -> None:
     )
 
 
+def gerar_grafico_entrega_2(resultado: dict, dir_graficos: Path) -> None:
+    """Gera o grafico de barras horizontais de participacao no esforco real da Entrega 2."""
+    linhas_e2 = [l for l in resultado.get("contribuicao_por_entrega", []) if l["entrega"] == "Entrega 2"]
+    if not linhas_e2:
+        return
+    _desenhar_barras_horizontais_pil(
+        caminho=dir_graficos / "05_esforco_integrante_entrega_2.png",
+        titulo="PSM/CID: Participação no Esforço Real da Entrega 2",
+        subtitulo="Percentual do esforço consolidado (Fase 3 + Fase 4) por integrante (soma = 100%)",
+        categorias=[l["integrante"] for l in linhas_e2],
+        valores=[l["percentual_esforco"] for l in linhas_e2],
+        rotulos=[f"{l['percentual_esforco']:.1f}%  ({l['horas_reais']:.1f} h)" for l in linhas_e2],
+        cor="#4f46e5",
+        legenda="% das horas reais da Entrega 2"
+    )
+
+
+
 def gerar_graficos(resultado: dict, dir_graficos: Path) -> None:
     """
     Gera os 3 graficos PNG das categorias PSM/CID em dados/gestao/graficos/
@@ -1654,6 +1672,7 @@ def main() -> None:
     gerar_graficos(resultado, dir_saida / "graficos")
     gerar_graficos_por_fase(resultado, dir_saida / "graficos")
     gerar_grafico_entrega_1(resultado, dir_saida / "graficos")
+    gerar_grafico_entrega_2(resultado, dir_saida / "graficos")
 
     # Gerar Curva S de desempenho de execucao (esforco planejado vs. realizado)
     try:

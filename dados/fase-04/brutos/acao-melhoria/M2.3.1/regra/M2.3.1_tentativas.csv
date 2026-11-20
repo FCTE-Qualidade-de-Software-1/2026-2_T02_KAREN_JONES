@@ -1,0 +1,19 @@
+arquivo,via,mensagem_exibida,texto_mensagem,retangulo_criado,caso_tratado,observacao
+invalido_01_vazio.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_01_vazio.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,
+invalido_02_json_malformado.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_02_json_malformado.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,
+invalido_03_sem_campo_type.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_03_sem_campo_type.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,
+invalido_04_type_desconhecido.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_04_type_desconhecido.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,
+invalido_05_elementos_sem_campos_obrigatorios.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_05_elementos_sem_campos_obrigatorios.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,
+invalido_06_coordenadas_nao_numericas.excalidraw,menu,nao,,nao,nao,editor sumiu da tela ao inserir texto; pageerror: too much recursion; pageerror: Missing Provider from createIsolation
+invalido_06_coordenadas_nao_numericas.excalidraw,arrastar,nao,,nao,nao,editor sumiu da tela ao inserir texto; pageerror: too much recursion; pageerror: Missing Provider from createIsolation
+invalido_07_binario_renomeado.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_07_binario_renomeado.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,
+invalido_08_png_sem_desenho.png,menu,sim,Error Image doesn't contain scene,sim,sim,
+invalido_08_png_sem_desenho.png,arrastar,nao,,sim,nao,
+invalido_09_truncado_no_meio.excalidraw,menu,sim,Error Error: invalid file,sim,sim,
+invalido_09_truncado_no_meio.excalidraw,arrastar,sim,Error Couldn't load invalid file,sim,sim,

@@ -29,7 +29,7 @@ Cada página de resultados atribui o nível de cada métrica, confronta as hipó
 | [Oportunidades de melhoria](./melhorias.md) | Pontos de melhoria, critérios de escolha, ação proposta e critério de sucesso. |
 | [Dados da Fase 04](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/fase-04/README.md) | Organização dos dados brutos e consolidados e registro do ambiente de cada coleta. |
 
-<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), 2026.</p>
 
 A rastreabilidade completa vai do requisito da Fase 01 à métrica da Fase 02, ao procedimento da [Tabela 2 da Fase 03](../fase-03/visao-geral.md#rastreabilidade-entre-as-fases-02-e-03) e à evidência em `dados/fase-04/brutos/`.
 
@@ -39,4 +39,6 @@ A rastreabilidade completa vai do requisito da Fase 01 à métrica da Fase 02, a
 
 | Versão | Data | Descrição | Autor(es) | Revisor(es) |
 | :---: | :---: | :--- | :--- | :--- |
-| 1.0 | 18/11/2026 | Criação da visão geral da Fase 04 com os documentos da fase e o caminho dos dados ao julgamento | [Christopher Paraizo](https://github.com/wChrstphr) |  |
+| 1.0 | 13/11/2026 | Criação da página de visão geral da Fase 04 com tabela de documentos, estrutura de dados e síntese de resultados | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.1 | 17/11/2026 | Atualização da tabela de documentos publicados, consolidação dos resultados de G1, G2, G3, julgamento final e oportunidades de melhoria | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.2 | 18/11/2026 | Revisão de coerência e cross-links: página reduzida aos documentos da fase e ao caminho dos dados ao julgamento, com os resultados linkados em vez de repetidos | [Christopher Paraizo](https://github.com/wChrstphr) | |

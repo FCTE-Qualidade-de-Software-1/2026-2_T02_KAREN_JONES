@@ -31,17 +31,17 @@ const docSections = [
     title: 'Fase 04: Execução da Avaliação',
     description: 'Medições, análise dos resultados, julgamento da qualidade e oportunidades de melhoria.',
     link: '/docs/fase-04/visao-geral',
-    badge: 'Fase atual',
   },
   {
-    title: 'Introdução e Visão Geral',
-    description: 'Contexto do projeto, motivações da escolha do Excalidraw e fases da avaliação.',
-    link: '/docs/intro',
+    title: 'Repositório de Dados da Avaliação',
+    description: 'Evidências empíricas brutas e tabelas consolidadas das 36 métricas avaliadas nas quatro fases.',
+    externalLink: 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/tree/main/dados/fase-04',
+    isExternal: true,
   },
   {
-    title: 'Repositório do Excalidraw',
-    description: 'Código-fonte no GitHub da ferramenta de desenho e pacotes da comunidade.',
-    externalLink: 'https://github.com/excalidraw/excalidraw',
+    title: 'Release v2.0-E2',
+    description: 'Entrega final com relatório consolidado, código-fonte, dados e documentação completa.',
+    externalLink: 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v2.0-E2',
     isExternal: true,
   },
 ];
@@ -83,8 +83,11 @@ export default function Home() {
             <Link className="btn btn-primary" to="/docs/intro">
               Ver documentação
             </Link>
-            <Link className="btn btn-ghost" href="https://github.com/excalidraw/excalidraw">
-              Excalidraw no GitHub
+            <Link className="btn btn-ghost" href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES">
+              Repositório do projeto
+            </Link>
+            <Link className="btn btn-ghost" href="https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/releases/tag/v2.0-E2">
+              Release v2.0-E2
             </Link>
           </div>
         </div>

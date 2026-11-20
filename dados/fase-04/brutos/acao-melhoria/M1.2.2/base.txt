@@ -1,0 +1,3 @@
+Base da medição antes: excalidraw/excalidraw, ramo master, commit 9fbeaed54aaad8dc06d32ba176a9bc20fb827109 (17/11/2026).
+As páginas de dev-docs/docs/@excalidraw/excalidraw/api/ não mudaram entre e1b7aac e 9fbeaed. ExcalidrawProps ganhou a propriedade renderEnvironment, sem documentação nessas páginas.
+commit depois: 23cfe40915cdcfa1b755bc55a1b5b164c1226af3 (branch docs/document-excalidraw-props do fork wChrstphr/excalidraw-fork, sobre a base 9fbeaed)

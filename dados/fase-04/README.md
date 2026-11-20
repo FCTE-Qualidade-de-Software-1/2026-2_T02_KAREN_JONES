@@ -145,6 +145,20 @@ A sessão de início com os três responsáveis ainda precisa acontecer e ser re
 | `Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv` | **M3.4.3** | Auditoria campo a campo contra o guia oficial de especificação técnica (`json-schema.mdx`). |
 | `Q3.4-substituibilidade/M3.4.3_relatorio.txt` | **M3.4.3** | Relatório de auditoria com percentual de campos documentados e lista de campos omitidos. |
 
+## Catálogo de Arquivos Brutos: Ações de melhoria
+
+Medições antes e depois das [ações de melhoria](../../docs/fase-04/melhorias.md#5-resultado-das-ações), na base `9fbeaed` do Excalidraw, e não no commit avaliado.
+
+| Arquivo | Métrica | Descrição |
+| :--- | :---: | :--- |
+| `acao-melhoria/M1.2.2/M1.2.2_propriedades_antes.csv` | **M1.2.2** | As 53 propriedades de `ExcalidrawProps` na base, com o local da documentação de cada uma. |
+| `acao-melhoria/M1.2.2/M1.2.2_propriedades_depois.csv` | **M1.2.2** | A mesma contagem no commit do *pull request* de documentação. |
+| `acao-melhoria/M1.2.2/base.txt` | **M1.2.2** | Commits de base e de depois, e a diferença em relação ao commit avaliado. |
+| `acao-melhoria/M2.3.1/<versão>/M2.3.1_tentativas.csv` | **M2.3.1** | As 18 tentativas, pelo menu e arrastando, em cada versão do editor: `antes`, `regra` e `medicao`. |
+| `acao-melhoria/M2.3.1/<versão>/M2.3.1_casos.csv` | **M2.3.1** | Os nove casos consolidados de cada versão. |
+| `acao-melhoria/M2.3.1/<versão>/M2.3.1_coleta.txt` | **M2.3.1** | Commit, horários, navegador e resultado de cada coleta. |
+| `acao-melhoria/M2.3.1/<versão>/prints/` | **M2.3.1** | Capturas da mensagem e da criação de formas em cada tentativa. |
+
 ---
 
 ## Verificação dos dados de G1
@@ -188,4 +202,5 @@ A lista de verificação de cada métrica está em `consolidados/G1_verificacao.
 | 1.4 | 11/11/2026 | Registro dos desvios da coleta de G3 em relação ao plano | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 15/11/2026 | Verificação e cálculo das métricas de G1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.6 | 15/11/2026 | Inclusão dos arquivos da análise de G1 no catálogo de consolidados | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.7 | 18/11/2026 | Revisão de coerência e cross-links: link à gravação de tela nas instruções de G3 | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.7 | 18/11/2026 | Inclusão dos arquivos das ações de melhoria no catálogo de brutos | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.8 | 18/11/2026 | Revisão de coerência e cross-links: link à gravação de tela nas instruções de G3 | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -1,7 +1,7 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
-const siteVersion = '1.3';
+const siteVersion = '2.0-E2';
 const buildDate = new Date().toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' });
 const repoUrl = 'https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES';
 
@@ -90,6 +90,11 @@ const config = {
             position: 'left',
           },
           {
+            href: `${repoUrl}/tree/main/dados/fase-04`,
+            label: 'Dados',
+            position: 'left',
+          },
+          {
             href: 'https://excalidraw.com/',
             label: 'Excalidraw',
             position: 'left',
@@ -100,8 +105,8 @@ const config = {
             position: 'right',
           },
           {
-            href: `${repoUrl}/releases`,
-            label: 'Release',
+            href: `${repoUrl}/releases/tag/v2.0-E2`,
+            label: 'Release v2.0-E2',
             position: 'right',
           },
         ],
@@ -155,8 +160,12 @@ const config = {
                 href: repoUrl,
               },
               {
-                label: 'Releases',
-                href: `${repoUrl}/releases`,
+                label: 'Release v2.0-E2',
+                href: `${repoUrl}/releases/tag/v2.0-E2`,
+              },
+              {
+                label: 'Repositório de Dados',
+                href: `${repoUrl}/tree/main/dados/fase-04`,
               },
             ],
           },

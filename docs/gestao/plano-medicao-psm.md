@@ -95,7 +95,7 @@ O planejamento das entregas seguintes depende diretamente da fidelidade das esti
 | **Tipo de Método de Medição** | 1. Subjetivo (estimativa de engenharia do responsável na abertura). 2. Objetivo (apuração das horas gastas no fechamento). |
 | **Escala** | Números reais positivos de zero ao infinito. |
 | **Tipo de Escala** | Razão (*Ratio*). |
-| **Unidade de Medida** | Horas (h) e Moeda corrente (Reais, R$). |
+| **Unidade de Medida** | Horas (h) e moeda corrente em reais (R$). |
 | **Medidas Derivadas** | 1. **Acurácia da Fase (%):** `(Soma(R) / Soma(E)) × 100`<br/>2. **Desvio de Esforço (%):** `((Soma(R) - Soma(E)) / Soma(E)) × 100`<br/>3. **Custo Real da Fase (R$):** `Soma(R) × 45,00` |
 | **Função de Medição** | Razão percentual entre horas reais e horas estimadas acumuladas por fase e entrega. |
 | **Indicador** | Gráfico de acurácia por fase em relação à faixa ideal (`static/img/gestao/06_acuracia_estimativa_fases.png`) e tabela comparativa de esforço e custo. |
@@ -184,7 +184,7 @@ Para garantir que a medição sirva como ferramenta ativa de gestão, as mediç�
 <p className="tabela-titulo">Tabela 6: Cronograma de reuniões e leituras de medição do PSM/CID</p>
 
 | Marco | Data | Momento do Projeto | Pauta Principal da Leitura de Medição |
-| :---: | :---: | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | **Leitura 0** | **04/11/2026** *(Quarta-feira)* | Linha de Base / Fechamento da E1 | • Analisar retrospectivamente o aprendizado da E1, acurácia e esforço.<br/>• Identificar bloqueios em cadeia e formular as decisões D1 a D6. |
 | **Leitura 1** | **11/11/2026** *(Quarta-feira)* | Início da Fase 4 (coleta), após o fim da Fase 3 em 08/11 | • Conferir o fechamento da Fase 3 (26/10 a 08/11): progresso, aderência ao prazo e acurácia.<br/>• Auditar se há issues de prioridade `Alta` em risco de atrasar a Fase 4.<br/>• Recalcular `Prioridade` e `Início` no Project.<br/>• Verificar tempo de espera dos PRs de instruções (G1, G2, G3). |
 | **Leitura 2** | **18/11/2026** *(Quarta-feira)* | Reta final da Fase 4 (09/11 a 21/11) e redação final | • Verificar se o progresso da Fase 4 passou de 50% depois da metade da fase (15/11).<br/>• Avaliar se a acurácia da Fase 4 está na faixa de 80% a 120%.<br/>• Cobrar PRs abertos há mais de 24h para destravar a consolidação do artigo e site.<br/>• Conferir o equilíbrio de esforço acumulado na Entrega 2 entre os 6 membros.<br/>• Decidir as ações finais antes da Entrega 2 (22/11). |

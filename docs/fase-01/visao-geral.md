@@ -38,9 +38,9 @@ A Tabela 1 segue a ordem de leitura: do propósito e do produto aos interessados
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-## Relação com as Fases 02 e 03
+## Relação com as Fases 02, 03 e 04
 
-O propósito e os interessados orientam a priorização e o modelo de qualidade. O tipo de produto e a descrição técnica delimitam os requisitos e o escopo. Na [Fase 02](../fase-02/visao-geral.md), cada característica do modelo vira um [objetivo de medição](../fase-02/estrutura-gqm.md#3-objetivos-de-medição), e os requisitos de cada subcaracterística são reunidos numa questão. Na [Fase 03](../fase-03/visao-geral.md), esses requisitos e objetivos recebem métodos de coleta, instruções operacionais e recursos necessários para execução.
+O propósito e os interessados orientam a priorização e o modelo de qualidade. O tipo de produto e a descrição técnica delimitam os requisitos e o escopo. Na [Fase 02](../fase-02/visao-geral.md), cada característica do modelo vira um [objetivo de medição](../fase-02/estrutura-gqm.md#3-objetivos-de-medição), e os requisitos de cada subcaracterística são reunidos numa questão. Na [Fase 03](../fase-03/visao-geral.md), esses requisitos e objetivos recebem métodos de coleta, instruções operacionais e recursos necessários para execução. Na [Fase 04](../fase-04/visao-geral.md), as medições são executadas, comparadas com as réguas de pontuação e consolidadas no julgamento da qualidade.
 
 ---
 
@@ -61,4 +61,5 @@ O propósito e os interessados orientam a priorização e o modelo de qualidade.
 | 1.2 | 19/10/2026 | Referência cruzada para a Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher](https://github.com/wChrstphr) |
 | 1.3 | 10/11/2026 | Título sem travessão, Introdução e Metodologia com citações à AULA A07, tabela de documentos com título e fonte e descrições alinhadas ao conteúdo revisado das páginas, relação com a Fase 02 em um parágrafo e referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.4 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
-| 1.5 | 18/11/2026 | Revisão de coerência e cross-links: requisitos antes do escopo na ordem de leitura | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 17/11/2026 | Atualização das referências cruzadas com a Fase 04 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.6 | 18/11/2026 | Revisão de coerência e cross-links: requisitos antes do escopo na ordem de leitura | [Christopher Paraizo](https://github.com/wChrstphr) | |

@@ -32,9 +32,9 @@ A fase seguiu as etapas de definição do GQM adaptadas ao contexto da avaliaç�
 
 <p className="tabela-fonte">Fonte: [Luiz Henrique Soares](https://github.com/luizh-gsoares), 2026.</p>
 
-## Relação com as Fases 01 e 03
+## Relação com as Fases 01, 03 e 04
 
-Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-qualidade.md) e da [priorização das características](../fase-01/priorizacao-caracteristicas.md). Cada questão reúne os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da mesma subcaracterística. Os objetos medidos são os delimitados no [escopo da avaliação](../fase-01/escopo-avaliacao.md), e o ponto de vista dos objetivos vem das [partes interessadas](../fase-01/interessados.md). Na [Fase 03](../fase-03/visao-geral.md), cada métrica definida aqui recebe um método de coleta, instruções operacionais e recursos necessários para execução.
+Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-qualidade.md) e da [priorização das características](../fase-01/priorizacao-caracteristicas.md). Cada questão reúne os [requisitos de avaliação](../fase-01/requisitos-avaliacao.md) da mesma subcaracterística. Os objetos medidos são os delimitados no [escopo da avaliação](../fase-01/escopo-avaliacao.md), e o ponto de vista dos objetivos vem das [partes interessadas](../fase-01/interessados.md). Na [Fase 03](../fase-03/visao-geral.md), cada métrica definida aqui recebe um método de coleta, instruções operacionais e recursos necessários para execução. Na [Fase 04](../fase-04/visao-geral.md), os dados coletados são confrontados com os [níveis de pontuação e critérios de julgamento](./pontuacao-julgamento.md) desta fase.
 
 ---
 
@@ -48,4 +48,5 @@ Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-
 | 1.3 | 06/11/2026 | Título sem travessão, retirada da coluna de situação, com todas as páginas já publicadas, referências cruzadas resumidas em um parágrafo, links para objetivos e questões, tabela com título e fonte | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.4 | 10/11/2026 | Inclusão da Metodologia | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
-| 1.6 | 18/11/2026 | Revisão de coerência e cross-links: registro da revisão das abstraction sheets | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 17/11/2026 | Atualização das referências cruzadas com a Fase 04 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.7 | 18/11/2026 | Revisão de coerência e cross-links: registro da revisão das abstraction sheets | [Christopher Paraizo](https://github.com/wChrstphr) | |

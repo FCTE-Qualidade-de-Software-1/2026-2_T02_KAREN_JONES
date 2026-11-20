@@ -2,7 +2,7 @@
 id: priorizacao-issues
 title: Priorização e datas no GitHub Project
 sidebar_label: Priorização no Project
-sidebar_position: 2
+sidebar_position: 4
 description: Como os campos Prioridade, Início e Prazo do GitHub Project da equipe são preenchidos.
 ---
 

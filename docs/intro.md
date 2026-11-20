@@ -51,12 +51,12 @@ Com base no que o Excalidraw nos oferece para examinar e nas necessidades dos gr
 
 ## Como o projeto está estruturado
 
-O trabalho segue as quatro fases do processo de avaliação definido pela norma ISO/IEC 25040. **Fase atual: Fase 04.**
+O trabalho segue as quatro fases do processo de avaliação definido pela norma ISO/IEC 25040:
 
 - **Fase 01: [Estabelecer requisitos de avaliação](./fase-01/visao-geral.md):** definir o propósito, delimitar o escopo, mapear os interessados e escolher o modelo de qualidade. Concluída.
 - **Fase 02: [Especificar a avaliação](./fase-02/visao-geral.md):** definir os objetivos de medição com o método GQM, as métricas e os critérios para pontuar e julgar os resultados. Concluída.
 - **Fase 03: [Projetar a avaliação](./fase-03/visao-geral.md):** planejar o método de avaliação, as instruções para os avaliadores, os recursos necessários, a massa de dados e o cronograma. Concluída.
-- **Fase 04: [Executar a avaliação](./fase-04/visao-geral.md):** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias. **Em andamento.**
+- **Fase 04: [Executar a avaliação](./fase-04/visao-geral.md):** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias. Concluída.
 
 A divisão em subgrupos e a governança do trabalho no GitHub estão descritas na [metodologia da equipe](./gestao/metodologia-equipe.md).
 
@@ -89,6 +89,7 @@ A divisão em subgrupos e a governança do trabalho no GitHub estão descritas n
 | 1.1 | 19/10/2026 | Atualização da estrutura com a indicação da Fase 02 | [Luiz Henrique Soares](https://github.com/luizh-gsoares) | [Christopher Paraizo](https://github.com/wChrstphr) |
 | 1.2 | 10/11/2026 | Revisão e alinhamento da terminologia da ISO/IEC 25010:2023 | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
 | 1.3 | 14/11/2026 | Indicação da Fase 02 como concluída e da Fase 03 como fase atual com link para visão geral | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Christopher Paraizo](https://github.com/wChrstphr) |
-| 1.4 | 18/11/2026 | Revisão de coerência e cross-links: Escalabilidade em Flexibilidade e link à metodologia da equipe | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.4 | 17/11/2026 | Indicação de todas as quatro fases como concluídas com links para as respectivas visões gerais | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.5 | 18/11/2026 | Revisão de coerência e cross-links: Escalabilidade em Flexibilidade e link à metodologia da equipe | [Christopher Paraizo](https://github.com/wChrstphr) | |
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
