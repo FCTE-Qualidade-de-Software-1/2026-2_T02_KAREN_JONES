@@ -1,0 +1,12 @@
+label,issues_avaliadas,horas_estimadas,horas_reais,acuracia_pct
+gestao,25,62.0,61.93,99.9
+artigo,17,54.5,52.0,95.4
+especificacao,16,34.5,44.4,128.7
+documentacao,15,52.0,52.3,100.6
+verificacao,8,27.0,18.4,68.1
+gitpage,8,14.5,14.03,96.8
+medicao,8,32.0,38.7,120.9
+diagrama,3,8.5,8.05,94.7
+estudo,3,5.5,5.3,96.4
+analise,2,6.0,5.5,91.7
+melhoria,2,10.0,4.25,42.5

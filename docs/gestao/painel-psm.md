@@ -219,6 +219,94 @@ O histórico de medições do PSM/CID comprovou que os atrasos iniciais da equip
 
 ---
 
+## 8. Visão do projeto inteiro (Fases 1 a 4)
+
+Os gráficos desta seção respondem às três [perguntas do Plano de Medição PSM](plano-medicao-psm.md#3-origem-das-medidas-e-perguntas-da-equipe) com recortes por fase, por tipo de trabalho e por integrante. O [`scripts/graficos_projeto.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/scripts/graficos_projeto.py), chamado pelo `scripts/coleta_psm.py`, gera um CSV por gráfico em [`dados/gestao/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/tree/main/dados/gestao), de `09_burnup_projeto.csv` a `17_issues_label_fase.csv`. Os números citados são da coleta de 20/11/2026 e por isso diferem do retrato de 18/11/2026 das tabelas, por exemplo nas 98 issues do projeto frente às 97 da [Tabela 1](#3-resumo-por-entrega-e-por-fase). Nos recortes por tipo de trabalho contam apenas as labels de tipo, e a issue com mais de um tipo entra em cada um.
+
+### 8.1. Calendário e progresso
+
+<p className="tabela-titulo">Figura 6: *Burn-up* do projeto, com issues criadas e fechadas acumuladas</p>
+
+![Burn-up do projeto com issues criadas e fechadas acumuladas e o fim de cada fase](/img/gestao/09_burnup_projeto.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/09_burnup_projeto.csv</code>, 2026.</p>
+
+O escopo passou de 48 para 85 issues em 03/11, quando 37 issues foram criadas no mesmo dia, e chegou a 98 issues na coleta, com 89 fechadas. As issues fechadas sobem em degraus perto do fim de cada fase: entre 26/10 e 02/11 apenas uma issue foi fechada. O fechamento, portanto, ainda se concentra na véspera das entregas, que é o comportamento questionado pela pergunta de calendário do plano.
+
+<p className="tabela-titulo">Figura 7: Aderência ao prazo por fase</p>
+
+![Issues no prazo e em atraso em cada fase](/img/gestao/10_aderencia_prazo_fases.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/10_aderencia_prazo_fases.csv</code>, 2026.</p>
+
+A aderência ao `Prazo` das issues ficou abaixo de 55% em todas as fases e caiu a 8,7% na Fase 3, com 2 de 23 issues no prazo. A Fase 4 teve o melhor resultado, 53,6%, com 15 de 28 issues no prazo. As causas de cada desvio estão no [Registro de Medições e Decisões](registro-medicoes.md).
+
+<p className="tabela-titulo">Figura 8: Issues travadas por dependência, por fase</p>
+
+![Issues com dependência declarada, divididas em travadas e não travadas por fase](/img/gestao/11_bloqueio_dependencias_fases.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/11_bloqueio_dependencias_fases.csv</code>, 2026.</p>
+
+Uma issue conta como travada quando alguma dependência dela fechou, ou segue aberta, depois do `Prazo` da própria issue. Na Fase 3, as 11 issues com dependência declarada foram travadas, contra 3 de 23 na Fase 2 e 11 de 25 na Fase 4. A fase de menor aderência ao prazo é também a de maior bloqueio, o que confirma o efeito das dependências apontado na pergunta de calendário do plano.
+
+### 8.2. Recursos e custos
+
+A acurácia da estimativa por fase está na [Figura 5](#6-desempenho-dos-processos-e-governança) e o esforço acumulado planejado e realizado está na [Curva S](#4-calendário-e-progresso). Os gráficos abaixo acrescentam os recortes por tipo de trabalho e por integrante.
+
+<p className="tabela-titulo">Figura 9: Acurácia da estimativa por tipo de trabalho</p>
+
+![Horas reais sobre horas estimadas por tipo de trabalho, com a faixa ideal de 80% a 120%](/img/gestao/12_acuracia_estimativa_labels.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/12_acuracia_estimativa_labels.csv</code>, 2026.</p>
+
+Sete dos onze tipos de trabalho ficaram na faixa de 80% a 120%. Especificação (128,7%) e medição (120,9%) foram subestimadas, e verificação (68,1%) e melhoria (42,5%, com duas issues) foram superestimadas. As estimativas são confiáveis para planejar gestão, artigo e documentação, e pedem margem maior em especificação e medição.
+
+<p className="tabela-titulo">Figura 10: Horas reais por integrante e por tipo de trabalho</p>
+
+![Horas reais registradas nas issues por integrante e por tipo de trabalho](/img/gestao/13_horas_reais_integrante_label.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/13_horas_reais_integrante_label.csv</code>, 2026.</p>
+
+As 258,7 horas reais registradas variam de 57,0 h a 27,9 h por integrante, uma diferença de cerca de duas vezes. Por tipo de trabalho, gestão (61,9 h), documentação (52,3 h) e artigo (52,0 h) ficam à frente de especificação (44,4 h) e medição (38,7 h).
+
+### 8.3. Desempenho dos processos
+
+<p className="tabela-titulo">Figura 11: *Lead time* das issues por fase e por tipo de trabalho</p>
+
+![Mediana em dias entre a criação e o fechamento das issues por fase e por tipo de trabalho](/img/gestao/14_lead_time_issues.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/14_lead_time_issues.csv</code>, 2026.</p>
+
+O gráfico usa a mediana, enquanto a [Tabela 6](#6-desempenho-dos-processos-e-governança) usa a média. A mediana do *lead time* subiu a cada fase: 1,4 dia na Fase 1, 2,0 na Fase 2, 7,0 na Fase 3 e 13,1 na Fase 4. O aumento é coerente com a criação antecipada de issues em 03/11, visível na Figura 6, que ficaram abertas até a sua vez de execução. Por tipo de trabalho, medição tem o ciclo mais longo, com mediana de 12,4 dias.
+
+<p className="tabela-titulo">Figura 12: Tempo de revisão dos *pull requests*</p>
+
+![Mediana em horas da espera até a primeira revisão e do intervalo entre abertura e merge dos pull requests](/img/gestao/15_tempo_revisao_prs.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/15_tempo_revisao_prs.csv</code>, 2026.</p>
+
+Na Fase 3, a mediana de espera até a primeira revisão chegou a 20,9 h, perto do limite de 24 h do plano, e caiu para 1,5 h na Fase 4. Nas Fases 1 e 2, a mediana entre abertura e *merge* ficou abaixo de 3 h porque parte dos PRs foi integrada sem revisão registrada: há revisão de outro integrante em 8 e 13 PRs dessas fases, frente a 17 e 27 integrados. Entre os dois tipos de trabalho com mais PRs revisados, gestão espera 22,9 h pela primeira revisão e documentação espera 2,0 h.
+
+<p className="tabela-titulo">Figura 13: Distribuição das revisões de *pull requests* entre os integrantes</p>
+
+![Quantidade de pull requests revisados por integrante](/img/gestao/16_distribuicao_revisoes.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/16_distribuicao_revisoes.csv</code>, 2026.</p>
+
+Três integrantes fizeram 46 das 47 revisões registradas, e dois integrantes não têm revisão registrada no GitHub. A resposta à pergunta do plano sobre quem revisa é que a revisão está concentrada, o que deixa a etapa dependente da disponibilidade de poucas pessoas.
+
+### 8.4. Distribuição do trabalho
+
+<p className="tabela-titulo">Figura 14: Issues por tipo de trabalho e por fase</p>
+
+![Quantidade de issues de cada tipo de trabalho, dividida por fase](/img/gestao/17_issues_label_fase.png)
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), com base em <code>dados/gestao/17_issues_label_fase.csv</code>, 2026.</p>
+
+Gestão é o tipo de trabalho com mais issues, 30 de 98, e aparece nas quatro fases. O artigo se concentra na Fase 2, com 14 das 23 issues, a especificação nas Fases 2 e 3, e a medição na Fase 4, com 7 de 8, o que acompanha a sequência do processo de avaliação.
+
+---
+
 ## Referências
 
 > <Link id="ref-1">1.</Link> CARD, David et al. **Practical Software and Systems Measurement (PSM): A Foundation for Objective Project Management**. Version 4.0d. PSM Support Center, 2021. Disponível em: [https://psmsc.com](https://psmsc.com). Acesso em: 18 out. 2026.
@@ -233,5 +321,5 @@ O histórico de medições do PSM/CID comprovou que os atrasos iniciais da equip
 | 1.1 | 09/11/2026 | Taxa de revisão por pares das Fases 1 e 2 recalculada pela coleta automática de PRs | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 18/11/2026 | Atualização dos dados consolidados das Fases 1 a 4 e inclusão da seção de insights sobre prazos individuais por issue e evolução entre as fases | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.3 | 18/11/2026 | Inclusão dos recursos e custos da Entrega 2, balanço acumulado do projeto e gráficos de esforço individual | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-| 1.4 | 20/11/2026 | Alinhamento da Tabela 5 com a coleta final de métricas PSM/CID (260,16h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
-
+| 1.4 | 18/11/2026 | Revisão de coerência e cross-links: tabelas recalculadas com o retrato de 18/11/2026 e Entrega 2 incluída | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.5 | 20/11/2026 | Seção com os gráficos e as interpretações do projeto inteiro (Fases 1 a 4) | [Christopher Paraizo](https://github.com/wChrstphr) | |

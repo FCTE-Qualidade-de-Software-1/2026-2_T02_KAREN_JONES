@@ -847,9 +847,11 @@ def calcular_revisao_prs(dados_brutos: dict, issues: list, janelas: dict, agora:
             "aprovado_em": _data_br(aprovacao),
             "integrado_em": _data_br(merged),
             "espera_revisao_h": espera_h,
+            "abertura_merge_h": round((merged - criado).total_seconds() / 3600.0, 2) if merged else None,
             "aprovado_formalmente": "sim" if aprovacao else "nao",
             "revisores": ", ".join(revisores),
-            "_revisores": revisores
+            "_revisores": revisores,
+            "_labels": [l["name"] for l in item.get("labels", [])]
         })
 
     fases, revisores_fase, matriz = [], [], []
@@ -1684,6 +1686,10 @@ def main() -> None:
         )
     except Exception as e:
         print(f"[AVISO] Nao foi possivel gerar a Curva S automaticamente: {e}")
+
+    # Graficos 09 a 17 do projeto inteiro (Fases 1 a 4)
+    from graficos_projeto import gerar_graficos_projeto
+    gerar_graficos_projeto(resultado, medidas, dados_brutos, config, dir_saida)
 
     # Sincronizar PNGs gerados com static/img/gestao/
     dir_static = raiz / "static" / "img" / "gestao"

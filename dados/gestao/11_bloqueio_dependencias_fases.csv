@@ -1,0 +1,5 @@
+fase,issues_com_dependencia,travadas,nao_travadas,travadas_pct,travadas_lista
+Fase 1,9,3,6,33.3,#13 #14 #18
+Fase 2,23,3,20,13.0,#26 #28 #30
+Fase 3,11,11,0,100.0,#86 #95 #98 #99 #100 #102 #103 #104 #105 #107 #135
+Fase 4,25,11,14,44.0,#109 #110 #111 #112 #113 #114 #115 #116 #117 #118 #123

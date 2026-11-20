@@ -12,6 +12,8 @@ Este diretorio contem a automacao responsavel por extrair dados de gestao do rep
 
 - [`config.json`](config.json): Parametros de configuracao (nome do repositorio, valor-hora de referencia em BRL, fonte salarial de mercado e mapeamento de logins da equipe).
 - [`coleta_psm.py`](coleta_psm.py): Script principal de extracao, transformacao e geracao de artefatos.
+- [`graficos_projeto.py`](graficos_projeto.py): Calculo e desenho dos graficos `09_` a `17_` do projeto inteiro (Fases 1 a 4), chamado pelo `coleta_psm.py`.
+- [`tests/`](tests): Testes das funcoes de calculo do `graficos_projeto.py`.
 - [`requirements.txt`](requirements.txt): Dependencias Python para requisicoes e plotagem de graficos.
 
 ---
@@ -50,6 +52,14 @@ Para recalcular indicadores e regerar os graficos usando o snapshot bruto ja sal
 python3 scripts/coleta_psm.py --offline
 ```
 
+### 4. Executar os testes
+
+Os testes cobrem as funcoes de calculo dos graficos do projeto inteiro e nao consultam a rede:
+
+```bash
+python3 -m pytest scripts/tests
+```
+
 ---
 
 ## Artefatos Gerados em `dados/gestao/`
@@ -63,11 +73,21 @@ Apos a execucao, os seguintes arquivos sao gerados e atualizados automaticamente
 - `04_contribuicao_individual.csv`: Quantidade de issues, horas estimadas, horas reais, custo, commits, PRs e percentual de esforco individual (somando 100%).
 - `05_detalhamento_issues.csv`: Visao analitica de todas as issues do projeto, com o desvio da estimativa de cada issue e a classificacao (na faixa, subestimada ou superestimada).
 - `06_contribuicao_por_fase.csv`, `07_resumo_entregas.csv` e `08_contribuicao_por_entrega.csv`: Os mesmos indicadores separados por fase e por entrega.
+- `09_burnup_projeto.csv` a `17_issues_label_fase.csv`: Dados dos graficos do projeto inteiro, um CSV por grafico, com o mesmo nome do PNG. Nos recortes por label, contam apenas as labels de tipo de trabalho: as labels `subgrupo-*` e `retroativa` ficam de fora, e a issue com mais de um tipo conta em cada um.
 - `constructs_e_tabelas.md`: Documento contendo as fichas estruturadas no modelo **Measurement Construct**, tabelas em Markdown para o GitPage, codigo em LaTeX da tabela de contribuicao para o artigo SBC e a secao 4 com as medidas do plano de medicao e os avisos da coleta.
 - `graficos/`:
   - `01_recursos_e_custos_fases.png`
   - `02_calendario_e_progresso_fases.png`
   - `03_contribuicao_individual.png`
+  - `09_burnup_projeto.png`: Issues criadas e fechadas acumuladas, com o fim de cada fase.
+  - `10_aderencia_prazo_fases.png`: Issues no prazo e em atraso por fase.
+  - `11_bloqueio_dependencias_fases.png`: Issues com dependencia, travadas e nao travadas. Travada e a issue cuja dependencia fechou, ou segue aberta, depois do `Prazo` da propria issue.
+  - `12_acuracia_estimativa_labels.png`: Acuracia da estimativa por tipo de trabalho.
+  - `13_horas_reais_integrante_label.png`: Horas reais por integrante e por tipo de trabalho.
+  - `14_lead_time_issues.png`: Mediana do *lead time* das issues por fase e por tipo de trabalho.
+  - `15_tempo_revisao_prs.png`: Mediana da espera ate a primeira revisao e do intervalo entre abertura e merge dos PRs.
+  - `16_distribuicao_revisoes.png`: PRs revisados por integrante.
+  - `17_issues_label_fase.png`: Issues por tipo de trabalho e por fase.
 
 ---
 
