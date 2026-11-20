@@ -48,8 +48,8 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
-| Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 62.5 | R$ 2160.00 | R$ 2812.50 | 135.9% | 7.62 |
-| Fase 4 | 28 / 19 | 67.9% | 53.6% | 96.0 | 70.5 | R$ 4320.00 | R$ 3170.25 | 95.2% | 12.34 |
+| Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 65.5 | R$ 2160.00 | R$ 2947.50 | 136.5% | 7.62 |
+| Fase 4 | 28 / 19 | 67.9% | 53.6% | 96.0 | 66.5 | R$ 4320.00 | R$ 2990.25 | 89.8% | 12.34 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 29 | 75.5 | 46.6 | R$ 2099.25 | 154 | 27 | **18.18%** |
-| Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **14.42%** |
-| Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **22.21%** |
-| Leticia de Carvalho | `@LeticiaSantosss` | 17 | 31.5 | 27.9 | R$ 1255.95 | 16 | 11 | **10.87%** |
-| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 38 | 16 | **12.82%** |
-| Maria Eduarda | `@eduarda-ogomes` | 20 | 47.5 | 55.2 | R$ 2484.00 | 71 | 16 | **21.51%** |
+| Christopher | `@wChrstphr` | 29 | 75.5 | 49.6 | R$ 2234.25 | 154 | 27 | **19.42%** |
+| Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **14.47%** |
+| Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **22.30%** |
+| Leticia de Carvalho | `@LeticiaSantosss` | 17 | 31.5 | 27.9 | R$ 1255.95 | 16 | 11 | **10.92%** |
+| Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 38 | 16 | **12.87%** |
+| Maria Eduarda | `@eduarda-ogomes` | 20 | 47.5 | 51.2 | R$ 2304.00 | 71 | 16 | **20.03%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 29 & 75.5h & 46.6h & 154/27 & 18.18\% \\
-Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 14.42\% \\
-Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 22.21\% \\
-Leticia de Carvalho & 17 & 31.5h & 27.9h & 16/11 & 10.87\% \\
-Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16 & 12.82\% \\
-Maria Eduarda & 20 & 47.5h & 55.2h & 71/16 & 21.51\% \\
+Christopher & 29 & 75.5h & 49.6h & 154/27 & 19.42\% \\
+Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 14.47\% \\
+Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 22.30\% \\
+Leticia de Carvalho & 17 & 31.5h & 27.9h & 16/11 & 10.92\% \\
+Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16 & 12.87\% \\
+Maria Eduarda & 20 & 47.5h & 51.2h & 71/16 & 20.03\% \\
 \hline
-\textbf{Total} & \textbf{113} & \textbf{274.0h} & \textbf{256.7h} & \textbf{361/92} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{113} & \textbf{274.0h} & \textbf{255.7h} & \textbf{361/92} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -110,8 +110,8 @@ Desvio = (horas reais - horas estimadas) / horas estimadas. Na faixa = desvio en
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Fase 1 | 18 | -0.8 | 0.0 | 50.0 | 4 | 5 |
 | Fase 2 | 26 | -8.2 | -11.65 | 61.5 | 3 | 7 |
-| Fase 3 | 21 | 35.9 | 0.0 | 47.6 | 10 | 1 |
-| Fase 4 | 21 | -4.8 | 0.0 | 38.1 | 5 | 8 |
+| Fase 3 | 23 | 36.5 | 0.0 | 47.8 | 11 | 1 |
+| Fase 4 | 21 | -10.2 | 0.0 | 47.6 | 3 | 8 |
 
 ### Tempo de espera dos PRs por revisao
 
@@ -285,10 +285,10 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 
 | Tipo | Issue/PR | Mensagem |
 | :--- | :---: | :---: |
+| PR travado | #187 | PR aberto ha 45h sem revisao (limite do plano: 24h) |
+| PR travado | #188 | PR aberto ha 44h sem revisao (limite do plano: 24h) |
+| PR travado | #189 | PR aberto ha 43h sem revisao (limite do plano: 24h) |
+| PR travado | #191 | PR aberto ha 36h sem revisao (limite do plano: 24h) |
 | fechada sem horas reais | #27 | '[ARTIGO] Tabela de contribuição e declaração de uso de IA' fechada sem horas reais registradas |
 | fechada sem horas reais | #74 | '[ARTIGO] Fase 2: visão geral do GQM e ligação com a Fase 1' fechada sem horas reais registradas |
 | fechada sem horas reais | #125 | '[ARTIGO] Conclusão: julgamento, relações entre as características e trabalhos futuros' fechada sem horas reais registradas |
-| fechada sem horas reais | #138 | '[GESTAO] Sincronizar o prazo das issues com o GitHub Projects' fechada sem horas reais registradas |
-| fechada sem horas reais | #140 | '[GESTAO] Documentar a priorização e as datas do GitHub Project' fechada sem horas reais registradas |
-| horas divergentes | #121 | total declarado 2.0h difere da soma por integrante 4.0h |
-| horas divergentes | #122 | total declarado 2.0h difere da soma por integrante 4.0h |

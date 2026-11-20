@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-19T10:53:47.391377+00:00",
+  "coletado_em": "2026-11-20T10:42:39.813116+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -8511,7 +8511,7 @@
       },
       "comments": 0,
       "created_at": "2026-11-05T19:36:41Z",
-      "updated_at": "2026-11-07T17:31:26Z",
+      "updated_at": "2026-11-19T13:20:23Z",
       "closed_at": "2026-11-07T17:31:26Z",
       "assignee": {
         "login": "wChrstphr",
@@ -8549,7 +8549,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nDocumentar na parte de gestão do site como os campos `Prioridade`, `Início` e `Prazo` do [Project #36](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/36) são calculados, com o construct no modelo PSM. A prioridade mede o impacto em cadeia: quantas issues abertas ficam travadas, direta ou indiretamente, por cada issue.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Modelo de construct: `docs/gestao/relatorios/relatorio-psm-fase-2.md`, seção 2\n- Plano de medição: #134\n\n### Critério de pronto\n\n- [ ] Página publicada em `docs/gestao/` com o construct da prioridade\n- [ ] Regras de `Prioridade`, `Início` e `Prazo` descritas com seus limites\n- [ ] Retrato dos níveis em 05/11 registrado\n- [ ] Página com histórico de versões e `npm run build` sem erros\n\n### Prazo\n\n06/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n1\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n_No response_\n",
+      "body": "### Descrição\n\nDocumentar na parte de gestão do site como os campos `Prioridade`, `Início` e `Prazo` do [Project #36](https://github.com/orgs/FCTE-Qualidade-de-Software-1/projects/36) são calculados, com o construct no modelo PSM. A prioridade mede o impacto em cadeia: quantas issues abertas ficam travadas, direta ou indiretamente, por cada issue.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Modelo de construct: `docs/gestao/relatorios/relatorio-psm-fase-2.md`, seção 2\n- Plano de medição: #134\n\n### Critério de pronto\n\n- [ ] Página publicada em `docs/gestao/` com o construct da prioridade\n- [ ] Regras de `Prioridade`, `Início` e `Prazo` descritas com seus limites\n- [ ] Retrato dos níveis em 05/11 registrado\n- [ ] Página com histórico de versões e `npm run build` sem erros\n\n### Prazo\n\n06/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n1\n\n### Horas reais (h)\n\n2h (@wChrstphr: 2h)\n\n### Revisor\n\n_No response_\n\n",
       "closed_by": {
         "login": "eduarda-ogomes",
         "id": 162516978,
@@ -8801,7 +8801,7 @@
       },
       "comments": 0,
       "created_at": "2026-11-05T19:14:31Z",
-      "updated_at": "2026-11-07T17:26:56Z",
+      "updated_at": "2026-11-19T13:20:20Z",
       "closed_at": "2026-11-07T17:26:56Z",
       "assignee": {
         "login": "wChrstphr",
@@ -8839,7 +8839,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nO filtro e a ordenação do GitHub Projects não leem o corpo da issue. O Project #36 ganhou o campo `Prazo` (data), já preenchido com o valor da seção \"Prazo\" de cada issue. Fazer o `scripts/sincronizar_projeto.py` manter esse campo atualizado, como já faz com a estimativa, as horas reais e o revisor, para o corpo da issue continuar sendo a fonte do dado.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Script atual: `scripts/sincronizar_projeto.py`\n- Workflow atual: `.github/workflows/sync-project-metrics.yml`\n\n### Critério de pronto\n\n- [ ] Prazo no formato `DD/MM` ou `DD/MM/AAAA` gravado no campo `Prazo`, com 2026 como ano padrão\n- [ ] Prazo inválido ou vazio gera aviso e não apaga o valor do campo\n- [ ] Sincronização testada em uma issue real do Project\n\n### Prazo\n\n06/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n1\n\n### Horas reais (h)\n\n_No response_\n\n### Revisor\n\n@eduarda-ogomes \n",
+      "body": "### Descrição\n\nO filtro e a ordenação do GitHub Projects não leem o corpo da issue. O Project #36 ganhou o campo `Prazo` (data), já preenchido com o valor da seção \"Prazo\" de cada issue. Fazer o `scripts/sincronizar_projeto.py` manter esse campo atualizado, como já faz com a estimativa, as horas reais e o revisor, para o corpo da issue continuar sendo a fonte do dado.\n\n### Critérios da rubrica atendidos\n\n_No response_\n\n### Referências\n\n- Script atual: `scripts/sincronizar_projeto.py`\n- Workflow atual: `.github/workflows/sync-project-metrics.yml`\n\n### Critério de pronto\n\n- [ ] Prazo no formato `DD/MM` ou `DD/MM/AAAA` gravado no campo `Prazo`, com 2026 como ano padrão\n- [ ] Prazo inválido ou vazio gera aviso e não apaga o valor do campo\n- [ ] Sincronização testada em uma issue real do Project\n\n### Prazo\n\n06/11\n\n### Depende de\n\nNenhuma\n\n### Estimativa (h)\n\n1\n\n### Horas reais (h)\n\n1h (@wChrstphr: 1h)\n\n### Revisor\n\n@eduarda-ogomes \n\n",
       "closed_by": {
         "login": "eduarda-ogomes",
         "id": 162516978,
@@ -11708,7 +11708,7 @@
       },
       "comments": 0,
       "created_at": "2026-11-03T15:17:39Z",
-      "updated_at": "2026-11-18T02:36:32Z",
+      "updated_at": "2026-11-19T13:13:46Z",
       "closed_at": "2026-11-18T02:36:32Z",
       "assignee": {
         "login": "eduarda-ogomes",
@@ -11746,7 +11746,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nPublicar a seção da Fase 4 no GitPage e deixar o site pronto para o leitor externo: página inicial com as quatro fases concluídas, links para o repositório, a release `v2.0-E2` e os dados, versão e data no rodapé, texto alternativo em todas as imagens e referências cruzadas entre as fases.\n\n### Critérios da rubrica atendidos\n\n- AG-C4: GitPage da equipe (2026-2 Trabalho final completo v1.pdf, p. 9)\n\n### Referências\n\n- Critério AG-C4, GitPage: 2026-2 Trabalho final completo v1.pdf, p. 9\n\n### Critério de pronto\n\n- [ ] Seção da Fase 4 publicada no menu\n- [ ] Página inicial com as quatro fases\n- [ ] Links para o repositório, a release e os dados\n- [ ] Versão e data no rodapé atualizadas\n- [ ] `npm run build` sem links quebrados\n\n### Prazo\n\n20/11\n\n### Depende de\n\n#121 (Visão geral da Fase 04)\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n2h (@eduarda-ogomes: 2h)\n\n@eduarda-ogomes: 2h\n\n### Revisor\n\n_No response_",
+      "body": "### Descrição\n\nPublicar a seção da Fase 4 no GitPage e deixar o site pronto para o leitor externo: página inicial com as quatro fases concluídas, links para o repositório, a release `v2.0-E2` e os dados, versão e data no rodapé, texto alternativo em todas as imagens e referências cruzadas entre as fases.\n\n### Critérios da rubrica atendidos\n\n- AG-C4: GitPage da equipe (2026-2 Trabalho final completo v1.pdf, p. 9)\n\n### Referências\n\n- Critério AG-C4, GitPage: 2026-2 Trabalho final completo v1.pdf, p. 9\n\n### Critério de pronto\n\n- [ ] Seção da Fase 4 publicada no menu\n- [ ] Página inicial com as quatro fases\n- [ ] Links para o repositório, a release e os dados\n- [ ] Versão e data no rodapé atualizadas\n- [ ] `npm run build` sem links quebrados\n\n### Prazo\n\n20/11\n\n### Depende de\n\n#121 (Visão geral da Fase 04)\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n2h (@eduarda-ogomes: 2h)\n\n### Revisor\n\n_No response_\n",
       "closed_by": {
         "login": "wChrstphr",
         "id": 105730846,
@@ -11906,7 +11906,7 @@
       },
       "comments": 0,
       "created_at": "2026-11-03T15:17:27Z",
-      "updated_at": "2026-11-18T02:36:30Z",
+      "updated_at": "2026-11-19T13:12:07Z",
       "closed_at": "2026-11-18T02:36:30Z",
       "assignee": {
         "login": "eduarda-ogomes",
@@ -11944,7 +11944,7 @@
         "blocking": 0,
         "total_blocking": 0
       },
-      "body": "### Descrição\n\nCriar `docs/fase-04/visao-geral.md`, no mesmo formato das fases anteriores: objetivo da fase, tabela \"Documentos desta fase\", resumo do resultado por objetivo e links para os dados brutos e consolidados em `dados/fase-04/`.\n\n### Critérios da rubrica atendidos\n\n- AG-C1: Organização lógica do relatório (2026-2 Trabalho final completo v1.pdf, p. 9)\n- AG-C4: GitPage da equipe (2026-2 Trabalho final completo v1.pdf, p. 9)\n\n### Referências\n\n- Disponibilizar os dados resultantes para o requisitante: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 21\n- Critério AG-C4, GitPage com seção das Fases 1 a 4: 2026-2 Trabalho final completo v1.pdf, p. 9\n\n### Critério de pronto\n\n- [ ] Página da Fase 04 criada\n- [ ] Tabela de documentos com link para cada página da fase\n- [ ] Links para `dados/fase-04/`\n- [ ] Página publicada com histórico de versões\n- [ ] `npm run build` sem links quebrados\n- [ ] Link para a página de melhorias, assim que a #118 fechar\n\n### Prazo\n\n18/11\n\n### Depende de\n\n#115 (Análise G1), #116 (Análise G2), #117 (Análise G3), #120 (Julgamento final)\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n2h (@eduarda-ogomes: 2h)\n\n@eduarda-ogomes: 2h\n\n### Revisor\n\n_No response_",
+      "body": "### Descrição\n\nCriar `docs/fase-04/visao-geral.md`, no mesmo formato das fases anteriores: objetivo da fase, tabela \"Documentos desta fase\", resumo do resultado por objetivo e links para os dados brutos e consolidados em `dados/fase-04/`.\n\n### Critérios da rubrica atendidos\n\n- AG-C1: Organização lógica do relatório (2026-2 Trabalho final completo v1.pdf, p. 9)\n- AG-C4: GitPage da equipe (2026-2 Trabalho final completo v1.pdf, p. 9)\n\n### Referências\n\n- Disponibilizar os dados resultantes para o requisitante: AULA A07 QSW1 PROC AVAL PRODUTO.pdf, p. 21\n- Critério AG-C4, GitPage com seção das Fases 1 a 4: 2026-2 Trabalho final completo v1.pdf, p. 9\n\n### Critério de pronto\n\n- [ ] Página da Fase 04 criada\n- [ ] Tabela de documentos com link para cada página da fase\n- [ ] Links para `dados/fase-04/`\n- [ ] Página publicada com histórico de versões\n- [ ] `npm run build` sem links quebrados\n- [ ] Link para a página de melhorias, assim que a #118 fechar\n\n### Prazo\n\n18/11\n\n### Depende de\n\n#115 (Análise G1), #116 (Análise G2), #117 (Análise G3), #120 (Julgamento final)\n\n### Estimativa (h)\n\n2\n\n### Horas reais (h)\n\n2h (@eduarda-ogomes: 2h)\n\n### Revisor\n\n_No response_",
       "closed_by": {
         "login": "wChrstphr",
         "id": 105730846,
@@ -32452,6 +32452,88 @@
     }
   ],
   "commits": [
+    {
+      "sha": "73674cf0619e78c335435614c39d50d5dea39bbf",
+      "node_id": "C_kwDOUJBYZdoAKDczNjc0Y2YwNjE5ZTc4YzMzNTQzNTYxNGMzOWQ1MGQ1ZGVhMzliYmY",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-19T10:53:48Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-19T10:53:48Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "a474778868ea4e632409b8e7d1e2f40337f7ae5d",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/a474778868ea4e632409b8e7d1e2f40337f7ae5d"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/73674cf0619e78c335435614c39d50d5dea39bbf",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/73674cf0619e78c335435614c39d50d5dea39bbf",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/73674cf0619e78c335435614c39d50d5dea39bbf",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/73674cf0619e78c335435614c39d50d5dea39bbf/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "9733fa2a68625d07405c3b2d2275851d6d4a7f68",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/9733fa2a68625d07405c3b2d2275851d6d4a7f68",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/9733fa2a68625d07405c3b2d2275851d6d4a7f68"
+        }
+      ]
+    },
     {
       "sha": "9733fa2a68625d07405c3b2d2275851d6d4a7f68",
       "node_id": "C_kwDOUJBYZdoAKDk3MzNmYTJhNjg2MjVkMDc0MDVjM2IyZDIyNzU4NTFkNmQ0YTdmNjg",
