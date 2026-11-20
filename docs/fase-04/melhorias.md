@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: Oportunidades de melhoria
-description: Proposta de pontos de melhoria de G1 e G3, pontos de atenção de G3, critérios de priorização, ação proposta, critério de sucesso e avaliação do tamanho da mudança
+description: Pontos de melhoria e de atenção de G1, G2 e G3, critérios de priorização, ações escolhidas, modelo de documentação de propriedade e critérios de sucesso
 ---
 
 import Link from '@docusaurus/Link';
@@ -10,25 +10,25 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-A avaliação deve terminar com oportunidades de melhoria baseadas nas métricas e nos julgamentos, e com pelo menos uma ação executada, justificada pelas evidências [[1, p. 3]](#ref-1). Na interpretação do GQM, é a equipe que traduz as conclusões em ações [[2, p. 60]](#ref-2). Esta página lista os pontos de melhoria de [G1](./resultados-g1-manutenibilidade.md) e [G3](./resultados-g3-flexibilidade.md) e propõe a ação a executar. É uma proposta para a decisão conjunta da equipe, prevista no [plano de análise](../fase-03/plano-analise.md#6-interpretação-e-revisão), e a versão final da página registra a escolha.
+A avaliação deve terminar com oportunidades de melhoria baseadas nas métricas e nos julgamentos, e com pelo menos uma ação executada, justificada pelas evidências [[1, p. 3]](#ref-1). Na interpretação do GQM, é a equipe que traduz as conclusões em ações [[2, p. 60]](#ref-2). Esta página lista os pontos de melhoria de [G1](./resultados-g1-manutenibilidade.md), [G2](./resultados-g2-confiabilidade.md) e [G3](./resultados-g3-flexibilidade.md) e registra as duas ações escolhidas pela equipe, conforme a [interpretação e revisão](../fase-03/plano-analise.md#6-interpretação-e-revisão) do plano de análise.
 
-A ação proposta é documentar as propriedades públicas da biblioteca que estão sem documentação ([M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas)). É a única oportunidade pequena que muda o julgamento de uma característica: com ela, a manutenibilidade passa a atender.
+A primeira ação documenta as propriedades públicas da biblioteca que estão sem documentação ([M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas)). É a única oportunidade pequena que muda o julgamento de uma característica: com ela, a manutenibilidade passa a atender. A segunda corrige a importação de arquivos `.excalidraw` cujos elementos são todos inválidos ([M2.3.1](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem)), um problema de confiabilidade que chega ao usuário como cena vazia ou tela branca.
 
 ## Metodologia
 
-As oportunidades são as métricas nos níveis `-` e `--`, que a [regra dos pontos de melhoria](../fase-02/pontuacao-julgamento.md#73-pontos-de-melhoria) registra com a questão e a subcaracterística afetadas. Cada uma foi comparada por três critérios:
+As oportunidades são as métricas nos níveis `-` e `--`, que a [regra dos pontos de melhoria](../fase-02/pontuacao-julgamento.md#73-pontos-de-melhoria) registra com a questão e a subcaracterística afetadas. Os pontos de atenção apontados nas análises de G2 e G3, com métricas no nível `o` ou acima, também entraram na decisão. Cada oportunidade foi comparada por três critérios:
 
 - **Efeito no julgamento:** se levar a métrica para o nível seguinte, ou ao necessário, muda o julgamento da característica, calculado pela [agregação](../fase-02/pontuacao-julgamento.md#6-agregação-da-métrica-à-característica) e pelo [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica) da Fase 02.
 - **Tamanho da mudança:** se cabe em um *pull request* pequeno ou exige discutir antes com os mantenedores, como o guia de contribuição do Excalidraw pede para mudanças grandes [[3]](#ref-3).
 - **Medição antes e depois:** se a métrica pode ser medida de novo na base do *pull request*, pelo mesmo procedimento da ficha, dentro do prazo da avaliação.
 
-Os tipos de ação seguem a especificação do trabalho: protótipo de alta fidelidade, modificação no código, templates técnicos ou processo de desenvolvimento [[1, p. 3]](#ref-1). As oportunidades de [G2](../fase-02/gqm-confiabilidade.md) entram na versão 1.1 desta página, depois da [análise de G2](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/116).
+Os tipos de ação seguem a especificação do trabalho: protótipo de alta fidelidade, modificação no código, templates técnicos ou processo de desenvolvimento. A ação pode ser incorporada ao repositório do software ou apresentada como entrega técnica [[1, p. 3]](#ref-1).
 
 ---
 
 ## 1. Oportunidades
 
-<p className="tabela-titulo">Tabela 1: Pontos de melhoria de G1 e G3</p>
+<p className="tabela-titulo">Tabela 1: Pontos de melhoria de G1, G2 e G3</p>
 
 | Métrica | Valor e nível | Questão | Efeito no julgamento | Tamanho | Medição antes e depois |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -37,22 +37,37 @@ Os tipos de ação seguem a especificação do trabalho: protótipo de alta fide
 | [M1.1.1](../fase-02/gqm-manutenibilidade.md#m111-ciclos-de-dependência-entre-pacotes) | 4 pares `-` | Q1.1 Modularidade | Nenhum, porque Q1.2 continua em `--` | Grande: muda a divisão entre pacotes | Sim, com o script de cálculo |
 | [M1.3.1](../fase-02/gqm-manutenibilidade.md#m131-perfil-de-risco-de-complexidade-das-funções) | 6,54% em risco muito alto `--` | Q1.3 Analisabilidade | Nenhum, porque Q1.2 continua em `--` | Grande: refatorar as funções mais complexas | Sim, com o ESLint |
 | [M1.4.3](../fase-02/gqm-manutenibilidade.md#m143-proporção-de-contribuições-que-alteram-arquivos-extensos) | 65,75% `--` | Q1.4 Modificabilidade | Nenhum, porque Q1.2 continua em `--` | Grande: dividir os arquivos extensos | Não: depende de seis meses de contribuições futuras |
+| [M2.1.3](../fase-02/gqm-confiabilidade.md#m213-proporção-de-contribuições-revisadas-antes-da-integração) | 44,52% `-` | Q2.1 Ausência de falhas | Nenhum, porque G2 já atende | Médio: exige que os mantenedores mudem a regra de integração do repositório | Não: depende de seis meses de contribuições futuras |
 | [M3.4.3](../fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados) | 26,9% `-` | Q3.4 Substituibilidade | Nenhum, porque G3 já atende | Grande: esquema do formato, verificação na CI e documentação | Sim, com a conferência dos campos |
 | [M3.3.1](../fase-02/gqm-flexibilidade.md#m331-proporção-de-operações-de-pacote-bem-sucedidas) | 33,3% `-` | Q3.3 Instalabilidade | Nenhum, porque G3 já atende | Médio: o pacote depende de `@excalidraw/common`, que não é publicado, e a análise de G3 aponta a publicação sincronizada dos subpacotes | Sim, repetindo as operações de pacote |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
 
-Os valores de G1 estão em [`niveis.csv`](../../dados/fase-04/consolidados/niveis.csv) e os de G3 em [`G3_metricas_consolidadas.csv`](../../dados/fase-04/consolidados/G3_metricas_consolidadas.csv). G1 não atende só porque [Q1.2](./resultados-g1-manutenibilidade.md#2-q12-reusabilidade) está no nível `--`, com média 1,5. Por isso, só as duas métricas de Q1.2 mudam o julgamento. As demais melhorariam o nível da sua questão, mas não o de G1 nem o de G3.
+Os valores de G1 estão em [`niveis.csv`](../../dados/fase-04/consolidados/niveis.csv), os de G2 em [`G2_metricas_consolidadas.csv`](../../dados/fase-04/consolidados/G2_metricas_consolidadas.csv) e os de G3 em [`G3_metricas_consolidadas.csv`](../../dados/fase-04/consolidados/G3_metricas_consolidadas.csv). G1 não atende só porque [Q1.2](./resultados-g1-manutenibilidade.md#2-q12-reusabilidade) está no nível `--`, com média 1,5. Por isso, só as duas métricas de Q1.2 mudam um julgamento. As demais melhorariam o nível da sua questão, mas G2 e G3 já atendem.
 
-### 1.1 Pontos de atenção de G3
+### 1.1 Pontos de atenção de G2
 
-A [análise de G3](./resultados-g3-flexibilidade.md#6-pontos-de-melhoria-e-de-atenção) registrou também três métricas no nível `o` ou acima, fora da regra dos pontos de melhoria. Elas não mudam o julgamento de G3, mas entram na decisão da equipe:
+A [análise de G2](./resultados-g2-confiabilidade.md#5-agregação-e-julgamento-do-objetivo-g2) registrou também métricas no nível `o`, fora da regra dos pontos de melhoria:
 
-<p className="tabela-titulo">Tabela 2: Pontos de atenção de G3</p>
+<p className="tabela-titulo">Tabela 2: Pontos de atenção de G2</p>
+
+| Métrica | Valor e nível | Caminho apontado na análise de G2 |
+| :--- | :--- | :--- |
+| [M2.3.1](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem) | 77,78% (7 de 9) `o` | Validar os campos dos elementos na importação de `.excalidraw`, para evitar a tela branca com coordenadas não numéricas (`invalido_06`) e a falha silenciosa com campos obrigatórios ausentes (`invalido_05`) |
+| [M2.4.1](../fase-02/gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) | 75,0% `o` | Reduzir o atraso da gravação no armazenamento local, para diminuir a perda em encerramentos abruptos |
+| [M2.1.1](../fase-02/gqm-confiabilidade.md#m211-proporção-de-correções-entre-as-contribuições-integradas) | 51,37% `o` | Ligar formalmente os *pull requests* de correção às *issues*, hoje feito em 26,67% deles |
+
+<p className="tabela-fonte">Fonte: [Luiz Henrique Soares](https://github.com/luizh-gsoares), 2026.</p>
+
+### 1.2 Pontos de atenção de G3
+
+A [análise de G3](./resultados-g3-flexibilidade.md#6-pontos-de-melhoria-e-de-atenção) registrou três métricas no nível `o` ou acima:
+
+<p className="tabela-titulo">Tabela 3: Pontos de atenção de G3</p>
 
 | Métrica | Valor e nível | Caminho apontado na análise de G3 | Tamanho |
 | :--- | :--- | :--- | :--- |
-| [M3.3.2](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) | 85,7% `+` | Trocar `docker-compose up --build -d` por `docker compose up --build -d` no guia `development.mdx`. Com isso, M3.3.2 chega a 100% `++` e Q3.3 a média 4,0 | Pequeno: uma linha de documentação, ainda presente no ramo principal em 15/11/2026 |
+| [M3.3.2](../fase-02/gqm-flexibilidade.md#m332-proporção-de-passos-documentados-reproduzidos-sem-ajuste) | 85,7% `+` | Trocar `docker-compose up --build -d` por `docker compose up --build -d` no guia `development.mdx`. Com isso, M3.3.2 chega a 100% `++` e Q3.3 a média 4,0 | Pequeno: uma linha de documentação, mas numa página que não é mais publicada ([seção 4](#4-documentação-oficial-fora-do-repositório)) |
 | [M3.1.2](../fase-02/gqm-flexibilidade.md#m312-proporção-de-ambientes-de-integração-com-sucesso) | 66,7% `o` | Alinhar o pacote às versões de React que ele declara aceitar, 17, 18 e 19: deixar de importar `useId` e `useDeferredValue`, ausentes no React 17, e de gerar o JSX só para o runtime do React 19, ou declarar apenas o React 19. Desativar o SSR (`ssr: false`) trata só a dependência do DOM e não corrige essas falhas | Grande: muda o build do pacote ou as versões de React aceitas |
 | [M3.2.2](../fase-02/gqm-flexibilidade.md#m322-taxa-de-quadros-durante-a-edição-por-tamanho-de-cena) | 52 FPS `o` | Particionamento espacial ou virtualização da área visível para cenas acima de 5.000 elementos | Grande: muda o motor de renderização |
 
@@ -60,41 +75,74 @@ A [análise de G3](./resultados-g3-flexibilidade.md#6-pontos-de-melhoria-e-de-at
 
 ---
 
-## 2. Ação proposta
+## 2. Ações escolhidas
 
-**Ação:** documentar as propriedades de `ExcalidrawProps`, a interface pública do componente da biblioteca, que não têm documentação. São 22 de 52, por exemplo `initialState`, `onMount`, `onExport` e `aiEnabled`. A lista completa está em [`M1.2.2_propriedades.csv`](../../dados/fase-04/brutos/M1.2.2_propriedades.csv).
+### 2.1 Documentar as propriedades de ExcalidrawProps (M1.2.2)
 
-**Tipo:** templates técnicos, que a especificação indica quando o problema é ausência ou fragilidade da documentação [[1, p. 3]](#ref-1). A ação propõe um modelo de entrada para documentar uma propriedade, com tipo, valor padrão, descrição e exemplo. Esse modelo é aplicado às propriedades sem documentação em um *pull request* para o Excalidraw e fica disponível para as próximas propriedades.
+**Ação:** documentar as propriedades de `ExcalidrawProps`, a interface pública do componente da biblioteca, que não têm documentação. No commit avaliado eram 22 de 52, por exemplo `initialState`, `onMount`, `onExport` e `aiEnabled`, listadas em [`M1.2.2_propriedades.csv`](../../dados/fase-04/brutos/M1.2.2_propriedades.csv). No ramo principal, em 16/11/2026, a interface tem 53 propriedades, com a nova `renderEnvironment`, e as mesmas 30 documentadas (56,6%).
 
-**Justificativa:** M1.2.2 vale 57,69% (30 de 52), no nível `-`. Com mais 12 propriedades documentadas, o valor chega a 80,77% (42 de 52), no nível `+`. Q1.2 passa então para média 2,5, nível `-`, e G1 para média 3,1, nível `o`, sem nenhuma questão em `--`. Pelo [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica), G1 passa a **atender**. Com 20 propriedades, M1.2.2 chega ao nível `++` e Q1.2 ao nível `o`. M1.2.1 teria o mesmo efeito, mas exigiria uma mudança grande na arquitetura dos pacotes.
+**Tipo:** templates técnicos, que a especificação indica quando o problema é ausência ou fragilidade da documentação [[1, p. 3]](#ref-1). A ação disponibiliza o [modelo de documentação de propriedade](#3-modelo-de-documentação-de-propriedade) e o aplica às propriedades sem documentação em um *pull request* para o Excalidraw, nas páginas de propriedades e nos comentários JSDoc do tipo.
 
-A lacuna continua no ramo principal do Excalidraw. Em 15/11/2026, pelo menos 19 das 22 propriedades não aparecem nas páginas de `dev-docs/docs/@excalidraw/excalidraw/api/props/`.
+**Justificativa:** com 80% ou mais, M1.2.2 chega ao nível `+`. Q1.2 passa então para média 2,5, nível `-`, e G1 para média 3,1, nível `o`, sem nenhuma questão em `--`. Pelo [julgamento](../fase-02/pontuacao-julgamento.md#71-julgamento-de-cada-característica), G1 passa a **atender**. Com 95% ou mais, M1.2.2 chega ao nível `++` e Q1.2 ao nível `o`. M1.2.1 teria o mesmo efeito, mas exigiria uma mudança grande na arquitetura dos pacotes.
+
+**Critério de sucesso:** M1.2.2, medida de novo na base do *pull request* pelo procedimento da [ficha](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas), chega a **80% ou mais**, com meta de 100%. As propriedades são contadas de novo, porque `packages/excalidraw/types.ts` mudou depois do commit avaliado (`e1b7aac`), e o resultado registra essa diferença de base.
+
+### 2.2 Recusar na importação arquivos sem elementos válidos (M2.3.1)
+
+**Ação:** fazer o editor mostrar a mensagem de arquivo inválido quando o arquivo `.excalidraw` tem elementos, mas nenhum deles sobrevive à restauração. Hoje a validação só confere o `type` do arquivo, a lista `elements` e o objeto `appState`. Elementos sem `type`, como os de `invalido_05`, são descartados em silêncio e a cena abre vazia. Coordenadas que não são números, como as de `invalido_06`, passam pela restauração, porque o valor padrão só substitui campos ausentes. A posição de rolagem vira um valor não numérico e a primeira forma desenhada deixa a tela branca.
+
+**Tipo:** modificação no código, que a especificação indica para problemas técnicos objetivos, como confiabilidade [[1, p. 3]](#ref-1). A mudança fica em `packages/excalidraw/data/blob.ts`, reaproveita a mensagem que o editor já mostra para arquivos inválidos e leva um teste de interface.
+
+**Justificativa:** M2.3.1 é o ponto de atenção de G2 com efeito mais direto no usuário. Ela não muda o julgamento, porque G2 já atende, mas leva Q2.3 de 4,0 para 4,5 com 8 de 9 arquivos tratados, ou para 5,0 com 9 de 9. A correção da geometria e da rolagem já está proposta por outro contribuidor nos *pull requests* abertos [#11990](https://github.com/excalidraw/excalidraw/pull/11990) e [#11991](https://github.com/excalidraw/excalidraw/pull/11991). Sem uma regra de recusa, porém, os dois arquivos continuam abrindo sem mensagem. A ação da equipe é só essa regra.
+
+**Critério de sucesso:** `invalido_05` passa a ser tratado só com a regra da equipe, levando M2.3.1 a 8 de 9 (`+`). Numa base que junta a regra aos *pull requests* #11990 e #11991, M2.3.1 chega a **9 de 9** (`++`). A coleta repete o procedimento da [ficha](../fase-02/gqm-confiabilidade.md#m231-proporção-de-arquivos-inválidos-tratados-com-mensagem) com os mesmos nove arquivos, automatizada no navegador, e o resultado registra a mudança de procedimento e de base.
+
+### 2.3 Oportunidades não escolhidas
+
+A ação de [M3.4.3](../fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados), proposta por Maria Eduarda na coleta de G3, documentaria em `dev-docs/docs/codebase/json-schema.mdx` os 38 campos listados em [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv), criaria o esquema formal `packages/excalidraw/schema/excalidraw.schema.json` e verificaria na CI que um campo novo nos tipos atualiza o esquema. Ela não foi escolhida porque G3 já atende, a mudança completa exigiria discutir antes com os mantenedores [[3]](#ref-3) e a parte de documentação cairia numa página que não é mais publicada. O esquema formal continua sendo a forma mais completa de evitar falhas como as de M2.3.1.
+
+M2.1.3 depende de uma decisão de processo dos mantenedores e só poderia ser medida com seis meses de contribuições futuras.
 
 ---
 
-## 3. Critério de sucesso
+## 3. Modelo de documentação de propriedade
 
-Se escolhida, a ação dá certo se M1.2.2, medida de novo na base do *pull request*, chegar a **80% ou mais**, o valor em que G1 passa a atender. A meta é 100%. A nova medição segue o procedimento da [ficha de M1.2.2](../fase-02/gqm-manutenibilidade.md#m122-proporção-de-propriedades-públicas-documentadas) e conta de novo as propriedades de `ExcalidrawProps`, porque `packages/excalidraw/types.ts` mudou depois do fim da janela de coleta. O resultado registra que essa base é diferente do commit avaliado (`e1b7aac`).
+Cada propriedade de `ExcalidrawProps` é documentada com quatro campos:
+
+<p className="tabela-titulo">Tabela 4: Campos do modelo de documentação de propriedade</p>
+
+| Campo | Conteúdo |
+| :--- | :--- |
+| Tipo | O tipo declarado em `ExcalidrawProps`, ou a assinatura da função para *callbacks*. |
+| Valor padrão | O valor que o componente usa quando a propriedade é omitida. Só é preenchido quando o código define um. |
+| Descrição | O propósito da propriedade e quando ela é lida, por exemplo só na montagem ou a cada renderização, tirados do código que a usa. |
+| Exemplo | Um uso curto em JSX, quando o tipo sozinho não mostra como usar a propriedade. |
+
+<p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
+
+O modelo é aplicado em dois lugares. Na documentação para desenvolvedores, cada propriedade ganha uma linha na tabela de `dev-docs/docs/@excalidraw/excalidraw/api/props/props.mdx`, com nome, tipo, valor padrão e descrição curta, e uma seção própria com a descrição completa. No código, ganha um comentário JSDoc em `packages/excalidraw/types.ts`, que vai para as definições de tipo publicadas no pacote e aparece no editor de quem integra a biblioteca. Para a propriedade `theme`, já documentada, o modelo fica assim:
+
+```md
+| [`theme`](#theme) | `"light"` &#124; `"dark"` | `"light"` | The theme of the Excalidraw component |
+```
+
+```ts
+/**
+ * The theme of the Excalidraw component. When supplied, it takes precedence
+ * over `initialData.appState.theme`.
+ * @default "light"
+ * @example <Excalidraw theme="dark" />
+ */
+theme?: Theme;
+```
 
 ---
 
-## 4. Tamanho da mudança
+## 4. Documentação oficial fora do repositório
 
-A mudança altera só a documentação, nas páginas de propriedades da API, sem tocar no código. O guia de contribuição do Excalidraw pede uma issue antes só para mudanças grandes e aceita alterações apenas de documentação com o prefixo `docs` no título [[3]](#ref-3). Por isso, a ação é tratada como um *pull request* pequeno, sem issue prévia. Depois da decisão da equipe, a execução é feita na [execução da ação de melhoria](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/issues/119), que registra o resultado nesta página.
+A documentação para desenvolvedores do Excalidraw mudou para `plus.excalidraw.com/docs/sdk`. O `README.md` da pasta `dev-docs`, no ramo principal em 17/11/2026, avisa que todas as páginas antigas redirecionam para o endereço novo e que mudanças na pasta não são mais publicadas [[4]](#ref-4). O site novo não indica onde fica o seu código-fonte.
 
----
-
-## 5. Segunda recomendação
-
-Como alternativa para a decisão da equipe, fica a ação proposta por Maria Eduarda na coleta de G3 para [M3.4.3](../fase-02/gqm-flexibilidade.md#m343-proporção-dos-campos-do-formato-excalidraw-documentados). Ela tem três partes:
-
-1. Documentar em `dev-docs/docs/codebase/json-schema.mdx` os 38 campos sem documentação listados em [`M3.4.3_conferencia_campos.csv`](../../dados/fase-04/brutos/Q3.4-substituibilidade/M3.4.3_conferencia_campos.csv). O exemplo da página ainda resume os elementos com `/* ...other element properties */` no ramo principal em 15/11/2026.
-2. Criar o esquema formal `packages/excalidraw/schema/excalidraw.schema.json`, em JSON Schema, que o repositório ainda não tem.
-3. Verificar na CI que um campo novo nos tipos do TypeScript atualiza o esquema.
-
-Só a primeira parte já leva M3.4.3 de 26,9% para 100%, no nível `++`. Q3.4 passa de 3,7 para 4,7, e G3 de 3,9 para 4,1, que continua no nível `+`. O esquema e a verificação na CI mantêm a documentação em dia depois da mudança.
-
-Ela não é a primeira proposta por dois motivos. G3 já atende, e a mudança completa é grande, porque cria um arquivo novo no repositório e uma verificação automática. Por isso, exigiria discutir antes com os mantenedores [[3]](#ref-3). Se a equipe preferir uma ação em G3 que caiba em um *pull request* pequeno, a primeira parte, sozinha, cumpre esse papel.
+Isso não muda a medição de M1.2.2, cuja ficha conta as páginas da pasta `dev-docs`, mas limita o alcance da documentação escrita ali. Por isso a ação de M1.2.2 também documenta as propriedades no JSDoc, que chega a quem usa o pacote, e o *pull request* pergunta aos mantenedores onde contribuir com o site novo. A mesma limitação vale para as melhorias de M3.4.3 e de M3.3.2, que também mudam páginas da pasta `dev-docs`.
 
 ---
 
@@ -104,7 +152,9 @@ Ela não é a primeira proposta por dois motivos. G3 já atende, e a mudança co
 >
 > <Link id="ref-2">2.</Link> RAMOS, Cristiane Soares. **AULA 08 QSW1 GQM**. Material da disciplina de Qualidade de Software 1, FCTE/UnB, 2026. Página 60. Disponível no Moodle da disciplina.
 >
-> <Link id="ref-3">3.</Link> EXCALIDRAW. Contributing. *Excalidraw developer docs*. Seções "Contributing" e "Title". Disponível em: [https://docs.excalidraw.com/docs/introduction/contributing](https://docs.excalidraw.com/docs/introduction/contributing). Acesso em: 15 nov. 2026.
+> <Link id="ref-3">3.</Link> EXCALIDRAW. Contributing. *Excalidraw SDK docs*. Disponível em: [https://plus.excalidraw.com/docs/sdk/contributing](https://plus.excalidraw.com/docs/sdk/contributing). Acesso em: 18 nov. 2026.
+>
+> <Link id="ref-4">4.</Link> EXCALIDRAW. dev-docs/README.md. *Repositório excalidraw/excalidraw*, commit `9fbeaed`. Disponível em: [https://github.com/excalidraw/excalidraw/blob/9fbeaed54aaad8dc06d32ba176a9bc20fb827109/dev-docs/README.md](https://github.com/excalidraw/excalidraw/blob/9fbeaed54aaad8dc06d32ba176a9bc20fb827109/dev-docs/README.md). Acesso em: 18 nov. 2026.
 
 ---
 
@@ -114,3 +164,4 @@ Ela não é a primeira proposta por dois motivos. G3 já atende, e a mudança co
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 15/11/2026 | Criação da proposta de oportunidades de G1 e G3, dos pontos de atenção de G3 levantados por Maria Eduarda, da ação proposta, do critério de sucesso e da avaliação do tamanho | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.1 | 17/11/2026 | Correção da proposta para M3.1.2, que tratava a desativação do SSR como alternativa às falhas de hooks e de runtime JSX, conforme a revisão do PR | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 18/11/2026 | Inclusão das oportunidades e dos pontos de atenção de G2, registro das duas ações escolhidas (M1.2.2 e M2.3.1) com critérios de sucesso, modelo de documentação de propriedade e nota sobre a mudança da documentação oficial | [Christopher Paraizo](https://github.com/wChrstphr) | |
