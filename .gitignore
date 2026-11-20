@@ -34,6 +34,7 @@ yarn-error.log*
 
 # Material de aula (somente local, não versionar)
 /material-aula/
+/slides_imagens/
 # Python
 __pycache__/
 *.py[cod]
