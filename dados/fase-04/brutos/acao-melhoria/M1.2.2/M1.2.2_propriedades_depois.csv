@@ -1,0 +1,54 @@
+propriedade,documentada,arquivo-e-secao,trecho
+className,sim,docs/@excalidraw/excalidraw/api/children-components/sidebar.mdx:14,| `className` | `string` | No |  |
+ownerDocument,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:49,"| [`ownerDocument`](#ownerdocument) | `Document` | `document` | Document that owns the editor's DOM, when it differs fro"
+renderEnvironment,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:50,| [`renderEnvironment`](#renderenvironment) | `object` | Built from `ownerDocument` | Host environment used to create ca
+onChange,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:17,| [`onChange`](#onchange) | `function` | \_ | This callback is triggered whenever the component updates due to any chang
+onThemeChange,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:41,| [`onThemeChange`](#onthemechange) | `function` | \_ | Callback triggered when the user changes the theme. When supplie
+onIncrement,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:18,| [`onIncrement`](#onincrement) | `function` | \_ | Callback triggered with each change captured by the editor's store. 
+initialData,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:7,| [`initialData`](/docs/@excalidraw/excalidraw/api/props/initialdata) | `object` &#124; `null` &#124; <code>Promise<obje
+initialState,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:8,| [`initialState`](#initialstate) | `object` | \_ | Initial editor state that isn't part of the scene data. Currently su
+onExcalidrawAPI,sim,"dev-docs/docs/@excalidraw/excalidraw/api/props/excalidraw-api.mdx (página excalidrawAPI) e linha excalidrawAPI da tabela de props.mdx. A página usa o nome anterior da prop, com a mesma assinatura (api) => void (página sem alteração, mesmo julgamento da contagem antes)","Callback triggered with the excalidraw api once rendered. Once the callback is triggered, you will need to store the api in state to access it later."
+onMount,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:10,| [`onMount`](#onmount) | `function` | \_ | Callback triggered once the editor root is mounted. |
+onUnmount,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:12,| [`onUnmount`](#onunmount) | `function` | \_ | Callback triggered when the editor root is unmounted. |
+onInitialize,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:11,| [`onInitialize`](#oninitialize) | `function` | \_ | Callback triggered once the initial scene is loaded. |
+isCollaborating,sim,docs/@excalidraw/excalidraw/api/children-components/live-collaboration-trigger.mdx:10,| `isCollaborating` | `boolean` | Yes | false | Whether live collaboration session is in effect. Modifies button style. 
+onPointerUpdate,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:19,| [`onPointerUpdate`](#onpointerupdate) | `function` | \_ | Callback triggered when mouse pointer is updated. |
+onPaste,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:22,| [`onPaste`](#onpaste) | `function` | \_ | Callback to be triggered if passed when something is pasted into the scene |
+onDuplicate,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:23,"| [`onDuplicate`](#onduplicate) | `function` | \_ | Callback triggered when elements are duplicated, which can modify or"
+renderTopLeftUI,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:29,| [`renderTopLeftUI`](#rendertopleftui) | `function` | \_ | Render function that renders custom UI in top left corner |
+renderTopRightUI,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:30,| [`renderTopRightUI`](/docs/@excalidraw/excalidraw/api/props/render-props#rendertoprightui) | `function` | \_ | Render 
+langCode,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:28,| [`langCode`](#langcode) | `string` | `en` | Language code string to be used in Excalidraw |
+viewModeEnabled,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:32,| [`viewModeEnabled`](#viewmodeenabled) | `boolean` | \_ | This indicates if the app is in `view` mode. |
+interaction,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:33,"| [`interaction`](#interaction) | `boolean` &#124; `object` | `true` | Whether the editor accepts user input, or which i"
+ui,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:34,"| [`ui`](#ui) | `boolean` &#124; `object` | `true` | Whether Excalidraw's default UI is rendered, or which default contr"
+activeTool,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:35,"| [`activeTool`](#activetool) | `object` | \_ | Forces the active tool, taking tool control away from the user. |"
+zenModeEnabled,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:36,| [`zenModeEnabled`](#zenmodeenabled) | `boolean` | \_ | This indicates if the `zen` mode is enabled |
+gridModeEnabled,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:37,| [`gridModeEnabled`](#gridmodeenabled) | `boolean` | \_ | This indicates if the `grid` mode is enabled |
+objectsSnapModeEnabled,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:38,| [`objectsSnapModeEnabled`](#objectssnapmodeenabled) | `boolean` | \_ | Intended to indicate if snapping to objects is 
+libraryReturnUrl,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:39,| [`libraryReturnUrl`](#libraryreturnurl) | `string` | \_ | What URL should [libraries.excalidraw.com](https://libraries
+theme,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:40,"| [`theme`](#theme) | `""light""` &#124; `""dark""` | `""light""` | The theme of the Excalidraw component |"
+name,sim,docs/@excalidraw/excalidraw/api/children-components/sidebar.mdx:9,| `name` | `string` | Yes | Sidebar name that uniquely identifies it. |
+renderCustomStats,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:31,| [`renderCustomStats`](/docs/@excalidraw/excalidraw/api/props/render-props#rendercustomstats) | `function` | \_ | Rende
+UIOptions,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:43,| [`UIOptions`](/docs/@excalidraw/excalidraw/api/props/ui-options) | `object` | [DEFAULT UI OPTIONS](https://github.com/
+imageOptions,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:44,"| [`imageOptions`](#imageoptions) | `object` | `{ maxWidthOrHeight: 1440, maxFileSizeBytes: 4194304 }` | Size constraint"
+detectScroll,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:45,| [`detectScroll`](#detectscroll) | `boolean` | `true` | Indicates whether to update the offsets when nearest ancestor i
+handleKeyboardGlobally,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:46,| [`handleKeyboardGlobally`](#handlekeyboardglobally) | `boolean` | `false` | Indicates whether to bind the keyboard eve
+onLibraryChange,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:25,| [`onLibraryChange`](#onlibrarychange) | `function` | \_ | The callback if supplied is triggered when the library is up
+autoFocus,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:47,| [`autoFocus`](#autofocus) | `boolean` | `false` | Indicates whether to focus the Excalidraw component on page load |
+generateIdForFile,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:51,| [`generateIdForFile`](#generateidforfile) | `function` | \_ | Allows you to override `id` generation for files added o
+generateLinkForSelection,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:26,| [`generateLinkForSelection`](#generatelinkforselection) | `function` | \_ | Allows you to override `url` generation wh
+onLinkOpen,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:27,| [`onLinkOpen`](#onlinkopen) | `function` | \_ | The callback if supplied is triggered when any link is opened. |
+onPointerDown,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:20,| [`onPointerDown`](#onpointerdown) | `function` | \_ | This prop if passed gets triggered on pointer down events |
+onPointerUp,sim,"dev-docs/docs/@excalidraw/excalidraw/api/props/excalidraw-api.mdx#onpointerup, descrito como método de inscrição da API com o mesmo propósito da prop (página sem alteração, mesmo julgamento da contagem antes)",Subscribes to canvas pointerup events.
+onScrollChange,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:21,| [`onScrollChange`](#onscrollchange) | `function` | \_ | This prop if passed gets triggered when scrolling the canvas. 
+onUserFollow,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:15,| [`onUserFollow`](#onuserfollow) | `function` | \_ | Callback triggered when the user asks to follow or stop following 
+children,sim,docs/@excalidraw/excalidraw/api/children-components/main-menu.mdx:42,| `children` | `React.ReactNode` | Yes | - | The content of the menu item |
+validateEmbeddable,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:52,| [`validateEmbeddable`](#validateembeddable) | `string[]` \| `boolean` \| `RegExp` \| `RegExp[]` \| <code>((link: strin
+renderEmbeddable,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:53,| [`renderEmbeddable`](/docs/@excalidraw/excalidraw/api/props/render-props#renderEmbeddable) | `function` | \_ | Render 
+aiEnabled,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:54,| [`aiEnabled`](#aienabled) | `boolean` | `true` | Indicates whether the AI features are shown in the UI. |
+showDeprecatedFonts,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:55,| [`showDeprecatedFonts`](#showdeprecatedfonts) | `boolean` | \_ | Indicates whether deprecated fonts are listed in the 
+renderScrollbars,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:57,| `renderScrollbars` | `boolean` | `false` | Indicates whether scrollbars will be shown |
+viewportStatusFrame,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:56,| [`viewportStatusFrame`](#viewportstatusframe) | `object` &#124; `null` | \_ | A colored border around the viewport and
+currentUserControls,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:16,| [`currentUserControls`](#currentusercontrols) | `ReactNode` &#124; `function` | \_ | Custom UI rendered in the collabo
+userToFollow,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:14,"| [`userToFollow`](#usertofollow) | `object` &#124; `null` | \_ | The collaborator being followed on the canvas, control"
+onExport,sim,docs/@excalidraw/excalidraw/api/props/props.mdx:24,"| [`onExport`](#onexport) | `function` | \_ | Callback triggered before the scene is saved to a file, which can delay th"

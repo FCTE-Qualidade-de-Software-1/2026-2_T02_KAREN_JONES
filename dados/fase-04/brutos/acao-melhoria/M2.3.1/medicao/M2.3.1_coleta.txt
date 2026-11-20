@@ -1,0 +1,6 @@
+commit: a176e93557c990aa2012563e280d4d15ad800f65
+url: http://127.0.0.1:3103
+inicio: 2026-11-18T10:36:02-03:00
+fim: 2026-11-18T10:37:42-03:00
+navegador: Firefox 159.0 (Playwright 1.65.2, headless)
+resultado: 8 de 9 casos tratados (88.89%)

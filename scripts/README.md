@@ -132,3 +132,16 @@ python3 scripts/analisa_metricas.py
 ```
 
 As linhas de outros grupos que já estiverem nos três arquivos são mantidas, e `metricas.csv` não é alterado.
+
+## Coleta de M2.3.1 com Playwright
+
+O script [`coleta_m231_playwright.py`](coleta_m231_playwright.py) repete a coleta de M2.3.1 no Firefox, sem interface. Para cada arquivo de `dados/fase-03/massa-de-dados/invalidos/`, abre o arquivo pelo menu e arrastando, registra a mensagem exibida, desenha um retângulo, insere um texto e salva as capturas. O editor precisa estar rodando em modo de desenvolvimento, que expõe a cena ao script. Na pasta do clone do Excalidraw e depois na raiz deste repositório:
+
+```bash
+cd excalidraw-app && npx vite --port 3000
+python3 -m playwright install firefox
+python3 scripts/coleta_m231_playwright.py --url http://localhost:3000 \
+    --saida dados/fase-04/brutos/acao-melhoria/M2.3.1/antes --commit <sha>
+```
+
+Grava `M2.3.1_tentativas.csv`, `M2.3.1_casos.csv`, `M2.3.1_coleta.txt` e a pasta `prints/` em `--saida`.

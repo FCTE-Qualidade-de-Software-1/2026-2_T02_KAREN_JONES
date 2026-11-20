@@ -726,6 +726,11 @@ O diagnóstico global evidencia que o Excalidraw atende com excelência às exig
 
 Em cumprimento ao propósito avaliativo formulado na Fase 1, de orientar intervenções técnicas fundamentadas em evidências empíricas, a equipe mapeou os sete pontos de melhoria situados nos níveis Ruim e Muito Ruim. Entre as oportunidades identificadas, selecionou-se como ação prioritária a documentação formal das propriedades públicas de interface do componente principal da biblioteca (métrica M1.2.2 da subcaracterística de Reusabilidade). As medições revelaram que 42,31\% das propriedades de configuração pública não possuem documentação técnica no repositório. Por se tratar de intervenção cirúrgica de baixo risco em documentação técnica e tipagem, sua regularização é a única ação pontual capaz de elevar a pontuação de Q1.2 de Muito Ruim (\texttt{--}) para Regular (\texttt{o}), viabilizando que a característica de Manutenibilidade atinja o veredicto de atendimento aos critérios de qualidade.
 
+\subsection{Ações de Melhoria}
+\label{sec:acoes-melhoria}
+
+Entre os pontos de melhoria, a equipe executou duas ações, enviadas ao Excalidraw como \textit{pull requests} e medidas na base \texttt{9fbeaed}, de 17/11/2026. A primeira documenta as propriedades de \texttt{ExcalidrawProps} que faltavam na referência da biblioteca (\url{https://github.com/excalidraw/excalidraw/pull/12673}). Com ela, M1.2.2 passa de 30 para 53 de 53 propriedades documentadas (56,6\% para 100\%), Q1.2 sobe de Muito Ruim para Regular e a média de G1 vai a 3,2, sem nenhuma questão em Muito Ruim, o que faria a Manutenibilidade atender. A segunda faz o editor recusar com mensagem os arquivos \texttt{.excalidraw} em que nenhum elemento sobrevive à restauração (\url{https://github.com/excalidraw/excalidraw/pull/12674}). Somada a duas correções abertas por outro contribuidor, ela leva M2.3.1 de 6 para 8 dos 9 arquivos inválidos tratados e Q2.3 a 4,5, sem mudar o julgamento da Confiabilidade, que já atende. O nono arquivo, um PNG sem cena arrastado para o editor, é inserido como imagem por decisão do projeto. A coleta original o registrara como tratado, embora a própria captura mostre a imagem inserida, e a correção mantém M2.3.1 no nível Regular no commit avaliado.
+
 % ================================================================
 \section{Conclusão}
 \label{sec:conclusao}
