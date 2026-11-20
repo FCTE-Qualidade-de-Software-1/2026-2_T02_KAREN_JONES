@@ -123,19 +123,19 @@ A consolidação da **Entrega 2 (Fase 3 + Fase 4)** abrange o planejamento exper
 
 ### 3.3. Balanço Consolidado de Esforço e Custo no Projeto (Fases 1 a 4)
 
-No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 249,96 horas reais executadas frente a 270,00 horas estimadas, totalizando R$ 11.248,20 em custo real apurado à taxa horária de R$ 45,00. A tabela a seguir sintetiza a contribuição individual acumulada em todo o repositório, extraída de [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv):
+No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 260,16 horas reais executadas frente a 274,00 horas estimadas, totalizando R$ 11.707,20 em custo real apurado à taxa horária de R$ 45,00. A tabela a seguir sintetiza a contribuição individual acumulada em todo o repositório, extraída de [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv):
 
 <p className="tabela-titulo">Tabela 5: Distribuição de esforço acumulado e custo total no projeto (Fases 1 a 4)</p>
 
 | Integrante | Login GitHub | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Custo Real (R$) | Commits | PRs Abertos | Esforço Real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Christopher** | `@wChrstphr` | 28 | 71,50 | 39,95 | R$ 1.797,75 | 154 | 24 | **15,98%** |
-| **Davi Pierre** | `@DaviPierre` | 14 | 38,00 | 37,00 | R$ 1.665,00 | 13 | 6 | **14,80%** |
-| **Gabriel Monteiro** | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | R$ 2.565,00 | 69 | 16 | **22,80%** |
-| **Letícia de Carvalho** | `@LeticiaSantosss` | 17 | 31,50 | 27,91 | R$ 1.255,95 | 16 | 11 | **11,17%** |
-| **Luiz Henrique Soares** | `@luizh-gsoares` | 15 | 32,00 | 32,90 | R$ 1.480,50 | 38 | 16 | **13,16%** |
-| **Maria Eduarda** | `@eduarda-ogomes` | 20 | 47,50 | 55,20 | R$ 2.484,00 | 71 | 15 | **22,08%** |
-| **Total do Projeto** | **Equipe** | **97 (112 atrib.)** | **270,00** | **249,96** | **R$ 11.248,20** | **321** | **88** | **100,00%** |
+| **Christopher** | `@wChrstphr` | 29 | 75,50 | 52,65 | R$ 2.369,25 | 158 | 28 | **20,24%** |
+| **Davi Pierre** | `@DaviPierre` | 14 | 38,00 | 37,00 | R$ 1.665,00 | 13 | 6 | **14,22%** |
+| **Gabriel Monteiro** | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | R$ 2.565,00 | 69 | 16 | **21,91%** |
+| **Letícia de Carvalho** | `@LeticiaSantosss` | 17 | 31,50 | 29,41 | R$ 1.323,45 | 16 | 11 | **11,30%** |
+| **Luiz Henrique Soares** | `@luizh-gsoares` | 15 | 32,00 | 32,90 | R$ 1.480,50 | 38 | 16 | **12,65%** |
+| **Maria Eduarda** | `@eduarda-ogomes` | 20 | 47,50 | 51,20 | R$ 2.304,00 | 77 | 16 | **19,68%** |
+| **Total do Projeto** | **Equipe** | **97 (113 atrib.)** | **274,00** | **260,16** | **R$ 11.707,20** | **371** | **93** | **100,00%** |
 
 <p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/04_contribuicao_individual.csv</code>, 2026.</p>
 
@@ -245,4 +245,5 @@ Para assegurar auditabilidade completa, todos os dados apresentados neste painel
 | 1.1 | 09/11/2026 | Taxa de revisão por pares das Fases 1 e 2 recalculada pela coleta automática de PRs | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.2 | 18/11/2026 | Atualização dos dados consolidados das Fases 1 a 4 e inclusão da seção de insights sobre prazos individuais por issue e evolução entre as fases | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.3 | 18/11/2026 | Inclusão dos recursos e custos da Entrega 2, balanço acumulado do projeto e gráficos de esforço individual | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.4 | 20/11/2026 | Alinhamento da Tabela 5 com a coleta final de métricas PSM/CID (260,16h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 
