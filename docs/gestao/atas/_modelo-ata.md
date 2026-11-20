@@ -1,5 +1,5 @@
 ---
-title: Ata — AAAA-MM-DD
+title: "Ata: DD/MM/AAAA (Assunto)"
 description: Reunião de <assunto>
 ---
 
@@ -8,11 +8,11 @@ Modelo de ata. Copie este arquivo para `AAAA-MM-DD-assunto.md` (sem o "_" inicia
 e preencha os campos. Arquivos iniciados por "_" não são publicados no GitPage.
 -->
 
-# Ata da reunião — DD/MM/AAAA
+# Ata da reunião: DD/MM/AAAA
 
 | Campo | Valor |
 | :--- | :--- |
-| **Data e horário** | DD/MM/AAAA, HHhMM–HHhMM |
+| **Data e horário** | DD/MM/AAAA, HHhMM às HHhMM |
 | **Local** | Presencial / remoto (ferramenta) |
 | **Fase** | Fase N |
 | **Redator(a)** | Nome |
@@ -20,7 +20,7 @@ e preencha os campos. Arquivos iniciados por "_" não são publicados no GitPage
 
 ## Participantes
 
-- [ ] Christopher
+- [ ] Christopher Paraizo
 - [ ] Davi Pierre
 - [ ] Gabriel Monteiro
 - [ ] Letícia de Carvalho
@@ -46,3 +46,9 @@ e preencha os campos. Arquivos iniciados por "_" não são publicados no GitPage
 | Tarefa | Responsável | Prazo | Issue |
 | :--- | :--- | :--- | :--- |
 | | | | #N |
+
+## Histórico de Versões
+
+| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| :---: | :---: | :--- | :--- | :--- |
+| 1.0 | DD/MM/AAAA | Registro da ata | [Nome](https://github.com/login) | |

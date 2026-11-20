@@ -73,7 +73,7 @@ Conjunto de 9 arquivos usados em [M2.3.1](../../docs/fase-02/gqm-confiabilidade.
 
 ## 4. Conjunto de reabertura (`reabertura/`)
 
-Conjunto fixo de 7 entradas da [M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda). O uso de cada entrada na coleta segue a [instrução de G2 para a M2.4.2](../../docs/fase-03/instrucoes-g2-confiabilidade.md#m242--reabertura-dos-sete-arquivos-sem-perda).
+Conjunto fixo de 7 entradas da [M2.4.2](../../docs/fase-02/gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda). O uso de cada entrada na coleta segue a [instrução de G2 para a M2.4.2](../../docs/fase-03/instrucoes-g2-confiabilidade.md#53-m242-proporção-de-arquivos-reabertos-sem-perda).
 
 Os casos c2 a c5 são a cena de referência aberta e salva pela interface de cada versão antiga, construída a partir da marcação (*tag*) do repositório do Excalidraw. O script só aciona a interface e nunca escreve esses arquivos, e o campo `source` de cada um traz o endereço da versão que o salvou. Os casos c6 e c7 são os PNGs de exemplo do commit avaliado, sem alteração de bytes. A cena incorporada em cada PNG foi extraída para `c6_referencia.excalidraw` e `c7_referencia.excalidraw`, que servem de referência na comparação no lugar dos pixels da prévia.
 
@@ -141,3 +141,4 @@ O `--verificar` confere a presença das 7 entradas, das cenas extraídas e do ma
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 08/11/2026 | Documentação da massa de dados de G2 e G3 | [Gabriel Santos](https://github.com/gabriel-nitro) | |
 | 1.1 | 15/11/2026 | Inclusão do conjunto de reabertura da M2.4.2 e dos comandos para recriá-lo | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.2 | 18/11/2026 | Revisão de coerência e cross-links: link à M2.4.2 nas instruções de G2 | [Christopher Paraizo](https://github.com/wChrstphr) |  |

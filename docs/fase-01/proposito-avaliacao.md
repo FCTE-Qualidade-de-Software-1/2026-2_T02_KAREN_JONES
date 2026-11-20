@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Estabelecer o propósito é a primeira atividade da fase de requisitos da avaliação da ISO/IEC 25040 [[1, p. 4]](#ref-1). O objetivo e os requisitos da avaliação dependem da necessidade de quem a solicita [[1, p. 5]](#ref-1). Esta página declara por que o Excalidraw é avaliado, o objetivo da avaliação, quem a requisita, quem se beneficia dos resultados e que decisões eles apoiam. O produto, no commit `e1b7aac` do repositório oficial, está identificado em [Tipo de produto](./tipo-produto.md#1-identificação-e-versão-analisada).
+Estabelecer o propósito é a primeira atividade da fase de requisitos da avaliação da ISO/IEC 25040 [[1, p. 4]](#ref-1). O objetivo e os requisitos da avaliação dependem da necessidade de quem a solicita [[1, p. 5]](#ref-1). O propósito declara por que o Excalidraw é avaliado, o objetivo da avaliação, quem a requisita, quem se beneficia dos resultados e que decisões eles apoiam. O produto, no commit `e1b7aac` do repositório oficial, está identificado em [Tipo de produto](./tipo-produto.md#1-identificação-e-versão-analisada).
 
 ## Metodologia
 
@@ -106,3 +106,4 @@ Os resultados ficarão publicados neste site como relatório técnico acadêmico
 | :---: | :---: | :--- | :--- | :--- |
 | 1.0 | 18/10/2026 | Elaboração inicial do documento de propósito da avaliação | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.1 | 10/11/2026 | Introdução e Metodologia, retirada da citação ao critério da disciplina, identificação do produto substituída por link ao tipo de produto com o commit avaliado, meta do protótipo alinhada à ação de melhoria da Fase 04, tabelas com título e fonte e normas convertidas em referências numeradas | [Christopher Paraizo](https://github.com/wChrstphr) | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) |
+| 1.2 | 18/11/2026 | Revisão de coerência e cross-links: introdução com o objetivo direto | [Christopher Paraizo](https://github.com/wChrstphr) | |

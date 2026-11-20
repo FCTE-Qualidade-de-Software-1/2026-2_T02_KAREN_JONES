@@ -10,7 +10,7 @@ import Link from '@docusaurus/Link';
 
 ## Introdução
 
-Os objetivos e os requisitos de uma avaliação dependem dos pontos de vista dos diferentes usuários do produto, como comprador, fornecedor, desenvolvedor e operador [[1, p. 5]](#ref-1). Esta página mapeia os grupos interessados no Excalidraw, o que cada um espera do produto e como suas necessidades orientaram a escolha das características e subcaracterísticas avaliadas. O Excalidraw é uma ferramenta web de código aberto usada por desenvolvedores, designers, professores, estudantes e equipes de engenharia em contextos diferentes, o que torna esse mapeamento especialmente relevante.
+Os objetivos e os requisitos de uma avaliação dependem dos pontos de vista dos diferentes usuários do produto, como comprador, fornecedor, desenvolvedor e operador [[1, p. 5]](#ref-1). O mapeamento identifica os grupos interessados no Excalidraw, o que cada um espera do produto e como suas necessidades orientaram a escolha das características e subcaracterísticas avaliadas. O Excalidraw é uma ferramenta web de código aberto usada por desenvolvedores, designers, professores, estudantes e equipes de engenharia em contextos diferentes, o que torna esse mapeamento especialmente relevante.
 
 ## Metodologia
 
@@ -22,7 +22,7 @@ Para cada grupo, a equipe descreveu quem são seus membros, listou as subcaracte
 
 São as pessoas que abrem o Excalidraw no navegador para criar diagramas, esboços e apresentações. Podem estar sozinhos ou colaborando em tempo real com outras pessoas. Usam mouse, teclado, toque na tela ou caneta dependendo do dispositivo.
 
-Para esse grupo, o que importa é simples: a ferramenta precisa funcionar. Os desenhos precisam ser salvos. Se a conexão cair, o trabalho não pode ser perdido. Se outra pessoa está editando ao mesmo tempo, os conflitos precisam ser resolvidos sem surpresas desagradáveis.
+Para esse grupo, a exigência básica é que a ferramenta funcione. Os desenhos precisam ser salvos. Se a conexão cair, o trabalho não pode ser perdido. Se outra pessoa está editando ao mesmo tempo, os conflitos precisam ser resolvidos sem surpresas desagradáveis.
 
 Os aspectos da avaliação mais relevantes para os usuários finais são:
 
@@ -46,8 +46,9 @@ Os aspectos mais relevantes para quem desenvolve:
 - **Analisabilidade**: a estrutura de diretórios é clara? Os nomes das funções e componentes comunicam o que fazem? Há documentação de arquitetura e convenções?
 - **Modificabilidade**: quando alguém muda um componente, quantas outras partes são afetadas? O histórico de pull requests mostra mudanças com alcance previsível ou cheias de surpresas?
 - **Testabilidade**: os testes existem, são isolados e cobrem os cenários mais críticos?
+- **Ausência de falhas**: os defeitos relatados chegam com informação suficiente para a correção, e as correções vêm acompanhadas de testes de regressão?
 
-Para os desenvolvedores do projeto, **manutenibilidade é a prioridade principal**.
+Para os desenvolvedores do projeto, **manutenibilidade é a prioridade principal**, com confiabilidade em papel secundário.
 
 **Influência nas escolhas:** esse grupo foi determinante para a inclusão de Manutenibilidade, especialmente Modularidade, Modificabilidade e Testabilidade. A estrutura monorepo do Excalidraw tornou essas subcaracterísticas ainda mais relevantes para a avaliação.
 
@@ -69,15 +70,16 @@ Para os mantenedores, **manutenibilidade e confiabilidade têm prioridade equiva
 
 São desenvolvedores externos que ocasionalmente contribuem com o projeto, corrigindo um bug, adicionando uma funcionalidade pequena ou melhorando a documentação. Eles não conhecem o repositório de cor e precisam conseguir se orientar a partir dos artefatos disponíveis.
 
-A primeira experiência importa muito aqui. Se levar horas para entender onde está o código relevante, configurar o ambiente ou descobrir como rodar os testes, muita gente desiste antes de enviar o pull request.
+A primeira experiência importa muito aqui. Se levar horas para entender onde está o código relevante, configurar o ambiente ou descobrir como rodar os testes, muitos contribuidores desistem antes de enviar o pull request.
 
 Os aspectos mais relevantes para contribuidores externos:
 
 - **Analisabilidade**: a estrutura do repositório é intuitiva? Existe um guia de contribuição útil? O lint e o TypeScript ajudam a detectar erros antes de submeter?
 - **Instalabilidade**: quais são os pré-requisitos para rodar o projeto localmente? As instruções de instalação funcionam na prática?
 - **Testabilidade e modificabilidade**: é fácil reproduzir o cenário que se quer corrigir e verificar que a mudança proposta não quebrou nada?
+- **Ausência de falhas**: a integração contínua barra regressões antes do merge, para que uma contribuição pontual não introduza defeitos que o contribuidor não perceberia?
 
-Para contribuidores open source, **manutenibilidade é a prioridade principal**.
+Para contribuidores open source, **manutenibilidade é a prioridade principal**, com confiabilidade e flexibilidade em papel secundário.
 
 **Influência nas escolhas:** esse grupo reforçou a importância de Analisabilidade e Instalabilidade. A barreira de entrada para novos contribuidores é um indicador direto de como o projeto lida com documentação e organização do código.
 
@@ -89,12 +91,13 @@ Esse grupo usa o pacote `@excalidraw/excalidraw` em suas próprias aplicações 
 
 Os aspectos mais relevantes para integradores:
 
-- **Reusabilidade**: a biblioteca realmente funciona de forma desacoplada da aplicação oficial? A API pública é clara e estável?
+- **Reusabilidade** (aspecto de Manutenibilidade): a biblioteca realmente funciona de forma desacoplada da aplicação oficial? A API pública é clara e estável?
 - **Adaptabilidade**: quais versões de React são suportadas? Funciona com diferentes empacotadores? Há problemas com renderização no servidor (SSR)?
 - **Instalabilidade**: é simples instalar, configurar e atualizar a biblioteca?
+- **Escalabilidade**: o componente mantém o desempenho quando a aplicação hospedeira abre desenhos grandes, com milhares de elementos?
 - **Substituibilidade**: se um projeto precisar trocar de ferramenta, consegue exportar os dados de um formato interoperável?
 
-Para os integradores da biblioteca, **flexibilidade é a prioridade principal**.
+Para os integradores da biblioteca, **flexibilidade é a prioridade principal**, com manutenibilidade e confiabilidade em papel secundário.
 
 ## 6. Equipes de implantação e operação
 
@@ -106,30 +109,32 @@ Os aspectos mais relevantes para equipes de operação:
 
 - **Instalabilidade**: o processo de build está documentado de forma clara? O Dockerfile funciona? Há configurações de ambiente que precisam ser ajustadas?
 - **Disponibilidade**: a aplicação funciona offline? Quais recursos externos ela acessa e o que acontece quando eles não estão disponíveis?
+- **Escalabilidade**: a instância hospedada continua responsiva quando os usuários abrem desenhos grandes?
 
 Para equipes de implantação, **flexibilidade é a prioridade principal** com confiabilidade em papel secundário.
 
 ## 7. Equipes de qualidade
 
-As equipes de qualidade (neste trabalho, a própria equipe avaliadora) precisam que o software seja avaliável. Isso parece óbvio, mas não é: projetos sem testes, sem histórico de issues ou com código difícil de instrumentar criam barreiras reais para a avaliação.
+São as equipes de QA das organizações que adotariam o Excalidraw e precisariam verificar o produto antes e depois de cada atualização. Esse grupo não inclui a equipe avaliadora deste trabalho, descrita na [seção 8](#8-equipe-avaliadora-e-docentes). As equipes de QA precisam que o software seja avaliável: projetos sem testes, sem histórico de issues ou com código difícil de instrumentar criam barreiras reais para esse trabalho.
 
 Os aspectos mais relevantes para equipes de qualidade:
 
 - **Testabilidade**: os testes cobrem os cenários críticos? Estão integrados à CI? Como se simula interação com o editor em canvas nos testes automatizados?
 - **Ausência de falhas**: como o projeto trata a qualidade ao longo do tempo? Há rastreabilidade entre defeitos relatados, correções e testes adicionados?
+- **Instalabilidade e adaptabilidade**: a equipe consegue montar o ambiente de testes e executar o editor nos navegadores e dispositivos que a organização usa?
 
-Para equipes de qualidade, **manutenibilidade e confiabilidade têm prioridade equivalente**.
+Para equipes de qualidade, **manutenibilidade e confiabilidade têm prioridade equivalente**, com flexibilidade em papel secundário.
 
-**Influência nas escolhas:** esse grupo validou a escolha de Testabilidade e Ausência de falhas como subcaracterísticas. Se o Excalidraw não tivesse testes automatizados ou histórico acessível de issues, essas subcaracterísticas não poderiam ser avaliadas com a profundidade que planejamos.
+**Influência nas escolhas:** esse grupo validou a escolha de Testabilidade e Ausência de falhas como subcaracterísticas. Se o Excalidraw não tivesse testes automatizados ou histórico acessível de issues, nem uma equipe de QA nem esta avaliação teriam como verificar essas subcaracterísticas com a profundidade prevista.
 
 ## 8. Equipe avaliadora e docentes
 
-A equipe avaliadora conduz este trabalho como parte de uma atividade acadêmica, e os docentes acompanham e orientam o processo. Diferente dos grupos anteriores, nosso interesse não é no produto em si, mas na qualidade e na rastreabilidade da avaliação que estamos produzindo.
+A equipe avaliadora conduz este trabalho como parte de uma atividade acadêmica, e os docentes acompanham e orientam o processo. Diferente dos grupos anteriores, o interesse desse grupo não está no produto em si, mas na qualidade e na rastreabilidade da avaliação produzida.
 
-O que importa para nós:
+As exigências desse grupo são:
 
 - Os requisitos precisam ser específicos e rastreáveis a características e interessados concretos.
-- O escopo precisa ser realista: não podemos avaliar o que não temos acesso.
+- O escopo precisa ser realista: o que não está acessível à equipe não pode ser avaliado.
 - Os procedimentos precisam ser reproduzíveis e verificáveis.
 - A versão do código avaliada precisa ser registrada (commit ou tag).
 
@@ -165,7 +170,7 @@ A Tabela 1 resume as prioridades de cada grupo em relação às três caracterí
 
 <p className="tabela-fonte">Fonte: [Gabriel Monteiro](https://github.com/GabrielSMonteiro), 2026.</p>
 
-A equipe avaliadora/docentes e a comunidade adotante têm interesses transversais e não entram nessa classificação formal.
+A equipe avaliadora, os docentes e a comunidade adotante têm interesses transversais e não entram nessa classificação formal.
 
 ### Influência dos interessados nas escolhas da avaliação
 
@@ -222,3 +227,4 @@ A ligação de cada subcaracterística aos interessados principais e aos artefat
 | 0.2 | 15/10/2026 | Revisão geral e adição de contexto | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Letícia Santos](https://github.com/LeticiaSantosss) |
 | 0.3 | 18/10/2026 | Inclusão de critérios de sucesso por interessado e influência nas escolhas | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | [Maria Eduarda](https://github.com/eduarda-ogomes) |
 | 1.0 | 10/11/2026 | Introdução e Metodologia, grafia de Manutenibilidade restaurada, critérios de sucesso consolidados na Tabela 2 com a linha da equipe avaliadora, retirada da afirmação sobre outras combinações de características, que a matriz não sustenta, edição da ISO/IEC 25010 atualizada, subcaracterística Ausência de falhas adotada, tabela de rastreabilidade substituída por link à do modelo de qualidade, que é mais completa, tabelas com título e fonte e referências | [Christopher Paraizo](https://github.com/wChrstphr) | [Davi Pierre](https://github.com/DaviPierre) |
+| 1.1 | 18/11/2026 | Revisão de coerência e cross-links: Escalabilidade nos integradores e na operação e equipes de QA definidas | [Christopher Paraizo](https://github.com/wChrstphr) | |

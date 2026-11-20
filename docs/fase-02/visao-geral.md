@@ -10,11 +10,11 @@ description: O que estamos definindo na segunda fase da avaliação de qualidade
 
 A [Fase 01](../fase-01/visao-geral.md) definiu por que avaliar o Excalidraw, o que avaliar e quais características de qualidade priorizar. A Fase 02 responde à pergunta seguinte: **o que exatamente será medido, e como cada resultado será interpretado?**
 
-Para isso, a equipe usa o [método *Goal–Question–Metric* (GQM)](./estrutura-gqm.md). Cada característica [priorizada](../fase-01/priorizacao-caracteristicas.md) vira um objetivo de medição, desdobrado em questões, hipóteses e métricas, com níveis de pontuação e critérios de julgamento definidos antes da coleta. A coleta em si fica para a Fase 04, após o planejamento operacional detalhado na [Fase 03](../fase-03/visao-geral.md).
+Para isso, a equipe usa o [método *Goal-Question-Metric* (GQM)](./estrutura-gqm.md). Cada característica [priorizada](../fase-01/priorizacao-caracteristicas.md) vira um objetivo de medição, desdobrado em questões, hipóteses e métricas, com níveis de pontuação e critérios de julgamento definidos antes da coleta. A coleta em si fica para a Fase 04, após o planejamento operacional detalhado na [Fase 03](../fase-03/visao-geral.md).
 
 ## Metodologia
 
-A fase seguiu as etapas de definição do GQM adaptadas ao contexto da avaliação, descritas em [Método GQM e objetivos de medição](./estrutura-gqm.md#2-como-as-etapas-do-gqm-foram-adaptadas). As páginas foram produzidas na ordem da Tabela 1: do método às métricas de cada objetivo, e destas à pontuação e ao plano que reúne tudo.
+A fase seguiu as etapas de definição do GQM adaptadas ao contexto da avaliação, descritas em [Método GQM e objetivos de medição](./estrutura-gqm.md#2-como-as-etapas-do-gqm-foram-adaptadas). As páginas foram produzidas na ordem da Tabela 1: do método às métricas de cada objetivo, e destas à pontuação e ao plano que reúne tudo. A exceção são as hipóteses de baseline das [abstraction sheets](./abstraction-sheets.md#metodologia), revisadas depois da pontuação para usar os limites das faixas e a [regra das hipóteses](./estrutura-gqm.md#1-o-que-é-o-gqm).
 
 ## Documentos desta fase
 
@@ -49,3 +49,4 @@ Os objetivos de medição derivam do [modelo de qualidade](../fase-01/modelo-de-
 | 1.4 | 10/11/2026 | Inclusão da Metodologia | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 14/11/2026 | Atualização das referências cruzadas com a Fase 03 | [Gabriel Monteiro](https://github.com/GabrielSMonteiro) | |
 | 1.6 | 17/11/2026 | Atualização das referências cruzadas com a Fase 04 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.7 | 18/11/2026 | Revisão de coerência e cross-links: registro da revisão das abstraction sheets | [Christopher Paraizo](https://github.com/wChrstphr) | |

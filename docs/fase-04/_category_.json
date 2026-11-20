@@ -2,7 +2,7 @@
   "label": "Fase 04: Executar a avaliação",
   "position": 5,
   "link": {
-    "type": "generated-index",
-    "description": "Execução das medições, análise dos resultados e julgamento da qualidade do produto."
+    "type": "doc",
+    "id": "fase-04/visao-geral"
   }
 }

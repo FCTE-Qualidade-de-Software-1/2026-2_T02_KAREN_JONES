@@ -15,7 +15,7 @@ Os arquivos `.gitkeep` apenas mantêm as pastas vazias no Git. Os arquivos de en
 
 1. Salve os resultados originais e as evidências em `brutos/`. Use nomes que identifiquem a métrica, como `M3.1.1_cobertura_browserslist.txt`. Se as instruções da métrica indicarem outro nome ou formato, siga essas instruções.
 2. Registre junto dos dados brutos as condições da coleta, como responsável, data, versões das ferramentas e desvios. Para G1, use `M<código>_fatores.md`. Os campos completos estão na [seção 9 dos recursos e ambiente](../../docs/fase-03/recursos-ambiente.md#9-fatores-de-variação-registrados-em-cada-coleta).
-3. Grave os testes manuais conforme as instruções de cada métrica. Antes de enviar evidências ao repositório, confira se não contêm dados pessoais ou credenciais. Para arquivos acima do limite do Git, siga as [instruções de G3](../../docs/fase-03/instrucoes-g3-flexibilidade.md#23-política-obrigatória-de-gravação-de-tela-para-testes-no-navegador).
+3. Grave os testes manuais conforme as instruções de cada métrica. Antes de enviar evidências ao repositório, confira se não contêm dados pessoais ou credenciais. Para arquivos acima do limite do Git, siga as [instruções de G3](../../docs/fase-03/instrucoes-g3-flexibilidade.md#13-gravação-de-tela).
 
 Os valores calculados a partir dos dados brutos serão guardados em `consolidados/`. A verificação e a consolidação fazem parte da issue #114, e o formato dos arquivos está no [plano de análise](../../docs/fase-03/plano-analise.md#3-tabela-consolidada-e-script-de-análise).
 
@@ -203,3 +203,4 @@ A lista de verificação de cada métrica está em `consolidados/G1_verificacao.
 | 1.5 | 15/11/2026 | Verificação e cálculo das métricas de G1 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.6 | 15/11/2026 | Inclusão dos arquivos da análise de G1 no catálogo de consolidados | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.7 | 18/11/2026 | Inclusão dos arquivos das ações de melhoria no catálogo de brutos | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.8 | 18/11/2026 | Revisão de coerência e cross-links: link à gravação de tela nas instruções de G3 | [Christopher Paraizo](https://github.com/wChrstphr) | |
