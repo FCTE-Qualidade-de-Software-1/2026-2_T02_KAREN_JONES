@@ -49,7 +49,7 @@
 | Fase 1 | 18 / 18 | 100.0% | 33.3% | 59.5 | 59.0 | R$ 2677.50 | R$ 2655.45 | 99.2% | 1.21 |
 | Fase 2 | 29 / 29 | 100.0% | 48.3% | 70.5 | 64.7 | R$ 3172.50 | R$ 2911.50 | 91.8% | 3.74 |
 | Fase 3 | 23 / 23 | 100.0% | 8.7% | 48.0 | 65.5 | R$ 2160.00 | R$ 2947.50 | 136.5% | 7.62 |
-| Fase 4 | 28 / 24 | 85.7% | 53.6% | 96.0 | 71.0 | R$ 4320.00 | R$ 3192.75 | 89.8% | 12.74 |
+| Fase 4 | 28 / 25 | 89.3% | 53.6% | 96.0 | 71.0 | R$ 4320.00 | R$ 3192.75 | 89.8% | 12.37 |
 
 ---
 
@@ -57,12 +57,12 @@
 
 | Integrante | GitHub | Issues Atribuidas | Horas Estimadas (h) | Horas Reais (h) | Custo Equivalente (R$) | Commits | PRs | Contribuicao (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | 29 | 75.5 | 52.6 | R$ 2369.25 | 167 | 28 | **20.24%** |
+| Christopher | `@wChrstphr` | 29 | 75.5 | 52.6 | R$ 2369.25 | 169 | 28 | **20.24%** |
 | Davi Pierre | `@DaviPierre` | 14 | 38.0 | 37.0 | R$ 1665.00 | 13 | 6 | **14.22%** |
 | Gabriel Monteiro | `@GabrielSMonteiro` | 18 | 49.5 | 57.0 | R$ 2565.00 | 69 | 16 | **21.91%** |
 | Leticia de Carvalho | `@LeticiaSantosss` | 16 | 27.0 | 29.4 | R$ 1323.45 | 16 | 11 | **11.30%** |
 | Luiz Henrique Soares | `@luizh-gsoares` | 15 | 32.0 | 32.9 | R$ 1480.50 | 38 | 16 | **12.65%** |
-| Maria Eduarda | `@eduarda-ogomes` | 22 | 52.0 | 51.2 | R$ 2304.00 | 81 | 17 | **19.68%** |
+| Maria Eduarda | `@eduarda-ogomes` | 22 | 52.0 | 51.2 | R$ 2304.00 | 83 | 17 | **19.68%** |
 
 ### Codigo LaTeX para o Apendice do Artigo (#27)
 
@@ -75,14 +75,14 @@
 \hline
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esfor\c{c}o (\%)} \\
 \hline
-Christopher & 29 & 75.5h & 52.6h & 167/28 & 20.24\% \\
+Christopher & 29 & 75.5h & 52.6h & 169/28 & 20.24\% \\
 Davi Pierre & 14 & 38.0h & 37.0h & 13/6 & 14.22\% \\
 Gabriel Monteiro & 18 & 49.5h & 57.0h & 69/16 & 21.91\% \\
 Leticia de Carvalho & 16 & 27.0h & 29.4h & 16/11 & 11.30\% \\
 Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16 & 12.65\% \\
-Maria Eduarda & 22 & 52.0h & 51.2h & 81/17 & 19.68\% \\
+Maria Eduarda & 22 & 52.0h & 51.2h & 83/17 & 19.68\% \\
 \hline
-\textbf{Total} & \textbf{114} & \textbf{274.0h} & \textbf{260.2h} & \textbf{384/94} & \textbf{100.00\%} \\
+\textbf{Total} & \textbf{114} & \textbf{274.0h} & \textbf{260.2h} & \textbf{388/94} & \textbf{100.00\%} \\
 \hline
 \end{tabular}
 \end{table}
@@ -100,7 +100,7 @@ Maria Eduarda & 22 & 52.0h & 51.2h & 81/17 & 19.68\% \\
 | Fase 1 | 28/09/2026 00:00 | 08/10/2026 11:59 | 18/10/2026 23:59 | 18 / 18 | 0.0 | 13 | 5 | 27.8 | - | sim |
 | Fase 2 | 18/10/2026 23:59 | 22/10/2026 23:59 | 26/10/2026 23:59 | 29 / 29 | 55.2 | 8 | 5 | 44.8 | - | nao |
 | Fase 3 | 26/10/2026 23:59 | 02/11/2026 11:59 | 08/11/2026 23:59 | 23 / 23 | 0.0 | 7 | 14 | 8.7 | - | sim |
-| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 24 / 28 | 7.1 | 5 | 0 | 39.3 | #130 #183 | sim |
+| Fase 4 | 08/11/2026 23:59 | 15/11/2026 11:59 | 21/11/2026 23:59 | 25 / 28 | 7.1 | 6 | 0 | 42.9 | #130 | sim |
 
 ### Acerto das estimativas por issue
 
@@ -122,8 +122,8 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | Fase 1 | 17 | 17 | 8 | 47.1 | 9 | 13.68 | 10.82 | 22.28 | 40.59 | 1 |
 | Fase 2 | 29 | 27 | 13 | 48.1 | 16 | 3.66 | 0.4 | 7.53 | 7.57 | 1 |
 | Fase 3 | 23 | 23 | 15 | 65.2 | 8 | 24.17 | 20.88 | 45.9 | 61.74 | 5 |
-| Fase 4 | 25 | 24 | 13 | 54.2 | 10 | 18.0 | 2.65 | 48.16 | 56.29 | 4 |
-| Total | 94 | 91 | 49 | 53.8 | 43 | 15.48 | 7.53 | 26.16 | 48.16 | 11 |
+| Fase 4 | 25 | 25 | 14 | 56.0 | 10 | 18.0 | 2.65 | 48.16 | 56.29 | 4 |
+| Total | 94 | 92 | 50 | 54.3 | 43 | 15.48 | 7.53 | 26.16 | 48.16 | 11 |
 
 ### Quem revisou
 
@@ -190,7 +190,7 @@ Horas corridas entre a abertura do PR e a primeira revisao de outra pessoa.
 | PR | Fase | Origem da fase | Autor | Situacao | Aberto em | Primeira revisao | Espera (h) | Aprovado | Revisores |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | #193 | Fase 4 | issue #130 | eduarda-ogomes | integrado | 20/11/2026 20:31 | - | - | nao | - |
-| #192 | Fase 4 | issue #181 | wChrstphr | aberto | 20/11/2026 19:49 | 20/11/2026 20:12 | 0.39 | nao | eduarda-ogomes |
+| #192 | Fase 4 | issue #181 | wChrstphr | integrado | 20/11/2026 19:49 | 20/11/2026 20:12 | 0.39 | sim | eduarda-ogomes |
 | #191 | Fase 4 | issue #190 | wChrstphr | integrado | 18/11/2026 20:03 | 20/11/2026 20:13 | 48.16 | sim | eduarda-ogomes |
 | #189 | Fase 4 | issue #126 | eduarda-ogomes | integrado | 18/11/2026 12:38 | 20/11/2026 19:59 | 55.35 | sim | wChrstphr |
 | #188 | Fase 4 | issue #119 | wChrstphr | integrado | 18/11/2026 11:51 | 20/11/2026 20:09 | 56.29 | sim | eduarda-ogomes |

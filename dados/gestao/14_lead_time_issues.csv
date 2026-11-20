@@ -2,15 +2,15 @@ recorte,grupo,issues_fechadas,lead_time_mediano_dias
 fase,Fase 1,18,1.45
 fase,Fase 2,29,2.0
 fase,Fase 3,23,7.01
-fase,Fase 4,19,13.05
-label,gestao,24,2.27
-label,artigo,21,5.13
+fase,Fase 4,25,13.05
+label,gestao,28,3.11
+label,artigo,22,5.46
 label,especificacao,16,2.3
-label,documentacao,14,1.47
+label,documentacao,15,1.5
+label,verificacao,8,1.79
 label,gitpage,8,2.5
 label,medicao,8,12.39
-label,verificacao,7,1.56
 label,diagrama,3,1.46
 label,estudo,3,2.0
 label,analise,2,1.56
-label,melhoria,1,13.99
+label,melhoria,2,15.66
