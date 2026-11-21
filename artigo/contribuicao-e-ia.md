@@ -81,21 +81,21 @@ O percentual de esforço individual foi calculado com base no total de horas rea
 
 | Integrante | Login GitHub | Subgrupo | Issues Atribuídas | Horas Est. (h) | Horas Reais (h) | Commits / PRs | Esforço Real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Christopher | `@wChrstphr` | F2/F4 | 29 | 75,50 | 52,65 | 158 / 28 | 20,24% |
-| Davi Pierre | `@DaviPierre` | F1/F3 | 14 | 38,00 | 37,00 | 13 / 6 | 14,22% |
-| Gabriel Monteiro | `@GabrielSMonteiro` | F1/F3 | 18 | 49,50 | 57,00 | 69 / 16 | 21,91% |
-| Letícia de Carvalho | `@LeticiaSantosss` | F1/F3 | 17 | 31,50 | 29,41 | 16 / 11 | 11,30% |
-| Luiz Henrique Soares | `@luizh-gsoares` | F2/F4 | 15 | 32,00 | 32,90 | 38 / 16 | 12,65% |
-| Maria Eduarda | `@eduarda-ogomes` | F2/F4 | 20 | 47,50 | 51,20 | 77 / 16 | 19,68% |
-| **Total** | - | - | **113** | **274,00** | **260,16** | **371 / 93** | **100,00%** |
+| Christopher | `@wChrstphr` | F2/F4 | 29 | 75,50 | 52,65 | 169 / 28 | 19,97% |
+| Davi Pierre | `@DaviPierre` | F1/F3 | 14 | 38,00 | 37,00 | 13 / 6 | 14,03% |
+| Gabriel Monteiro | `@GabrielSMonteiro` | F1/F3 | 18 | 49,50 | 57,00 | 69 / 16 | 21,62% |
+| Letícia de Carvalho | `@LeticiaSantosss` | F1/F3 | 16 | 27,00 | 29,91 | 16 / 11 | 11,34% |
+| Luiz Henrique Soares | `@luizh-gsoares` | F2/F4 | 15 | 32,00 | 32,90 | 38 / 16 | 12,48% |
+| Maria Eduarda | `@eduarda-ogomes` | F2/F4 | 22 | 52,00 | 54,20 | 83 / 17 | 20,56% |
+| **Total** | - | - | **114** | **274,00** | **263,66** | **388 / 94** | **100,00%** |
 
-*Nota explicativa sobre os dados:* Os valores decorrem da coleta oficial de dados com corte em 20/11/2026 e consolidam todo o ciclo de vida do projeto (Fases 1 a 4), totalizando 97 issues únicas (113 atribuições em razão de tarefas compartilhadas). As tarefas conjuntas contam o rateio proporcional de cada responsável. Todos os seis integrantes mantiveram-se dentro da faixa de equilíbrio de esforço entre 8% e 30% estipulada nas diretrizes de gestão.
+*Nota explicativa sobre os dados:* Os valores decorrem da coleta oficial de dados com corte em 20/11/2026 e consolidam todo o ciclo de vida do projeto (Fases 1 a 4), totalizando 98 issues únicas (114 atribuições em razão de tarefas compartilhadas). As tarefas conjuntas contam o rateio proporcional de cada responsável. Todos os seis integrantes mantiveram-se dentro da faixa de equilíbrio de esforço entre 8% e 30% estipulada nas diretrizes de gestão.
 
 ### 2.3. Código LaTeX para o Artigo
 
 ```latex
 \section{Tabela de Contribuição dos Membros da Equipe}
-Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes ao longo das quatro fases do projeto. O percentual foi calculado pela razão entre as horas reais de cada integrante e o total de 260,2\,h apuradas nas \textit{issues} de desenvolvimento (corte de dados em 20/11/2026), totalizando 100,00\% do trabalho executado.
+Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da disciplina, a Tabela~\ref{tab:contribuicao} apresenta o esforço e a participação percentual individual dos integrantes ao longo das quatro fases do projeto. O percentual foi calculado pela razão entre as horas reais de cada integrante e o total de 263,7\,h apuradas nas \textit{issues} de desenvolvimento (corte de dados em 20/11/2026), totalizando 100,00\% do trabalho executado.
 
 \begin{table}[!ht]
 \centering
@@ -108,14 +108,14 @@ Em atendimento à Premissa 13 da especificação e ao Critério AG-C5 da discipl
 \toprule
 \textbf{Integrante} & \textbf{Issues} & \textbf{Horas Est.} & \textbf{Horas Reais} & \textbf{Commits/PRs} & \textbf{Esforço (\%)} \\
 \midrule
-Christopher          & 29 & 75.5h & 52.6h & 158/28 & 20.24\% \\
-Davi Pierre          & 14 & 38.0h & 37.0h & 13/6   & 14.22\% \\
-Gabriel Monteiro     & 18 & 49.5h & 57.0h & 69/16  & 21.91\% \\
-Letícia de Carvalho  & 17 & 31.5h & 29.4h & 16/11  & 11.30\% \\
-Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16  & 12.65\% \\
-Maria Eduarda        & 20 & 47.5h & 51.2h & 77/16  & 19.68\% \\
+Christopher          & 29 & 75.5h & 52.6h & 169/28 & 19.97\% \\
+Davi Pierre          & 14 & 38.0h & 37.0h & 13/6   & 14.03\% \\
+Gabriel Monteiro     & 18 & 49.5h & 57.0h & 69/16  & 21.62\% \\
+Letícia de Carvalho  & 16 & 27.0h & 29.9h & 16/11  & 11.34\% \\
+Luiz Henrique Soares & 15 & 32.0h & 32.9h & 38/16  & 12.48\% \\
+Maria Eduarda        & 22 & 52.0h & 54.2h & 83/17  & 20.56\% \\
 \midrule
-\textbf{Total}       & \textbf{113} & \textbf{274.0h} & \textbf{260.2h} & \textbf{371/93} & \textbf{100.00\%} \\
+\textbf{Total}       & \textbf{114} & \textbf{274.0h} & \textbf{263.7h} & \textbf{388/94} & \textbf{100.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -131,4 +131,4 @@ Maria Eduarda        & 20 & 47.5h & 51.2h & 77/16  & 19.68\% \\
 | 1.1 | 20/10/2026 | Atualização da tabela de contribuição pós-merge da main com avanço da Fase 2 (83,9h reais) | [Maria Eduarda](https://github.com/eduarda-ogomes) | - |
 | 1.2 | 26/10/2026 | Declaração de IA reescrita conforme o artigo e registro de uso de IA por pull request até o PR #84 | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.3 | 05/11/2026 | Tabela de contribuição atualizada com a coleta de 05/11 (114,31h reais nas Fases 1 e 2) | [Christopher Paraizo](https://github.com/wChrstphr) | |
-| 1.4 | 20/11/2026 | Atualização da tabela de contribuição consolidada das quatro fases (260,2h reais) e declaração de IA final da Entrega 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
+| 1.4 | 20/11/2026 | Atualização definitiva da tabela de contribuição consolidada das quatro fases (263,66h reais) e declaração de IA final da Entrega 2 | [Maria Eduarda](https://github.com/eduarda-ogomes) | |

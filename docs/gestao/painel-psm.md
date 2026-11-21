@@ -127,23 +127,23 @@ As 50 issues da Entrega 2 correspondem a 60 atribuições, por causa das tarefas
 
 ### 5.3. Esforço e custo acumulados no projeto (Fases 1 a 4)
 
-No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 260,16 horas reais executadas frente a 274,00 horas estimadas, totalizando R$ 11.707,20 em custo real apurado à taxa horária de R$ 45,00. A tabela a seguir sintetiza a contribuição individual acumulada em todo o repositório, extraída de [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv):
+No cômputo geral do projeto (Fases 1, 2, 3 e 4), a equipe somou 263,66 horas reais executadas frente a 274,00 horas estimadas, totalizando R$ 11.864,70 em custo real apurado à taxa horária de R$ 45,00. A tabela a seguir sintetiza a contribuição individual acumulada em todo o repositório, extraída de [`dados/gestao/04_contribuicao_individual.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/blob/main/dados/gestao/04_contribuicao_individual.csv):
 
-<p className="tabela-titulo">Tabela 5: Esforço acumulado e custo individual no projeto (Fases 1 a 4). Retrato de 18/11/2026</p>
+<p className="tabela-titulo">Tabela 5: Esforço acumulado e custo individual no projeto (Fases 1 a 4). Retrato de 20/11/2026</p>
 
 | Integrante | Login GitHub | Issues atribuídas | Horas est. (h) | Horas reais (h) | Custo real (R$) | Commits | PRs abertos | Esforço real (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Christopher** | `@wChrstphr` | 29 | 75,50 | 52,65 | R$ 2.369,25 | 158 | 28 | **20,24%** |
-| **Davi Pierre** | `@DaviPierre` | 14 | 38,00 | 37,00 | R$ 1.665,00 | 13 | 6 | **14,22%** |
-| **Gabriel Monteiro** | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | R$ 2.565,00 | 69 | 16 | **21,91%** |
-| **Letícia de Carvalho** | `@LeticiaSantosss` | 17 | 31,50 | 29,41 | R$ 1.323,45 | 16 | 11 | **11,30%** |
-| **Luiz Henrique Soares** | `@luizh-gsoares` | 15 | 32,00 | 32,90 | R$ 1.480,50 | 38 | 16 | **12,65%** |
-| **Maria Eduarda** | `@eduarda-ogomes` | 20 | 47,50 | 51,20 | R$ 2.304,00 | 77 | 16 | **19,68%** |
-| **Total do Projeto** | **Equipe** | **97 (113 atrib.)** | **274,00** | **260,16** | **R$ 11.707,20** | **371** | **93** | **100,00%** |
+| **Christopher** | `@wChrstphr` | 29 | 75,50 | 52,65 | R$ 2.369,25 | 169 | 28 | **19,97%** |
+| **Davi Pierre** | `@DaviPierre` | 14 | 38,00 | 37,00 | R$ 1.665,00 | 13 | 6 | **14,03%** |
+| **Gabriel Monteiro** | `@GabrielSMonteiro` | 18 | 49,50 | 57,00 | R$ 2.565,00 | 69 | 16 | **21,62%** |
+| **Letícia de Carvalho** | `@LeticiaSantosss` | 16 | 27,00 | 29,91 | R$ 1.345,95 | 16 | 11 | **11,34%** |
+| **Luiz Henrique Soares** | `@luizh-gsoares` | 15 | 32,00 | 32,90 | R$ 1.480,50 | 38 | 16 | **12,48%** |
+| **Maria Eduarda** | `@eduarda-ogomes` | 22 | 52,00 | 54,20 | R$ 2.439,00 | 83 | 17 | **20,56%** |
+| **Total do Projeto** | **Equipe** | **98 (114 atrib.)** | **274,00** | **263,66** | **R$ 11.864,70** | **388** | **94** | **100,00%** |
 
-<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/04_contribuicao_individual.csv</code> do retrato de 18/11/2026.</p>
+<p className="tabela-fonte">Fonte: [Maria Eduarda](https://github.com/eduarda-ogomes), com base em <code>dados/gestao/04_contribuicao_individual.csv</code> do encerramento da Entrega 2 em 20/11/2026.</p>
 
-As 97 issues do projeto correspondem a 112 atribuições.
+As 98 issues do projeto correspondem a 114 atribuições.
 
 <p className="tabela-titulo">Figura 4: Distribuição de tarefas e commits por integrante no projeto</p>
 
@@ -323,3 +323,4 @@ Gestão é o tipo de trabalho com mais issues, 30 de 98, e aparece nas quatro fa
 | 1.3 | 18/11/2026 | Inclusão dos recursos e custos da Entrega 2, balanço acumulado do projeto e gráficos de esforço individual | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
 | 1.4 | 18/11/2026 | Revisão de coerência e cross-links: tabelas recalculadas com o retrato de 18/11/2026 e Entrega 2 incluída | [Christopher Paraizo](https://github.com/wChrstphr) | |
 | 1.5 | 20/11/2026 | Seção com os gráficos e as interpretações do projeto inteiro (Fases 1 a 4) | [Christopher Paraizo](https://github.com/wChrstphr) | |
+| 1.6 | 20/11/2026 | Atualização definitiva das métricas PSM/CID com todas as issues do projeto fechadas (263,66h) | [Maria Eduarda](https://github.com/eduarda-ogomes) | |
