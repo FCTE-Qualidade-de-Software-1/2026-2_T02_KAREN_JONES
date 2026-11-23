@@ -95,5 +95,5 @@ numero,fase,titulo,estado,assignees,estimativa_h,horas_reais_h,desvio_estimativa
 155,Fase 1,[F1] Revisar as páginas da Fase 01 e alinhar a terminologia da ISO/IEC 25010:2023,closed,wChrstphr,6.0,1.1,-81.7,superestimada,270.0,49.5,12/11,11/11/2026,Concluida no prazo,0.95
 174,Fase 4,[F4] Unir as páginas de resultados e de insights de G3,closed,wChrstphr,1.0,0.5,-50.0,superestimada,45.0,22.5,16/11,17/11/2026,Concluida em atraso,1.62
 181,Fase 4,[GESTAO] Gráficos e análises PSM do projeto para a apresentação final,closed,wChrstphr,5.0,3.0,-40.0,superestimada,225.0,135.0,22/11,20/11/2026,Concluida no prazo,3.36
-183,Fase 4,[GESTAO] Apresentação final do trabalho (22/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,,,270.0,0.0,22/11,-,Em andamento (no prazo),
+183,Fase 4,[GESTAO] Apresentação final do trabalho (22/11),open,"DaviPierre, luizh-gsoares, GabrielSMonteiro, wChrstphr, eduarda-ogomes, LeticiaSantosss",6.0,0.0,,,270.0,0.0,22/11,-,Aberta em atraso,
 190,Fase 4,Revisão de coerência e cross-links da documentação,closed,wChrstphr,4.0,3.7,-7.5,na faixa,180.0,166.5,20/11,20/11/2026,Concluida no prazo,2.03
