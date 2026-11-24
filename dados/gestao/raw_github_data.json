@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-23T11:29:16.207027+00:00",
+  "coletado_em": "2026-11-24T13:03:47.388885+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -710,6 +710,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -2031,6 +2032,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -2359,6 +2361,7 @@
         "updated_at": "2025-05-05T13:31:12Z",
         "is_enabled": true
       },
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -3703,6 +3706,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -7022,6 +7026,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -7436,6 +7441,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -9742,6 +9748,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -10092,6 +10099,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -10442,6 +10450,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -10649,6 +10658,7 @@
         "updated_at": "2025-05-05T13:31:12Z",
         "is_enabled": true
       },
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -10847,6 +10857,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -11045,6 +11056,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -11395,6 +11407,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -11593,6 +11606,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -11791,6 +11805,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -12021,6 +12036,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -12230,6 +12246,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -12428,6 +12445,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -12626,6 +12644,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -12824,6 +12843,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -13022,6 +13042,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -13220,6 +13241,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -13418,6 +13440,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -13616,6 +13639,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -13814,6 +13838,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -14012,6 +14037,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -14210,6 +14236,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -14408,6 +14435,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -14606,6 +14634,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -14804,6 +14833,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -15002,6 +15032,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -15200,6 +15231,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -15398,6 +15430,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -15596,6 +15629,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -15805,6 +15839,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -16119,6 +16154,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -16317,6 +16353,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -16515,6 +16552,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -16713,6 +16751,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -16911,6 +16950,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -17109,6 +17149,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -17318,6 +17359,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -17516,6 +17558,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -17714,6 +17757,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -17912,6 +17956,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -18110,6 +18155,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -18319,6 +18365,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -18517,6 +18564,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -18715,6 +18763,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -18913,6 +18962,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -19283,6 +19333,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -19633,6 +19684,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -19961,6 +20013,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -20159,6 +20212,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -20368,6 +20422,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -20577,6 +20632,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -21706,6 +21762,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -21905,6 +21962,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -22104,6 +22162,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -22303,6 +22362,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -22502,6 +22562,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -22701,6 +22762,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -23277,6 +23339,7 @@
         "updated_at": "2025-05-05T13:31:12Z",
         "is_enabled": true
       },
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -25637,6 +25700,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -25835,6 +25899,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -26033,6 +26098,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -26231,6 +26297,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -26429,6 +26496,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -26638,6 +26706,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -29649,6 +29718,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -29847,6 +29917,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -30045,6 +30116,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -30243,6 +30315,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -30441,6 +30514,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -30639,6 +30713,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -30848,6 +30923,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -31004,6 +31080,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 6,
@@ -31202,6 +31279,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -31400,6 +31478,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -31725,6 +31804,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -31923,6 +32003,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -32121,6 +32202,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -32319,6 +32401,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -32517,6 +32600,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -32715,6 +32799,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -32913,6 +32998,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -33111,6 +33197,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -33309,6 +33396,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -33518,6 +33606,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -33716,6 +33805,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -33914,6 +34004,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -34112,6 +34203,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -34321,6 +34413,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -34519,6 +34612,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -34728,6 +34822,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -34937,6 +35032,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -35146,6 +35242,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -35559,6 +35656,7 @@
       "author_association": "COLLABORATOR",
       "issue_field_values": [],
       "type": null,
+      "status": null,
       "active_lock_reason": null,
       "sub_issues_summary": {
         "total": 0,
@@ -36153,6 +36251,88 @@
     }
   ],
   "commits": [
+    {
+      "sha": "eb9690535c83d15286901e3ed7b87935ec1fbed0",
+      "node_id": "C_kwDOUJBYZdoAKGViOTY5MDUzNWM4M2QxNTI4NjkwMWUzZWQ3Yjg3OTM1ZWMxZmJlZDA",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-23T11:29:19Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-23T11:29:19Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "9d3d8bd384aff049c5b411794879ba21bb421981",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/9d3d8bd384aff049c5b411794879ba21bb421981"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/eb9690535c83d15286901e3ed7b87935ec1fbed0",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/eb9690535c83d15286901e3ed7b87935ec1fbed0",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/eb9690535c83d15286901e3ed7b87935ec1fbed0",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/eb9690535c83d15286901e3ed7b87935ec1fbed0/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "3e4707d8af21aa498d0917ebfa8e304c5f9f6d35",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/3e4707d8af21aa498d0917ebfa8e304c5f9f6d35",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/3e4707d8af21aa498d0917ebfa8e304c5f9f6d35"
+        }
+      ]
+    },
     {
       "sha": "3e4707d8af21aa498d0917ebfa8e304c5f9f6d35",
       "node_id": "C_kwDOUJBYZdoAKDNlNDcwN2Q4YWYyMWFhNDk4ZDA5MTdlYmZhOGUzMDRjNWY5ZjZkMzU",
