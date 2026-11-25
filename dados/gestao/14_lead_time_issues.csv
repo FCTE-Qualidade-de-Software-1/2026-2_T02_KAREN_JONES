@@ -2,8 +2,8 @@ recorte,grupo,issues_fechadas,lead_time_mediano_dias
 fase,Fase 1,18,1.45
 fase,Fase 2,29,2.0
 fase,Fase 3,23,7.01
-fase,Fase 4,27,13.98
-label,gestao,29,3.14
+fase,Fase 4,28,13.52
+label,gestao,30,3.25
 label,artigo,23,5.79
 label,especificacao,16,2.3
 label,documentacao,15,1.5
