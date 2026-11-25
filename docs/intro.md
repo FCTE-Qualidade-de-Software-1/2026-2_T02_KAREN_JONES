@@ -58,7 +58,7 @@ O trabalho segue as quatro fases do processo de avaliação definido pela norma 
 - **Fase 03: [Projetar a avaliação](./fase-03/visao-geral.md):** planejar o método de avaliação, as instruções para os avaliadores, os recursos necessários, a massa de dados e o cronograma. Concluída.
 - **Fase 04: [Executar a avaliação](./fase-04/visao-geral.md):** coletar os dados, compará-los com os critérios definidos, interpretar os resultados e propor melhorias. Concluída.
 
-A divisão em subgrupos e a governança do trabalho no GitHub estão descritas na [metodologia da equipe](./gestao/metodologia-equipe.md).
+A divisão em subgrupos e a governança do trabalho no GitHub estão descritas na [metodologia da equipe](./gestao/metodologia-equipe.md). Para consultar rapidamente a hierarquia completa entre objetivos, questões, hipóteses e métricas, acesse o [Plano GQM](./fase-02/plano-gqm.md).
 
 ---
 

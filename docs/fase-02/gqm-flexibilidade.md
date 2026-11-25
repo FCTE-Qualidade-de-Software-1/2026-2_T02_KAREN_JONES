@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: GQM de Flexibilidade (G3)
 description: Questões, hipóteses e métricas do objetivo de medição G3, que avalia a flexibilidade da biblioteca e da aplicação web do Excalidraw
 ---
@@ -58,6 +58,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 
 **Questão:** O Excalidraw pode ser usado em diferentes navegadores, dispositivos e ambientes de integração sem adaptações no código?
 
+**Objetivo de medição:** [G3: Flexibilidade](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade).
+
 **Requisitos:** [RQ-FLEX-01](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (navegadores suportados), [RQ-FLEX-02](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (versões de React, renderização no servidor e empacotadores), [RQ-FLEX-03](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (dependências que limitam ambientes) e [RQ-FLEX-04](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (dispositivos móveis, toque e caneta).
 
 <p className="tabela-titulo">Tabela 2: Hipóteses de Q3.1</p>
@@ -81,7 +83,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Campo `browserslist` (perfil `production`) de `excalidraw-app/package.json`. A biblioteca declara a mesma consulta em `packages/excalidraw/package.json`. |
 | Procedimento de coleta | Comando `npx browserslist --coverage=global "<consulta>"`, registrando a versão da ferramenta e da base de dados de uso (`caniuse-lite`), porque a base muda com o tempo. |
 | Critério de interpretação | Confirma [H3.1.1](#3-q31-adaptabilidade) se a cobertura for de pelo menos 80%. Quanto menor a cobertura, mais usuários ficam sem suporte declarado. A exclusão de navegadores antigos na lista declarada é registrada como observação. |
-| Questão respondida | Q3.1 |
+| Questão respondida | [Q3.1](#3-q31-adaptabilidade) |
 | Características desejáveis | Simples. Objetiva, porque a lista é a que o próprio projeto declara e a base de uso é pública. Fácil de coletar com um comando. Robusta, porque permite comparar com outros projetos que usam a mesma ferramenta. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -97,7 +99,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Pacote avaliado, campo `peerDependencies` de `packages/excalidraw/package.json`, guia de integração em `dev-docs/docs/@excalidraw/excalidraw/integration.mdx` e exemplo `examples/with-nextjs`. |
 | Procedimento de coleta | Criar um projeto mínimo para cada combinação seguindo apenas o guia de instalação e integração, instalar o pacote avaliado, construir e abrir no navegador do ambiente de teste. Registrar erros de construção e de execução. |
 | Critério de interpretação | Confirma [H3.1.2](#3-q31-adaptabilidade) se as 6 combinações tiverem sucesso. Cada combinação que falha é um ambiente em que o integrador precisa adaptar o próprio sistema para usar a biblioteca. A necessidade de carregar a biblioteca apenas no navegador em frameworks com renderização no servidor, como o Next.js, é registrada como observação. |
-| Questão respondida | Q3.1 |
+| Questão respondida | [Q3.1](#3-q31-adaptabilidade) |
 | Características desejáveis | Objetiva, porque o critério de sucesso é definido antes do teste. Válida, porque testa a integração de fato, e não só a declaração de compatibilidade. Robusta, porque a matriz pode crescer com novas versões. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -113,7 +115,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web em um *tablet* ou celular com navegador de versão fixa, definido no plano de avaliação e tratamento de eventos de toque e caneta em `packages/excalidraw/components/App.tsx`. |
 | Procedimento de coleta | Teste manual roteirizado no dispositivo, registrando cada ação como funciona ou não funciona, com gravação de tela. |
 | Critério de interpretação | Confirma [H3.1.3](#3-q31-adaptabilidade) se o valor for 100% com toque. Cada ação que falha é algo que o usuário de dispositivo móvel não consegue fazer. |
-| Questão respondida | Q3.1 |
+| Questão respondida | [Q3.1](#3-q31-adaptabilidade) |
 | Características desejáveis | Simples. Objetiva, porque cada ação tem resultado binário com evidência gravada. Válida para [RQ-FLEX-04](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -125,6 +127,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 ## 4. Q3.2: Escalabilidade
 
 **Questão:** O editor continua utilizável quando o desenho cresce?
+
+**Objetivo de medição:** [G3: Flexibilidade](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade).
 
 **Requisitos:** [RQ-FLEX-05](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (desempenho com mais elementos) e [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (abrir, salvar e exportar desenhos grandes).
 
@@ -149,7 +153,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Gravação no painel de desempenho (*Performance*) das ferramentas do navegador, do momento em que o arquivo é solto no editor até o último quadro desenhado. A página é recarregada e o armazenamento local é limpo entre as repetições. |
 | Critério de interpretação | Confirma [H3.2.1](#4-q32-escalabilidade) se a cena de 1.000 elementos abrir em até 1 segundo. A forma da curva mostra se o tempo cresce na mesma proporção do desenho ou mais rápido que ele. |
-| Questão respondida | Q3.2 |
+| Questão respondida | [Q3.2](#4-q32-escalabilidade) |
 | Características desejáveis | Objetiva, porque a medição é feita pela ferramenta do navegador. Robusta, por usar a mediana de repetições. Válida para [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). Depende do hardware, que é fixado e registrado. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -165,7 +169,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Painel de desempenho das ferramentas do navegador, com roteiro de movimento fixo. |
 | Critério de interpretação | Confirma [H3.2.2](#4-q32-escalabilidade) se a cena de 1.000 elementos for editada com pelo menos 48 quadros por segundo. Taxas baixas significam movimento travado para o usuário. |
-| Questão respondida | Q3.2 |
+| Questão respondida | [Q3.2](#4-q32-escalabilidade) |
 | Características desejáveis | Objetiva e robusta, pelos mesmos motivos de M3.2.1. Válida para [RQ-FLEX-05](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade), porque mede o que o usuário percebe ao editar. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -181,7 +185,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste e cenas de escala. |
 | Procedimento de coleta | Teste manual roteirizado com cronômetro do painel de desempenho, comparando o tempo de exportar com o tempo de abrir (M3.2.1) na mesma cena. |
 | Critério de interpretação | Confirma [H3.2.3](#4-q32-escalabilidade) se a maior cena salva e exportada tiver pelo menos 5.000 elementos. O valor mostra até onde o usuário pode levar um desenho sem perder a capacidade de salvar e compartilhar. A comparação entre o tempo de exportação e o tempo de abertura de cada cena é registrada como observação. |
-| Questão respondida | Q3.2 |
+| Questão respondida | [Q3.2](#4-q32-escalabilidade) |
 | Características desejáveis | Simples. Objetiva, porque o limite de tempo é fixo. Válida para [RQ-FLEX-06](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -191,6 +195,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 ## 5. Q3.3: Instalabilidade
 
 **Questão:** A biblioteca e a aplicação podem ser instaladas, construídas e implantadas seguindo apenas a documentação, em ambientes diferentes?
+
+**Objetivo de medição:** [G3: Flexibilidade](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade).
 
 Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implantação são testadas em um único ambiente limpo, como registra a [rastreabilidade de RQ-FLEX-08](#7-rastreabilidade-com-a-fase-01). A resposta à questão vale para esse ambiente.
 
@@ -217,7 +223,7 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 | Fonte dos dados | Pacote avaliado, versão 0.17.6 do registro npm e guia de instalação em `dev-docs/docs/@excalidraw/excalidraw/installation.mdx`. |
 | Procedimento de coleta | Execução dos comandos em ambiente limpo, registrando a saída de cada um. |
 | Critério de interpretação | Confirma [H3.3.1](#5-q33-instalabilidade) se o valor for 100%. Cada operação que falha é um passo que o integrador precisa resolver por conta própria. O número de comandos necessários para instalar a biblioteca é registrado como observação. |
-| Questão respondida | Q3.3 |
+| Questão respondida | [Q3.3](#5-q33-instalabilidade) |
 | Características desejáveis | Simples. Objetiva, porque o sucesso é dado pelo código de saída dos comandos. Fácil de coletar. Válida para [RQ-FLEX-07](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -233,7 +239,7 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 | Fonte dos dados | Guia de desenvolvimento em `dev-docs/docs/introduction/development.mdx` e campo `engines` do `package.json` da raiz. |
 | Procedimento de coleta | Execução em ambiente limpo, registrando cada ajuste necessário e o motivo. |
 | Critério de interpretação | Confirma [H3.3.2](#5-q33-instalabilidade) se pelo menos 95% dos passos forem reproduzidos sem ajuste, com as versões exigidas de ferramentas. Cada ajuste é algo que a documentação deixou de dizer. |
-| Questão respondida | Q3.3 |
+| Questão respondida | [Q3.3](#5-q33-instalabilidade) |
 | Características desejáveis | Objetiva, porque a regra de "sem ajuste" é fixa e cada ajuste é registrado com o motivo. Válida para [RQ-FLEX-08](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) e [RQ-FLEX-10](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -249,7 +255,7 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 | Fonte dos dados | `Dockerfile` e `docker-compose.yml` da raiz e instruções de Docker do guia de desenvolvimento. |
 | Procedimento de coleta | Comandos `docker build` e `docker run` em ambiente limpo com Docker instalado, registrando a saída e a versão do Docker. |
 | Critério de interpretação | Confirma [H3.3.3](#5-q33-instalabilidade) se o valor for 100%. Cada verificação que falha é um obstáculo para quem precisa implantar a aplicação em um servidor próprio. |
-| Questão respondida | Q3.3 |
+| Questão respondida | [Q3.3](#5-q33-instalabilidade) |
 | Características desejáveis | Simples. Objetiva, porque cada verificação tem resultado binário. Fácil de coletar. Válida para [RQ-FLEX-09](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -259,6 +265,8 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 ## 6. Q3.4: Substituibilidade
 
 **Questão:** Os desenhos feitos no Excalidraw podem ser levados para outras ferramentas, em formatos abertos e sem perda de conteúdo?
+
+**Objetivo de medição:** [G3: Flexibilidade](./estrutura-gqm.md#g3-flexibilidade-antiga-portabilidade).
 
 **Requisitos:** [RQ-FLEX-11](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (exportação em formatos utilizáveis fora da aplicação) e [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade) (formatos abertos, documentados e reimportáveis sem perda).
 
@@ -283,7 +291,7 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 | Fonte dos dados | Interface da aplicação web no ambiente de teste e funções de exportação da biblioteca (`packages/excalidraw/scene/export.ts`). |
 | Procedimento de coleta | Inspeção dos menus de exportação e salvamento, registrando cada formato com captura de tela, e conferência com as funções exportadas pela biblioteca. |
 | Critério de interpretação | Confirma [H3.4.1](#6-q34-substituibilidade) se pelo menos 3 formatos abertos estiverem disponíveis. Quanto mais formatos abertos, mais fácil trocar de ferramenta sem refazer o desenho. |
-| Questão respondida | Q3.4 |
+| Questão respondida | [Q3.4](#6-q34-substituibilidade) |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque cada formato é registrado com evidência. Válida para [RQ-FLEX-11](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -301,7 +309,7 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 | Fonte dos dados | Aplicação web no ambiente de teste e cena de referência. |
 | Procedimento de coleta | Exportação e reimportação pela interface e comparação dos elementos por script, exportando a cena reimportada em `.excalidraw`. É o mesmo script de comparação usado em [M2.4.1](./gqm-confiabilidade.md#m241-proporção-de-cenários-de-fechamento-com-restauração-do-desenho) e [M2.4.2](./gqm-confiabilidade.md#m242-proporção-de-arquivos-reabertos-sem-perda), do objetivo de Confiabilidade. |
 | Critério de interpretação | Confirma [H3.4.2](#6-q34-substituibilidade) se o valor for de pelo menos 95% em cada formato. Elementos perdidos mostram o que o usuário não recupera ao reabrir uma imagem exportada. |
-| Questão respondida | Q3.4 |
+| Questão respondida | [Q3.4](#6-q34-substituibilidade) |
 | Características desejáveis | Objetiva, porque a comparação é feita por script. Robusta, porque a mesma cena serve para outras versões. Válida para [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -317,7 +325,7 @@ Nenhuma métrica de Q3.3 compara ambientes diferentes: a construção e a implan
 | Fonte dos dados | Arquivo salvo da cena de referência e documentação do formato em `dev-docs/docs/codebase/json-schema.mdx`. |
 | Procedimento de coleta | Listagem dos campos por script e busca de cada nome na documentação. |
 | Critério de interpretação | Confirma [H3.4.3](#6-q34-substituibilidade) se menos de 60% dos campos estiverem documentados. Quanto menor a cobertura, mais outra ferramenta precisa adivinhar o significado dos dados. A existência de um esquema formal publicado é registrada como observação. |
-| Questão respondida | Q3.4 |
+| Questão respondida | [Q3.4](#6-q34-substituibilidade) |
 | Características desejáveis | Simples (uma razão). Objetiva, porque a lista de campos vem de um arquivo real. Fácil de coletar por script. Válida para [RQ-FLEX-12](../fase-01/requisitos-avaliacao.md#4-requisitos-de-flexibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>

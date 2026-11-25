@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 title: Níveis de pontuação e critérios de julgamento
 description: Escala de pontuação das métricas de G1, G2 e G3, faixas de valores de cada métrica, agregação até a característica e critérios para julgar os resultados
 ---

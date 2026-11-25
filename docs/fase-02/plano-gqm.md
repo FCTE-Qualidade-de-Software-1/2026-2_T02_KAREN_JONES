@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 2
 title: Plano GQM
 description: Plano GQM da avaliação do Excalidraw, com os diagramas da hierarquia de objetivos, questões e métricas de G1, G2 e G3, as hipóteses, as diretrizes de interpretação e a rastreabilidade com a Fase 01
 ---
