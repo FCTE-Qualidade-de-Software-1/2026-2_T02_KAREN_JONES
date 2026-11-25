@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: GQM de Confiabilidade (G2)
 description: Questões, hipóteses e métricas do objetivo de medição G2, que avalia a confiabilidade do editor e da aplicação web do Excalidraw
 ---
@@ -58,6 +58,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 
 **Questão:** O projeto evita que falhas cheguem ao usuário e trata de forma organizada os defeitos que chegam?
 
+**Objetivo de medição:** [G2: Confiabilidade](./estrutura-gqm.md#g2-confiabilidade).
+
 **Requisitos:** [RQ-CONF-01](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (verificações automáticas e revisão antes da integração) e [RQ-CONF-02](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (registro, classificação e tratamento dos defeitos).
 
 <p className="tabela-titulo">Tabela 2: Hipóteses de Q2.1</p>
@@ -81,7 +83,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Histórico de *pull requests* do repositório oficial no GitHub. |
 | Procedimento de coleta | Busca da API do GitHub (`gh api search/issues`) com os filtros `is:pr is:merged` e o intervalo da janela, separando as correções pelo tipo `fix` no início do título. Contribuições automáticas de atualização de dependências e de traduções são excluídas. |
 | Critério de interpretação | Confirma [H2.1.1](#3-q21-ausência-de-falhas) se o valor for de pelo menos 20%. O resultado mostra quanto do esforço do projeto vai para corrigir defeitos em vez de criar funcionalidades. Ele não mede quantos defeitos existem, só quantos foram corrigidos. |
-| Questão respondida | Q2.1 |
+| Questão respondida | [Q2.1](#3-q21-ausência-de-falhas) |
 | Características desejáveis | Simples (uma razão). Objetiva, porque o tipo da contribuição é verificado automaticamente pelo próprio projeto. Fácil de coletar pela API. Robusta, porque permite comparar janelas diferentes. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -97,7 +99,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Histórico de *pull requests* e de *issues* do repositório oficial no GitHub. |
 | Procedimento de coleta | API GraphQL do GitHub (`gh api graphql`), campo `closingIssuesReferences` de cada correção, com a data de abertura de cada relato ligado. |
 | Critério de interpretação | Confirma [H2.1.2](#3-q21-ausência-de-falhas) se a mediana for de no máximo 30 dias. Medianas longas indicam que o usuário convive mais tempo com o defeito. Se poucas correções estiverem ligadas a relatos, o resultado vale só para essa parte e isso é registrado. |
-| Questão respondida | Q2.1 |
+| Questão respondida | [Q2.1](#3-q21-ausência-de-falhas) |
 | Características desejáveis | Objetiva, porque as datas vêm do registro do GitHub. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para o tratamento dos defeitos ([RQ-CONF-02](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade)). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -113,7 +115,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Revisões registradas em cada *pull request* do repositório oficial no GitHub e fluxos de `.github/workflows/` disparados por `pull_request`. |
 | Procedimento de coleta | API GraphQL do GitHub, campo `reviews` com estado `APPROVED` de cada contribuição, comparando o autor da revisão com o autor da contribuição. As verificações automáticas são as mesmas medidas no objetivo de Manutenibilidade, em [M1.3.3](./gqm-manutenibilidade.md#m133-verificações-estáticas-executadas-automaticamente) e [M1.5.3](./gqm-manutenibilidade.md#m153-proporção-de-contribuições-com-testes-executados-antes-da-integração), e não são contadas de novo aqui. |
 | Critério de interpretação | Confirma [H2.1.3](#3-q21-ausência-de-falhas) se o valor for de pelo menos 95%. Contribuições integradas sem revisão dependem só das verificações automáticas para evitar falhas. |
-| Questão respondida | Q2.1 |
+| Questão respondida | [Q2.1](#3-q21-ausência-de-falhas) |
 | Características desejáveis | Simples. Objetiva, porque usa o registro de revisões do GitHub. Fácil de coletar automaticamente. Válida para [RQ-CONF-01](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -123,6 +125,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 ## 4. Q2.2: Disponibilidade
 
 **Questão:** O editor continua disponível para o usuário sem conexão e sem depender de serviços externos?
+
+**Objetivo de medição:** [G2: Confiabilidade](./estrutura-gqm.md#g2-confiabilidade).
 
 **Requisitos:** [RQ-CONF-03](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (uso sem conexão após o primeiro carregamento) e [RQ-CONF-04](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (independência de colaboração e de recursos remotos).
 
@@ -146,7 +150,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web em execução no ambiente de teste e configuração do *service worker* em `excalidraw-app/vite.config.mts`. |
 | Procedimento de coleta | Abrir a aplicação com conexão, aguardar o registro do *service worker*, desligar a rede pelo modo *offline* das ferramentas do navegador e executar a lista na ordem, registrando cada item como funciona ou não funciona, com captura de tela. |
 | Critério de interpretação | Confirma [H2.2.1](#4-q22-disponibilidade) se o valor for 100%. Cada função que falha é um caso em que o usuário perde acesso ao editor sem conexão. |
-| Questão respondida | Q2.2 |
+| Questão respondida | [Q2.2](#4-q22-disponibilidade) |
 | Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item tem resultado binário com evidência. Válida, porque testa o comportamento, e não só a presença da configuração. Robusta, porque pode ser repetida em outros navegadores. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -162,7 +166,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Registro de rede (arquivo HAR) do navegador no ambiente de teste. |
 | Procedimento de coleta | Abrir o editor com o cache vazio, exportar o registro de rede das ferramentas do navegador e listar os domínios. Repetir a abertura com cada domínio bloqueado pela opção de bloqueio de requisições do navegador. |
 | Critério de interpretação | Confirma [H2.2.2](#4-q22-disponibilidade) se nenhum domínio externo for indispensável. Cada domínio indispensável é um serviço cuja queda deixa o editor indisponível. |
-| Questão respondida | Q2.2 |
+| Questão respondida | [Q2.2](#4-q22-disponibilidade) |
 | Características desejáveis | Objetiva, porque os domínios saem do registro do navegador. Fácil de coletar com ferramentas do próprio navegador. Válida para [RQ-CONF-04](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -172,6 +176,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 ## 5. Q2.3: Tolerância a falhas
 
 **Questão:** O editor continua funcionando quando recebe dados inválidos ou quando a conexão com a colaboração falha?
+
+**Objetivo de medição:** [G2: Confiabilidade](./estrutura-gqm.md#g2-confiabilidade).
 
 **Requisitos:** [RQ-CONF-05](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (funcionalidades essenciais diante de problemas de conectividade), [RQ-CONF-06](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (editor local após falha da colaboração) e [RQ-CONF-07](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (arquivos inválidos ou corrompidos).
 
@@ -195,7 +201,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste e arquivos de teste preparados pela equipe e guardados no repositório da avaliação. |
 | Procedimento de coleta | Abrir cada arquivo pelo menu de abertura e, em outra rodada, arrastando o arquivo para o editor. Registrar a mensagem exibida (ou a ausência dela) e se o editor continua utilizável, com captura de tela. Um arquivo só conta como tratado se for tratado nas duas rodadas. |
 | Critério de interpretação | Confirma [H2.3.1](#5-q23-tolerância-a-falhas) se o valor for 100%. Cada caso não tratado é uma forma de o usuário travar o editor ou perder o trabalho em andamento. |
-| Questão respondida | Q2.3 |
+| Questão respondida | [Q2.3](#5-q23-tolerância-a-falhas) |
 | Características desejáveis | Objetiva e consistente, porque os arquivos são fixos e o critério de tratamento é definido antes do teste. Robusta, porque os mesmos arquivos servem para outras versões. Válida para [RQ-CONF-07](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -211,7 +217,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste, conectada ao servidor de colaboração configurado na versão avaliada e código de colaboração em `excalidraw-app/collab/`. |
 | Procedimento de coleta | Teste manual roteirizado, repetido três vezes, com o modo *offline* das ferramentas do navegador para interromper a rede. Cada verificação passa se passar nas três repetições. |
 | Critério de interpretação | Confirma [H2.3.2](#5-q23-tolerância-a-falhas) se as verificações 1 a 4 passarem. A verificação 5 mostra se o trabalho feito durante a falha é preservado na sessão compartilhada. |
-| Questão respondida | Q2.3 |
+| Questão respondida | [Q2.3](#5-q23-tolerância-a-falhas) |
 | Características desejáveis | Objetiva, porque cada verificação tem resultado binário definido antes do teste. Robusta, por exigir três repetições. Válida para [RQ-CONF-05](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) e [RQ-CONF-06](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -221,6 +227,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 ## 6. Q2.4: Recuperabilidade
 
 **Questão:** O usuário recupera seu trabalho depois de fechar a aplicação, de reabrir arquivos antigos ou de cometer um erro de edição?
+
+**Objetivo de medição:** [G2: Confiabilidade](./estrutura-gqm.md#g2-confiabilidade).
 
 **Requisitos:** [RQ-CONF-08](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (restauração automática do último estado), [RQ-CONF-09](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (salvar e reabrir arquivos), [RQ-CONF-10](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (arquivos de versões anteriores) e [RQ-CONF-11](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) (desfazer e refazer).
 
@@ -245,7 +253,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste, armazenamento do navegador e código de salvamento local em `excalidraw-app/data/LocalData.ts`. |
 | Procedimento de coleta | Montar a cena de referência, executar cada cenário e comparar a cena reaberta com a original exportando ambas em `.excalidraw` e comparando os elementos com um script. |
 | Critério de interpretação | Confirma [H2.4.1](#6-q24-recuperabilidade) se o valor for 100%. Cada cenário que falha é uma situação em que o usuário perde trabalho sem ter salvo um arquivo. |
-| Questão respondida | Q2.4 |
+| Questão respondida | [Q2.4](#6-q24-recuperabilidade) |
 | Características desejáveis | Objetiva, porque a comparação entre as cenas é feita por script. Válida para [RQ-CONF-08](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). Robusta, porque os cenários podem ser repetidos em outros navegadores. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -261,7 +269,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web das versões citadas, construída a partir das marcações (*tags*) do repositório e arquivos de exemplo em `packages/excalidraw/tests/fixtures/`. |
 | Procedimento de coleta | Gerar os arquivos em cada versão anterior, abri-los na versão avaliada e comparar os elementos com um script. |
 | Critério de interpretação | Confirma [H2.4.2](#6-q24-recuperabilidade) se o valor for 100%. Cada arquivo com perda indica um desenho antigo que o usuário não consegue recuperar como foi salvo. |
-| Questão respondida | Q2.4 |
+| Questão respondida | [Q2.4](#6-q24-recuperabilidade) |
 | Características desejáveis | Objetiva, porque a comparação é feita por script sobre um conjunto fixo. Robusta, porque o conjunto pode crescer com novas versões. Válida para [RQ-CONF-09](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade) e [RQ-CONF-10](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -277,7 +285,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Aplicação web no ambiente de teste e código do histórico de edição em `packages/excalidraw/history.ts`. |
 | Procedimento de coleta | Teste manual roteirizado, exportando a cena antes da ação, depois da ação, depois de desfazer e depois de refazer, e comparando as exportações com um script. |
 | Critério de interpretação | Confirma [H2.4.3](#6-q24-recuperabilidade) se o valor for 100%. Cada tipo de ação que não pode ser desfeito é um erro do usuário que não tem volta. |
-| Questão respondida | Q2.4 |
+| Questão respondida | [Q2.4](#6-q24-recuperabilidade) |
 | Características desejáveis | Simples. Objetiva, porque a comparação é feita por script. Válida para [RQ-CONF-11](../fase-01/requisitos-avaliacao.md#3-requisitos-de-confiabilidade). Robusta, porque a lista pode ser repetida em outras versões. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: GQM de Manutenibilidade (G1)
 description: Questões, hipóteses e métricas do objetivo de medição G1, que avalia a manutenibilidade do código-fonte do Excalidraw
 ---
@@ -60,6 +60,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 
 **Questão:** Em que medida o código está dividido em pacotes independentes, com dependências em uma única direção?
 
+**Objetivo de medição:** [G1: Manutenibilidade](./estrutura-gqm.md#g1-manutenibilidade).
+
 **Requisitos:** [RQ-MAN-01](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (limites entre aplicação e biblioteca), [RQ-MAN-02](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (direção das dependências e ausência de ciclos) e [RQ-MAN-03](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (coesão e dependências desnecessárias).
 
 <p className="tabela-titulo">Tabela 2: Hipóteses de Q1.1</p>
@@ -83,7 +85,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | Ferramenta Madge (versão 8.0.0), com o `tsconfig.json` do repositório para resolver os nomes `@excalidraw/*` e com a opção de ignorar importações de tipo, exportando o grafo completo entre arquivos (opção `--json`). Um script agrega as arestas por pacote, descarta as internas a um mesmo pacote e verifica, para cada par, se um pacote alcança o outro. A lista de ciclos entre arquivos (opção `--circular`) não basta: `A/a1 → B/b1` e `B/b2 → A/a2` não formam ciclo entre arquivos, mas formam ciclo entre os pacotes A e B. |
 | Critério de interpretação | Confirma [H1.1.1](#3-q11-modularidade) se o valor for 0. Cada par encontrado indica dois pacotes que não podem ser alterados ou reutilizados separadamente. |
-| Questão respondida | Q1.1 |
+| Questão respondida | [Q1.1](#3-q11-modularidade) |
 | Características desejáveis | Simples (contagem). Objetiva, porque o grafo sai das importações declaradas no código. Fácil de coletar com uma ferramenta automática. Válida, porque ciclos medem diretamente a falta de direção nas dependências. Baseada na estrutura do programa, e não na linguagem. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -99,7 +101,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Código de produção de todos os pacotes e arquivo `packages/eslintrc.base.json`. |
 | Procedimento de coleta | O grafo de importações de valor de [M1.1.1](#m111-ciclos-de-dependência-entre-pacotes), em que o Madge já resolve os destinos para arquivos. Um script classifica cada aresta pelas duas condições e conta as que as violam. O ESLint do projeto não serve sozinho como coleta, porque a regra não trata de importações da aplicação web e só é aplicada nos pacotes cuja configuração a estende (`common` e `element`). |
 | Critério de interpretação | Confirma [H1.1.2](#3-q11-modularidade) se o valor for 0. Cada importação encontrada é um ponto em que o código não respeita a arquitetura que o próprio projeto declara. |
-| Questão respondida | Q1.1 |
+| Questão respondida | [Q1.1](#3-q11-modularidade) |
 | Características desejáveis | Simples e objetiva, porque a direção esperada vem de uma regra escrita pelo projeto, e não de opinião da equipe. Fácil de coletar. Válida para os limites entre aplicação, biblioteca e pacotes de base ([RQ-MAN-01](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade)). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -115,7 +117,7 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | O mesmo grafo de [M1.1.1](#m111-ciclos-de-dependência-entre-pacotes), agregado por pacote, contando as arestas distintas entre pacotes. |
 | Critério de interpretação | Confirma [H1.1.3](#3-q11-modularidade) se a biblioteca tiver o maior Ca entre os pacotes. O percentual de dependências que contrariam o Princípio das Dependências Estáveis é o valor pontuado ([níveis de G1](./pontuacao-julgamento.md#32-justificativas-específicas)). *I* é registrado para comparar os pacotes entre si: um pacote de base com *I* alto depende de muitos outros e é mais difícil de reutilizar. |
-| Questão respondida | Q1.1 |
+| Questão respondida | [Q1.1](#3-q11-modularidade) |
 | Características desejáveis | Simples (uma razão). Objetiva e robusta, porque permite comparar pacotes entre si e com outras versões. Válida, porque é uma medida consagrada de acoplamento entre módulos. Independente da linguagem. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -125,6 +127,8 @@ Os [fatores que podem influenciar os resultados](./estrutura-gqm.md#5-ficha-de-c
 ## 4. Q1.2: Reusabilidade
 
 **Questão:** Os pacotes podem ser usados fora do editor, e a interface pública da biblioteca está documentada para quem vai reutilizá-la?
+
+**Objetivo de medição:** [G1: Manutenibilidade](./estrutura-gqm.md#g1-manutenibilidade).
 
 **Requisitos:** [RQ-MAN-04](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (reutilização dos componentes e dos pacotes menores) e [RQ-MAN-05](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (interface pública documentada).
 
@@ -150,7 +154,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | Busca no código de produção de todos os pacotes por importações de `react` e `react-dom` e por usos de `window.` e `document.` (ferramenta `grep`), excluindo comentários. Os arquivos encontrados são marcados no grafo de importações de valor de [M1.1.1](#m111-ciclos-de-dependência-entre-pacotes), e um script conta os arquivos dos pacotes de base que alcançam algum arquivo marcado. |
 | Critério de interpretação | Confirma [H1.2.1](#4-q12-reusabilidade) se o valor for 0 em `math` e em `utils`. Nos demais pacotes de base, valores maiores indicam que o pacote só funciona dentro de um navegador ou junto com React. |
-| Questão respondida | Q1.2 |
+| Questão respondida | [Q1.2](#4-q12-reusabilidade) |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque depende só do texto do código. Válida como indicador de reutilização fora do editor, já que essas dependências impedem o uso em outros ambientes, como servidores. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -166,7 +170,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Tipo `ExcalidrawProps` em `packages/excalidraw/types.ts` e páginas da pasta `dev-docs/docs/@excalidraw/excalidraw/api/`. |
 | Procedimento de coleta | Listar os nomes das propriedades declaradas no tipo e procurar cada nome nas páginas da documentação. Uma propriedade conta como documentada se tiver ao menos uma descrição do seu propósito. |
 | Critério de interpretação | Confirma [H1.2.2](#4-q12-reusabilidade) se o valor for de pelo menos 80% e menor que 100%. Quanto menor o valor, mais quem integra a biblioteca precisa ler o código para usá-la. |
-| Questão respondida | Q1.2 |
+| Questão respondida | [Q1.2](#4-q12-reusabilidade) |
 | Características desejáveis | Simples (uma razão). Objetiva, porque a lista de propriedades vem do código. Fácil de coletar, com uma lista finita. Válida para a separação entre interface pública e detalhes internos ([RQ-MAN-05](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade)). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -176,6 +180,8 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 ## 5. Q1.3: Analisabilidade
 
 **Questão:** O código pode ser entendido com facilidade, com apoio de documentação e de verificações automáticas?
+
+**Objetivo de medição:** [G1: Manutenibilidade](./estrutura-gqm.md#g1-manutenibilidade).
 
 **Requisitos:** [RQ-MAN-06](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (compreensão do código), [RQ-MAN-07](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (documentação de convenções, arquitetura e contribuição) e [RQ-MAN-08](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (lint, formatação e verificação de tipos).
 
@@ -200,7 +206,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | ESLint (versão 8.57.0, instalado pela equipe à parte do projeto, que usa a versão 7.32.0 no próprio lint) com o analisador `@typescript-eslint/parser` e a regra `complexity` ativada com limite 0, que informa a complexidade de cada função e as linhas em que ela começa e termina. Um script conta as linhas próprias de cada função a partir desses intervalos. Os inicializadores de campos de classe, que a regra também informa, não são funções e ficam de fora. |
 | Critério de interpretação | Confirma [H1.3.1](#5-q13-analisabilidade) se houver linhas em funções com complexidade acima de 50. O resultado é dado em linhas, e não em média de complexidade, porque a média esconde as poucas funções muito complexas [[4, p. 6]](#ref-4). Funções muito complexas são mais difíceis de entender e de testar. A concentração das linhas de risco alto e muito alto em poucos arquivos, como o componente principal do editor, é registrada como observação, sem confirmar nem refutar hipótese. |
-| Questão respondida | Q1.3 |
+| Questão respondida | [Q1.3](#5-q13-analisabilidade) |
 | Características desejáveis | Objetiva e consistente, porque o cálculo é definido pela regra da ferramenta e as faixas vêm de fonte publicada. Fácil de coletar automaticamente. Robusta, porque permite comparar pacotes. Baseada na estrutura de controle do programa, e não na sintaxe da linguagem. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -216,7 +222,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | `README.md`, `CONTRIBUTING.md` e `AGENTS.md` da raiz e páginas de `dev-docs/docs/` (documentação publicada em docs.excalidraw.com). |
 | Procedimento de coleta | Inspeção dos arquivos, preenchendo uma lista de verificação com o caminho do documento que comprova cada tópico. |
 | Critério de interpretação | Confirma [H1.3.2](#5-q13-analisabilidade) se os tópicos 1 e 2 estiverem presentes. Cada tópico ausente obriga quem chega ao projeto a descobrir a informação pelo código. |
-| Questão respondida | Q1.3 |
+| Questão respondida | [Q1.3](#5-q13-analisabilidade) |
 | Características desejáveis | Simples. Objetiva, porque a lista é fixa e cada item exige um documento como evidência. Fácil de coletar. Válida para [RQ-MAN-07](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -232,7 +238,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Arquivos de fluxo em `.github/workflows/` e scripts do `package.json` da raiz. |
 | Procedimento de coleta | Inspeção dos fluxos disparados por `pull_request` e dos scripts que eles chamam (por exemplo, `test:code`, `test:other` e `test:typecheck`). |
 | Critério de interpretação | Confirma [H1.3.3](#5-q13-analisabilidade) se o valor for 3. Uma verificação que não roda automaticamente depende da disciplina de cada contribuidor. |
-| Questão respondida | Q1.3 |
+| Questão respondida | [Q1.3](#5-q13-analisabilidade) |
 | Características desejáveis | Simples e objetiva, com evidência nos arquivos de configuração. Fácil de coletar. Válida para [RQ-MAN-08](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -242,6 +248,8 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 ## 6. Q1.4: Modificabilidade
 
 **Questão:** As alterações no código ficam restritas a poucas partes, ou tendem a se espalhar e a passar por arquivos que concentram responsabilidades demais?
+
+**Objetivo de medição:** [G1: Manutenibilidade](./estrutura-gqm.md#g1-manutenibilidade).
 
 **Requisitos:** [RQ-MAN-09](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (alcance das alterações) e [RQ-MAN-10](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (arquivos ou funções que concentram responsabilidades).
 
@@ -266,7 +274,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Histórico de *pull requests* do repositório oficial no GitHub. |
 | Procedimento de coleta | API do GitHub (`gh api`), listando as contribuições integradas na janela e os arquivos de cada uma (`pulls/{número}/files`). Contribuições automáticas de atualização de dependências e de traduções são excluídas e contadas à parte. |
 | Critério de interpretação | Confirma [H1.4.1](#6-q14-modificabilidade) se a mediana for de no máximo 4 arquivos. Medianas altas indicam que mudanças comuns exigem mexer em muitos lugares. |
-| Questão respondida | Q1.4 |
+| Questão respondida | [Q1.4](#6-q14-modificabilidade) |
 | Características desejáveis | Simples. Objetiva, porque os dados vêm do registro do repositório. Robusta a valores extremos, por usar a mediana. Fácil de coletar automaticamente. Válida para [RQ-MAN-09](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -282,7 +290,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Código de produção de todos os pacotes. |
 | Procedimento de coleta | Contagem de linhas por arquivo com a ferramenta cloc (versão 1.86, opção `--by-file`), aplicando as [convenções da seção 2](#2-convenções-de-coleta). |
 | Critério de interpretação | Confirma [H1.4.2](#6-q14-modificabilidade) se no máximo 5% dos arquivos de produção tiverem mais de 1.000 linhas. Cada arquivo encontrado é candidato a concentrar responsabilidades demais (RQ-MAN-10). |
-| Questão respondida | Q1.4 |
+| Questão respondida | [Q1.4](#6-q14-modificabilidade) |
 | Características desejáveis | Simples e fácil de coletar. Objetiva, porque o limite é fixo e a ferramenta define o que é linha de código. Robusta, porque permite comparar pacotes e versões. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -298,7 +306,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Histórico de *pull requests* (mesmos dados de [M1.4.1](#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição)) e lista de arquivos de [M1.4.2](#m142-arquivos-de-produção-extensos). |
 | Procedimento de coleta | Cruzamento, por script, da lista de arquivos de cada contribuição com a lista de arquivos extensos. Arquivos renomeados na janela são acompanhados pelo nome atual. |
 | Critério de interpretação | Confirma [H1.4.3](#6-q14-modificabilidade) se o valor for maior que 10%. Quanto maior o valor, mais o trabalho de manutenção passa pelos arquivos mais difíceis de alterar. |
-| Questão respondida | Q1.4 |
+| Questão respondida | [Q1.4](#6-q14-modificabilidade) |
 | Características desejáveis | Simples (uma razão). Objetiva. Fácil de coletar a partir dos dados de [M1.4.1](#m141-mediana-de-arquivos-de-produção-alterados-por-contribuição) e [M1.4.2](#m142-arquivos-de-produção-extensos). Válida, porque liga o tamanho dos arquivos ao esforço real de manutenção. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -308,6 +316,8 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 ## 7. Q1.5: Testabilidade
 
 **Questão:** O código pode ser verificado por testes automatizados, em diferentes níveis, executados a cada alteração?
+
+**Objetivo de medição:** [G1: Manutenibilidade](./estrutura-gqm.md#g1-manutenibilidade).
 
 **Requisitos:** [RQ-MAN-11](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (condições para testes automatizados), [RQ-MAN-12](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (níveis de teste) e [RQ-MAN-13](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade) (execução automática).
 
@@ -332,7 +342,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Código de produção e de teste de todos os pacotes e configuração de cobertura em `vitest.config.mts`. |
 | Procedimento de coleta | Execução do comando do próprio projeto `yarn test:coverage` (Vitest), no ambiente definido no plano de avaliação, lendo o relatório `json` gerado, que traz as linhas cobertas de cada arquivo. Um script soma as linhas executáveis e as cobertas dos arquivos de cada pacote, segundo as [convenções da seção 2](#2-convenções-de-coleta), e calcula o percentual por pacote e no total. |
 | Critério de interpretação | Confirma [H1.5.1](#7-q15-testabilidade) se a cobertura da biblioteca for maior que a da aplicação web. Pacotes com cobertura baixa têm mais código que pode ser alterado sem nenhum teste perceber a mudança. Os limites mínimos já configurados pelo projeto em `vitest.config.mts` servem de referência. |
-| Questão respondida | Q1.5 |
+| Questão respondida | [Q1.5](#7-q15-testabilidade) |
 | Características desejáveis | Objetiva e consistente, porque usa a configuração do próprio projeto. Robusta, porque permite comparar pacotes. Fácil de coletar com um comando. Válida para [RQ-MAN-11](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade), com a limitação de que cobertura mede código executado, e não a qualidade das verificações. |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -348,7 +358,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Código de teste de todos os pacotes e `package.json` da raiz e dos pacotes, para identificar ferramentas de teste de ponta a ponta. |
 | Procedimento de coleta | Busca no código de teste (ferramenta `grep`) pelas chamadas e importações que definem cada nível. |
 | Critério de interpretação | Confirma [H1.5.2](#7-q15-testabilidade) se os testes unitários e de integração somarem mais de 50% dos arquivos de teste. Um nível ausente indica um tipo de falha que os testes automatizados não alcançam. |
-| Questão respondida | Q1.5 |
+| Questão respondida | [Q1.5](#7-q15-testabilidade) |
 | Características desejáveis | Objetiva, porque o critério de classificação é mecânico e não depende de julgamento. Fácil de coletar. Válida para [RQ-MAN-12](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>
@@ -364,7 +374,7 @@ H1.2.1 testa só `math` e `utils`, mas a [pontuação de M1.2.1](./pontuacao-jul
 | Fonte dos dados | Execuções do fluxo `test-coverage-pr.yml` de cada contribuição no GitHub, com os passos de cada job, e horário de integração de cada contribuição. |
 | Procedimento de coleta | API do GitHub (`gh api`): para cada contribuição, as execuções do fluxo sobre o último commit (`actions/workflows/test-coverage-pr.yml/runs?head_sha=...`), os passos de cada job, com conclusão e horário de término (`actions/runs/{id}/jobs`), e o campo `merged_at` da contribuição (`pulls/{número}`). Um script aplica a regra do procedimento de cálculo. A existência de um *check* no commit não basta, porque a execução pode terminar depois da integração ou falhar na instalação das dependências, antes do passo de testes. |
 | Critério de interpretação | Confirma [H1.5.3](#7-q15-testabilidade) se o valor for de pelo menos 95%. Contribuições sem testes executados foram integradas sem verificação automática de comportamento. |
-| Questão respondida | Q1.5 |
+| Questão respondida | [Q1.5](#7-q15-testabilidade) |
 | Características desejáveis | Simples. Objetiva, porque usa os registros do próprio GitHub, e não a configuração declarada. Fácil de coletar automaticamente. Válida para [RQ-MAN-13](../fase-01/requisitos-avaliacao.md#2-requisitos-de-manutenibilidade). |
 
 <p className="tabela-fonte">Fonte: [Christopher Paraizo](https://github.com/wChrstphr), 2026.</p>

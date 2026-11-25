@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: Abstraction Sheets dos Objetivos
 description: Abstraction sheets dos objetivos de Manutenibilidade, Confiabilidade e Flexibilidade, com as métricas candidatas, as hipóteses de baseline e os fatores que podem influenciar as medições
 ---

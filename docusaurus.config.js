@@ -48,6 +48,19 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        language: ['pt', 'en'],
+        docsRouteBasePath: '/docs',
+        indexBlog: false,
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -87,6 +100,11 @@ const config = {
           {
             to: '/docs/fase-04/visao-geral',
             label: 'Fase 04',
+            position: 'left',
+          },
+          {
+            to: '/docs/fase-02/plano-gqm',
+            label: 'Plano GQM',
             position: 'left',
           },
           {
