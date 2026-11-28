@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-27T11:34:34.234451+00:00",
+  "coletado_em": "2026-11-28T11:04:37.088013+00:00",
   "repositorio": "FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES",
   "issues_e_prs": [
     {
@@ -36367,6 +36367,88 @@
     }
   ],
   "commits": [
+    {
+      "sha": "f998b789a37e43286c08d3dd5cad434bd125c82a",
+      "node_id": "C_kwDOUJBYZdoAKGY5OThiNzg5YTM3ZTQzMjg2YzA4ZDNkZDVjYWQ0MzRiZDEyNWM4MmE",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-27T11:34:39Z"
+        },
+        "committer": {
+          "name": "github-actions[bot]",
+          "email": "github-actions[bot]@users.noreply.github.com",
+          "date": "2026-11-27T11:34:39Z"
+        },
+        "message": "chore(gestao): atualiza métricas PSM/CID automaticamente [skip ci]",
+        "tree": {
+          "sha": "f8acd24f62291d002f67eb029ac4ad10a50a879f",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/trees/f8acd24f62291d002f67eb029ac4ad10a50a879f"
+        },
+        "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/git/commits/f998b789a37e43286c08d3dd5cad434bd125c82a",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f998b789a37e43286c08d3dd5cad434bd125c82a",
+      "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/f998b789a37e43286c08d3dd5cad434bd125c82a",
+      "comments_url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/f998b789a37e43286c08d3dd5cad434bd125c82a/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "d1db55b53f3a58e56e5ce4348a630dd656482d2f",
+          "url": "https://api.github.com/repos/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commits/d1db55b53f3a58e56e5ce4348a630dd656482d2f",
+          "html_url": "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_KAREN_JONES/commit/d1db55b53f3a58e56e5ce4348a630dd656482d2f"
+        }
+      ]
+    },
     {
       "sha": "d1db55b53f3a58e56e5ce4348a630dd656482d2f",
       "node_id": "C_kwDOUJBYZdoAKGQxZGI1NWI1M2YzYTU4ZTU2ZTVjZTQzNDhhNjMwZGQ2NTY0ODJkMmY",
